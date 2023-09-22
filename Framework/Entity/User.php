@@ -2,7 +2,7 @@
 
 namespace Entity;
 
-class User
+class User implements Entity
 {
     private $ID;
     private $password;

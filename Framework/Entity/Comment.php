@@ -2,7 +2,7 @@
 
 namespace Entity;
 
-class Comment
+class Comment implements Entity
 {
     private $ID;
     private $text;

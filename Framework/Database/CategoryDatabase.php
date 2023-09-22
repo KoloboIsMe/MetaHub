@@ -2,5 +2,9 @@
 
 class CategoryDatabase implements Database
 {
-    private $categories;
+    private $data;
+
+    public function getData(){
+        return $this->data;
+    }
 }

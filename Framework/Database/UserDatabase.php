@@ -2,5 +2,9 @@
 
 class UserDatabase implements Database
 {
-    private $users;
+    private $data;
+
+    public function getData(){
+        return $this->data;
+    }
 }

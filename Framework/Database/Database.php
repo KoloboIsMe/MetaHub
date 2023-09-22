@@ -2,5 +2,5 @@
 
 interface Database
 {
-
+    public function getData();
 }

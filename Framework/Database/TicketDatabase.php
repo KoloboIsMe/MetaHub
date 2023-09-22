@@ -2,5 +2,9 @@
 
 class TicketDatabase implements Database
 {
-    private $tickets;
+    private $data;
+
+    public function getData(){
+        return $this->data;
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace Entity;
 
-class Ticket
+class Ticket implements Entity
 {
     private $ID;
     private $title;

@@ -2,5 +2,8 @@
 
 class CommentDatabase implements Database
 {
-    private $comments;
+    private $data;
+    public function getData(){
+        return $this->data;
+    }
 }
