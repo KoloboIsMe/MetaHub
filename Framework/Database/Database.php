@@ -1,6 +1,6 @@
 <?php
 
-abstract class Database
+interface Database
 {
 
 }

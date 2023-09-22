@@ -1,6 +1,6 @@
 <?php
 
-class CommentDatabase extends Database
+class CommentDatabase implements Database
 {
-
+    private $comments;
 }

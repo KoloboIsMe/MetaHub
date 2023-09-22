@@ -1,6 +1,6 @@
 <?php
 
-class UserDatabase extends Database
+class UserDatabase implements Database
 {
-
+    private $users;
 }

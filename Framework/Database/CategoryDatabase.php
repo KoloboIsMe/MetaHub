@@ -1,6 +1,6 @@
 <?php
 
-class CategoryDatabase extends Database
+class CategoryDatabase implements Database
 {
-
+    private $categories;
 }

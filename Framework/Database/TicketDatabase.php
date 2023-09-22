@@ -1,6 +1,6 @@
 <?php
 
-class TicketDatabase extends Database
+class TicketDatabase implements Database
 {
-
+    private $tickets;
 }
