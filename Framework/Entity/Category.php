@@ -9,11 +9,4 @@ class Category implements Entity
     private $description;
 
 
-    public function select(){
-        /**
-        SELECT ID, LABEL, DESCRIPTION
-        FROM CATEGORY
-         *
-         */
-    }
 }
