@@ -6,6 +6,8 @@
 <body>
 <?php
 echo "Hello, World!";
+echo "<br>";
+echo "je teste si la connexion FTP fonctionne";
 ?>
 </body>
 </html>
