@@ -1,6 +1,7 @@
 <?php
 
-class CategoryDatabase implements Database
+namespace Database;
+class CategoryDatabase
 {
     private $data;
 

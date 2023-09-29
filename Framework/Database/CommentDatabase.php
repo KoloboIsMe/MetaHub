@@ -1,6 +1,7 @@
 <?php
 
-class CommentDatabase implements Database
+namespace Database;
+class CommentDatabase
 {
     private $data;
     public function getData(){

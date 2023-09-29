@@ -2,7 +2,7 @@
 
 namespace Entity;
 
-class Category implements Entity
+class Category
 {
     private $ID;
     private $label;
