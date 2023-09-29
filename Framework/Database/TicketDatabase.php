@@ -2,6 +2,7 @@
 
 class TicketDatabase implements Database
 {
+    //déclarer des constantes pour les limites de tailles
     private $data;
 
     public function getData(){
@@ -17,8 +18,8 @@ class TicketDatabase implements Database
         $ticketCategory = $ticket->getCategory();
 
         //verifier si les valeurs sont conforme
-
-
+        //faire des if pour verif les tailles et mettre l'exception dedans
+        // //
 
         $query = "INSERT INTO TICKET ($ticketID, $ticketTitle, $ticketMessage, $ticketDate, $ticketAuthor, $ticketCategory) VALUES $ticket ";
         $id = "SELECT ID FROM TICKET";

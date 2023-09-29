@@ -11,12 +11,12 @@ class Ticket implements Entity
     private $author;
     private $category;
 
-    public function __construct($title = NULL, $message = NULL, $date = NULL, $author = NULL, $category = NULL){
+    public function __construct($title = "untitled", $message = NULL, $author = NULL, $categories = []){
         $this->title = $title;
         $this->message = $message;
-        $this->date = $date;
         $this->author = $author;
-        $this->category = $category;
+        $this->category = $categories;
+        $this->date = date('d/m/Y');
     }
 
     public function setId($newID){
