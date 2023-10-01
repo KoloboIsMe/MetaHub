@@ -1,6 +1,4 @@
 <?php
-
-
 namespace Database;
 class dataBaseConnexion
 {

@@ -2,7 +2,7 @@
 
 namespace Database;
 use Entity\User;
-class AllDatabase
+abstract class AllTableDatabase
 {
     private $tableName;
     private $dbLink;

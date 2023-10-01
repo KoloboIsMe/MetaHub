@@ -12,6 +12,11 @@ class User
     private $last_connexion;
 
     public function __construct($data){
+//        foreach ($data as $key => $value) {
+//            if (!isset($value)) {
+//                $data[$key] = NULL;
+//            }
+//        }
         $this->ID = $data['ID'];
         $this->password = $data['PASSWORD'];
         $this->img = $data['IMG_ID'];
@@ -53,9 +58,4 @@ class User
     {
         return $this->last_connexion;
     }
-
-
-
-
-
 }

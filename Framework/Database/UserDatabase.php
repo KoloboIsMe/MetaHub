@@ -5,10 +5,10 @@ namespace Database;
 use Entity\User;
 
 require_once('DataBaseConnexion.php');
-require('AllDatabase.php');
+require('AllTableDatabase.php');
 require_once('Framework/Entity/User.php');
 
-class UserDatabase extends AllDatabase
+class UserDatabase extends AllTableDatabase
 {
     public function __construct()
     {
