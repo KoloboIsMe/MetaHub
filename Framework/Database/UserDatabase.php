@@ -16,14 +16,11 @@ class UserDatabase extends AllTableDatabase
     }
     public function selectUser($attribute, $data)
     {
-        $data = parent::select($attribute, $data);
-        if (count($data) == 0) {
-            return $data;
-        }
+        $dbResult = parent::select($attribute, $data);
         $users = [];
         $cpt = 0;
-        foreach ($data as $user) {
-            $users[$cpt] = new User($user);
+        while($dbRow = mysqli_fetch_assoc($dbResult)){
+            $users[$cpt] = new User($dbRow);
             $cpt++;
         }
         return $users;

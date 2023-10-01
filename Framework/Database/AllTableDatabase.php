@@ -15,7 +15,6 @@ abstract class AllTableDatabase
     {
         $request = "SELECT * FROM $this->tableName WHERE $attribute = '$data'";
 
-        $result = mysqli_query($this->dbLink, $request);
         if (!($result = mysqli_query($this->dbLink, $request))) {
             echo 'Erreur dans requête<br >';
             // Affiche le type d'erreur.
@@ -24,8 +23,38 @@ abstract class AllTableDatabase
             echo 'Requête : ' . $request . '<br>';
             exit();
         }
-        $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return $result;
+    }
+
+    function add($data)
+    {
+        $request = "INSERT INTO $this->tableName (";
+        $cpt = 0;
+        foreach ($data as $key => $value) {
+            if ($cpt != 0) {
+                $request .= ", ";
+            }
+            $request .= $key;
+            $cpt++;
+        }
+        $request .= ") VALUES (";
+        $cpt = 0;
+        foreach ($data as $key => $value) {
+            if ($cpt != 0) {
+                $request .= ", ";
+            }
+            $request .= "'$value'";
+            $cpt++;
+        }
+        $request .= ")";
+        if (!($result = mysqli_query($this->dbLink, $request))) {
+            echo 'Erreur dans requête<br >';
+            // Affiche le type d'erreur.
+            echo 'Erreur : ' . mysqli_error($this->dbLink) . '<br>';
+            // Affiche la requête envoyée.
+            echo 'Requête : ' . $request . '<br>';
+            exit();
+        }
     }
 
 }
