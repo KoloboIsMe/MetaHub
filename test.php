@@ -4,9 +4,14 @@ use Database\UserDatabase;
 
 require_once('Framework/Database/UserDatabase.php');
 
-echo 'Test de la classe UserDatabase<br>';
 $userDB = new UserDatabase();
-$user1 = $userDB->testRequest();
-echo '<br>Test de la méthode selectFromUser<br>';
-$user1->showData();
+//echo $userDB->selectFromUser();
+//$userDB->testRequest()->showData();
+$users = $userDB->selectFromFirstConnexion('2023-09-04');
+if (count($users) > 0) {
+    foreach ($users as $user) {
+        echo $user->getUsername() . "<br>";
+    }
+}
+$users = $userDB->selectFromFirstConnexion('2023-09-04');
 ?>
