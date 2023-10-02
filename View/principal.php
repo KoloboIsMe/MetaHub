@@ -17,7 +17,7 @@
         if($_GET['deconnexion']==true)
         {
             session_unset();
-            header('Location: ../index.php');
+            header('Location: login.php');
         }
     }
     else if($_SESSION['username'] !== ""){
