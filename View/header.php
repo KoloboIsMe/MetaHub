@@ -7,7 +7,8 @@
     <head>
         <meta charset="UTF-8">
         <title><?php echo $title; ?></title>
-        <link href="_assets/styles/style.css" rel="stylesheet" type="text/css" />
+        <link href="_assets/styles/header.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" type="image/png" href="/_assets/images/MetaHubLogo.png"/>
     </head>
     <body>
         <header>
