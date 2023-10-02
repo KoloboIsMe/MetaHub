@@ -40,7 +40,7 @@ class Exception implements Throwable
 
     public function getLevel()
     {
-        return $this->niveau;
+        return $this->level;
 
     }
 
@@ -48,6 +48,6 @@ class Exception implements Throwable
     {
         $t=time() ;
         echo(date("Y-m-d H:i:s",$t));
-        return $this->temps;
+        return $this->time;
     }
 }
