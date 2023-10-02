@@ -42,18 +42,20 @@ class TicketDatabase implements Database
         if($ticketDate->format == self::$DATE_FORMAT){
             //le ticket peut se créer
         }
-//        else
-//            //le ticket ne peut pas se créer
+        else
+            //le ticket ne peut pas se créer
 
-//        if(/*l'auteur se trouve dans la base de donnée*/){
-//            //le ticket peut se créer
-//        }
-//        else
-//            //le ticket ne peut pas se créer
+        $userIdRequest = "SELECT ID FROM USER";
+        if ($userIdRequest->num_rows != 0){
+            //le ticket peut se créer
+        }
+        else
+            //le ticket ne peut pas se créer
 
-//        if(/*la catégorie se trouve dans la base de donnée*/){
-//            //le ticket peut se créer
-//        }
+        $categoryIdRequest = "SELECT ID FROM CATEGORY";
+        if($categoryIdRequest->num_rows != 0){
+            //le ticket peut se créer
+        }
 //        else
 //            //le ticket ne peut pas se créer
     }
