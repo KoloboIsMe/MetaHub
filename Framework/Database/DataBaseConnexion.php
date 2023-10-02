@@ -12,9 +12,7 @@ class dataBaseConnexion
 
     public function __construct()
     {
-        if (!$this->getPDO() == null) {
-            return;
-        } else {
+        if ($this->getPDO() == null) {
             $dsn = "mysql:host=$this->dbHost;dbname=$this->dbName";
             $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
             $pdo->exec('SET CHARACTER SET utf8');

@@ -6,14 +6,14 @@ use Entity\User;
 use PDO;
 
 require_once('DataBaseConnexion.php');
-require('AbstractDatabase.php');
 require_once('Framework/Entity/User.php');
 
-class UserDatabase extends AbstractDatabase
+class UserDatabase
 {
+    private $PDO;
     public function __construct()
     {
-        parent::__construct('user');
+        $this->PDO = (new dataBaseConnexion())->getPDO();
     }
     public function selectUser($attribute, $data)
     {
@@ -51,15 +51,13 @@ class UserDatabase extends AbstractDatabase
         }
     }
 
-    public function selectFromUsername($username)
+    public function selectByUsername($username)
     {
         return $this->selectUser('USERNAME', $username);
     }
-    public function selectFromFirstConnexion($firstConnexion)
+
+    public function selectByFirstConnexion($firstConnexion)
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }
-
-
-
 }

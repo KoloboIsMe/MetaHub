@@ -6,16 +6,13 @@ require_once('Framework/Database/UserDatabase.php');
 
 $userDB = new UserDatabase();
 
-$users = $userDB->selectFromFirstConnexion('2023-08-16');
+$users = $userDB->selectByFirstConnexion('2023-08-16');
 if (count($users) > 0) {
     foreach ($users as $user) {
-        echo $user->getPassword() . "<br>";
+        echo $user->getUsername() . "<br>";
     }
 }
 
-$maxTam = new \Entity\User(null, 'azerty', null, 'maxTam', '2023-08-16', '2023-09-16');
-$userDB->insert($maxTam);
-$uuuu = $userDB->selectFromUsername('maxTam');
-$uuuu[0]->showData();
-$users = $userDB->selectFromFirstConnexion('2023-09-04');
+//$maxTam = new \Entity\User(null, 'azertyiop', null, 'maxTam2', '2023-08-16', '2023-09-16');
+//$userDB->insert($maxTam);
 ?>
