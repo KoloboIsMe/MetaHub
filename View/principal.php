@@ -1,5 +1,7 @@
-<html>
+<html lang="fr">
 <head>
+    <title>MetaHub - Dashboard</title>
+
     <meta charset="utf-8">
     <!-- importer le fichier de style -->
     <link rel="stylesheet" href="../_assets/styles/login.css" media="screen" type="text/css" />
@@ -14,7 +16,7 @@
     session_start();
     if(isset($_GET['deconnexion']))
     {
-        if($_GET['deconnexion']==true)
+        if($_GET['deconnexion'])
         {
             session_unset();
             header('Location: login.php');
