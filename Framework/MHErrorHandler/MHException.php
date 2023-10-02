@@ -1,8 +1,8 @@
 <?php
 
-namespace ErrorHandler;
+namespace MHErrorHandler;
 
-class Exception implements Throwable
+class MHException implements Throwable
 {
     private $message;
     private $code;
