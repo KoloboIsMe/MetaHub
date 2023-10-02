@@ -10,7 +10,7 @@
 <div id="container">
     <!-- zone de connexion -->
 
-    <form action="./verification.php" method="POST">
+    <form action="../Model/login_verification.php" method="POST">
         <h1>Connexion</h1>
 
         <label><b>Nom d'utilisateur</b></label>
