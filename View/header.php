@@ -12,21 +12,23 @@
     <body>
         <header>
             <input type="checkbox" id="nav_check" hidden>
+            <img src="/_assets/images/MetaHubLogo.png" id="headerLogo"/>
             <nav>
                 <ul>
-                    <li class="active"><a <img src="/_assets/images/home.png"/> href="index.html" class="active"></a></li>
-                    <li><a href="">Posts</a></li>
-                    <li><a href="">Créer un Post</a></li>
-                    <li><a href="">Catégories</a></li>
-                    <li><a <img src="/_assets/images/login.png"> href="" </a></li>
+                    <li><a href="index.php"><img src="/_assets/images/home.png" id="headerImg"/></a></li>
+                    <li><a href="" id="headerLinks">Posts</a></li>
+                    <li><a href="" id="headerLinks">Créer un Post</a></li>
+                    <li><a href="" id="headerLinks">Catégories</a></li>
                 </ul>
             </nav>
+            <img src="/_assets/images/login.png" id="headerImg"/>
             <label for="nav_check" aria-label="toggle curtain navigation" class="hamburger">
                 <div class="line l1"></div>
                 <div class="line l2"></div>
                 <div class="line l3"></div>
             </label>
         </header>
+        <script src="/View/script.js"></script>
 <?php
 }
 ?>
