@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <!-- importer le fichier de style -->
-    <link rel="stylesheet" href="../_assets/styles/style_test.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="../_assets/styles/login.css" media="screen" type="text/css" />
 </head>
 <body>
 <div id="container">
