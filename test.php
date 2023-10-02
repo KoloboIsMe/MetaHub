@@ -5,13 +5,17 @@ use Database\UserDatabase;
 require_once('Framework/Database/UserDatabase.php');
 
 $userDB = new UserDatabase();
-//echo $userDB->selectFromUser();
-//$userDB->testRequest()->showData();
-$users = $userDB->selectFromFirstConnexion('2023-09-04');
+
+$users = $userDB->selectFromFirstConnexion('2023-08-16');
 if (count($users) > 0) {
     foreach ($users as $user) {
-        echo $user->getUsername() . "<br>";
+        echo $user->getPassword() . "<br>";
     }
 }
+
+$maxTam = new \Entity\User(null, 'azerty', null, 'maxTam', '2023-08-16', '2023-09-16');
+$userDB->insert($maxTam);
+$uuuu = $userDB->selectFromUsername('maxTam');
+$uuuu[0]->showData();
 $users = $userDB->selectFromFirstConnexion('2023-09-04');
 ?>

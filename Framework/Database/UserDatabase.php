@@ -3,12 +3,13 @@
 namespace Database;
 
 use Entity\User;
+use PDO;
 
 require_once('DataBaseConnexion.php');
-require('AllTableDatabase.php');
+require('AbstractDatabase.php');
 require_once('Framework/Entity/User.php');
 
-class UserDatabase extends AllTableDatabase
+class UserDatabase extends AbstractDatabase
 {
     public function __construct()
     {
@@ -16,22 +17,43 @@ class UserDatabase extends AllTableDatabase
     }
     public function selectUser($attribute, $data)
     {
-        $data = parent::select($attribute, $data);
-        if (count($data) == 0) {
-            return $data;
+        $statement = $this->PDO->prepare("SELECT * FROM user WHERE $attribute = :data");
+        if(!($statement->execute([
+            'data' => $data
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
         }
         $users = [];
         $cpt = 0;
-        foreach ($data as $user) {
-            $users[$cpt] = new User($user);
+        while ($user = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new User($user->ID, $user->PASSWORD, $user->IMG_ID, $user->USERNAME, $user->FIRST_CONNEXION, $user->LAST_CONNEXION);
+            $users[$cpt] = $post;
             $cpt++;
         }
         return $users;
     }
 
+    public function insert($user)
+    {
+        $statement = $this->PDO->prepare(
+            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (:ID, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
+        if(!($statement->execute([
+            ':ID' => $user->getID(),
+            ':PASSWORD' => $user->getPassword(),
+            ':IMG_ID' => $user->getImg(),
+            ':USERNAME' => $user->getUsername(),
+            ':FIRST_CONNEXION' => $user->getFirstConnexion(),
+            ':LAST_CONNEXION' => $user->getLastConnexion()
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+    }
+
     public function selectFromUsername($username)
     {
-        return $this->selectUser('username', $username);
+        return $this->selectUser('USERNAME', $username);
     }
     public function selectFromFirstConnexion($firstConnexion)
     {
