@@ -1,5 +1,7 @@
 <?php
 
+use Database\dataBaseConnexion;
+
 class TicketDatabase
 {
     //déclarer des constantes pour les limites de tailles
@@ -7,11 +9,18 @@ class TicketDatabase
     const TITLE_LENGHT = 10;
     const MESSAGE_LENGTH = 280;
     const DATE_FORMAT =  'd/m/Y';
-    private $data;
+
+    private $PDO;
+
+    public function __construct()
+    {
+        $this->PDO = (new dataBaseConnexion())->getPDO();
+    }
 
     public function getData(){
         return $this->data;
     }
+
     public function verifTicket($ticket){
         if
         (strlen($ticket->getID()) > self::ID_LENGTH ||
@@ -26,37 +35,20 @@ class TicketDatabase
     }
 
     public function insert($ticket){
-        $ticketID = $ticket->getID();
-        $ticketTitle = $ticket->getTitle();
-        $ticketMessage = $ticket->getMessage();
-        $ticketDate = $ticket->getDate();
-        $ticketAuthor = $ticket->getAuthor();
-        $ticketCategory = $ticket->getCategory();
+        $statement = $this->PDO->prepare(
+            "INSERT INTO user (ticket_ID, title, message, date, author) VALUES (null, :title, :message, :date, :author)");
 
-        //verifier si les valeurs sont conforme
-        if($this->verifTicket($ticket) === false){
-            //generer une exception;
+        if(!($statement->execute([
+            ':title' => $ticket->getTitle(),
+            ':message' => $ticket->getMessage(),
+            ':date' => $ticket->getDate(),
+            ':author' => $ticket->getAuthor(),
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
         }
 
-        $query = "INSERT INTO TICKET ($ticketID, $ticketTitle, $ticketMessage, $ticketDate, $ticketAuthor, $ticketCategory) VALUES $ticket ";
-        $id = "SELECT ID FROM TICKET";
-        $ticket->setId($id);
+///        if($this->verifTicket($ticket) === false){generer une exception;}
     }
 
-    public function TESTinsert($ticket){
-        $ticketID = $ticket->getID();
-        $ticketTitle = $ticket->getTitle();
-        $ticketMessage = $ticket->getMessage();
-        $ticketDate = $ticket->getDate();
-        $ticketAuthor = $ticket->getAuthor();
-        $ticketCategory = $ticket->getCategory();
-
-        //verifier si les valeurs sont conforme
-        if($this->verifTicket($ticket) == false){
-            echo '<br>Nous ne pouvons pas inserer le ticket dans la base<br>';
-        }
-        else{
-            echo '<br>Ticket, inseré dans la base<br>';
-        }
-    }
 }
