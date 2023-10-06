@@ -4,6 +4,7 @@ namespace Database;
 
 use Entity\User;
 use PDO;
+use function PHPUnit\Framework\throwException;
 
 require_once('DataBaseConnexion.php');
 require_once('Framework/Entity/User.php');
@@ -38,9 +39,8 @@ class UserDatabase
     public function insert($user)
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (:ID, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
+            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (null, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
         if(!($statement->execute([
-            ':ID' => $user->getID(),
             ':PASSWORD' => $user->getPassword(),
             ':IMG_ID' => $user->getImg(),
             ':USERNAME' => $user->getUsername(),
@@ -52,12 +52,12 @@ class UserDatabase
         }
     }
 
-    public function selectByUsername($username)
+    public function selectFromUsername($username)
     {
         return $this->selectUser('USERNAME', $username);
     }
 
-    public function selectByFirstConnexion($firstConnexion)
+    public function selectFromFirstConnexion($firstConnexion)
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }

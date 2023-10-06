@@ -11,7 +11,7 @@ class User
     private $first_connexion;
     private $last_connexion;
 
-    public function __construct($ID,$password,$img,$username,$first_connexion = null,$last_connexion = null)
+    public function __construct($ID = null, $password,$img,$username,$first_connexion = null,$last_connexion = null)
     {
         $this->ID = $ID;
         $this->password = $password;
