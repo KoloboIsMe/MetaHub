@@ -50,5 +50,4 @@ class TicketDatabase
 
 ///        if($this->verifTicket($ticket) === false){generer une exception;}
     }
-
 }
