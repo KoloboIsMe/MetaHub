@@ -13,12 +13,25 @@ footer{
 
 .footerImages{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items:center ;
+    margin-bottom: 3vh;
+    padding: 0vh 60vh 0vh 60vh;
+
+}
+
+@media only screen and (max-width : 1050px) {
+    .footerImages{
+        display: flex;
+        justify-content: space-between;
+        align-items:center ;
+        margin-bottom: 3vh;
+        padding: 0vh 30vh 0vh 30vh;
+    }
 }
 
 #footerImg{
-    margin-right: 3vh;
+    margin-right: center;
     margin-top: 4vh;
     cursor: pointer;
     height: 4vh;
