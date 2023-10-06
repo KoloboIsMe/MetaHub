@@ -19,7 +19,6 @@ header {
     justify-content: space-between;
     padding: 0 50px;
     border-bottom-color: #3e5f3e;
-    color:white;
 }
 
 
@@ -58,17 +57,17 @@ header nav ul li #headerLinks:hover{
     width: 4vh;
 }
 
-.hamburger {
-    cursor: pointer;
-    display: none;
-    margin-top: 12px;
-}
-
 .hamburger div {
     width: 30px;
     height: 1px;
     margin: 8px 0;
-    background: #EEF1EF;
+    background: white;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+    margin-top: 12px;
 }
 
 .line{
@@ -102,7 +101,6 @@ header nav ul li #headerLinks:hover{
     .hamburger {
         display: block;
         top: 20px;
-        z-index: 1000;
     }
 
     header nav{
