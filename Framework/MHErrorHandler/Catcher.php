@@ -10,7 +10,7 @@ class Catcher
     {
         $this->exceptions = array();
     }
-    public function exception($message = "Undefined Exception", $level = 0,$type = ExceptionType::Exception)
+    public function catch($message = "Undefined Exception", $level = 0, $type = ExceptionType::Exception)
     {
         switch ($type)
         {
