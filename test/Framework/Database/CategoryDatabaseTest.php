@@ -1,12 +1,12 @@
 <?php
 
 namespace Database;
-class CategoryDatabaseTest extends \PHPUnit_Framework_TestCase
+class CategoryDatabaseTest extends PHPUnit_Framework_TestCase
 {
     public function testSelect()
     {
         $categoryDB = new CategoryDatabase();
-        $categoryDB->select();
+        $users = $userDB->selectFromUsername('myke');
         $this->assertEquals($categoryDB->getData(), "ok");
     }
 }
