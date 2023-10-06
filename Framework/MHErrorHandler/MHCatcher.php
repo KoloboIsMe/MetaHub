@@ -2,39 +2,24 @@
 
 namespace MetaHubFramework\ErrorHandler {
 
+    use MHErrorHandler\ExceptionType;
+
     class MHCatcher
     {
-        private $tableau;
-        private $level;
+        private $errors;
 
-        public function __construct($tableau,$level){
-            $this->tableau = $tableau;
-            $this->level = $level;
-        }
-
-        public function getTableau()
+        public function __construct()
         {
-            return $this->tableau;
+            $this->errors = array();
         }
-
-        public function setTableau($tableau): void
+        public function exception($type, $message, $level)
         {
-            $this->tableau = $tableau;
-        }
+            switch ($type)
+            {
+                case ExceptionType::Exception :
+                    $this->errors[] += new MHException($message, $level);
+            }
 
-        public function sort($tableau)
-        {
-
-        }
-
-        public function getLevel()
-        {
-            return $this->level;
-        }
-
-        public function setLevel($level): void
-        {
-            $this->level = $level;
         }
     }
 }
