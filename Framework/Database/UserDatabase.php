@@ -10,6 +10,7 @@ require_once('Framework/Entity/User.php');
 
 class UserDatabase
 {
+    //database connection
     private $PDO;
     public function __construct()
     {
