@@ -1,6 +1,6 @@
 <?php
-
-use ErrorHandler\Exception;
-$t= new Exception();
-echo $t->getTime();
+use MetaHubFramework\ErrorHandler\MHException;
+include "Framework\MHErrorHandler\MHException.php";
+$t= new MHException(getTime());
 ?>
+

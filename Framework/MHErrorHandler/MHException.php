@@ -11,14 +11,14 @@ namespace MetaHubFramework\ErrorHandler {
         private $description;
         private $time;
 
-        public function __construct($message, $code, $file, $line, $description, $time)
+        public function __construct($message ="", $code = 0, $file ="", $line =0, $description ="",)
         {
             $this->message = $message;
             $this->code = $code;
             $this->file = $file;
             $this->line = $line;
             $this->description = $description;
-            $this->time = $time;
+            $this->time = getTime();
         }
 
         public function getMessage()
@@ -50,7 +50,6 @@ namespace MetaHubFramework\ErrorHandler {
         {
             $t = time();
             echo(date("Y-m-d H:i:s", $t));
-            return $this->time;
         }
 }
 }
