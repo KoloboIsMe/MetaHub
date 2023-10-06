@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/devWeb",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "r22011455",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": "8.2"
+  }
+}
