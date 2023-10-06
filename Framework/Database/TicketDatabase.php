@@ -17,10 +17,6 @@ class TicketDatabase
         $this->PDO = (new dataBaseConnexion())->getPDO();
     }
 
-    public function getData(){
-        return $this->data;
-    }
-
     public function verifTicket($ticket){
         if
         (strlen($ticket->getID()) > self::ID_LENGTH ||
@@ -36,7 +32,7 @@ class TicketDatabase
 
     public function insert($ticket){
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (ticket_ID, title, message, date, author) VALUES (null, :title, :message, :date, :author)");
+            "INSERT INTO ticket (ticket_ID, title, message, date, author) VALUES (null, :title, :message, :date, :author)");
 
         if(!($statement->execute([
             ':title' => $ticket->getTitle(),

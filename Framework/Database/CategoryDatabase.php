@@ -3,11 +3,27 @@
 namespace Database;
 class CategoryDatabase
 {
-    private $data;
+    private $PDO;
 
-    public function getData(){
-        return $this->data;
+    public function __construct()
+    {
+        $this->PDO = (new dataBaseConnexion())->getPDO();
     }
+
+    public function insert($category)
+    {
+        $statement = $this->PDO->prepare(
+            "INSERT INTO category (ID, label, description) VALUES (:ID, :label, :description)");
+        if(!($statement->execute([
+            ':ID' => $category->getID(),
+            ':label' => $category->getLabel(),
+            ':description' => $category->getDescription()
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+    }
+
     public function select($username = null) : GReturn{
         $request = "SELECT * FROM " . $this->dbName;
         if(empty($username) === false){

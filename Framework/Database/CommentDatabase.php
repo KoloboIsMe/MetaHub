@@ -14,7 +14,7 @@ class CommentDatabase
     public function insert($comment)
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (comment_ID, text, date, author, ticket) VALUES (:comment_ID, :text, :date, :author, :ticket)");
+            "INSERT INTO comment (comment_ID, text, date, author, ticket) VALUES (:comment_ID, :text, :date, :author, :ticket)");
         if(!($statement->execute([
             ':comment_ID' => $comment->getCommentID(),
             ':text' => $comment->getText(),
