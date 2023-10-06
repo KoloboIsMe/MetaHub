@@ -19,6 +19,7 @@ header {
     justify-content: space-between;
     padding: 0 50px;
     border-bottom-color: #3e5f3e;
+    color:white;
 }
 
 
@@ -67,7 +68,7 @@ header nav ul li #headerLinks:hover{
     width: 30px;
     height: 1px;
     margin: 8px 0;
-    background: white;
+    background: #EEF1EF;
 }
 
 .line{
@@ -101,6 +102,7 @@ header nav ul li #headerLinks:hover{
     .hamburger {
         display: block;
         top: 20px;
+        z-index: 1000;
     }
 
     header nav{
@@ -128,5 +130,9 @@ header nav ul li #headerLinks:hover{
     header nav ul li a{
         color:white;
         margin: 5px 0 ;
+    }
+
+    header nav ul li #headerLinks{
+        align-items: center;
     }
 }
