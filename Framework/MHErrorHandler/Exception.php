@@ -1,10 +1,6 @@
 <?php
 
-namespace MetaHubFramework\ErrorHandler {
-
-    use MHErrorHandler\Throwable;
-
-    class Exception implements Throwable
+class Exception implements Throwable
     {
         private $message;
         private $level;
@@ -17,4 +13,3 @@ namespace MetaHubFramework\ErrorHandler {
             $this->time = date("Y-m-d H:i:s", time());
         }
     }
-}

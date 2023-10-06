@@ -2,8 +2,6 @@
 
 namespace MetaHubFramework\ErrorHandler {
 
-    use MHErrorHandler\ExceptionType;
-
     class Catcher
     {
         private $errors;
@@ -19,6 +17,10 @@ namespace MetaHubFramework\ErrorHandler {
                 case ExceptionType::Exception :
                     $this->errors[] += new Exception($message, $level);
             }
+        }
+        public function __toString(): string
+        {
+            return "Je suis un Catcher";
         }
     }
 }
