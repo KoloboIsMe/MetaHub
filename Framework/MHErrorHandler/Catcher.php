@@ -1,26 +1,34 @@
 <?php
 
-namespace MetaHubFramework\ErrorHandler {
+use MHErrorHandler\ExceptionType;
 
-    class Catcher
+class Catcher
+{
+    private $exceptions;
+
+    public function __construct()
     {
-        private $errors;
-
-        public function __construct()
+        $this->exceptions = array();
+    }
+    public function exception($message = "Undefined Exception", $level = 0,$type = ExceptionType::Exception)
+    {
+        switch ($type)
         {
-            $this->errors = array();
+            case ExceptionType::Exception :
+                $this->exceptions[] = new Exception($message, $level);
         }
-        public function exception($type, $message, $level)
+    }
+    public function __toString(): string
+    {
+        $returnString = "";
+        if (is_null($this->exceptions))
         {
-            switch ($type)
-            {
-                case ExceptionType::Exception :
-                    $this->errors[] += new Exception($message, $level);
-            }
+            $returnString =  "No catched errors";
         }
-        public function __toString(): string
+        foreach ($this->exceptions as $exception)
         {
-            return "Je suis un Catcher";
+            $returnString .= $exception . "\n";
         }
+        return $returnString;
     }
 }
