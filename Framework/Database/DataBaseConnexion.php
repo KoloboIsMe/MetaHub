@@ -1,19 +1,28 @@
 <?php
-
-
 namespace Database;
+use PDO;
+
 class dataBaseConnexion
 {
     private $dbHost = '127.0.0.1';
-    private $dbLogin = 'root';
-    private $password;
+    private $dbPassword;
+    private $dbUsername = 'root';
+    private $dbName = 'projetwebphp';
+    private $pdo = null;
 
-    public function connect($dbTableName)
+    public function __construct()
     {
-        $dbLink = mysqli_connect($this->dbHost, $this->dbLogin, $this->password)
-        or die('Erreur de connexion au serveur : ' . mysqli_connect_error());
-        mysqli_select_db($dbLink, $dbTableName)
-        or die('Erreur dans la sélection de la base : ' . mysqli_error($this->dbLink));
-        return $dbLink;
+        if ($this->getPDO() == null) {
+            $dsn = "mysql:host=$this->dbHost;dbname=$this->dbName";
+            $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
+            $pdo->exec('SET CHARACTER SET utf8');
+            $this->pdo = $pdo;
+            //voir exception
+        }
+    }
+
+    public function getPDO()
+    {
+        return $this->pdo;
     }
 }

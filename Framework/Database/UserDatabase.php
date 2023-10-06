@@ -3,66 +3,61 @@
 namespace Database;
 
 use Entity\User;
+use PDO;
 
 require_once('DataBaseConnexion.php');
 require_once('Framework/Entity/User.php');
 
 class UserDatabase
 {
-    private $data; // List of users
-    private $dbLink;
-
+    private $PDO;
     public function __construct()
     {
-        $this->dbLink = (new dataBaseConnexion)->connect('projetwebphp');
+        $this->PDO = (new dataBaseConnexion())->getPDO();
     }
-
-    public function testRequest() : User{
-        $request = "SELECT * FROM USER Where USERNAME = 'myke'";
-
-        $result = mysqli_query($this->dbLink, $request);
-        echo $result->num_rows;
-        $result = mysqli_fetch_assoc($result);
-        var_dump($result);
-        echo $result['ID'];
-        return new User($result['ID'], $result['PASSWORD'], $result['USERNAME'], $result['IMG_ID'], $result['FIRST_CONNEXION'], $result['LAST_CONNEXION']);
-
-    }
-
-//    public function selectFromUser($username = null): void
-//    {
-//        $request = "SELECT * FROM USER ";
-//        if (empty($username) === false) {
-//            $request .= " WHERE username = '" . $username . "'";
-//        }
-//
-//        if (!($result = mysqli_query($this->dbLink, $request))) {
-//            echo 'Erreur dans requête<br >';
-//            // Affiche le type d'erreur.
-//            echo 'Erreur : ' . mysqli_error($this->dbLink) . '<br>';
-//            // Affiche la requête envoyée.
-//            echo 'Requête : ' . $request . '<br>';
-//            exit();
-//        }
-//        $rows = [];
-//        if ($result->num_rows > 0) {
-//            $rows = $result->fetch_assoc();
-//            for ($i = 0; $i < count($rows); $i++) {
-//                $rows[$i] = new User($rows[$i]['id'], $rows[$i]['password'], $rows[$i]['username'], $rows[$i]['img_id'], $rows[$i]['first_connexion'], $rows[$i]['last_connexion']);
-//            }
-//        }
-//        $this->data = $rows;
-//    }
-
-    public function getData()
+    public function selectUser($attribute, $data)
     {
-        return $this->data;
-    }
-
-    public function showData()
-    {
-        foreach ($this->data as $user) {
-            $user->showData();
+        $statement = $this->PDO->prepare("SELECT * FROM user WHERE $attribute = :data");
+        if(!($statement->execute([
+            'data' => $data
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
         }
+        $users = [];
+        $cpt = 0;
+        while ($user = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new User($user->ID, $user->PASSWORD, $user->IMG_ID, $user->USERNAME, $user->FIRST_CONNEXION, $user->LAST_CONNEXION);
+            $users[$cpt] = $post;
+            $cpt++;
+        }
+        return $users;
+    }
+
+    public function insert($user)
+    {
+        $statement = $this->PDO->prepare(
+            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (:ID, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
+        if(!($statement->execute([
+            ':ID' => $user->getID(),
+            ':PASSWORD' => $user->getPassword(),
+            ':IMG_ID' => $user->getImg(),
+            ':USERNAME' => $user->getUsername(),
+            ':FIRST_CONNEXION' => $user->getFirstConnexion(),
+            ':LAST_CONNEXION' => $user->getLastConnexion()
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+    }
+
+    public function selectByUsername($username)
+    {
+        return $this->selectUser('USERNAME', $username);
+    }
+
+    public function selectByFirstConnexion($firstConnexion)
+    {
+        return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }
 }

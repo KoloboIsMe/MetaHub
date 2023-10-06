@@ -1,18 +1,18 @@
 <?php
 
-use Entity\Ticket;
+use Database\UserDatabase;
 
-require_once('Framework/Database/TicketDatabase.php');
-require_once('Framework/Entity/Ticket.php');
+require_once('Framework/Database/UserDatabase.php');
 
-echo 'Test de la classe TicketDataBase <br>';
+$userDB = new UserDatabase();
 
-$ticket = new Ticket();
-$ticket->setTitle('Titre du post !');
-$ticket->setMessage('Corps du message du post');
-$ticket->setAuthor(07);
+$users = $userDB->selectByFirstConnexion('2023-08-16');
+if (count($users) > 0) {
+    foreach ($users as $user) {
+        echo $user->getUsername() . "<br>";
+    }
+}
 
-$ticketDB = new TicketDatabase();
-$ticketDB -> TESTinsert($ticket);
-
+//$maxTam = new \Entity\User(null, 'azertyiop', null, 'maxTam2', '2023-08-16', '2023-09-16');
+//$userDB->insert($maxTam);
 ?>
