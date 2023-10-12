@@ -63,5 +63,4 @@ class TicketDatabase
         }
         return $tickets;
     }
-
 }
