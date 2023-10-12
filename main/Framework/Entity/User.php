@@ -11,19 +11,23 @@ class User
     private $first_connexion;
     private $last_connexion;
 
-    public function __construct($data){
-//        foreach ($data as $key => $value) {
-//            if (!isset($value)) {
-//                $data[$key] = NULL;
-//            }
-//        }
-        $this->ID = $data['ID'];
-        $this->password = $data['PASSWORD'];
-        $this->img = $data['IMG_ID'];
-        $this->username = $data['USERNAME'];
-        $this->first_connexion = $data['FIRST_CONNEXION'];
-        $this->last_connexion = $data['LAST_CONNEXION'];
+    public function __construct($ID = null, $password,$img,$username,$first_connexion = null,$last_connexion = null)
+    {
+        $this->ID = $ID;
+        $this->password = $password;
+        $this->img = $img;
+        $this->username = $username;
+        $this->first_connexion = $first_connexion;
+        $this->last_connexion = $last_connexion;
     }
+
+//        $this->ID = $data['ID'];
+//        $this->password = $data['PASSWORD'];
+//        $this->img = $data['IMG_ID'];
+//        $this->username = $data['USERNAME'];
+//        $this->first_connexion = $data['FIRST_CONNEXION'];
+//        $this->last_connexion = $data['LAST_CONNEXION'];
+//    }
 
     public function showData(){
         echo $this->ID . " " . $this->password . " " . $this->img . " " . $this->username . " " . $this->first_connexion . " " . $this->last_connexion;
