@@ -1,17 +1,23 @@
 <?php
 
-namespace Database;
+namespace Framework\Database;
 
-use Entity\User;
+use Framework\Entity\User;
 use PDO;
+use function PHPUnit\Framework\throwException;
 
 require_once('DataBaseConnexion.php');
-require_once('Framework/Entity/User.php');
 
 class UserDatabase
 {
     //database connection
     private $PDO;
+    private $test = "test";
+    public function getTest()
+    {
+        return $this->test;
+    }
+
     public function __construct()
     {
         $this->PDO = (new dataBaseConnexion())->getPDO();
@@ -28,7 +34,7 @@ class UserDatabase
         $users = [];
         $cpt = 0;
         while ($user = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new User($user->ID, $user->PASSWORD, $user->IMG_ID, $user->USERNAME, $user->FIRST_CONNEXION, $user->LAST_CONNEXION);
+            $post = new User($user->user_ID, $user->username, $user->password, $user->first_connexion, $user->last_connexion);
             $users[$cpt] = $post;
             $cpt++;
         }
@@ -38,11 +44,9 @@ class UserDatabase
     public function insert($user)
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (:ID, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
+            "INSERT INTO user (user_ID, username, password ,first_connexion, last_connexion) VALUES (null, :PASSWORD, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
         if(!($statement->execute([
-            ':ID' => $user->getID(),
             ':PASSWORD' => $user->getPassword(),
-            ':IMG_ID' => $user->getImg(),
             ':USERNAME' => $user->getUsername(),
             ':FIRST_CONNEXION' => $user->getFirstConnexion(),
             ':LAST_CONNEXION' => $user->getLastConnexion()
@@ -52,12 +56,12 @@ class UserDatabase
         }
     }
 
-    public function selectByUsername($username)
+    public function selectFromUsername($username)
     {
         return $this->selectUser('USERNAME', $username);
     }
 
-    public function selectByFirstConnexion($firstConnexion)
+    public function selectFromFirstConnexion($firstConnexion)
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }

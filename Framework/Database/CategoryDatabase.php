@@ -1,6 +1,8 @@
 <?php
 
-namespace Database;
+namespace Framework\Database;
+use Database\GReturn;
+
 class CategoryDatabase
 {
     private $PDO;
