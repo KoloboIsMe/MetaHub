@@ -1,6 +1,7 @@
 <?php
 
 use Database\dataBaseConnexion;
+use Entity\Ticket;
 
 class TicketDatabase
 {
@@ -45,5 +46,37 @@ class TicketDatabase
         }
 
 ///        if($this->verifTicket($ticket) === false){generer une exception;}
+    }
+
+    public function selectFiveLeast(){
+        $statement = $this->PDO->prepare("SELECT * FROM (SELECT * FROM USER ORDER BY ID DESC) WHERE ROWNUM <= 5;");
+        if(!($statement->execute([]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        $tickets = [];
+        $cpt = 0;
+        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date);
+            $tickets[$cpt] = $post;
+            $cpt++;
+        }
+        return $tickets;
+    }
+
+    public function selectAllTicket(){
+        $statement = $this->PDO->prepare("SELECT * FROM USER;");
+        if(!($statement->execute([]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        $tickets = [];
+        $cpt = 0;
+        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date);
+            $tickets[$cpt] = $post;
+            $cpt++;
+        }
+        return $tickets;
     }
 }
