@@ -79,4 +79,14 @@ class TicketDatabase
         }
         return $tickets;
     }
+
+    public function removeTicket($data){
+        $statement = $this->PDO->prepare("DELETE FROM USER WHERE ID = :data;");
+        if(!($statement->execute([
+            'data' => $data
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+    }
 }
