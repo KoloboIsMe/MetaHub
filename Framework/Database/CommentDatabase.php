@@ -1,6 +1,6 @@
 <?php
 
-namespace Database;
+namespace Framework\Database;
 class CommentDatabase
 {
     private $data;

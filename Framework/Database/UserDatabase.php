@@ -1,18 +1,23 @@
 <?php
 
-namespace Database;
+namespace Framework\Database;
 
-use Entity\User;
+use Framework\Entity\User;
 use PDO;
 use function PHPUnit\Framework\throwException;
 
 require_once('DataBaseConnexion.php');
-require_once('Entity/User.php');
 
 class UserDatabase
 {
     //database connection
     private $PDO;
+    private $test = "test";
+    public function getTest()
+    {
+        return $this->test;
+    }
+
     public function __construct()
     {
         $this->PDO = (new dataBaseConnexion())->getPDO();

@@ -1,7 +1,5 @@
 <?php
 
-use Database\UserDatabase;
-
 require_once('Framework/Database/UserDatabase.php');
 
 $userDB = new \Framework\Database\UserDatabase\UserDatabase();

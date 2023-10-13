@@ -1,5 +1,5 @@
 <?php
-namespace Database;
+namespace Framework\Database;
 use PDO;
 
 class dataBaseConnexion
@@ -7,7 +7,7 @@ class dataBaseConnexion
     private $dbHost = '127.0.0.1';
     private $dbPassword;
     private $dbUsername = 'root';
-    private $dbName = 'MetaHub';
+    private $dbName = 'projetwebphp';
     private $pdo = null;
 
     public function __construct()

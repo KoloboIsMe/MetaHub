@@ -1,6 +1,8 @@
 <?php
 
 namespace Database;
+use Framework\Database\CommentDatabase;
+
 class CommentDatabaseTest extends PHPUnit_Framework_TestCase
 {
     public function testSelect()
