@@ -7,7 +7,7 @@ use PDO;
 use function PHPUnit\Framework\throwException;
 
 require_once('DataBaseConnexion.php');
-require_once('Framework/Entity/User.php');
+require_once('Entity/User.php');
 
 class UserDatabase
 {
@@ -29,7 +29,7 @@ class UserDatabase
         $users = [];
         $cpt = 0;
         while ($user = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new User($user->ID, $user->PASSWORD, $user->IMG_ID, $user->USERNAME, $user->FIRST_CONNEXION, $user->LAST_CONNEXION);
+            $post = new User($user->user_ID, $user->username, $user->password, $user->first_connexion, $user->last_connexion);
             $users[$cpt] = $post;
             $cpt++;
         }
@@ -39,10 +39,9 @@ class UserDatabase
     public function insert($user)
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (ID, PASSWORD, IMG_ID, USERNAME, FIRST_CONNEXION, LAST_CONNEXION) VALUES (null, :PASSWORD, :IMG_ID, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
+            "INSERT INTO user (user_ID, username, password ,first_connexion, last_connexion) VALUES (null, :PASSWORD, :USERNAME, :FIRST_CONNEXION, :LAST_CONNEXION)");
         if(!($statement->execute([
             ':PASSWORD' => $user->getPassword(),
-            ':IMG_ID' => $user->getImg(),
             ':USERNAME' => $user->getUsername(),
             ':FIRST_CONNEXION' => $user->getFirstConnexion(),
             ':LAST_CONNEXION' => $user->getLastConnexion()

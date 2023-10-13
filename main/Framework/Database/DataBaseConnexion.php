@@ -7,7 +7,7 @@ class dataBaseConnexion
     private $dbHost = '127.0.0.1';
     private $dbPassword;
     private $dbUsername = 'root';
-    private $dbName = 'projetwebphp';
+    private $dbName = 'MetaHub';
     private $pdo = null;
 
     public function __construct()
