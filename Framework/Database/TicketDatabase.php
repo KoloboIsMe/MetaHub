@@ -89,4 +89,19 @@ class TicketDatabase
             return null;
         }
     }
+    public function uptdateTicket($data, $dataTitle, $dataMessage, $dataCategorie){
+        $statement = $this->PDO->prepare("
+        UPDATE USER
+        SET TITLE = :dataTitle, MESSAGE = :dataMessage, CATEGORY = :dataCategorie
+        WHERE ID = :data;");
+        if(!($statement->execute([
+            'data' => $data,
+            'dataTitle' => $dataTitle,
+            'dataMessage' => $dataMessage,
+            'dataCategorie'=> $dataCategorie
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+    }
 }
