@@ -4,18 +4,16 @@ use MHErrorHandler\ExceptionType;
 
 class Catcher
 {
-    private $exceptions;
-
-    public function __construct()
+    public function __construct(private array $exceptions = array())
     {
-        $this->exceptions = array();
+
     }
-    public function catch($message = "Undefined Exception", $level = 0, $type = ExceptionType::Exception)
+    public function catch($message = "Undefined Exception", $code = 0, $type = ExceptionType::Exception, Throwable $previous = null)
     {
         switch ($type)
         {
             case ExceptionType::Exception :
-                $this->exceptions[] = new Exception($message, $level);
+                $this->exceptions[] = new MHException($message, $code, $previous);
         }
     }
     public function __toString(): string
