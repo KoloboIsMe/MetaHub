@@ -1,8 +1,8 @@
 <?php
+namespace Framework\Database;
 
-use Database\dataBaseConnexion;
-use Entity\Ticket;
-
+use Framework\Entity\Ticket;
+use PDO;
 class TicketDatabase
 {
     //déclarer des constantes pour les limites de tailles
@@ -15,8 +15,41 @@ class TicketDatabase
 
     public function __construct()
     {
-        $this->PDO = (new dataBaseConnexion())->getPDO();
+        $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
+
+    public function selectTicket($attribute, $data){
+        $statement = $this->PDO->prepare("SELECT * FROM ticket WHERE $attribute = :data LIMIT 100");
+        if(!($statement->execute([
+            'data' => $data
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        $tickets = [];
+        $cpt = 0;
+        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new Ticket($ticket->ticket_ID, $ticket->title, $ticket->message, $ticket->author,  $ticket->date);
+            $tickets[$cpt] = $post;
+            $cpt++;
+        }
+        return $tickets;
+    }
+
+    public function insert($ticket){
+        $statement = $this->PDO->prepare(
+            "INSERT INTO ticket (title, message, date, author) VALUES (:title, :message, :date, :author)");
+        if(!($statement->execute([
+            ':title' => $ticket->getTitle(),
+            ':message' => $ticket->getMessage(),
+            ':date' => $ticket->getDate(),
+            ':author' => $ticket->getAuthor(),
+        ]))){
+            echo "erreur requete insertion(exception)";
+            return null;
+        }
+    }
+
 
     public function verifTicket($ticket){
         if
@@ -31,23 +64,6 @@ class TicketDatabase
         return true;
     }
 
-    public function insert($ticket){
-        $statement = $this->PDO->prepare(
-            "INSERT INTO ticket (ticket_ID, title, message, date, author) VALUES (null, :title, :message, :date, :author)");
-
-        if(!($statement->execute([
-            ':title' => $ticket->getTitle(),
-            ':message' => $ticket->getMessage(),
-            ':date' => $ticket->getDate(),
-            ':author' => $ticket->getAuthor(),
-        ]))){
-            echo "erreur requete (exception)";
-            return null;
-        }
-
-///        if($this->verifTicket($ticket) === false){generer une exception;}
-    }
-
     public function selectFiveLeast(){
         $statement = $this->PDO->prepare("SELECT * FROM (SELECT * FROM USER ORDER BY ID DESC) WHERE ROWNUM <= 5;");
         if(!($statement->execute([]))){
@@ -57,7 +73,7 @@ class TicketDatabase
         $tickets = [];
         $cpt = 0;
         while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date);
+            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
             $tickets[$cpt] = $post;
             $cpt++;
         }
@@ -65,7 +81,7 @@ class TicketDatabase
     }
 
     public function selectAllTicket(){
-        $statement = $this->PDO->prepare("SELECT * FROM USER;");
+        $statement = $this->PDO->prepare("SELECT * FROM USER LIMIT 100");
         if(!($statement->execute([]))){
             echo "erreur requete (exception)";
             return null;
@@ -73,7 +89,7 @@ class TicketDatabase
         $tickets = [];
         $cpt = 0;
         while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date);
+            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
             $tickets[$cpt] = $post;
             $cpt++;
         }

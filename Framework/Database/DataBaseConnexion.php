@@ -4,21 +4,29 @@ use PDO;
 
 class dataBaseConnexion
 {
+    private static $instance = null;
+
     private $dbHost = '127.0.0.1';
     private $dbPassword;
     private $dbUsername = 'root';
-    private $dbName = 'projetwebphp';
-    private $pdo = null;
+    private $dbName = 'metahub';
+    private $pdo;
 
-    public function __construct()
+    private function __construct()
     {
-        if ($this->getPDO() == null) {
-            $dsn = "mysql:host=$this->dbHost;dbname=$this->dbName";
-            $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
-            $pdo->exec('SET CHARACTER SET utf8');
-            $this->pdo = $pdo;
-            //voir exception
+        $dsn = "mysql:host=$this->dbHost;dbname=$this->dbName";
+        $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
+        $pdo->exec('SET CHARACTER SET utf8');
+        $this->pdo = $pdo;
+    }
+
+    public static function getInstance()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
         }
+
+        return self::$instance;
     }
 
     public function getPDO()

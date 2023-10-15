@@ -10,11 +10,11 @@ class Comment
     private $author;
     private $ticket;
 
-    public function __construct($comment_ID, $text, $author, $ticket)
+    public function __construct($comment_ID, $text, $date, $author, $ticket)
     {
         $this->comment_ID = $comment_ID;
         $this->text = $text;
-        $this->date = date('d/m/Y');
+        $this->date = $date;
         $this->author = $author;
         $this->ticket = $ticket;
     }
@@ -35,7 +35,10 @@ class Comment
         return $this->text;
     }
 
-    public function getDate(): string
+    /**
+     * @return mixed
+     */
+    public function getDate()
     {
         return $this->date;
     }

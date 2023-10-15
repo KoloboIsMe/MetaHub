@@ -13,5 +13,8 @@
             "name": "Alexandre possenti",
             "email": "alex.possenti0@gmail.com"
         }
-    ]
+    ],
+  "require": {
+    "ext-pdo": "*"
+  }
 }

@@ -4,85 +4,67 @@ namespace Framework\Entity;
 
 class Ticket
 {
-    private $ID;
+    private $ticket_ID;
     private $title;
     private $message;
     private $date;
     private $author;
     private $category;
 
-    public function __construct($title = "untitled", $message = NULL, $author = NULL, $categories = []){
+    public function __construct($ticket_ID, $title, $message,$date, $author){
+        $this->ticket_ID = $ticket_ID;
         $this->title = $title;
         $this->message = $message;
         $this->author = $author;
-        $this->category = $categories;
-        $this->date = date('d/m/Y');
-    }
-
-    public function getTitle(): mixed
-    {
-        return $this->title;
-    }
-
-    public function setTitle(mixed $title): void
-    {
-        $this->title = $title;
-    }
-
-    public function getMessage(): mixed
-    {
-        return $this->message;
-    }
-
-    public function setMessage(mixed $message): void
-    {
-        $this->message = $message;
-    }
-
-    public function getDate(): string
-    {
-        return $this->date;
-    }
-
-    public function setDate(string $date): void
-    {
         $this->date = $date;
-    }
-
-    public function getAuthor(): mixed
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(mixed $author): void
-    {
-        $this->author = $author;
-    }
-
-    public function getCategory(): mixed
-    {
-        return $this->category;
-    }
-
-    public function setCategory(mixed $category): void
-    {
-        $this->category = $category;
     }
 
     /**
      * @return mixed
      */
-    public function getID()
+    public function getTicketID()
     {
-        return $this->ID;
+        return $this->ticket_ID;
     }
 
     /**
-     * @param mixed $ID
+     * @return mixed
      */
-    public function setID($ID): void
+    public function getTitle()
     {
-        $this->ID = $ID;
+        return $this->title;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 
 }

@@ -1,23 +1,40 @@
 <?php
-
 namespace Framework\Database;
-use Database\GReturn;
 
+use Framework\Entity\Category;
+use PDO;
 class CategoryDatabase
 {
     private $PDO;
 
     public function __construct()
     {
-        $this->PDO = (new dataBaseConnexion())->getPDO();
+        $this->PDO = dataBaseConnexion::getInstance()->getPDO();
+    }
+    public function selectCategory($attribute, $data)
+    {
+        $statement = $this->PDO->prepare("SELECT * FROM category WHERE $attribute = :data LIMIT 100");
+        if(!($statement->execute([
+            'data' => $data
+        ]))){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        $categories = [];
+        $cpt = 0;
+        while ($category = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new Category($category->ID, $category->label, $category->description);
+            $categories[$cpt] = $post;
+            $cpt++;
+        }
+        return $categories;
     }
 
     public function insert($category)
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO category (ID, label, description) VALUES (:ID, :label, :description)");
+            "INSERT INTO category (label, description) VALUES (:label, :description)");
         if(!($statement->execute([
-            ':ID' => $category->getID(),
             ':label' => $category->getLabel(),
             ':description' => $category->getDescription()
         ]))){
@@ -26,16 +43,4 @@ class CategoryDatabase
         }
     }
 
-    public function select($username = null) : GReturn{
-        $request = "SELECT * FROM " . $this->dbName;
-        if(empty($username) === false){
-            $request .= " WHERE username = '" . $username . "'";
-        }
-        $result = $this->conn->query($request);
-        $row = [];
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-        }
-        return new GReturn("ok", content: $row);
-    }
 }
