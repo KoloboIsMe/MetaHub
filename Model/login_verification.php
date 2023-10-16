@@ -37,6 +37,7 @@ if(isset($_POST['username']) && isset($_POST['password']))
         header('Location: ../View/login.php?erreur=2'); // utilisateur ou mot de passe vide
     }
 }
+
 else
 {
     header('Location: ../View/login.php');

@@ -90,7 +90,7 @@ class TicketDatabase
     public function selectAllTicket(): ?array
     {
         $statement = $this->PDO->prepare("SELECT * FROM USER LIMIT 100");
-        if(!($statement->execute([]))){
+        if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
         }
