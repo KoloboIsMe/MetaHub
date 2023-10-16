@@ -23,7 +23,7 @@ class TicketDatabase
         $tickets = [];
         $cpt = 0;
         while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
+            $post = new Ticket($ticket->ticket_ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
             $tickets[$cpt] = $post;
             $cpt++;
         }
@@ -39,14 +39,7 @@ class TicketDatabase
             echo "erreur requete (exception)";
             return null;
         }
-        $tickets = [];
-        $cpt = 0;
-        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ticket_ID, $ticket->title, $ticket->message, $ticket->author,  $ticket->date);
-            $tickets[$cpt] = $post;
-            $cpt++;
-        }
-        return $tickets;
+        return $this->extracted($statement);
     }
 
     public function insert($ticket){
@@ -63,7 +56,7 @@ class TicketDatabase
         }
     }
 
-
+/*
     public function verifTicket($ticket): bool
     {
         if (strlen($ticket->getID()) > self::ID_LENGTH ||
@@ -75,11 +68,11 @@ class TicketDatabase
             return false;
         }
         return true;
-    }
+    }*/
 
     public function selectFiveLeast(): ?array
     {
-        $statement = $this->PDO->prepare("SELECT * FROM (SELECT * FROM USER ORDER BY ID DESC) WHERE ROWNUM <= 5;");
+        $statement = $this->PDO->prepare("SELECT * FROM ticket ORDER BY date, ticket_ID DESC limit 5;");
         if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
@@ -89,12 +82,22 @@ class TicketDatabase
 
     public function selectAllTicket(): ?array
     {
-        $statement = $this->PDO->prepare("SELECT * FROM USER LIMIT 100");
-        if(!($statement->execute([]))){
+        $statement = $this->PDO->prepare("SELECT * FROM ticket");
+        if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
         }
         return $this->extracted($statement);
     }
 
+    public function deleteTicket($ticket){
+        $statement = $this->PDO->prepare(
+            "DELETE FROM ticket WHERE ticket_ID = :ID");
+
+        if(!($statement->execute([
+            ':ID' => $ticket->getTicketID()
+        ]))){
+            echo "erreur requete delete(exception)";
+        }
+    }
 }
