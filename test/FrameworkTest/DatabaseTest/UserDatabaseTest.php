@@ -1,16 +1,18 @@
 <?php
 
 namespace DatabaseTest;
+use Framework\Database\UserDatabase;
+use PHPUnit\Framework\TestCase;
+
 require 'Framework/Database/UserDatabase.php';
 
 
-class UserDatabaseTest extends \PHPUnit\Framework\TestCase
+class UserDatabaseTest extends TestCase
 {
     public function testSelect()
     {
-        $userDB = new \Framework\Database\UserDatabase();
+        $userDB = new UserDatabase();
         $user = $userDB->getTest();
-        $this->assertEquals($user, "test");
+        $this->assertEquals("test", $user);
     }
-
 }

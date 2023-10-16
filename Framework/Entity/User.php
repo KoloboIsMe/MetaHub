@@ -4,39 +4,42 @@ namespace Framework\Entity;
 
 class User
 {
-    private $ID;
+
+    private $user_ID;
     private $password;
     private $username;
     private $first_connexion;
     private $last_connexion;
 
-    public function __construct($ID = null, $username, $password,$first_connexion = null,$last_connexion = null)
+    public function __construct($user_ID, $username, $password,$first_connexion = null,$last_connexion = null)
     {
-        $this->ID = $ID;
+        $this->user_ID = $user_ID;
         $this->password = $password;
         $this->username = $username;
         $this->first_connexion = $first_connexion;
         $this->last_connexion = $last_connexion;
     }
 
-//        $this->ID = $data['ID'];
-//        $this->password = $data['PASSWORD'];
-//        $this->username = $data['USERNAME'];
-//        $this->first_connexion = $data['FIRST_CONNEXION'];
-//        $this->last_connexion = $data['LAST_CONNEXION'];
-//    }
-
-    public function getID(): mixed
+    /**
+     * @return mixed
+     */
+    public function getUserID()
     {
-        return $this->ID;
+        return $this->user_ID;
     }
 
-    public function getPassword(): mixed
+    /**
+     * @return mixed
+     */
+    public function getPassword()
     {
         return $this->password;
     }
 
-    public function getUsername(): mixed
+    /**
+     * @return mixed
+     */
+    public function getUsername()
     {
         return $this->username;
     }
@@ -50,4 +53,5 @@ class User
     {
         return $this->last_connexion;
     }
+
 }
