@@ -1,17 +1,19 @@
 {
-    "name": "vendor/metahub",
+    "name": "alexandrepossenti/meta-hub",
+    "require": {
+        "phpunit/phpunit": "^10.4"
+    },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "^10.4"
     },
     "autoload": {
         "psr-4": {
-            "Vendor\\Metahub\\": "src/"
+            "Alexandrepossenti\\MetaHub\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Alexandre possenti",
-            "email": "alex.possenti0@gmail.com"
+            "name": "Alex"
         }
     ],
   "require": {

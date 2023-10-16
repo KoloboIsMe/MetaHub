@@ -5,13 +5,13 @@ use Framework\Entity\Comment;
 use PDO;
 class CommentDatabase
 {
-    private $PDO;
+    private PDO $PDO;
 
     public function __construct()
     {
         $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
-    public function selectComment($attribute, $data)
+    public function selectComment($attribute, $data): ?array
     {
         $statement = $this->PDO->prepare("SELECT * FROM comment WHERE $attribute = :data LIMIT 100");
         if(!($statement->execute([

@@ -11,14 +11,27 @@ class TicketDatabase
     const MESSAGE_LENGTH = 280;
     const DATE_FORMAT =  'd/m/Y';
 
-    private $PDO;
+    private PDO $PDO;
 
     public function __construct()
     {
         $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
 
-    public function selectTicket($attribute, $data){
+    public function extracted(false|\PDOStatement $statement): array
+    {
+        $tickets = [];
+        $cpt = 0;
+        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
+            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
+            $tickets[$cpt] = $post;
+            $cpt++;
+        }
+        return $tickets;
+    }
+
+    public function selectTicket($attribute, $data): ?array
+    {
         $statement = $this->PDO->prepare("SELECT * FROM ticket WHERE $attribute = :data LIMIT 100");
         if(!($statement->execute([
             'data' => $data
@@ -51,9 +64,9 @@ class TicketDatabase
     }
 
 
-    public function verifTicket($ticket){
-        if
-        (strlen($ticket->getID()) > self::ID_LENGTH ||
+    public function verifTicket($ticket): bool
+    {
+        if (strlen($ticket->getID()) > self::ID_LENGTH ||
         strlen($ticket->getTitle()) > self::TITLE_LENGHT ||
         strlen($ticket->getMessage()) > self::MESSAGE_LENGTH ||
         $ticket->getDate()->format == self::DATE_FORMAT)
@@ -64,35 +77,24 @@ class TicketDatabase
         return true;
     }
 
-    public function selectFiveLeast(){
+    public function selectFiveLeast(): ?array
+    {
         $statement = $this->PDO->prepare("SELECT * FROM (SELECT * FROM USER ORDER BY ID DESC) WHERE ROWNUM <= 5;");
-        if(!($statement->execute([]))){
+        if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
         }
-        $tickets = [];
-        $cpt = 0;
-        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
-            $tickets[$cpt] = $post;
-            $cpt++;
-        }
-        return $tickets;
+        return $this->extracted($statement);
     }
 
-    public function selectAllTicket(){
+    public function selectAllTicket(): ?array
+    {
         $statement = $this->PDO->prepare("SELECT * FROM USER LIMIT 100");
         if(!($statement->execute([]))){
             echo "erreur requete (exception)";
             return null;
         }
-        $tickets = [];
-        $cpt = 0;
-        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Ticket($ticket->ID, $ticket->title, $ticket->message, $ticket->date, $ticket->author);
-            $tickets[$cpt] = $post;
-            $cpt++;
-        }
-        return $tickets;
+        return $this->extracted($statement);
     }
+
 }

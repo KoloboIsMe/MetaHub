@@ -8,7 +8,7 @@ class UserDatabase
 {
 
     //database connection
-    private $PDO;
+    private PDO $PDO;
     private $test = "test";
     public function getTest()
     {
@@ -53,12 +53,12 @@ class UserDatabase
         }
     }
 
-    public function selectFromUsername($username)
+    public function selectFromUsername($username): ?array
     {
         return $this->selectUser('USERNAME', $username);
     }
 
-    public function selectFromFirstConnexion($firstConnexion)
+    public function selectFromFirstConnexion($firstConnexion): ?array
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }

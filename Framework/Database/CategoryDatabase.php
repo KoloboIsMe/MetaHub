@@ -5,13 +5,13 @@ use Framework\Entity\Category;
 use PDO;
 class CategoryDatabase
 {
-    private $PDO;
+    private PDO $PDO;
 
     public function __construct()
     {
         $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
-    public function selectCategory($attribute, $data)
+    public function selectCategory($attribute, $data): ?array
     {
         $statement = $this->PDO->prepare("SELECT * FROM category WHERE $attribute = :data LIMIT 100");
         if(!($statement->execute([
