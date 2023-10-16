@@ -8,4 +8,7 @@ require 'Framework/Entity/User.php';
 require 'Framework/Entity/Ticket.php';
 require 'Framework/Entity/Comment.php';
 require 'Framework/Entity/Category.php';
+
+define('__ROOT__', realpath(dirname(__DIR__) . "/"))
+
 ?>

@@ -6,19 +6,24 @@ use PDO;
 
 class UserDatabase
 {
+    private static $instance = null;
 
     //database connection
     private PDO $PDO;
-    private $test = "test";
-    public function getTest()
-    {
-        return $this->test;
-    }
 
     public function __construct()
     {
         $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
+    public static function getInstance()
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
     public function selectUser($attribute, $data)
     {
         $statement = $this->PDO->prepare("SELECT * FROM user WHERE $attribute = :data LIMIT 100");
@@ -53,12 +58,12 @@ class UserDatabase
         }
     }
 
-    public function selectFromUsername($username): ?array
+    public function selectByUsername($username): ?array
     {
         return $this->selectUser('USERNAME', $username);
     }
 
-    public function selectFromFirstConnexion($firstConnexion): ?array
+    public function selectByFirstConnexion($firstConnexion): ?array
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }

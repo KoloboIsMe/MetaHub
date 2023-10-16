@@ -2,7 +2,7 @@
 
 include 'Framework/Database/LoadFramework.php';
 
-$userDB = new \Framework\Database\UserDatabase();
+
 $ticketDB = new \Framework\Database\TicketDatabase();
 $commentDB = new \Framework\Database\CommentDatabase();
 $categoryDB = new \Framework\Database\CategoryDatabase();
@@ -17,9 +17,11 @@ $category = new \Framework\Entity\Category(1, "test", "test");
 //$ticketDB->insert($ticket);
 //$commentDB->insert($comment);
 
-//var_dump($userDB->selectUser("user_ID", 32));
+$lst = \Framework\Database\UserDatabase::getInstance()->selectByUsername("test");
+var_dump($lst);
 //var_dump($categoryDB->selectCategory("ID", 5));
 //var_dump($ticketDB->selectTicket("ticket_ID", 17));
 //var_dump($commentDB->selectComment("comment_ID", 9));
+
 
 ?>

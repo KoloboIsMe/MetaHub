@@ -22,7 +22,7 @@
         <label><b>Confirmez le mot de passe</b></label>
         <input type="password" placeholder="Confimez le mot de passe" name="password" required>
 
-        <input type="submit" id='submit' value='LOGIN' >
+        <input type="submit" id='submit' value='REGISTER' >
         <?php
         if(isset($_GET['erreur'])){
             $err = $_GET['erreur'];
