@@ -12,6 +12,7 @@
     <a href='principal.php?deconnexion=true'><span>Déconnexion</span></a>
 
     <!-- tester si l'utilisateur est connecté -->
+
     <?php
     session_start();
     if(isset($_GET['deconnexion']))

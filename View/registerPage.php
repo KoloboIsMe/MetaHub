@@ -31,6 +31,7 @@
         }
         ?>
     </form>
+    <a href='login.php'><span>Se connecter</span></a>
 </div>
 </body>
 </html>

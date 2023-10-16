@@ -28,6 +28,7 @@
         }
         ?>
     </form>
+    <a href='registerPage.php'><span>creer un compte</span></a>
 </div>
 </body>
 </html>

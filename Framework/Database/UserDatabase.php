@@ -67,4 +67,16 @@ class UserDatabase
     {
         return $this->selectUser('FIRST_CONNEXION', $firstConnexion);
     }
+
+    public function updateLastConnexion($user, $lastConnexion): void
+    {
+        $statement = $this->PDO->prepare(
+            "UPDATE user SET last_connexion = :LAST_CONNEXION WHERE user_ID = :USER_ID");
+        if(!($statement->execute([
+            ':LAST_CONNEXION' => $lastConnexion,
+            ':USER_ID' => $user->getUserID()
+        ]))){
+            echo "erreur requete update (exception)";
+        }
+    }
 }
