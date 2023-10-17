@@ -4,14 +4,14 @@
 
     <meta charset="utf-8">
     <!-- importer le fichier de style -->
-    <link rel="stylesheet" href="../_assets/styles/login.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="../_assets/styles/registerPage.css" media="screen" type="text/css" />
 </head>
 <body>
 <div id="container">
     <!-- zone de connexion -->
 
     <form action="../Model/register.php" method="POST">
-        <h1>Register</h1>
+        <h1>Inscription</h1>
 
         <label><b>Nom d'utilisateur</b></label>
         <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
@@ -22,16 +22,15 @@
         <label><b>Confirmez le mot de passe</b></label>
         <input type="password" placeholder="Confimez le mot de passe" name="password" required>
 
+        <label><b>admin ?</b></label>
+        <select name="admin">
+            <option value="0">non</option>
+            <option value="1">oui</option>
+        </select>
+
         <input type="submit" id='submit' value='REGISTER' >
-        <?php
-        if(isset($_GET['erreur'])){
-            $err = $_GET['erreur'];
-            if($err==1 || $err==2)
-                echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-        }
-        ?>
     </form>
-    <a href='login.php'><span>Se connecter</span></a>
+    Vous avez deja un compte ? <a href='login.php'>Se connecter</a>
 </div>
 </body>
 </html>

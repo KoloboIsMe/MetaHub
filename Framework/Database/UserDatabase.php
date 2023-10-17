@@ -36,7 +36,7 @@ class UserDatabase
         $users = [];
         $cpt = 0;
         while ($user = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new User($user->user_ID, $user->username, $user->password, $user->first_connexion, $user->last_connexion);
+            $post = new User($user->user_ID, $user->username, $user->password, $user->first_connexion, $user->last_connexion, $user->admin);
             $users[$cpt] = $post;
             $cpt++;
         }
@@ -46,12 +46,13 @@ class UserDatabase
     public function insert($user): void
     {
         $statement = $this->PDO->prepare(
-            "INSERT INTO user (username, password ,first_connexion, last_connexion) VALUES (:USERNAME, :PASSWORD, :FIRST_CONNEXION, :LAST_CONNEXION)");
+            "INSERT INTO user (username, password ,first_connexion, last_connexion, admin) VALUES (:USERNAME, :PASSWORD, :FIRST_CONNEXION, :LAST_CONNEXION, :ADMIN)");
         if(!($statement->execute([
             ':USERNAME' => $user->getUsername(),
             ':PASSWORD' => $user->getPassword(),
             ':FIRST_CONNEXION' => $user->getFirstConnexion(),
-            ':LAST_CONNEXION' => $user->getLastConnexion()
+            ':LAST_CONNEXION' => $user->getLastConnexion(),
+            ':ADMIN' => $user->getAdmin()
         ]))){
             echo "erreur requete insertion (exception)";
 
@@ -76,7 +77,16 @@ class UserDatabase
             ':LAST_CONNEXION' => $lastConnexion,
             ':USER_ID' => $user->getUserID()
         ]))){
-            echo "erreur requete update (exception)";
+            echo "erreur requete update last connexion (exception)";
+        }
+    }
+    public function setAdmin($user){
+        $statement = $this->PDO->prepare(
+            "UPDATE user SET admin = 1 WHERE user_ID = :USER_ID");
+        if(!($statement->execute([
+            ':USER_ID' => $user->getUserID()
+        ]))){
+            echo "erreur requete update admin (exception)";
         }
     }
 }

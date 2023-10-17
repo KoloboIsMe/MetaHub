@@ -12,6 +12,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             if (password_verify($password, $user[0]->getPassword())) //verification si le nom d'utilisateur existe et si le mot de passe est correct
             {
                 $_SESSION['user'] = $user[0];
+                $_SESSION['admin'] = $user[0]->getAdmin();
                 $_SESSION['username'] = $user[0]->getUsername();
                 \Framework\Database\UserDatabase::getInstance()->updateLastConnexion($_SESSION['user'], date("Y-m-d"));
                 header('Location: ../View/principal.php');
@@ -28,4 +29,5 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 } else {
     header('Location: ../View/login.php');
 }
+
 ?>

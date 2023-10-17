@@ -24,9 +24,12 @@
         }
     }
     else if($_SESSION['username'] !== ""){
-        $user = $_SESSION['username'];
+        $username = $_SESSION['username'];
         // afficher un message
-        echo "<br>Bonjour $user, vous êtes connectés";
+        echo "<br>Bonjour $username, vous êtes connectés";
+        if ($_SESSION['admin'] == 1) {
+            echo "<br> bonjour administrateur";
+        }
     }
     ?>
 

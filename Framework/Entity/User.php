@@ -10,14 +10,16 @@ class User
     private $username;
     private $first_connexion;
     private $last_connexion;
+    private $admin;
 
-    public function __construct($user_ID, $username, $password,$first_connexion = null,$last_connexion = null)
+    public function __construct($user_ID, $username, $password,$first_connexion,$last_connexion, $admin)
     {
         $this->user_ID = $user_ID;
         $this->password = $password;
         $this->username = $username;
         $this->first_connexion = $first_connexion;
         $this->last_connexion = $last_connexion;
+        $this->admin = $admin;
     }
 
     /**
@@ -52,6 +54,10 @@ class User
     public function getLastConnexion(): mixed
     {
         return $this->last_connexion;
+    }
+    public function getAdmin(): mixed
+    {
+        return $this->admin;
     }
 
 }

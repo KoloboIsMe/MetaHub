@@ -28,7 +28,7 @@
         }
         ?>
     </form>
-    <a href='registerPage.php'><span>creer un compte</span></a>
+    vous n'avez pas de compte ? <a href='registerPage.php'>inscrivez-vous</a>
 </div>
 </body>
 </html>
