@@ -59,4 +59,45 @@ class Comment
         return $this->ticket;
     }
 
+    /**
+     * @param mixed $comment_ID
+     */
+    public function setCommentID($comment_ID): void
+    {
+        $this->comment_ID = $comment_ID;
+    }
+
+    /**
+     * @param mixed $text
+     */
+    public function setText($text): void
+    {
+        $this->text = $text;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @param mixed $author
+     */
+    public function setAuthor($author): void
+    {
+        $this->author = $author;
+    }
+
+    /**
+     * @param mixed $ticket
+     */
+    public function setTicket($ticket): void
+    {
+        $this->ticket = $ticket;
+    }
+
+
 }

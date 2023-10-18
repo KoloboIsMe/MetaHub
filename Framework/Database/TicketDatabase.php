@@ -92,9 +92,9 @@ class TicketDatabase
 
     public function deleteTicket($ticket)
     {
-        $statement = $this->PDO->prepare("DELETE FROM ticket WHERE title = :title");
+        $statement = $this->PDO->prepare("DELETE FROM ticket WHERE ticket_ID = :ID");
         if(!$statement->execute([
-            ':title' => $ticket->getTitle()
+            ':ID' => $ticket->getTicketID(),
         ])){
             echo "erreur requete delete(exception)";
             return null;

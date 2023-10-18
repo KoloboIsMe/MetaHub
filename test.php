@@ -25,7 +25,14 @@ $ticket4 = new \Framework\Entity\Ticket(5, "Titre5", "Ceci est un message test p
 $ticket5 = new \Framework\Entity\Ticket(6, "Titre6", "Ceci est un message test pour le ticket 6", date("Y-m-d"), 32);
 $ticket6 = new \Framework\Entity\Ticket(7, "Titre7", "Ceci est un message test pour le ticket 7", date("Y-m-d"), 32);
 
-$comment = new \Framework\Entity\Comment(null, "test", date("Y-m-d"), 32,17);
+$comment0 = new \Framework\Entity\Comment(null, "Commentaire numéro 0", date("Y-m-d"), 32,18);
+$comment1 = new \Framework\Entity\Comment(null, "Commentaire numéro 1", date("Y-m-d"), 32,19);
+$comment2 = new \Framework\Entity\Comment(null, "Commentaire numéro 2", date("Y-m-d"), 32,18);
+$comment3 = new \Framework\Entity\Comment(null, "Commentaire numéro 3", date("Y-m-d"), 32,19);
+$comment4 = new \Framework\Entity\Comment(null, "Commentaire numéro 4", date("Y-m-d"), 32,18);
+$comment5 = new \Framework\Entity\Comment(null, "Commentaire numéro 5", date("Y-m-d"), 32,19);
+$comment6 = new \Framework\Entity\Comment(null, "Commentaire numéro 6", date("Y-m-d"), 32,18);
+
 $category = new \Framework\Entity\Category(1, "test", "test");
 
 //$userDB->insert($user);
@@ -40,7 +47,17 @@ $category = new \Framework\Entity\Category(1, "test", "test");
 //$ticketDB->insert($ticket6);
 //$ticketDB->deleteTicket($ticket0);
 
-//$commentDB->insert($comment);
+//$commentDB->insert($comment0);
+//$commentDB->insert($comment1);
+//$commentDB->insert($comment2);
+//$commentDB->insert($comment3);
+//$commentDB->insert($comment4);
+//$commentDB->insert($comment5);
+//$commentDB->insert($comment6);
+
+
+
+
 
 //var_dump($userDB->selectUser("user_ID", 32));
 //var_dump($categoryDB->selectCategory("ID", 5));
@@ -53,5 +70,7 @@ $category = new \Framework\Entity\Category(1, "test", "test");
 
 
 //var_dump($commentDB->selectComment("comment_ID", 9));
+var_dump($commentDB->updateComment($comment6, "Nouveau commentaire"));
+
 
 ?>

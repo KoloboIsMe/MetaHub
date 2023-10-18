@@ -11,20 +11,13 @@ class CommentDatabase
     {
         $this->PDO = dataBaseConnexion::getInstance()->getPDO();
     }
-    public function selectComment($attribute, $data): ?array
+    public function extracted(false|\PDOStatement $statement): array
     {
-        $statement = $this->PDO->prepare("SELECT * FROM comment WHERE $attribute = :data LIMIT 100");
-        if(!($statement->execute([
-            'data' => $data
-        ]))){
-            echo "erreur requete (exception)";
-            return null;
-        }
         $comments = [];
         $cpt = 0;
         while ($comment = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Comment($comment->comment_ID, $comment->text, $comment->date, $comment->author, $comment->ticket);
-            $comments[$cpt] = $post;
+            $aComment = new Comment($comment -> comment_ID, $comment -> text, $comment -> date, $comment -> author, $comment -> ticket);
+            $comments[$cpt] = $aComment;
             $cpt++;
         }
         return $comments;
@@ -38,36 +31,50 @@ class CommentDatabase
             ':text' => $comment->getText(),
             ':date' => $comment->getDate(),
             ':author' => $comment->getAuthor(),
-            ':ticket' => $comment->getTicket(),
+            ':ticket' => $comment->getTicket()
         ]))){
             echo "erreur requete insertion (exception)";
             return null;
         }
     }
+    public function updateComment($comment, $newText){
+        $comment->setText($newText);
 
-    public function removeComment($data){
-        $statement = $this->PDO->prepare("DELETE FROM COMMENT WHERE ID = :data;");
+        $statement = $this->PDO->prepare("UPDATE comment SET text = :newText WHERE comment_ID = :ID");
+        if(!($statement->execute([
+            ':ID' => $comment->getCommentID(),
+            ':newText' => $comment->getText()
+        ]))){
+            echo "erreur requete update(exception)";
+        }
+    }
+    public function deleteComment($comment){
+        $statement = $this->PDO->prepare("DELETE FROM comment WHERE comment_ID = :ID");
+        if(!$statement->execute([
+            ':ID' => $comment->getCommentID(),
+        ])){
+            echo "erreur requete delete(exception)";
+            return null;
+        }
+    }
+
+    public function selectComment($attribute, $data): ?array
+    {
+        $statement = $this->PDO->prepare("SELECT * FROM comment WHERE $attribute = :data LIMIT 100");
         if(!($statement->execute([
             'data' => $data
         ]))){
             echo "erreur requete (exception)";
             return null;
         }
+        return $this->extracted($statement);
     }
-
-    public function selectAllTicket(){
-        $statement = $this->PDO->prepare("SELECT * FROM COMMENT;");
-        if(!($statement->execute([]))){
+    public function selectAllComment(){
+        $statement = $this->PDO->prepare("SELECT * FROM comment");
+        if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
         }
-        $comments = [];
-        $cpt = 0;
-        while ($ticket = $statement->fetch(PDO::FETCH_OBJ)) {
-            $post = new Comment($ticket->comment_ID, $ticket->title, $ticket->message, $ticket->date);
-            $comments[$cpt] = $post;
-            $cpt++;
-        }
-        return $comments;
+        return $this->extracted($statement);
     }
 }
