@@ -67,4 +67,53 @@ class Ticket
         return $this->category;
     }
 
+    /**
+     * @param mixed $ticket_ID
+     */
+    public function setTicketID($ticket_ID): void
+    {
+        $this->ticket_ID = $ticket_ID;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title): void
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @param mixed $message
+     */
+    public function setMessage($message): void
+    {
+        $this->message = $message;
+    }
+
+    /**
+     * @param mixed $date
+     */
+    public function setDate($date): void
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @param mixed $author
+     */
+    public function setAuthor($author): void
+    {
+        $this->author = $author;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category): void
+    {
+        $this->category = $category;
+    }
+
+
 }

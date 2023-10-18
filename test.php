@@ -38,15 +38,19 @@ $category = new \Framework\Entity\Category(1, "test", "test");
 //$ticketDB->insert($ticket4);
 //$ticketDB->insert($ticket5);
 //$ticketDB->insert($ticket6);
+//$ticketDB->deleteTicket($ticket0);
 
 //$commentDB->insert($comment);
 
 //var_dump($userDB->selectUser("user_ID", 32));
 //var_dump($categoryDB->selectCategory("ID", 5));
+
 //var_dump($ticketDB->selectTicket("ticket_ID", 17));
 //var_dump($ticketDB->selectFiveLeast());
 //var_dump($ticketDB->selectAllTicket());
-var_dump($ticketDB->deleteTicket($ticket0));
+//var_dump($ticketDB->deleteTicket($ticket0));
+//var_dump($ticketDB->updateTicket($ticket1, "Nouveau Titre pour tester", "Nouveau message pour voir si ma fonction fonctionne correctement."));
+
 
 //var_dump($commentDB->selectComment("comment_ID", 9));
 

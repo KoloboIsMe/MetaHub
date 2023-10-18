@@ -90,14 +90,30 @@ class TicketDatabase
         return $this->extracted($statement);
     }
 
-    public function deleteTicket($ticket){
-        $statement = $this->PDO->prepare(
-            "DELETE FROM ticket WHERE ticket_ID = :ID");
-
-        if(!($statement->execute([
-            ':ID' => $ticket->getTicketID()
-        ]))){
+    public function deleteTicket($ticket)
+    {
+        $statement = $this->PDO->prepare("DELETE FROM ticket WHERE title = :title");
+        if(!$statement->execute([
+            ':title' => $ticket->getTitle()
+        ])){
             echo "erreur requete delete(exception)";
+            return null;
+        }
+    }
+
+    public function updateTicket($ticket, $newTitle, $newMessage){
+        $ticket->setTitle($newTitle);
+        $ticket->setMessage($newMessage);
+        $statement = $this->PDO->prepare("
+        UPDATE ticket
+        SET title = :newTitle, message = :newMessage
+        WHERE ticket_ID = :ID");
+        if(!($statement->execute([
+            ':ID' => $ticket->getTicketID(),
+            ':newTitle' => $ticket->getTitle(),
+            ':newMessage' => $ticket->getMessage()
+        ]))){
+            echo "erreur requete update(exception)";
         }
     }
 }
