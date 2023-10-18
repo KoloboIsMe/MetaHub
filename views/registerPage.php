@@ -10,7 +10,7 @@
 <div id="container">
     <!-- zone de connexion -->
 
-    <form action="../Model/register.php" method="POST">
+    <form action="../models/register.php" method="POST">
         <h1>Inscription</h1>
 
         <label><b>Nom d'utilisateur</b></label>

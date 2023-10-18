@@ -29,7 +29,7 @@
                 <div class="line l3"></div>
             </label>
         </header>
-        <script src="/View/script.js"></script>
+        <script src="/views/script.js"></script>
 <?php
 }
 ?>

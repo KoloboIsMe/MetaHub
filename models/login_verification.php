@@ -15,19 +15,19 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['admin'] = $user[0]->getAdmin();
                 $_SESSION['username'] = $user[0]->getUsername();
                 \Framework\Database\UserDatabase::getInstance()->updateLastConnexion($_SESSION['user'], date("Y-m-d"));
-                header('Location: ../View/principal.php');
+                header('Location: ../views/principal.php');
             }
             else {
-                header('Location: ../View/login.php?erreur=1'); // mot de passe incorrect
+                header('Location: ../views/login.php?erreur=1'); // mot de passe incorrect
             }
         } else {
-            header('Location: ../View/login.php?erreur=1'); // nom d'utilisateur incorrect
+            header('Location: ../views/login.php?erreur=1'); // nom d'utilisateur incorrect
         }
     } else {
-        header('Location: ../View/login.php?erreur=2'); // utilisateur ou mot de passe vide
+        header('Location: ../views/login.php?erreur=2'); // utilisateur ou mot de passe vide
     }
 } else {
-    header('Location: ../View/login.php');
+    header('Location: ../views/login.php');
 }
 
 ?>
