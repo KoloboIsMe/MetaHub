@@ -7,9 +7,9 @@ class dataBaseConnexion
     private static $instance = null;
 
     private $dbHost = '127.0.0.1';
-    private $dbPassword;
-    private $dbUsername = 'root';
-    private $dbName = 'metahub';
+    private $dbPassword = "MetaHubAdmin13.";
+    private $dbUsername = 'metahub';
+    private $dbName = 'metahub_login';
     private $pdo;
 
     private function __construct()

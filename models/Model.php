@@ -2,10 +2,10 @@
 
 abstract class Model
 {
-    const DB_HOST = '127.0.0.1';
-    const DB_PASSWORD = '';
-    const DB_USERNAME = 'root';
-    const DB_NAME = 'metahub';
+    const DB_HOST = 'mysql-metahub.alwaysdata.net';
+    const DB_PASSWORD = 'MetaHubAdmin13.';
+    const DB_USERNAME = 'metahub';
+    const DB_NAME = 'metahub_login';
     private static $_bdd;
 
     // Instancie la connexion à la base de données
