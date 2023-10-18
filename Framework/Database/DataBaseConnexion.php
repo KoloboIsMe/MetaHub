@@ -17,6 +17,7 @@ class dataBaseConnexion
         $dsn = "mysql:host=$this->dbHost;dbname=$this->dbName";
         $pdo = new PDO($dsn, $this->dbUsername, $this->dbPassword);
         $pdo->exec('SET CHARACTER SET utf8');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         $this->pdo = $pdo;
     }
 
