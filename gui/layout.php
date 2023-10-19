@@ -9,36 +9,33 @@
 <body>
 <header>
     <input type="checkbox" id="nav_check" hidden>
-    <img src="/_assets/images/MetaHubLogo.png" id="headerLogo"/>
+    <img src="/gui/images/MetaHubLogo.png" id="headerLogo"/>
     <nav>
         <ul>
-            <li><a href="/metahub"><img src="/_assets/images/home.png" id="headerImg"/></a></li>
+            <li><a href="/metahub"><img src="/gui/images/home.png" id="headerImg"/></a></li>
             <li><a href="/metahub/posts" id="headerLinks">Posts</a></li>
             <li><a href="" id="headerLinks">Créer un Post</a></li>
             <li><a href="" id="headerLinks">Catégories</a></li>
         </ul>
     </nav>
-    <img src="/_assets/images/login.png" id="headerImg"/>
+    <img src="/gui/images/login.png" id="headerImg"/>
     <label for="nav_check" aria-label="toggle curtain navigation" class="hamburger">
         <div class="line l1"></div>
         <div class="line l2"></div>
         <div class="line l3"></div>
     </label>
 </header>
-<script src="/views/script.js"></script>
+<script src="/gui/script.js"></script>
 
 <?= $content ?>
-
-
-
 
 <link href="<?= SCRIPTS . 'css' .DIRECTORY_SEPARATOR . 'app.css' ?>" rel="stylesheet" type="text/css" />
 <footer>
     <div class="footerImages">
-        <img src="/_assets/images/instagram.png" id="footerImg">
-        <img src="/_assets/images/snapchat.png" id="footerImg">
-        <img src="/_assets/images/twitter.png" id="footerImg">
-        <img src="/_assets/images/facebook.png" id="footerImg">
+        <img src="/gui/images/instagram.png" id="footerImg">
+        <img src="/gui/images/snapchat.png" id="footerImg">
+        <img src="/gui/images/twitter.png" id="footerImg">
+        <img src="/gui/images/facebook.png" id="footerImg">
     </div>
     <div class="footerContact">
         <p>Contactez-nous :</p><br>
