@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Database\DBConnection;
+use Framework\managers\TicketManager;
 
 class BlogController extends Controller
 {
@@ -10,13 +11,15 @@ class BlogController extends Controller
         return $this->view('blog.welcome');
     }
 
-    public function index(){
-        return $this->view('blog.index');
+    public function posts(){
+        $ticketManager = new TicketManager();
+        $tickets = $ticketManager->getTickets();
+        return $this->view('blog.posts', compact('tickets'));
     }
+
     public function show(int $id){
-        $db = DBConnection::getInstance();
-        $req = $db->getPDO()->query('SELECT * FROM tickets');
-        $tickets = $req->fetchAll();
-        return $this->view('blog.show', compact('id'));
+        $ticketManager = new TicketManager();
+        $ticket = $ticketManager->getTicketsWithCondition($id);
+        return $this->view('blog.show', compact('id', 'ticket'));
     }
 }

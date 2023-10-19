@@ -4,7 +4,8 @@
         "psr-4": {
             "Router\\": "routes/",
             "App\\": "app/",
-            "Database\\": "database/"
+            "Database\\": "database/",
+            "Framework\\": "framework/"
         }
     },
     "authors": [
