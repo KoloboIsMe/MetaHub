@@ -1,15 +1,18 @@
 {
-  "name": "vendor_name/devWeb",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "r22011455",
-      "email": "email@example.com"
-    }
-  ],
+    "name": "alexandrepossenti/metahub",
+    "autoload": {
+        "psr-4": {
+            "Router\\": "routes/",
+            "App\\": "app/",
+            "Database\\": "database/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex"
+        }
+    ],
   "require": {
-    "php": "8.2"
+    "ext-pdo": "*"
   }
 }
