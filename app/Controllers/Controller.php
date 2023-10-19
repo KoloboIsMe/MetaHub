@@ -10,6 +10,7 @@ class Controller
     {
         ob_start();
         $path = str_replace('.', DIRECTORY_SEPARATOR, $path);
+        $t = explode(DIRECTORY_SEPARATOR, $path)[1];
         require VIEWS . $path . '.php';
         if($params){
             $params = extract($params);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title><?= $t ?></title>
     <link  rel="stylesheet" href="<?= SCRIPTS . 'css' .DIRECTORY_SEPARATOR . 'header.css' ?>"  />
-    <link rel="shortcut icon" type="image/png" href="/_assets/images/MetaHubLogo.png"/>
+    <link rel="shortcut icon" type="image/png" href="MetaHubLogo.png"/>
 </head>
 <body>
 <header>
@@ -12,8 +12,8 @@
     <img src="/_assets/images/MetaHubLogo.png" id="headerLogo"/>
     <nav>
         <ul>
-            <li><a href="welcome"><img src="/_assets/images/home.png" id="headerImg"/></a></li>
-            <li><a href="posts" id="headerLinks">Posts</a></li>
+            <li><a href="/metahub"><img src="/_assets/images/home.png" id="headerImg"/></a></li>
+            <li><a href="/metahub/posts" id="headerLinks">Posts</a></li>
             <li><a href="" id="headerLinks">Créer un Post</a></li>
             <li><a href="" id="headerLinks">Catégories</a></li>
         </ul>
@@ -28,6 +28,9 @@
 <script src="/views/script.js"></script>
 
 <?= $content ?>
+
+
+
 
 <link href="<?= SCRIPTS . 'css' .DIRECTORY_SEPARATOR . 'app.css' ?>" rel="stylesheet" type="text/css" />
 <footer>
