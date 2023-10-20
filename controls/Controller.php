@@ -1,7 +1,6 @@
 <?php
 
 namespace controls;
-use const App\Controllers\VIEWS;
 
 class Controller
 {
@@ -12,5 +11,8 @@ class Controller
         $this->outputData = $outputData;
     }
 
+    public function getCompletePosts($ticketAccessLector){
+
+    }
 
 }

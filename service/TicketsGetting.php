@@ -15,6 +15,9 @@ class TicketsGetting
 
     public function getTickets($dataccess)
     {
+        foreach ($dataccess->getTickets() as $ticket) {
+            $this->tickets[] = $ticket;
+        }
         $this->tickets = $dataccess->getTickets();
         $this->outputData->setOutputData($this->tickets);
     }

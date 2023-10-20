@@ -74,13 +74,17 @@ if ('' == $url && !isset($_SESSION['isLogged'])) {
     (new gui\ViewRegister($layout))->display();
 
 }elseif ('posts' == $url ) {
-
+    $controller->getCompletePosts($ticketAccessLector);
     $ticketsGetting->getTickets($ticketAccessLector);
 
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewTickets($layout, $presenter))->display();
 
-}else{
+}elseif ('posts/:id' == $url ) {
+
+    echo ':id';
+}
+else{
     header('Status: 404 Not Found');
     echo '<html lang="fr"><body><h1>My Page NotFound</h1></body></html>';
 }
