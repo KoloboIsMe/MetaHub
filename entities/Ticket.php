@@ -1,8 +1,9 @@
 <?php
 
 namespace entities;
+include_once 'entities/Entity.php';
 
-class Ticket
+class Ticket extends Entity
 {
     private $ticket_ID;
     private $title;
@@ -10,20 +11,6 @@ class Ticket
     private $date;
     private $author;
     private $category;
-
-    //Constructeur
-    public function __construct(array $data){
-        $this->hydrate($data);
-    }
-    //hydratatation
-    public function hydrate(array $data){
-        foreach($data as $key => $value){
-            $method = 'set'.ucfirst($key);
-            if(method_exists($this,$method)){
-                $this->$method($value);
-            }
-        }
-    }
 
     //Setters
     public function setTicket_ID($ticket_ID){

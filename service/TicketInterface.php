@@ -2,5 +2,5 @@
 interface TicketInterface{
     public function getTickets();
 
-    public function getTicketsById($id);
+    public function getTicketById($id);
 }

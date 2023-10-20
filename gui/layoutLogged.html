@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>%title%</title>
-    <link href="/metahub/gui/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/png" href="/metahub/gui/images/MetaHubLogo.png"/>
+    <link href="gui/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="gui/css/login.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="gui/images/MetaHubLogo.png"/>
 </head>
 <body>
 <header>
     <input type="checkbox" id="nav_check" hidden>
-    <img src="/metahub/gui/images/MetaHubLogo.png" id="headerLogo"/>
+    <img src="gui/images/MetaHubLogo.png" id="headerLogo"/>
     <nav>
         <ul>
-            <li><a href="index.php"><img src="/metahub/gui/images/home.png" id="headerImg"/></a></li>
-            <li><a href="" id="headerLinks">Posts</a></li>
+            <li><a href="/"><img src="gui/images/home.png" id="headerImg"/></a></li>
+            <li><a href="posts" id="headerLinks">Posts</a></li>
             <li><a href="" id="headerLinks">Créer un Post</a></li>
             <li><a href="" id="headerLinks">Catégories</a></li>
         </ul>
     </nav>
-    <img src="/metahub/gui/images/login.png" id="headerImg"/>
+    <a href='/login'><img src="gui/images/login.png" id="headerImg"/></a>
     <label for="nav_check" aria-label="toggle curtain navigation" class="hamburger">
         <div class="line l1"></div>
         <div class="line l2"></div>
         <div class="line l3"></div>
     </label>
 </header>
-<script src="/metahub/gui/js/script.js"></script>
+<script src="gui/js/script.js"></script>
 
 %content%
 
 <footer>
     <div class="footerImages">
-        <img src="/metahub/gui/images/instagram.png" id="footerImg">
-        <img src="/metahub/gui/images/snapchat.png" id="footerImg">
-        <img src="/metahub/gui/images/twitter.png" id="footerImg">
-        <img src="/metahub/gui/images/facebook.png" id="footerImg">
+        <img src="gui/images/instagram.png" id="footerImg">
+        <img src="gui/images/snapchat.png" id="footerImg">
+        <img src="gui/images/twitter.png" id="footerImg">
+        <img src="gui/images/facebook.png" id="footerImg">
     </div>
     <div class="footerContact">
         <p>Contactez-nous :</p><br>

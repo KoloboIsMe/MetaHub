@@ -2,7 +2,6 @@
 
 namespace database;
 
-
 use entities\Ticket;
 use PDO;
 use TicketInterface;
@@ -34,7 +33,7 @@ class TicketAccess implements TicketInterface
         return $var;
     }
 
-    public function getTicketsById($id)
+    public function getTicketById($id)
     {
         $var = [];
         $statement = $this->dataAccess->prepare('SELECT * FROM tickets where ticket_ID = :id LIMIT 100');
