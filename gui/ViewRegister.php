@@ -26,7 +26,7 @@ class ViewRegister extends View
         
                 <input type='submit' id='submit' value='REGISTER' >
            
-            <p>vous avez deja un compte ? <a href='/metahub/login'>connectez-vous</a></p>
+            <p>vous avez deja un compte ? <a href='/login'>connectez-vous</a></p>
             </form>
         </div>
         ";
