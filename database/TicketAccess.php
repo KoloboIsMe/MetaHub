@@ -4,19 +4,23 @@ namespace database;
 
 
 use entities\Ticket;
-use Framework\database\PDO;
+use PDO;
 use TicketInterface;
 
-class TicketManager implements TicketInterface
+include_once "service/TicketInterface.php";
+include_once "entities/Ticket.php";
+
+
+class TicketAccess implements TicketInterface
 {
     protected $dataAccess = null;
+
     public function __construct($dataAccess){
         $this->dataAccess = $dataAccess;
     }
 
     public function getTickets()
     {
-        $obj = 'Framework\entities\\'.$obj;
         $var = [];
         $statement = $this->dataAccess->prepare('SELECT * FROM tickets LIMIT 100');
         if(!$statement->execute()){
@@ -30,8 +34,20 @@ class TicketManager implements TicketInterface
         return $var;
     }
 
-    public function getTicketsWithCondition($id)
+    public function getTicketsById($id)
     {
-
+        $var = [];
+        $statement = $this->dataAccess->prepare('SELECT * FROM tickets where ticket_ID = :id LIMIT 100');
+        if(!$statement->execute([
+            'id' => $id
+        ])){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        while($data = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Ticket($data);
+        }
+        return $var;
     }
 }
