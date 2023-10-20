@@ -2,7 +2,7 @@
 
 namespace database;
 
-class CategoryDatabase
+class CategoryAccess
 {
 
 }

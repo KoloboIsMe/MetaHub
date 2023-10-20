@@ -14,18 +14,20 @@ class Presenter
     public function showAllTickets()
     {
         $content = '';
-        foreach ($this->outputData->getOutputData() as $post) {
+        foreach ($this->outputData->getOutputData() as $ticket) {
             $content .= "
-            <article>
-            <header>
-                <a href='/'>
-                    <h1 class='titreBillet'>" . $post->getTitle() . "</h1>
-                </a>
-                <time>" . $post->getDate() . " ?></time>
-            </header>
-            <p> " . $post->getMessage() . "</p>
-            </article>";
+            <div class='card-container1'>
+                <div class='card'>
+                    <div class='card-content'>
+                        <h3> ". $ticket->getTitle() . "</h3>
+                        <p>" . $ticket->getMessage() . "</p>
+                        <time>" . $ticket->getDate() . " </time>
+                        <p>" . $ticket->getTicket_ID() . "</p>
+                    </div>
+                   
+                </div>";
         }
+        $content .= "</div>";
         return $content;
     }
 }

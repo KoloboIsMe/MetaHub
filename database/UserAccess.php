@@ -2,7 +2,7 @@
 
 namespace database;
 
-class CommentDatabase
+class UserAccess
 {
 
 }
