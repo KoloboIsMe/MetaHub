@@ -4,7 +4,7 @@ namespace gui;
 
 class ViewTickets extends View
 {
-    public function __construct($layout, $presenter)
+    public function __construct($layout, $presenter )
     {
         parent::__construct($layout);
 

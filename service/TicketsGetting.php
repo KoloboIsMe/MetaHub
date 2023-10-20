@@ -6,7 +6,6 @@ class TicketsGetting
 {
 
     private $outputData;
-    private $tickets;
 
     public function __construct($outputData)
     {
@@ -15,10 +14,13 @@ class TicketsGetting
 
     public function getTickets($dataccess)
     {
-        foreach ($dataccess->getTickets() as $ticket) {
-            $this->tickets[] = $ticket;
-        }
-        $this->tickets = $dataccess->getTickets();
-        $this->outputData->setOutputData($this->tickets);
+        $tickets = $dataccess->getTickets();
+        $this->outputData->setOutputDataTickets($tickets);
+    }
+
+    public function getTicketById($dataccess, $id)
+    {
+        $tickets = $dataccess->getTicketById($id);
+        $this->outputData->setOutputDataTickets($tickets);
     }
 }

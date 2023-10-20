@@ -3,20 +3,56 @@
 namespace service;
 class OutputData
 {
-    protected $outputData;
+    protected $outputDataTickets;
+    protected $outputDataComments = [];
+    protected $outputDataUsers = [];
 
     public function __destruct()
     {
-        $this->outputData = null;
+        $this->outputDataTickets = null;
+        $this->outputDataComments = null;
     }
 
-    public function getOutputData()
+    public function getOutputDataTickets()
     {
-        return $this->outputData;
+        return $this->outputDataTickets;
     }
 
-    public function setOutputData($outputData)
+    public function setOutputDataTickets($outputDataTickets): void
     {
-        $this->outputData = $outputData;
+        $this->outputDataTickets = $outputDataTickets;
     }
+
+    public function getOutputDataComments($Ticketid)
+    {
+        return $this->outputDataComments[$Ticketid];
+    }
+
+    public function addOutputDataComments($Comment, $Ticketid)
+    {
+        $this->outputDataComments[$Ticketid] = $Comment;
+    }
+
+    public function resetOutputDataComments()
+    {
+        $this->outputDataComments = [];
+    }
+
+    public function getOutputDataUser($id)
+    {
+        return $this->outputDataUsers[$id];
+    }
+
+    public function addOutputDataUser($User, $id)
+    {
+        if(!isset($this->outputDataUsers[$id]))
+            $this->outputDataUsers[$id] = $User;
+    }
+
+    public function resetOutputDataUsers()
+    {
+        $this->outputDataUsers = [];
+    }
+
+
 }
