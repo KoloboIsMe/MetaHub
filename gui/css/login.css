@@ -1,10 +1,7 @@
-body{
-    background: #42b34a;
-}
 #container{
     width:400px;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:2%;
 }
 /* Bordered form */
 form {
@@ -19,6 +16,15 @@ form {
     margin: 0 auto;
     padding-bottom: 10px;
     color: white;
+}
+
+#container p {
+    color: white;
+}
+
+#container p a{
+    color: lightblue;
+    text-decoration: underline;
 }
 
 #container label{
