@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\entities;
+namespace entities;
 
 class Ticket
 {

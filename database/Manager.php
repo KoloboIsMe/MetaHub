@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\managers;
+namespace database;
 use PDO;
 
 abstract class Manager

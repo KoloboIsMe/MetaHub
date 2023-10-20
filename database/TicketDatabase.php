@@ -1,9 +1,10 @@
 <?php
 
-namespace Framework\managers;
+namespace database;
 
 
-use Framework\entities\Ticket;
+use entities\Ticket;
+use Framework\database\PDO;
 use TicketInterface;
 
 class TicketManager implements TicketInterface
