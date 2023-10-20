@@ -23,7 +23,7 @@ class ViewLogin extends View
         
                 <input type='submit' id='submit' value='LOGIN' >
            
-            <p>vous n\'avez pas de compte ? <a href='/metahub/register'>inscrivez-vous</a></p>
+            <p>vous n\'avez pas de compte ? <a href='/register'>inscrivez-vous</a></p>
             </form>
         </div>
         ";
