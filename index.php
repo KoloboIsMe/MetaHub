@@ -81,6 +81,15 @@ if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
     $layoutTemplate = 'gui/layout.html';
 }
 
+if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password'])) {
+
+    $page = $_GET['id'] ?? $page = null;
+    $error = $controller->registerAction($usersGetting, $userAccess);
+    if ($error){
+        $url = 'register';
+    }else
+        $url = 'login_verification';
+}
 if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
@@ -88,17 +97,12 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
     if ($error){
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error';
-    }else
-        $page ? header("Location: /$page") : header("Location: /");
+    }else{
+        $url = '/';
+        $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
+    }
 }
-if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password']) && !isset($_SESSION['isLogged'])) {
-    $page = $_GET['id'] ?? $page = null;
-    $error = $controller->registerAction($usersGetting, $userAccess);
-    if ($error){
-        $url = 'register';
-    }else
-        $page ? header("Location: /$page") : header("Location: /login");
-}
+
 
 if ('' == $url || '/' == $url) {
 
