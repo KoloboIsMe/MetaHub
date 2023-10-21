@@ -89,7 +89,9 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error';
     }else
-        $page ? header("refresh: /$page") : header("refresh: /");
+        echo 'test';
+        $url = '/';
+//        $page ? header("refresh:0;/$page") : header("refresh:0:/");
 }
 if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password']) && !isset($_SESSION['isLogged'])) {
 
