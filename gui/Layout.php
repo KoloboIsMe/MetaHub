@@ -10,10 +10,10 @@ class Layout
         $this->templateFile = $templateFile;
     }
 
-    public function display($title, $content)
+    public function display($title, $content, $username)
     {
         $page = file_get_contents($this->templateFile);
-        $page = str_replace(['%title%', '%content%'], [$title, $content], $page);
+        $page = str_replace(['%title%', '%content%', '%username%'], [$title, $content, $username], $page);
         echo $page;
     }
 }
