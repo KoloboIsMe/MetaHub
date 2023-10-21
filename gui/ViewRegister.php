@@ -44,7 +44,7 @@ class ViewRegister extends View
             return false;
         }
         if (password !== passwordConfirmation) {
-            passwordConfirmationError.innerHTML = 'Les mots de passe ne correspondenteeeee pas';
+            passwordConfirmationError.innerHTML = 'Les mots de passe ne correspondent pas';
             return false;
         }
 
