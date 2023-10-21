@@ -81,22 +81,15 @@ if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
     $layoutTemplate = 'gui/layout.html';
 }
 
-if ('login_verification' == $url ) {
+if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
-    echo 'test';
-    if (isset($_POST['username'])){
-        echo $_POST['username'];
-    }
-    if (isset($_POST['password'])){
-        echo $_POST['password'];
-    }
-//    $page = $_GET['id'] ?? $page = null;
-//    $error = $controller->authentificateAction($usersGetting, $userAccessLector);
-//    if ($error){
-//        $page ? $redirect = 'login&id='.$page : $redirect = 'login';
-//        $url = 'error';
-//    }else
-//        $page ? header("Location: /$page") : header("Location: /");
+    $page = $_GET['id'] ?? $page = null;
+    $error = $controller->authentificateAction($usersGetting, $userAccessLector);
+    if ($error){
+        $page ? $redirect = 'login&id='.$page : $redirect = 'login';
+        $url = 'error';
+    }else
+        $page ? header("refresh: /$page") : header("refresh: /");
 }
 if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password']) && !isset($_SESSION['isLogged'])) {
 
