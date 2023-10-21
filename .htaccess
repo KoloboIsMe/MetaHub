@@ -1,7 +1,7 @@
-RewriteEngine On
-
+RewriteEngine on
+# Tout url != fichier...
 RewriteCond %{REQUEST_FILENAME} !-f
+# et url != repetoire...
 RewriteCond %{REQUEST_FILENAME} !-d
-
-
+# Sera redirigée sur le fichier index.php sous le nom d'url !
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
