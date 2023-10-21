@@ -3,9 +3,10 @@
 include_once 'controls/Controller.php';
 include_once 'controls/Presenter.php';
 
+include_once 'database/CategoryAccess.php';
+include_once 'database/CommentAccess.php';
 include_once 'database/SPDO.php';
 include_once 'database/TicketAccess.php';
-include_once 'database/CommentAccess.php';
 include_once 'database/UserAccess.php';
 
 include_once 'entities/Category.php';
@@ -15,14 +16,16 @@ include_once 'entities/User.php';
 
 include_once 'gui/Layout.php';
 include_once 'gui/View.php';
+include_once 'gui/ViewCategories.php';
+include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewRegister.php';
-include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewTickets.php';
 
+include_once 'service/CategoriesGetting.php';
+include_once "service/CommentsGetting.php";
 include_once "service/OutputData.php";
 include_once "service/TicketsGetting.php";
-include_once "service/CommentsGetting.php";
 include_once "service/UsersGetting.php";
 
 $dbAdmin = null;
@@ -39,25 +42,27 @@ try {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
     die();
 }
-
-$ticketAccessLector = new database\TicketAccess($dbLector);
+$categoryAccessLector = new database\CategoryAccess($dbLector);
 $commentAccessLector = new database\CommentAccess($dbLector);
+$ticketAccessLector = new database\TicketAccess($dbLector);
 $userAccessLector = new database\UserAccess($dbLector);
-
+$accessors = array('categoryAccessLector' => $categoryAccessLector, 'ticketAccessLector' => $ticketAccessLector, 'commentAccessLector' =>$commentAccessLector, 'userAccessLector' =>$userAccessLector);
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new service\OutputData();
 
-// initialisation du controller
+// initialisation du controller avec accès a la structure pour le transfert des données
 $controller = new controls\Controller($outputData);
 
-// initialisation du presenter avec accès aux données
+// initialisation du presenter avec accès a la structure pour le transfert des données
 $presenter = new controls\Presenter($outputData);
 
-//initialisation des services
+//initialisation des services avec la structure pour le transfert des données
+$categoriesGetting = new service\CategoriesGetting($outputData);
 $ticketsGetting = new service\TicketsGetting($outputData);
 $commentsGetting = new service\CommentsGetting($outputData);
 $usersGetting = new service\UsersGetting($outputData);
+$dataGetting = array('categoriesGetting' => $categoriesGetting, 'ticketsGetting' => $ticketsGetting, 'commentsGetting' =>$commentsGetting, 'usersGetting' =>$usersGetting);
 
 
 // chemin de l'URL demandée au navigateur
@@ -88,12 +93,23 @@ if ('' == $url && !isset($_SESSION['isLogged'])) {
 
     if(isset($_GET['id'])){
         $id = $_GET['id'];
-        $controller->getCompleteTicketsById($ticketsGetting, $ticketAccessLector, $commentsGetting,$commentAccessLector, $usersGetting, $userAccessLector, $id);
+        $controller->getCompleteTicketsById($accessors, $dataGetting, $id);
     }else {
-        $controller->getCompleteTickets($ticketsGetting, $ticketAccessLector, $commentsGetting,$commentAccessLector, $usersGetting, $userAccessLector);
+        $controller->getCompleteTickets($accessors, $dataGetting);
     }
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewTickets($layout, $presenter))->display();
+
+}elseif ('categories' == $url ) {
+
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $controller->getTicketByCatgoriesById($accessors, $dataGetting, $id);
+    }else {
+        $controller->getTicketByCatgories($accessors, $dataGetting);
+    }
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewCategories($layout, $presenter))->display();
 
 }
 

@@ -19,7 +19,6 @@ class UserAccess implements UserInterface
 
     public function getUserById($ID)
     {
-        $var = [];
         $statement = $this->dataAccess->prepare('SELECT * FROM users where user_ID = :ID LIMIT 100');
         if(!$statement->execute([
             'ID' => $ID

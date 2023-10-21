@@ -4,8 +4,9 @@ namespace service;
 class OutputData
 {
     protected $outputDataTickets;
-    protected $outputDataComments = [];
-    protected $outputDataUsers = [];
+    protected $outputDataComments;
+    protected $outputDataUsers;
+    protected $outputDataCategories;
 
     public function __destruct()
     {
@@ -13,45 +14,73 @@ class OutputData
         $this->outputDataComments = null;
     }
 
-    public function getOutputDataTickets()
+    //outputdata Tickets
+    public function setOutputDataTickets($outputDataTickets)
     {
-        return $this->outputDataTickets;
+        $this->resetOutputDataTickets();
+        $this->outputDataTickets[0] = $outputDataTickets;
+    }
+    public function getOutputDataTickets($id = 0)
+    {
+        return $this->outputDataTickets[$id];
+    }
+    public function addOutputDataTickets($Ticket, $id)
+    {
+        if(!isset($this->outputDataTickets[$id]))
+            $this->outputDataTickets[$id] = $Ticket;
+    }
+    public function resetOutputDataTickets()
+    {
+        $this->outputDataTickets = [];
     }
 
-    public function setOutputDataTickets($outputDataTickets): void
-    {
-        $this->outputDataTickets = $outputDataTickets;
-    }
-
+    //outputdata Comments
     public function getOutputDataComments($Ticketid)
     {
         return $this->outputDataComments[$Ticketid];
     }
-
     public function addOutputDataComments($Comment, $Ticketid)
     {
         $this->outputDataComments[$Ticketid] = $Comment;
     }
-
     public function resetOutputDataComments()
     {
         $this->outputDataComments = [];
     }
 
-    public function getOutputDataUser($id)
+    //outputdata Uers
+    public function getOutputDataUsers($id)
     {
         return $this->outputDataUsers[$id];
     }
-
-    public function addOutputDataUser($User, $id)
+    public function addOutputDataUsers($User, $id)
     {
         if(!isset($this->outputDataUsers[$id]))
             $this->outputDataUsers[$id] = $User;
     }
-
     public function resetOutputDataUsers()
     {
         $this->outputDataUsers = [];
+    }
+
+    //outputdata Categories
+    public function setOutputDataCategories($outputDataCategories)
+    {
+        $this->resetOutputDataCategories();
+        $this->outputDataCategories[0] = $outputDataCategories;
+    }
+    public function getOutputDataCategories($id = 0)
+    {
+        return $this->outputDataCategories[$id];
+    }
+    public function addOutputDataCategories($User, $id)
+    {
+        if(!isset($this->outputDataCategories[$id]))
+            $this->outputDataCategories[$id] = $User;
+    }
+    public function resetOutputDataCategories()
+    {
+        $this->outputDataCategories = [];
     }
 
 

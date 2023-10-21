@@ -10,6 +10,6 @@ class ViewTickets extends View
 
         $this->title = 'Tickets';
 
-        $this->content = $presenter->showAllTickets();
+        $this->content = $presenter->showCompleteTickets();
     }
 }
