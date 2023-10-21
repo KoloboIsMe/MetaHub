@@ -28,6 +28,7 @@ class Controller
         $dataGetting['commentsGetting']->resetOutputDataComments();
         $dataGetting['usersGetting']->resetOutputDataUsers();
         $dataGetting['categoriesGetting']->resetOutputDataCategories();
+        $dataGetting['ticketsGetting']->resetOutputDataTickets();
 
         $dataGetting['ticketsGetting']->getTicketById($accessors['ticketAccessLector'], $id);
         $ticket = $this->outputData->getOutputDataTickets()[0];
@@ -66,6 +67,33 @@ class Controller
             $dataGetting['usersGetting']->addUserById($accessors['userAccessLector'], $ticket->getAuthor());
         }
     }
+
+    public function authentificateAction($usersGetting, $data)
+    {
+        if (isset($_POST['username']) && isset($_POST['password'])) {
+            $usersGetting->authentificate($_POST['username'], $_POST['password'], $data);
+            if (!$this->outputData->getOutputDataUsers()) {
+                return 'Mauvais identifiant ou mot de passe !';
+            }
+            $_SESSION['isLogged'] = true;
+            $_SESSION['username'] = $_POST['username'];
+        } else {
+            return 'Veuillez remplir tous les champs !';
+        }
+    }
+
+    public function registerAction($usersGetting, $data)
+    {
+        if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])) {
+            if ($_POST['password'] !== $_POST['password_confirmation']) {
+                return 'Les mots de passe ne correspondent pas !';
+            }
+            return $usersGetting->register($_POST['username'], $_POST['password'], $data);
+        } else {
+            return 'Veuillez remplir tous les champs !';
+        }
+    }
+
 
 
 

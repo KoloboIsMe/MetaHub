@@ -35,7 +35,7 @@ class OutputData
     }
 
     //outputdata Comments
-    public function getOutputDataComments($Ticketid)
+    public function getOutputDataComments($Ticketid = 0)
     {
         return $this->outputDataComments[$Ticketid];
     }
@@ -49,7 +49,12 @@ class OutputData
     }
 
     //outputdata Uers
-    public function getOutputDataUsers($id)
+    public function setOutputDataUsers($outputDataUsers)
+    {
+        $this->resetOutputDataUsers();
+        $this->outputDataUsers[0] = $outputDataUsers;
+    }
+    public function getOutputDataUsers($id = 0)
     {
         return $this->outputDataUsers[$id];
     }
@@ -82,6 +87,7 @@ class OutputData
     {
         $this->outputDataCategories = [];
     }
+
 
 
 }

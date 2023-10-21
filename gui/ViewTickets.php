@@ -10,6 +10,9 @@ class ViewTickets extends View
 
         $this->title = 'Tickets';
 
+        if(isset($_SESSION['username']))
+            $this->username = $_SESSION['username'];
+
         $this->content = $presenter->showCompleteTickets();
     }
 }

@@ -4,15 +4,17 @@ namespace gui;
 
 class ViewLogin extends View
 {
-    public function __construct($layout)
+    public function __construct($layout, $page)
     {
         parent::__construct($layout);
 
         $this->title = 'Connexion';
 
+        $page ? $action = '/login_verification&id='.$page : $action = '/login_verification';
+
         $this->content = "
         <div id='container'>
-            <form action='' method='POST'>
+            <form action=$action method='POST'>
                 <h1>Login</h1>
         
                 <label><b>Nom d'utilisateur</b></label>
@@ -23,7 +25,7 @@ class ViewLogin extends View
         
                 <input type='submit' id='submit' value='LOGIN' >
            
-            <p>vous n\'avez pas de compte ? <a href='/register'>inscrivez-vous</a></p>
+            <p>vous n'avez pas de compte ? <a href='/register'>inscrivez-vous</a></p>
             </form>
         </div>
         ";

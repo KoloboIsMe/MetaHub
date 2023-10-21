@@ -10,7 +10,6 @@ class Ticket extends Entity
     private $message;
     private $date;
     private $author;
-    private $category;
 
     //Setters
     public function setTicket_ID($ticket_ID){

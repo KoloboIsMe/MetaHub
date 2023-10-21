@@ -10,6 +10,9 @@ class ViewCategories extends View
 
         $this->title = 'Categories';
 
+        if(isset($_SESSION['username']))
+            $this->username = $_SESSION['username'];
+
         $this->content = $presenter->showCategoriesTickets();
     }
 }
