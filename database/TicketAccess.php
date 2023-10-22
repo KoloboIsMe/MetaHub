@@ -21,7 +21,7 @@ class TicketAccess implements TicketInterface
     public function getTickets()
     {
         $var = [];
-        $statement = $this->dataAccess->prepare('SELECT * FROM tickets LIMIT 100');
+        $statement = $this->dataAccess->prepare('SELECT * FROM tickets ORDER BY ticket_ID DESC LIMIT 100');
         if(!$statement->execute()){
             echo "erreur requete (exception)";
             return null;
@@ -36,7 +36,7 @@ class TicketAccess implements TicketInterface
     public function getTicketById($id)
     {
         $var = [];
-        $statement = $this->dataAccess->prepare('SELECT * FROM tickets where ticket_ID = :id LIMIT 100');
+        $statement = $this->dataAccess->prepare('SELECT * FROM tickets where ticket_ID = :id ORDER BY ticket_ID DESC LIMIT 100');
         if(!$statement->execute([
             'id' => $id
         ])){
