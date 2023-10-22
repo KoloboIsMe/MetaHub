@@ -23,6 +23,11 @@ class TicketsGetting
         $tickets = $dataccess->getTicketById($id);
         $this->outputData->setOutputDataTickets($tickets);
     }
+    public function get5LastTickets($dataccess)
+    {
+        $tickets = $dataccess->get5LastTickets();
+        $this->outputData->setOutputDataTickets($tickets);
+    }
 
     public function addTicketsWithCategory($dataccess, $CategoryID)
     {

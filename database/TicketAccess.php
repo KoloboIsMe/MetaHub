@@ -50,6 +50,20 @@ class TicketAccess implements TicketInterface
         return $var;
     }
 
+    public function get5LastTickets(){
+        $var = [];
+        $statement = $this->dataAccess->prepare('SELECT * FROM tickets ORDER BY ticket_ID DESC LIMIT 5');
+        if(!$statement->execute()){
+            echo "erreur requete (exception)";
+            return null;
+        }
+        while($data = $statement->fetch(PDO::FETCH_ASSOC))
+        {
+            $var[] = new Ticket($data);
+        }
+        return $var;
+    }
+
     public function getTicketsWithCategory($CategoryID)
     {
         $var = [];

@@ -13,6 +13,7 @@ class ViewLogin extends View
         $page ? $action = '/login_verification&id='.$page : $action = '/login_verification';
 
         $this->content = "
+        <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
         <div id='container'>
             <form action=$action method='POST'>
                 <h1>Login</h1>

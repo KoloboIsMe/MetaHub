@@ -13,6 +13,7 @@ class ViewRegister extends View
         $page ? $action = '/registerAction&id='.$page : $action = '/registerAction';
 
         $this->content = "
+<link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
 <div id='container'>
     <form action=$action method='POST' onsubmit=\"return validateForm()\">
         <h1>Register</h1>

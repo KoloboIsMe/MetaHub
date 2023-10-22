@@ -20,7 +20,9 @@ class CommentAccess implements CommentInterface
     public function getCommentsByTicketId($TicketId)
     {
         $var = [];
-        $statement = $this->dataAccess->prepare('SELECT * FROM comments where ticket = :TicketId LIMIT 100');
+        $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comments 
+                                                JOIN users ON comments.author = users.user_ID
+                                                   where ticket = :TicketId LIMIT 100');
         if(!$statement->execute([
             'TicketId' => $TicketId
         ])){

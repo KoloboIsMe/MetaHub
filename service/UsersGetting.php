@@ -31,6 +31,5 @@ class UsersGetting
     public function register($username, $password, $dataccess)
     {
         return $dataccess->register($username, $password, date("Y-m-d"));
-
     }
 }
