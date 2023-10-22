@@ -105,9 +105,10 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
 
 
 if ('' == $url || '/' == $url) {
+    $controller->get5LastCompleteTickets($accessorsLectors, $dataGetting);
 
     $layout = new gui\Layout($layoutTemplate);
-    (new gui\ViewHomepage($layout))->display();
+    (new gui\ViewHomepage($layout, $presenter))->display();
 
 }elseif ('login' == $url) {
 
@@ -175,6 +176,6 @@ elseif ('error' == $url) {
 
 }
 else{
-    header('Status: 404 Not Found');
-    echo '<html lang="fr"><body><h1>My Page NotFound</h1></body></html>';
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewError($layout, 'Page introuvable'))->display();
 }

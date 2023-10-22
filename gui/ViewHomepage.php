@@ -4,7 +4,7 @@ namespace gui;
 
 class ViewHomepage extends View
 {
-    public function __construct($layout)
+    public function __construct($layout, $presenter)
     {
         parent::__construct($layout);
         $this->title = 'Accueil';
@@ -12,6 +12,6 @@ class ViewHomepage extends View
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = '<h1>Accueil</h1>';
+        $this->content = $presenter->showCompleteTickets();
     }
 }

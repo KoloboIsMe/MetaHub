@@ -9,6 +9,7 @@ class Comment extends Entity
     private $text;
     private $date;
     private $author;
+    private $author_username;
     private $ticket;
 
     //Setters
@@ -30,6 +31,11 @@ class Comment extends Entity
         $author = (int) $author;
         if($author > 0){
             $this->author = $author;
+        }
+    }
+    public function setUsername($author_username){
+        if(is_string($author_username)){
+            $this->author_username = $author_username;
         }
     }
     public function setTicket($ticket){
@@ -70,6 +76,13 @@ class Comment extends Entity
     public function getAuthor()
     {
         return $this->author;
+    }
+    /**
+     * @return mixed
+     */
+    public function getAuthor_username()
+    {
+        return $this->author_username;
     }
 
     /**

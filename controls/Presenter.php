@@ -11,77 +11,73 @@ class Presenter
         $this->outputData = $outputData;
     }
 
-    public function showCompleteTickets($id = 0)
+    public function showCompleteTickets($id = 0, $showCategories = true)
     {
-        $content = '';
+        $content = "
+        <div class='card-container'>";
+        isset($_GET['url']) && $_GET['url'] == "posts" && isset($_GET['id']) ? $isIDinURL = $_GET['id'] : $isIDinURL = 0;
         foreach ($this->outputData->getOutputDataTickets($id) as $ticket) {
             $id = $ticket->getTicket_ID();
+            $user = $this->outputData->getOutputDataUsers($ticket->getAuthor());
             $content .= "
-            <div class='card-container1'>
-                <a href='posts&id=$id'>
                 <div class='card'>
+                    <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <h3> " . $ticket->getTitle() . "</h3>
-                        <p>" . $ticket->getMessage() . "</p>
-                        <time>" . $ticket->getDate() . " </time>
-                        <p>" . $ticket->getTicket_ID() . "</p></a>";
-
-            foreach ($this->outputData->getOutputDataComments($id) as $comment) {
-                if ($comment->getTicket() == $id)
-                    $content .= "
-                        <p>" . $comment->getText() . "</p>";
-            }
-
-            foreach ($this->outputData->getOutputDataCategories($id) as $category) {
-                    $content .= "
-                        <p>#" . $category->getLabel() . "</p>";
-            }
-                $user = $this->outputData->getOutputDataUsers($ticket->getAuthor());
-                $content .= "
-                        <p>" . $user->getUsername() . "</p>
-                    </div>
-                </div>";
-        }
-            $content .= "
-            </div>";
-            return $content;
-    }
-
-    public function showCategoriesTickets()
-    {
-        $content = '';
-        foreach ($this->outputData->getOutputDataCategories() as $category) {
-            $id = $category->getCategory_ID();
-            $content .= "
-            <div class='card-container1'>
-                <a href='categories&id=$id'><h1>" . $category->getLabel() . "</h1></a>";
-            foreach ($this->outputData->getOutputDataTickets($id) as $ticket) {
-                $id = $ticket->getTicket_ID();
-                $content .= "
-                <div class='card'>
-                    <div class='card-content'>
-                        <h1>" . $category->getLabel() . "</h1>
+                        <i>" . $user->getUsername() . "</i>
                         <h3> " . $ticket->getTitle() . "</h3>
                         <p>" . $ticket->getMessage() . "</p>
                         <time>" . $ticket->getDate() . " </time>
                         <p>" . $ticket->getTicket_ID() . "</p>";
 
-                foreach ($this->outputData->getOutputDataComments($id) as $comment) {
-                    if ($comment->getTicket() == $id)
-                        $content .= "
-                        <p>" . $comment->getText() . "</p>";
+            $categories = '';
+            if($showCategories) {
+                foreach ($this->outputData->getOutputDataCategories($id) as $category) {
+                    $categories .= '#' . $category->getLabel() . ' ';
                 }
-                $user = $this->outputData->getOutputDataUsers($ticket->getAuthor());
-                $content .= "
-                        <p>" . $user->getUsername() . "</p>
-                    </div>
-                </div>";
             }
+
             $content .= "
+                    <p>". $categories ."</p>
+                    ";
+
+            if($isIDinURL){
+                foreach ($this->outputData->getOutputDataComments($id) as $comment) {
+                    $content .= "
+                        <p>". $comment->getAuthor_username() . ' : '. $comment->getText() ."</p>
+                        ";
+                }
+            }
+            $content .= "       
+                    </div></a>   
+                </div>
+                ";
+        }
+            $content .= "                  
             </div>";
+            return $content;
+    }
+
+    public function showHomePage()
+    {
+        $content = '';
+        foreach ($this->outputData->getOutputDataTickets() as $ticket) {
+            $id = $ticket->getTicket_ID();
+            $content .= $this->showCompleteTickets($id);
         }
         return $content;
     }
+
+    public function showCategoriesTickets()
+    {
+        $content = "<div class='card-container1'>";
+        foreach ($this->outputData->getOutputDataCategories() as $category) {
+            $id = $category->getCategory_ID();
+            $content .= "<a href='categories&id=$id'><h1>" . $category->getLabel() . "</h1></a>";
+            $content .= $this->showCompleteTickets($id, false);
+        }
+        return $content;
+    }
+
 
 
 }

@@ -12,6 +12,16 @@ class OutputData
     {
         $this->outputDataTickets = null;
         $this->outputDataComments = null;
+        $this->outputDataUsers = null;
+        $this->outputDataCategories = null;
+    }
+
+    public function __construct()
+    {
+        $this->outputDataTickets = [];
+        $this->outputDataComments = [];
+        $this->outputDataUsers = [];
+        $this->outputDataCategories = [];
     }
 
     //outputdata Tickets

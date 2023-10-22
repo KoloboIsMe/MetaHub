@@ -4,22 +4,21 @@ namespace gui;
 
 class ViewError extends View
 {
-    public function __construct($layout, $error, $redirect)
+    public function __construct($layout, $error, $redirect = null)
     {
         parent::__construct($layout);
 
-        header("refresh:1;url=$redirect");
+        if ($redirect != null)
+            header("refresh:1;url=$redirect");
 
         $this->title = 'Erreur';
 
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = '
-                        <div class="home" id="home">
-                            <div class="error-message">
-                                <h3>' . $error . '</h3>
-                            </div>
-                        </div>';
+        $this->content = "
+                        <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
+                        <h1 class='titreErreur'>" . $error . "</h1>
+                        ";
     }
 }
