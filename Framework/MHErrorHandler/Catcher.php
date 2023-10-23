@@ -8,13 +8,9 @@ class Catcher
     {
 
     }
-    public function catch($message = "Undefined Exception", $code = 0, $type = ExceptionType::Exception, Throwable $previous = null)
+    public function catch(Throwable $exception)
     {
-        switch ($type)
-        {
-            case ExceptionType::Exception :
-                $this->exceptions[] = new MHException($message, $code, $previous);
-        }
+        $this->exceptions[] = $exception;
     }
     public function __toString(): string
     {
