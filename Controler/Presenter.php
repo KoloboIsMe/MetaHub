@@ -1,6 +1,6 @@
 <?php
 
-namespace controls;
+namespace Controler;
 
 class Presenter
 {

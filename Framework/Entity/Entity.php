@@ -1,6 +1,6 @@
 <?php
 
-namespace entities;
+namespace Framework\entities;
 
 abstract class Entity
 {

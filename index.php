@@ -1,33 +1,13 @@
 <?php
 
-include_once 'controls/Controller.php';
-include_once 'controls/Presenter.php';
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////// INDEX ///////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/// Entrance point of the application
 
-include_once 'database/CategoryAccess.php';
-include_once 'database/CommentAccess.php';
-include_once 'database/SPDO.php';
-include_once 'database/TicketAccess.php';
-include_once 'database/UserAccess.php';
+require 'init.php';
 
-include_once 'entities/Category.php';
-include_once 'entities/Comment.php';
-include_once 'entities/Ticket.php';
-include_once 'entities/User.php';
-
-include_once 'gui/Layout.php';
-include_once 'gui/View.php';
-include_once 'gui/ViewCategories.php';
-include_once 'gui/ViewError.php';
-include_once 'gui/ViewHomepage.php';
-include_once 'gui/ViewLogin.php';
-include_once 'gui/ViewRegister.php';
-include_once 'gui/ViewTickets.php';
-
-include_once 'service/CategoriesGetting.php';
-include_once "service/CommentsGetting.php";
-include_once "service/OutputData.php";
-include_once "service/TicketsGetting.php";
-include_once "service/UsersGetting.php";
+// Call the main controler
 
 $dbAdmin = null;
 $dbLector = null;
@@ -36,29 +16,29 @@ try {
     define("CHEMIN_VERS_FICHIER_INI", 'config.ini');
     define("BASE_DE_DONNEES", 'metahub_login');
     // construction du modèle
-    $dbAdmin = database\SPDO::getInstance("serveur_admin");
-    $dbLector = database\SPDO::getInstance("serveur_lecture");
+    $dbAdmin = \Framework\database\SPDO::getInstance("serveur_admin");
+    $dbLector = \Framework\database\SPDO::getInstance("serveur_lecture");
 
 } catch (PDOException $e) {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
     die();
 }
-$categoryAccessLector = new database\CategoryAccess($dbLector);
-$commentAccessLector = new database\CommentAccess($dbLector);
-$ticketAccessLector = new database\TicketAccess($dbLector);
-$userAccessLector = new database\UserAccess($dbLector);
+$categoryAccessLector = new \Framework\database\CategoryAccess($dbLector);
+$commentAccessLector = new \Framework\database\CommentAccess($dbLector);
+$ticketAccessLector = new \Framework\database\TicketAccess($dbLector);
+$userAccessLector = new \Framework\database\UserAccess($dbLector);
 $accessorsLectors = array('categoryAccessLector' => $categoryAccessLector, 'ticketAccessLector' => $ticketAccessLector, 'commentAccessLector' =>$commentAccessLector, 'userAccessLector' =>$userAccessLector);
-$userAccess = new database\UserAccess($dbAdmin);
+$userAccess = new \Framework\database\UserAccess($dbAdmin);
 
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new service\OutputData();
 
 // initialisation du controller avec accès a la structure pour le transfert des données
-$controller = new controls\Controller($outputData);
+$controller = new Controler\Controller($outputData);
 
 // initialisation du presenter avec accès a la structure pour le transfert des données
-$presenter = new controls\Presenter($outputData);
+$presenter = new Controler\Presenter($outputData);
 
 //initialisation des services avec la structure pour le transfert des données
 $categoriesGetting = new service\CategoriesGetting($outputData);

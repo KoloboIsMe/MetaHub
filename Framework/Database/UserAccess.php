@@ -1,12 +1,12 @@
 <?php
 
-namespace database;
+namespace Framework\database;
 
-use entities\User;
+use Framework\entities\User;
 use PDO;
 use UserInterface;
 
-include_once "service/UserInterface.php";
+include_once "Model/UserInterface.php";
 include_once "entities/User.php";
 
 class UserAccess implements UserInterface

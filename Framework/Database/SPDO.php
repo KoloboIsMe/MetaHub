@@ -1,7 +1,8 @@
 <?php
 
-namespace database;
+namespace Framework\database;
 
+use database\Exception;
 use PDO;
 
 final class SPDO

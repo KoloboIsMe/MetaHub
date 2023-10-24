@@ -1,12 +1,12 @@
 <?php
 
-namespace database;
+namespace Framework\database;
 
-use entities\Ticket;
+use Framework\entities\Ticket;
 use PDO;
 use TicketInterface;
 
-include_once "service/TicketInterface.php";
+include_once "Model/TicketInterface.php";
 include_once "entities/Ticket.php";
 
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace database;
+namespace Framework\database;
 
 use CommentInterface;
-use entities\Comment;
+use Framework\entities\Comment;
 use PDO;
 
-include_once "service/CommentInterface.php";
+include_once "Model/CommentInterface.php";
 include_once "entities/Comment.php";
 
 class CommentAccess implements CommentInterface
