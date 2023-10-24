@@ -52,6 +52,7 @@ class ViewRegister extends View
         return true;
     }
 </script>
+
 ";
     }
 }
