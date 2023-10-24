@@ -32,7 +32,7 @@ $userAccess = new \Framework\database\UserAccess($dbAdmin);
 
 
 // initialisation de l'output dans une structure pour le transfert des données
-$outputData = new service\OutputData();
+$outputData = new Deprecated\OutputData();
 
 // initialisation du controller avec accès a la structure pour le transfert des données
 $controller = new Controler\Controller($outputData);
