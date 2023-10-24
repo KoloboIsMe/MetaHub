@@ -146,6 +146,11 @@ if ('' == $url || '/' == $url) {
         (new gui\ViewTickets($layout, $presenter))->display();
     }
 
+}elseif ('createPosts' == $url ) {
+
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewCreatePosts($layout))->display();
+
 }elseif ('categories' == $url ) {
     $layout = new gui\Layout($layoutTemplate);
     if(!isset($_SESSION['isLogged']))
