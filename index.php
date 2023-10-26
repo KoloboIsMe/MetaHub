@@ -17,6 +17,7 @@ include_once 'entities/User.php';
 include_once 'gui/Layout.php';
 include_once 'gui/View.php';
 include_once 'gui/ViewCategories.php';
+include_once 'gui/ViewCreatePosts.php';
 include_once 'gui/ViewError.php';
 include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
@@ -80,6 +81,7 @@ if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 } else {
     $layoutTemplate = 'gui/layout.html';
 }
+
 
 if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
@@ -148,8 +150,16 @@ if ('' == $url || '/' == $url) {
 
 }elseif ('createPosts' == $url ) {
 
+    if(!isset($_SESSION['isLogged']))
+        header('Location: /login&id='.$url);
+
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCreatePosts($layout))->display();
+
+}elseif ('creationPost' == $url && isset($_POST['title']) && isset($_POST['content'])) {
+    var_dump($_POST["title"]);
+    var_dump($_POST["content"]);
+    var_dump($_POST["mots"]);
 
 }elseif ('categories' == $url ) {
     $layout = new gui\Layout($layoutTemplate);
