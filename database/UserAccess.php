@@ -4,7 +4,7 @@ namespace database;
 
 use entities\User;
 use PDO;
-use UserInterface;
+use service\UserInterface;
 
 include_once "service/UserInterface.php";
 include_once "entities/User.php";

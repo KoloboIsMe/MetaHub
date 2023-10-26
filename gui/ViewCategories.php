@@ -4,7 +4,7 @@ namespace gui;
 
 class ViewCategories extends View
 {
-    public function __construct($layout, $presenter )
+    public function __construct($layout, $presenter, $category)
     {
         parent::__construct($layout);
 
@@ -13,6 +13,7 @@ class ViewCategories extends View
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showCategoriesTickets();
+
+        isset($_GET['id']) ? $this->content=$presenter->showCategorie($category) : $this->content=$presenter->showCategories();
     }
 }

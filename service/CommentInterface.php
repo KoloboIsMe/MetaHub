@@ -1,6 +1,10 @@
 <?php
-interface CommentInterface{
 
-    public function getCommentsByTicketId($id);
+namespace service;
+
+interface CommentInterface
+{
+
+
 
 }

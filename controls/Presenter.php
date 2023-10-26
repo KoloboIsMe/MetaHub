@@ -11,86 +11,160 @@ class Presenter
         $this->outputData = $outputData;
     }
 
-    public function showCompleteTickets($id = 0, $showCategories = true)
+    public function showHomePage()
     {
-        $content = "
-        <div class='card-container'>";
-        isset($_GET['url']) && $_GET['url'] == "posts" && isset($_GET['id']) ? $isIDinURL = $_GET['id'] : $isIDinURL = 0;
-        foreach ($this->outputData->getOutputDataTickets($id) as $ticket) {
-            $id = $ticket->getTicket_ID();
-            $user = $this->outputData->getOutputDataUsers($ticket->getAuthor());
+        $content = '';
+        foreach ($this->outputData->getOutputData() as $post) {
+            $id = $post->getTicket()->getTicket_ID();
             $content .= "
                 <div class='card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p>" . $user->getUsername() . "</p>
-                        <h3> " . $ticket->getTitle() . "</h3>
-                        <p>" . $ticket->getMessage() . "</p>
-                        <time>" . $ticket->getDate() . " </time>
-                        <p>" . $ticket->getTicket_ID() . "</p>";
-
-            $categories = '';
-            if($showCategories) {
-                foreach ($this->outputData->getOutputDataCategories($id) as $category) {
-                    $categories .= '#' . $category->getLabel() . ' ';
-                }
-            }
-
-            $content .= "
-                    <p>". $categories ."</p>
-                    ";
-
-            if($isIDinURL){
-                foreach ($this->outputData->getOutputDataComments($id) as $comment) {
-                    $content .= "
-                        <p>". $comment->getAuthor_username() . ' : '. $comment->getText() ."</p>
-                        ";
-                }
-            }
-            $content .= "       
-                    </div></a>   
-                </div>
-                ";
-        }
-            $content .= "                  
-            </div>";
-            return $content;
-    }
-
-    public function showHomePage()
-    {
-        $content = '';
-        foreach ($this->outputData->getOutputDataTickets() as $ticket) {
-            $id = $ticket->getTicket_ID();
-            $content .= $this->showCompleteTickets($id);
+                        <p>" . $post->getUser()->getUsername() . "</p>
+                        <h3> " . $post->getTicket()->getTitle() . "</h3>
+                        <p>" . $post->getTicket()->getMessage() . "</p>
+                        <time>" . $post->getTicket()->getDate() . " </time>
+                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                    </div></a>
+                </div>";
         }
         return $content;
     }
 
-    public function showCategoriesTickets()
+    public function showPosts()
     {
-        $content = "<div class='card-container'>";
-        foreach ($this->outputData->getOutputDataCategories() as $category) {
-            $id = $category->getCategory_ID();
-            $content .= "<a href='categories&id=$id'><h1>" . $category->getLabel() . "</h1></a>";
-            foreach ($this->outputData->getOutputDataTickets($id) as $ticket) {
-                $id = $ticket->getTicket_ID();
-                $user = $this->outputData->getOutputDataUsers($ticket->getAuthor());
-                $content .= "
+        $content = '';
+        foreach ($this->outputData->getOutputData() as $post) {
+            $id = $post->getTicket()->getTicket_ID();
+            $content .= "
                 <div class='card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p>" . $user->getUsername() . "</p>
-                        <h3> " . $ticket->getTitle() . "</h3>
-                        <p>" . $ticket->getMessage() . "</p>
-                        <time>" . $ticket->getDate() . " </time>
-                        <p>" . $ticket->getTicket_ID() . "</p>
+                        <p>" . $post->getUser()->getUsername() . "</p>
+                        <h3> " . $post->getTicket()->getTitle() . "</h3>
+                        <p>" . $post->getTicket()->getMessage() . "</p>
+                        <time>" . $post->getTicket()->getDate() . " </time>
+                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
                     </div></a>
                 </div>";
-            }
         }
-        $content .= "                  
-        </div>";
+        return $content;
+    }
+
+    public function showPost()
+    {
+        $content = '';
+        $post = $this->outputData->getOutputData();
+        $id = $post->getTicket()->getTicket_ID();
+        $content .= "
+            <div class='card'>
+                <a href='posts&id=$id'>
+                <div class='card-content'>
+                    <p>" . $post->getUser()->getUsername() . "</p>
+                    <h3> " . $post->getTicket()->getTitle() . "</h3>
+                    <p>" . $post->getTicket()->getMessage() . "</p>
+                    <time>" . $post->getTicket()->getDate() . " </time>
+                    <p>" . $post->getTicket()->getTicket_ID() . "</p>";
+
+                    foreach ($post->getCategories() as $category) {
+                        $content .= "<p>#" . $category->getLabel() . "</p>";
+                    }
+
+                    foreach ($post->getComments() as $comment) {
+                        $content .= "<p>" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
+                    }
+
+        $content .= "            
+                </div></a>
+            </div>";
+
+        return $content;
+    }
+
+    public function showCategories()
+    {
+        $content = '';
+        foreach ($this->outputData->getOutputData() as $category) {
+            $id = $category->getCategory_ID();
+            $content .= "
+                <div class='card'>
+                    <a href='categories&id=$id'>
+                    <div class='card-content'>
+                        <h3> " . $category->getLabel() . "</h3>
+                        <p>" . $category->getDescription() . "</p>
+                    </div></a>
+                </div>";
+        }
+        return $content;
+    }
+
+    public function showCategorie($category){
+        $content = '';
+        $id = $category->getCategory_ID();
+        $content .= "
+                <div class='card'>
+                    <a href='categories&id=$id'>
+                    <div class='card-content'>
+                        <h3>".$category->getLabel()."</h3>
+                        <p>".$category->getDescription()."</p>";
+
+                        foreach ($this->outputData->getOutputData() as $post) {
+                            $id = $post->getTicket()->getTicket_ID();
+                            $content .= "
+                                <div class='card'>
+                                    <a href='posts&id=$id'>
+                                    <div class='card-content'>
+                                        <p>" . $post->getUser()->getUsername() . "</p>
+                                        <h3> " . $post->getTicket()->getTitle() . "</h3>
+                                        <p>" . $post->getTicket()->getMessage() . "</p>
+                                        <time>" . $post->getTicket()->getDate() . " </time>
+                                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                                    </div></a>
+                                </div>";
+                        }
+
+        $content .= "
+                    </div></a>
+                </div>";
+        return $content;
+    }
+
+    public function showCreatePost(){
+        $content = "
+        <script src='https://unpkg.com/slim-select@latest/dist/slimselect.min.js'></script>
+        <link href='gui/css/CategorySelectionBar.css' rel='stylesheet'></link>
+        <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
+        <div id='container'>
+            <form action=createPostsAction method='POST'>
+                <h1>Nouveau Post</h1>
+        
+                <label><b>Titre</b></label>
+                <input type='text' placeholder=\" Entrer le titre du post \" name='title' required>
+        
+                <label><b>Contenu du post</b></label>
+                <textarea placeholder='Entrer le contenu du post' name='content' required></textarea>
+        
+                <select id='category' multiple name='categories[]' required>";
+                    foreach ($this->outputData->getOutputData() as $category) {
+                        $content .= "<option>".$category->getLabel()."</option>";
+                    }
+        $content .= "        
+                </select>
+                <input type='submit' id='submit' value='Publier' >
+            </form>
+        </div>
+        
+        <script>
+            new SlimSelect({
+                select: '#category',
+                settings: {
+                    placeholderText: 'Choisir une catégorie',
+                    searchPlaceholder: 'Rechercher',
+                }
+            })
+        </script>
+        ";
+
         return $content;
     }
 

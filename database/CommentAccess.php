@@ -2,9 +2,9 @@
 
 namespace database;
 
-use CommentInterface;
 use entities\Comment;
 use PDO;
+use service\CommentInterface;
 
 include_once "service/CommentInterface.php";
 include_once "entities/Comment.php";

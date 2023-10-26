@@ -1,5 +1,7 @@
 <?php
 
+namespace service;
+
 interface UserInterface{
 
         public function getUserById($id);
