@@ -12,6 +12,11 @@ class ViewHomepage extends View
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showCompleteTickets();
+        $this->content = $presenter->showHomepage();
     }
 }
+
+
+
+
+

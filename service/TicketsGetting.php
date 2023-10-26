@@ -12,30 +12,37 @@ class TicketsGetting
         $this->outputData = $outputData;
     }
 
-    public function getTickets($dataccess)
+    public function getPosts($dataccess)
     {
-        $tickets = $dataccess->getTickets();
-        $this->outputData->setOutputDataTickets($tickets);
+
+        $posts = [];
+        foreach ($dataccess->getTicketsID() as $ticketId) {
+            $posts[] = $dataccess->getPostById($ticketId);
+        }
+        $this->outputData->setOutputData($posts);
     }
 
-    public function getTicketById($dataccess, $id)
+    public function get5LastPosts($dataccess)
     {
-        $tickets = $dataccess->getTicketById($id);
-        $this->outputData->setOutputDataTickets($tickets);
-    }
-    public function get5LastTickets($dataccess)
-    {
-        $tickets = $dataccess->get5LastTickets();
-        $this->outputData->setOutputDataTickets($tickets);
+        $posts = [];
+        foreach ($dataccess->get5LastTicketsID() as $ticketId) {
+            $posts[] = $dataccess->getPostById($ticketId);
+        }
+        $this->outputData->setOutputData($posts);
     }
 
-    public function addTicketsWithCategory($dataccess, $CategoryID)
+    public function getPostById($dataccess, $id)
     {
-        $tickets = $dataccess->getTicketsWithCategory($CategoryID);
-        $this->outputData->addOutputDataTickets($tickets, $CategoryID);
+        $posts = $dataccess->getPostById($id);
+        $this->outputData->setOutputData($posts);
     }
-    public function resetOutputDataTickets()
+
+    public function getCategoryPosts($dataccess, $postsId)
     {
-        $this->outputData->resetOutputDataTickets();
+        $posts = [];
+        foreach ($postsId as $postID) {
+            $posts[] = $dataccess->getPostById($postID);
+        }
+        $this->outputData->setOutputData($posts);
     }
 }

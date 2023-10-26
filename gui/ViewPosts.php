@@ -2,7 +2,7 @@
 
 namespace gui;
 
-class ViewTickets extends View
+class ViewPosts extends View
 {
     public function __construct($layout, $presenter )
     {
@@ -13,6 +13,6 @@ class ViewTickets extends View
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showCompleteTickets();
+        isset($_GET['id']) ? $this->content=$presenter->showPost() : $this->content=$presenter->showPosts();
     }
 }

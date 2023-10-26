@@ -11,21 +11,10 @@ class UsersGetting
         $this->outputData = $outputData;
     }
 
-    public function addUserById($dataccess, $id)
+    public function authenticate($username, $password, $dataccess)
     {
-        $users = $dataccess->getUserById($id);
-        $this->outputData->addOutputDataUsers($users, $id);
-    }
-
-    public function resetOutputDataUsers()
-    {
-        $this->outputData->resetOutputDataUsers();
-    }
-
-    public function authentificate($username, $password, $dataccess)
-    {
-        $users = $dataccess->isUser($username, $password);
-        $this->outputData->setOutputDataUsers($users);
+        $isUser = $dataccess->isUser($username, $password);
+        $this->outputData->setOutputData($isUser);
     }
 
     public function register($username, $password, $dataccess)

@@ -13,24 +13,20 @@ class CategoriesGetting
 
     public function getCategories($dataccess)
     {
-        $tickets = $dataccess->getCategories();
-        $this->outputData->setOutputDataCategories($tickets);
+        $categories = [];
+        foreach ($dataccess->getCategoriesID() as $categoryId) {
+            $categories[] = $dataccess->getCategoryById($categoryId);
+        }
+        $this->outputData->setOutputData($categories);
     }
 
-    public function getCategoryById($dataccess, $id)
+    public function getCategoryById($dataccess, $categoryId)
     {
-        $tickets = $dataccess->getcategoryById($id);
-        $this->outputData->setOutputDataCategories($tickets);
+        return $dataccess->getCategoryById($categoryId);
     }
 
-    public function addCategoriesWithTicket($dataccess, $TicketId)
+    public function getPostsIdByCategoryId($dataccess, $id)
     {
-        $categories = $dataccess->getCategoriesWithTicket($TicketId);
-        $this->outputData->addOutputDataCategories($categories, $TicketId);
-    }
-
-    public function resetOutputDataCategories()
-    {
-        $this->outputData->resetOutputDataCategories();
+        return $dataccess->getPostsIdByCategoryId($id);
     }
 }

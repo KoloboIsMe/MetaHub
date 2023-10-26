@@ -1,11 +1,11 @@
 <?php
+
+namespace service;
+
 interface TicketInterface{
-    public function getTickets();
 
-    public function getTicketById($id);
-
-    public function get5LastTickets();
-
-    public function getTicketsWithCategory($CategoryID);
+    public function getPostById($ticketid);
+    public function getTicketsID();
+    public function get5LastTicketsID();
 
 }

@@ -11,6 +11,7 @@ include_once 'database/UserAccess.php';
 
 include_once 'entities/Category.php';
 include_once 'entities/Comment.php';
+include_once 'entities/Post.php';
 include_once 'entities/Ticket.php';
 include_once 'entities/User.php';
 
@@ -22,7 +23,7 @@ include_once 'gui/ViewError.php';
 include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewRegister.php';
-include_once 'gui/ViewTickets.php';
+include_once 'gui/ViewPosts.php';
 
 include_once 'service/CategoriesGetting.php';
 include_once "service/CommentsGetting.php";
@@ -48,7 +49,6 @@ $categoryAccessLector = new database\CategoryAccess($dbLector);
 $commentAccessLector = new database\CommentAccess($dbLector);
 $ticketAccessLector = new database\TicketAccess($dbLector);
 $userAccessLector = new database\UserAccess($dbLector);
-$accessorsLectors = array('categoryAccessLector' => $categoryAccessLector, 'ticketAccessLector' => $ticketAccessLector, 'commentAccessLector' =>$commentAccessLector, 'userAccessLector' =>$userAccessLector);
 $userAccess = new database\UserAccess($dbAdmin);
 
 
@@ -66,7 +66,6 @@ $categoriesGetting = new service\CategoriesGetting($outputData);
 $ticketsGetting = new service\TicketsGetting($outputData);
 $commentsGetting = new service\CommentsGetting($outputData);
 $usersGetting = new service\UsersGetting($outputData);
-$dataGetting = array('categoriesGetting' => $categoriesGetting, 'ticketsGetting' => $ticketsGetting, 'commentsGetting' =>$commentsGetting, 'usersGetting' =>$usersGetting);
 
 // chemin de l'URL demandée au navigateur
 $url = $_GET['url'] ?? '';
@@ -83,7 +82,7 @@ if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 }
 
 
-if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password'])) {
+if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])) {
 
     $page = $_GET['id'] ?? $page = null;
     $error = $controller->registerAction($usersGetting, $userAccess);
@@ -95,7 +94,7 @@ if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['passw
 if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
-    $error = $controller->authentificateAction($usersGetting, $userAccessLector);
+    $error = $controller->authenticateAction($usersGetting, $userAccessLector);
     if ($error){
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error';
@@ -107,15 +106,14 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
 
 
 if ('' == $url || '/' == $url) {
-    $controller->get5LastCompleteTickets($accessorsLectors, $dataGetting);
 
+    $ticketsGetting->get5LastPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewHomepage($layout, $presenter))->display();
 
 }elseif ('login' == $url) {
 
     isset($_GET['id']) ? $page = $_GET['id'] : $page = null;
-
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewLogin($layout, $page))->display();
 
@@ -135,45 +133,46 @@ if ('' == $url || '/' == $url) {
 
 }elseif ('posts' == $url ) {
 
-    $layout = new gui\Layout($layoutTemplate);
+
     if(!isset($_SESSION['isLogged']))
         header('Location: /login&id='.$url);
-    else {
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $controller->getCompleteTicketsById($accessorsLectors, $dataGetting, $id);
-        } else {
-            $controller->getCompleteTickets($accessorsLectors, $dataGetting);
-        }
-        (new gui\ViewTickets($layout, $presenter))->display();
-    }
+
+    isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewPosts($layout, $presenter))->display();
+
 
 }elseif ('createPosts' == $url ) {
 
     if(!isset($_SESSION['isLogged']))
         header('Location: /login&id='.$url);
 
+    $categoriesGetting->getCategories($categoryAccessLector);
     $layout = new gui\Layout($layoutTemplate);
-    (new gui\ViewCreatePosts($layout))->display();
+    (new gui\ViewCreatePosts($layout, $presenter))->display();
 
-}elseif ('creationPost' == $url && isset($_POST['title']) && isset($_POST['content'])) {
+}elseif ('createPostsAction' == $url) {
+
     var_dump($_POST["title"]);
     var_dump($_POST["content"]);
-    var_dump($_POST["mots"]);
+    var_dump($_POST["categories"]);
 
 }elseif ('categories' == $url ) {
-    $layout = new gui\Layout($layoutTemplate);
+
     if(!isset($_SESSION['isLogged']))
         header('Location: /login&id='.$url);
-    else {
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-            $controller->getTicketByCatgoriesById($accessorsLectors, $dataGetting, $id);
-        } else {
-            $controller->getTicketByCatgories($accessorsLectors, $dataGetting);
-        }
-        (new gui\ViewCategories($layout, $presenter))->display();
-    }
+
+    $category = null;
+    if(isset($_GET['id'])) {
+        $category = $categoriesGetting->getCategoryById($categoryAccessLector, $_GET['id']);
+        $postsID = $categoriesGetting->getPostsIdByCategoryId($categoryAccessLector, $_GET['id']);
+        $ticketsGetting->getCategoryPosts($ticketAccessLector, $postsID);
+    }else
+        $categoriesGetting->getCategories($categoryAccessLector);
+
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewCategories($layout, $presenter, $category))->display();
+
 
 }
 
@@ -181,9 +180,15 @@ if ('' == $url || '/' == $url) {
 //    $id = explode('/',$url)[1];
 //    $ticketsGetting->getTicketById($ticketAccessLector, $id);
 //    $layout = new gui\Layout($layoutTemplate);
-//    (new gui\ViewTickets($layout, $presenter))->display();
+//    (new gui\ViewPosts($layout, $presenter))->display();
 //
 //}
+elseif ('lostmdp/' == $url) {
+
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewError($layout, $error, $redirect))->display();
+
+}
 elseif ('error' == $url) {
 
     $layout = new gui\Layout($layoutTemplate);

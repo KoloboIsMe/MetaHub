@@ -1,8 +1,11 @@
 <?php
-interface CategoryInterface{
-    public function getCategories();
-    public function getCategoryById($id);
-    public function getCategoriesWithTicket($ticketID);
 
+namespace service;
+
+interface CategoryInterface
+{
+    public function getCategoriesID();
+    public function getCategoryById($id);
+    public function getPostsIdByCategoryId($id);
 
 }
