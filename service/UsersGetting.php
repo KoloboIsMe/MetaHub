@@ -21,4 +21,9 @@ class UsersGetting
     {
         return $dataccess->register($username, $password, date("Y-m-d"));
     }
+
+    public function getUserByUsername($dataccess, $username)
+    {
+        return $dataccess->getUserByUsername($username);
+    }
 }

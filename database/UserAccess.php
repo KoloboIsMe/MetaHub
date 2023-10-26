@@ -4,6 +4,7 @@ namespace database;
 
 use entities\User;
 use PDO;
+use PDOException;
 use service\UserInterface;
 
 include_once "service/UserInterface.php";
@@ -17,17 +18,33 @@ class UserAccess implements UserInterface
         $this->dataAccess = $dataAccess;
     }
 
-    public function getUserById($ID)
+    public function getUserByUsername($username)
     {
-        $statement = $this->dataAccess->prepare('SELECT * FROM users where user_ID = :ID LIMIT 100');
-        if(!$statement->execute([
-            'ID' => $ID
-        ])){
-            echo "erreur requete (exception)";
-            return null;
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM users where username = :username');
+            $statement->execute([':username' => $username ]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return new User($data);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
-        $data = $statement->fetch(PDO::FETCH_ASSOC);
-        return new User($data);
+    }
+
+    public function getUsersUsername()
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT username FROM users ORDER BY username DESC LIMIT 100');
+            $statement->execute();
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            $users = [];
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $users[] = $data['username'];
+            }
+            return $users;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
     }
 
     public function isUser($username, $password)
