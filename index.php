@@ -49,6 +49,8 @@ $categoryAccessLector = new database\CategoryAccess($dbLector);
 $commentAccessLector = new database\CommentAccess($dbLector);
 $ticketAccessLector = new database\TicketAccess($dbLector);
 $userAccessLector = new database\UserAccess($dbLector);
+
+$ticketAccess = new database\TicketAccess($dbAdmin);
 $userAccess = new database\UserAccess($dbAdmin);
 
 
@@ -103,6 +105,13 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
         $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
     }
 }
+if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
+
+    $controller->createTicketAction($ticketsGetting, $ticketAccess);
+    $url='/';
+    header("refresh:0;url=/");
+
+}
 
 
 if ('' == $url || '/' == $url) {
@@ -150,12 +159,6 @@ if ('' == $url || '/' == $url) {
     $categoriesGetting->getCategories($categoryAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCreatePosts($layout, $presenter))->display();
-
-}elseif ('createPostsAction' == $url) {
-
-    var_dump($_POST["title"]);
-    var_dump($_POST["content"]);
-    var_dump($_POST["categories"]);
 
 }elseif ('categories' == $url ) {
 

@@ -13,6 +13,6 @@ class ViewCreatePosts extends View
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 //        <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
-        $this->content = $presenter->showCreatePost();
+        $this->content = $presenter->showCreateTicket();
     }
 }

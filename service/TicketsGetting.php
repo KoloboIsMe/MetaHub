@@ -45,4 +45,9 @@ class TicketsGetting
         }
         $this->outputData->setOutputData($posts);
     }
+
+    public function createTicket($dataccess, $title, $message)
+    {
+        $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
+    }
 }

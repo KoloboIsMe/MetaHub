@@ -129,7 +129,7 @@ class Presenter
         return $content;
     }
 
-    public function showCreatePost(){
+    public function showCreateTicket(){
         $content = "
         <script src='https://unpkg.com/slim-select@latest/dist/slimselect.min.js'></script>
         <link href='gui/css/CategorySelectionBar.css' rel='stylesheet'></link>
@@ -142,9 +142,9 @@ class Presenter
                 <input type='text' placeholder=\" Entrer le titre du post \" name='title' required>
         
                 <label><b>Contenu du post</b></label>
-                <textarea placeholder='Entrer le contenu du post' name='content' required></textarea>
+                <textarea placeholder='Entrer le contenu du post' name='message' required></textarea>
         
-                <select id='category' multiple name='categories[]' required>";
+                <select id='category' multiple name='categories[]'>";
                     foreach ($this->outputData->getOutputData() as $category) {
                         $content .= "<option>".$category->getLabel()."</option>";
                     }

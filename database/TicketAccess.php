@@ -97,4 +97,19 @@ class TicketAccess implements TicketInterface
         }
     }
 
+    public function createTicket($title, $message, $date, $author)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('INSERT INTO tickets (title, message, date, author) VALUES (:title, :message, :date, :author)');
+            $statement->execute([
+                ':title' => $title,
+                ':message' => $message,
+                ':date' => $date,
+                ':author' => $author,
+            ]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
 }

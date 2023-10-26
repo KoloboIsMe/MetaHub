@@ -17,22 +17,4 @@ class CommentAccess implements CommentInterface
         $this->dataAccess = $dataAccess;
     }
 
-    public function getCommentsByTicketId($TicketId)
-    {
-        $var = [];
-        $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comments 
-                                                JOIN users ON comments.author = users.user_ID
-                                                   where ticket = :TicketId LIMIT 100');
-        if(!$statement->execute([
-            'TicketId' => $TicketId
-        ])){
-            echo "erreur requete (exception)";
-            return null;
-        }
-        while($data = $statement->fetch(PDO::FETCH_ASSOC))
-        {
-            $var[] = new Comment($data);
-        }
-        return $var;
-    }
 }
