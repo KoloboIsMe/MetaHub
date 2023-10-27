@@ -128,6 +128,52 @@ class Presenter
                 </div>";
         return $content;
     }
+    public function showUsers()
+    {
+        $content = '';
+        foreach ($this->outputData->getOutputData() as $user) {
+            $id = $user->getUser_ID();
+            $content .= "
+                <div class='card'>
+                    <a href='users&id=$id'>
+                    <div class='card-content'>
+                        <h3> " . $user->getUsername() . "</h3>
+                        <p>" . $user->getUser_ID() . "</p>
+                    </div></a>
+                </div>";
+        }
+        return $content;
+    }
+    public function showUser($user){
+        $content = '';
+        $id = $user->getUser_ID();
+        $content .= "
+                <div class='card'>
+                    <a href='users&id=$id'>
+                    <div class='card-content'>
+                        <h3>".$user->getUsername()."</h3>
+                        <p>".$user->getUser_ID()."</p>";
+
+        foreach ($this->outputData->getOutputData() as $post) {
+            $id = $post->getTicket()->getTicket_ID();
+            $content .= "
+                                <div class='card'>
+                                    <a href='posts&id=$id'>
+                                    <div class='card-content'>
+                                        <p>" . $post->getUser()->getUsername() . "</p>
+                                        <h3> " . $post->getTicket()->getTitle() . "</h3>
+                                        <p>" . $post->getTicket()->getMessage() . "</p>
+                                        <time>" . $post->getTicket()->getDate() . " </time>
+                                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                                    </div></a>
+                                </div>";
+        }
+
+        $content .= "
+                    </div></a>
+                </div>";
+        return $content;
+    }
 
     public function showCreateTicket(){
         $content = "
