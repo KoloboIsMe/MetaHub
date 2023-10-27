@@ -107,74 +107,24 @@ class TicketAccess implements TicketInterface
                 ':date' => $date,
                 ':author' => $author,
             ]);
-            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets Where title = :title and message = :message and date = :date and author = :author LIMIT 100');
-            $statement->execute([
-                ':title' => $title,
-                ':message' => $message,
-                ':date' => $date,
-                ':author' => $author,
-            ]);
-            $user = $statement->fetch(PDO::FETCH_ASSOC);
-            return $user['ticket_ID'];
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
 
-    public function addCategoryToTicket($category, $ticketID)
-    {
+    public function getPostsIdByUserId($id){
         try {
-            $statement = $this->dataAccess->prepare('INSERT INTO categorized (category, ticket) VALUES (:category, :ticket)');
-            $statement->execute([
-                ':category' => $category,
-                ':ticket' => $ticketID,
-            ]);
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT ticket FROM categorized where category = :ID ORDER BY ticket DESC LIMIT 100');
+            $statement->execute([':ID' => $id ]);
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $ID[] = $data['ticket'];
+            }
+            return $ID;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function getCategoryIdByLabel($label){
-        try {
-            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
-            $statement->execute([
-                ':label' => $label,
-            ]);
-            return $statement->fetch(PDO::FETCH_ASSOC)['category_ID'];
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-    public function deleteTicket($ticketID)
-    {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM comments WHERE ticket = :ticketID');
-            $statement->execute([':ticketID' => $ticketID]);
-
-            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE ticket = :ticketID');
-            $statement->execute([':ticketID' => $ticketID]);
-
-            $statement = $this->dataAccess->prepare('DELETE FROM tickets WHERE ticket_ID = :ticketID');
-            $statement->execute([':ticketID' => $ticketID]);
-
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function editTicket($id, $title, $message){
-        try {
-            $statement = $this->dataAccess->prepare('UPDATE tickets SET title = :title, message = :message WHERE ticket_ID = :id');
-            $statement->execute([
-                ':id'=> $id,
-                ':title'=> $title,
-                ':message'=> $message
-            ]);
-
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
 
 }
