@@ -34,10 +34,10 @@ class Controller
 
     public function createTicketAction($ticketsGetting, $ticketAccess)
     {
-        $categories = $_POST["categories"] ?? null;
         $ticketID = $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
-        if(isset($_POST["categories"]))
-            $ticketsGetting->addCategoriesToTicket($ticketAccess, $categories);
+        if(isset($_POST["categories"])){
+            $ticketsGetting->addCategoriesToTicket($ticketAccess, $_POST["categories"], $ticketID);
+        }
     }
 
 

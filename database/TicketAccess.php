@@ -121,4 +121,29 @@ class TicketAccess implements TicketInterface
         }
     }
 
+    public function addCategoryToTicket($category, $ticketID)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('INSERT INTO categorized (category, ticket) VALUES (:category, :ticket)');
+            $statement->execute([
+                ':category' => $category,
+                ':ticket' => $ticketID,
+            ]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    public function getCategoryIdByLabel($label){
+        try {
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
+            $statement->execute([
+                ':label' => $label,
+            ]);
+            return $statement->fetch(PDO::FETCH_ASSOC)['category_ID'];
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
 }
