@@ -49,43 +49,52 @@ class UserAccess implements UserInterface
 
     public function isUser($username, $password)
     {
-        $statement = $this->dataAccess->prepare('SELECT password FROM users where username = :username LIMIT 100');
-        if(!$statement->execute([
-            ':username' => $username,
-        ])){
-            echo "erreur requete (exception)";
-            return null;
+        try {
+            $statement = $this->dataAccess->prepare('SELECT password FROM users where username = :username LIMIT 100');
+            $statement->execute([':username' => $username]);
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            if(isset($user['password']) && password_verify($password, $user['password']))
+                return true;
+            else
+                return false;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-        if(isset($user['password']) && password_verify($password, $user['password']))
-            return true;
-        else
-            return false;
     }
 
-    public function register($username, $password, $date){
-        $statement = $this->dataAccess->prepare('SELECT username FROM users where username = :username LIMIT 100');
-        if(!$statement->execute([
-            ':username' => $username,
-        ])){
-            echo "erreur requete (exception)";
-        }
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
+    public function register($username, $password, $date)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT username FROM users where username = :username LIMIT 100');
+            $statement->execute([':username' => $username]);
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-        if(isset($user['username']))
-            return 'nom d\'utilisateur déjà utilisé';
-        else{
-            $statement = $this->dataAccess->prepare('INSERT INTO users (username, password, first_connexion) VALUES (:username, :password, :date)');
-            if(!$statement->execute([
-                ':username' => $username,
-                ':password' => password_hash($password, PASSWORD_DEFAULT),
-                ':date' => $date,
-
-            ])){
-                echo "erreur requete (exception)";
+            if(isset($user['username']))
+                return 'nom d\'utilisateur déjà utilisé';
+            else{
+                $statement = $this->dataAccess->prepare('INSERT INTO users (username, password, first_connexion) VALUES (:username, :password, :date)');
+                $statement->execute([
+                    ':username' => $username,
+                    ':password' => password_hash($password, PASSWORD_DEFAULT),
+                    ':date' => $date,
+                ]);
             }
             return null;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    public function updateLastConnexion($user_ID){
+        try {
+            $statement = $this->dataAccess->prepare('UPDATE users SET last_connexion = :date WHERE user_ID = :user_ID');
+            $statement->execute([
+                ':date' => date("Y-m-d"),
+                ':user_ID' => $user_ID,
+            ]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
 }

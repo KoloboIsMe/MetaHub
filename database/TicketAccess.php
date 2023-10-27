@@ -107,6 +107,15 @@ class TicketAccess implements TicketInterface
                 ':date' => $date,
                 ':author' => $author,
             ]);
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets Where title = :title and message = :message and date = :date and author = :author LIMIT 100');
+            $statement->execute([
+                ':title' => $title,
+                ':message' => $message,
+                ':date' => $date,
+                ':author' => $author,
+            ]);
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            return $user['ticket_ID'];
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }

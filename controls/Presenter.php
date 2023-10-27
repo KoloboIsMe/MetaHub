@@ -24,7 +24,13 @@ class Presenter
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time>" . $post->getTicket()->getDate() . " </time>
-                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                        <p>" . $post->getTicket()->getTicket_ID() . "</p>";
+
+            foreach ($post->getCategories() as $category) {
+                $content .= "<p>#" . $category->getLabel() . "</p>";
+            }
+
+            $content .= "
                     </div></a>
                 </div>";
         }
@@ -44,7 +50,13 @@ class Presenter
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time>" . $post->getTicket()->getDate() . " </time>
-                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                        <p>" . $post->getTicket()->getTicket_ID() . "</p>";
+
+            foreach ($post->getCategories() as $category) {
+                $content .= "<p>#" . $category->getLabel() . "</p>";
+            }
+
+            $content .= "
                     </div></a>
                 </div>";
         }

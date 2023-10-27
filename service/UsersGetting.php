@@ -26,4 +26,9 @@ class UsersGetting
     {
         return $dataccess->getUserByUsername($username);
     }
+
+    public function updateLastConnexion($dataccess, $user_ID)
+    {
+        $dataccess->updateLastConnexion($user_ID);
+    }
 }

@@ -96,13 +96,13 @@ if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['passw
 if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
-    $error = $controller->authenticateAction($usersGetting, $userAccessLector);
+    $error = $controller->authenticateAction($usersGetting, $userAccess);
     if ($error){
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error';
     }else{
-        $url = '/';
         $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
+        $url = '/';
     }
 }
 if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {

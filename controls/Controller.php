@@ -11,17 +11,17 @@ class Controller
         $this->outputData = $outputData;
     }
 
-    public function authenticateAction($usersGetting, $userAccessLector)
+    public function authenticateAction($usersGetting, $userAccess)
     {
-
-        $usersGetting->authenticate($_POST['username'], $_POST['password'], $userAccessLector);
+        $usersGetting->authenticate($_POST['username'], $_POST['password'], $userAccess);
         if (!$this->outputData->getOutputData()) {
             return 'Mauvais identifiant ou mot de passe !';
         }
         $_SESSION['isLogged'] = true;
         $_SESSION['username'] = $_POST['username'];
-        $_SESSION['user_ID'] =  $usersGetting->getUserByUsername($userAccessLector, $_POST['username'])->getUser_ID();
-
+        $_SESSION['user_ID'] = $usersGetting->getUserByUsername($userAccess, $_POST['username'])->getUser_ID();
+        $usersGetting->updateLastConnexion($userAccess, $_SESSION['user_ID']);
+        return null;
     }
 
     public function registerAction($usersGetting, $userAccess)
@@ -35,7 +35,9 @@ class Controller
     public function createTicketAction($ticketsGetting, $ticketAccess)
     {
         $categories = $_POST["categories"] ?? null;
-        $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
+        $ticketID = $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
+        if(isset($_POST["categories"]))
+            $ticketsGetting->addCategoriesToTicket($ticketAccess, $categories);
     }
 
 
