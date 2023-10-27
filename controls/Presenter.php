@@ -207,7 +207,6 @@ class Presenter
                     <a href='users&id=$id'>
                     <div class='card-content'>
                         <h3> " . $user->getUsername() . "</h3>
-                        <p>" . $user->getUser_ID() . "</p>
                     </div></a>
                 </div>";
         }
@@ -220,8 +219,7 @@ class Presenter
                 <div class='card'>
                     <a href='users&id=$id'>
                     <div class='card-content'>
-                        <h3>".$user->getUsername()."</h3>
-                        <p>".$user->getUser_ID()."</p>";
+                        <h3>".$user->getUsername()."</h3>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
@@ -229,7 +227,6 @@ class Presenter
                                 <div class='card'>
                                     <a href='posts&id=$id'>
                                     <div class='card-content'>
-                                        <p>" . $post->getUser()->getUsername() . "</p>
                                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                                         <p>" . $post->getTicket()->getMessage() . "</p>
                                         <time>" . $post->getTicket()->getDate() . " </time>
