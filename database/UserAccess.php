@@ -33,7 +33,7 @@ class UserAccess implements UserInterface
     public function getUserById($id)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM users where id = :id');
+            $statement = $this->dataAccess->prepare('SELECT * FROM users where user_ID = :id');
             $statement->execute([':id' => $id ]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new User($data);
@@ -98,6 +98,35 @@ class UserAccess implements UserInterface
                 echo "erreur requete (exception)";
             }
             return null;
+        }
+    }
+    public function getUsersID(){
+        try {
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT user_ID FROM users ORDER BY user_ID DESC LIMIT 100');
+            $statement->execute();
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $ID[] = $data['user_ID'];
+            }
+            return $ID;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    public function getPostsIdByUserId($userId){
+        try {
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets where author = :userId ORDER BY ticket_ID DESC LIMIT 100');
+            $statement->execute([':userId' => $userId ]);
+            while($data = $statement->fetch(PDO::FETCH_ASSOC))
+            {
+                $ID[] = $data['ticket_ID'];
+            }
+            return $ID;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
 }

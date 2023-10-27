@@ -112,19 +112,4 @@ class TicketAccess implements TicketInterface
         }
     }
 
-    public function getPostsIdByUserId($id){
-        try {
-            $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT ticket FROM categorized where category = :ID ORDER BY ticket DESC LIMIT 100');
-            $statement->execute([':ID' => $id ]);
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
-                $ID[] = $data['ticket'];
-            }
-            return $ID;
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
 }

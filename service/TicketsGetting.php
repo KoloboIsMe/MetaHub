@@ -51,9 +51,9 @@ class TicketsGetting
         $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
     }
 
-    public function getPostsIdByUserId($dataccess, mixed $id)
+    public function getPostsIdByUserId($dataccess, $id)
     {
-        return $dataccess->getPostsIdByUserId;
+        return $dataccess->getPostsIdByUserId($id);
     }
 
     public function getUserPosts($dataccess, $postsId)

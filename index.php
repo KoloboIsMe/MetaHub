@@ -24,6 +24,7 @@ include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewRegister.php';
 include_once 'gui/ViewPosts.php';
+include_once 'gui/ViewUsers.php';
 
 include_once 'service/CategoriesGetting.php';
 include_once "service/CommentsGetting.php";
