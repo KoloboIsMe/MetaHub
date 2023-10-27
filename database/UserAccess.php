@@ -30,6 +30,18 @@ class UserAccess implements UserInterface
         }
     }
 
+    public function getUserById($id)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM users where id = :id');
+            $statement->execute([':id' => $id ]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return new User($data);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
     public function getUsersUsername()
     {
         try {
