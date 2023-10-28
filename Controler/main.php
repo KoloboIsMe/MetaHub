@@ -23,7 +23,7 @@ if (empty($_GET['url'])) {
     $layout = new gui\Layout($layoutTemplate);
     if(!isset($error))
         $error = null;
-    (new gui\ViewRegister($layout, $page, $error))->display();
+    (new Deprecated\ViewRegister($layout, $page, $error))->display();
 
 }elseif ('logout' == $_GET['url']) {
 

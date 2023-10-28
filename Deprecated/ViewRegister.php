@@ -1,6 +1,8 @@
 <?php
 
-namespace gui;
+namespace Deprecated;
+
+use gui\View;
 
 class ViewRegister extends View
 {
