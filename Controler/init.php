@@ -65,10 +65,10 @@ $userAccess = new \Framework\database\UserDatabase($dbAdmin);
 $outputData = new Deprecated\OutputData();
 
 // initialisation du controller avec accès a la structure pour le transfert des données
-$controller = new Deprecated\Controller($outputData);
+$controller = new Controler\Controller($outputData);
 
 // initialisation du presenter avec accès a la structure pour le transfert des données
-$presenter = new Deprecated\Presenter($outputData);
+$presenter = new Controler\Presenter($outputData);
 
 //initialisation des services avec la structure pour le transfert des données
 $categoriesGetting = new service\CategoriesGetting($outputData);
