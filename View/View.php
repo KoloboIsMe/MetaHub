@@ -11,8 +11,8 @@ class View
     }
     public function display()
     {
-        // include header
-        // echo content
-        // include footer
+        include self::HEADER;
+        echo $this->content;
+        include self::FOOTER;
     }
 }
