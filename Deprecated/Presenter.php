@@ -1,6 +1,6 @@
 <?php
 
-namespace Controler;
+namespace Deprecated;
 
 class Presenter
 {

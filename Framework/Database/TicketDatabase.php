@@ -10,7 +10,7 @@ include_once "Model/TicketInterface.php";
 include_once "entities/Ticket.php";
 
 
-class TicketAccess implements TicketInterface
+class TicketDatabase implements TicketInterface
 {
     protected $dataAccess = null;
 

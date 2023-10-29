@@ -5,10 +5,10 @@ namespace Framework\database;
 use database\Exception;
 use PDO;
 
-final class SPDO
+final class Connexion
 {
     private ?PDO $PDOInstance = null;
-    private static ?SPDO $instance = null;
+    private static ?Connexion $instance = null;
     private string $serverName;
 
     private function __construct(string $serverName)
@@ -27,10 +27,10 @@ final class SPDO
         }
     }
 
-    public static function getInstance(string $serverName = 'serveur_admin'): SPDO
+    public static function getInstance(string $serverName = 'serveur_admin'): Connexion
     {
         if (is_null(self::$instance) || self::$instance->serverName !== $serverName) {
-            self::$instance = new SPDO($serverName);
+            self::$instance = new Connexion($serverName);
         }
         return self::$instance;
     }

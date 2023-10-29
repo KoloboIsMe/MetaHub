@@ -9,9 +9,9 @@ use PDO;
 include_once "Model/CommentInterface.php";
 include_once "entities/Comment.php";
 
-class CommentAccess implements CommentInterface
+class CommentDatabase implements CommentInterface
 {
-    protected $dataAccess = null;
+    private $dataAccess;
 
     public function __construct($dataAccess){
         $this->dataAccess = $dataAccess;

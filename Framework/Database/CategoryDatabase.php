@@ -9,7 +9,7 @@ use PDO;
 include_once "Model/CategoryInterface.php";
 include_once "entities/Category.php";
 
-class CategoryAccess implements CategoryInterface
+class CategoryDatabase implements CategoryInterface
 {
     protected $dataAccess = null;
 
@@ -27,7 +27,7 @@ class CategoryAccess implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new Category($data);
+            $var[] = new CategoryDatabase($data);
         }
         return $var;
     }
@@ -44,7 +44,7 @@ class CategoryAccess implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new Category($data);
+            $var[] = new CategoryDatabase($data);
         }
         return $var;
     }
@@ -61,7 +61,7 @@ class CategoryAccess implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new Category($data);
+            $var[] = new CategoryDatabase($data);
         }
         return $var;
     }

@@ -9,7 +9,7 @@ use UserInterface;
 include_once "Model/UserInterface.php";
 include_once "entities/User.php";
 
-class UserAccess implements UserInterface
+class UserDatabase implements UserInterface
 {
     protected $dataAccess = null;
 
