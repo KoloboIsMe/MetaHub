@@ -1,4 +1,9 @@
 <?php
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////  ENTITY  //////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/// Abstract class to represent an entity (an entry in the database),
+///  extended by any of them.
 
 namespace Framework\entities;
 
@@ -8,9 +13,8 @@ abstract class Entity
     public function __construct(array $data){
         $this->hydrate($data);
     }
-
     //Hydratation
-    public function hydrate($data)
+    private function hydrate($data)
     {
         foreach($data as $key => $value)
         {

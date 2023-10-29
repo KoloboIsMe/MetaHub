@@ -1,4 +1,9 @@
 <?php
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////  COMMENT  /////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/// Represents a single comment.
+/// TO DO : Give default values to constructor
 
 namespace Framework\entities;
 
@@ -6,17 +11,15 @@ include_once 'entities/Entity.php';
 
 class Comment extends Entity
 {
-    private $comment_ID;
-    private $text;
-    private $date;
-    private $author;
-    private $ticket;
+    public function __construct(private $ID, private $text = null, private $date = null, private $author = null, private $ticket = null) {
+        super([$this->ID, $this->text, $this->date, $this->author, $this->ticket]);
+    }
 
     //Setters
-    public function setComment_ID($comment_ID){
-        $comment_ID = (int) $comment_ID;
-        if($comment_ID > 0){
-            $this->comment_ID = $comment_ID;
+    public function set_ID($ID){
+        $ID = (int) $ID;
+        if($ID > 0){
+            $this->ID = $ID;
         }
     }
     public function setText($text){
@@ -39,43 +42,23 @@ class Comment extends Entity
             $this->ticket = $ticket;
         }
     }
-
     //Getters
-    /**
-     * @return mixed
-     */
-    public function getComment_ID()
+    public function get_ID()
     {
-        return $this->comment_ID;
+        return $this->ID;
     }
-
-    /**
-     * @return mixed
-     */
     public function getText()
     {
         return $this->text;
     }
-
-    /**
-     * @return mixed
-     */
     public function getDate()
     {
         return $this->date;
     }
-
-    /**
-     * @return mixed
-     */
     public function getAuthor()
     {
         return $this->author;
     }
-
-    /**
-     * @return mixed
-     */
     public function getTicket()
     {
         return $this->ticket;
