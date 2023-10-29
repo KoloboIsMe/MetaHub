@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\database;
+namespace Framework\Database\Table;
 
 use CommentInterface;
 use Framework\entities\Comment;
@@ -9,14 +9,11 @@ use PDO;
 include_once "Model/CommentInterface.php";
 include_once "entities/Comment.php";
 
-class CommentDatabase implements CommentInterface
+class CommentTable implements CommentInterface
 {
-    private $dataAccess;
+    public function __construct(private $dataAccess){
 
-    public function __construct($dataAccess){
-        $this->dataAccess = $dataAccess;
     }
-
     public function getCommentsByTicketId($TicketId)
     {
         $var = [];

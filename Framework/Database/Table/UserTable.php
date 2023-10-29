@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\database;
+namespace Framework\Database\Table;
 
 use Framework\entities\User;
 use PDO;
@@ -9,7 +9,7 @@ use UserInterface;
 include_once "Model/UserInterface.php";
 include_once "entities/User.php";
 
-class UserDatabase implements UserInterface
+class UserTable implements UserInterface
 {
     protected $dataAccess = null;
 

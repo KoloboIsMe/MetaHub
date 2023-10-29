@@ -4,17 +4,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Instantiates all Singletons.
 
-$categoryDatabase = new \Framework\database\CategoryDatabase($dbLector);
-$commentDatabase = new \Framework\database\CommentDatabase($dbLector);
-$ticketDatabase = new \Framework\database\TicketDatabase($dbLector);
-$userDatabase = new \Framework\database\UserDatabase($dbLector);
+$categoryDatabase = new \Framework\Database\Table\CategoryTable($dbLector);
+$commentDatabase = new \Framework\Database\Table\CommentTable($dbLector);
+$ticketDatabase = new \Framework\Database\Table\TicketTable($dbLector);
+$userDatabase = new \Framework\Database\Table\UserTable($dbLector);
 $accessorsLectors = array(
     'categoryAccessLector' => $categoryDatabase,
     'ticketAccessLector' => $ticketDatabase,
     'commentAccessLector' => $commentDatabase,
     'userAccessLector' =>$userDatabase
 );
-$userAccess = new \Framework\database\UserDatabase($dbAdmin);
+$userAccess = new \Framework\Database\Table\UserTable($dbAdmin);
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new Deprecated\OutputData();

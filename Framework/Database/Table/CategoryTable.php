@@ -1,17 +1,13 @@
 <?php
 
-namespace Framework\database;
+namespace Framework\Database\Table;
 
 use CategoryInterface;
-use Framework\entities\Category;
 use PDO;
 
-include_once "Model/CategoryInterface.php";
-include_once "entities/Category.php";
-
-class CategoryDatabase implements CategoryInterface
+class CategoryTable implements CategoryInterface
 {
-    protected $dataAccess = null;
+    private $dataAccess;
 
     public function __construct($dataAccess){
         $this->dataAccess = $dataAccess;
@@ -27,7 +23,7 @@ class CategoryDatabase implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new CategoryDatabase($data);
+            $var[] = new CategoryTable($data);
         }
         return $var;
     }
@@ -44,7 +40,7 @@ class CategoryDatabase implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new CategoryDatabase($data);
+            $var[] = new CategoryTable($data);
         }
         return $var;
     }
@@ -61,7 +57,7 @@ class CategoryDatabase implements CategoryInterface
         }
         while($data = $statement->fetch(PDO::FETCH_ASSOC))
         {
-            $var[] = new CategoryDatabase($data);
+            $var[] = new CategoryTable($data);
         }
         return $var;
     }

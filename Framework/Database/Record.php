@@ -5,7 +5,7 @@
 /// Contains any return data from a SQL request.
 /// A new object will be instanced each time a request is done.
 
-namespace Framework;
+namespace Framework\database;
 
 use Framework\entities\Entity;
 

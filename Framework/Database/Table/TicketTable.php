@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework\database;
+namespace Framework\Database\Table;
 
 use Framework\entities\Ticket;
 use PDO;
@@ -10,7 +10,7 @@ include_once "Model/TicketInterface.php";
 include_once "entities/Ticket.php";
 
 
-class TicketDatabase implements TicketInterface
+class TicketTable implements TicketInterface
 {
     protected $dataAccess = null;
 
