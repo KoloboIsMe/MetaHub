@@ -4,26 +4,30 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Contains any return data from a SQL request.
 /// A new object will be instanced each time a request is done.
-///
+
 namespace Framework;
 
 use Framework\entities\Entity;
 
 class Record
 {
-    public function __construct(private array $data) {
-
+    private array $data;
+    public function __construct(...$data) {
+        foreach ($data as $datum) {
+            $this->addDatum($datum);
+        }
+        return $this;
     }
     public function getData() : Entity {
         return $this->data;
     }
-    public function setData(array $data) : array{
+    public function setData(array $data) : Record {
         $this->data = $data;
         return $this;
     }
     public function addData(Entity ...$data) : Record {
         foreach ($data as $datum) {
-            $this->data[] = $datum;
+            $this->addDatum($datum);
         }
         return $this;
     }
