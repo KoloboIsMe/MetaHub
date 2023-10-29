@@ -12,11 +12,10 @@ use Framework\entities\Entity;
 class Record
 {
     private array $data;
-    public function __construct(...$data) {
+    public function __construct(Entity ...$data) {
         foreach ($data as $datum) {
             $this->addDatum($datum);
         }
-        return $this;
     }
     public function getData() : Entity {
         return $this->data;

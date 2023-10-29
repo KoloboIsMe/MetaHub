@@ -12,7 +12,7 @@ include_once 'entities/Entity.php';
 class Comment extends Entity
 {
     public function __construct(private $ID, private $text = null, private $date = null, private $author = null, private $ticket = null) {
-        super([$this->ID, $this->text, $this->date, $this->author, $this->ticket]);
+        parent::__construct([$this->ID, $this->text, $this->date, $this->author, $this->ticket]);
     }
 
     //Setters

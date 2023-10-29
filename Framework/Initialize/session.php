@@ -26,7 +26,7 @@ if ('registerAction' === $_GET['url'] && isset($_POST['username']) && isset($_PO
 if ('login_verification' === $_GET['url'] && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
-    $error = $controller->authentificateAction($usersGetting, $userAccessLector);
+    $error = $controller->authentificateAction($usersGetting, $userDatabase);
     if ($error){
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error'; // change

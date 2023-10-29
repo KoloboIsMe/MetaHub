@@ -3,7 +3,7 @@
 namespace gui;
 class Layout
 {
-    protected $templateFile;
+    private $templateFile;
 
     public function __construct($templateFile)
     {

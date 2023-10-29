@@ -8,7 +8,7 @@ class ViewHomepage extends View
 {
     public function __construct($layout)
     {
-        parent::__construct($layout);
+        parent(__construct($layout));
         $this->title = 'Accueil';
 
         if(isset($_SESSION['username']))

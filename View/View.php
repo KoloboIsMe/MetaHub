@@ -1,21 +1,18 @@
 <?php
 
 namespace gui;
-abstract class View
+class View
 {
-    protected $title = '';
-    protected $content = '';
-
-    protected $username = '';
-    protected $layout;
-
-    public function __construct($layout)
+    const HEADER = 'header.php';
+    const FOOTER = 'footer.php';
+    public function __construct(private $title, private $content)
     {
-        $this->layout = $layout;
-    }
 
+    }
     public function display()
     {
-        $this->layout->display($this->title, $this->content, $this->username);
+        // include header
+        // echo content
+        // include footer
     }
 }

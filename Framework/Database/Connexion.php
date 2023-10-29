@@ -7,21 +7,19 @@ use PDO;
 
 final class Connexion
 {
-    private ?PDO $PDOInstance = null;
-    private static ?Connexion $instance = null;
-    private string $serverName;
-
-    private function __construct(string $serverName)
+    private PDO $PDO;
+    private static Connexion $instance;
+    private function __construct(private string $serverName)
     {
-        $config = parse_ini_file(CHEMIN_VERS_FICHIER_INI, true);
+        $config = parse_ini_file(INI_FILE_PATH, true);
         if (isset($config[$serverName])) {
             $serverConfig = $config[$serverName];
-            $this->PDOInstance = new PDO($serverConfig['type'] . ':host='. $serverConfig['IP_adress'] .';dbname='. BASE_DE_DONNEES, $serverConfig['user'], $serverConfig['password']);
+            $this->PDOInstance = new PDO($serverConfig['type'] . ':host='.
+                $serverConfig['IP_adress'] .';dbname='. DATABASES,
+                $serverConfig['user'], $serverConfig['password']);
             $this->PDOInstance->exec('SET CHARACTER SET utf8');
             $this->PDOInstance->setAttribute(PDO::FETCH_ASSOC, PDO::FETCH_OBJ);
 //            $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-
-            $this->serverName = $serverName;
         } else {
             throw new Exception("Server '$serverName' not found in config file");
         }
