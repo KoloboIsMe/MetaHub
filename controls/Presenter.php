@@ -29,6 +29,7 @@ class Presenter
                 </div>";
         }
         return $content;
+
     }
 
     public function showPosts()
@@ -46,7 +47,42 @@ class Presenter
                         <time>" . $post->getTicket()->getDate() . " </time>
                         <p>" . $post->getTicket()->getTicket_ID() . "</p>
                     </div></a>
-                </div>";
+                </div>
+                <div class='card-container2'>
+                <div class='card2'>
+                    <div class='card-content'>
+                        <h3> Catégories</h3>
+                        <div class='dot-container'>
+                            <div class='dot d1'></div>
+                            <div class='dot d2'></div>
+                            <div class='dot d3'></div>
+                            <div class='dot d4'></div>
+                            <div class='dot d5'></div>
+                        </div>
+                        <div class='category-list'>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class='card-container2'>
+                <div class='card3'>
+                    <div class='card-content'>
+                        <h3> Suggestions</h3>
+                        <p>Lorem ipsum dolor sit amet. In perferendis voluptas id quam omnis id explicabo sequi.
+                            Qui deserunt voluptatem ea fuga illum ut vero sunt et quis laudantium est temporibus enim.
+                            33 ducimus commodi eum voluptatem dolores est saepe nobis ea voluptatem molestias est
+                            natus eveniet non iste placeat qui commodi nobis.</p>
+                    </div>
+                </div>
+            </div>";
         }
         return $content;
     }
