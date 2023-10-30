@@ -40,9 +40,10 @@ class Controller
         }
     }
 
-
-
-
+    public function deleteTicketAction($ticketsGetting, $ticketAccess)
+    {
+        $ticketsGetting->deleteTicket($ticketAccess, $_GET['id']);
+    }
 
 
 }

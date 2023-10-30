@@ -70,6 +70,7 @@ class Presenter
         $id = $post->getTicket()->getTicket_ID();
         $content .= "
             <div class='card'>
+                <a href='deleteTicketAction&id=$id'>supprimer</a>
                 <a href='posts&id=$id'>
                 <div class='card-content'>
                     <p>" . $post->getUser()->getUsername() . "</p>

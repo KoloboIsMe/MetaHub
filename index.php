@@ -110,6 +110,12 @@ if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["messa
     $controller->createTicketAction($ticketsGetting, $ticketAccess);
     $url='/';
     header("refresh:0;url=/");
+}
+if ('deleteTicketAction' == $url && isset($_GET['id'])) {
+
+    $url='posts';
+    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
+    header("refresh:0;url=/posts");
 
 }
 
