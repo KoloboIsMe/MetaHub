@@ -4,7 +4,6 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Abstract class to represent an entity (an entry in the database),
 ///  extended by any of them.
-/// All objects has an ID wich is its primary key.
 
 abstract class Entity
 {

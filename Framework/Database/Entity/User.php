@@ -3,9 +3,8 @@
 ////////////////////////////////  User  ///////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single user.
-/// TO DO : Create a constructor as in the Comment class
+/// TO DO : Give default values to constructor.
 use Framework\Database\Entity\Identified;
-
 class User extends Entity
 {
     use Identified;

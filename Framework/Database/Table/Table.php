@@ -2,7 +2,7 @@
 
 namespace Framework\Database\Table;
 
-class CommentTable implements Table
+interface Table
 {
 
 }
