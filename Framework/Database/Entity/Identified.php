@@ -8,7 +8,7 @@ trait Identified
 {
     protected int $ID;
 
-    public function set_ID(int $ID) : Entity
+    public function setID(int $ID) : Entity
     {
         if ($ID > 0) {
             $this->ID = $ID;
@@ -18,7 +18,7 @@ trait Identified
         return $this;
     }
 
-    public function get_ID() : int
+    public function getID() : int
     {
         return $this->ID;
     }

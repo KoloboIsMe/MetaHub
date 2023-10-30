@@ -3,49 +3,51 @@
 ////////////////////////////////  TICKET  /////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single ticket.
-/// TO DO : Create a constructor as in the Comment class
+/// TO DO : Give default values to constructor.
 
 use Framework\Database\Entity\Identified;
 
 class Ticket extends Entity
 {
     use Identified;
-    private $title;
-    private $message;
-    private $date;
-    private $author;
-
-    public function setTitle($title){
-        if(is_string($title)){
-            $this->title = $title;
-        }
+    public function __construct(int $ID, private string $title, private $message, private $date, private $author)
+    {
+        parent::__construct([$ID]);
     }
-    public function setMessage($message){
-        if(is_string($message)){
-            $this->message = $message;
-        }
+    public function setTitle(string $title) : Ticket
+    {
+        $this->title = $title;
+        return $this;
     }
-    public function setDate($date){
+    public function setMessage($message) : Ticket
+    {
+        $this->message = $message;
+        return $this;
+    }
+    public function setDate($date) : Ticket
+    {
         $this->date = $date;
+        return $this;
     }
-    public function setAuthor($author){
-        $author = (int) $author;
-        if($author > 0){
-            $this->author = $author;
-        }
+    public function setAuthor($author) : Ticket
+    {
+        $this->author = $author;
+        return $this;
     }
-    public function getTitle(){
+    public function getTitle() : string
+    {
         return $this->title;
     }
-    public function getMessage(){
+    public function getMessage() : string
+    {
         return $this->message;
     }
-    public function getDate(){
+    public function getDate() : string
+    {
         return $this->date;
     }
-    public function getAuthor(){
+    public function getAuthor() : int
+    {
         return $this->author;
     }
-
-
 }

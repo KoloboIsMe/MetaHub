@@ -3,6 +3,7 @@
 //////////////////////////////  CATEGORY  /////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single category.
+/// TO DO : Give default values to constructor
 
 use Framework\Database\Entity\Identified;
 
@@ -11,26 +12,23 @@ class Category extends Entity
     use Identified;
     public function __construct(int $ID, private string $label = 'null', private string $description = 'null')
     {
-        parent::__construct([$this->ID, $this->label, $this->description]);
+        parent::__construct([$ID]);
     }
     public function setLabel(string $label) : Category
     {
         $this->label = $label;
         return $this;
     }
-    public function setDescription(string $description) : Category{
+    public function setDescription(string $description) : Category
+    {
         $this->description = $description;
         return $this;
     }
-    public function getCategory_ID()
-    {
-        return $this->category_ID;
-    }
-    public function getLabel()
+    public function getLabel() : string
     {
         return $this->label;
     }
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }

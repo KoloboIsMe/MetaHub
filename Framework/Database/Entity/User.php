@@ -9,47 +9,44 @@ use Framework\Database\Entity\Identified;
 class User extends Entity
 {
     use Identified;
-    private $password;
-    private $username;
-    private $first_connexion;
-    private $last_connexion;
-    private $admin;
-
-    public function setPassword($password){
-        if(is_string($password)){
-            $this->password = $password;
-        }
+    public function __construct(int $ID, private $password, private $username, private $first_connexion, private $last_connexion)
+    {
+        parent::__construct([$ID]);
     }
-    public function setUsername($username){
-        if(is_string($username)){
-            $this->username = $username;
-        }
+    public function setPassword(string $password) : User
+    {
+        $this->password = $password;
+        return $this;
     }
-    public function setFirst_connexion($first_connexion){
+    public function setUsername(string $username) : User
+    {
+        $this->username = $username;
+        return $this;
+    }
+    public function setFirst_connexion(string $first_connexion) : User
+    {
         $this->first_connexion = $first_connexion;
+        return $this;
     }
-    public function setLast_connexion($last_connexion){
+    public function setLast_connexion(string $last_connexion) : User
+    {
         $this->last_connexion = $last_connexion;
+        return $this;
     }
-    public function setAdmin($admin){
-        $admin = (int) $admin;
-        if($admin === 0 || $admin === 1){
-            $this->admin = $admin;
-        }
-    }
-    public function getPassword(){
+    public function getPassword() : string
+    {
         return $this->password;
     }
-    public function getUsername(){
+    public function getUsername() : string
+    {
         return $this->username;
     }
-    public function getFirst_connexion(){
+    public function getFirst_connexion() : string
+    {
         return $this->first_connexion;
     }
-    public function getLast_connexion(){
+    public function getLast_connexion() : string
+    {
         return $this->last_connexion;
-    }
-    public function getAdmin(){
-        return $this->admin;
     }
 }

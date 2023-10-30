@@ -2,15 +2,16 @@
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////  CATEGORY  /////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/// Represents a ticket's categorization.
-/// A special entity wich does not own an ID.
+/// Represents a ticket's categorization (Association).
+/// A special entity which does not own an ID.
 /// Foreign keys : Ticket and Category
+/// Foreign keys are ALSO Primary keys.
 
 class Categorized extends Entity
 {
     public function __construct(private int $ticket, private int $category)
     {
-        parent::__construct([$this->ticket, $this->category]);
+        parent::__construct([]);
     }
     public function getTicket () : int
     {

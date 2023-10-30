@@ -11,49 +11,44 @@ use Framework\Database\Entity\Identified;
 class Comment extends Entity
 {
     use Identified;
-    public function __construct(int $ID, private string $text = 'null',
-        private string $date = 'null', private int $author = 0, private $ticket = null)
+    public function __construct(int $ID, private string $text = 'null', private string $date = 'null', private int $author = 0, private $ticket = null)
     {
-        parent::__construct([$this->ID, $this->text, $this->date,
-            $this->author, $this->ticket]);
+        parent::__construct([$ID]);
     }
-
-    public function setText($text){
-        if(is_string($text)){
-            $this->text = $text;
-        }
+    public function setText(string $text) : Comment
+    {
+        $this->text = $text;
+        return $this;
     }
-    public function setDate($date){
+    public function setDate(string $date) : Comment
+    {
         $this->date = $date;
+        return $this;
     }
-    public function setAuthor($author){
-        $author = (int) $author;
-        if($author > 0){
-            $this->author = $author;
-        }
+    public function setAuthor(int $author) : Comment
+    {
+        $this->author = $author;
+        return $this;
     }
-    public function setTicket($ticket){
-        $ticket = (int) $ticket;
-        if($ticket > 0){
-            $this->ticket = $ticket;
-        }
+    public function setTicket(int $ticket) : Comment
+    {
+        $this->ticket = $ticket;
+        return $this;
     }
-    public function getText()
+    public function getText() : string
     {
         return $this->text;
     }
-    public function getDate()
+    public function getDate() : string
     {
         return $this->date;
     }
-    public function getAuthor()
+    public function getAuthor() : int
     {
         return $this->author;
     }
-    public function getTicket()
+    public function getTicket() : int
     {
         return $this->ticket;
     }
-
-
 }
