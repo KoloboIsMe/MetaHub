@@ -32,15 +32,19 @@ header nav ul li {
     margin: 23px 5px;
 }
 
-header nav ul li a{
+header nav ul li a, #username{
     color: #EEF1EF;
     display: inline;
     justify-content: space-between;
     padding: 10px 0;
     margin: 0 10px;
     border: 1px solid transparent;
+    font-size: 1.5vh;
 }
 
+#username{
+    top: 3vh;
+}
 
 header nav ul li #headerLinks:hover{
     border-bottom-color: white;
@@ -182,7 +186,8 @@ p{
 }
 
 .card-container2{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: right;
     margin-top: 50px;
 }
