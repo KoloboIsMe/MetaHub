@@ -5,25 +5,16 @@
 /// Represents a single ticket.
 /// TO DO : Create a constructor as in the Comment class
 
-namespace Framework\entities;
-
-include_once 'entities/Entity.php';
+use Framework\Database\Entity\Identified;
 
 class Ticket extends Entity
 {
-    private $ticket_ID;
+    use Identified;
     private $title;
     private $message;
     private $date;
     private $author;
 
-    //Setters
-    public function setTicket_ID($ticket_ID){
-        $ticket_ID = (int) $ticket_ID;
-        if($ticket_ID > 0){
-            $this->ticket_ID = $ticket_ID;
-        }
-    }
     public function setTitle($title){
         if(is_string($title)){
             $this->title = $title;
@@ -42,11 +33,6 @@ class Ticket extends Entity
         if($author > 0){
             $this->author = $author;
         }
-    }
-
-    //Getters
-    public function getTicket_ID(){
-        return $this->ticket_ID;
     }
     public function getTitle(){
         return $this->title;

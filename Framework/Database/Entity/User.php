@@ -4,26 +4,17 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single user.
 /// TO DO : Create a constructor as in the Comment class
+use Framework\Database\Entity\Identified;
 
-namespace Framework\entities;
-
-include_once 'entities/Entity.php';
 class User extends Entity
 {
-    private $user_ID;
+    use Identified;
     private $password;
     private $username;
     private $first_connexion;
     private $last_connexion;
     private $admin;
 
-    //Setters
-    public function setUser_ID($user_ID){
-        $user_ID = (int) $user_ID;
-        if($user_ID > 0){
-            $this->user_ID = $user_ID;
-        }
-    }
     public function setPassword($password){
         if(is_string($password)){
             $this->password = $password;
@@ -45,11 +36,6 @@ class User extends Entity
         if($admin === 0 || $admin === 1){
             $this->admin = $admin;
         }
-    }
-
-    //Getters
-    public function getUser_ID(){
-        return $this->user_ID;
     }
     public function getPassword(){
         return $this->password;

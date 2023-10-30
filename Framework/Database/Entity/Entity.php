@@ -4,24 +4,26 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Abstract class to represent an entity (an entry in the database),
 ///  extended by any of them.
-
-namespace Framework\entities;
+/// All objects has an ID wich is its primary key.
 
 abstract class Entity
 {
-    //Constructeur
-    public function __construct(array $data){
+    public function __construct(array $data)
+    {
         $this->hydrate($data);
     }
-    //Hydratation
     private function hydrate($data)
     {
-        foreach($data as $key => $value)
+        foreach($data as $attribute => $datum)
         {
-            $method = 'set'.ucfirst($key);
+            $method = 'set'.ucfirst($attribute);
             if(method_exists($this,$method))
             {
-                $this->$method($value);
+                $this->$method($datum);
+            }
+            else
+            {
+                throw new Exception('Hydratation failed');
             }
         }
     }
