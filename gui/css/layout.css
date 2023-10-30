@@ -133,17 +133,21 @@ header nav ul li #headerLinks:hover{
         display: flex;
         justify-content: center;
     }
+
     .card-container1{
         justify-content: center;
         float: none;
     }
+
     .card-container2{
         justify-content: center;
         margin-top: 20px;
     }
+
     .card, .card2, .card3{
         width: 60vw;
     }
+
     .footerImages{
         display: flex;
         justify-content: space-between;
@@ -273,11 +277,6 @@ h2{
     margin-bottom: 4.7vh;
 }
 
-
-
-
-
-
 footer{
     height: auto;
     width: 100%;
@@ -301,6 +300,7 @@ footer{
 }
 
 #footerImg{
+    margin-right: 10px;
     margin-top: 4vh;
     cursor: pointer;
     height: 4vh;
@@ -315,6 +315,7 @@ footer{
     margin-top: 3vh;
     color: #EEF1EF;
 }
+
 .footerCopyright{
     display: flex;
     justify-content: center;
