@@ -47,8 +47,7 @@ class Presenter
                         <time>" . $post->getTicket()->getDate() . " </time>
                         <p>" . $post->getTicket()->getTicket_ID() . "</p>
                     </div></a>
-                </div>
-                <div class='card-container2'>
+                </div><div class='card-container2'>
                 <div class='card2'>
                     <div class='card-content'>
                         <h3> Catégories</h3>
