@@ -1,6 +1,6 @@
 <?php
 
-namespace gui;
+namespace Deprecated;
 class View
 {
     const HEADER = 'header.php';

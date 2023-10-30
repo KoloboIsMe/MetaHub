@@ -2,8 +2,6 @@
 
 namespace Deprecated;
 
-use gui\View;
-
 class ViewRegister extends View
 {
     public function __construct($layout, $page, $error = '')

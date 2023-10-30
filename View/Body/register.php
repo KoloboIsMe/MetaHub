@@ -6,7 +6,7 @@
 /// Called when a new user need to register.
 ?>
 <div id='container'>
-    <form action=$action method='POST' onsubmit=\"return validateForm()\">
+    <form action=../../index.php method='POST' onsubmit=\"return validateForm()\">
         <h1>Register</h1>
 
         <label><b>Nom d'utilisateur</b></label>
@@ -21,7 +21,7 @@
 
         <input type='submit' id='submit' value='REGISTER'>
 
-        <p>Vous avez déjà un compte ? <a href='/login'>Connectez-vous</a></p>
+        <p>Vous avez déjà un compte ? <a href='../../index.php'>Connectez-vous</a></p>
     </form>
 </div>
 <script>

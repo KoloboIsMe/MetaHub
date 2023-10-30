@@ -5,23 +5,28 @@
 /// The main controler of the app.
 /// It redirects to the correct controller.
 
-if (empty($_GET['url'])) {
-
-    $layout = new gui\Layout($layoutTemplate);
-    (new Deprecated\ViewHomepage($layout))->display();
-
+if (empty($_GET['url']))
+{
+    $page = 'homepage';
 }
+else
+{
+    $page = $_GET['url'];
+}
+
+require 'display.php';
+
 switch ($_GET['url'])
 {
     case 'login' :
         isset($_GET['id']) ? $page = $_GET['id'] : $page = null;
 
-        $layout = new gui\Layout($layoutTemplate);
+        $layout = new Deprecated\Layout($layoutTemplate);
         (new Deprecated\ViewLogin($layout, $page))->display();
         break;
     case 'register' :
         isset($_GET['id']) ? $page = $_GET['id'] : $page = null;
-        $layout = new gui\Layout($layoutTemplate);
+        $layout = new Deprecated\Layout($layoutTemplate);
         if(!isset($error))
             $error = null;
         (new Deprecated\ViewRegister($layout, $page, $error))->display();
@@ -32,7 +37,7 @@ switch ($_GET['url'])
         header("Location: /");
         break;
     case 'posts' :
-        $layout = new gui\Layout($layoutTemplate);
+        $layout = new Deprecated\Layout($layoutTemplate);
         if(!isset($_SESSION['isLogged']))
             header('Location: /login&id='.$url);
         else {
@@ -42,11 +47,11 @@ switch ($_GET['url'])
             } else {
                 $controller->getCompleteTickets($accessorsLectors, $dataGetting);
             }
-            (new gui\ViewTickets($layout, $presenter))->display();
+            (new Deprecated\ViewTickets($layout, $presenter))->display();
         }
         break;
     case 'categories' :
-        $layout = new gui\Layout($layoutTemplate);
+        $layout = new Deprecated\Layout($layoutTemplate);
         if(!isset($_SESSION['isLogged']))
             header('Location: /login&id='.$url);
         else {
@@ -56,14 +61,15 @@ switch ($_GET['url'])
             } else {
                 $controller->getTicketByCatgories($accessorsLectors, $dataGetting);
             }
-            (new gui\ViewCategories($layout, $presenter))->display();
+            (new Deprecated\ViewCategories($layout, $presenter))->display();
         }
         break;
     case 'error' :
-        $layout = new gui\Layout($layoutTemplate);
-        (new gui\ViewError($layout, $error, $redirect))->display();
+        $layout = new Deprecated\Layout($layoutTemplate);
+        (new Deprecated\ViewError($layout, $error, $redirect))->display();
         break;
     default:
         header('Status: 404 Not Found');
         echo '<html lang="fr"><body><h1>My Page NotFound</h1></body></html>';
+        break;
 }

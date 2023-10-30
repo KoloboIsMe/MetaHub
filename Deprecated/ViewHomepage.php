@@ -2,8 +2,6 @@
 
 namespace Deprecated;
 
-use gui\View;
-
 class ViewHomepage extends View
 {
     public function __construct($layout)

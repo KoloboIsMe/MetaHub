@@ -1,18 +1,18 @@
 <?php
 
-namespace gui;
+namespace Deprecated;
 
-class ViewTickets extends View
+class ViewCategories extends View
 {
     public function __construct($layout, $presenter )
     {
         parent::__construct($layout);
 
-        $this->title = 'Tickets';
+        $this->title = 'Categories';
 
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showCompleteTickets();
+        $this->content = $presenter->showCategoriesTickets();
     }
 }

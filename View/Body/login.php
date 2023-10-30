@@ -7,7 +7,7 @@
 ?>
 
 <div id='container'>
-    <form action=<?php $action ?> method='POST'>
+    <form action=<?php $action ?> ../../index.php>
         <h1>Login</h1>
 
         <label><b>Nom d'utilisateur</b></label>
@@ -18,6 +18,6 @@
 
         <input type='submit' id='submit' value='LOGIN' >
 
-        <p>vous n'avez pas de compte ? <a href='/register'>inscrivez-vous</a></p>
+        <p>vous n'avez pas de compte ? <a href='../../index.php'>inscrivez-vous</a></p>
     </form>
 </div>
