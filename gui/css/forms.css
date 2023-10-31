@@ -10,12 +10,16 @@ form {
     border: 1px solid #191919;
     background: #191919;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-bottom: 7vh;
+    margin-top: 10vh;
+    padding-bottom: 15vh;
 }
 #container h1{
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
     color: white;
+    text-align: center;
 }
 
 #container p {
@@ -29,10 +33,11 @@ form {
 
 #container label{
     color: white;
+    font-size: 2.5vh;
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=text], input[type=password],textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -41,17 +46,21 @@ input[type=text], input[type=password] {
     background: #191919;
     color: white;
     box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 3vh;
+    font-size: 1.7vh;
 }
 
 /* Set a style for all buttons */
 input[type=submit] {
     background-color: #42b34a;
-    color: #fff;
+    color: #242424;
     padding: 14px 20px;
     margin: 8px 0;
     border: 1px solid white;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 3vh;
 }
 input[type=submit]:hover {
     background-color: #191919;

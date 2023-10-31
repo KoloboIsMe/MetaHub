@@ -171,7 +171,7 @@ header nav ul li #headerLinks:hover{
         width: 70%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .category-card{
         width: 70vw;
         margin: 20px auto;
     }
@@ -203,6 +203,39 @@ header nav ul li #headerLinks:hover{
     font-size: 1.5vh;
 }
 
+.input{
+    width: 95%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid #EEF1EF;
+    border-radius: 20px;
+    outline: none;
+    padding-left: 1vh;
+    padding-top: 2vh;
+    color: white;
+    font-size: 2vh;
+}
+
+#comment{
+    margin-bottom: 3vh;
+}
+
+.btn{
+    position: relative;
+    top: 2.7vh;
+    background: #42b34a;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 5vh;
+    width: 25%;
+    font-size: 20px;
+    color: #242424;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+}
+
 .titreErreur {
     color: white;
     font-size: 30px;
@@ -218,6 +251,26 @@ p{
     padding: 10px 25px;
     border-radius: 0 0 30px 30px;
     */
+}
+
+.comment-card{
+    position: relative;
+    height: 25vh;
+    max-height: 80vh;
+    width: 70vw;
+    background: #242424;
+    margin-bottom: 10vh;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 2px 4px black;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2vh;
 }
 
 .card-container1{
@@ -236,6 +289,7 @@ p{
 
 .card{
     width: 50vw;
+    height: auto;
     background-color: #242424;
     border-radius: 8px;
     overflow: hidden;
@@ -263,6 +317,22 @@ p{
     margin: 20px;
 }
 
+.post-card, .category-card{
+    display: flex;
+    width: 45vw;
+    background-color: #242424;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 2px 4px black;
+    margin: 20px;
+    flex-direction: row;
+}
+
+.category-card{
+    padding-bottom: 8vh;
+    margin-bottom: 15vh;
+}
+
 .card-content{
     padding: 16px;
 }
@@ -277,7 +347,7 @@ p{
 .card-content h3{
     font-size: 2vh;
     color: white;
-    margin-bottom: 4px;
+    margin-bottom: 1vh;
     border-bottom: #42B34A;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -323,17 +393,6 @@ h2{
     height: 1.5vh;
     margin-top: 2vh;
     margin-bottom: 4.7vh;
-}
-
-.post-card{
-    display: flex;
-    width: 50vw;
-    background-color: #242424;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 1px 2px 4px black;
-    margin: 20px;
-    flex-direction: row;
 }
 
 footer{

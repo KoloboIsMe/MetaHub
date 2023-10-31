@@ -14,6 +14,8 @@ class Presenter
     public function showHomePage()
     {
         $content = '';
+        $content .= "<h2>Fil d'actualité</h2>
+                      ";
         $content .= "<div class='card-container1'>
                             ";
         foreach ($this->outputData->getOutputData() as $post) {
@@ -74,6 +76,8 @@ class Presenter
     public function showPosts()
     {
         $content = '';
+        $content .= "<h2>Posts</h2>
+                     <div class='card-container'>";
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
@@ -89,53 +93,69 @@ class Presenter
                 </div>
                 ";
         }
+        $content .= "</div>";
         return $content;
     }
 
     public function showPost()
     {
         $content = '';
+        $content .= "<h2>Post</h2>
+                      ";
         $post = $this->outputData->getOutputData();
         $id = $post->getTicket()->getTicket_ID();
+        $content .= "<div class='card-container1'>
+                            ";
         $content .= "
             <div class='card'>
-                <a href='posts&id=$id'>
+                    <a href='posts&id=$id'>
+                    <div class='card-content'>
+                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
+                        <h3> " . $post->getTicket()->getTitle() . "</h3>
+                        <p>" . $post->getTicket()->getMessage() . "</p>
+                        <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
+                        <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
+        $content .= "            
+                </div>
+                </a>
+            </div>
+            <div class='comment-card'>
                 <div class='card-content'>
-                    <p>" . $post->getUser()->getUsername() . "</p>
-                    <h3> " . $post->getTicket()->getTitle() . "</h3>
-                    <p>" . $post->getTicket()->getMessage() . "</p>
-                    <time>" . $post->getTicket()->getDate() . " </time>
-                    <p>" . $post->getTicket()->getTicket_ID() . "</p>";
-
+                    <h3 id='comment'>Commentaires</h3>
+                    <div class='input-box'>
+                        <textarea name='' placeholder='Ajoutez un commentaire' class='input' required='object' cols='35' rows='2'></textarea>
+                    </div>
+                    <input type='submit' class='btn' value='Ajouter'>";
                     foreach ($post->getCategories() as $category) {
                         $content .= "<p>#" . $category->getLabel() . "</p>";
                     }
 
                     foreach ($post->getComments() as $comment) {
-                        $content .= "<p>" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
+                        $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
                     }
-
-        $content .= "            
-                </div></a>
+        $content .= "</div>
+                </div>
             </div>";
-
         return $content;
     }
 
     public function showCategories()
     {
         $content = '';
+        $content .= "<h2>Catégories</h2>
+                     <div class='card-container'>";
         foreach ($this->outputData->getOutputData() as $category) {
             $id = $category->getCategory_ID();
             $content .= "
-                <div class='card'>
+                <div class='category-card'>
                     <a href='categories&id=$id'>
                     <div class='card-content'>
-                        <h3> " . $category->getLabel() . "</h3>
+                        <h3> #" . $category->getLabel() . "</h3>
                         <p>" . $category->getDescription() . "</p>
                     </div></a>
                 </div>";
         }
+        $content .= "</div>";
         return $content;
     }
 
