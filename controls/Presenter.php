@@ -14,21 +14,24 @@ class Presenter
     public function showHomePage()
     {
         $content = '';
+        $content .= "<div class='card-container1'>
+                            ";
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
                 <div class='card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p>" . $post->getUser()->getUsername() . "</p>
+                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
-                        <time>" . $post->getTicket()->getDate() . " </time>
-                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                        <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
+                        <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>
                     </div></a>
                 </div>";
         }
         $content .= "
+                </div>
                 <div class='card-container2'>
                     <div class='card2'>
                         <div class='card-content'>
@@ -74,16 +77,17 @@ class Presenter
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
-                <div class='card'>
+                <div class='post-card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p>" . $post->getUser()->getUsername() . "</p>
+                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
-                        <time>" . $post->getTicket()->getDate() . " </time>
-                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                        <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
+                        <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>
                     </div></a>
-                </div>";
+                </div>
+                ";
         }
         return $content;
     }
