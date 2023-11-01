@@ -10,7 +10,7 @@ namespace Framework\Database\Entity;
 
 class Comment extends Entity
 {
-    use IdentifiedEntity;
+    use ID;
     private string $text;
     private string $date;
     private int $author;

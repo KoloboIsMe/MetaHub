@@ -44,10 +44,6 @@ trait Requests
         $request .= "LIMIT $this->limit";
         return $this->execute($request);
     }
-    private function newEntity() : null
-    {
-        return null;
-    }
     public function insert(Entity ...$entities) : boolean
     {
         foreach($entities as $entity)

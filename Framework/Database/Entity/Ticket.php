@@ -9,7 +9,7 @@ namespace Framework\Database\Entity;
 
 class Ticket extends Entity
 {
-    use IdentifiedEntity;
+    use ID;
     private string $title;
     private string $message;
     private string $date;

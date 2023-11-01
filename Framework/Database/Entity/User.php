@@ -8,7 +8,7 @@
 namespace Framework\Database\Entity;
 class User extends Entity
 {
-    use IdentifiedEntity;
+    use ID;
     private string $password;
     private string $username;
     private string $first_connexion;

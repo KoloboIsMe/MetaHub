@@ -5,7 +5,7 @@
 /// Identified trait. Shared by entities which have an ID as a primary key.
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Entity;
-trait IdentifiedEntity
+trait ID
 {
     private int $ID;
     public function setID(int $ID) : Entity

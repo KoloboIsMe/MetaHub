@@ -9,7 +9,7 @@ namespace Framework\Database\Entity;
 
 class Category extends Entity
 {
-    use IdentifiedEntity;
+    use ID;
     private string $label;
     private string $description;
 
