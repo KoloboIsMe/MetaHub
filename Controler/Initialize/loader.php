@@ -36,6 +36,7 @@ try {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
     die();
 }
+
 require 'singletons.php';
 
 return;
