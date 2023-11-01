@@ -10,7 +10,7 @@ namespace Framework\Database\Table;
 use Categorized;
 use Framework\database\Record;
 
-class CategorizedTable extends Database
+class CategorizedTable
 {
     const TABLE = 'Categorized';
     private function newEntity(array $data) : Categorized

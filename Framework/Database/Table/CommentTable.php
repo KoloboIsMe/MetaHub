@@ -8,8 +8,9 @@ namespace Framework\Database\Table;
 
 use Comment;
 
-class CommentTable extends Database
+class CommentTable
 {
+    use Requests;
     use IdentifiedTable;
     const TABLE = 'Comment';
     private function newEntity(array $data) : Comment

@@ -1,18 +1,17 @@
 <?php
 ///////////////////////////////////////////////////////////////////////////////
-////////////////////////////////  DATABASE  ///////////////////////////////////
+////////////////////////////////  REQUESTS  ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/// The database abstract class. Extended by every tables within it.
+/// The Requests trait. Used by any Tables that has those properties.
 /// Used to factorize common methods and attributes for a more minimalist code.
 
 namespace Framework\Database\Table;
 
 use Framework\database\Record;
 
-abstract class Database
+trait Requests
 {
-    const TABLE = 'Unknown';
-    protected string $limit = '100';
+    private string $limit = '100';
     public function __construct(protected readonly Connexion $connexion)
     {
 
@@ -79,5 +78,16 @@ abstract class Database
             }
         }
         return TRUE;
+    }
+
+    public function getLimit(): string
+    {
+        return $this->limit;
+    }
+
+    public function setLimit(string $limit): Table
+    {
+        $this->limit = $limit;
+        return $this;
     }
 }

@@ -6,9 +6,9 @@
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
-class UserTable extends Database
+class UserTable
 {
-    use IdentifiedTable;
+    use Requests;
     const TABLE = 'User';
     private function newEntity(array $data) : \User
     {

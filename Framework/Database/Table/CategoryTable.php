@@ -8,8 +8,9 @@ namespace Framework\Database\Table;
 
 use Category;
 
-class CategoryTable extends Database
+class CategoryTable
 {
+    use Requests;
     const TABLE = 'Category';
     private function newEntity(array $data) : Category
     {
