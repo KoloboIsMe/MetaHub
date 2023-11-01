@@ -25,9 +25,9 @@ $controller = new Deprecated\Controller($outputData);
 $presenter = new Deprecated\Presenter($outputData);
 
 //initialisation des services avec la structure pour le transfert des données
-$categoriesGetting = new service\CategoriesGetting($outputData);
-$ticketsGetting = new service\TicketsGetting($outputData);
-$commentsGetting = new service\CommentsGetting($outputData);
-$usersGetting = new service\UsersGetting($outputData);
+$categoriesGetting = new Deprecated\CategoriesGetting($outputData);
+$ticketsGetting = new Deprecated\TicketsGetting($outputData);
+$commentsGetting = new Deprecated\CommentsGetting($outputData);
+$usersGetting = new Deprecated\UsersGetting($outputData);
 $dataGetting = array('categoriesGetting' => $categoriesGetting, 'ticketsGetting' => $ticketsGetting, 'commentsGetting' =>$commentsGetting, 'usersGetting' =>$usersGetting);
 return;

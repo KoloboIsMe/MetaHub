@@ -8,7 +8,7 @@ namespace Framework\Database\Table;
 
 use Comment;
 
-class CommentTable extends Database implements Table
+class CommentTable extends Database
 {
     use IdentifiedTable;
     const TABLE = 'Comment';

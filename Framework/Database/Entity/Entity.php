@@ -27,4 +27,8 @@ abstract class Entity
             }
         }
     }
+    public function toArray() : array
+    {
+        return get_class_vars(get_class($this));
+    }
 }

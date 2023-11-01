@@ -1,6 +1,6 @@
 <?php
 
-namespace service;
+namespace Deprecated;
 
 class UsersGetting
 {

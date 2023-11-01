@@ -6,7 +6,7 @@
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
-class TicketTable extends Database implements Table
+class TicketTable extends Database
 {
     use IdentifiedTable;
     const TABLE = 'Ticket';

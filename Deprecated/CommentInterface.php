@@ -1,5 +1,8 @@
 <?php
-interface CommentInterface{
+
+namespace Deprecated;
+interface CommentInterface
+{
 
     public function getCommentsByTicketId($id);
 

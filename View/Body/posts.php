@@ -5,3 +5,7 @@
 /// The posts view.
 /// Show the ticket lists.
 ?>
+<body>
+
+
+</body>

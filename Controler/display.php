@@ -5,43 +5,33 @@
 /// The display controler.
 /// Displays a given view.
 
-$viewDirectory = '../View';
+$viewDirectory = __DIR__ . '/../View';
 $bodyDirectory = "$viewDirectory/Body";
+$elementDirectory = "$viewDirectory/Element";
 
-require "$viewDirectory/header.php";
 switch ($page) {
     case 'login' :
         // declare needed variables
-        require "$bodyDirectory/login.php";
         break;
     case 'register' :
         // declare needed variables
-        require "$viewDirectory/register.php";
-        break;
-    case 'logout' :
-        session_unset();
-        session_destroy();
-        header("Location: /");
-        // declare needed variables
-        require "$viewDirectory/logout.php";
         break;
     case 'posts' :
         // declare needed variables
-        require "$viewDirectory/posts.php";
         break;
     case 'categories' :
         // declare needed variables
-        require "$viewDirectory/categories.php";
-        break;
-    case 'error' :
-        // declare needed variables
-        require "$viewDirectory/error.php";
         break;
     default:
         // declare needed variables
         header('Status: 404 Not Found');
-        echo '<html lang="fr"><body><h1>My Page NotFound</h1></body></html>';
-        break;
+        require  "$bodyDirectory/notFound.php";
+        return;
 }
-require "$viewDirectory/footer.php";
-exit;
+
+require "$viewDirectory/head.php";
+require "$bodyDirectory/$page.php";
+require "$elementDirectory/header.php";
+require "$elementDirectory/footer.php";
+
+return;
