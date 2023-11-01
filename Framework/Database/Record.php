@@ -17,7 +17,7 @@ class Record
             $this->addDatum($datum);
         }
     }
-    public function getData() : Entity {
+    public function getData() : array {
         return $this->data;
     }
     public function setData(array $data) : Record {
