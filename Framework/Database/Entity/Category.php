@@ -3,13 +3,13 @@
 //////////////////////////////  CATEGORY  /////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single category.
-/// TO DO : Give default values to constructor
-
-use Framework\Database\Entity\Identified;
+/// TO DO : Give default values to constructor.
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
 
 class Category extends Entity
 {
-    use Identified;
+    use IdentifiedEntity;
     private string $label;
     private string $description;
 

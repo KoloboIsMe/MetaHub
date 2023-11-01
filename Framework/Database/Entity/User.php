@@ -4,10 +4,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single user.
 /// TO DO : Give default values to constructor.
-use Framework\Database\Entity\Identified;
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
 class User extends Entity
 {
-    use Identified;
+    use IdentifiedEntity;
     private string $password;
     private string $username;
     private string $first_connexion;

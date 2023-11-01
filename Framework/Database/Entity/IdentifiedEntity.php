@@ -2,9 +2,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////  IDENTIFIED  ////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/// Identified trait. Used in objects which have an ID as a primary key.
-
-trait Identified
+/// Identified trait. Shared by entities which have an ID as a primary key.
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
+trait IdentifiedEntity
 {
     private int $ID;
     public function setID(int $ID) : Entity

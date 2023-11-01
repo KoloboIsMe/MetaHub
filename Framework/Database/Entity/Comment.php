@@ -5,12 +5,12 @@
 /// Represents a single comment.
 /// TO DO : Give default values to constructor
 /// Foreign keys : Author and Ticket
-
-use Framework\Database\Entity\Identified;
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
 
 class Comment extends Entity
 {
-    use Identified;
+    use IdentifiedEntity;
     private string $text;
     private string $date;
     private int $author;

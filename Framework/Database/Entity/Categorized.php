@@ -6,7 +6,8 @@
 /// A special entity which does not own an ID.
 /// Foreign keys : Ticket and Category
 /// Foreign keys are ALSO Primary keys.
-
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
 class Categorized extends Entity
 {
     private int $ticket;

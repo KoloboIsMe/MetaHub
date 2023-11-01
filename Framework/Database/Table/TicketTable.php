@@ -1,8 +1,22 @@
 <?php
-
+///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////  TICKET TABLE  /////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/// The 'Ticket' table singleton.
+/// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
-class TicketTable implements Table
+class TicketTable extends Database implements Table
 {
-
+    use IdentifiedTable;
+    const TABLE = 'Ticket';
+    private function newEntity(array $data) : \Category
+    {
+        $ID = $data[0];
+        $title = $data[1];
+        $message = $data[2];
+        $date = $data[3];
+        $author = $data[4];
+        return new Category($ID, $title, $message, $date, $author);
+    }
 }

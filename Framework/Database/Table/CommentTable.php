@@ -1,8 +1,24 @@
 <?php
-
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////////////  COMMENT TABLE  /////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/// The 'Comment' table singleton.
+/// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
-class CommentTable implements Table
-{
+use Comment;
 
+class CommentTable extends Database implements Table
+{
+    use IdentifiedTable;
+    const TABLE = 'Comment';
+    private function newEntity(array $data) : Comment
+    {
+        $ID = $data[0];
+        $text = $data[1];
+        $date = $data[2];
+        $author = $data[3];
+        $ticket = $data[4];
+        return new Category($ID, $text, $date, $author, $ticket);
+    }
 }

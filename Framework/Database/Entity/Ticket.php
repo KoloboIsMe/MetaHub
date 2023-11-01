@@ -4,12 +4,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Represents a single ticket.
 /// TO DO : Give default values to constructor.
-
-use Framework\Database\Entity\Identified;
+/// TO DO : Apply parameters verification to methods.
+namespace Framework\Database\Entity;
 
 class Ticket extends Entity
 {
-    use Identified;
+    use IdentifiedEntity;
     private string $title;
     private string $message;
     private string $date;
