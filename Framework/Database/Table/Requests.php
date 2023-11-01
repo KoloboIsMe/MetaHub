@@ -7,6 +7,7 @@
 
 namespace Framework\Database\Table;
 
+use Framework\database\Connexion;
 use Framework\database\Record;
 
 trait Requests

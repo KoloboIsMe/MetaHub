@@ -28,7 +28,6 @@ final class Connexion
         }
         unset ($configuration);
     }
-
     public static function getInstance(string $serverName = 'serveur_admin'): Connexion
     {
         if (is_null(self::$instance)
@@ -37,14 +36,16 @@ final class Connexion
         }
         return self::$instance;
     }
-
     public function query($query)
     {
         return $this->PDO->query($query);
     }
-
     public function prepare($query)
     {
         return $this->PDO->prepare($query);
+    }
+    public function __toString(): string
+    {
+        return "Connexion is ok";
     }
 }

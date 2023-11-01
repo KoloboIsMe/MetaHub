@@ -29,14 +29,6 @@ require "$tableDirectory/CommentTable.php";
 require "$tableDirectory/TicketTable.php";
 require "$tableDirectory/UserTable.php";
 
-try {
-    $dbAdmin = \Framework\database\Connexion::getInstance("serveur_admin");
-    $dbLector = \Framework\database\Connexion::getInstance("serveur_lecture");
-} catch (PDOException $e) {
-    print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
-    die();
-}
-
 require 'singletons.php';
 
 return;
