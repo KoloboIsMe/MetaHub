@@ -127,7 +127,7 @@ class Presenter
                     </div>
                     <input type='submit' class='btn' value='Ajouter'>";
                     foreach ($post->getCategories() as $category) {
-                        $content .= "<p>#" . $category->getLabel() . "</p>";
+                        $content .= "<p id='category'>#" . $category->getLabel() . "</p>";
                     }
 
                     foreach ($post->getComments() as $comment) {

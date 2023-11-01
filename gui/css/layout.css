@@ -18,7 +18,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 
@@ -109,6 +109,10 @@ header nav ul li #headerLinks:hover{
     header{
         padding: 0 30px;
     }
+
+    header nav{
+        z-index: 10000;
+    }
 }
 
 @media only screen and (max-width : 1050px) {
@@ -132,6 +136,7 @@ header nav ul li #headerLinks:hover{
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        z-index: 10000;
     }
     header #nav_check:checked ~ nav{
         right: 0;
@@ -153,7 +158,7 @@ header nav ul li #headerLinks:hover{
         margin-top: 2vh;
     }
 
-    .card-container1,
+    .card-container, .card-container1,
     .card-container2 {
         display: flex;
         flex-wrap: wrap;
@@ -171,7 +176,7 @@ header nav ul li #headerLinks:hover{
         width: 70%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .category-card{
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .post-card, .category-card{
         width: 70vw;
         margin: 20px auto;
     }
@@ -222,7 +227,7 @@ header nav ul li #headerLinks:hover{
 
 .btn{
     position: relative;
-    top: 2.7vh;
+    top: 2vh;
     background: #42b34a;
     outline: none;
     border: none;
@@ -234,6 +239,10 @@ header nav ul li #headerLinks:hover{
     cursor: pointer;
     font-weight: 700;
     text-align: center;
+}
+
+#category{
+    margin-top: 0.7vh;
 }
 
 .titreErreur {
