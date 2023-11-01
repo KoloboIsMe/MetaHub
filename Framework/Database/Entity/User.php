@@ -8,9 +8,13 @@ use Framework\Database\Entity\Identified;
 class User extends Entity
 {
     use Identified;
-    public function __construct(int $ID, private $password, private $username, private $first_connexion, private $last_connexion)
+    private string $password;
+    private string $username;
+    private string $first_connexion;
+    private string $last_connexion;
+    public function __construct(int $ID, string $password, string $username, string $first_connexion, string $last_connexion)
     {
-        parent::__construct([$ID]);
+        parent::__construct([$ID, $password, $username, $first_connexion, $last_connexion]);
     }
     public function setPassword(string $password) : User
     {

@@ -10,9 +10,12 @@ use Framework\Database\Entity\Identified;
 class Category extends Entity
 {
     use Identified;
-    public function __construct(int $ID, private string $label = 'null', private string $description = 'null')
+    private string $label;
+    private string $description;
+
+    public function __construct(int $ID, string $label = 'null', string $description = 'null')
     {
-        parent::__construct([$ID]);
+        parent::__construct([$ID, $label, $description]);
     }
     public function setLabel(string $label) : Category
     {

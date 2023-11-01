@@ -11,9 +11,13 @@ use Framework\Database\Entity\Identified;
 class Comment extends Entity
 {
     use Identified;
-    public function __construct(int $ID, private string $text = 'null', private string $date = 'null', private int $author = 0, private $ticket = null)
+    private string $text;
+    private string $date;
+    private int $author;
+    private int $ticket;
+    public function __construct(int $ID, string $text = 'null', string $date = 'null', int $author = 0, int $ticket = 0)
     {
-        parent::__construct([$ID]);
+        parent::__construct([$ID, $text, $date, $author, $ticket]);
     }
     public function setText(string $text) : Comment
     {

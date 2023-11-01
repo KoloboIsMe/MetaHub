@@ -10,9 +10,13 @@ use Framework\Database\Entity\Identified;
 class Ticket extends Entity
 {
     use Identified;
-    public function __construct(int $ID, private string $title, private $message, private $date, private $author)
+    private string $title;
+    private string $message;
+    private string $date;
+    private int $author;
+    public function __construct(int $ID, string $title, string $message, string $date, int $author)
     {
-        parent::__construct([$ID]);
+        parent::__construct([$ID, $title, $message, $date, $author]);
     }
     public function setTitle(string $title) : Ticket
     {

@@ -6,8 +6,7 @@
 
 trait Identified
 {
-    protected int $ID;
-
+    private int $ID;
     public function setID(int $ID) : Entity
     {
         if ($ID > 0) {

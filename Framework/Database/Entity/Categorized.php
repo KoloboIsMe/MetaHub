@@ -9,9 +9,11 @@
 
 class Categorized extends Entity
 {
-    public function __construct(private int $ticket, private int $category)
+    private int $ticket;
+    private int $category;
+    public function __construct(int $ticket, int $category)
     {
-        parent::__construct([]);
+        parent::__construct([$ticket, $category]);
     }
     public function getTicket () : int
     {
