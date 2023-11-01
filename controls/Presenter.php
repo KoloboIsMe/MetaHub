@@ -29,6 +29,10 @@ class Presenter
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
                         <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>
+                        <div class='edit-delete'>
+                            <a href=''><img src='gui/images/edit.png' id='editImg'></a>
+                            <a href=''><img src='gui/images/delete.png' id='deleteImg'></a>
+                        </div>
                     </div></a>
                 </div>";
         }

@@ -115,7 +115,7 @@ header nav ul li #headerLinks:hover{
     }
 }
 
-@media only screen and (max-width : 1050px) {
+@media only screen and (min-width: 500px) and (max-width : 1050px) {
     .hamburger {
         display: block;
         top: 20px;
@@ -176,9 +176,13 @@ header nav ul li #headerLinks:hover{
         width: 70%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .post-card, .category-card{
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
         width: 70vw;
         margin: 20px auto;
+    }
+
+    .post-card, .category-card{
+        width: 90vw;
     }
 
     .footerImages{
@@ -191,6 +195,102 @@ header nav ul li #headerLinks:hover{
     h2{
         font-size: 1.5vh;
     }
+}
+
+@media only screen and (max-width : 500px) {
+    header{
+        margin-top: 2vh;
+    }
+
+    .hamburger {
+        display: block;
+        top: 20px;
+    }
+    header nav{
+        position: absolute;
+        width: 100%;
+        right: 100%;
+        top: 80px;
+        width: 40vw;
+        height: 100vh;
+        background-color: #191919;
+        backdrop-filter: blur(4px);
+        transition: all 1s ease;
+        padding: 20px;
+        transform: translate(0%);
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        z-index: 10000;
+    }
+    header #nav_check:checked ~ nav{
+        right: 0;
+    }
+    header nav ul{
+        display: block;
+    }
+    header nav ul li a{
+        color:white;
+        margin: 5px 0 ;
+    }
+
+    header nav ul li #headerLinks{
+        display: flex;
+        justify-content: center;
+    }
+
+    #username{
+        margin-top: 2vh;
+    }
+
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-container1,
+    .card-container2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .card-container1{
+        width: 100%;
+    }
+
+    .card-container2{
+        width: 70%;
+    }
+
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .category-card{
+        width: 70vw;
+        margin: 20px auto;
+    }
+
+    .post-card{
+        width: 90vw;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .footerImages{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+        margin-bottom: 3vh;
+    }
+
+    h2{
+        font-size: 1.5vh;
+    }
+
 }
 
 #card-username{
@@ -386,6 +486,19 @@ h2{
     margin-top: 2.2vh;
     margin-left: 2vh;
     margin-bottom: 4vh;
+}
+
+.edit-delete{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    border-spacing: 2vh;
+}
+
+#editImg, #deleteImg{
+    height: 2.5vh;
+    width: 2.5vh;
+    margin-left: 1vh;
 }
 
 .dot-container{
