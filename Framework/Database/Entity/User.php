@@ -13,9 +13,23 @@ class User extends Entity
     private string $username;
     private string $first_connexion;
     private string $last_connexion;
-    public function __construct(int $ID, string $password, string $username, string $first_connexion, string $last_connexion)
+    static function register(string $username, string $password) : User
     {
-        parent::__construct([$ID, $password, $username, $first_connexion, $last_connexion]);
+        return new User(array(
+            'password' => $password,
+            'username' => $username,
+            'first_connexion' => date('Y-m-d H:i:s'),
+        ));
+    }
+    static function user(int $ID, string $password, string $username, string $first_connexion, string $last_connexion) : User
+    {
+        return new User(array(
+            'ID' => $ID,
+            'password' => $password,
+            'username' => $username,
+            'first_connexion' => $first_connexion,
+            'last_connexion' => $last_connexion
+        ));
     }
     public function setPassword(string $password) : User
     {

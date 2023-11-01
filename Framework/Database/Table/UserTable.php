@@ -19,44 +19,30 @@ class UserTable
         $last_connexion = $data[4];
         return new Category($ID, $passsword, $username, $first_connexion, $last_connexion);
     }
-    public function isUser($username, $password)
+    public function isUser($username, $password) : bool
     {
-        $statement = $this->dataAccess->prepare('SELECT password FROM users where username = :username LIMIT 100');
-        if(!$statement->execute([
-            ':username' => $username,
-        ])){
-            echo "erreur requete (exception)";
-            return null;
+        $request = "SELECT $password FROM users where $username = :username LIMIT $this->limit";
+        if($response = $this->execute($request) === FALSE){
+            return FALSE;
         }
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
+        $user = $response->fetch(PDO::FETCH_ASSOC);
 
         if(isset($user['password']) && password_verify($password, $user['password']))
-            return true;
+            return TRUE;
         else
-            return false;
+            return FALSE;
     }
-    public function register($username, $password, $date){
-        $statement = $this->dataAccess->prepare('SELECT username FROM users where username = :username LIMIT 100');
-        if(!$statement->execute([
-            ':username' => $username,
-        ])){
-            echo "erreur requete (exception)";
+    public function register(string $username, string $password) : bool
+    {
+        if($this->exists($username, 'username'))
+        {
+            return FALSE;
         }
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-        if(isset($user['username']))
-            return 'nom d\'utilisateur déjà utilisé';
-        else{
-            $statement = $this->dataAccess->prepare('INSERT INTO users (username, password, first_connexion) VALUES (:username, :password, :date)');
-            if(!$statement->execute([
-                ':username' => $username,
-                ':password' => password_hash($password, PASSWORD_DEFAULT),
-                ':date' => $date,
-
-            ])){
-                echo "erreur requete (exception)";
-            }
-            return null;
+        $newUser = User::register($username, $password);
+        if ($this->insert($newUser) === FALSE)
+        {
+            return FALSE;
         }
+        return TRUE;
     }
 }

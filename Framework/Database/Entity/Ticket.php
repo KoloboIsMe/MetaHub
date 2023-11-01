@@ -14,9 +14,24 @@ class Ticket extends Entity
     private string $message;
     private string $date;
     private int $author;
-    public function __construct(int $ID, string $title, string $message, string $date, int $author)
+    static function ticket(int $ID, string $title, string $message, string $date, int $author) : Ticket
     {
-        parent::__construct([$ID, $title, $message, $date, $author]);
+        return new Ticket(array(
+            'ID' => $ID,
+            'title' => $title,
+            'message' => $message,
+            'date' => $date,
+            'author' => $author
+        ));
+    }
+    static function post(string $title, string $message, int $author)
+    {
+        return new Ticket(array(
+            'title' => $title,
+            'message' => $message,
+            'date' => date('Y-m-d H:i:s'),
+            'author' => $author
+        ));
     }
     public function setTitle(string $title) : Ticket
     {

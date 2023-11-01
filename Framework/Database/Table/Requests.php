@@ -12,7 +12,7 @@ use Framework\database\Record;
 trait Requests
 {
     private string $limit = '100';
-    public function __construct(protected readonly Connexion $connexion)
+    public function __construct(private readonly Connexion $connexion)
     {
 
     }
@@ -22,9 +22,9 @@ trait Requests
         $query = $this->connexion->prepare($request);
         if(!$query->execute())
         {
-            return false;
+            return FALSE;
         }
-        if(true) {
+        if(preg_match('SELECT', $request)) {
             $record = new Record();
             while($datum = $query->fetch(PDO::FETCH_ASSOC))
             {
@@ -32,7 +32,7 @@ trait Requests
             }
             return $record;
         }
-        return true;
+        return TRUE;
     }
     public function select(int $ID = null) : Record|null
     {
@@ -75,7 +75,20 @@ trait Requests
         }
         return TRUE;
     }
-
+    public function exists(mixed $entry, string $column) : bool
+    {
+        $request = "SELECT $column FROM users where $entry = :username LIMIT $this->limit";
+        if ($response = $this->execute($request) === FALSE)
+        {
+            return TRUE;
+        }
+        $response = $response->fetch(PDO::FETCH_ASSOC);
+        if(empty($response) === FALSE)
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
     public function getLimit(): string
     {
         return $this->limit;
