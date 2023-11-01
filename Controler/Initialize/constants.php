@@ -5,3 +5,4 @@
 /// Contains all the app's constants.
 const INI_FILE_PATH = 'config.ini';
 const DATABASES = 'metahub_login';
+return;

@@ -4,10 +4,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Instantiates all Singletons.
 
-$categoryDatabase = new Frameword\Database\Table\CategoryTable($dbLector);
-$commentDatabase = new Frameword\Database\Table\CommentTable($dbLector);
-$ticketDatabase = new Frameword\Database\Table\TicketTable($dbLector);
-$userDatabase = new Frameword\Database\Table\UserTable($dbLector);
+$categoryDatabase = new Framework\Database\Table\CategoryTable($dbLector);
+$commentDatabase = new Framework\Database\Table\CommentTable($dbLector);
+$ticketDatabase = new Framework\Database\Table\TicketTable($dbLector);
+$userDatabase = new Framework\Database\Table\UserTable($dbLector);
 $accessorsLectors = array(
     'categoryAccessLector' => $categoryDatabase,
     'ticketAccessLector' => $ticketDatabase,
@@ -30,3 +30,4 @@ $ticketsGetting = new service\TicketsGetting($outputData);
 $commentsGetting = new service\CommentsGetting($outputData);
 $usersGetting = new service\UsersGetting($outputData);
 $dataGetting = array('categoriesGetting' => $categoriesGetting, 'ticketsGetting' => $ticketsGetting, 'commentsGetting' =>$commentsGetting, 'usersGetting' =>$usersGetting);
+return;
