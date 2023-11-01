@@ -30,35 +30,6 @@ function createTicketAction($ticketsGetting, $ticketAccess)
     $categories = $_POST["categories"] ?? null;
     $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
 }
-function showPost()
-{
-    $content = '';
-    $post = $outputData->getOutputData();
-    $id = $post->getTicket()->getTicket_ID();
-    $content .= "
-            <div class='card'>
-                <a href='posts&id=$id'>
-                <div class='card-content'>
-                    <p>" . $post->getUser()->getUsername() . "</p>
-                    <h3> " . $post->getTicket()->getTitle() . "</h3>
-                    <p>" . $post->getTicket()->getMessage() . "</p>
-                    <time>" . $post->getTicket()->getDate() . " </time>
-                    <p>" . $post->getTicket()->getTicket_ID() . "</p>";
-
-    foreach ($post->getCategories() as $category) {
-        $content .= "<p>#" . $category->getLabel() . "</p>";
-    }
-
-    foreach ($post->getComments() as $comment) {
-        $content .= "<p>" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
-    }
-
-    $content .= "            
-                </div></a>
-            </div>";
-
-    return $content;
-}
 
 function showCategories()
 {
