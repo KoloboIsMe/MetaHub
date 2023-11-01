@@ -9,7 +9,11 @@ $viewDirectory = __DIR__ . '/../View';
 $bodyDirectory = "$viewDirectory/Body";
 $elementDirectory = "$viewDirectory/Element";
 
+
 switch ($page) {
+    case 'homepage' :
+        // declare needed variables
+        break;
     case 'login' :
         // declare needed variables
         $action = 'uneAction';
@@ -29,7 +33,7 @@ switch ($page) {
         require  "$bodyDirectory/notFound.php";
         return;
 }
-
+$title = $page;
 require "$elementDirectory/head.php";
 require "$elementDirectory/header.php";
 require "$bodyDirectory/$page.php";

@@ -35,7 +35,7 @@ trait Requests
         }
         return TRUE;
     }
-    public function select(int $ID = null) : Record|null
+    public function select(int $ID = null) : Record|bool
     {
         $request = 'SELECT * FROM' . self::TABLE;
         if (isset($ID))

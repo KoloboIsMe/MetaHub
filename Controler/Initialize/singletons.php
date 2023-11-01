@@ -12,9 +12,9 @@ try {
     die();
 }
 
-$categoryDatabase = new Framework\Database\Table\CategoryTable($dbLector);
-$commentDatabase = new Framework\Database\Table\CommentTable($dbLector);
-$ticketDatabase = new Framework\Database\Table\TicketTable($dbLector);
-$userDatabase = new Framework\Database\Table\UserTable($dbLector);
+$categoryTable = new Framework\Database\Table\CategoryTable($dbLector);
+$commentTable = new Framework\Database\Table\CommentTable($dbLector);
+$ticketTable = new Framework\Database\Table\TicketTable($dbLector);
+$userTable = new Framework\Database\Table\UserTable($dbLector);
 
 return;
