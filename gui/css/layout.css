@@ -59,6 +59,7 @@ header nav ul li #headerLinks:hover{
 }
 
 #headerLogo{
+    margin-top: 1vh;
     height: 7vh;
     width: 7vh;
 }
@@ -73,9 +74,9 @@ header nav ul li #headerLinks:hover{
 }
 
 .hamburger div {
-    width: 30px;
-    height: 1px;
-    margin: 8px 0;
+    width: 3vh;
+    height: 0.2vh;
+    margin: 0.8vh 0;
     background: white;
 }
 
@@ -105,9 +106,9 @@ header nav ul li #headerLinks:hover{
     width: 35px;
 }
 
-@media only screen and (max-width : 900px){
+@media only screen and (max-width : 500px){
     header{
-        padding: 0 30px;
+        padding: 30px 30px;
     }
 
     header nav{
@@ -125,13 +126,13 @@ header nav ul li #headerLinks:hover{
         position: absolute;
         width: 100%;
         right: 100%;
-        top: 80px;
+        top: 10vh;
         width: 40vw;
         height: 100vh;
         background-color: #191919;
         backdrop-filter: blur(4px);
         transition: all 1s ease;
-        padding: 20px;
+        padding: 3vh;
         transform: translate(0%);
         flex-direction: column;
         justify-content: center;
@@ -173,15 +174,15 @@ header nav ul li #headerLinks:hover{
     }
 
     .card-container2{
-        width: 70%;
+        width: 90%;
     }
 
     .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
-        width: 70vw;
+        width: 90vw;
         margin: 20px auto;
     }
 
-    .post-card, .category-card{
+    .card-container .post-card, .card-container .category-card{
         width: 90vw;
     }
 
@@ -197,7 +198,7 @@ header nav ul li #headerLinks:hover{
     }
 }
 
-@media only screen and (max-width : 500px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 500px) {
     header{
         margin-top: 2vh;
     }
@@ -239,19 +240,24 @@ header nav ul li #headerLinks:hover{
         justify-content: center;
     }
 
+    header nav{
+        padding-top: 5vh;
+    }
+
     #username{
         margin-top: 2vh;
     }
 
-    .card-container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    #headerImg{
+        margin-top: 3vh;
+        padding-top: 2vh;
     }
 
-    .card-container1,
+    #loginImg, #logoutImg{
+        margin-top: 1.9vh;
+    }
+
+    .card-container, .card-container1,
     .card-container2 {
         display: flex;
         flex-wrap: wrap;
@@ -266,29 +272,28 @@ header nav ul li #headerLinks:hover{
     }
 
     .card-container2{
-        width: 70%;
+        width: 80%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3, .category-card{
-        width: 70vw;
-        margin: 20px auto;
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
+        width: 80vw;
+        margin: 10px auto;
     }
 
-    .post-card{
+    .card-container .post-card, .card-container .category-card{
         width: 90vw;
-        margin: 0;
-        margin-top: 20px;
+        margin: 20px auto;
     }
 
     .footerImages{
         display: flex;
         justify-content: center;
-        align-items:center ;
+        align-items:center;
         margin-bottom: 3vh;
     }
 
-    h2{
-        font-size: 1.5vh;
+    #time{
+        font-size: 1vh;
     }
 
 }
@@ -427,14 +432,13 @@ p{
 }
 
 .post-card, .category-card{
-    display: flex;
     width: 45vw;
+    height: auto;
     background-color: #242424;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 1px 2px 4px black;
     margin: 20px;
-    flex-direction: row;
 }
 
 .category-card{
@@ -471,7 +475,7 @@ p{
 h2{
     font-size: 3.5vh;
     color: white;
-    margin-top: 2vh;
+    margin-top: 4vh;
     margin-left: 5vh;
     border-bottom-width: 1px;
     border-bottom-color: #3f3f3f;
