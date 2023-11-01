@@ -8,12 +8,6 @@ ini_set('session.gc_maxlifetime', 3600); // One hour
 session_set_cookie_params(3600);
 session_start();
 
-if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
-    $layoutTemplate = 'gui/layoutLogged.html';
-} else {
-    $layoutTemplate = 'gui/layout.html';
-}
-
 if ('registerAction' === $_GET['url'] && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;

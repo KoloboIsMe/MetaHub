@@ -17,4 +17,8 @@ else
 //if(!isset($_SESSION['isLogged'])) {
 //    header('Location: /login&id=' . $url);
 //}
+
+
 require 'display.php';
+
+return;

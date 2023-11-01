@@ -8,6 +8,8 @@
 /// Foreign keys are ALSO Primary keys.
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Entity;
+use Framework\Database\Entity\Entity;
+
 class Categorized extends Entity
 {
     private int $ticket;

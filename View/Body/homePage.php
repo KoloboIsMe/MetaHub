@@ -6,6 +6,5 @@
 /// It is the first view called when arriving at the website.
 ?>
 <body>
-
-
+    <h1>Accueil</h1>
 </body>

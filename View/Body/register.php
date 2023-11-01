@@ -6,11 +6,11 @@
 /// Called when a new user need to register.
 ?>
 <div id='container'>
-    <form action=../../index.php method='POST' onsubmit=\"return validateForm()\">
+    <form action=../../index.php method='POST' onsubmit="return validateForm()">
         <h1>Register</h1>
 
         <label><b>Nom d'utilisateur</b></label>
-        <input type='text' placeholder=\"Entrer le nom d'utilisateur\" name='username' id='username' required>
+        <input type='text' placeholder="Entrer le nom d'utilisateur" name='username' id='username' required>
 
         <label><b>Mot de passe</b></label>
         <input type='password' id='password' placeholder='Entrer le mot de passe' name='password' required>

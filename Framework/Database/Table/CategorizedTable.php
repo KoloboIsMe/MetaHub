@@ -60,7 +60,7 @@ class CategorizedTable
         $request .= "LIMIT $this->limit";
         return $this->execute($request);
     }
-    public function insert(Categorized ...$entities) : boolean
+    public function insert(Categorized ...$entities) : bool
     {
         foreach($entities as $entity)
         {
@@ -77,7 +77,7 @@ class CategorizedTable
         }
         return TRUE;
     }
-    public function delete(int ...$IDs) : boolean
+    public function delete(int ...$IDs) : bool
     {
         foreach($IDs as $ID)
         {

@@ -11,7 +11,6 @@ use Comment;
 class CommentTable
 {
     use Requests;
-    use IdentifiedTable;
     const TABLE = 'Comment';
     private function newEntity(array $data) : Comment
     {

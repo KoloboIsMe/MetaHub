@@ -44,7 +44,7 @@ trait Requests
         $request .= "LIMIT $this->limit";
         return $this->execute($request);
     }
-    public function insert(Entity ...$entities) : boolean
+    public function insert(Entity ...$entities) : bool
     {
         foreach($entities as $entity)
         {
@@ -63,7 +63,7 @@ trait Requests
         }
         return TRUE;
     }
-    public function delete(int ...$IDs) : boolean
+    public function delete(int ...$IDs) : bool
     {
         foreach($IDs as $ID)
         {

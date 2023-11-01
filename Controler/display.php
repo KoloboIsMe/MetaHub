@@ -12,6 +12,7 @@ $elementDirectory = "$viewDirectory/Element";
 switch ($page) {
     case 'login' :
         // declare needed variables
+        $action = 'uneAction';
         break;
     case 'register' :
         // declare needed variables
@@ -29,9 +30,9 @@ switch ($page) {
         return;
 }
 
-require "$viewDirectory/head.php";
-require "$bodyDirectory/$page.php";
+require "$elementDirectory/head.php";
 require "$elementDirectory/header.php";
+require "$bodyDirectory/$page.php";
 require "$elementDirectory/footer.php";
 
 return;

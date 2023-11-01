@@ -6,10 +6,10 @@
 ?>
 <header>
     <input type="checkbox" id="nav_check" hidden>
-    <img src="gui/images/MetaHubLogo.png" id="headerLogo"/>
+    <img src="View/_assets/image/MetaHubLogo.png" id="headerLogo"/>
     <nav>
         <ul>
-            <li><a href="/"><img src="gui/images/home.png" id="headerImg"/></a></li>
+            <li><a href="/"><img src="View/_assets/image/home.png" id="headerImg"/></a></li>
             <li><a href="../index.php" id="headerLinks">Posts</a></li>
             <li><a href="" id="headerLinks">Créer un Post</a></li>
             <li><a href="../index.php" id="headerLinks">Catégories</a></li>
