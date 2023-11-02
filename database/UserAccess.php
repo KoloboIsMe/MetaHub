@@ -21,7 +21,7 @@ class UserAccess implements UserInterface
     public function getUserByUsername($username)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM users where username = :username');
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where username = :username');
             $statement->execute([':username' => $username ]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new User($data);
@@ -33,7 +33,7 @@ class UserAccess implements UserInterface
     public function getUsersUsername()
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT username FROM users ORDER BY username DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT username FROM user ORDER BY username DESC LIMIT 100');
             $statement->execute();
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             $users = [];
@@ -50,7 +50,7 @@ class UserAccess implements UserInterface
     public function isUser($username, $password)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT password FROM users where username = :username LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT password FROM user where username = :username LIMIT 100');
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
             if(isset($user['password']) && password_verify($password, $user['password']))
@@ -65,14 +65,14 @@ class UserAccess implements UserInterface
     public function register($username, $password, $date)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT username FROM users where username = :username LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT username FROM user where username = :username LIMIT 100');
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
             if(isset($user['username']))
                 return 'nom d\'utilisateur déjà utilisé';
             else{
-                $statement = $this->dataAccess->prepare('INSERT INTO users (username, password, first_connexion) VALUES (:username, :password, :date)');
+                $statement = $this->dataAccess->prepare('INSERT INTO user (username, password, first_connexion) VALUES (:username, :password, :date)');
                 $statement->execute([
                     ':username' => $username,
                     ':password' => password_hash($password, PASSWORD_DEFAULT),
@@ -87,7 +87,7 @@ class UserAccess implements UserInterface
 
     public function updateLastConnexion($user_ID){
         try {
-            $statement = $this->dataAccess->prepare('UPDATE users SET last_connexion = :date WHERE user_ID = :user_ID');
+            $statement = $this->dataAccess->prepare('UPDATE user SET last_connexion = :date WHERE user_ID = :user_ID');
             $statement->execute([
                 ':date' => date("Y-m-d"),
                 ':user_ID' => $user_ID,
@@ -100,7 +100,7 @@ class UserAccess implements UserInterface
     public function getUserById($id)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM users where user_ID = :id');
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :id');
             $statement->execute([':id' => $id ]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new User($data);
@@ -111,7 +111,7 @@ class UserAccess implements UserInterface
     public function getUsersID(){
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT user_ID FROM users ORDER BY user_ID DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user ORDER BY user_ID DESC LIMIT 100');
             $statement->execute();
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
             {
