@@ -2,17 +2,17 @@
 
 namespace gui;
 
-class ViewEditTickets extends View
+class ViewEditTicket extends View
 {
     public function __construct($layout, $presenter )
     {
         parent::__construct($layout);
 
-        $this->title = 'Tickets';
+        $this->title = 'modification';
 
         if(isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        isset($_GET['id']) ? $this->content=$presenter->showPost() : $this->content=$presenter->showPosts();
+        $this->content = $presenter->showEditTicket();
     }
 }

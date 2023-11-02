@@ -19,6 +19,7 @@ include_once 'gui/Layout.php';
 include_once 'gui/View.php';
 include_once 'gui/ViewCategories.php';
 include_once 'gui/ViewCreatePosts.php';
+include_once 'gui/ViewEditTicket.php';
 include_once 'gui/ViewError.php';
 include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
@@ -113,11 +114,17 @@ if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["messa
 }
 if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
-    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
+    $ticketsGetting->deleteTicket($ticketAccess);
     $url='/';
     header("refresh:0;url=/");
-
 }
+if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+
+    $ticketsGetting->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
+    $url='/';
+    header("refresh:0;url=/");
+}
+
 //if ('editTicketAction' == $url && isset($_GET['id'])) {
 //
 //    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
@@ -194,7 +201,7 @@ if ('' == $url || '/' == $url) {
 
     isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
-    (new gui\ViewPosts($layout, $presenter))->display();
+    (new gui\ViewEditTicket($layout, $presenter))->display();
 
 }
 

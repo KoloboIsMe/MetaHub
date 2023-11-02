@@ -162,5 +162,19 @@ class TicketAccess implements TicketInterface
         }
     }
 
+    public function editTicket($id, $title, $message){
+        try {
+            $statement = $this->dataAccess->prepare('UPDATE tickets SET title = :title, message = :message WHERE ticket_ID = :id');
+            $statement->execute([
+                ':id'=> $id,
+                ':title'=> $title,
+                ':message'=> $message
+            ]);
+
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
 
 }

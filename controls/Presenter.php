@@ -239,40 +239,24 @@ class Presenter
 
     public function showEditTicket(){
         $post = $this->outputData->getOutputData();
-        $content = "
+        $id = $post->getTicket()->getTicket_ID();
+        return "
         <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
         <div id='container'>
-            <form action=editTicketAction method='POST'>
+            <form action='editTicketAction&id=$id' method='POST'>
                 <h1>Edition</h1>
         
                 <label><b>Titre</b></label>
                 <input type='text' placeholder=\" Entrer le titre du post \" name='title' value='". $post->getTicket()->getTitle()  ."' required>
         
                 <label><b>Contenu du post</b></label>
-                <textarea placeholder='Entrer le contenu du post' name='message' required></textarea>
+                <textarea placeholder='Entrer le contenu du post' name='message' required>". $post->getTicket()->getMessage()  ."</textarea>
         
-                <select id='category' multiple name='categories[]'>";
-        foreach ($this->outputData->getOutputData() as $category) {
-            $content .= "<option>".$category->getLabel()."</option>";
-        }
-        $content .= "        
-                </select>
                 <input type='submit' id='submit' value='Enregistrer' >
             </form>
         </div>
-        
-        <script>
-            new SlimSelect({
-                select: '#category',
-                settings: {
-                    placeholderText: 'Choisir une catégorie',
-                    searchPlaceholder: 'Rechercher',
-                }
-            })
-        </script>
         ";
 
-        return $content;
     }
 
 }

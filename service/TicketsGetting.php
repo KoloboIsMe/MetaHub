@@ -58,9 +58,14 @@ class TicketsGetting
         }
     }
 
-    public function deleteTicket($dataccess, $ticketID)
+    public function deleteTicket($dataccess)
     {
-        $dataccess->deleteTicket($ticketID);
+        $dataccess->deleteTicket($_GET['id']);
+    }
+
+    public function editTicket($dataccess, $id, $title, $message)
+    {
+        $dataccess->editTicket($id, $title, $message);
     }
 
 

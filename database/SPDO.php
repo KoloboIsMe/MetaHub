@@ -18,7 +18,7 @@ final class SPDO
             $this->PDOInstance = new PDO($serverConfig['type'] . ':host='. $serverConfig['IP_adress'] .';dbname='. BASE_DE_DONNEES, $serverConfig['user'], $serverConfig['password']);
             $this->PDOInstance->exec('SET CHARACTER SET utf8');
             $this->PDOInstance->setAttribute(PDO::FETCH_ASSOC, PDO::FETCH_OBJ);
-            $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+            $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             $this->serverName = $serverName;
         } else {
