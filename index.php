@@ -25,6 +25,7 @@ include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewRegister.php';
 include_once 'gui/ViewPosts.php';
+include_once 'gui/ViewUsers.php';
 
 include_once 'service/CategoriesGetting.php';
 include_once "service/CommentsGetting.php";
@@ -203,6 +204,23 @@ if ('' == $url || '/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewEditTicket($layout, $presenter))->display();
 
+}elseif ('users' == $url ) {
+
+    if(!isset($_SESSION['isLogged']))
+        header('Location: /login&id='.$url);
+
+    $user = null;
+    if(isset($_GET['id'])) {
+        $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
+        //liste des id tes tickets de l'user
+        $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);
+        $ticketsGetting->getUserPosts($ticketAccessLector, $postsID);
+    }else
+        //si l'id nest pas set, afficher tout les user
+        $usersGetting->getUsers($userAccessLector);
+
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewUsers($layout, $presenter, $user))->display();
 }
 
 //elseif (preg_match("/^posts\/\d+$/",$url)===1) {      //cas avec url posts/:id

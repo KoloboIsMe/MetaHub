@@ -68,5 +68,18 @@ class TicketsGetting
         $dataccess->editTicket($id, $title, $message);
     }
 
+    public function getPostsIdByUserId($dataccess, $id)
+    {
+        return $dataccess->getPostsIdByUserId($id);
+    }
+
+    public function getUserPosts($dataccess, $postsId)
+    {
+        $posts = [];
+        foreach ($postsId as $postID) {
+            $posts[] = $dataccess->getPostById($postID);
+        }
+        $this->outputData->setOutputData($posts);
+    }
 
 }
