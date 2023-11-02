@@ -9,6 +9,7 @@ require 'constants.php';
 require 'functions.php';
 
 $databaseDirectory = __DIR__ . '/../../Framework/Database';
+require __DIR__ . '/../../vendor/autoload.php';
 require "$databaseDirectory/Connexion.php";
 require "$databaseDirectory/Record.php";
 

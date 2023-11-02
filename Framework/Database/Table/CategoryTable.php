@@ -11,7 +11,7 @@ use Category;
 class CategoryTable
 {
     use Requests;
-    const TABLE = 'categories';
+    const TABLE = 'category';
     private function newEntity(array $data) : Category
     {
         $ID = $data[0];

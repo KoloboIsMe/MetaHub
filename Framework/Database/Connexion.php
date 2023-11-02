@@ -8,6 +8,7 @@ namespace Framework\database;
 
 use database\Exception;
 use PDO;
+use Dotenv\Dotenv;
 
 final class Connexion
 {
@@ -15,6 +16,8 @@ final class Connexion
     private static ?Connexion $instance = null;
     public function __construct(private readonly string $serverName)
     {
+        $dotenv = Dotenv::createImmutable(__DIR__.'/../../');
+        $dotenv->load();
         $configuration = parse_ini_file(INI_FILE_PATH, true);
         if (isset($configuration[$serverName])) {
             $configuration = $configuration[$serverName];

@@ -11,7 +11,7 @@ use Comment;
 class CommentTable
 {
     use Requests;
-    const TABLE = 'comments';
+    const TABLE = 'comment';
     private function newEntity(array $data) : Comment
     {
         $ID = $data[0];
