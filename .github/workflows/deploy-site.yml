@@ -2,6 +2,7 @@ on:
   push:
     branches:
         - main
+        - ProjectWithRouter
 
 name: 🚀 Deploy website on push
 jobs:
