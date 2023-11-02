@@ -113,11 +113,18 @@ if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["messa
 }
 if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
-    $url='posts';
     $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
-    header("refresh:0;url=/posts");
+    $url='/';
+    header("refresh:0;url=/");
 
 }
+//if ('editTicketAction' == $url && isset($_GET['id'])) {
+//
+//    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
+//    $url='/';
+//    header("refresh:0;url=/");
+//
+//}
 
 
 if ('' == $url || '/' == $url) {
@@ -148,14 +155,12 @@ if ('' == $url || '/' == $url) {
 
 }elseif ('posts' == $url ) {
 
-
     if(!isset($_SESSION['isLogged']))
         header('Location: /login&id='.$url);
 
     isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewPosts($layout, $presenter))->display();
-
 
 }elseif ('createPosts' == $url ) {
 
@@ -182,6 +187,14 @@ if ('' == $url || '/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCategories($layout, $presenter, $category))->display();
 
+}elseif ('editTicket' == $url ) {
+
+    if(!isset($_SESSION['isLogged']))
+        header('Location: /login&id='.$url);
+
+    isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewPosts($layout, $presenter))->display();
 
 }
 

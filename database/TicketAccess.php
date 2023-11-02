@@ -148,10 +148,15 @@ class TicketAccess implements TicketInterface
     public function deleteTicket($ticketID)
     {
         try {
+            $statement = $this->dataAccess->prepare('DELETE FROM comments WHERE ticket = :ticketID');
+            $statement->execute([':ticketID' => $ticketID]);
+
+            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE ticket = :ticketID');
+            $statement->execute([':ticketID' => $ticketID]);
+
             $statement = $this->dataAccess->prepare('DELETE FROM tickets WHERE ticket_ID = :ticketID');
-            $statement->execute([
-                ':ticketID' => $ticketID
-            ]);
+            $statement->execute([':ticketID' => $ticketID]);
+
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
