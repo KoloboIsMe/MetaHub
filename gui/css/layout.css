@@ -93,8 +93,8 @@ header nav ul li #headerLinks:hover{
 
 
 .hamburger.active .l1 {
-    transform: translateY(20px) rotate(135deg);
-    width: 3.6vh;
+    transform: translateY(5px) rotate(135deg);
+    width: 35px;
 }
 
 .hamburger.active .l2 {
@@ -102,8 +102,8 @@ header nav ul li #headerLinks:hover{
 }
 
 .hamburger.active .l3 {
-    transform: translateY(-17px) rotate(-135deg);
-    width: 3.6vh;
+    transform: translateY(-12px) rotate(-135deg);
+    width: 35px;
 }
 
 @media only screen and (max-width : 500px){
@@ -119,7 +119,7 @@ header nav ul li #headerLinks:hover{
 @media only screen and (min-width: 500px) and (max-width : 1050px) {
     .hamburger {
         display: block;
-        top: 20px;
+        top: 0.8vh;
     }
 
     header nav{
@@ -197,7 +197,7 @@ header nav ul li #headerLinks:hover{
     }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 500px) {
+@media only screen and (min-device-width : 250px) and (max-device-width : 500px) {
     header{
         margin-top: 2vh;
     }
@@ -255,6 +255,16 @@ header nav ul li #headerLinks:hover{
     #loginImg, #logoutImg{
         margin-top: 1.9vh;
         z-index: 1000;
+    }
+
+    .hamburger.active .l1 {
+        transform: translateY(20px) rotate(135deg);
+        width: 3.6vh;
+    }
+
+    .hamburger.active .l3 {
+        transform: translateY(-17px) rotate(-135deg);
+        width: 3.6vh;
     }
 
     .card-container, .card-container1,
