@@ -6,8 +6,7 @@
 
 namespace Framework\database;
 
-use database\Exception;
-use PDO;
+use \PDO;
 
 final class Connexion
 {
