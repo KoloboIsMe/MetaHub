@@ -43,4 +43,16 @@ class UsersGetting
         }
         $this->outputData->setOutputData($users);
     }
+    public function getUserById($dataccess, $id){
+        return $dataccess->getUserById($id);
+    }
+
+    public function getUsers($dataccess)
+    {
+        $users = [];
+        foreach ($dataccess->getUsersID() as $userId) {
+            $users[] = $dataccess->getUserById($userId);
+        }
+        $this->outputData->setOutputData($users);
+    }
 }
