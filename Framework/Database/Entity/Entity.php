@@ -4,7 +4,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Abstract class to represent an entity (an entry in the database),
 ///  extended by any of them.
-/// TO DO : Apply parameters verification to methods.
+/// TODO : Apply parameters verification to methods.
 namespace Framework\Database\Entity;
 abstract class Entity
 {

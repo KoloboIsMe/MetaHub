@@ -9,7 +9,7 @@ namespace Framework\Database\Table;
 class TicketTable
 {
     use Requests;
-    const TABLE = 'Ticket';
+    const TABLE = 'tickets';
     private function newEntity(array $data) : \Category
     {
         $ID = $data[0];

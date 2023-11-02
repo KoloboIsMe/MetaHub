@@ -17,7 +17,6 @@ foreach ($posts as $post)
     require __DIR__ . '/../View/Element/card.php';
 }
 
-
 require __DIR__ . '/../View/Body/homePage.php';
 
 return;

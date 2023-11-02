@@ -13,6 +13,7 @@ $elementDirectory = "$viewDirectory/Element";
 switch ($page) {
     case 'homepage' :
         // declare needed variables
+        require 'homepage.php';
         break;
     case 'login' :
         // declare needed variables
