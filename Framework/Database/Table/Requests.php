@@ -19,13 +19,13 @@ trait Requests
     }
     public function execute(string $request) : Record|bool
     {
-        $request .= "LIMIT $this->limit";
+        $request .= " LIMIT $this->limit;";
         $query = $this->connexion->prepare($request);
         if(!$query->execute())
         {
             return FALSE;
         }
-        if(preg_match('SELECT', $request)) {
+        if(preg_match('/SELECT/', $request) !== FALSE) {
             $record = new Record();
             while($datum = $query->fetch(PDO::FETCH_ASSOC))
             {
@@ -37,12 +37,11 @@ trait Requests
     }
     public function select(int $ID = null) : Record|bool
     {
-        $request = 'SELECT * FROM' . self::TABLE;
+        $request = 'SELECT * FROM ' . self::TABLE;
         if (isset($ID))
         {
-            $request .= "WHERE ID = $ID";
+            $request .= "WHERE ID = $ID ";
         }
-        $request .= "LIMIT $this->limit";
         return $this->execute($request);
     }
     public function insert(Entity ...$entities) : bool
@@ -78,7 +77,7 @@ trait Requests
     }
     public function exists(mixed $entry, string $column) : bool
     {
-        $request = "SELECT $column FROM users where $entry = :username LIMIT $this->limit";
+        $request = "SELECT $column FROM users where $entry = :username ";
         if ($response = $this->execute($request) === FALSE)
         {
             return TRUE;
@@ -95,7 +94,7 @@ trait Requests
         return $this->limit;
     }
 
-    public function setLimit(string $limit): Table
+    public function setLimit(string $limit)
     {
         $this->limit = $limit;
         return $this;

@@ -9,7 +9,7 @@ namespace Framework\Database\Table;
 class UserTable
 {
     use Requests;
-    const TABLE = 'User';
+    const TABLE = 'users';
     private function newEntity(array $data) : \User
     {
         $ID = $data[0];
