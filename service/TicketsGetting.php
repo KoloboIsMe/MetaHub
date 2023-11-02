@@ -48,24 +48,7 @@ class TicketsGetting
 
     public function createTicket($dataccess, $title, $message)
     {
-        return $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
-    }
-
-    public function addCategoriesToTicket($ticketAccess, $categories, $ticketID)
-    {
-        foreach ($categories as $category) {
-            $ticketAccess->addCategoryToTicket($ticketAccess->getCategoryIdByLabel($category), $ticketID);
-        }
-    }
-
-    public function deleteTicket($dataccess)
-    {
-        $dataccess->deleteTicket($_GET['id']);
-    }
-
-    public function editTicket($dataccess, $id, $title, $message)
-    {
-        $dataccess->editTicket($id, $title, $message);
+        $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
     }
 
     public function getPostsIdByUserId($dataccess, $id)
@@ -81,5 +64,4 @@ class TicketsGetting
         }
         $this->outputData->setOutputData($posts);
     }
-
 }

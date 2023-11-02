@@ -19,7 +19,6 @@ include_once 'gui/Layout.php';
 include_once 'gui/View.php';
 include_once 'gui/ViewCategories.php';
 include_once 'gui/ViewCreatePosts.php';
-include_once 'gui/ViewEditTicket.php';
 include_once 'gui/ViewError.php';
 include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
@@ -98,13 +97,13 @@ if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['passw
 if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
-    $error = $controller->authenticateAction($usersGetting, $userAccess);
+    $error = $controller->authenticateAction($usersGetting, $userAccessLector);
     if ($error){
         $page ? $redirect = 'login&id='.$page : $redirect = 'login';
         $url = 'error';
     }else{
-        $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
         $url = '/';
+        $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
     }
 }
 if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
@@ -112,27 +111,8 @@ if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["messa
     $controller->createTicketAction($ticketsGetting, $ticketAccess);
     $url='/';
     header("refresh:0;url=/");
-}
-if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
-    $ticketsGetting->deleteTicket($ticketAccess);
-    $url='/';
-    header("refresh:0;url=/");
 }
-if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
-
-    $ticketsGetting->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
-    $url='/';
-    header("refresh:0;url=/");
-}
-
-//if ('editTicketAction' == $url && isset($_GET['id'])) {
-//
-//    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
-//    $url='/';
-//    header("refresh:0;url=/");
-//
-//}
 
 
 if ('' == $url || '/' == $url) {
@@ -163,12 +143,14 @@ if ('' == $url || '/' == $url) {
 
 }elseif ('posts' == $url ) {
 
+
     if(!isset($_SESSION['isLogged']))
         header('Location: /login&id='.$url);
 
     isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewPosts($layout, $presenter))->display();
+
 
 }elseif ('createPosts' == $url ) {
 
@@ -195,14 +177,7 @@ if ('' == $url || '/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCategories($layout, $presenter, $category))->display();
 
-}elseif ('editTicket' == $url ) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
-
-    isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
-    $layout = new gui\Layout($layoutTemplate);
-    (new gui\ViewEditTicket($layout, $presenter))->display();
 
 }elseif ('users' == $url ) {
 
