@@ -6,7 +6,7 @@
 
 /* Bordered form */
 form {
-    width: 100%;
+    width: 80vw;
     padding: 30px;
     border: 1px solid #191919;
     background: #191919;
@@ -71,3 +71,27 @@ input[type=submit]:hover {
     border: 1px solid white;
 }
 
+@media only screen and (min-device-width : 250px) and (max-device-width : 1050px) {
+    #container {
+        width: 80%;
+    }
+}
+
+
+@media only screen and (min-device-width : 1050px){
+    #container{
+        width: 80%;
+        padding-top: 2.5vh;
+        padding-bottom: 5vh;
+    }
+
+    form{
+        padding-bottom: 8vh;
+    }
+}
+
+
+/*
+    @media only screen and (min-width: 500px) and (max-width : 1050px) {
+    }
+*/

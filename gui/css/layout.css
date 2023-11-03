@@ -93,7 +93,7 @@ header nav ul li #headerLinks:hover{
 
 
 .hamburger.active .l1 {
-    transform: translateY(5px) rotate(135deg);
+    transform: translateY(6px) rotate(135deg);
     width: 35px;
 }
 
@@ -154,6 +154,7 @@ header nav ul li #headerLinks:hover{
         justify-content: center;
     }
 
+
     #username{
         margin-top: 2vh;
     }
@@ -195,6 +196,12 @@ header nav ul li #headerLinks:hover{
     h2{
         font-size: 1.5vh;
     }
+
+    .search .search-box input {
+        height: 5%;
+        width: 50%;
+        padding-left: 2vh;
+    }
 }
 
 @media only screen and (min-device-width : 250px) and (max-device-width : 500px) {
@@ -221,7 +228,7 @@ header nav ul li #headerLinks:hover{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        z-index: 10000;
+        z-index: 100000;
     }
     header #nav_check:checked ~ nav{
         right: 0;
@@ -263,7 +270,7 @@ header nav ul li #headerLinks:hover{
     }
 
     .hamburger.active .l3 {
-        transform: translateY(-17px) rotate(-135deg);
+        transform: translateY(-15px) rotate(-135deg);
         width: 3.6vh;
     }
 
@@ -304,6 +311,15 @@ header nav ul li #headerLinks:hover{
 
     #time{
         font-size: 1vh;
+    }
+
+    .search .search-box input {
+        height: 4%;
+        width: 50%;
+        margin-top: 4%;
+        padding-top: 1%;
+        padding-left: 2vh;
+        font-size: 1.7vh;
     }
 
 }
@@ -576,8 +592,6 @@ footer{
     color: #EEF1EF;
 }
 
-
-
 .search {
     display: flex;
     align-items: center;
@@ -623,6 +637,7 @@ footer{
     color: #42b34a;
     font-size: 20px;
     border: 25px;
+    display: none;
 }
 
 #check:checked ~ .search-box .icon{
