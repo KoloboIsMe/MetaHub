@@ -6,10 +6,12 @@
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
+use PDO;
+
 class TicketTable
 {
     use Requests;
-    const TABLE = 'tickets';
+    const TABLE = 'ticket';
     private function newEntity(array $data) : \Category
     {
         $ID = $data[0];
