@@ -1,7 +1,8 @@
 <?php
 
 namespace entities;
-include_once 'entities/Entity.php';
+
+include_once 'Entity.php';
 
 class Comment extends Entity
 {

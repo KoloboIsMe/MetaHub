@@ -8,7 +8,6 @@ use PDOException;
 use service\UserInterface;
 
 include_once "service/UserInterface.php";
-include_once "entities/User.php";
 
 class UserAccess implements UserInterface
 {

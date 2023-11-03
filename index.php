@@ -3,17 +3,17 @@
 include_once 'controls/Controller.php';
 include_once 'controls/Presenter.php';
 
-include_once 'database/CategoryAccess.php';
-include_once 'database/CommentAccess.php';
-include_once 'database/SPDO.php';
-include_once 'database/TicketAccess.php';
-include_once 'database/UserAccess.php';
+include_once 'Framework/database/CategoryAccess.php';
+include_once 'Framework/database/CommentAccess.php';
+include_once 'Framework/database/SPDO.php';
+include_once 'Framework/database/TicketAccess.php';
+include_once 'Framework/database/UserAccess.php';
 
-include_once 'entities/Category.php';
-include_once 'entities/Comment.php';
-include_once 'entities/Post.php';
-include_once 'entities/Ticket.php';
-include_once 'entities/User.php';
+include_once 'Framework/entities/Category.php';
+include_once 'Framework/entities/Comment.php';
+include_once 'Framework/entities/Post.php';
+include_once 'Framework/entities/Ticket.php';
+include_once 'Framework/entities/User.php';
 
 include_once 'gui/Layout.php';
 include_once 'gui/View.php';
@@ -54,7 +54,6 @@ $userAccessLector = new database\UserAccess($dbLector);
 
 $ticketAccess = new database\TicketAccess($dbAdmin);
 $userAccess = new database\UserAccess($dbAdmin);
-
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new service\OutputData();

@@ -2,14 +2,15 @@
 
 namespace database;
 
+
 use entities\Category;
+use PDO;
 use PDOException;
 use service\CategoryInterface;
-use PDO;
 
 
 include_once "service/CategoryInterface.php";
-include_once "entities/Category.php";
+include_once "Framework/entities/Category.php";
 
 class CategoryAccess implements CategoryInterface
 {
