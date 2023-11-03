@@ -13,7 +13,7 @@ body {
 
 header {
     width: 100%;
-    height: 80px;
+    height : 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +22,7 @@ header {
 }
 
 
-header nav ul {
+header nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ header nav ul li {
     margin: 23px 5px;
 }
 
-header nav ul li a {
+header nav ul li a{
     color: #EEF1EF;
     display: inline;
     justify-content: space-between;
@@ -43,7 +43,7 @@ header nav ul li a {
     font-size: 1.5vh;
 }
 
-#username {
+#username{
     color: #EEF1EF;
     display: inline;
     padding: 10px 0;
@@ -53,23 +53,23 @@ header nav ul li a {
     font-family: AnjaliOldLipi;
 }
 
-header nav ul li #headerLinks:hover {
+header nav ul li #headerLinks:hover{
     border-bottom-color: white;
     transition: all 1s linear;
 }
 
-#headerLogo {
+#headerLogo{
     margin-top: 1vh;
     height: 7vh;
     width: 7vh;
 }
 
-#headerImg, #loginImg, #logoutImg {
+#headerImg, #loginImg, #logoutImg{
     height: 4vh;
     width: 4vh;
 }
 
-#loginImg, #logoutImg {
+#loginImg, #logoutImg{
     margin-top: 1.5vh;
 }
 
@@ -86,7 +86,7 @@ header nav ul li #headerLinks:hover {
     margin-top: 12px;
 }
 
-.line {
+.line{
     transition: transform 0.3s ease-out,
     opacity 0.1s ease-out;
 }
@@ -106,23 +106,23 @@ header nav ul li #headerLinks:hover {
     width: 35px;
 }
 
-@media only screen and (max-width: 500px) {
-    header {
+@media only screen and (max-width : 500px){
+    header{
         padding: 30px 30px;
     }
 
-    header nav {
+    header nav{
         z-index: 10000;
     }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1050px) {
+@media only screen and (min-width: 500px) and (max-width : 1050px) {
     .hamburger {
         display: block;
-        top: 20px;
+        top: 0.8vh;
     }
 
-    header nav {
+    header nav{
         position: absolute;
         width: 100%;
         right: 100%;
@@ -137,28 +137,24 @@ header nav ul li #headerLinks:hover {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        z-index: 10000;
     }
-
-    header #nav_check:checked ~ nav {
+    header #nav_check:checked ~ nav{
         right: 0;
     }
-
-    header nav ul {
+    header nav ul{
         display: block;
     }
-
-    header nav ul li a {
-        color: white;
-        margin: 5px 0;
+    header nav ul li a{
+        color:white;
+        margin: 5px 0 ;
     }
 
-    header nav ul li #headerLinks {
+    header nav ul li #headerLinks{
         display: flex;
         justify-content: center;
     }
 
-    #username {
+    #username{
         margin-top: 2vh;
     }
 
@@ -172,37 +168,37 @@ header nav ul li #headerLinks:hover {
         margin: 0 auto;
     }
 
-    .card-container1 {
+    .card-container1{
         width: 100%;
     }
 
-    .card-container2 {
+    .card-container2{
         width: 90%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3 {
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
         width: 90vw;
         margin: 20px auto;
     }
 
-    .card-container .post-card, .card-container .category-card {
+    .card-container .post-card, .card-container .category-card{
         width: 90vw;
     }
 
-    .footerImages {
+    .footerImages{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items:center ;
         margin-bottom: 3vh;
     }
 
-    h2 {
+    h2{
         font-size: 1.5vh;
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 500px) {
-    header {
+@media only screen and (min-device-width : 250px) and (max-device-width : 500px) {
+    header{
         margin-top: 2vh;
     }
 
@@ -210,12 +206,11 @@ header nav ul li #headerLinks:hover {
         display: block;
         top: 20px;
     }
-
-    header nav {
+    header nav{
         position: absolute;
         width: 100%;
         right: 100%;
-        top: 80px;
+        top: 7vh;
         width: 40vw;
         height: 100vh;
         background-color: #191919;
@@ -228,40 +223,48 @@ header nav ul li #headerLinks:hover {
         text-align: center;
         z-index: 10000;
     }
-
-    header #nav_check:checked ~ nav {
+    header #nav_check:checked ~ nav{
         right: 0;
     }
-
-    header nav ul {
+    header nav ul{
         display: block;
     }
-
-    header nav ul li a {
-        color: white;
-        margin: 5px 0;
+    header nav ul li a{
+        color:white;
+        margin: 5px 0 ;
     }
 
-    header nav ul li #headerLinks {
+    header nav ul li #headerLinks{
         display: flex;
         justify-content: center;
     }
 
-    header nav {
+    header nav{
         padding-top: 5vh;
     }
 
-    #username {
+    #username{
         margin-top: 2vh;
+        z-index: 10000;
     }
 
-    #headerImg {
+    #headerImg{
         margin-top: 3vh;
-        padding-top: 2vh;
     }
 
-    #loginImg, #logoutImg {
+    #loginImg, #logoutImg{
         margin-top: 1.9vh;
+        z-index: 1000;
+    }
+
+    .hamburger.active .l1 {
+        transform: translateY(20px) rotate(135deg);
+        width: 3.6vh;
+    }
+
+    .hamburger.active .l3 {
+        transform: translateY(-17px) rotate(-135deg);
+        width: 3.6vh;
     }
 
     .card-container, .card-container1,
@@ -274,53 +277,53 @@ header nav ul li #headerLinks:hover {
         margin: 0 auto;
     }
 
-    .card-container1 {
+    .card-container1{
         width: 100%;
     }
 
-    .card-container2 {
+    .card-container2{
         width: 80%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3 {
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
         width: 80vw;
         margin: 10px auto;
     }
 
-    .card-container .post-card, .card-container .category-card {
+    .card-container .post-card, .card-container .category-card{
         width: 90vw;
         margin: 20px auto;
     }
 
-    .footerImages {
+    .footerImages{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items:center;
         margin-bottom: 3vh;
     }
 
-    #time {
+    #time{
         font-size: 1vh;
     }
 
 }
 
-#card-username {
+#card-username{
     margin-bottom: 1vh;
     font-size: 1.7vh;
 }
 
-#time {
+#time{
     margin-top: 2vh;
     color: #EEF1EF;
 }
 
-#post-number {
+#post-number{
     color: #3f3f3f;
     font-size: 1.5vh;
 }
 
-.input {
+.input{
     width: 95%;
     height: 100%;
     background: transparent;
@@ -333,11 +336,11 @@ header nav ul li #headerLinks:hover {
     font-size: 2vh;
 }
 
-#comment {
+#comment{
     margin-bottom: 3vh;
 }
 
-.btn {
+.btn{
     position: relative;
     top: 2vh;
     background: #42b34a;
@@ -353,7 +356,7 @@ header nav ul li #headerLinks:hover {
     text-align: center;
 }
 
-#category {
+#category{
     margin-top: 0.7vh;
 }
 
@@ -363,7 +366,7 @@ header nav ul li #headerLinks:hover {
     font-family: AnjaliOldLipi
 }
 
-p {
+p{
     color: white;
     font-family: AnjaliOldLipi;
     margin-bottom: 1.5vh;
@@ -374,7 +377,7 @@ p {
     */
 }
 
-.comment-card {
+.comment-card{
     position: relative;
     height: 25vh;
     max-height: 80vh;
@@ -386,7 +389,7 @@ p {
     box-shadow: 1px 2px 4px black;
 }
 
-.card-container {
+.card-container{
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -394,7 +397,7 @@ p {
     margin-top: 2vh;
 }
 
-.card-container1 {
+.card-container1{
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
@@ -402,13 +405,13 @@ p {
     float: left;
 }
 
-.card-container2 {
+.card-container2{
     display: grid;
     justify-content: right;
     margin-top: 20px;
 }
 
-.card {
+.card{
     width: 50vw;
     height: auto;
     background-color: #242424;
@@ -418,7 +421,7 @@ p {
     margin: 20px;
 }
 
-.card2 {
+.card2{
     width: 40vw;
     height: 40vh;
     background-color: #242424;
@@ -428,7 +431,7 @@ p {
     margin: 20px;
 }
 
-.card3 {
+.card3{
     width: 40vw;
     height: 60vh;
     background-color: #242424;
@@ -438,7 +441,7 @@ p {
     margin: 20px;
 }
 
-.post-card, .category-card {
+.post-card, .category-card{
     width: 45vw;
     height: auto;
     background-color: #242424;
@@ -448,23 +451,23 @@ p {
     margin: 20px;
 }
 
-.category-card {
+.category-card{
     padding-bottom: 8vh;
     margin-bottom: 15vh;
 }
 
-.card-content {
+.card-content{
     padding: 16px;
 }
 
-.card-content i {
+.card-content i{
     color: rgba(238, 241, 239, 0.68);
     border-bottom: #42B34A;
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
 
-.card-content h3 {
+.card-content h3{
     font-size: 2vh;
     color: white;
     margin-bottom: 1vh;
@@ -473,13 +476,13 @@ p {
     border-bottom-width: 1px;
 }
 
-.card-content p {
+.card-content p{
     font-size: 1.8vh;
     line-height: 1.5;
     padding-top: 2vh;
 }
 
-h2 {
+h2{
     font-size: 3.5vh;
     color: white;
     margin-top: 4vh;
@@ -489,7 +492,7 @@ h2 {
     border-bottom-style: solid;
 }
 
-.card-content ul li {
+.card-content ul li{
     display: grid;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -499,25 +502,25 @@ h2 {
     margin-bottom: 4vh;
 }
 
-.edit-delete {
+.edit-delete{
     display: flex;
     justify-content: right;
     flex-direction: row;
     border-spacing: 2vh;
 }
 
-#editImg, #deleteImg {
+#editImg, #deleteImg{
     height: 2.5vh;
     width: 2.5vh;
     margin-left: 1vh;
 }
 
-.dot-container {
+.dot-container{
     margin-left: 2vh;
     float: left;
 }
 
-.dot-container div {
+.dot-container div{
     display: flex;
     justify-content: center;
     background: #42B34A;
@@ -528,7 +531,7 @@ h2 {
     margin-bottom: 4.7vh;
 }
 
-footer {
+footer{
     height: 30vh;
     width: 100%;
     background: #242424;
@@ -541,15 +544,15 @@ footer {
 
 }
 
-.footerImages {
+.footerImages{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center ;
     margin-bottom: 3vh;
 
 }
 
-#footerImg {
+#footerImg{
     margin-right: 10px;
     margin-top: 4vh;
     cursor: pointer;
@@ -557,7 +560,7 @@ footer {
     width: 3vh;
 }
 
-.footerContact {
+.footerContact{
     display: inline;
     justify-content: center;
     align-items: center;
@@ -566,7 +569,7 @@ footer {
     color: #EEF1EF;
 }
 
-.footerCopyright {
+.footerCopyright{
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,10 +14,9 @@ class Presenter
     public function showHomePage()
     {
         $content = '';
-        $content .= "<h2>Fil d'actualité</h2>
-                      ";
-        $content .= "<div class='card-container1'>
-                            ";
+        $content .= "<h2>Fil d'actualité</h2>";
+        $content .= "<div class='card-container1'>";
+
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
