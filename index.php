@@ -89,39 +89,39 @@ if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['passw
 
     $page = $_GET['id'] ?? $page = null;
     $error = $controller->registerAction($usersGetting, $userAccess);
-    if ($error){
+    if ($error) {
         $url = 'register';
-    }else
+    } else
         $url = 'login_verification';
 }
 if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
 
     $page = $_GET['id'] ?? $page = null;
     $error = $controller->authenticateAction($usersGetting, $userAccess);
-    if ($error){
-        $page ? $redirect = 'login&id='.$page : $redirect = 'login';
+    if ($error) {
+        $page ? $redirect = 'login&id=' . $page : $redirect = 'login';
         $url = 'error';
-    }else{
-        $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
+    } else {
+        $page ? header("refresh:0;url=/$page") : header("refresh:0;url=/");
         $url = '/';
     }
 }
 if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
 
     $controller->createTicketAction($ticketsGetting, $ticketAccess);
-    $url='/';
+    $url = '/';
     header("refresh:0;url=/");
 }
 if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
     $ticketsGetting->deleteTicket($ticketAccess);
-    $url='/';
+    $url = '/';
     header("refresh:0;url=/");
 }
 if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
 
     $ticketsGetting->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
-    $url='/';
+    $url = '/';
     header("refresh:0;url=/");
 }
 
@@ -140,81 +140,81 @@ if ('' == $url || '/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewHomepage($layout, $presenter))->display();
 
-}elseif ('login' == $url) {
+} elseif ('login' == $url) {
 
     isset($_GET['id']) ? $page = $_GET['id'] : $page = null;
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewLogin($layout, $page))->display();
 
-}elseif ('register' == $url) {
+} elseif ('register' == $url) {
 
     isset($_GET['id']) ? $page = $_GET['id'] : $page = null;
     $layout = new gui\Layout($layoutTemplate);
-    if(!isset($error))
+    if (!isset($error))
         $error = null;
     (new gui\ViewRegister($layout, $page, $error))->display();
 
-}elseif ('logout' == $url) {
+} elseif ('logout' == $url) {
 
     session_unset();
     session_destroy();
     header("Location: /");
 
-}elseif ('posts' == $url ) {
+} elseif ('posts' == $url) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
+    if (!isset($_SESSION['isLogged']))
+        header('Location: /login&id=' . $url);
 
     isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewPosts($layout, $presenter))->display();
 
-}elseif ('createPosts' == $url ) {
+} elseif ('createPosts' == $url) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
+    if (!isset($_SESSION['isLogged']))
+        header('Location: /login&id=' . $url);
 
     $categoriesGetting->getCategories($categoryAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCreatePosts($layout, $presenter))->display();
 
-}elseif ('categories' == $url ) {
+} elseif ('categories' == $url) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
+    if (!isset($_SESSION['isLogged']))
+        header('Location: /login&id=' . $url);
 
     $category = null;
-    if(isset($_GET['id'])) {
+    if (isset($_GET['id'])) {
         $category = $categoriesGetting->getCategoryById($categoryAccessLector, $_GET['id']);
         $postsID = $categoriesGetting->getPostsIdByCategoryId($categoryAccessLector, $_GET['id']);
         $ticketsGetting->getCategoryPosts($ticketAccessLector, $postsID);
-    }else
+    } else
         $categoriesGetting->getCategories($categoryAccessLector);
 
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCategories($layout, $presenter, $category))->display();
 
-}elseif ('editTicket' == $url ) {
+} elseif ('editTicket' == $url) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
+    if (!isset($_SESSION['isLogged']))
+        header('Location: /login&id=' . $url);
 
     isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewEditTicket($layout, $presenter))->display();
 
-}elseif ('users' == $url ) {
+} elseif ('users' == $url) {
 
-    if(!isset($_SESSION['isLogged']))
-        header('Location: /login&id='.$url);
+    if (!isset($_SESSION['isLogged']))
+        header('Location: /login&id=' . $url);
 
     $user = null;
-    if(isset($_GET['id'])) {
+    if (isset($_GET['id'])) {
         $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
         //liste des id tes tickets de l'user
         $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);
         $ticketsGetting->getUserPosts($ticketAccessLector, $postsID);
-    }else
+    } else
         //si l'id nest pas set, afficher tout les user
         $usersGetting->getUsers($userAccessLector);
 
@@ -234,14 +234,12 @@ elseif ('lostmdp/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewError($layout, $error, $redirect))->display();
 
-}
-elseif ('error' == $url) {
+} elseif ('error' == $url) {
 
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewError($layout, $error, $redirect))->display();
 
-}
-else{
+} else {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewError($layout, 'Page introuvable'))->display();
 }

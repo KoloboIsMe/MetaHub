@@ -11,7 +11,8 @@ class CommentAccess implements CommentInterface
 {
     protected $dataAccess = null;
 
-    public function __construct($dataAccess){
+    public function __construct($dataAccess)
+    {
         $this->dataAccess = $dataAccess;
     }
 

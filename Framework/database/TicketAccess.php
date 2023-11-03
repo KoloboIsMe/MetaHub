@@ -18,7 +18,8 @@ class TicketAccess implements TicketInterface
 {
     protected $dataAccess = null;
 
-    public function __construct($dataAccess){
+    public function __construct($dataAccess)
+    {
         $this->dataAccess = $dataAccess;
     }
 
@@ -26,7 +27,7 @@ class TicketAccess implements TicketInterface
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM ticket where ticket_ID = :ticketId');
-            $statement->execute(['ticketId' => $ticketId ]);
+            $statement->execute(['ticketId' => $ticketId]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             $ticket = new Ticket($data);
         } catch (PDOException $e) {
@@ -35,9 +36,8 @@ class TicketAccess implements TicketInterface
         try {
             $categories = [];
             $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID in (SELECT category FROM categorized where ticket = :ticketID) ORDER BY category_ID DESC LIMIT 100');
-            $statement->execute(['ticketID' => $ticketId ]);
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            $statement->execute(['ticketID' => $ticketId]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $categories[] = new Category($data);
             }
         } catch (PDOException $e) {
@@ -48,9 +48,8 @@ class TicketAccess implements TicketInterface
             $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comment 
                                                 JOIN user ON comment.author = user.user_ID
                                                    where ticket = :ticketID LIMIT 100');
-            $statement->execute(['ticketID' => $ticketId ]);
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            $statement->execute(['ticketID' => $ticketId]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $comments[] = new Comment($data);
             }
         } catch (PDOException $e) {
@@ -68,13 +67,13 @@ class TicketAccess implements TicketInterface
         return new Post($ticket, $categories, $comments, $user);
     }
 
-    public function getTicketsID(){
+    public function getTicketsID()
+    {
         try {
             $ID = [];
             $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket ORDER BY ticket_ID DESC LIMIT 100');
             $statement->execute();
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['ticket_ID'];
             }
             return $ID;
@@ -83,13 +82,13 @@ class TicketAccess implements TicketInterface
         }
     }
 
-    public function get5LastTicketsID(){
+    public function get5LastTicketsID()
+    {
         try {
             $ID = [];
             $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket ORDER BY ticket_ID DESC LIMIT 5');
             $statement->execute();
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['ticket_ID'];
             }
             return $ID;
@@ -136,7 +135,8 @@ class TicketAccess implements TicketInterface
         }
     }
 
-    public function getCategoryIdByLabel($label){
+    public function getCategoryIdByLabel($label)
+    {
         try {
             $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
             $statement->execute([
@@ -147,6 +147,7 @@ class TicketAccess implements TicketInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
     public function deleteTicket($ticketID)
     {
         try {
@@ -164,13 +165,14 @@ class TicketAccess implements TicketInterface
         }
     }
 
-    public function editTicket($id, $title, $message){
+    public function editTicket($id, $title, $message)
+    {
         try {
             $statement = $this->dataAccess->prepare('UPDATE ticket SET title = :title, message = :message WHERE ticket_ID = :id');
             $statement->execute([
-                ':id'=> $id,
-                ':title'=> $title,
-                ':message'=> $message
+                ':id' => $id,
+                ':title' => $title,
+                ':message' => $message
             ]);
 
         } catch (PDOException $e) {

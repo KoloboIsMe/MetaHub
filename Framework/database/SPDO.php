@@ -6,8 +6,8 @@ use PDO;
 
 final class SPDO
 {
-    private ?PDO $PDOInstance = null;
     private static ?SPDO $instance = null;
+    private ?PDO $PDOInstance = null;
     private string $serverName;
 
     private function __construct(string $serverName)
@@ -15,7 +15,7 @@ final class SPDO
         $config = parse_ini_file(CHEMIN_VERS_FICHIER_INI, true);
         if (isset($config[$serverName])) {
             $serverConfig = $config[$serverName];
-            $this->PDOInstance = new PDO($serverConfig['type'] . ':host='. $serverConfig['IP_adress'] .';dbname='. BASE_DE_DONNEES, $serverConfig['user'], $serverConfig['password']);
+            $this->PDOInstance = new PDO($serverConfig['type'] . ':host=' . $serverConfig['IP_adress'] . ';dbname=' . BASE_DE_DONNEES, $serverConfig['user'], $serverConfig['password']);
             $this->PDOInstance->exec('SET CHARACTER SET utf8');
             $this->PDOInstance->setAttribute(PDO::FETCH_ASSOC, PDO::FETCH_OBJ);
             $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);

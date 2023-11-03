@@ -167,15 +167,16 @@ class Presenter
         return $content;
     }
 
-    public function showCategorie($category){
+    public function showCategorie($category)
+    {
         $content = '';
         $id = $category->getCategory_ID();
         $content .= "
                 <div class='card'>
                     <a href='categories&id=$id'>
                     <div class='card-content'>
-                        <h3>".$category->getLabel()."</h3>
-                        <p>".$category->getDescription()."</p>";
+                        <h3>" . $category->getLabel() . "</h3>
+                        <p>" . $category->getDescription() . "</p>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
@@ -198,7 +199,8 @@ class Presenter
         return $content;
     }
 
-    public function showCreateTicket(){
+    public function showCreateTicket()
+    {
         $content = "
         <script src='https://unpkg.com/slim-select@latest/dist/slimselect.min.js'></script>
         <link href='gui/css/CategorySelectionBar.css' rel='stylesheet'></link>
@@ -215,7 +217,7 @@ class Presenter
         
                 <select id='category' multiple name='categories[]'>";
         foreach ($this->outputData->getOutputData() as $category) {
-            $content .= "<option>".$category->getLabel()."</option>";
+            $content .= "<option>" . $category->getLabel() . "</option>";
         }
         $content .= "        
                 </select>
@@ -237,7 +239,8 @@ class Presenter
         return $content;
     }
 
-    public function showEditTicket(){
+    public function showEditTicket()
+    {
         $post = $this->outputData->getOutputData();
         $id = $post->getTicket()->getTicket_ID();
         return "
@@ -247,10 +250,10 @@ class Presenter
                 <h1>Edition</h1>
         
                 <label><b>Titre</b></label>
-                <input type='text' placeholder=\" Entrer le titre du post \" name='title' value='". $post->getTicket()->getTitle()  ."' required>
+                <input type='text' placeholder=\" Entrer le titre du post \" name='title' value='" . $post->getTicket()->getTitle() . "' required>
         
                 <label><b>Contenu du post</b></label>
-                <textarea placeholder='Entrer le contenu du post' name='message' required>". $post->getTicket()->getMessage()  ."</textarea>
+                <textarea placeholder='Entrer le contenu du post' name='message' required>" . $post->getTicket()->getMessage() . "</textarea>
         
                 <input type='submit' id='submit' value='Enregistrer' >
             </form>
@@ -258,6 +261,7 @@ class Presenter
         ";
 
     }
+
     public function showUsers()
     {
         $content = '';
@@ -273,14 +277,16 @@ class Presenter
         }
         return $content;
     }
-    public function showUser($user){
+
+    public function showUser($user)
+    {
         $content = '';
         $id = $user->getUser_ID();
         $content .= "
                 <div class='card'>
                     <a href='users&id=$id'>
                     <div class='card-content'>
-                        <h3>".$user->getUsername()."</h3>";
+                        <h3>" . $user->getUsername() . "</h3>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();

@@ -10,10 +10,10 @@ class ViewCategories extends View
 
         $this->title = 'Categories';
 
-        if(isset($_SESSION['username']))
+        if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
 
-        isset($_GET['id']) ? $this->content=$presenter->showCategorie($category) : $this->content=$presenter->showCategories();
+        isset($_GET['id']) ? $this->content = $presenter->showCategorie($category) : $this->content = $presenter->showCategories();
     }
 }

@@ -31,9 +31,6 @@ class UsersGetting
     {
         $dataccess->updateLastConnexion($user_ID);
     }
-    public function getUserById($dataccess, $id){
-        return $dataccess->getUserById($id);
-    }
 
     public function getUsers($dataccess)
     {
@@ -42,5 +39,10 @@ class UsersGetting
             $users[] = $dataccess->getUserById($userId);
         }
         $this->outputData->setOutputData($users);
+    }
+
+    public function getUserById($dataccess, $id)
+    {
+        return $dataccess->getUserById($id);
     }
 }

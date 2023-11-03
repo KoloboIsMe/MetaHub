@@ -10,9 +10,9 @@ class ViewUsers extends View
 
         $this->title = 'Users';
 
-        if(isset($_SESSION['username']))
+        if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
-        
-        isset($_GET['id']) ? $this->content=$presenter->showUser($user) : $this->content=$presenter->showUsers();
+
+        isset($_GET['id']) ? $this->content = $presenter->showUser($user) : $this->content = $presenter->showUsers();
     }
 }

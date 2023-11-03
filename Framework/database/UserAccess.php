@@ -13,7 +13,8 @@ class UserAccess implements UserInterface
 {
     protected $dataAccess = null;
 
-    public function __construct($dataAccess){
+    public function __construct($dataAccess)
+    {
         $this->dataAccess = $dataAccess;
     }
 
@@ -21,7 +22,7 @@ class UserAccess implements UserInterface
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM user where username = :username');
-            $statement->execute([':username' => $username ]);
+            $statement->execute([':username' => $username]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new User($data);
         } catch (PDOException $e) {
@@ -36,8 +37,7 @@ class UserAccess implements UserInterface
             $statement->execute();
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             $users = [];
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $users[] = $data['username'];
             }
             return $users;
@@ -52,7 +52,7 @@ class UserAccess implements UserInterface
             $statement = $this->dataAccess->prepare('SELECT password FROM user where username = :username LIMIT 100');
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
-            if(isset($user['password']) && password_verify($password, $user['password']))
+            if (isset($user['password']) && password_verify($password, $user['password']))
                 return true;
             else
                 return false;
@@ -68,9 +68,9 @@ class UserAccess implements UserInterface
             $statement->execute([':username' => $username]);
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
-            if(isset($user['username']))
+            if (isset($user['username']))
                 return 'nom d\'utilisateur déjà utilisé';
-            else{
+            else {
                 $statement = $this->dataAccess->prepare('INSERT INTO user (username, password, first_connexion) VALUES (:username, :password, :date)');
                 $statement->execute([
                     ':username' => $username,
@@ -84,7 +84,8 @@ class UserAccess implements UserInterface
         }
     }
 
-    public function updateLastConnexion($user_ID){
+    public function updateLastConnexion($user_ID)
+    {
         try {
             $statement = $this->dataAccess->prepare('UPDATE user SET last_connexion = :date WHERE user_ID = :user_ID');
             $statement->execute([
@@ -100,20 +101,21 @@ class UserAccess implements UserInterface
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :id');
-            $statement->execute([':id' => $id ]);
+            $statement->execute([':id' => $id]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new User($data);
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-    public function getUsersID(){
+
+    public function getUsersID()
+    {
         try {
             $ID = [];
             $statement = $this->dataAccess->prepare('SELECT user_ID FROM user ORDER BY user_ID DESC LIMIT 100');
             $statement->execute();
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['user_ID'];
             }
             return $ID;
@@ -122,13 +124,13 @@ class UserAccess implements UserInterface
         }
     }
 
-    public function getPostsIdByUserId($userId){
+    public function getPostsIdByUserId($userId)
+    {
         try {
             $ID = [];
             $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets where author = :userId ORDER BY ticket_ID DESC LIMIT 100');
-            $statement->execute([':userId' => $userId ]);
-            while($data = $statement->fetch(PDO::FETCH_ASSOC))
-            {
+            $statement->execute([':userId' => $userId]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['ticket_ID'];
             }
             return $ID;

@@ -1,10 +1,10 @@
 {
-    "name": "alexandrepossenti/metahub",
-    "authors": [
-        {
-            "name": "Alex"
-        }
-    ],
+  "name": "alexandrepossenti/metahub",
+  "authors": [
+    {
+      "name": "Alex"
+    }
+  ],
   "require": {
     "ext-pdo": "*",
     "ext-json": "*"

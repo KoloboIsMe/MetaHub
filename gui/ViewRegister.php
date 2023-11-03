@@ -10,7 +10,7 @@ class ViewRegister extends View
 
         $this->title = 'Enregistrement';
 
-        $page ? $action = '/registerAction&id='.$page : $action = '/registerAction';
+        $page ? $action = '/registerAction&id=' . $page : $action = '/registerAction';
 
         $this->content = "
 <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />

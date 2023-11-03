@@ -22,18 +22,18 @@ class TicketsGetting
         $this->outputData->setOutputData($posts);
     }
 
+    public function getPostById($dataccess, $id)
+    {
+        $posts = $dataccess->getPostById($id);
+        $this->outputData->setOutputData($posts);
+    }
+
     public function get5LastPosts($dataccess)
     {
         $posts = [];
         foreach ($dataccess->get5LastTicketsID() as $ticketId) {
             $posts[] = $dataccess->getPostById($ticketId);
         }
-        $this->outputData->setOutputData($posts);
-    }
-
-    public function getPostById($dataccess, $id)
-    {
-        $posts = $dataccess->getPostById($id);
         $this->outputData->setOutputData($posts);
     }
 

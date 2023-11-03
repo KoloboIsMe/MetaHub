@@ -11,14 +11,14 @@ class OutputData
         $this->outputData = null;
     }
 
-    public function setOutputData($data)
-    {
-        $this->outputData = $data;
-    }
-
     public function getOutputData()
     {
         return $this->outputData;
+    }
+
+    public function setOutputData($data)
+    {
+        $this->outputData = $data;
     }
 
 
