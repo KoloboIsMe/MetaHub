@@ -128,7 +128,7 @@ class UserAccess implements UserInterface
     {
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets where author = :userId ORDER BY ticket_ID DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket where author = :userId ORDER BY ticket_ID DESC LIMIT 100');
             $statement->execute([':userId' => $userId]);
             while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['ticket_ID'];
