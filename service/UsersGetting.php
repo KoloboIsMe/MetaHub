@@ -11,6 +11,10 @@ class UsersGetting
         $this->outputData = $outputData;
     }
 
+    public function existsUser($dataccess, $user_ID)
+    {
+        $this->outputData->setOutputData($dataccess->existsUser($user_ID));
+    }
     public function authenticate($username, $password, $dataccess)
     {
         $isUser = $dataccess->isUser($username, $password);

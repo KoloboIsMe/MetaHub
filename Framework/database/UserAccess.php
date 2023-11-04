@@ -18,6 +18,18 @@ class UserAccess implements UserInterface
         $this->dataAccess = $dataAccess;
     }
 
+    public function existsUser($user_ID)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :user_ID');
+            $statement->execute(['user_ID' => $user_ID]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return isset($data['user_ID']);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
     public function getUserByUsername($username)
     {
         try {

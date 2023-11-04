@@ -168,8 +168,11 @@ if ('' == $url || '/' == $url) {
     if (!isset($_SESSION['isLogged']))
         header('Location: /login&id=' . $url);
 
-    if (isset($_GET['id']) && $ticketsGetting->existsTicket($ticketAccessLector, $_GET['id']))
-        $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']);
+    if (isset($_GET['id']))
+        if($ticketsGetting->existsTicket($ticketAccessLector, $_GET['id']))
+            $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']);
+        else
+            header('Location: /');
     else
         $ticketsGetting->getPosts($ticketAccessLector);
 
@@ -191,10 +194,13 @@ if ('' == $url || '/' == $url) {
         header('Location: /login&id=' . $url);
 
     $category = null;
-    if (isset($_GET['id']) && $categoriesGetting->existsCategory($categoryAccessLector, $_GET['id'])) {
-        $category = $categoriesGetting->getCategoryById($categoryAccessLector, $_GET['id']);
-        $postsID = $categoriesGetting->getPostsIdByCategoryId($categoryAccessLector, $_GET['id']);
-        $ticketsGetting->getCategoryPosts($ticketAccessLector, $postsID);
+    if (isset($_GET['id'])) {
+        if($categoriesGetting->existsCategory($categoryAccessLector, $_GET['id'])) {
+            $category = $categoriesGetting->getCategoryById($categoryAccessLector, $_GET['id']);
+            $postsID = $categoriesGetting->getPostsIdByCategoryId($categoryAccessLector, $_GET['id']);
+            $ticketsGetting->getCategoryPosts($ticketAccessLector, $postsID);
+        }else
+            header('Location: /');
     } else
         $categoriesGetting->getCategories($categoryAccessLector);
 
@@ -216,11 +222,15 @@ if ('' == $url || '/' == $url) {
         header('Location: /login&id=' . $url);
 
     $user = null;
-    if (isset($_GET['id']) && $usersGetting->existsUser($userAccessLector, $_GET['id'])) {
-        $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
-        //liste des id tes tickets de l'user
-        $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);
-        $ticketsGetting->getUserPosts($ticketAccessLector, $postsID);
+    if (isset($_GET['id'])) {
+        if($usersGetting->existsUser($userAccessLector, $_GET['id'])) {
+            $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
+            //liste des id tes tickets de l'user
+            $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);
+            $ticketsGetting->getUserPosts($ticketAccessLector, $postsID);
+        }else
+            header('Location: /');
+
     } else
         //si l'id nest pas set, afficher tout les user
         $usersGetting->getUsers($userAccessLector);

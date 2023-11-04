@@ -167,7 +167,7 @@ class Presenter
         return $content;
     }
 
-    public function showCategorie($category)
+    public function showCategory($category)
     {
         $content = '';
         $id = $category->getCategory_ID();

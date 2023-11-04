@@ -4,7 +4,7 @@ namespace service;
 
 interface UserInterface
 {
-
+    public function existsUser($user_ID);
     public function getUserByUsername($username);
 
     public function getUsersUsername();
