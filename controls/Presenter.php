@@ -172,11 +172,8 @@ class Presenter
         $content = '';
         $id = $category->getCategory_ID();
         $content .= "
-                <div class='card'>
-                    <a href='categories&id=$id'>
-                    <div class='card-content'>
-                        <h3>" . $category->getLabel() . "</h3>
-                        <p>" . $category->getDescription() . "</p>";
+                        <h2>#" . $category->getLabel() . "</h2>
+                        <p id='category-description'>" . $category->getDescription() . "</p>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
@@ -192,10 +189,6 @@ class Presenter
                                     </div></a>
                                 </div>";
         }
-
-        $content .= "
-                    </div></a>
-                </div>";
         return $content;
     }
 
