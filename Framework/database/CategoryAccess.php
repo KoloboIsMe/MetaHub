@@ -21,6 +21,17 @@ class CategoryAccess implements CategoryInterface
         $this->dataAccess = $dataAccess;
     }
 
+    public function existsCategory($CategoryID){
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID = :CategoryID');
+            $statement->execute(['CategoryID' => $CategoryID]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return isset($data['category_ID']);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
     public function getCategoriesID()
     {
         try {

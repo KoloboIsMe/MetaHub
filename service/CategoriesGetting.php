@@ -10,6 +10,10 @@ class CategoriesGetting
     {
         $this->outputData = $outputData;
     }
+    public function existsCategory($dataccess, $CategoryID)
+    {
+        return $dataccess->existsCategory($CategoryID);
+    }
 
     public function getCategories($dataccess)
     {

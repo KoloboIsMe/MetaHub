@@ -23,6 +23,18 @@ class TicketAccess implements TicketInterface
         $this->dataAccess = $dataAccess;
     }
 
+    public function existsTicket($ticketID)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM ticket where ticket_ID = :ticketID');
+            $statement->execute(['ticketID' => $ticketID]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return isset($data['ticket_ID']);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
     public function getPostById($ticketId)
     {
         try {

@@ -168,7 +168,11 @@ if ('' == $url || '/' == $url) {
     if (!isset($_SESSION['isLogged']))
         header('Location: /login&id=' . $url);
 
-    isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
+    if (isset($_GET['id']) && $ticketsGetting->existsTicket($ticketAccessLector, $_GET['id']))
+        $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']);
+    else
+        $ticketsGetting->getPosts($ticketAccessLector);
+
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewPosts($layout, $presenter))->display();
 
@@ -187,7 +191,7 @@ if ('' == $url || '/' == $url) {
         header('Location: /login&id=' . $url);
 
     $category = null;
-    if (isset($_GET['id'])) {
+    if (isset($_GET['id']) && $categoriesGetting->existsCategory($categoryAccessLector, $_GET['id'])) {
         $category = $categoriesGetting->getCategoryById($categoryAccessLector, $_GET['id']);
         $postsID = $categoriesGetting->getPostsIdByCategoryId($categoryAccessLector, $_GET['id']);
         $ticketsGetting->getCategoryPosts($ticketAccessLector, $postsID);
@@ -197,12 +201,12 @@ if ('' == $url || '/' == $url) {
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewCategories($layout, $presenter, $category))->display();
 
-} elseif ('editTicket' == $url) {
+} elseif ('editTicket' == $url && isset($_GET['id']) && $ticketsGetting->existsTicket($ticketAccessLector, $_GET['id'])) {
 
     if (!isset($_SESSION['isLogged']))
-        header('Location: /login&id=' . $url);
+        header('Location: /login');
 
-    isset($_GET['id']) ? $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']) : $ticketsGetting->getPosts($ticketAccessLector);
+    $ticketsGetting->getPostById($ticketAccessLector, $_GET['id']);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewEditTicket($layout, $presenter))->display();
 
@@ -212,7 +216,7 @@ if ('' == $url || '/' == $url) {
         header('Location: /login&id=' . $url);
 
     $user = null;
-    if (isset($_GET['id'])) {
+    if (isset($_GET['id']) && $usersGetting->existsUser($userAccessLector, $_GET['id'])) {
         $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
         //liste des id tes tickets de l'user
         $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);

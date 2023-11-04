@@ -4,7 +4,7 @@ namespace service;
 
 interface TicketInterface
 {
-
+    public function existsTicket($ticketID);
     public function getPostById($ticketid);
 
     public function getTicketsID();

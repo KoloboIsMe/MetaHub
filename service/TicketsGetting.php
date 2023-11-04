@@ -11,7 +11,10 @@ class TicketsGetting
     {
         $this->outputData = $outputData;
     }
-
+    public function existsTicket($dataccess, $ticketID)
+    {
+        return $dataccess->existsTicket($ticketID);
+    }
     public function getPosts($dataccess)
     {
 
