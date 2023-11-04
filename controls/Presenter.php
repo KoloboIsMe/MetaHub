@@ -2,6 +2,9 @@
 
 namespace controls;
 
+use entities\Category;
+use entities\Post;
+
 class Presenter
 {
     private $outputData;
@@ -14,34 +17,37 @@ class Presenter
     public function showHomePage()
     {
         $content = '';
-        $content .= "<h2>Fil d'actualité</h2>";
-        $content .= "<div class='card-container1'>";
+   $content .= "<h2>Fil d'actualité</h2>
+                <div class='card-container1'>";
 
-        foreach ($this->outputData->getOutputData() as $post) {
-            $id = $post->getTicket()->getTicket_ID();
-            $content .= "
-                <div class='card'>
-                    <a href='posts&id=$id'>
-                    <div class='card-content'>
-                    <div class='post-header'>
-                        <img src='gui/images/user.png' id='userImg'>
-                        <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
-                    </div>
-                        <h3> " . $post->getTicket()->getTitle() . "</h3>
-                        <p>" . $post->getTicket()->getMessage() . "</p>
-                        <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
-                        <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
+            for ($i = 0; $i < 5; $i++) {
+                if ($this->outputData->getOutputData()[$i] instanceof Post) {
+                    $post = $this->outputData->getOutputData()[$i];
+                    $id = $post->getTicket()->getTicket_ID();
+                    $content .= "
+                    <div class='card'>
+                        <a href='posts&id=$id'>
+                        <div class='card-content'>
+                            <div class='post-header'>
+                                <img src='gui/images/user.png' id='userImg'>
+                                <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
+                            </div>
+                            <h3> " . $post->getTicket()->getTitle() . "</h3>
+                            <p>" . $post->getTicket()->getMessage() . "</p>
+                            <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
+                            <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
 
-            if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())){
-            $content .= "<div class='edit-delete'>
-                            <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
-                            <a href='/index.php?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
-                        </div>";
+            if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) {
+                $content .= "<div class='edit-delete'>
+                                <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
+                                <a href='/index.php?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
+                             </div>";
             }
-
-        $content .= "</div></a>
-                </div>";
-        }
+          $content .= " </div>
+                        </a>
+                    </div>";
+                }
+            }
         $content .= "
                 </div>
                 <div class='card-container2'>
@@ -56,18 +62,22 @@ class Presenter
                                 <div class='dot d5'></div>
                             </div>
                             <div class='category-list'>
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                    <li>Lorem ipsum dolor sit amet</li>
-                                </ul>
+                                <ul>";
+                        for ($i = 0; $i < count($this->outputData->getOutputData()); $i++){
+                            if ($this->outputData->getOutputData()[$i] instanceof Category) {
+                                $category = $this->outputData->getOutputData()[$i];
+                                $id = $category->getCategory_ID();
+                                $content .= "<a href='categories&id=$id'><li> #" . $category->getLabel() . "</li></a>";
+                            }
+                        }
+                    $content .="</ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            
+                           ";
+
+            $content.="
                 <div class='card-container2'>
                     <div class='card3'>
                         <div class='card-content'>

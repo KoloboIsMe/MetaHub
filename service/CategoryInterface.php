@@ -10,5 +10,6 @@ interface CategoryInterface
     public function getCategoryById($id);
 
     public function getPostsIdByCategoryId($id);
+    public function get5LastCategories();
 
 }

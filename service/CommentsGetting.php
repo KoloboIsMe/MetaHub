@@ -14,7 +14,7 @@ class CommentsGetting
 
     public function createComment($commentAccess, $text, $ticketID)
     {
-        $commentAccess->createComment($text, date("Y-m-d H:i:s"), $_SESSION['user_ID'], $ticketID);
+        $commentAccess->createComment($text, date("Y-m-d H:i"), $_SESSION['user_ID'], $ticketID);
     }
 
 }

@@ -34,12 +34,9 @@ class CategoriesGetting
         return $dataccess->getPostsIdByCategoryId($id);
     }
 
-    public function get5LastPosts($dataccess)
+    public function add5LastCategories($dataccess)
     {
-        $posts = [];
-        foreach ($dataccess->get5LastPostID() as $ticketId) {
-            $posts[] = $dataccess->getCategoryById($ticketId);
-        }
-        $this->outputData->setOutputData($posts);
+        $categories = $dataccess->get5LastCategories();
+        $this->outputData->addOutputData($categories);
     }
 }

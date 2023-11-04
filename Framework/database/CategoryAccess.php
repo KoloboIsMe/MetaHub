@@ -73,4 +73,17 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+    public function get5LastCategories(){
+        try {
+            $categories = [];
+            $statement = $this->dataAccess->prepare('SELECT * FROM category ORDER BY category_ID DESC LIMIT 5');
+            $statement->execute();
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $categories[] = new Category($data);
+            }
+            return $categories;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
 }

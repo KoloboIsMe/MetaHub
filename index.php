@@ -150,6 +150,7 @@ if(isset($_GET['action'])){
 if ('' == $url || '/' == $url) {
 
     $ticketsGetting->get5LastPosts($ticketAccessLector);
+    $categoriesGetting->add5LastCategories($categoryAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewHomepage($layout, $presenter))->display();
 
