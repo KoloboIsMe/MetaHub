@@ -3,7 +3,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: AnjaliOldLipi;
+    font-family: 'Comfortaa', sans-serif;
     box-sizing: border-box;
 }
 
@@ -50,7 +50,7 @@ header nav ul li a{
     margin-top: 0;
     margin-left: 4vh;
     font-size: 2vh;
-    font-family: AnjaliOldLipi;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 header nav ul li #headerLinks:hover{
@@ -364,12 +364,12 @@ header nav ul li #headerLinks:hover{
 .titreErreur {
     color: white;
     font-size: 30px;
-    font-family: AnjaliOldLipi
+    font-family: 'Comfortaa', sans-serif
 }
 
 p{
     color: white;
-    font-family: AnjaliOldLipi;
+    font-family: 'Comfortaa', sans-serif;
     margin-bottom: 1.5vh;
     /*
     background-color: #3e5f3e;
