@@ -139,7 +139,6 @@ class Presenter
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
                         <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
-
         foreach ($post->getCategories() as $category) {
             $content .= "<p id='category'>#" . $category->getLabel() . "</p>";
         }
@@ -149,14 +148,7 @@ class Presenter
                 </a>
             </div>
             <div class='comment-card'>
-            ";
-
-        foreach ($post->getComments() as $comment) {
-            $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
-        }
-
-        $content .= "
-                <div class='card-content'>
+            <div class='card-content'>
                     <form action='".$_GET['url']."?action=createComment&id=$id' method='POST'>
                     <h3 id='comment'>Commentaires</h3>
                     <div class='input-box'>
@@ -164,8 +156,13 @@ class Presenter
                     </div>
                     <input type='submit' class='btn' value='Ajouter'>
                     </form>
-                </div>
-            </div>";
+                </div>";
+
+        foreach ($post->getComments() as $comment) {
+            $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
+        }
+
+        $content .= "</div>";
 
         return $content;
     }
