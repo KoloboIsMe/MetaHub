@@ -54,23 +54,15 @@ class Presenter
                     <div class='card2'>
                         <div class='card-content'>
                             <h3> Catégories</h3>
-                            <div class='dot-container'>
-                                <div class='dot d1'></div>
-                                <div class='dot d2'></div>
-                                <div class='dot d3'></div>
-                                <div class='dot d4'></div>
-                                <div class='dot d5'></div>
-                            </div>
-                            <div class='category-list'>
-                                <ul>";
+                            <div class='category-list'>";
                         for ($i = 0; $i < count($this->outputData->getOutputData()); $i++){
                             if ($this->outputData->getOutputData()[$i] instanceof Category) {
                                 $category = $this->outputData->getOutputData()[$i];
                                 $id = $category->getCategory_ID();
-                                $content .= "<a href='categories&id=$id'><li> #" . $category->getLabel() . "</li></a>";
+                                $content .= "<a href='categories&id=$id'><li><img src='gui/images/dot.png' class='dotImg'> #" . $category->getLabel() . "</li></a>";
                             }
                         }
-                    $content .="</ul>
+                    $content .="
                             </div>
                         </div>
                     </div>
@@ -169,7 +161,7 @@ class Presenter
                 </div>";
 
         foreach ($post->getComments() as $comment) {
-            $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
+            $content .= "<div class='comment'><img src='gui/images/user.png' id='user-comment-img'><div class='comment-content'>  @" . $comment->getAuthor_username() . " : " . $comment->getText() . "</div></div>";
         }
 
         $content .= "</div>";
@@ -182,7 +174,7 @@ class Presenter
         $content = '';
         $content .= "<h2>Catégories</h2>";
     if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {
-        $content .= "<a href='ouais'><button >Créer une categorie</button></a>";
+        $content .= "<a href='ouais'><button ><img src='gui/images/add.png' id='add-button'></button></a>";
     }
         $content .= "<div class='card-container'>";
         foreach ($this->outputData->getOutputData() as $category) {
@@ -206,7 +198,8 @@ class Presenter
         $id = $category->getCategory_ID();
         $content .= "
                         <h2>#" . $category->getLabel() . "</h2>
-                        <p id='category-description'>" . $category->getDescription() . "</p>";
+                        <p id='category-description'>" . $category->getDescription() . "</p>
+                        <div class='card-container'>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
@@ -225,6 +218,7 @@ class Presenter
                                     </div></a>
                                 </div>";
         }
+        $content .= "</div>";
         return $content;
     }
 
@@ -302,7 +296,7 @@ class Presenter
                     <a href='users&id=$id'>
                     <div class='post-header'>
                         <img src='gui/images/user.png' id='usersImg'>
-                        <p id='card-username'>@ " . $user->getUsername() . "</p>
+                        <p id='username-list'>@ " . $user->getUsername() . "</p>
                     </div>
                     </a>";
         }
@@ -315,12 +309,13 @@ class Presenter
         $id = $user->getUser_ID();
         $content .= "
                     <a href='users&id=$id'>
-                        <h2>@" . $user->getUsername() . "</h2>";
+                        <h2>@" . $user->getUsername() . "</h2>
+                        <div class='card-container'>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
-                                <div class='card'>
+                                <div class='post-card'>
                                     <a href='posts&id=$id'>
                                     <div class='card-content'>
                                         <h3> " . $post->getTicket()->getTitle() . "</h3>
@@ -331,7 +326,8 @@ class Presenter
                                 </div>";
         }
 
-        $content .= "</a>";
+        $content .= "</div>
+                    </a>";
         return $content;
     }
 

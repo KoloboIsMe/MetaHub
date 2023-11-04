@@ -342,15 +342,32 @@ header nav ul li #headerLinks:hover{
 
 }
 
+
 #userImg{
     width: 8vh;
     height: 8vh;
+}
+
+#username-list{
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-size: 2.5vh;
+    border-radius: 3vw;
+    padding: 1vh;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 5px 10px #090909;
 }
 
 #usersImg{
     width: 5vh;
     height: 5vh;
     margin-left: 4vh;
+}
+
+#user-comment-img{
+    height: 5vh;
+    width: 5vh;
 }
 
 #time{
@@ -369,6 +386,24 @@ header nav ul li #headerLinks:hover{
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 3vh;
+}
+
+.comment{
+    width: fit-content;
+    font-size: 2vh;
+    border-radius: 3vw;
+    box-shadow: inset 25px 25px 30px #191919, inset -25px -25px 30px #242424;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+
+.comment-content{
+    margin-top: 1.5vh;
+    margin-left: 0.5vh;
 }
 
 .input{
@@ -512,7 +547,7 @@ p{
 
 .category-card{
     padding-bottom: 8vh;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
 }
 
 .card-content{
@@ -561,6 +596,18 @@ h2{
     margin-bottom: 4vh;
 }
 
+button{
+    background-color: transparent;
+    border-style: none;
+}
+
+#add-button{
+    height: 3vh;
+    width: 3vh;
+    margin-top: 3vh;
+    margin-left: 5vh;
+}
+
 .edit-delete{
     display: flex;
     justify-content: right;
@@ -574,20 +621,15 @@ h2{
     margin-left: 1vh;
 }
 
-.dot-container{
-    margin-left: 2vh;
-    float: left;
+.category-list a li{
+    color: white;
+    font-size: 3vh;
 }
 
-.dot-container div{
-    display: flex;
-    justify-content: center;
-    background: #42B34A;
-    border-radius: 50%;
-    width: 1.5vh;
-    height: 1.5vh;
-    margin-top: 2vh;
-    margin-bottom: 4.7vh;
+.dotImg{
+    height: 3vh;
+    width: 3vh;
+    margin-top: 2.5vh;
 }
 
 footer{
