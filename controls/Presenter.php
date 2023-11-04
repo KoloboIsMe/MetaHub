@@ -115,8 +115,8 @@ class Presenter
 
             if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())){
                 $content .= "<div class='edit-delete'>
-                            <a href='".$_GET['url']."?action=editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
-                            <a href='".$_GET['url']."?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
+                            <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
+                            <a href='/index.php?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
                         </div>";
             }
 
@@ -272,6 +272,7 @@ class Presenter
     {
         $post = $this->outputData->getOutputData();
         $id = $post->getTicket()->getTicket_ID();
+        $title = $post->getTicket()->getTitle();
         return "
         <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
         <div id='container'>
@@ -279,7 +280,7 @@ class Presenter
                 <h1>Edition</h1>
         
                 <label><b>Titre</b></label>
-                <input type='text' placeholder=\" Entrer le titre du post \" name='title' value='" . $post->getTicket()->getTitle() . "' required>
+                <input type='text' placeholder=\" Entrer le titre du post \" name='title' value=\"" . htmlspecialchars($title, ENT_QUOTES) . "\" required></input>
         
                 <label><b>Contenu du post</b></label>
                 <textarea placeholder='Entrer le contenu du post' name='message' required>" . $post->getTicket()->getMessage() . "</textarea>
