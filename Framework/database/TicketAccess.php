@@ -150,7 +150,7 @@ class TicketAccess implements TicketInterface
     public function getCategoryIdByLabel($label)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
             $statement->execute([
                 ':label' => $label,
             ]);
