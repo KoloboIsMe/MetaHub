@@ -289,17 +289,19 @@ class Presenter
     public function showUsers()
     {
         $content = '';
-        $content .= "<h2>Utilisateurs</h2>";
+        $content .= "<h2>Utilisateurs</h2>
+                    <div class='card-container'>";
         foreach ($this->outputData->getOutputData() as $user) {
             $id = $user->getUser_ID();
             $content .= "
-                    <a href='users&id=$id'>
-                    <div class='post-header'>
-                        <img src='gui/images/user.png' id='usersImg'>
-                        <p id='username-list'>@ " . $user->getUsername() . "</p>
-                    </div>
-                    </a>";
+                        <a href='users&id=$id'>
+                        <div class='post-header'>
+                            <img src='gui/images/user.png' id='usersImg'>
+                            <p id='username-list'>@ " . $user->getUsername() . "</p>
+                        </div>
+                        </a>";
         }
+        $content .= "</div>";
         return $content;
     }
 

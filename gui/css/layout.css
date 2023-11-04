@@ -395,6 +395,7 @@ header nav ul li #headerLinks:hover{
     box-shadow: inset 25px 25px 30px #191919, inset -25px -25px 30px #242424;
     margin-top: 2vh;
     margin-left: 2vh;
+    padding-right: 3vh;
     display: flex;
     flex-direction: row;
     color: white;
@@ -403,7 +404,7 @@ header nav ul li #headerLinks:hover{
 
 .comment-content{
     margin-top: 1.5vh;
-    margin-left: 0.5vh;
+    margin-left: 1.5vh;
 }
 
 .input{
@@ -415,6 +416,7 @@ header nav ul li #headerLinks:hover{
     outline: none;
     padding-left: 2vh;
     padding-top: 3vh;
+    padding-bottom: 3vh;
     color: white;
     font-size: 2vh;
     box-shadow: inset 25px 25px 30px #191919, inset -25px -25px 30px #242424;
