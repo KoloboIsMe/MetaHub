@@ -18,7 +18,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    z-index: 10000;
+    z-index: 100;
 }
 
 
@@ -137,6 +137,7 @@ header nav ul li #headerLinks:hover{
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        z-index: 1000;
     }
     header #nav_check:checked ~ nav{
         right: 0;
@@ -221,7 +222,7 @@ header nav ul li #headerLinks:hover{
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        z-index: 10000;
+        z-index: 1000;
     }
     header #nav_check:checked ~ nav{
         right: 0;
