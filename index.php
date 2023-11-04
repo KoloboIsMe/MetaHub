@@ -81,7 +81,10 @@ session_set_cookie_params(3600);
 session_start();
 
 if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
-    $layoutTemplate = 'gui/layoutLogged.html';
+    if(isset($_SESSION['level']) && $_SESSION['level'] > 0)
+        $layoutTemplate = 'gui/layoutLoggedAdmin.html';
+    else
+        $layoutTemplate = 'gui/layoutLogged.html';
 } else {
     $layoutTemplate = 'gui/layout.html';
 }

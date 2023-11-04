@@ -173,8 +173,11 @@ class Presenter
     public function showCategories()
     {
         $content = '';
-        $content .= "<h2>Catégories</h2>
-                     <div class='card-container'>";
+        $content .= "<h2>Catégories</h2>";
+    if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {
+        $content .= "<a href='ouais'><button >Créer une categorie</button></a>";
+    }
+        $content .= "<div class='card-container'>";
         foreach ($this->outputData->getOutputData() as $category) {
             $id = $category->getCategory_ID();
             $content .= "
