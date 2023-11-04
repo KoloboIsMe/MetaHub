@@ -180,7 +180,7 @@ class TicketAccess implements TicketInterface
         }
     }
 
-    public function isTicketOwner($dataccess, $ticketID, $userID)
+    public function isTicketOwner($ticketID, $userID)
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT author FROM ticket where ticket_ID = :ticketID');
