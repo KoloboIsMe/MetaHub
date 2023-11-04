@@ -28,7 +28,7 @@ class Presenter
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
                         <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
-            if (isset($_SESSION['level']) && $_SESSION['level'] > 0 || $_SESSION['user_ID'] == $post->getUser()->getUser_ID()){
+            if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())){
             $content .= "<div class='edit-delete'>
                             <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
                             <a href='deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
