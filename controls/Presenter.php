@@ -284,15 +284,16 @@ class Presenter
     public function showUsers()
     {
         $content = '';
+        $content .= "<h2>Utilisateurs</h2>";
         foreach ($this->outputData->getOutputData() as $user) {
             $id = $user->getUser_ID();
             $content .= "
-                <div class='card'>
                     <a href='users&id=$id'>
-                    <div class='card-content'>
-                        <h3> " . $user->getUsername() . "</h3>
-                    </div></a>
-                </div>";
+                    <div class='post-header'>
+                        <img src='gui/images/user.png' id='usersImg'>
+                        <p id='card-username'>@ " . $user->getUsername() . "</p>
+                    </div>
+                    </a>";
         }
         return $content;
     }
@@ -302,10 +303,8 @@ class Presenter
         $content = '';
         $id = $user->getUser_ID();
         $content .= "
-                <div class='card'>
                     <a href='users&id=$id'>
-                    <div class='card-content'>
-                        <h3>" . $user->getUsername() . "</h3>";
+                        <h2>@" . $user->getUsername() . "</h2>";
 
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
@@ -315,15 +314,13 @@ class Presenter
                                     <div class='card-content'>
                                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                                         <p>" . $post->getTicket()->getMessage() . "</p>
-                                        <time>" . $post->getTicket()->getDate() . " </time>
+                                        <time id='time'>" . $post->getTicket()->getDate() . " </time>
                                         <p>" . $post->getTicket()->getTicket_ID() . "</p>
                                     </div></a>
                                 </div>";
         }
 
-        $content .= "
-                    </div></a>
-                </div>";
+        $content .= "</a>";
         return $content;
     }
 
