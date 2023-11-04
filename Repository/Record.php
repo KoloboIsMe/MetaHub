@@ -18,7 +18,11 @@ class Record
         }
     }
     public function getData() : array {
-        return $this->data;
+        if(isset($this->data))
+        {
+            return $this->data;
+        }
+        return [];
     }
     public function addData(Entity ...$data) : Record {
         foreach ($data as $datum) {

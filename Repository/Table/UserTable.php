@@ -20,19 +20,6 @@ class UserTable
         $last_connexion = $data[4];
         return new Category($ID, $passsword, $username, $first_connexion, $last_connexion);
     }
-    public function isUser($username, $password) : bool
-    {
-        $request = "SELECT $password FROM users where $username = :username LIMIT $this->limit";
-        if($response = $this->execute($request) === FALSE){
-            return FALSE;
-        }
-        $user = $response->fetch(PDO::FETCH_ASSOC);
-
-        if(isset($user['password']) && password_verify($password, $user['password']))
-            return TRUE;
-        else
-            return FALSE;
-    }
     public function register(string $username, string $password) : bool
     {
         if($this->exists($username, 'username'))

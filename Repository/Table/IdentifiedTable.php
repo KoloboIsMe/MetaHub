@@ -22,25 +22,6 @@ trait IdentifiedTable
         }
         return $this->execute($request);
     }
-    public function insert(Entity ...$entities) : bool
-    {
-        foreach($entities as $entity)
-        {
-            $part1 = 'INSERT INTO' . self::TABLE . '(';
-            $part2 = ') VALUES (';
-            foreach ($entity->toArray() as $attribute => $value)
-            {
-                $part1 .= $attribute;
-                $part2 .= $value;
-            }
-            $request = $part1 . $part2 . ')';
-            if ($this->execute($request) === FALSE)
-            {
-                return FALSE;
-            }
-        }
-        return TRUE;
-    }
     public function delete(int ...$IDs) : bool
     {
         foreach($IDs as $ID)

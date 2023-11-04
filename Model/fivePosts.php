@@ -8,18 +8,20 @@ global $ticketTable, $categorizedTable, $commentTable;
 
 $limit = $ticketTable->getLimit();
 
+// Get 5 tickets
 if (($tickets = $ticketTable->setLimit('5')->select()) === FALSE)
 {
     return;
 }
 
 $ticketTable->setLimit($limit);
+unset($limit);
 
+// Get categories and comment of the 5 tickets
 foreach ($tickets->getData() as $ticket)
 {
     $categories[] = $categorizedTable->categoriesOf($ticket->getId());
     $comments[] = $commentTable->commentsOf($ticket->getId());
 }
 
-unset($limit);
 return;

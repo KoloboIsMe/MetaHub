@@ -22,12 +22,4 @@ class CommentTable
         $ticket = $data[4];
         return new Category($ID, $text, $date, $author, $ticket);
     }
-    public function commentsOn(int $ticket) : array|bool
-    {
-        if(($record = $this->select($ticket))=== FALSE)
-        {
-            return FALSE;
-        }
-        return $record->getData();
-    }
 }
