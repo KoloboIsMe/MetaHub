@@ -9,9 +9,20 @@ class Card
     private string $message;
     private string $date;
     private string $id;
-    private array $categories;
-    private array $comments;
-    public function __construct()
+    public function __construct(Ticket $ticket, private array $categories, private array $comments)
+    {
+        $ticket->author();
+        $this->author = $ticket->author();
+        $this->title = $ticket['title'];
+        $this->message = $ticket['message'];
+        $this->date = $ticket['date'];
+        $this->id = $ticket['id'];
+    }
+    public function showCategories()
+    {
+
+    }
+    public function showComments()
     {
 
     }
@@ -26,6 +37,8 @@ class Card
                 <p>$this->message </p>
                 <time>$this->date</time>
                 <p>$this->id</p>
+                $this->showCategories()
+                $this->showComments()
             </div>
             </a>
         </div>";

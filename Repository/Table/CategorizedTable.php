@@ -22,11 +22,25 @@ class CategorizedTable
     }
     public function categoriesOf(int $ticket) : array|bool
     {
-        if ($record = $this->select($ticket) === FALSE)
+        if($record = $this->select($ticket) === FALSE)
         {
             return FALSE;
         }
-        return $record->getData();
+        foreach ($record->getData() as $ticket) {
+            $categories[] = $ticket->category();
+        }
+        return $categories;
+    }
+    public function ticketsOf(int $category) : array|bool
+    {
+        if($record = $this->select($category) === FALSE)
+        {
+            return FALSE;
+        }
+        foreach ($record->getData() as $ticket) {
+            $tickets[] = $ticket->ticket();
+        }
+        return $tickets;
     }
     public function select(int $ticket = null, int $category = null) : Record|null
     {

@@ -19,6 +19,28 @@ class Comment extends Entity
     {
         parent::__construct([$ID, $text, $date, $author, $ticket]);
     }
+    public function author() : User
+    {
+        global $userTable;
+
+        if($record = $userTable->select($this->author) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $record->getData()[0];
+    }
+    public function ticket() : User
+    {
+        global $ticketTable;
+
+        if($record = $ticketTable->select($this->author) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $record->getData()[0];
+    }
     public function setText(string $text) : Comment
     {
         $this->text = $text;

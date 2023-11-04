@@ -24,6 +24,17 @@ class Ticket extends Entity
             'author' => $author
         ));
     }
+    public function author() : User
+    {
+        global $userTable;
+
+        if($record = $userTable->select($this->author) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $record->getData()[0];
+    }
     static function post(string $title, string $message, int $author)
     {
         return new Ticket(array(
