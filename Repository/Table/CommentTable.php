@@ -11,6 +11,7 @@ use Comment;
 class CommentTable
 {
     use BasicTable;
+    use IdentifiedTable;
     const TABLE = 'comment';
     private function newEntity(array $data) : Comment
     {
@@ -20,5 +21,13 @@ class CommentTable
         $author = $data[3];
         $ticket = $data[4];
         return new Category($ID, $text, $date, $author, $ticket);
+    }
+    public function commentsOn(int $ticket) : array|bool
+    {
+        if(($record = $this->select($ticket))=== FALSE)
+        {
+            return FALSE;
+        }
+        return $record->getData();
     }
 }

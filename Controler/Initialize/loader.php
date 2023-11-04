@@ -8,26 +8,28 @@
 require 'constants.php';
 require 'functions.php';
 
-$databaseDirectory = __DIR__ . '/../../Framework/Repository';
-require "$databaseDirectory/Connexion.php";
-require "$databaseDirectory/Record.php";
+$repositoryDirectory = __DIR__ . '/../../Repository';
+require "$repositoryDirectory/Connexion.php";
+require "$repositoryDirectory/Record.php";
 
-$entityDirectory = "$databaseDirectory/Entity";
-require "$entityDirectory/ID.php";
-require "$entityDirectory/Entity.php";
-require "$entityDirectory/Categorized.php";
-require "$entityDirectory/Category.php";
-require "$entityDirectory/Comment.php";
-require "$entityDirectory/Ticket.php";
-require "$entityDirectory/User.php";
+require "$repositoryDirectory/Entity/ID.php";
+require "$repositoryDirectory/Entity/tuple.php";
+require "$repositoryDirectory/Entity/Entity.php";
+require "$repositoryDirectory/Entity/Categorized.php";
+require "$repositoryDirectory/Entity/Category.php";
+require "$repositoryDirectory/Entity/Comment.php";
+require "$repositoryDirectory/Entity/Ticket.php";
+require "$repositoryDirectory/Entity/User.php";
 
-$tableDirectory = "$databaseDirectory/Table";
-require "$tableDirectory/Requests.php";
-require "$tableDirectory/CategorizedTable.php";
-require "$tableDirectory/CategoryTable.php";
-require "$tableDirectory/CommentTable.php";
-require "$tableDirectory/TicketTable.php";
-require "$tableDirectory/UserTable.php";
+require "$repositoryDirectory/Table/BasicTable.php";
+require "$repositoryDirectory/Table/IdentifiedTable.php";
+require "$repositoryDirectory/Table/CategorizedTable.php";
+require "$repositoryDirectory/Table/CategoryTable.php";
+require "$repositoryDirectory/Table/CommentTable.php";
+require "$repositoryDirectory/Table/TicketTable.php";
+require "$repositoryDirectory/Table/UserTable.php";
+
+require __DIR__ . '/../Object/Card.php';
 
 require 'singletons.php';
 

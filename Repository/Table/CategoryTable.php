@@ -11,6 +11,7 @@ use Category;
 class CategoryTable
 {
     use BasicTable;
+    use IdentifiedTable;
     const TABLE = 'category';
     private function newEntity(array $data) : Category
     {

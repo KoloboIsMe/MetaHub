@@ -6,6 +6,8 @@
 ///  extended by any of them.
 /// TODO : Apply parameters verification to methods.
 namespace Framework\Database\Entity;
+use Exception;
+
 abstract class Entity
 {
     public function __construct(array $data)

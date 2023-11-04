@@ -2,6 +2,8 @@
 
 namespace Controler\Element;
 
+use Framework\Database\Entity\Ticket;
+
 class Card
 {
     private string $author;
@@ -20,11 +22,21 @@ class Card
     }
     public function showCategories()
     {
-
+        $display = '';
+        foreach ($this->categories as $category)
+        {
+            $display .= "<p> $category->getLabel() </p>";
+        }
+        return $display;
     }
     public function showComments()
     {
-
+        $display = '';
+        foreach ($this->categories as $category)
+        {
+            $display .= "<p> $category->getLabel() </p>";
+        }
+        return $display;
     }
     public function __toString(): string
     {

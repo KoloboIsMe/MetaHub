@@ -22,7 +22,7 @@ class CategorizedTable
     }
     public function categoriesOf(int $ticket) : array|bool
     {
-        if($record = $this->select($ticket) === FALSE)
+        if(($record = $this->select($ticket)) === FALSE)
         {
             return FALSE;
         }
@@ -33,7 +33,7 @@ class CategorizedTable
     }
     public function ticketsOf(int $category) : array|bool
     {
-        if($record = $this->select($category) === FALSE)
+        if(($record = $this->select($category)) === FALSE)
         {
             return FALSE;
         }

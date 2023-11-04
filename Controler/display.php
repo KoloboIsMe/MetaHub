@@ -9,6 +9,11 @@ $viewDirectory = __DIR__ . '/../View';
 $bodyDirectory = "$viewDirectory/Body";
 $elementDirectory = "$viewDirectory/Element";
 
+if (!isset($page))
+{
+    return;
+}
+
 $title = $page;
 require "$elementDirectory/head.php";
 echo '<body>';
@@ -16,7 +21,6 @@ require "$elementDirectory/header.php";
 
 switch ($page) {
     case 'homepage' :
-        // declare needed variables
         require 'homepage.php';
         break;
     case 'login' :

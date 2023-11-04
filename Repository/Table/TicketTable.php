@@ -12,15 +12,16 @@ use PDO;
 class TicketTable
 {
     use BasicTable;
+    use IdentifiedTable;
     const TABLE = 'ticket';
     private function newEntity(array $data) : Ticket
     {
-        $ID = $data['ticket_ID'];
-        $title = $data['title'];
-        $message = $data['message'];
-        $date = $data['date'];
-        $author = $data['author'];
-        return new Ticket($ID, $title, $message, $date, $author);
+        $ticket['id'] = $data['ticket_ID'];
+        $ticket['title'] = $data['title'];
+        $ticket['message'] = $data['message'];
+        $ticket['date'] = $data['date'];
+        $ticket['author'] = $data['author'];
+        return new Ticket($ticket);
     }
     public function getTicketsWithCategory($CategoryID)
     {

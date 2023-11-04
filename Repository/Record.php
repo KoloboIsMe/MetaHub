@@ -7,7 +7,7 @@
 
 namespace Framework\database;
 
-use Framework\entities\Entity;
+use Framework\Database\Entity\Entity;
 
 class Record
 {
@@ -26,10 +26,7 @@ class Record
         }
         return $this;
     }
-    public function addDatum(Entity|null $datum, int|null $index = null) : Record {
-        if (empty($datum)) {
-            return $this;
-        }
+    public function addDatum(Entity $datum, int|null $index = null) : Record {
         if (isset($index)) {
             $this->data[$index] = $datum;
         } else {
