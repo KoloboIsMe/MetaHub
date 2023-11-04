@@ -13,7 +13,7 @@ class UsersGetting
 
     public function existsUser($dataccess, $user_ID)
     {
-        $this->outputData->setOutputData($dataccess->existsUser($user_ID));
+        return $dataccess->existsUser($user_ID);
     }
     public function authenticate($username, $password, $dataccess)
     {
