@@ -35,7 +35,7 @@ class Presenter
             if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())){
             $content .= "<div class='edit-delete'>
                             <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
-                            <a href='deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
+                            <a href='/index.php?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
                         </div>";
             }
 
@@ -105,8 +105,8 @@ class Presenter
 
             if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())){
                 $content .= "<div class='edit-delete'>
-                            <a href='editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
-                            <a href='deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
+                            <a href='".$_GET['url']."?action=editTicket&id=$id'><img src='gui/images/edit.png' id='editImg'></a>
+                            <a href='".$_GET['url']."?action=deleteTicketAction&id=$id'><img src='gui/images/delete.png' id='deleteImg'></a>
                         </div>";
             }
 
@@ -154,9 +154,10 @@ class Presenter
         foreach ($post->getComments() as $comment) {
             $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
         }
+
         $content .= "
                 <div class='card-content'>
-                    <form action='createComment&id=$id' method='POST'>
+                    <form action='".$_GET['url']."?action=createComment&id=$id' method='POST'>
                     <h3 id='comment'>Commentaires</h3>
                     <div class='input-box'>
                         <input type='text' class='input' placeholder='Ajoutez un commentaire' name='text'  required></input>
@@ -221,7 +222,7 @@ class Presenter
         <link href='gui/css/CategorySelectionBar.css' rel='stylesheet'></link>
         <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
         <div id='container'>
-            <form action=createPostsAction method='POST'>
+            <form action='/".$_GET['url']."?action=createPostsAction' method='POST'>
                 <h1>Nouveau Post</h1>
         
                 <label><b>Titre</b></label>
@@ -261,7 +262,7 @@ class Presenter
         return "
         <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
         <div id='container'>
-            <form action='editTicketAction&id=$id' method='POST'>
+            <form action='/index.php?action=editTicketAction&id=$id' method='POST'>
                 <h1>Edition</h1>
         
                 <label><b>Titre</b></label>

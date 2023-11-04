@@ -87,62 +87,59 @@ if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 }
 
 
-if ('registerAction' == $url && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])) {
+if(isset($_GET['action'])){
+    if ('registerAction' == $_GET['action'] && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['password_confirmation'])) {
 
-    $page = $_GET['id'] ?? $page = null;
-    $error = $controller->registerAction($usersGetting, $userAccess);
-    if ($error) {
-        $url = 'register';
-    } else
-        $url = 'login_verification';
-}
-if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['password'])) {
-
-    $page = $_GET['id'] ?? $page = null;
-    $error = $controller->authenticateAction($usersGetting, $userAccess);
-    if ($error) {
-        $page ? $redirect = 'login&id=' . $page : $redirect = 'login';
-        $url = 'error';
-    } else {
-        $page ? header("refresh:0;url=/$page") : header("refresh:0;url=/");
-        $url = '/';
-    }
-}
-if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
-
-    $controller->createTicketAction($ticketsGetting, $ticketAccess);
-    $url = '/';
-    header("refresh:0;url=/");
-}
-if(isset($_SESSION['isLogged']) && $_SESSION['isLogged']){
-
-    if ('deleteTicketAction' == $url && isset($_GET['id'])) {
-
-        $error = $controller->deleteTicket($ticketsGetting, $ticketAccess);
+        $page = $_GET['id'] ?? $page = null;
+        $error = $controller->registerAction($usersGetting, $userAccess);
         if ($error) {
-            $redirect = '/';
+            $url = 'register';
+        } else
+            $url = 'login_verification';
+    }
+    if ('login_verification' == $_GET['action'] && isset($_POST['username']) && isset($_POST['password'])) {
+
+        $page = $_GET['id'] ?? $page = null;
+        $error = $controller->authenticateAction($usersGetting, $userAccess);
+        if ($error) {
+            $page ? $redirect = 'login&id=' . $page : $redirect = 'login';
             $url = 'error';
         } else {
-            $url = '/';
-            header("refresh:0;url=/");
+            $page ? header("refresh:0;url=/$page") : header("refresh:0;url=/");
         }
     }
-    if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+    if ('createPostsAction' == $_GET['action'] && isset($_POST["title"]) && isset($_POST["message"])) {
 
-        $error = $controller->editTicket($ticketsGetting, $ticketAccess);
-        if ($error) {
-            $redirect = '/';
-            $url = 'error';
-        } else {
-            $url = '/';
-            header("refresh:0;url=/");
-        }
+        $controller->createTicketAction($ticketsGetting, $ticketAccess);
+        header("refresh:0;url=/");
     }
-    if ('createComment' == $url && isset($_POST["text"]) && isset($_GET['id'])) {
+    if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 
-        $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
-        $url = 'posts';
-        header("refresh:0;url=/posts&id=".$_GET['id']);
+        if ('deleteTicketAction' == $_GET['action'] && isset($_GET['id'])) {
+
+            $error = $controller->deleteTicket($ticketsGetting, $ticketAccess);
+            if ($error) {
+                $redirect = '/';
+                $url = 'error';
+            } else {
+                header("refresh:0;url=/");
+            }
+        }
+        if ('editTicketAction' == $_GET['action'] && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+
+            $error = $controller->editTicket($ticketsGetting, $ticketAccess);
+            if ($error) {
+                $redirect = '/';
+                $url = 'error';
+            } else {
+                header("refresh:0;url=/");
+            }
+        }
+        if ('createComment' == $_GET['action'] && isset($_POST["text"]) && isset($_GET['id'])) {
+
+            $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
+            header("refresh:0;url=/posts&id=" . $_GET['id']);
+        }
     }
 }
 
