@@ -12,6 +12,8 @@ class ViewHomepage extends View
         if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
+        $this->searchBar = true;
+
         $this->content = $presenter->showHomepage();
     }
 }
