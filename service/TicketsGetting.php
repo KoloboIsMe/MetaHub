@@ -51,7 +51,7 @@ class TicketsGetting
 
     public function createTicket($dataccess, $title, $message)
     {
-        return $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
+        return $dataccess->createTicket($title, $message, date("Y-m-d H:i:s"), $_SESSION['user_ID']);
     }
 
     public function addCategoriesToTicket($ticketAccess, $categories, $ticketID)
