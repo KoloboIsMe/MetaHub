@@ -23,7 +23,10 @@ class Presenter
                 <div class='card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
+                    <div class='post-header'>
+                        <img src='gui/images/user.png' id='userImg'>
+                        <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
+                    </div>
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
@@ -88,7 +91,10 @@ class Presenter
                 <div class='post-card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
+                        <div class='post-header'>
+                            <img src='gui/images/user.png' id='userImg'>
+                            <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
+                        </div>
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
@@ -118,7 +124,10 @@ class Presenter
             <div class='card'>
                     <a href='posts&id=$id'>
                     <div class='card-content'>
-                        <p id='card-username'><B>Posté par :</B> @" . $post->getUser()->getUsername() . "</p>
+                        <div class='post-header'>
+                            <img src='gui/images/user.png' id='userImg'>
+                            <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
+                        </div>
                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
