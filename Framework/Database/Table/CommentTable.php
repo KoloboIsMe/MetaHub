@@ -10,7 +10,7 @@ use Comment;
 
 class CommentTable
 {
-    use Requests;
+    use BasicTable;
     const TABLE = 'comment';
     private function newEntity(array $data) : Comment
     {

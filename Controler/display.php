@@ -9,6 +9,10 @@ $viewDirectory = __DIR__ . '/../View';
 $bodyDirectory = "$viewDirectory/Body";
 $elementDirectory = "$viewDirectory/Element";
 
+$title = $page;
+require "$elementDirectory/head.php";
+echo '<body>';
+require "$elementDirectory/header.php";
 
 switch ($page) {
     case 'homepage' :
@@ -34,10 +38,9 @@ switch ($page) {
         require  "$bodyDirectory/notFound.php";
         return;
 }
-$title = $page;
-require "$elementDirectory/head.php";
-require "$elementDirectory/header.php";
-require "$bodyDirectory/$page.php";
 require "$elementDirectory/footer.php";
+echo '</body>';
+echo '</html>';
+
 
 return;

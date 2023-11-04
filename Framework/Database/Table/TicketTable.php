@@ -6,20 +6,21 @@
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Table;
 
+use Framework\Database\Entity\Ticket;
 use PDO;
 
 class TicketTable
 {
-    use Requests;
+    use BasicTable;
     const TABLE = 'ticket';
-    private function newEntity(array $data) : \Category
+    private function newEntity(array $data) : Ticket
     {
-        $ID = $data[0];
-        $title = $data[1];
-        $message = $data[2];
-        $date = $data[3];
-        $author = $data[4];
-        return new Category($ID, $title, $message, $date, $author);
+        $ID = $data['ticket_ID'];
+        $title = $data['title'];
+        $message = $data['message'];
+        $date = $data['date'];
+        $author = $data['author'];
+        return new Ticket($ID, $title, $message, $date, $author);
     }
     public function getTicketsWithCategory($CategoryID)
     {

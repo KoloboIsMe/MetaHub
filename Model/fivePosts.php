@@ -2,22 +2,21 @@
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////  FIVE POSTS  ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/// The Fie Posts. Used to store 5 posts and their author's username in $posts.
+/// The Five Posts model. Used to store 5 posts and their author's username in $posts.
 /// TODO : Find a better name for the file...
-global $ticketTable, $userTable;
+global $ticketTable, $userTable, $commentTable, $categoryTable, $categorizedTable;
 
 $limit = $ticketTable->getLimit();
+
 if ($response = $ticketTable->setLimit('5')->select() === FALSE)
 {
     $posts = FALSE;
     return;
 }
 
-$data = $response->getData();
-
-foreach ($data as $datum)
+foreach ($response->getData() as $ticket)
 {
-    $datum['username'] = $userTable->select($datum['author']);
+    $datum['username'] = $userTable->select($ticket['author']);
 }
 
 $posts = $data;

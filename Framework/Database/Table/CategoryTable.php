@@ -10,7 +10,7 @@ use Category;
 
 class CategoryTable
 {
-    use Requests;
+    use BasicTable;
     const TABLE = 'category';
     private function newEntity(array $data) : Category
     {

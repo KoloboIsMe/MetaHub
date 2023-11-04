@@ -8,7 +8,7 @@ namespace Framework\Database\Table;
 
 class UserTable
 {
-    use Requests;
+    use BasicTable;
     const TABLE = 'user';
     private function newEntity(array $data) : \User
     {
