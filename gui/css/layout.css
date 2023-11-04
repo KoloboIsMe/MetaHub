@@ -264,7 +264,7 @@ header nav ul li #headerLinks:hover{
     }
 
     .hamburger.active .l3 {
-        transform: translateY(-17px) rotate(-135deg);
+        transform: translateY(-19px) rotate(-135deg);
         width: 3.6vh;
     }
 
@@ -376,6 +376,13 @@ p{
     padding: 10px 25px;
     border-radius: 0 0 30px 30px;
     */
+}
+
+#category-description{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 2vh;
+    margin-top: 3vh;
+    margin-left: 5vh;
 }
 
 .comment-card{
