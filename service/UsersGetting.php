@@ -23,7 +23,7 @@ class UsersGetting
 
     public function register($username, $password, $dataccess)
     {
-        return $dataccess->register($username, $password, date("Y-m-d"));
+        return $dataccess->register($username, $password, date("Y-m-d H:i:s"));
     }
 
     public function getUserByUsername($dataccess, $username)

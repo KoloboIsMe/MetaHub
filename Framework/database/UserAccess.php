@@ -101,7 +101,7 @@ class UserAccess implements UserInterface
         try {
             $statement = $this->dataAccess->prepare('UPDATE user SET last_connexion = :date WHERE user_ID = :user_ID');
             $statement->execute([
-                ':date' => date("Y-m-d"),
+                ':date' => date("Y-m-d H:i:s"),
                 ':user_ID' => $user_ID,
             ]);
         } catch (PDOException $e) {
