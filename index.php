@@ -55,6 +55,7 @@ $userAccessLector = new database\UserAccess($dbLector);
 
 $ticketAccess = new database\TicketAccess($dbAdmin);
 $userAccess = new database\UserAccess($dbAdmin);
+$commentAccess = new database\CommentAccess($dbAdmin);
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new service\OutputData();
@@ -110,29 +111,38 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
 if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
 
     $controller->createTicketAction($ticketsGetting, $ticketAccess);
-//    $url = '/';
-//    header("refresh:0;url=/");
+    $url = '/';
+    header("refresh:0;url=/");
 }
-if ('deleteTicketAction' == $url && isset($_GET['id'])) {
+if(isset($_SESSION['isLogged']) && $_SESSION['isLogged']){
 
-    $error = $controller->deleteTicket($ticketsGetting,$ticketAccess);
-    if ($error) {
-        $redirect = '/';
-        $url = 'error';
-    }else{
-        $url = '/';
-        header("refresh:0;url=/");
+    if ('deleteTicketAction' == $url && isset($_GET['id'])) {
+
+        $error = $controller->deleteTicket($ticketsGetting, $ticketAccess);
+        if ($error) {
+            $redirect = '/';
+            $url = 'error';
+        } else {
+            $url = '/';
+            header("refresh:0;url=/");
+        }
     }
-}
-if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+    if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
 
-    $error = $controller->editTicket($ticketsGetting,$ticketAccess);
-    if ($error) {
-        $redirect = '/';
-        $url = 'error';
-    }else{
-        $url = '/';
-        header("refresh:0;url=/");
+        $error = $controller->editTicket($ticketsGetting, $ticketAccess);
+        if ($error) {
+            $redirect = '/';
+            $url = 'error';
+        } else {
+            $url = '/';
+            header("refresh:0;url=/");
+        }
+    }
+    if ('createComment' == $url && isset($_POST["text"]) && isset($_GET['id'])) {
+
+        $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
+        $url = 'posts';
+        header("refresh:0;url=/posts&id=".$_GET['id']);
     }
 }
 

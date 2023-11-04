@@ -16,4 +16,19 @@ class CommentAccess implements CommentInterface
         $this->dataAccess = $dataAccess;
     }
 
+    public function createComment($text,$date, $user_ID, $ticket_ID){
+
+        try {
+            $statement = $this->dataAccess->prepare("INSERT INTO comment (text, date, author, ticket) VALUES (:text, :date, :user_ID, :ticket_ID)");
+            $statement->execute(array(
+                ':text' => $text,
+                ':date' => $date,
+                ':user_ID' => $user_ID,
+                ':ticket_ID' => $ticket_ID
+            ));
+        } catch (\PDOException $e) {
+            throw new \PDOException("Error creating comment");
+        }
+    }
+
 }

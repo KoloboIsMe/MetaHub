@@ -12,4 +12,9 @@ class CommentsGetting
         $this->outputData = $outputData;
     }
 
+    public function createComment($commentAccess, $text, $ticketID)
+    {
+        $commentAccess->createComment($text, date("Y-m-d"), $_SESSION['user_ID'], $ticketID);
+    }
+
 }

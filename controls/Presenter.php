@@ -139,27 +139,33 @@ class Presenter
                         <p>" . $post->getTicket()->getMessage() . "</p>
                         <time id='time'><B>Publié le " . $post->getTicket()->getDate() . "</B> </time>
                         <p id='post-number'>Post n° " . $post->getTicket()->getTicket_ID() . "</p>";
+
+        foreach ($post->getCategories() as $category) {
+            $content .= "<p id='category'>#" . $category->getLabel() . "</p>";
+        }
+
         $content .= "            
                 </div>
                 </a>
             </div>
             <div class='comment-card'>
-                <div class='card-content'>
-                    <h3 id='comment'>Commentaires</h3>
-                    <div class='input-box'>
-                        <textarea name='' placeholder='Ajoutez un commentaire' class='input' required='object' cols='35' rows='2'></textarea>
-                    </div>
-                    <input type='submit' class='btn' value='Ajouter'>";
-        foreach ($post->getCategories() as $category) {
-            $content .= "<p id='category'>#" . $category->getLabel() . "</p>";
-        }
+            ";
 
         foreach ($post->getComments() as $comment) {
             $content .= "<p>@" . $comment->getAuthor_username() . " : " . $comment->getText() . "</p>";
         }
-        $content .= "</div>
+        $content .= "
+                <div class='card-content'>
+                    <form action='createComment&id=$id' method='POST'>
+                    <h3 id='comment'>Commentaires</h3>
+                    <div class='input-box'>
+                        <input type='text' class='input' placeholder='Ajoutez un commentaire' name='text'  required></input>
+                    </div>
+                    <input type='submit' class='btn' value='Ajouter'>
+                    </form>
                 </div>
             </div>";
+
         return $content;
     }
 
