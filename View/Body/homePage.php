@@ -7,4 +7,10 @@
 ?>
 <body>
     <h1>Accueil</h1>
+    <?php
+    foreach ($cards as $card)
+    {
+        echo $card;
+    }
+    ?>
 </body>

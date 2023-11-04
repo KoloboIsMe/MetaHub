@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// RECORD ///////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-/// Contains any return data from a SQL request.
+/// Contains any return data from a SQL request (A list of entities)
 /// A new object will be instanced each time a request is done.
 
 namespace Framework\database;
@@ -20,10 +20,6 @@ class Record
     public function getData() : array {
         return $this->data;
     }
-    public function setData(array $data) : Record {
-        $this->data = $data;
-        return $this;
-    }
     public function addData(Entity ...$data) : Record {
         foreach ($data as $datum) {
             $this->addDatum($datum);
@@ -39,10 +35,6 @@ class Record
         } else {
             $this->data[] = $datum;
         }
-        return $this;
-    }
-    public function reset() : Record {
-        $this->data = array();
         return $this;
     }
 }

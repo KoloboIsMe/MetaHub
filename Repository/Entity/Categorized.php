@@ -18,6 +18,28 @@ class Categorized extends Entity
     {
         parent::__construct([$ticket, $category]);
     }
+    public function category() : Category
+    {
+        global $categoryTable;
+
+        if($record = $categoryTable->select($this->category) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $record->getData()[0];
+    }
+    public function ticket() : Ticket
+    {
+        global $ticketTable;
+
+        if($record = $ticketTable->select($this->category) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $record->getData()[0];
+    }
     public function getTicket () : int
     {
         return $this->ticket;

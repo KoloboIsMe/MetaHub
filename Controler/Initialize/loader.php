@@ -8,7 +8,7 @@
 require 'constants.php';
 require 'functions.php';
 
-$databaseDirectory = __DIR__ . '/../../Framework/Database';
+$databaseDirectory = __DIR__ . '/../../Framework/Repository';
 require "$databaseDirectory/Connexion.php";
 require "$databaseDirectory/Record.php";
 

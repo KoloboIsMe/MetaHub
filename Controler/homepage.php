@@ -2,16 +2,14 @@
 
 require __DIR__ . '/../Model/fivePosts.php';
 
-foreach ($posts as $post)
+if(!isset($tickets))
 {
-    $cards[] = new Card($post['username'],
-                        $post['title'],
-                        $post['message'],
-                        $post['message'],
-                        $post['date'],
-                        $post['id'],
-                        $categories,
-                        $comments);
+    return;
+}
+
+foreach ($tickets as $ticket)
+{
+    $cards[] = new Card($ticket);
 }
 
 require __DIR__ . '/../View/Body/homePage.php';
