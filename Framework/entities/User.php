@@ -11,7 +11,7 @@ class User extends Entity
     private $username;
     private $first_connexion;
     private $last_connexion;
-    private $admin;
+    private $level;
 
     //Setters
 
@@ -74,16 +74,16 @@ class User extends Entity
         $this->last_connexion = $last_connexion;
     }
 
-    public function getAdmin()
+    public function getLevel()
     {
         return $this->admin;
     }
 
-    public function setAdmin($admin)
+    public function setLevel($level)
     {
-        $admin = (int)$admin;
-        if ($admin === 0 || $admin === 1) {
-            $this->admin = $admin;
+        $level = (int)$level;
+        if ($level === 0 || $level === 1 || $level === 2 ) {
+            $this->level = $level;
         }
     }
 }

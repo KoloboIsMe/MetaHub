@@ -17,9 +17,11 @@ class Controller
         if (!$this->outputData->getOutputData()) {
             return 'Mauvais identifiant ou mot de passe !';
         }
+        $user = $usersGetting->getUserByUsername($userAccess, $_POST['username']);
         $_SESSION['isLogged'] = true;
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['user_ID'] = $usersGetting->getUserByUsername($userAccess, $_POST['username'])->getUser_ID();
+        $_SESSION['username'] = $user->getUsername();
+        $_SESSION['user_ID'] = $user->getUser_ID();
+        $_SESSION['level'] = $user->getLevel();
         $usersGetting->updateLastConnexion($userAccess, $_SESSION['user_ID']);
         return null;
     }

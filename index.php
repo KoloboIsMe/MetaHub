@@ -126,14 +126,6 @@ if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) &
     header("refresh:0;url=/");
 }
 
-//if ('editTicketAction' == $url && isset($_GET['id'])) {
-//
-//    $controller->deleteTicketAction($ticketsGetting, $ticketAccess);
-//    $url='/';
-//    header("refresh:0;url=/");
-//
-//}
-
 
 if ('' == $url || '/' == $url) {
 
