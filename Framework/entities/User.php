@@ -76,7 +76,7 @@ class User extends Entity
 
     public function getLevel()
     {
-        return $this->admin;
+        return $this->level;
     }
 
     public function setLevel($level)
