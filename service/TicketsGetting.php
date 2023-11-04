@@ -85,7 +85,7 @@ class TicketsGetting
         $this->outputData->setOutputData($posts);
     }
     public function isTicketOwner($dataccess, $ticketID, $user_ID){
-        if($dataccess->isTicketOwner($ticketID, $user_ID))
+        if($dataccess->existsTicket($ticketID) && $dataccess->isTicketOwner($ticketID, $user_ID))
             return true;
         return false;
     }

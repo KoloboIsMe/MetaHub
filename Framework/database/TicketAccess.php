@@ -198,6 +198,8 @@ class TicketAccess implements TicketInterface
             $statement = $this->dataAccess->prepare('SELECT author FROM ticket where ticket_ID = :ticketID');
             $statement->execute([':ticketID' => $ticketID]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
+            if(!isset($data['author']))
+                return false;
             return $data['author'] == $userID;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
