@@ -15,9 +15,6 @@ class ViewCategories extends View
 
         $this->searchBar = true;
 
-        if ($category = null)
-            header('Location: /categories');
-
         isset($_GET['id']) ? $this->content = $presenter->showCategory($category) : $this->content = $presenter->showCategories();
     }
 }

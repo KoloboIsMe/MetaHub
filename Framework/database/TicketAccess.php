@@ -150,7 +150,7 @@ class TicketAccess implements TicketInterface
     public function getCategoryIdByLabel($label)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
             $statement->execute([
                 ':label' => $label,
             ]);
@@ -198,6 +198,8 @@ class TicketAccess implements TicketInterface
             $statement = $this->dataAccess->prepare('SELECT author FROM ticket where ticket_ID = :ticketID');
             $statement->execute([':ticketID' => $ticketID]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
+            if(!isset($data['author']))
+                return false;
             return $data['author'] == $userID;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());

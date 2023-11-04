@@ -110,8 +110,8 @@ if ('login_verification' == $url && isset($_POST['username']) && isset($_POST['p
 if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["message"])) {
 
     $controller->createTicketAction($ticketsGetting, $ticketAccess);
-    $url = '/';
-    header("refresh:0;url=/");
+//    $url = '/';
+//    header("refresh:0;url=/");
 }
 if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
