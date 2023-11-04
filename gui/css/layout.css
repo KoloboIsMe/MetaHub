@@ -548,7 +548,7 @@ h2{
 }
 
 footer{
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     background: #242424;
     position: relative;
@@ -556,7 +556,6 @@ footer{
     flex-shrink: 0;
     padding-top: 10vh;
     padding: 4vh;
-    overflow: scroll;
 
 }
 
