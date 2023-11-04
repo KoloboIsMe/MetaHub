@@ -42,22 +42,22 @@ class CategorizedTable
         }
         return $tickets;
     }
-    public function select(int $ticket = null, int $category = null) : Record|null
+    public function select(int $ticket = null, int $category = null) : Record|bool
     {
-        $request = 'SELECT * FROM' . self::TABLE;
+        $request = 'SELECT * FROM ' . self::TABLE;
         if (isset($ticket) && isset($category))
         {
-            $request .= "WHERE ticket = $ticket AND category = $category";
+            $request .= " WHERE ticket = $ticket AND category = $category";
         }
         elseif (isset($ticket))
         {
-            $request .= "WHERE ticket = $ticket";
+            $request .= " WHERE ticket = $ticket";
         }
         elseif (isset($category))
         {
-            $request .= "WHERE category = $category";
+            $request .= " WHERE category = $category";
         }
-        $request .= "LIMIT $this->limit";
+        echo $request;
         return $this->execute($request);
     }
     public function insert(Categorized ...$entities) : bool

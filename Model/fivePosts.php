@@ -15,12 +15,11 @@ if (($tickets = $ticketTable->setLimit('5')->select()) === FALSE)
 
 $ticketTable->setLimit($limit);
 
-foreach ($tickets->getData()->getId() as $ticket)
+foreach ($tickets->getData() as $ticket)
 {
-    $categories[] = $categorizedTable->categoriesOf($ticket);
-    $comments[] = $commentTable->commentsOf($ticket);
+    $categories[] = $categorizedTable->categoriesOf($ticket->getId());
+    $comments[] = $commentTable->commentsOf($ticket->getId());
 }
-
 
 unset($limit);
 return;

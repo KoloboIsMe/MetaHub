@@ -20,8 +20,12 @@ class Card
         $this->date = $ticket['date'];
         $this->id = $ticket['id'];
     }
-    public function showCategories()
+    private function showCategories()
     {
+        if (empty($this->categories))
+        {
+            return;
+        }
         $display = '';
         foreach ($this->categories as $category)
         {
@@ -29,8 +33,12 @@ class Card
         }
         return $display;
     }
-    public function showComments()
+    private function showComments()
     {
+        if (empty($this->comments))
+        {
+            return;
+        }
         $display = '';
         foreach ($this->categories as $category)
         {

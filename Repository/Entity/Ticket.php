@@ -7,7 +7,7 @@
 /// TO DO : Apply parameters verification to methods.
 namespace Framework\Database\Entity;
 
-class Ticket extends Entity implements Tuple
+class Ticket extends Entity
 {
     use ID;
     private string $title;

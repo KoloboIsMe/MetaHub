@@ -13,7 +13,6 @@ require "$repositoryDirectory/Connexion.php";
 require "$repositoryDirectory/Record.php";
 
 require "$repositoryDirectory/Entity/ID.php";
-require "$repositoryDirectory/Entity/tuple.php";
 require "$repositoryDirectory/Entity/Entity.php";
 require "$repositoryDirectory/Entity/Categorized.php";
 require "$repositoryDirectory/Entity/Category.php";
