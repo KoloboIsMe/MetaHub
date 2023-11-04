@@ -47,6 +47,7 @@ try {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
     die();
 }
+
 $categoryAccessLector = new database\CategoryAccess($dbLector);
 $commentAccessLector = new database\CommentAccess($dbLector);
 $ticketAccessLector = new database\TicketAccess($dbLector);

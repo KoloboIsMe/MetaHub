@@ -18,4 +18,5 @@ interface TicketInterface
     public function getCategoryIdByLabel($label);
 
     public function deleteTicket($ticketID);
+    public function editTicket($id, $title, $message);
 }
