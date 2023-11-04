@@ -541,7 +541,7 @@ footer{
     flex-shrink: 0;
     padding-top: 10vh;
     padding: 4vh;
-    overflow: scroll;
+    overflow: hidden;
 
 }
 
