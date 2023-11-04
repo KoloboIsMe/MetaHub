@@ -182,8 +182,12 @@ header nav ul li #headerLinks:hover{
         margin: 20px auto;
     }
 
-    .card-container .post-card, .card-container .category-card{
+    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card{
         width: 90vw;
+    }
+
+    .card-container1 .comment-card{
+        margin-left: 0.5vh;
     }
 
     .footerImages{
@@ -195,6 +199,15 @@ header nav ul li #headerLinks:hover{
 
     h2{
         font-size: 1.5vh;
+    }
+
+    .comment-card .input{
+        border-radius: 3vh;
+    }
+
+    .comment-card .btn{
+        font-size: 2vh;
+        border-radius: 3vh;
     }
 }
 
@@ -291,7 +304,7 @@ header nav ul li #headerLinks:hover{
         margin: 10px auto;
     }
 
-    .card-container .post-card, .card-container .category-card{
+    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card{
         width: 90vw;
         margin: 20px auto;
     }
@@ -307,18 +320,25 @@ header nav ul li #headerLinks:hover{
         font-size: 1vh;
     }
 
+    .comment-card .input{
+        border-radius: 3vh;
+    }
+
+    .comment-card .btn{
+        font-size: 1.5vh;
+        border-radius: 3vh;
+    }
+
 }
 
 #card-username{
     margin-bottom: 2vh;
-    margin-left: 3vw;
+    margin-left: 2vw;
     margin-top: 2vh;
-    font-size: 1.7vh;
-    background: #191919;
+    font-size: 2.5vh;
     border-radius: 3vw;
     width: fit-content;
     padding: 1vh;
-    box-shadow: 10px 10px 20px rgb(19, 19, 19), -10px -10px 20px #242424;
 
 }
 
@@ -349,13 +369,14 @@ header nav ul li #headerLinks:hover{
     width: 95%;
     height: 100%;
     background: transparent;
-    border: 1px solid #EEF1EF;
+    border: 1px solid transparent;
     border-radius: 20px;
     outline: none;
     padding-left: 1vh;
     padding-top: 2vh;
     color: white;
     font-size: 2vh;
+    box-shadow: inset 25px 25px 30px #191919, inset -25px -25px 30px #242424;
 }
 
 #comment{
@@ -366,12 +387,13 @@ header nav ul li #headerLinks:hover{
     position: relative;
     top: 2vh;
     background: #42b34a;
+    box-shadow: inset 20px 20px 25px #27732e, inset 10px 10px 15px #42b34a;
     outline: none;
     border: none;
     border-radius: 20px;
     height: 5vh;
     width: 25%;
-    font-size: 20px;
+    font-size: 1.5vh;
     color: #242424;
     cursor: pointer;
     font-weight: 700;
@@ -408,10 +430,10 @@ p{
 
 .comment-card{
     position: relative;
-    height: 25vh;
-    max-height: 80vh;
+    height: auto;
     width: 70vw;
     background: #242424;
+    margin-left: 2vh;
     margin-bottom: 10vh;
     border-radius: 8px;
     overflow: hidden;
@@ -497,7 +519,7 @@ p{
 }
 
 .card-content h3{
-    font-size: 2vh;
+    font-size: 3vh;
     color: white;
     margin-bottom: 1vh;
     border-bottom: #42B34A;

@@ -204,13 +204,16 @@ class Presenter
         foreach ($this->outputData->getOutputData() as $post) {
             $id = $post->getTicket()->getTicket_ID();
             $content .= "
-                                <div class='card'>
+                                <div class='post-card'>
                                     <a href='posts&id=$id'>
                                     <div class='card-content'>
-                                        <p>" . $post->getUser()->getUsername() . "</p>
+                                        <div class='post-header'>
+                                            <img src='gui/images/user.png' id='userImg'>
+                                            <p id='card-username'>@" . $post->getUser()->getUsername() . "</p>
+                                        </div>
                                         <h3> " . $post->getTicket()->getTitle() . "</h3>
                                         <p>" . $post->getTicket()->getMessage() . "</p>
-                                        <time>" . $post->getTicket()->getDate() . " </time>
+                                        <time id='time'>" . $post->getTicket()->getDate() . " </time>
                                         <p>" . $post->getTicket()->getTicket_ID() . "</p>
                                     </div></a>
                                 </div>";
