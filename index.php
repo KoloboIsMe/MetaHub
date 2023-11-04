@@ -115,15 +115,25 @@ if ('createPostsAction' == $url && isset($_POST["title"]) && isset($_POST["messa
 }
 if ('deleteTicketAction' == $url && isset($_GET['id'])) {
 
-    $ticketsGetting->deleteTicket($ticketAccess);
-    $url = '/';
-    header("refresh:0;url=/");
+    $error = $controller->deleteTicket($ticketsGetting,$ticketAccess);
+    if ($error) {
+        $redirect = '/';
+        $url = 'error';
+    }else{
+        $url = '/';
+        header("refresh:0;url=/");
+    }
 }
 if ('editTicketAction' == $url && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
 
-    $ticketsGetting->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
-    $url = '/';
-    header("refresh:0;url=/");
+    $error = $controller->editTicket($ticketsGetting,$ticketAccess);
+    if ($error) {
+        $redirect = '/';
+        $url = 'error';
+    }else{
+        $url = '/';
+        header("refresh:0;url=/");
+    }
 }
 
 

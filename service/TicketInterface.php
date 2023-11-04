@@ -19,4 +19,5 @@ interface TicketInterface
 
     public function deleteTicket($ticketID);
     public function editTicket($id, $title, $message);
+    public function isTicketOwner($ticketID, $userID);
 }

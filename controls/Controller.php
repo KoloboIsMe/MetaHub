@@ -42,5 +42,23 @@ class Controller
         }
     }
 
+    public function deleteTicket($ticketsGetting, $ticketAccess)
+    {
+        if($ticketsGetting->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
+            $ticketsGetting->deleteTicket($ticketAccess,$_GET['id']);
+            return null;
+        }else
+            return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
+    }
+
+    public function editTicket($ticketsGetting, $ticketAccess)
+    {
+        if($ticketsGetting->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
+            $ticketsGetting->editTicket($ticketAccess,$_GET['id'], $_POST["title"], $_POST["message"]);
+            return null;
+        }else
+            return 'Vous n\'avez pas les droits pour modifier ce ticket !';
+    }
+
 
 }
