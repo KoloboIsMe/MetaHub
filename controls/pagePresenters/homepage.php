@@ -1,3 +1,4 @@
+<meta name="description" content="Découvrez MetaHub : le réseau social métaverse où vous pouvez librement créer, partager et explorer des posts passionnants. Connectez-vous, exprimez-vous et découvrez le monde à travers les publications.">
 <link href="gui/css/homepage.css" rel="stylesheet" type="text/css"/>
 <h2>Fil d'actualité</h2>
 <div class='card-container1'>
@@ -11,13 +12,13 @@
                 <a href='posts&id=<?= $id ?>'>
                     <div class='card-content'>
                         <div class='post-header'>
-                            <img src='gui/images/user.png' id='userImg'>
-                            <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p>
+                            <a href="/user&id=<?= $post->getUser()->getUser_ID(); ?>"><img src='gui/images/user.png' id='userImg'>
+                            <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p></a>
                         </div>
                         <h3> <?= $post->getTicket()->getTitle() ?> </h3>
                         <div class="categories">
                         <?php foreach ($post->getCategories() as $category) { ?>
-                            <div class='category'>#<?= $category->getLabel() ?></div>
+                            <a href="/category&id=<?= $category->getCategory_ID(); ?><div class='category'>#<?= $category->getLabel() ?></div></a>
                         <?php } ?>
                         </div>
                         <p>  <?= $post->getTicket()->getMessage() ?></p>
