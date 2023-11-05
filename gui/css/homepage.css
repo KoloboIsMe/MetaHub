@@ -97,7 +97,8 @@ p{
 
 .card3{
     width: 40vw;
-    height: 60vh;
+    height: auto;
+    margin-bottom: 2vh;
     background-color: #242424;
     border-radius: 8px;
     overflow: hidden;
