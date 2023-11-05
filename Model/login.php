@@ -10,7 +10,7 @@ if(!isset($user, $password))
 
 if (!$userTable->login($user, $password))
 {
-    $error = 'Mauvais identifiant ou mot de passe';
+    $error = 'erreur';
 }
 
 return;

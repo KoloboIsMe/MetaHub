@@ -3,7 +3,12 @@
 //////////////////////////////// HEADER ///////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Header of the application. Included at the start of every View.
-if (!isset($logged, $admin, $username))
+if (!isset($logged, $admin))
+{
+    $logged = FALSE;
+    $admin = FALSE;
+}
+if($logged && empty($username))
 {
     return;
 }

@@ -15,9 +15,16 @@ if (!isset($page))
 }
 
 $title = $page;
-$logged = TRUE;
 $admin = TRUE;
-$username = $_SESSION['username'];
+if (empty($_SESSION['username']))
+{
+    $username = '';
+}
+else
+{
+    $username = $_SESSION['username'];
+}
+
 require "$elementDirectory/head.php";
 echo "<body> \n";
 require "$elementDirectory/header.php";

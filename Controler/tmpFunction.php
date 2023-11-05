@@ -1,14 +1,5 @@
 <?php
 
-
-function registerAction($usersGetting, $userAccess)
-{
-    if ($_POST['password'] !== $_POST['password_confirmation']) {
-        return 'Les mots de passe ne correspondent pas !';
-    }
-    return $usersGetting->register($_POST['username'], $_POST['password'], $userAccess);
-}
-
 function createTicketAction($ticketsGetting, $ticketAccess)
 {
     $ticketID = $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
@@ -16,7 +7,6 @@ function createTicketAction($ticketsGetting, $ticketAccess)
         $ticketsGetting->addCategoriesToTicket($ticketAccess, $_POST["categories"], $ticketID);
     }
 }
-
 function deleteTicket($ticketsGetting, $ticketAccess)
 {
     if($ticketsGetting->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
@@ -25,7 +15,6 @@ function deleteTicket($ticketsGetting, $ticketAccess)
     }else
         return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
 }
-
 function editTicket($ticketsGetting, $ticketAccess)
 {
     if($ticketsGetting->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
@@ -102,9 +91,7 @@ function showHomePage()
                     </div>
                 </div>";
     return $content;
-
 }
-
 function showPosts()
 {
     $content = '';
@@ -139,7 +126,6 @@ function showPosts()
     $content .= "</div>";
     return $content;
 }
-
 function showPost()
 {
     $content = '';
@@ -164,7 +150,6 @@ function showPost()
     foreach ($post->getCategories() as $category) {
         $content .= "<p id='category'>#" . $category->getLabel() . "</p>";
     }
-
     $content .= "            
                 </div>
                 </a>
@@ -188,7 +173,6 @@ function showPost()
 
     return $content;
 }
-
 function showCategories()
 {
     $content = '';
@@ -211,7 +195,6 @@ function showCategories()
     $content .= "</div>";
     return $content;
 }
-
 function showCategory($category)
 {
     $content = '';
@@ -241,7 +224,6 @@ function showCategory($category)
     $content .= "</div>";
     return $content;
 }
-
 function showCreateTicket()
 {
     $content = "
@@ -281,7 +263,6 @@ function showCreateTicket()
 
     return $content;
 }
-
 function showEditTicket()
 {
     $post = $outputData->getOutputData();
@@ -339,12 +320,13 @@ function showUser($user)
         $content .= "
                                 <div class='post-card'>
                                     <a href='posts&id=$id'>
-                                    <div class='card-content'>
-                                        <h3> " . $post->getTicket()->getTitle() . "</h3>
-                                        <p>" . $post->getTicket()->getMessage() . "</p>
-                                        <time id='time'>" . $post->getTicket()->getDate() . " </time>
-                                        <p>" . $post->getTicket()->getTicket_ID() . "</p>
-                                    </div></a>
+                                        <div class='card-content'>
+                                            <h3> " . $post->getTicket()->getTitle() . "</h3>
+                                            <p>" . $post->getTicket()->getMessage() . "</p>
+                                            <time id='time'>" . $post->getTicket()->getDate() . " </time>
+                                            <p>" . $post->getTicket()->getTicket_ID() . "</p>
+                                        </div>
+                                    </a>
                                 </div>";
     }
 

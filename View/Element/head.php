@@ -1,7 +1,11 @@
 <?php
-if (!isset($title, $logged))
+if (!isset($title))
 {
     return;
+}
+if (!isset($logged))
+{
+    $logged = FALSE;
 }
 ?>
 <!DOCTYPE html>
