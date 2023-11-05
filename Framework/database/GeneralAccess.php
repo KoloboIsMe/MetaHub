@@ -157,20 +157,14 @@ class GeneralAccess
             $statement->execute(['ticketId' => $ticketId]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             $ticket = new Ticket($data);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-        try {
+
             $categories = [];
             $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID in (SELECT category FROM categorized where ticket = :ticketID) ORDER BY category_ID DESC LIMIT 100');
             $statement->execute(['ticketID' => $ticketId]);
             while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $categories[] = new Category($data);
             }
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-        try {
+
             $comments = [];
             $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comment 
                                                 JOIN user ON comment.author = user.user_ID
@@ -179,19 +173,17 @@ class GeneralAccess
             while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $comments[] = new Comment($data);
             }
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-        try {
+
             $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :user_ID');
             $statement->execute(['user_ID' => $ticket->getAuthor()]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
 
             $user = new User($data);
+            return new Post($ticket, $categories, $comments, $user);
+
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
-        return new Post($ticket, $categories, $comments, $user);
     }
 
 

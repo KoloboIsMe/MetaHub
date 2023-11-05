@@ -241,7 +241,7 @@ if ('' == $url || '/' == $url) {
 
     if (isset($_GET['id']))
         if ($ticketsService->existsTicket($ticketAccessLector, $_GET['id']))
-            $generalAccess->getPostById($_GET['id']);
+            $controller->getPostById($_GET['id'], $generalAccessLector);
         else
             header('Location: /');
     else

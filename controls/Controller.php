@@ -107,4 +107,10 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour modifier ce ticket !';
     }
+
+    public function getPostById($id, $generalAccessLector)
+    {
+        $posts = $generalAccessLector->getPostById($id);
+        $this->outputData->setOutputData($posts);
+    }
 }
