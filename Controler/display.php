@@ -34,7 +34,7 @@ switch ($page) {
         require 'Connector/homepage.php';
         break;
     case 'login' :
-        require 'Connector/login.php';
+        require __DIR__ . '/../View/Body/login.php';
         break;
     case 'register' :
         require 'Connector/register.php';

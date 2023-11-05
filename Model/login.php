@@ -1,4 +1,5 @@
 <?php
+
 global $userTable;
 
 if(!isset($user, $password))
@@ -12,5 +13,7 @@ if (!$userTable->login($user, $password))
 {
     $error = 'erreur';
 }
+
+//update last connexion
 
 return;

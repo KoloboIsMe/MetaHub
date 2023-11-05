@@ -5,6 +5,8 @@
 /// The main controler of the app.
 /// It redirects to the correct controller.
 
+// If action is to log in, call login.php
+
 if (!empty($_GET['url']))
 {
     $page = $_GET['url'];

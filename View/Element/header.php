@@ -38,7 +38,7 @@ if($logged && empty($username))
         <a href='/logout' id=\"username\">Bonjour @$username !</a>
         <a href='/logout'><img src=\"View/_assets/images/logout.png\" id=\"logoutImg\"/></a>";}
         else {echo "
-        <a href='/login'><img src=\"View/_assets/images/login.png\" id=\"loginImg\"/></a>";}
+        <a href='/login'><img src=\"View/_assets/image/login.png\" id=\"loginImg\"/></a>";}
         ?>
         <label aria-label="toggle curtain navigation" class="hamburger" for="nav_check">
             <div class="line l1"></div>
