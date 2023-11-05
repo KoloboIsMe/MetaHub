@@ -72,83 +72,37 @@ header nav ul li .header-links:hover{
     margin-top: 1.5vh;
 }
 
-/*.hamburger span {*/
-/*    width: 3vh;*/
-/*    height: 0.2vh;*/
-/*    margin: 0.8vh 0;*/
-/*    background: white;*/
-/*}*/
-
-/*.hamburger {*/
-/*    cursor: pointer;*/
-/*    display: none;*/
-/*    margin-top: 12px;*/
-/*}*/
-
-/*.line{*/
-/*    transition: transform 0.3s ease-out,*/
-/*    opacity 0.1s ease-out;*/
-/*}*/
-
-
-/*.hamburger.active .l1 {*/
-/*    transform: translateY(5px) rotate(135deg);*/
-/*    width: 35px;*/
-/*}*/
-
-/*.hamburger.active .l2 {*/
-/*    opacity: 0;*/
-/*}*/
-
-/*.hamburger.active .l3 {*/
-/*    transform: translateY(-12px) rotate(-135deg);*/
-/*    width: 35px;*/
-/*}*/
+.hamburger div {
+    width: 3vh;
+    height: 0.2vh;
+    margin: 0.8vh 0;
+    background: white;
+}
 
 .hamburger {
-    display: none;
-    width: 30px;
-    height: 20px;
-    position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    display: none;
+    margin-top: 12px;
 }
 
-.line {
-    width: 100%;
-    height: 2px;
-    background-color: #fff; /* Couleur des barres blanches */
-    position: absolute;
-    transition: transform 0.3s ease;
-    transform-origin: center;
+.line{
+    transition: transform 0.3s ease-out,
+    opacity 0.1s ease-out;
 }
 
-.line.l1 {
-    top: 0;
+
+.hamburger.active .l1 {
+    transform: translateY(5px) rotate(135deg);
+    width: 35px;
 }
 
-.line.l2 {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.line.l3 {
-    bottom: 0;
-}
-
-/* Styles pour la croix quand le hamburger est actif */
-.hamburger.active .line.l1 {
-    transform: rotate(45deg) translateY(0);
-    top: 50%;
-}
-
-.hamburger.active .line.l2 {
+.hamburger.active .l2 {
     opacity: 0;
 }
 
-.hamburger.active .line.l3 {
-    transform: rotate(-45deg) translateY(0);
-    bottom: 50%;
+.hamburger.active .l3 {
+    transform: translateY(-12px) rotate(-135deg);
+    width: 35px;
 }
 
 @media only screen and (max-width : 500px){
