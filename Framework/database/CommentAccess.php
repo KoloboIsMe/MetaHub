@@ -31,4 +31,18 @@ class CommentAccess implements CommentInterface
         }
     }
 
+    public function isCommentOwner($commentID, $user_ID){
+        try {
+            $statement = $this->dataAccess->prepare("SELECT comment_ID FROM comment WHERE comment_ID = :commentID AND author = :user_ID");
+            $statement->execute(array(
+                ':commentID' => $commentID,
+                ':user_ID' => $user_ID
+            ));
+            $data = $statement->fetch(\PDO::FETCH_ASSOC);
+            return isset($data['comment_ID']);
+        } catch (\PDOException $e) {
+            throw new \PDOException("Error checking if comment owner");
+        }
+    }
+
 }

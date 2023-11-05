@@ -1,6 +1,6 @@
 <h2>Catégories</h2>
 <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
-    <a href='ouais'><button ><img src='gui/images/add.png' id='add-button'></button></a>
+    <a href='createCategory'><button ><img src='gui/images/add.png' id='add-button'></button></a>
 <?php }?>
 <div class='card-container'>
     <?php foreach ($data as $category) {
@@ -12,7 +12,7 @@
             <p><?= $category->getDescription() ?></p>
             <div class="edit-delete">
                 <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
-                    <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                    <a href='?action=deleteCategoryAction&id=<?=$id?>'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
                 <?php }?>
             </div>
         </div>
@@ -20,4 +20,3 @@
     </div>
     <?php }?>
 </div>
-

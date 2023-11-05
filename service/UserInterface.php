@@ -17,5 +17,4 @@ interface UserInterface
     public function updateLastConnexion($user_ID);
     public function getUserById($id);
     public function getUsersID();
-    public function getPostsIdByUserId($userId);
 }

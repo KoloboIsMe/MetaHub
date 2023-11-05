@@ -5,7 +5,7 @@
 <?php foreach ($data as $post) {
     $id = $post->getTicket()->getTicket_ID();?>
     <div class='post-card'>
-        <a href='posts&id=$id'>
+        <a href='posts&id=<?=$id?>'>
         <div class='card-content'>
             <div class='post-header'>
                 <img src='gui/images/user.png' id='userImg'>
@@ -22,8 +22,8 @@
             <p id="post-number"><?= $post->getTicket()->getTicket_ID() ?></p>
             <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
                 <div class="edit-delete">
-                    <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
-                    <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                    <a href='editTicket&id=<?=$id?>'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                    <a href='?action=deleteTicketAction&id=<?=$id?>'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
                 </div>
             <?php }?>
         </div>
