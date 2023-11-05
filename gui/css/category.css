@@ -198,6 +198,12 @@ button{
     box-shadow: inset 5px 10px 20px #26702d, inset -5px -10px 20px #42b34a;
 }
 
+#category-description{
+    margin-top: 3vh;
+    margin-left: 5vh;
+    font-size: 2.5vh;
+}
+
 .categories{
     display: flex;
     flex-direction: row;
