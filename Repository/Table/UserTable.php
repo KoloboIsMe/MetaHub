@@ -10,7 +10,7 @@ class UserTable
 {
     use BasicTable;
     use IdentifiedTable;
-    const TABLE = 'user';
+    const TABLE = USER_TABLE;
     private function newEntity(array $data) : \User
     {
         $ID = $data[0];

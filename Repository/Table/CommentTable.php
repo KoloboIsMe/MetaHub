@@ -14,7 +14,7 @@ class CommentTable
 {
     use BasicTable;
     use IdentifiedTable;
-    const TABLE = 'comment';
+    const TABLE = COMMENT_TABLE;
     private function newEntity(array $data) : Comment
     {
         $ID = $data[0];

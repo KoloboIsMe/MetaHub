@@ -6,9 +6,9 @@
 /// TODO : Find a better name for the file...
 global $ticketTable, $categorizedTable, $commentTable;
 
+// Get 5 tickets
 $limit = $ticketTable->getLimit();
 
-// Get 5 tickets
 if (($tickets = $ticketTable->setLimit('5')->select()) === FALSE)
 {
     return;

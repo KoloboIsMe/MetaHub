@@ -5,4 +5,9 @@
 /// Contains all the app's constants.
 const INI_FILE_PATH = 'config.ini';
 const DATABASES = 'metahub_login';
+const CATEGORIZED_TABLE = 'categorized';
+const CATEGORY_TABLE = 'category';
+const USER_TABLE = 'user';
+const COMMENT_TABLE = 'comment';
+const TICKET_TABLE = 'ticket';
 return;

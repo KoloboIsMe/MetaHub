@@ -13,7 +13,7 @@ class TicketTable
 {
     use BasicTable;
     use IdentifiedTable;
-    const TABLE = 'ticket';
+    const TABLE = TICKET_TABLE;
     private function newEntity(array $data) : Ticket
     {
         $ticket['id'] = $data['ticket_ID'];

@@ -12,7 +12,7 @@ class CategoryTable
 {
     use BasicTable;
     use IdentifiedTable;
-    const TABLE = 'category';
+    const TABLE = CATEGORY_TABLE;
     private function newEntity(array $data) : Category
     {
         $ID = $data[0];

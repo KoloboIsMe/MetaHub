@@ -14,7 +14,7 @@ use Framework\database\Record;
 class CategorizedTable
 {
     use BasicTable;
-    const TABLE = 'categorized';
+    const TABLE = CATEGORIZED_TABLE;
     private function newEntity(array $data) : Categorized
     {
         $ticket = $data[0];
@@ -51,23 +51,6 @@ class CategorizedTable
         }
         return $this->execute($request);
     }
-    public function insert(Categorized ...$entities) : bool
-    {
-        foreach($entities as $entity)
-        {
-            $request = 'INSERT INTO ' . self::TABLE . ' VALUES (';
-            foreach ($entity->toArray() as $value)
-            {
-                $request .= $value;
-            }
-            $request .= ')';
-            if ($this->execute($request) === FALSE)
-            {
-                return FALSE;
-            }
-        }
-        return TRUE;
-    }
     public function delete(string $key, int ...$IDs) : bool
     {
         if ($key !== 'ticket' && $key !== 'category')
@@ -76,7 +59,7 @@ class CategorizedTable
         }
         foreach($IDs as $ID)
         {
-            $request = 'DELETE FROM ' . self::TABLE . " WHERE ID = $ID";
+            $request = 'DELETE FROM ' . self::TABLE . " WHERE '$key' = $ID";
             if ($this->execute($request) === FALSE)
             {
                 return FALSE;
