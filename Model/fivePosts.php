@@ -3,7 +3,6 @@
 //////////////////////////////  FIVE POSTS  ///////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// The Five Posts model. Used to store 5 posts and their author's username in $posts.
-/// TODO : Find a better name for the file...
 global $ticketTable, $categorizedTable, $commentTable;
 
 // Get 5 tickets

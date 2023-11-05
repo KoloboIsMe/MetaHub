@@ -22,7 +22,7 @@ class UserTable
     }
     public function register(string $username, string $password) : bool
     {
-        if($this->exists($username, 'username'))
+        if(!$this->exists($username, 'username'))
         {
             return FALSE;
         }
@@ -32,5 +32,18 @@ class UserTable
             return FALSE;
         }
         return TRUE;
+    }
+    public function login(string $username, string $password) : bool
+    {
+        if(!$this->exists($username, 'username'))
+        {
+            return FALSE;
+        }
+        $request = $this->select($username, 'username');
+        if($password === $request->getData()[0]->getPassword())
+        {
+            return TRUE;
+        }
+        return FALSE;
     }
 }

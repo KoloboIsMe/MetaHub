@@ -27,20 +27,36 @@ switch ($page) {
         // declare needed variables
         $action = 'uneAction';
         break;
-    case 'register' :
-        // declare needed variables
-        break;
     case 'posts' :
         // declare needed variables
         break;
     case 'categories' :
         // declare needed variables
         break;
+    case 'login' :
+        $page = $_GET['id'] ?? $page = null;
+        require '../Model/login.php';
+        if (isset($error)){
+            $page ? $redirect = 'login&id='.$page : $redirect = 'login';
+            $url = 'error';
+        }else{
+            $url = '/';
+            $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
+        }
+        break;
+    case 'register' :
+        $page = $_GET['id'] ?? $page = null;
+        require '../Model/register.php';
+        if (isset($error)){
+            $url = 'register';
+        }else
+            $url = 'login_verification';
+        break;
     default:
         // declare needed variables
         header('Status: 404 Not Found');
         require  "$bodyDirectory/notFound.php";
-        return;
+        break;
 }
 require "$elementDirectory/footer.php";
 echo '</body>';
