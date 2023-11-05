@@ -13,7 +13,8 @@ class ViewPosts extends View
         if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->searchBar = true;
+        if(!isset($_GET['id']))
+            $this->searchBar = true;
 
         isset($_GET['id']) ? $this->content = $presenter->show('post') : $this->content = $presenter->show('posts');
     }
