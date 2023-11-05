@@ -1,36 +1,28 @@
 <?php
-const UNALOWED_REGEX = [
-    'SELECT', 'INSERT', 'UPDATE', 'DELETE', '=', '/', '\'', '"', '\\', 'rm',
-    'mkdir', 'sudo',
+const UNALLOWED_REGEX = [
+    '/SELECT/i', '/INSERT/i', '/UPDATE/i', '/DELETE/i', '/=/i', '/rm/i',
+    '/mkdir/i', '/sudo/i', '/DROP/i', '/\\\\/', '/\//'
 ];
 const SUSPICIOUS_REGEX = [
-    "/\n/","/\r/", "/\t/", "/\v/", "/\x00/", '/SELECT/', '/INSERT/', '/UPDATE/'
+    '/\n/', '/\r/', '/\t/', '/\v/', '/\x00/'
 ];
-function hardSanitize(string &$string) : string
+
+function hardSanitize(string &$string) : string {
     // Hard sanitize a string to make sure it cannot harm the application in any way
-    // Delete anything in the string that is in the UNALOWED_REGEX constant
-{
+    // Delete anything in the string that matches the SUSPICIOUS_REGEX patterns
     softSanitize($string);
-    foreach (SUSPICIOUS_REGEX as $regex)
-    {
-        if(preg_match("$regex",$string))
-        {
-           $string = str_replace("$regex", '', $string);
-        }
+    foreach (SUSPICIOUS_REGEX as $regex) {
+        $string = preg_replace($regex, '', $string);
     }
 
     return $string;
 }
-function softSanitize(string &$string) : string
+
+function softSanitize(string &$string) : string {
     // Soft sanitize a string to make sure it cannot harm the application in any way
-    // Delete any unusual characters that can cause harm
-{
-    foreach (UNALOWED_REGEX as $regex)
-    {
-        if(preg_match("/i/$regex/",$string))
-        {
-            $string = str_replace("/i/$regex/", '', $string);
-        }
+    // Delete any characters that match the UNALLOWED_REGEX patterns
+    foreach (UNALLOWED_REGEX as $regex) {
+        $string = preg_replace($regex, '', $string);
     }
-    return str_replace(UNALOWED_REGEX, '', $string);
+    return $string;
 }
