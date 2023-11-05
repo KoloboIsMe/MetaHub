@@ -17,4 +17,4 @@ if (!isset($title, $logged))
             <link href="View/_assets/style/layout.css" rel="stylesheet" type="text/css"/>
             <link href="View/_assets/image/MetaHubLogo.png" rel="shortcut icon" type="image/png"/>
         </head>
-        <script src="gui/js/script.js"></script>
+        <script src="View/_assets/script.js"></script>

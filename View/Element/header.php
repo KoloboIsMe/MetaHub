@@ -11,7 +11,7 @@ if (!isset($logged, $admin, $username))
 
 <header>
     <input hidden id="nav_check" type="checkbox">
-    <img id="headerLogo" src="gui/images/MetaHubLogo.png"/>
+    <img id="headerLogo" src="View/_assets/images/MetaHubLogo.png"/>
     <nav>
         <ul>
             <?php if($logged || $admin) echo "
@@ -19,7 +19,7 @@ if (!isset($logged, $admin, $username))
             <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
             <link href=\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap\" rel=\"stylesheet\">"
             ?>
-            <li><a href="/"><img id="headerImg" src="gui/images/home.png"/></a></li>
+            <li><a href="/"><img id="headerImg" src="View/_assets/image/home.png"/></a></li>
             <li><a href="posts" id="headerLinks">Posts</a></li>
             <li><a href="createPosts" id="headerLinks">Créer un Post</a></li>
             <li><a href="categories" id="headerLinks">Catégories</a></li>
@@ -32,9 +32,9 @@ if (!isset($logged, $admin, $username))
     </nav>
     <?php if($logged || $admin) { echo "
     <a href='/logout' id=\"username\">Bonjour @$username !</a>
-    <a href='/logout'><img src=\"gui/images/logout.png\" id=\"logoutImg\"/></a>";}
+    <a href='/logout'><img src=\"View/_assets/images/logout.png\" id=\"logoutImg\"/></a>";}
     else {echo "
-    <a href='/login'><img src=\"gui/images/login.png\" id=\"loginImg\"/></a>";}
+    <a href='/login'><img src=\"View/_assets/images/login.png\" id=\"loginImg\"/></a>";}
     ?>
     <label aria-label="toggle curtain navigation" class="hamburger" for="nav_check">
         <div class="line l1"></div>

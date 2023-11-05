@@ -1,8 +1,8 @@
 <?php
 $content = "
 <script src='https://unpkg.com/slim-select@latest/dist/slimselect.min.js'></script>
-<link href='gui/css/CategorySelectionBar.css' rel='stylesheet'></link>
-<link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
+<link href='View/_assets/style/CategorySelectionBar.css' rel='stylesheet'></link>
+<link href='View/_assets/style/forms.css' rel='stylesheet' type='text/css' />
 <div id='container'>
     <form action=createPostsAction method='POST'>
         <h1>Nouveau Post</h1>

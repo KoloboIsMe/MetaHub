@@ -1,6 +1,6 @@
 <?php
 ?>
-<link href="gui/css/searchBar.css" rel="stylesheet" type="text/css"/>
+<link href="View/_assets/style/searchBar.css" rel="stylesheet" type="text/css"/>
 <div class="search">
     <input type="checkbox" id="check">
     <div class="search-box">
