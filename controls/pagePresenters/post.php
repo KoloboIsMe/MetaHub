@@ -21,7 +21,7 @@ $id = $post->getTicket()->getTicket_ID(); ?>
     </div>
     <div class='comment-card'>
         <div class='card-content'>
-            <form action='posts?action=createComment&id=<?=$id?>' method='POST'>
+            <form action='?action=createComment&id=<?=$id?>' method='POST'>
             <h3 id='comment'>Commentaires</h3>
             <div class='input-box'>
                 <input type='text' class='input' placeholder='Ajoutez un commentaire' name='text'  required></input>
@@ -35,8 +35,7 @@ $id = $post->getTicket()->getTicket_ID(); ?>
             <img src='gui/images/user.png' id='user-comment-img'>
             <div class='comment-content'>  @<?= $comment->getAuthor_username() ?> : <?= $comment->getText() ?></div>
             <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $comment->getAuthor())) { ?>
-                <a href='ouais'><button ><img src='gui/images/edit.png' id='add-button'></button></a>
-                <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
+                <a href='?action=deleteCommentAction&id=<?=$comment->getComment_ID()?>'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
             <?php }?>
         </div>
         <?php } ?>

@@ -5,6 +5,7 @@ include_once 'controls/Presenter.php';
 
 include_once 'Framework/database/CategoryAccess.php';
 include_once 'Framework/database/CommentAccess.php';
+include_once 'Framework/database/GeneralAccess.php';
 include_once 'Framework/database/SPDO.php';
 include_once 'Framework/database/TicketAccess.php';
 include_once 'Framework/database/UserAccess.php';
@@ -18,6 +19,7 @@ include_once 'Framework/entities/User.php';
 include_once 'gui/Layout.php';
 include_once 'gui/View.php';
 include_once 'gui/ViewCategories.php';
+include_once 'gui/ViewCreateCategory.php';
 include_once 'gui/ViewCreatePosts.php';
 include_once 'gui/ViewEditTicket.php';
 include_once 'gui/ViewError.php';
@@ -57,6 +59,8 @@ $userAccessLector = new database\UserAccess($dbLector);
 $ticketAccess = new database\TicketAccess($dbAdmin);
 $userAccess = new database\UserAccess($dbAdmin);
 $commentAccess = new database\CommentAccess($dbAdmin);
+$categoryAccess = new database\CategoryAccess($dbAdmin);
+$generalAccess = new database\GeneralAccess($dbAdmin);
 
 // initialisation de l'output dans une structure pour le transfert des données
 $outputData = new service\OutputData();
@@ -112,25 +116,56 @@ if(isset($_GET['action'])){
             $page ? header("refresh:0;url=/$page") : header("refresh:0;url=/");
         }
     }
-    if ('createPostsAction' == $_GET['action'] && isset($_POST["title"]) && isset($_POST["message"])) {
-
-        $controller->createTicketAction($ticketsGetting, $ticketAccess);
-        header("refresh:0;url=/");
-    }
 
     if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 
+        if ('createPostsAction' == $_GET['action'] && isset($_POST["title"]) && isset($_POST["message"])) {
+
+            $controller->createTicketAction($ticketsGetting, $ticketAccess);
+            header("refresh:0;url=/");
+
+        }
         if ('deleteTicketAction' == $_GET['action'] && isset($_GET['id'])) {
 
-            $error = $controller->deleteTicket($ticketsGetting, $ticketAccess);
+            $error = $controller->deleteTicket($ticketsGetting, $ticketAccess, $generalAccess, $_GET['id']);
             if ($error) {
                 $redirect = '/';
                 $url = 'error';
             } else {
-                header("refresh:0;url=/");
+                header("refresh:0;url=/posts");
             }
-        }
-        if ('editTicketAction' == $_GET['action'] && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+
+        } elseif ('deleteUserAction' == $_GET['action'] && isset($_GET['id'])) {
+
+            $error = $controller->deleteUser($usersGetting, $userAccess, $generalAccess, $_GET['id']);
+            if ($error) {
+                $redirect = '/';
+                $url = 'error';
+            } else {
+                if($_GET['id'] == $_SESSION['user_ID']) {
+                    session_unset();
+                    header("refresh:0;url=/");
+                }
+            }
+
+        } elseif ('deleteCommentAction' == $_GET['action'] && isset($_GET['id'])) {
+
+            $error = $controller->deleteComment($commentsGetting, $commentAccess, $generalAccess, $_GET['id']);
+            if ($error) {
+                $redirect = '/';
+                $url = 'error';
+            }
+
+        } elseif ('deleteCategoryAction' == $_GET['action'] && isset($_GET['id'])) {
+
+            $error = $controller->deleteCategory($generalAccess, $_GET['id']);
+            if ($error) {
+                $redirect = '/';
+                $url = 'error';
+            }
+
+        } elseif ('editTicketAction' == $_GET['action'] && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
+
             $error = $controller->editTicket($ticketsGetting, $ticketAccess);
             if ($error) {
                 $redirect = '/';
@@ -138,13 +173,8 @@ if(isset($_GET['action'])){
             } else {
                 header("refresh:0;url=/");
             }
-        }
-        if ('createComment' == $_GET['action'] && isset($_POST["text"]) && isset($_GET['id'])) {
 
-            $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
-            header("refresh:0;url=/posts&id=" . $_GET['id']);
-        }
-        if ('editUserInfoAction' == $_GET['action'] && isset($_POST['username']) && isset($_POST['old_password'])) {
+        } elseif ('editUserInfoAction' == $_GET['action'] && isset($_POST['username']) && isset($_POST['old_password'])) {
 
             $error = $controller->updateUserAction($usersGetting, $userAccess);
             if ($error) {
@@ -155,6 +185,21 @@ if(isset($_GET['action'])){
                 $url='/';
                 $controller->authenticateAction($usersGetting, $userAccess);
                 header("refresh:0;url=/");
+            }
+
+        } elseif ('createComment' == $_GET['action'] && isset($_POST["text"]) && isset($_GET['id'])) {
+
+            $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
+            header("refresh:0;url=/posts&id=" . $_GET['id']);
+
+        } elseif ('createCategoryAction' == $_GET['action'] && isset($_POST["label"]) && isset($_POST['description'])) {
+
+            $error = $categoriesGetting->createCategory($categoryAccess, $_POST["label"], $_POST['description']);
+            if ($error) {
+                $redirect = 'createCategory';
+                $url = 'error';
+            } else {
+                header("refresh:0;url=/categories");
             }
         }
     }
@@ -251,7 +296,7 @@ if ('' == $url || '/' == $url) {
         if($usersGetting->existsUser($userAccessLector, $_GET['id'])) {
             $user = $usersGetting->getUserById($userAccessLector, $_GET['id']);
             //liste des id tes tickets de l'user
-            $postsID = $ticketsGetting->getPostsIdByUserId($userAccessLector, $_GET['id']);
+            $postsID = $generalAccess->getTicketsIdByUserId($_GET['id']);
             $ticketsGetting->getUserPosts($ticketAccessLector, $postsID);
         }else
             header('Location: /');
@@ -262,14 +307,19 @@ if ('' == $url || '/' == $url) {
 
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewUsers($layout, $presenter, $user))->display();
-}
 
-elseif ('userEdit' == $url && isset($_SESSION['user_ID'])) {
+} elseif ('userEdit' == $url && isset($_SESSION['user_ID'])) {
+
     $usersGetting->setUserById($userAccessLector, $_SESSION['user_ID']);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewUserEdit($layout, $presenter))->display();
 
-} elseif ('error' == $url) {
+} elseif ('createCategory' == $url && isset($_SESSION['level']) && $_SESSION['level'] > 0) {
+
+    $layout = new gui\Layout($layoutTemplate);
+    (new gui\ViewCreateCategory($layout))->display();
+
+}elseif ('error' == $url) {
 
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewError($layout, $error, $redirect))->display();

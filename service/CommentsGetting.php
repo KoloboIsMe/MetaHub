@@ -17,4 +17,9 @@ class CommentsGetting
         $commentAccess->createComment($text, date("Y-m-d H:i"), $_SESSION['user_ID'], $ticketID);
     }
 
+    public function isCommentOwner($commentAccess, $commentID, $user_ID)
+    {
+        return $commentAccess->isCommentOwner($commentID, $user_ID);
+    }
+
 }

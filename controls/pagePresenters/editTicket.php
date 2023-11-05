@@ -4,7 +4,7 @@ $title = $post->getTicket()->getTitle();?>
 
 <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />
 <div id='container'>
-    <form action='/index.php?action=editTicketAction&id=<?=$id?>' method='POST'>
+    <form action='?action=editTicketAction&id=<?=$id?>' method='POST'>
         <h1>Edition</h1>
 
         <label><b>Titre</b></label>

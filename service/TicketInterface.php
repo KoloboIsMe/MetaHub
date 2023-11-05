@@ -16,8 +16,6 @@ interface TicketInterface
     public function addCategoryToTicket($category, $ticketID);
 
     public function getCategoryIdByLabel($label);
-
-    public function deleteTicket($ticketID);
     public function editTicket($id, $title, $message);
     public function isTicketOwner($ticketID, $userID);
 }

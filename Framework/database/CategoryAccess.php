@@ -86,4 +86,20 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+    public function createCategory($label, $description)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
+            $statement->execute([':label' => $label]);
+
+            if (isset($statement->fetch(PDO::FETCH_ASSOC)['category_ID'])) {
+                return "Cette catégorie existe déjà";
+            }
+            $statement = $this->dataAccess->prepare('INSERT INTO category (label, description) VALUES (:label, :description)');
+            $statement->execute([':label' => $label, ':description' => $description]);
+            return null;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
 }

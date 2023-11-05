@@ -39,4 +39,8 @@ class CategoriesGetting
         $categories = $dataccess->get5LastCategories();
         $this->outputData->addOutputData($categories);
     }
+    public function createCategory($dataccess, $label, $description)
+    {
+        return $dataccess->createCategory($label, $description);
+    }
 }

@@ -9,7 +9,7 @@
                 <div class="delete-user">
                     <p id='username-list'>@<?= $user->getUsername()?></p>
                     <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
-                        <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteUser'></button></a>
+                        <a href='?action=deleteUserAction&id=<?=$id?>'><button ><img src='gui/images/delete.png' id='deleteUser'></button></a>
                     <?php }?>
                 </div>
             </div>
