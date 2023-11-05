@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Comfortaa', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #191919;
+}
+
+@media only screen and (min-width: 500px) and (max-width : 1050px) {
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    h2{
+        font-size: 3.5vh;
+    }
+}
+
+@media only screen and (min-device-width : 250px) and (max-device-width : 500px) {
+    .card-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}
+
+#username-list{
+    margin-bottom: 2vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-size: 2.5vh;
+    border-radius: 3vw;
+    padding: 1vh;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 5px 10px #090909;
+}
+
+#usersImg{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 4vh;
+    margin-top: 3vh;
+}
+
+.post-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3vh;
+}
+
+.titreErreur {
+    color: white;
+    font-size: 30px;
+    font-family: 'Comfortaa', sans-serif
+}
+
+p{
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+    margin-bottom: 1.5vh;
+    font-size: 2vh;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+}
+
+.users-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-left: 3vh;
+    margin-right: 3vh;
+    height: auto;
+    background-color: #242424;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px #090909, -5px -10px 20px #1f1f1f;
+    margin: 10px;
+}
+
+h2{
+    font-size: 3.5vh;
+    color: white;
+    margin-top: 4vh;
+    margin-left: 5vh;
+    border-bottom-width: 1px;
+    border-bottom-color: #3f3f3f;
+    border-bottom-style: solid;
+}
+
+.delete-user{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#deleteUser{
+    height: 2.5vh;
+    width: 2.5vh;
+    margin-left: 1vh;
+    margin-top: 3vh;
+    margin-right: 3vh;
+}

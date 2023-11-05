@@ -1,3 +1,4 @@
+<link href="gui/css/post.css" rel="stylesheet" type="text/css"/>
 <h2>Post</h2>
 <?php $post = $data;
 $id = $post->getTicket()->getTicket_ID(); ?>

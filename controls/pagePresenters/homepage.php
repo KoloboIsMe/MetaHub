@@ -1,3 +1,4 @@
+<link href="gui/css/homepage.css" rel="stylesheet" type="text/css"/>
 <h2>Fil d'actualité</h2>
 <div class='card-container1'>
     <?php
