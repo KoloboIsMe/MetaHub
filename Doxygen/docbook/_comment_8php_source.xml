@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__comment_8php_source" xml:lang="en-US">
+<title>Comment.php</title>
+<indexterm><primary>Framework/entities/Comment.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__comment_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__comment_8php_source_1l00002"/>00002 
+<anchor xml:id="__comment_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceentities">entities</link>;
+<anchor xml:id="__comment_8php_source_1l00004"/>00004 
+<anchor xml:id="__comment_8php_source_1l00005"/>00005 include_once&#32;<emphasis role="stringliteral">&apos;Entity.php&apos;</emphasis>;
+<anchor xml:id="__comment_8php_source_1l00006"/>00006 
+<anchor xml:id="__comment_8php_source_1l00007"/><link linkend="_classentities_1_1_comment">00007</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classentities_1_1_comment">Comment</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_classentities_1_1_entity">Entity</link>
+<anchor xml:id="__comment_8php_source_1l00008"/>00008 {
+<anchor xml:id="__comment_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$comment_ID;
+<anchor xml:id="__comment_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$text;
+<anchor xml:id="__comment_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$date;
+<anchor xml:id="__comment_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$author;
+<anchor xml:id="__comment_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$author_username;
+<anchor xml:id="__comment_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$ticket;
+<anchor xml:id="__comment_8php_source_1l00033"/>00033 
+<anchor xml:id="__comment_8php_source_1l00038"/><link linkend="_classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4">setUsername</link>($author_username)
+<anchor xml:id="__comment_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string($author_username))&#32;{
+<anchor xml:id="__comment_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;author_username&#32;=&#32;$author_username;
+<anchor xml:id="__comment_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00044"/>00044 
+<anchor xml:id="__comment_8php_source_1l00048"/><link linkend="_classentities_1_1_comment_1a955311333800961e63d1445168d03092">00048</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a955311333800961e63d1445168d03092">getComment_ID</link>()
+<anchor xml:id="__comment_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;comment_ID;
+<anchor xml:id="__comment_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00052"/>00052 
+<anchor xml:id="__comment_8php_source_1l00057"/><link linkend="_classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2">setComment_ID</link>($comment_ID)
+<anchor xml:id="__comment_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$comment_ID&#32;=&#32;(int)$comment_ID;
+<anchor xml:id="__comment_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($comment_ID&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__comment_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;comment_ID&#32;=&#32;$comment_ID;
+<anchor xml:id="__comment_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00064"/>00064 
+<anchor xml:id="__comment_8php_source_1l00068"/><link linkend="_classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99">00068</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99">getText</link>()
+<anchor xml:id="__comment_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;text;
+<anchor xml:id="__comment_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00072"/>00072 
+<anchor xml:id="__comment_8php_source_1l00077"/><link linkend="_classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a">00077</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a">setText</link>($text)
+<anchor xml:id="__comment_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string($text))&#32;{
+<anchor xml:id="__comment_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;text&#32;=&#32;$text;
+<anchor xml:id="__comment_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00083"/>00083 
+<anchor xml:id="__comment_8php_source_1l00087"/><link linkend="_classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3">00087</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3">getDate</link>()
+<anchor xml:id="__comment_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;date;
+<anchor xml:id="__comment_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00091"/>00091 
+<anchor xml:id="__comment_8php_source_1l00096"/><link linkend="_classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17">00096</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17">setDate</link>($date)
+<anchor xml:id="__comment_8php_source_1l00097"/>00097 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;date&#32;=&#32;$date;
+<anchor xml:id="__comment_8php_source_1l00099"/>00099 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00100"/>00100 
+<anchor xml:id="__comment_8php_source_1l00104"/><link linkend="_classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24">00104</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24">getAuthor</link>()
+<anchor xml:id="__comment_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;author;
+<anchor xml:id="__comment_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00108"/>00108 
+<anchor xml:id="__comment_8php_source_1l00113"/><link linkend="_classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a">00113</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a">setAuthor</link>($author)
+<anchor xml:id="__comment_8php_source_1l00114"/>00114 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$author&#32;=&#32;(int)$author;
+<anchor xml:id="__comment_8php_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($author&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__comment_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;author&#32;=&#32;$author;
+<anchor xml:id="__comment_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00120"/>00120 
+<anchor xml:id="__comment_8php_source_1l00124"/><link linkend="_classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9">00124</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9">getAuthor_username</link>()
+<anchor xml:id="__comment_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;author_username;
+<anchor xml:id="__comment_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00128"/>00128 
+<anchor xml:id="__comment_8php_source_1l00132"/><link linkend="_classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c">00132</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c">getTicket</link>()
+<anchor xml:id="__comment_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;ticket;
+<anchor xml:id="__comment_8php_source_1l00135"/>00135 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00136"/>00136 
+<anchor xml:id="__comment_8php_source_1l00141"/><link linkend="_classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7">00141</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7">setTicket</link>($ticket)
+<anchor xml:id="__comment_8php_source_1l00142"/>00142 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ticket&#32;=&#32;(int)$ticket;
+<anchor xml:id="__comment_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($ticket&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__comment_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;ticket&#32;=&#32;$ticket;
+<anchor xml:id="__comment_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_8php_source_1l00148"/>00148 
+<anchor xml:id="__comment_8php_source_1l00149"/>00149 
+<anchor xml:id="__comment_8php_source_1l00150"/>00150 }
+</programlisting></section>

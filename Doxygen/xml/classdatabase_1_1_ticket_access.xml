@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classdatabase_1_1_ticket_access" kind="class" language="PHP" prot="public">
+    <compoundname>database::TicketAccess</compoundname>
+    <basecompoundref refid="interfaceservices_1_1_ticket_interface" prot="public" virt="non-virtual">TicketInterface</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdatabase_1_1_ticket_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$dataAccess</definition>
+        <argsstring></argsstring>
+        <name>$dataAccess</name>
+        <qualifiedname>database\TicketAccess\$dataAccess</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="17" column="15" bodyfile="Framework/database/TicketAccess.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1a9d903d171ff2319096ef345b4092535b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($dataAccess)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>database\TicketAccess\__construct</qualifiedname>
+        <param>
+          <declname>$dataAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dataAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="22" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1a6cd98da4d72e5877202bedac9f7f7708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsTicket</definition>
+        <argsstring>($ticketID)</argsstring>
+        <name>existsTicket</name>
+        <qualifiedname>database\TicketAccess\existsTicket</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708">existsTicket</reimplements>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="31" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1afb3753ff19a1ec4d934cc30508bd562c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isTicketOwner</definition>
+        <argsstring>($ticketID, $userID)</argsstring>
+        <name>isTicketOwner</name>
+        <qualifiedname>database\TicketAccess\isTicketOwner</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c">isTicketOwner</reimplements>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <param>
+          <declname>$userID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticketID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="48" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="48" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1add5e7fd54d1f1308db1e8a3e873b785b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTicketsID</definition>
+        <argsstring>()</argsstring>
+        <name>getTicketsID</name>
+        <qualifiedname>database\TicketAccess\getTicketsID</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b">getTicketsID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="65" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="65" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1acc435610e7829e4a55eef8e0d7a06cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get5LastTicketsID</definition>
+        <argsstring>()</argsstring>
+        <name>get5LastTicketsID</name>
+        <qualifiedname>database\TicketAccess\get5LastTicketsID</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3">get5LastTicketsID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="83" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="83" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1afa6e5469befba46eb1dfaf007b8713c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createTicket</definition>
+        <argsstring>($title, $message, $date, $author)</argsstring>
+        <name>createTicket</name>
+        <qualifiedname>database\TicketAccess\createTicket</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6">createTicket</reimplements>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <param>
+          <declname>$author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$author</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="106" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="106" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_ticket_access_1a15b7252a597d9b252639064378bafa5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editTicket</definition>
+        <argsstring>($id, $title, $message)</argsstring>
+        <name>editTicket</name>
+        <qualifiedname>database\TicketAccess\editTicket</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a">editTicket</reimplements>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/TicketAccess.php" line="136" column="21" bodyfile="Framework/database/TicketAccess.php" bodystart="136" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TicketAccess</label>
+        <link refid="classdatabase_1_1_ticket_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TicketInterface</label>
+        <link refid="interfaceservices_1_1_ticket_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TicketAccess</label>
+        <link refid="classdatabase_1_1_ticket_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TicketInterface</label>
+        <link refid="interfaceservices_1_1_ticket_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/database/TicketAccess.php" line="12" column="1" bodyfile="Framework/database/TicketAccess.php" bodystart="13" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classdatabase_1_1_ticket_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" virt="non-virtual"><scope>database::TicketAccess</scope><name>$dataAccess</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1a9d903d171ff2319096ef345b4092535b" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>__construct</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1afa6e5469befba46eb1dfaf007b8713c6" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>createTicket</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1a15b7252a597d9b252639064378bafa5a" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>editTicket</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1a6cd98da4d72e5877202bedac9f7f7708" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>existsTicket</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1acc435610e7829e4a55eef8e0d7a06cb3" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>get5LastTicketsID</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1add5e7fd54d1f1308db1e8a3e873b785b" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>getTicketsID</name></member>
+      <member refid="classdatabase_1_1_ticket_access_1afb3753ff19a1ec4d934cc30508bd562c" prot="public" virt="non-virtual"><scope>database::TicketAccess</scope><name>isTicketOwner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

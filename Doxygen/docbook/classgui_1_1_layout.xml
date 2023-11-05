@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classgui_1_1_layout" xml:lang="en-US">
+<title>Layout Class Reference</title>
+<indexterm><primary>Layout</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classgui_1_1_layout_1adfdd8bfb11a1c06451d99ecc1446a9a8">__construct</link> ($templateFile)</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_layout_1a72c83e10eed9ac01f810b1d14483e9f6">display</link> ($title, $content, $username, $searchBar=null)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classgui_1_1_layout_1a952fcaa4d048f47c91939d6d2cb9bff4">$templateFile</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__layout_8php_source_1l00004">4</link> of file <link linkend="__layout_8php_source">Layout.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classgui_1_1_layout_1adfdd8bfb11a1c06451d99ecc1446a9a8"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Layout</secondary></indexterm>
+<indexterm><primary>Layout</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $templateFile)</computeroutput></para><para>
+Definition at line <link linkend="__layout_8php_source_1l00008">8</link> of file <link linkend="__layout_8php_source">Layout.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classgui_1_1_layout_1a72c83e10eed9ac01f810b1d14483e9f6"/><section>
+    <title>display()</title>
+<indexterm><primary>display</primary><secondary>Layout</secondary></indexterm>
+<indexterm><primary>Layout</primary><secondary>display</secondary></indexterm>
+<para><computeroutput>display ( $title,  $content,  $username,  $searchBar = <computeroutput>null</computeroutput>
+)</computeroutput></para><para>
+Definition at line <link linkend="__layout_8php_source_1l00013">13</link> of file <link linkend="__layout_8php_source">Layout.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classgui_1_1_layout_1a952fcaa4d048f47c91939d6d2cb9bff4"/><section>
+    <title>$templateFile</title>
+<indexterm><primary>$templateFile</primary><secondary>Layout</secondary></indexterm>
+<indexterm><primary>Layout</primary><secondary>$templateFile</secondary></indexterm>
+<para><computeroutput>$templateFile<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__layout_8php_source_1l00006">6</link> of file <link linkend="__layout_8php_source">Layout.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+gui/<link linkend="__layout_8php">Layout.php</link></section>
+</section>

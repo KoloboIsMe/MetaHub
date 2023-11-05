@@ -1,0 +1,335 @@
+\doxysection{index.\+php}
+\hypertarget{index_8php_source}{}\label{index_8php_source}\mbox{\hyperlink{index_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00003}00003\ include\_once\ \textcolor{stringliteral}{'controls/Controller.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00004}00004\ include\_once\ \textcolor{stringliteral}{'controls/Presenter.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00006}00006\ include\_once\ \textcolor{stringliteral}{'Framework/database/CategoryAccess.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00007}00007\ include\_once\ \textcolor{stringliteral}{'Framework/database/CommentAccess.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00008}00008\ include\_once\ \textcolor{stringliteral}{'Framework/database/GeneralAccess.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00009}00009\ include\_once\ \textcolor{stringliteral}{'Framework/database/SPDO.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00010}00010\ include\_once\ \textcolor{stringliteral}{'Framework/database/TicketAccess.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00011}00011\ include\_once\ \textcolor{stringliteral}{'Framework/database/UserAccess.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00013}00013\ include\_once\ \textcolor{stringliteral}{'Framework/entities/Category.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00014}00014\ include\_once\ \textcolor{stringliteral}{'Framework/entities/Comment.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00015}00015\ include\_once\ \textcolor{stringliteral}{'Framework/entities/Post.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00016}00016\ include\_once\ \textcolor{stringliteral}{'Framework/entities/Ticket.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00017}00017\ include\_once\ \textcolor{stringliteral}{'Framework/entities/User.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00019}00019\ include\_once\ \textcolor{stringliteral}{'gui/Layout.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00020}00020\ include\_once\ \textcolor{stringliteral}{'gui/View.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00021}00021\ include\_once\ \textcolor{stringliteral}{'gui/ViewCategories.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00022}00022\ include\_once\ \textcolor{stringliteral}{'gui/ViewCreateCategory.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00023}00023\ include\_once\ \textcolor{stringliteral}{'gui/ViewCreatePosts.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00024}00024\ include\_once\ \textcolor{stringliteral}{'gui/ViewEditTicket.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00025}00025\ include\_once\ \textcolor{stringliteral}{'gui/ViewError.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00026}00026\ include\_once\ \textcolor{stringliteral}{'gui/ViewHomepage.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00027}00027\ include\_once\ \textcolor{stringliteral}{'gui/ViewLogin.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00028}00028\ include\_once\ \textcolor{stringliteral}{'gui/ViewRegister.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00029}00029\ include\_once\ \textcolor{stringliteral}{'gui/ViewPosts.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00030}00030\ include\_once\ \textcolor{stringliteral}{'gui/ViewUserEdit.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00031}00031\ include\_once\ \textcolor{stringliteral}{'gui/ViewUsers.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00033}00033\ include\_once\ \textcolor{stringliteral}{'services/CategoriesService.php'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00034}00034\ include\_once\ \textcolor{stringliteral}{"{}services/CommentsService.php"{}};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00035}00035\ include\_once\ \textcolor{stringliteral}{"{}services/OutputData.php"{}};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00036}00036\ include\_once\ \textcolor{stringliteral}{"{}services/TicketsService.php"{}};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00037}00037\ include\_once\ \textcolor{stringliteral}{"{}services/UsersService.php"{}};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00039}\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{00039}}\ \mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00040}\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{00040}}\ \mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00041}\mbox{\hyperlink{index_8php_abe4cc9788f52e49485473dc699537388}{00041}}\ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00043}00043\ \ \ \ \ \textcolor{comment}{//\ construction\ du\ modèle}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}}\ =\ database\(\backslash\)SPDO::getInstance(\textcolor{stringliteral}{"{}ADMIN"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}}\ =\ database\(\backslash\)SPDO::getInstance(\textcolor{stringliteral}{"{}LECTOR"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00047}00047\ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00048}00048\ \ \ \ \ print\ \textcolor{stringliteral}{"{}Erreur\ de\ connexion\ !:\ "{}}\ .\ \$e-\/>getMessage()\ .\ \textcolor{stringliteral}{"{}<br/>"{}};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00049}00049\ \ \ \ \ die();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00052}\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{00052}}\ \mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_category_access}{database\(\backslash\)CategoryAccess}}(\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00053}\mbox{\hyperlink{index_8php_a89d3445ad41f70c219793449020d3528}{00053}}\ \mbox{\hyperlink{index_8php_a89d3445ad41f70c219793449020d3528}{\$commentAccessLector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\(\backslash\)CommentAccess}}(\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00054}\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{00054}}\ \mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticketAccessLector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\(\backslash\)TicketAccess}}(\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00055}\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{00055}}\ \mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_user_access}{database\(\backslash\)UserAccess}}(\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$dbLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00056}\mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{00056}}\ \mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_general_access}{database\(\backslash\)GeneralAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00058}\mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{00058}}\ \mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{\$ticketAccess}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\(\backslash\)TicketAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00059}\mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{00059}}\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_user_access}{database\(\backslash\)UserAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00060}\mbox{\hyperlink{index_8php_a681149110179ebaba9c2e54cdd2b83a2}{00060}}\ \mbox{\hyperlink{index_8php_a681149110179ebaba9c2e54cdd2b83a2}{\$commentAccess}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\(\backslash\)CommentAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00061}\mbox{\hyperlink{index_8php_a06af02ba84341ec1e24e2863d4ed0749}{00061}}\ \mbox{\hyperlink{index_8php_a06af02ba84341ec1e24e2863d4ed0749}{\$categoryAccess}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_category_access}{database\(\backslash\)CategoryAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00062}\mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{00062}}\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classdatabase_1_1_general_access}{database\(\backslash\)GeneralAccess}}(\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00064}00064\ \textcolor{comment}{//\ initialisation\ de\ l'output\ dans\ une\ structure\ pour\ le\ transfert\ des\ données}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00065}\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{00065}}\ \mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classservices_1_1_output_data}{services\(\backslash\)OutputData}}();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00067}00067\ \textcolor{comment}{//\ initialisation\ du\ controller\ avec\ accès\ a\ la\ structure\ pour\ le\ transfert\ des\ données}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00068}\mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{00068}}\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcontrols_1_1_controller}{controls\(\backslash\)Controller}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00070}00070\ \textcolor{comment}{//\ initialisation\ du\ presenter\ avec\ accès\ a\ la\ structure\ pour\ le\ transfert\ des\ données}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00071}\mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{00071}}\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classcontrols_1_1_presenter}{controls\(\backslash\)Presenter}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00073}00073\ \textcolor{comment}{//initialisation\ des\ services\ avec\ la\ structure\ pour\ le\ transfert\ des\ données}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00074}\mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{00074}}\ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classservices_1_1_categories_service}{services\(\backslash\)CategoriesService}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00075}\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{00075}}\ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classservices_1_1_tickets_service}{services\(\backslash\)TicketsService}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00076}\mbox{\hyperlink{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}{00076}}\ \mbox{\hyperlink{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}{\$commentsService}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classservices_1_1_comments_service}{services\(\backslash\)CommentsService}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00077}\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{00077}}\ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classservices_1_1_users_service}{services\(\backslash\)UsersService}}(\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$outputData}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00079}00079\ \textcolor{comment}{//\ chemin\ de\ l'URL\ demandée\ au\ navigateur}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00080}\mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{00080}}\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \$\_GET[\textcolor{stringliteral}{'url'}]\ ??\ \textcolor{stringliteral}{''};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00082}00082\ \textcolor{comment}{//\ définition\ d'une\ session\ d'une\ heure}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00083}00083\ ini\_set(\textcolor{stringliteral}{'session.gc\_maxlifetime'},\ 1800);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00084}00084\ session\_start();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00086}00086\ \textcolor{keywordflow}{if}\ (isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'isLogged'}])\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \$layoutTemplate\ =\ \textcolor{stringliteral}{'gui/layoutLoggedAdmin.html'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \$layoutTemplate\ =\ \textcolor{stringliteral}{'gui/layoutLogged.html'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00091}\mbox{\hyperlink{index_8php_a06dc4a8eef6f21bee6ea9a1f7a778241}{00091}}\ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00092}00092\ \ \ \ \ \$layoutTemplate\ =\ \textcolor{stringliteral}{'gui/layout.html'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00096}00096\ \textcolor{keywordflow}{if}\ (isset(\$\_GET[\textcolor{stringliteral}{'action'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'registerAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'username'}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'password'}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'password\_confirmation'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \$page\ =\ \$\_GET[\textcolor{stringliteral}{'id'}]\ ??\ \$page\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00100}00100\ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>registerAction(\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}},\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'register'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \$\_GET[\textcolor{stringliteral}{'action'}]\ =\ \textcolor{stringliteral}{'login\_verification'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'login\_verification'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'username'}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'password'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \$page\ =\ \$\_GET[\textcolor{stringliteral}{'id'}]\ ??\ \$page\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>authenticateAction(\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}},\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ ?\ \$redirect\ =\ \textcolor{stringliteral}{'login\&id='}\ .\ \$page\ :\ \$redirect\ =\ \textcolor{stringliteral}{'login'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \$page\ ?\ header(\textcolor{stringliteral}{"{}refresh:0;url=/\$page"{}})\ :\ header(\textcolor{stringliteral}{"{}refresh:0;url=/"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00115}00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00116}00116\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'isLogged'}])\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00119}00119\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'createPostsAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}title"{}}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}message"{}}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>createTicketAction(\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}},\ \mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{\$ticketAccess}},\ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}\ ,\mbox{\hyperlink{index_8php_a06af02ba84341ec1e24e2863d4ed0749}{\$categoryAccess}},\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{'deleteTicketAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>deleteTicket(\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}},\ \mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{\$ticketAccess}},\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00134}00134\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'deleteUserAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>deleteUser(\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}},\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}},\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$\_GET[\textcolor{stringliteral}{'id'}]\ ==\ \$\_SESSION[\textcolor{stringliteral}{'user\_ID'}])\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ session\_unset();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'deleteCommentAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>deleteComment(\mbox{\hyperlink{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}{\$commentsService}},\ \mbox{\hyperlink{index_8php_a681149110179ebaba9c2e54cdd2b83a2}{\$commentAccess}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00155}00155\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'deleteCategoryAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>deleteCategory(\mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00163}00163\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'editTicketAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}title"{}}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}message"{}}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>editTicket(\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}},\ \mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{\$ticketAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00173}00173\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'editUserInfoAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'username'}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'old\_password'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>updateUserAction(\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}},\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{stringliteral}{'userEdit'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ session\_unset();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{charliteral}{'/'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>authenticateAction(\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}},\ \mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'createComment'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}text"{}}])\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}{\$commentsService}}-\/>createComment(\mbox{\hyperlink{index_8php_a681149110179ebaba9c2e54cdd2b83a2}{\$commentAccess}},\ \$\_POST[\textcolor{stringliteral}{"{}text"{}}],\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/posts\&id="{}}\ .\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00191}00191\ \ \ \ \ \ \ \ \ \}\ elseif\ (\textcolor{stringliteral}{'createCategoryAction'}\ ==\ \$\_GET[\textcolor{stringliteral}{'action'}]\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{"{}label"{}}])\ \&\&\ isset(\$\_POST[\textcolor{stringliteral}{'description'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \$error\ =\ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>createCategory(\mbox{\hyperlink{index_8php_a06af02ba84341ec1e24e2863d4ed0749}{\$categoryAccess}},\ \$\_POST[\textcolor{stringliteral}{"{}label"{}}],\ \$\_POST[\textcolor{stringliteral}{'description'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$error)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$redirect\ =\ \textcolor{stringliteral}{'createCategory'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ =\ \textcolor{stringliteral}{'error'};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{"{}refresh:0;url=/categories"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00200}00200\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00201}00201\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00202}00202\ \}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00205}00205\ \textcolor{keywordflow}{if}\ (\textcolor{stringliteral}{''}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ ||\ \textcolor{charliteral}{'/'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00207}00207\ \ \ \ \ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>get5LastPosts(\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticketAccessLector}},\ \mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>add5LastCategories(\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00209}00209\ \ \ \ \ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>add10LastConnectedUsers(\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00210}00210\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00211}00211\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_homepage}{gui\(\backslash\)ViewHomepage}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00213}00213\ \}\ elseif\ (\textcolor{stringliteral}{'login'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00215}00215\ \ \ \ \ isset(\$\_GET[\textcolor{stringliteral}{'id'}])\ ?\ \$page\ =\ \$\_GET[\textcolor{stringliteral}{'id'}]\ :\ \$page\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00216}00216\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00217}00217\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_login}{gui\(\backslash\)ViewLogin}}(\$layout,\ \$page))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00219}00219\ \}\ elseif\ (\textcolor{stringliteral}{'register'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00221}00221\ \ \ \ \ isset(\$\_GET[\textcolor{stringliteral}{'id'}])\ ?\ \$page\ =\ \$\_GET[\textcolor{stringliteral}{'id'}]\ :\ \$page\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00222}00222\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00223}00223\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$error))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00224}00224\ \ \ \ \ \ \ \ \ \$error\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00225}00225\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_register}{gui\(\backslash\)ViewRegister}}(\$layout,\ \$page,\ \$error))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00227}00227\ \}\ elseif\ (\textcolor{stringliteral}{'logout'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ \&\&\ isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00229}00229\ \ \ \ \ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>setOnline(\mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$userAccess}},\ \$\_SESSION[\textcolor{stringliteral}{'user\_ID'}],\ 0);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00230}00230\ \ \ \ \ session\_unset();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00231}00231\ \ \ \ \ session\_destroy();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00232}00232\ \ \ \ \ header(\textcolor{stringliteral}{"{}Location:\ /"{}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00234}00234\ \}\ elseif\ (\textcolor{stringliteral}{'posts'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00236}00236\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00237}00237\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /login\&id='}\ .\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00239}00239\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$\_GET[\textcolor{stringliteral}{'id'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>existsTicket(\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticketAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>getPostById(\$\_GET[\textcolor{stringliteral}{'id'}],\ \mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00242}00242\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00244}00244\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00245}00245\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>getPosts(\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticketAccessLector}},\ \mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00247}00247\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00248}00248\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_posts}{gui\(\backslash\)ViewPosts}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00250}00250\ \}\ elseif\ (\textcolor{stringliteral}{'createPosts'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00251}00251\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00252}00252\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00253}00253\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /login\&id='}\ .\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00255}00255\ \ \ \ \ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>getCategories(\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00256}00256\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00257}00257\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_create_posts}{gui\(\backslash\)ViewCreatePosts}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00259}00259\ \}\ elseif\ (\textcolor{stringliteral}{'categories'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00261}00261\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00262}00262\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /login\&id='}\ .\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00264}00264\ \ \ \ \ \$category\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00265}00265\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00266}00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>existsCategory(\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \$category\ =\ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>getCategoryById(\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \$postsID\ =\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}}-\/>getPostsIdByCategoryId(\$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>getCategoryPosts(\mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}},\ \$postsID);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00270}00270\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00272}00272\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00273}00273\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categoriesService}}-\/>getCategories(\mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$categoryAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00275}00275\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00276}00276\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_categories}{gui\(\backslash\)ViewCategories}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}},\ \$category))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00278}00278\ \}\ elseif\ (\textcolor{stringliteral}{'editTicket'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ \&\&\ isset(\$\_GET[\textcolor{stringliteral}{'id'}])\ \&\&\ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>existsTicket(\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticketAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00279}00279\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00280}00280\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00281}00281\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /login'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00282}00282\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00283}00283\ \ \ \ \ \mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}}-\/>getPostById(\$\_GET[\textcolor{stringliteral}{'id'}],\ \mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00284}00284\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00285}00285\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_edit_ticket}{gui\(\backslash\)ViewEditTicket}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00287}00287\ \}\ elseif\ (\textcolor{stringliteral}{'users'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00289}00289\ \ \ \ \ \textcolor{keywordflow}{if}\ (!isset(\$\_SESSION[\textcolor{stringliteral}{'isLogged'}]))}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00290}00290\ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /login\&id='}\ .\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00292}00292\ \ \ \ \ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00293}00293\ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00294}00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>existsUser(\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}\ =\ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>getUserById(\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}},\ \$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//liste\ des\ id\ tes\ tickets\ de\ l'user}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ \ \ \$postsID\ =\ \mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$generalAccess}}-\/>getTicketsIdByUserId(\$\_GET[\textcolor{stringliteral}{'id'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$ticketsService}}-\/>getUserPosts(\mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$generalAccessLector}},\ \$postsID);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00299}00299\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ header(\textcolor{stringliteral}{'Location:\ /'});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00302}00302\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00303}00303\ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ l'id\ nest\ pas\ set,\ afficher\ tout\ les\ user}}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00304}00304\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>getUsers(\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}});}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00306}00306\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00307}00307\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_users}{gui\(\backslash\)ViewUsers}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}},\ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00308}00308\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00309}00309\ \}\ elseif\ (\textcolor{stringliteral}{'userEdit'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ \&\&\ isset(\$\_SESSION[\textcolor{stringliteral}{'user\_ID'}]))\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00311}00311\ \ \ \ \ \mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$usersService}}-\/>setUserById(\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$userAccessLector}},\ \$\_SESSION[\textcolor{stringliteral}{'user\_ID'}]);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00312}00312\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00313}00313\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_user_edit}{gui\(\backslash\)ViewUserEdit}}(\$layout,\ \mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00315}00315\ \}\ elseif\ (\textcolor{stringliteral}{'createCategory'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}}\ \&\&\ isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00317}00317\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00318}00318\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_create_category}{gui\(\backslash\)ViewCreateCategory}}(\$layout))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00319}00319\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00320}00320\ \}\ elseif\ (\textcolor{stringliteral}{'error'}\ ==\ \mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}})\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00321}00321\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00322}00322\ \ \ \ \ \$error\ ??\ \$error\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00323}00323\ \ \ \ \ \$redirect\ ??\ \$redirect\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00324}00324\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00325}00325\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_error}{gui\(\backslash\)ViewError}}(\$layout,\ \$error,\ \$redirect))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00326}00326\ }
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00327}00327\ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00328}00328\ \ \ \ \ \$layout\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_layout}{gui\(\backslash\)Layout}}(\$layoutTemplate);}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00329}00329\ \ \ \ \ (\textcolor{keyword}{new}\ \mbox{\hyperlink{classgui_1_1_view_error}{gui\(\backslash\)ViewError}}(\$layout,\ \textcolor{stringliteral}{'Page\ introuvable'}))-\/>display();}
+\DoxyCodeLine{\Hypertarget{index_8php_source_l00330}00330\ \}}
+
+\end{DoxyCode}

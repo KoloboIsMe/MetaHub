@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__category_access_8php_source" xml:lang="en-US">
+<title>CategoryAccess.php</title>
+<indexterm><primary>Framework/database/CategoryAccess.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__category_access_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__category_access_8php_source_1l00002"/>00002 
+<anchor xml:id="__category_access_8php_source_1l00003"/><link linkend="_namespacedatabase">00003</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacedatabase">database</link>;
+<anchor xml:id="__category_access_8php_source_1l00004"/>00004 
+<anchor xml:id="__category_access_8php_source_1l00005"/>00005 
+<anchor xml:id="__category_access_8php_source_1l00006"/>00006 use&#32;<link linkend="_classentities_1_1_category">entities\Category</link>;
+<anchor xml:id="__category_access_8php_source_1l00007"/>00007 use&#32;PDO;
+<anchor xml:id="__category_access_8php_source_1l00008"/>00008 use&#32;PDOException;
+<anchor xml:id="__category_access_8php_source_1l00009"/>00009 use&#32;<link linkend="_interfaceservices_1_1_category_interface">services\CategoryInterface</link>;
+<anchor xml:id="__category_access_8php_source_1l00010"/>00010 
+<anchor xml:id="__category_access_8php_source_1l00011"/>00011 
+<anchor xml:id="__category_access_8php_source_1l00012"/>00012 include_once&#32;<emphasis role="stringliteral">&quot;services/CategoryInterface.php&quot;</emphasis>;
+<anchor xml:id="__category_access_8php_source_1l00013"/>00013 include_once&#32;<emphasis role="stringliteral">&quot;Framework/entities/Category.php&quot;</emphasis>;
+<anchor xml:id="__category_access_8php_source_1l00014"/>00014 
+<anchor xml:id="__category_access_8php_source_1l00015"/><link linkend="_classdatabase_1_1_category_access">00015</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classdatabase_1_1_category_access">CategoryAccess</link>&#32;<emphasis role="keyword">implements</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface">CategoryInterface</link>
+<anchor xml:id="__category_access_8php_source_1l00016"/>00016 {
+<anchor xml:id="__category_access_8php_source_1l00020"/><link linkend="_classdatabase_1_1_category_access_1a7a827f5c09357312fde0811812bbbc35">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;$dataAccess&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__category_access_8php_source_1l00021"/>00021 
+<anchor xml:id="__category_access_8php_source_1l00025"/><link linkend="_classdatabase_1_1_category_access_1a9d903d171ff2319096ef345b4092535b">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a9d903d171ff2319096ef345b4092535b">__construct</link>($dataAccess)
+<anchor xml:id="__category_access_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dataAccess&#32;=&#32;$dataAccess;
+<anchor xml:id="__category_access_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00029"/>00029 
+<anchor xml:id="__category_access_8php_source_1l00034"/><link linkend="_classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b">existsCategory</link>($CategoryID):&#32;bool
+<anchor xml:id="__category_access_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;category&#32;where&#32;category_ID&#32;=&#32;:CategoryID&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;CategoryID&apos;</emphasis>&#32;=&gt;&#32;$CategoryID]);
+<anchor xml:id="__category_access_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__category_access_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;isset($data[<emphasis role="stringliteral">&apos;category_ID&apos;</emphasis>]);
+<anchor xml:id="__category_access_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00045"/>00045 
+<anchor xml:id="__category_access_8php_source_1l00050"/><link linkend="_classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5">getCategoryById</link>($ID):&#32;<link linkend="_classentities_1_1_category">Category</link>
+<anchor xml:id="__category_access_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;category&#32;where&#32;category_ID&#32;=&#32;:ID&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:ID&apos;</emphasis>&#32;=&gt;&#32;$ID]);
+<anchor xml:id="__category_access_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__category_access_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_category">Category</link>($data);
+<anchor xml:id="__category_access_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00061"/>00061 
+<anchor xml:id="__category_access_8php_source_1l00065"/><link linkend="_classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392">00065</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392">getCategoriesID</link>():&#32;array
+<anchor xml:id="__category_access_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__category_access_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;category_ID&#32;FROM&#32;category&#32;ORDER&#32;BY&#32;category_ID&#32;DESC&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute();
+<anchor xml:id="__category_access_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__category_access_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;category_ID&apos;</emphasis>];
+<anchor xml:id="__category_access_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__category_access_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00079"/>00079 
+<anchor xml:id="__category_access_8php_source_1l00083"/><link linkend="_classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7">00083</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7">get5LastCategories</link>():&#32;array
+<anchor xml:id="__category_access_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$categories&#32;=&#32;[];
+<anchor xml:id="__category_access_8php_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;category&#32;ORDER&#32;BY&#32;category_ID&#32;DESC&#32;LIMIT&#32;5&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute();
+<anchor xml:id="__category_access_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__category_access_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$categories[]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_category">Category</link>($data);
+<anchor xml:id="__category_access_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$categories;
+<anchor xml:id="__category_access_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00097"/>00097 
+<anchor xml:id="__category_access_8php_source_1l00102"/><link linkend="_classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af">00102</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af">getCategoryIdByLabel</link>($label)
+<anchor xml:id="__category_access_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;category_ID&#32;FROM&#32;category&#32;where&#32;label&#32;=&#32;:label&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__category_access_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:label&apos;</emphasis>&#32;=&gt;&#32;$label,
+<anchor xml:id="__category_access_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__category_access_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC)[<emphasis role="stringliteral">&apos;category_ID&apos;</emphasis>];
+<anchor xml:id="__category_access_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00113"/>00113 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00114"/>00114 
+<anchor xml:id="__category_access_8php_source_1l00120"/><link linkend="_classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05">00120</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05">createCategory</link>($label,&#32;$description):&#32;?string
+<anchor xml:id="__category_access_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__category_access_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__category_access_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;category_ID&#32;FROM&#32;category&#32;where&#32;label&#32;=&#32;:label&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:label&apos;</emphasis>&#32;=&gt;&#32;$label]);
+<anchor xml:id="__category_access_8php_source_1l00125"/>00125 
+<anchor xml:id="__category_access_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset($statement-&gt;fetch(PDO::FETCH_ASSOC)[<emphasis role="stringliteral">&apos;category_ID&apos;</emphasis>]))&#32;{
+<anchor xml:id="__category_access_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;Cette&#32;catégorie&#32;existe&#32;déjà&quot;</emphasis>;
+<anchor xml:id="__category_access_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;INSERT&#32;INTO&#32;category&#32;(label,&#32;description)&#32;VALUES&#32;(:label,&#32;:description)&apos;</emphasis>);
+<anchor xml:id="__category_access_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:label&apos;</emphasis>&#32;=&gt;&#32;$label,&#32;<emphasis role="stringliteral">&apos;:description&apos;</emphasis>&#32;=&gt;&#32;$description]);
+<anchor xml:id="__category_access_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__category_access_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__category_access_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__category_access_8php_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00135"/>00135 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__category_access_8php_source_1l00136"/>00136 
+<anchor xml:id="__category_access_8php_source_1l00137"/>00137 
+<anchor xml:id="__category_access_8php_source_1l00138"/>00138 }
+</programlisting></section>

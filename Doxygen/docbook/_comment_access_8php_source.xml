@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__comment_access_8php_source" xml:lang="en-US">
+<title>CommentAccess.php</title>
+<indexterm><primary>Framework/database/CommentAccess.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__comment_access_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__comment_access_8php_source_1l00002"/>00002 
+<anchor xml:id="__comment_access_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacedatabase">database</link>;
+<anchor xml:id="__comment_access_8php_source_1l00004"/>00004 
+<anchor xml:id="__comment_access_8php_source_1l00005"/>00005 use&#32;PDOException;
+<anchor xml:id="__comment_access_8php_source_1l00006"/>00006 use&#32;<link linkend="_interfaceservices_1_1_comment_interface">services\CommentInterface</link>;
+<anchor xml:id="__comment_access_8php_source_1l00007"/>00007 
+<anchor xml:id="__comment_access_8php_source_1l00008"/>00008 include_once&#32;<emphasis role="stringliteral">&quot;services/CommentInterface.php&quot;</emphasis>;
+<anchor xml:id="__comment_access_8php_source_1l00009"/>00009 include_once&#32;<emphasis role="stringliteral">&quot;Framework/entities/Comment.php&quot;</emphasis>;
+<anchor xml:id="__comment_access_8php_source_1l00010"/>00010 
+<anchor xml:id="__comment_access_8php_source_1l00011"/><link linkend="_classdatabase_1_1_comment_access">00011</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classdatabase_1_1_comment_access">CommentAccess</link>&#32;<emphasis role="keyword">implements</emphasis>&#32;<link linkend="_interfaceservices_1_1_comment_interface">CommentInterface</link>
+<anchor xml:id="__comment_access_8php_source_1l00012"/>00012 {
+<anchor xml:id="__comment_access_8php_source_1l00016"/><link linkend="_classdatabase_1_1_comment_access_1a7a827f5c09357312fde0811812bbbc35">00016</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;$dataAccess&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__comment_access_8php_source_1l00017"/>00017 
+<anchor xml:id="__comment_access_8php_source_1l00021"/><link linkend="_classdatabase_1_1_comment_access_1a9d903d171ff2319096ef345b4092535b">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_comment_access_1a9d903d171ff2319096ef345b4092535b">__construct</link>($dataAccess)
+<anchor xml:id="__comment_access_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dataAccess&#32;=&#32;$dataAccess;
+<anchor xml:id="__comment_access_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00025"/>00025 
+<anchor xml:id="__comment_access_8php_source_1l00031"/><link linkend="_classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3">00031</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3">isCommentOwner</link>($commentID,&#32;$user_ID):&#32;bool
+<anchor xml:id="__comment_access_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&quot;SELECT&#32;comment_ID&#32;FROM&#32;comment&#32;WHERE&#32;comment_ID&#32;=&#32;:commentID&#32;AND&#32;author&#32;=&#32;:user_ID&quot;</emphasis>);
+<anchor xml:id="__comment_access_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute(array(
+<anchor xml:id="__comment_access_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:commentID&apos;</emphasis>&#32;=&gt;&#32;$commentID,
+<anchor xml:id="__comment_access_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID
+<anchor xml:id="__comment_access_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;));
+<anchor xml:id="__comment_access_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(\PDO::FETCH_ASSOC);
+<anchor xml:id="__comment_access_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;isset($data[<emphasis role="stringliteral">&apos;comment_ID&apos;</emphasis>]);
+<anchor xml:id="__comment_access_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(\PDOException&#32;$e)&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;new&#32;\PDOException(<emphasis role="stringliteral">&quot;Error&#32;checking&#32;if&#32;comment&#32;owner&quot;</emphasis>);
+<anchor xml:id="__comment_access_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00045"/>00045 
+<anchor xml:id="__comment_access_8php_source_1l00053"/><link linkend="_classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538">00053</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538">createComment</link>($text,&#32;$date,&#32;$user_ID,&#32;$ticket_ID):&#32;void
+<anchor xml:id="__comment_access_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00055"/>00055 
+<anchor xml:id="__comment_access_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&quot;INSERT&#32;INTO&#32;comment&#32;(text,&#32;date,&#32;author,&#32;ticket)&#32;VALUES&#32;(:text,&#32;:date,&#32;:user_ID,&#32;:ticket_ID)&quot;</emphasis>);
+<anchor xml:id="__comment_access_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute(array(
+<anchor xml:id="__comment_access_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:text&apos;</emphasis>&#32;=&gt;&#32;$text,
+<anchor xml:id="__comment_access_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:date&apos;</emphasis>&#32;=&gt;&#32;$date,
+<anchor xml:id="__comment_access_8php_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID,
+<anchor xml:id="__comment_access_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:ticket_ID&apos;</emphasis>&#32;=&gt;&#32;$ticket_ID
+<anchor xml:id="__comment_access_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;));
+<anchor xml:id="__comment_access_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(\PDOException&#32;$e)&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;new&#32;\PDOException(<emphasis role="stringliteral">&quot;Error&#32;creating&#32;comment&quot;</emphasis>);
+<anchor xml:id="__comment_access_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00068"/>00068 
+<anchor xml:id="__comment_access_8php_source_1l00073"/><link linkend="_classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530">00073</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530">deleteComment</link>($commentID):&#32;void
+<anchor xml:id="__comment_access_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;DELETE&#32;FROM&#32;comment&#32;WHERE&#32;comment_ID&#32;=&#32;:commentID&apos;</emphasis>);
+<anchor xml:id="__comment_access_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:commentID&apos;</emphasis>&#32;=&gt;&#32;$commentID]);
+<anchor xml:id="__comment_access_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__comment_access_8php_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__comment_access_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comment_access_8php_source_1l00082"/>00082 
+<anchor xml:id="__comment_access_8php_source_1l00083"/>00083 }
+</programlisting></section>

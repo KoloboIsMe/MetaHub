@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classentities_1_1_category" xml:lang="en-US">
+<title>Category Class Reference</title>
+<indexterm><primary>Category</primary></indexterm>
+<para>Inheritance diagram for Category:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classentities_1_1_category.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_category_1a0644020fa300a8da0761599388367209">getCategory_ID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_category_1a61fc4887a2a3ef147760942b78bad4cd">setCategory_ID</link> ($category_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_category_1a14c4e7420d903d3e40342266333d2ecf">getLabel</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_category_1aff9dc1c7a22e2b4168647651480e586a">setLabel</link> ($label)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_category_1a2e7bb35c71bf1824456ceb944cb7a845">getDescription</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_category_1a31fad3e39336ea079ea758e051866627">setDescription</link> ($description)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classentities_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">__construct</link> (array $data)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">hydrate</link> ($data)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00007">7</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classentities_1_1_category_1a0644020fa300a8da0761599388367209"/><section>
+    <title>getCategory_ID()</title>
+<indexterm><primary>getCategory_ID</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>getCategory_ID</secondary></indexterm>
+<para><computeroutput>getCategory_ID ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00025">25</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_category_1a2e7bb35c71bf1824456ceb944cb7a845"/><section>
+    <title>getDescription()</title>
+<indexterm><primary>getDescription</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>getDescription</secondary></indexterm>
+<para><computeroutput>getDescription ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00064">64</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_category_1a14c4e7420d903d3e40342266333d2ecf"/><section>
+    <title>getLabel()</title>
+<indexterm><primary>getLabel</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>getLabel</secondary></indexterm>
+<para><computeroutput>getLabel ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00045">45</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_category_1a61fc4887a2a3ef147760942b78bad4cd"/><section>
+    <title>setCategory_ID()</title>
+<indexterm><primary>setCategory_ID</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>setCategory_ID</secondary></indexterm>
+<para><computeroutput>setCategory_ID ( $category_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$category_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00034">34</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_category_1a31fad3e39336ea079ea758e051866627"/><section>
+    <title>setDescription()</title>
+<indexterm><primary>setDescription</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>setDescription</secondary></indexterm>
+<para><computeroutput>setDescription ( $description)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$description</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00073">73</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_category_1aff9dc1c7a22e2b4168647651480e586a"/><section>
+    <title>setLabel()</title>
+<indexterm><primary>setLabel</primary><secondary>Category</secondary></indexterm>
+<indexterm><primary>Category</primary><secondary>setLabel</secondary></indexterm>
+<para><computeroutput>setLabel ( $label)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$label</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2category_8php_source_1l00054">54</link> of file <link linkend="__framework_2entities_2category_8php_source">Category.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/entities/<link linkend="__framework_2entities_2category_8php">Category.php</link></section>
+</section>

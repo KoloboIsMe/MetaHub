@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_layout_8php" kind="file" language="PHP">
+    <compoundname>Layout.php</compoundname>
+    <innerclass refid="classgui_1_1_layout" prot="public">gui::Layout</innerclass>
+    <innernamespace refid="namespacegui">gui</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespacegui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegui" kindref="compound">gui</ref>;</highlight></codeline>
+<codeline lineno="4" refid="classgui_1_1_layout" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classgui_1_1_layout" kindref="compound">Layout</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="classgui_1_1_layout_1a952fcaa4d048f47c91939d6d2cb9bff4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout_1a952fcaa4d048f47c91939d6d2cb9bff4" kindref="member">$templateFile</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classgui_1_1_layout_1adfdd8bfb11a1c06451d99ecc1446a9a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout_1adfdd8bfb11a1c06451d99ecc1446a9a8" kindref="member">__construct</ref>($templateFile)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$this-&gt;templateFile<sp/>=<sp/>$templateFile;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classgui_1_1_layout_1a72c83e10eed9ac01f810b1d14483e9f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout_1a72c83e10eed9ac01f810b1d14483e9f6" kindref="member">display</ref>(<ref refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" kindref="member">$title</ref>,<sp/>$content,<sp/>$username,<sp/>$searchBar<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$searchBarContent<sp/>=<sp/>file_get_contents(</highlight><highlight class="stringliteral">&quot;gui/searchBar.html&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>=<sp/>file_get_contents($this-&gt;templateFile);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>=<sp/>$searchBar<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>?<sp/>str_replace(</highlight><highlight class="stringliteral">&apos;%searchBar%&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">,<sp/>$page)<sp/>:<sp/>str_replace(</highlight><highlight class="stringliteral">&apos;%searchBar%&apos;</highlight><highlight class="normal">,<sp/>$searchBarContent,<sp/>$page);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>=<sp/>str_replace([</highlight><highlight class="stringliteral">&apos;%title%&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;%content%&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;%username%&apos;</highlight><highlight class="normal">],<sp/>[<ref refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" kindref="member">$title</ref>,<sp/>$content,<sp/>$username],<sp/>$page);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>$page;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="gui/Layout.php"/>
+  </compounddef>
+</doxygen>

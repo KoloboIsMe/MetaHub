@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classservices_1_1_comments_service" kind="class" language="PHP" prot="public">
+    <compoundname>services::CommentsService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classservices_1_1_comments_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>services\CommentsService\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentsService.php" line="8" column="13" bodyfile="services/CommentsService.php" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>services\CommentsService\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentsService.php" line="10" column="21" bodyfile="services/CommentsService.php" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createComment</definition>
+        <argsstring>($commentAccess, $text, $ticketID)</argsstring>
+        <name>createComment</name>
+        <qualifiedname>services\CommentsService\createComment</qualifiedname>
+        <param>
+          <declname>$commentAccess</declname>
+        </param>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentsService.php" line="15" column="21" bodyfile="services/CommentsService.php" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isCommentOwner</definition>
+        <argsstring>($commentAccess, $commentID, $user_ID)</argsstring>
+        <name>isCommentOwner</name>
+        <qualifiedname>services\CommentsService\isCommentOwner</qualifiedname>
+        <param>
+          <declname>$commentAccess</declname>
+        </param>
+        <param>
+          <declname>$commentID</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentsService.php" line="20" column="21" bodyfile="services/CommentsService.php" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteComment</definition>
+        <argsstring>($commentAccess, $commentID)</argsstring>
+        <name>deleteComment</name>
+        <qualifiedname>services\CommentsService\deleteComment</qualifiedname>
+        <param>
+          <declname>$commentAccess</declname>
+        </param>
+        <param>
+          <declname>$commentID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentsService.php" line="25" column="21" bodyfile="services/CommentsService.php" bodystart="25" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/CommentsService.php" line="5" column="1" bodyfile="services/CommentsService.php" bodystart="6" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classservices_1_1_comments_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>services::CommentsService</scope><name>$outputData</name></member>
+      <member refid="classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>services::CommentsService</scope><name>__construct</name></member>
+      <member refid="classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c" prot="public" virt="non-virtual"><scope>services::CommentsService</scope><name>createComment</name></member>
+      <member refid="classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e" prot="public" virt="non-virtual"><scope>services::CommentsService</scope><name>deleteComment</name></member>
+      <member refid="classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6" prot="public" virt="non-virtual"><scope>services::CommentsService</scope><name>isCommentOwner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

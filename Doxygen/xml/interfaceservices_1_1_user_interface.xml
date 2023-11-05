@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interfaceservices_1_1_user_interface" kind="interface" language="PHP" prot="public">
+    <compoundname>services::UserInterface</compoundname>
+    <derivedcompoundref refid="classdatabase_1_1_user_access" prot="public" virt="non-virtual">UserAccess</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>existsUsername</name>
+        <qualifiedname>services\UserInterface\existsUsername</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59">existsUsername</reimplementedby>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="7" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUser</definition>
+        <argsstring>($user_ID)</argsstring>
+        <name>existsUser</name>
+        <qualifiedname>services\UserInterface\existsUser</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d">existsUser</reimplementedby>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="9" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserByUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>getUserByUsername</name>
+        <qualifiedname>services\UserInterface\getUserByUsername</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88">getUserByUsername</reimplementedby>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="11" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isUser</definition>
+        <argsstring>($username, $password)</argsstring>
+        <name>isUser</name>
+        <qualifiedname>services\UserInterface\isUser</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef">isUser</reimplementedby>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="13" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>register</definition>
+        <argsstring>($username, $password, $date)</argsstring>
+        <name>register</name>
+        <qualifiedname>services\UserInterface\register</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db">register</reimplementedby>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="15" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateUser</definition>
+        <argsstring>($username, $password, $user_ID)</argsstring>
+        <name>updateUser</name>
+        <qualifiedname>services\UserInterface\updateUser</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5">updateUser</reimplementedby>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="17" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateLastConnexion</definition>
+        <argsstring>($user_ID)</argsstring>
+        <name>updateLastConnexion</name>
+        <qualifiedname>services\UserInterface\updateLastConnexion</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353">updateLastConnexion</reimplementedby>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="19" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserById</definition>
+        <argsstring>($id)</argsstring>
+        <name>getUserById</name>
+        <qualifiedname>services\UserInterface\getUserById</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc">getUserById</reimplementedby>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="21" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUsersID</definition>
+        <argsstring>()</argsstring>
+        <name>getUsersID</name>
+        <qualifiedname>services\UserInterface\getUsersID</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de">getUsersID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="23" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get10LastConnectedUsersID</definition>
+        <argsstring>()</argsstring>
+        <name>get10LastConnectedUsersID</name>
+        <qualifiedname>services\UserInterface\get10LastConnectedUsersID</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725">get10LastConnectedUsersID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="25" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setOnline</definition>
+        <argsstring>($user_ID, $online)</argsstring>
+        <name>setOnline</name>
+        <qualifiedname>services\UserInterface\setOnline</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b">setOnline</reimplementedby>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <param>
+          <declname>$online</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UserInterface.php" line="27" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>UserInterface</label>
+        <link refid="interfaceservices_1_1_user_interface"/>
+      </node>
+      <node id="2">
+        <label>UserAccess</label>
+        <link refid="classdatabase_1_1_user_access"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="services/UserInterface.php" line="5" column="11" bodyfile="services/UserInterface.php" bodystart="6" bodyend="28"/>
+    <listofallmembers>
+      <member refid="interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>existsUser</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>existsUsername</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>get10LastConnectedUsersID</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>getUserById</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>getUserByUsername</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>getUsersID</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>isUser</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>register</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>setOnline</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>updateLastConnexion</name></member>
+      <member refid="interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5" prot="public" virt="non-virtual"><scope>services::UserInterface</scope><name>updateUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

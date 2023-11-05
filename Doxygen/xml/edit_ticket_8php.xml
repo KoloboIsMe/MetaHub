@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="edit_ticket_8php" kind="file" language="PHP">
+    <compoundname>editTicket.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$post</definition>
+        <argsstring></argsstring>
+        <name>$post</name>
+        <initializer>= $data</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/pagePresenters/editTicket.php" line="1" column="2" bodyfile="controls/pagePresenters/editTicket.php" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="edit_ticket_8php_1ae97941710d863131c700f069b109991e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$id</definition>
+        <argsstring></argsstring>
+        <name>$id</name>
+        <initializer>= $post-&gt;getTicket()-&gt;getTicket_ID()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/pagePresenters/editTicket.php" line="2" column="1" bodyfile="controls/pagePresenters/editTicket.php" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$title</definition>
+        <argsstring></argsstring>
+        <name>$title</name>
+        <initializer>= $post-&gt;getTicket()-&gt;getTitle()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/pagePresenters/editTicket.php" line="3" column="1" bodyfile="controls/pagePresenters/editTicket.php" bodystart="3" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" refkind="member"><highlight class="normal">&lt;?php<sp/><ref refid="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" kindref="member">$post</ref><sp/>=<sp/>$data;</highlight></codeline>
+<codeline lineno="2" refid="edit_ticket_8php_1ae97941710d863131c700f069b109991e" refkind="member"><highlight class="normal"><ref refid="edit_ticket_8php_1ae97941710d863131c700f069b109991e" kindref="member">$id</ref><sp/>=<sp/><ref refid="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" kindref="member">$post</ref>-&gt;getTicket()-&gt;getTicket_ID();</highlight></codeline>
+<codeline lineno="3" refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" refkind="member"><highlight class="normal"><ref refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" kindref="member">$title</ref><sp/>=<sp/><ref refid="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" kindref="member">$post</ref>-&gt;getTicket()-&gt;getTitle();<sp/>?&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">&lt;link<sp/>href=</highlight><highlight class="stringliteral">&apos;gui/css/forms.css&apos;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&apos;stylesheet&apos;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&apos;text/css&apos;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;container&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;form<sp/>action=</highlight><highlight class="stringliteral">&apos;?action=editTicketAction&amp;id=&lt;?=<sp/>$id<sp/>?&gt;&apos;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&apos;POST&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;h1&gt;Edition&lt;/h1&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;Titre&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&apos;text&apos;</highlight><highlight class="normal"><sp/>placeholder=\</highlight><highlight class="stringliteral">&quot;<sp/>Entrer<sp/>le<sp/>titre<sp/>du<sp/>post<sp/>\&quot;<sp/>name=&apos;title&apos;</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;</highlight><highlight class="normal"><sp/>&lt;?=<sp/>htmlspecialchars(<ref refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" kindref="member">$title</ref>,<sp/>ENT_QUOTES)<sp/>?&gt;</highlight><highlight class="stringliteral">&quot;<sp/>required&gt;&lt;/input&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;Contenu<sp/>du<sp/>post&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;textarea<sp/>placeholder=&apos;Entrer<sp/>le<sp/>contenu<sp/>du<sp/>post&apos;<sp/>name=&apos;message&apos;</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>required&gt;&lt;?=<sp/>$post-&gt;getTicket()-&gt;getMessage()<sp/>?&gt;&lt;/textarea&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=&apos;submit&apos;<sp/>id=&apos;submit&apos;<sp/>value=&apos;Enregistrer&apos;&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral">&lt;/div&gt;</highlight></codeline>
+    </programlisting>
+    <location file="controls/pagePresenters/editTicket.php"/>
+  </compounddef>
+</doxygen>

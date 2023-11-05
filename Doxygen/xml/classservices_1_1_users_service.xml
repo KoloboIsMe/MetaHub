@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classservices_1_1_users_service" kind="class" language="PHP" prot="public">
+    <compoundname>services::UsersService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classservices_1_1_users_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>services\UsersService\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="7" column="13" bodyfile="services/UsersService.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classservices_1_1_users_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>services\UsersService\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="9" column="21" bodyfile="services/UsersService.php" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a52819191a05e176c4c096966ab1edd1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUsername</definition>
+        <argsstring>($dataccess, $username)</argsstring>
+        <name>existsUsername</name>
+        <qualifiedname>services\UsersService\existsUsername</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="14" column="21" bodyfile="services/UsersService.php" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a38ec34f0d54535a7373747015b8caa64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUser</definition>
+        <argsstring>($dataccess, $user_ID)</argsstring>
+        <name>existsUser</name>
+        <qualifiedname>services\UsersService\existsUser</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="19" column="21" bodyfile="services/UsersService.php" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a6eaf4e071c958467d7b3315b5dd51e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>authenticate</definition>
+        <argsstring>($username, $password, $dataccess)</argsstring>
+        <name>authenticate</name>
+        <qualifiedname>services\UsersService\authenticate</qualifiedname>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="24" column="21" bodyfile="services/UsersService.php" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a7bb0aa69b7cb6b42e1bb7a7c668ea730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>register</definition>
+        <argsstring>($username, $password, $dataccess)</argsstring>
+        <name>register</name>
+        <qualifiedname>services\UsersService\register</qualifiedname>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="30" column="21" bodyfile="services/UsersService.php" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a68e02a891d90270f154ab5c4bc59cae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateUser</definition>
+        <argsstring>($username, $password, $dataccess)</argsstring>
+        <name>updateUser</name>
+        <qualifiedname>services\UsersService\updateUser</qualifiedname>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="35" column="21" bodyfile="services/UsersService.php" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1af9474977a289c4527898f47460172616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserByUsername</definition>
+        <argsstring>($dataccess, $username)</argsstring>
+        <name>getUserByUsername</name>
+        <qualifiedname>services\UsersService\getUserByUsername</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="40" column="21" bodyfile="services/UsersService.php" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a887a2f82c7277e66c3b2a740dfe1464b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateLastConnexion</definition>
+        <argsstring>($dataccess, $user_ID)</argsstring>
+        <name>updateLastConnexion</name>
+        <qualifiedname>services\UsersService\updateLastConnexion</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="45" column="21" bodyfile="services/UsersService.php" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a6f7b0615bacb57c18b7a096dad7d2227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUsers</definition>
+        <argsstring>($dataccess)</argsstring>
+        <name>getUsers</name>
+        <qualifiedname>services\UsersService\getUsers</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="50" column="21" bodyfile="services/UsersService.php" bodystart="50" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a2f77bb31ab5082288481238f1b3abe80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserById</definition>
+        <argsstring>($dataccess, $id)</argsstring>
+        <name>getUserById</name>
+        <qualifiedname>services\UsersService\getUserById</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="59" column="21" bodyfile="services/UsersService.php" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1aeb90b6e09d4969eea24c7965fbed979d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setOnline</definition>
+        <argsstring>($dataccess, $user_ID, $online)</argsstring>
+        <name>setOnline</name>
+        <qualifiedname>services\UsersService\setOnline</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <param>
+          <declname>$online</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="63" column="21" bodyfile="services/UsersService.php" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1a358726d7a4e2db7cc089048acf1590a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>add10LastConnectedUsers</definition>
+        <argsstring>($userAccessLector)</argsstring>
+        <name>add10LastConnectedUsers</name>
+        <qualifiedname>services\UsersService\add10LastConnectedUsers</qualifiedname>
+        <param>
+          <declname>$userAccessLector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="68" column="21" bodyfile="services/UsersService.php" bodystart="68" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_users_service_1aa7af8ed60411b8e43cbafa5988136f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUserById</definition>
+        <argsstring>($dataccess, $id)</argsstring>
+        <name>setUserById</name>
+        <qualifiedname>services\UsersService\setUserById</qualifiedname>
+        <param>
+          <declname>$dataccess</declname>
+        </param>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/UsersService.php" line="77" column="21" bodyfile="services/UsersService.php" bodystart="77" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/UsersService.php" line="5" column="1" bodyfile="services/UsersService.php" bodystart="6" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classservices_1_1_users_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>services::UsersService</scope><name>$outputData</name></member>
+      <member refid="classservices_1_1_users_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>__construct</name></member>
+      <member refid="classservices_1_1_users_service_1a358726d7a4e2db7cc089048acf1590a7" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>add10LastConnectedUsers</name></member>
+      <member refid="classservices_1_1_users_service_1a6eaf4e071c958467d7b3315b5dd51e05" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>authenticate</name></member>
+      <member refid="classservices_1_1_users_service_1a38ec34f0d54535a7373747015b8caa64" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>existsUser</name></member>
+      <member refid="classservices_1_1_users_service_1a52819191a05e176c4c096966ab1edd1d" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>existsUsername</name></member>
+      <member refid="classservices_1_1_users_service_1a2f77bb31ab5082288481238f1b3abe80" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>getUserById</name></member>
+      <member refid="classservices_1_1_users_service_1af9474977a289c4527898f47460172616" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>getUserByUsername</name></member>
+      <member refid="classservices_1_1_users_service_1a6f7b0615bacb57c18b7a096dad7d2227" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>getUsers</name></member>
+      <member refid="classservices_1_1_users_service_1a7bb0aa69b7cb6b42e1bb7a7c668ea730" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>register</name></member>
+      <member refid="classservices_1_1_users_service_1aeb90b6e09d4969eea24c7965fbed979d" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>setOnline</name></member>
+      <member refid="classservices_1_1_users_service_1aa7af8ed60411b8e43cbafa5988136f89" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>setUserById</name></member>
+      <member refid="classservices_1_1_users_service_1a887a2f82c7277e66c3b2a740dfe1464b" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>updateLastConnexion</name></member>
+      <member refid="classservices_1_1_users_service_1a68e02a891d90270f154ab5c4bc59cae9" prot="public" virt="non-virtual"><scope>services::UsersService</scope><name>updateUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

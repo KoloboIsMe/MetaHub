@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classdatabase_1_1_comment_access" xml:lang="en-US">
+<title>CommentAccess Class Reference</title>
+<indexterm><primary>CommentAccess</primary></indexterm>
+<para>Inheritance diagram for CommentAccess:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdatabase_1_1_comment_access.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_comment_access_1a9d903d171ff2319096ef345b4092535b">__construct</link> ($dataAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3">isCommentOwner</link> ($commentID, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538">createComment</link> ($text, $date, $user_ID, $ticket_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530">deleteComment</link> ($commentID)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_comment_access_1a7a827f5c09357312fde0811812bbbc35">$dataAccess</link> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__comment_access_8php_source_1l00011">11</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classdatabase_1_1_comment_access_1a9d903d171ff2319096ef345b4092535b"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>CommentAccess</secondary></indexterm>
+<indexterm><primary>CommentAccess</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $dataAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$dataAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__comment_access_8php_source_1l00021">21</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538"/><section>
+    <title>createComment()</title>
+<indexterm><primary>createComment</primary><secondary>CommentAccess</secondary></indexterm>
+<indexterm><primary>CommentAccess</primary><secondary>createComment</secondary></indexterm>
+<para><computeroutput>createComment ( $text,  $date,  $user_ID,  $ticket_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$text</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$date</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticket_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538">CommentInterface</link>.</para>
+<para>
+Definition at line <link linkend="__comment_access_8php_source_1l00053">53</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530"/><section>
+    <title>deleteComment()</title>
+<indexterm><primary>deleteComment</primary><secondary>CommentAccess</secondary></indexterm>
+<indexterm><primary>CommentAccess</primary><secondary>deleteComment</secondary></indexterm>
+<para><computeroutput>deleteComment ( $commentID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$commentID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530">CommentInterface</link>.</para>
+<para>
+Definition at line <link linkend="__comment_access_8php_source_1l00073">73</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3"/><section>
+    <title>isCommentOwner()</title>
+<indexterm><primary>isCommentOwner</primary><secondary>CommentAccess</secondary></indexterm>
+<indexterm><primary>CommentAccess</primary><secondary>isCommentOwner</secondary></indexterm>
+<para><computeroutput>isCommentOwner ( $commentID,  $user_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$commentID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3">CommentInterface</link>.</para>
+<para>
+Definition at line <link linkend="__comment_access_8php_source_1l00031">31</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classdatabase_1_1_comment_access_1a7a827f5c09357312fde0811812bbbc35"/><section>
+    <title>$dataAccess</title>
+<indexterm><primary>$dataAccess</primary><secondary>CommentAccess</secondary></indexterm>
+<indexterm><primary>CommentAccess</primary><secondary>$dataAccess</secondary></indexterm>
+<para><computeroutput>$dataAccess = null<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__comment_access_8php_source_1l00016">16</link> of file <link linkend="__comment_access_8php_source">CommentAccess.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/database/<link linkend="__comment_access_8php">CommentAccess.php</link></section>
+</section>

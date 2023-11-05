@@ -1,0 +1,123 @@
+.TH "CommentAccess" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CommentAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBCommentInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($dataAccess)"
+.br
+.ti -1c
+.RI "\fBisCommentOwner\fP ($commentID, $user_ID)"
+.br
+.ti -1c
+.RI "\fBcreateComment\fP ($text, $date, $user_ID, $ticket_ID)"
+.br
+.ti -1c
+.RI "\fBdeleteComment\fP ($commentID)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$dataAccess\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB11\fP of file \fBCommentAccess\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $dataAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$dataAccess\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB21\fP of file \fBCommentAccess\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "createComment ( $text,  $date,  $user_ID,  $ticket_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$text\fP 
+.br
+\fI$date\fP 
+.br
+\fI$user_ID\fP 
+.br
+\fI$ticket_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBCommentInterface\fP\&.
+.PP
+Definition at line \fB53\fP of file \fBCommentAccess\&.php\fP\&.
+.SS "deleteComment ( $commentID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$commentID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBCommentInterface\fP\&.
+.PP
+Definition at line \fB73\fP of file \fBCommentAccess\&.php\fP\&.
+.SS "isCommentOwner ( $commentID,  $user_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$commentID\fP 
+.br
+\fI$user_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBCommentInterface\fP\&.
+.PP
+Definition at line \fB31\fP of file \fBCommentAccess\&.php\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "$dataAccess = null\fC [protected]\fP"
+
+.PP
+Definition at line \fB16\fP of file \fBCommentAccess\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

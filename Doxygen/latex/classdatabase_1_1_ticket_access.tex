@@ -1,0 +1,210 @@
+\doxysection{Ticket\+Access Class Reference}
+\hypertarget{classdatabase_1_1_ticket_access}{}\label{classdatabase_1_1_ticket_access}\index{TicketAccess@{TicketAccess}}
+Inheritance diagram for Ticket\+Access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdatabase_1_1_ticket_access}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_a9d903d171ff2319096ef345b4092535b}{\+\_\+\+\_\+construct}} (\$data\+Access)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_a6cd98da4d72e5877202bedac9f7f7708}{exists\+Ticket}} (\$ticket\+ID)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_afb3753ff19a1ec4d934cc30508bd562c}{is\+Ticket\+Owner}} (\$ticket\+ID, \$user\+ID)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_add5e7fd54d1f1308db1e8a3e873b785b}{get\+Tickets\+ID}} ()
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_acc435610e7829e4a55eef8e0d7a06cb3}{get5\+Last\+Tickets\+ID}} ()
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_afa6e5469befba46eb1dfaf007b8713c6}{create\+Ticket}} (\$title, \$message, \$date, \$author)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_a15b7252a597d9b252639064378bafa5a}{edit\+Ticket}} (\$id, \$title, \$message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_1_1_ticket_access_a7a827f5c09357312fde0811812bbbc35}{\$data\+Access}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00012}{12}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdatabase_1_1_ticket_access_a9d903d171ff2319096ef345b4092535b}\label{classdatabase_1_1_ticket_access_a9d903d171ff2319096ef345b4092535b} 
+\index{TicketAccess@{TicketAccess}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$data\+Access }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$data\+Access} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00022}{22}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdatabase_1_1_ticket_access_afa6e5469befba46eb1dfaf007b8713c6}\label{classdatabase_1_1_ticket_access_afa6e5469befba46eb1dfaf007b8713c6} 
+\index{TicketAccess@{TicketAccess}!createTicket@{createTicket}}
+\index{createTicket@{createTicket}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{createTicket()}{createTicket()}}
+{\footnotesize\ttfamily create\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$title,  }\item[{}]{\$message,  }\item[{}]{\$date,  }\item[{}]{\$author }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$title} & \\
+\hline
+{\em \$message} & \\
+\hline
+{\em \$date} & \\
+\hline
+{\em \$author} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_afa6e5469befba46eb1dfaf007b8713c6}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00106}{106}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_ticket_access_a15b7252a597d9b252639064378bafa5a}\label{classdatabase_1_1_ticket_access_a15b7252a597d9b252639064378bafa5a} 
+\index{TicketAccess@{TicketAccess}!editTicket@{editTicket}}
+\index{editTicket@{editTicket}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{editTicket()}{editTicket()}}
+{\footnotesize\ttfamily edit\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$id,  }\item[{}]{\$title,  }\item[{}]{\$message }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & \\
+\hline
+{\em \$title} & \\
+\hline
+{\em \$message} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_a15b7252a597d9b252639064378bafa5a}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00136}{136}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_ticket_access_a6cd98da4d72e5877202bedac9f7f7708}\label{classdatabase_1_1_ticket_access_a6cd98da4d72e5877202bedac9f7f7708} 
+\index{TicketAccess@{TicketAccess}!existsTicket@{existsTicket}}
+\index{existsTicket@{existsTicket}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{existsTicket()}{existsTicket()}}
+{\footnotesize\ttfamily exists\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$ticket\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$ticket\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_a6cd98da4d72e5877202bedac9f7f7708}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00031}{31}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_ticket_access_acc435610e7829e4a55eef8e0d7a06cb3}\label{classdatabase_1_1_ticket_access_acc435610e7829e4a55eef8e0d7a06cb3} 
+\index{TicketAccess@{TicketAccess}!get5LastTicketsID@{get5LastTicketsID}}
+\index{get5LastTicketsID@{get5LastTicketsID}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{get5LastTicketsID()}{get5LastTicketsID()}}
+{\footnotesize\ttfamily get5\+Last\+Tickets\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_acc435610e7829e4a55eef8e0d7a06cb3}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00083}{83}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_ticket_access_add5e7fd54d1f1308db1e8a3e873b785b}\label{classdatabase_1_1_ticket_access_add5e7fd54d1f1308db1e8a3e873b785b} 
+\index{TicketAccess@{TicketAccess}!getTicketsID@{getTicketsID}}
+\index{getTicketsID@{getTicketsID}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{getTicketsID()}{getTicketsID()}}
+{\footnotesize\ttfamily get\+Tickets\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_add5e7fd54d1f1308db1e8a3e873b785b}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00065}{65}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_ticket_access_afb3753ff19a1ec4d934cc30508bd562c}\label{classdatabase_1_1_ticket_access_afb3753ff19a1ec4d934cc30508bd562c} 
+\index{TicketAccess@{TicketAccess}!isTicketOwner@{isTicketOwner}}
+\index{isTicketOwner@{isTicketOwner}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{isTicketOwner()}{isTicketOwner()}}
+{\footnotesize\ttfamily is\+Ticket\+Owner (\begin{DoxyParamCaption}\item[{}]{\$ticket\+ID,  }\item[{}]{\$user\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$ticket\+ID} & \\
+\hline
+{\em \$user\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_ticket_interface_afb3753ff19a1ec4d934cc30508bd562c}{Ticket\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00048}{48}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classdatabase_1_1_ticket_access_a7a827f5c09357312fde0811812bbbc35}\label{classdatabase_1_1_ticket_access_a7a827f5c09357312fde0811812bbbc35} 
+\index{TicketAccess@{TicketAccess}!\$dataAccess@{\$dataAccess}}
+\index{\$dataAccess@{\$dataAccess}!TicketAccess@{TicketAccess}}
+\doxysubsubsection{\texorpdfstring{\$dataAccess}{\$dataAccess}}
+{\footnotesize\ttfamily \$data\+Access = null\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_ticket_access_8php_source_l00017}{17}} of file \mbox{\hyperlink{_ticket_access_8php_source}{Ticket\+Access.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Framework/database/\mbox{\hyperlink{_ticket_access_8php}{Ticket\+Access.\+php}}\end{DoxyCompactItemize}

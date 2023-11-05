@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__view_register_8php_source" xml:lang="en-US">
+<title>ViewRegister.php</title>
+<indexterm><primary>gui/ViewRegister.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__view_register_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__view_register_8php_source_1l00002"/>00002 
+<anchor xml:id="__view_register_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegui">gui</link>;
+<anchor xml:id="__view_register_8php_source_1l00004"/>00004 
+<anchor xml:id="__view_register_8php_source_1l00005"/><link linkend="_classgui_1_1_view_register">00005</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classgui_1_1_view_register">ViewRegister</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_classgui_1_1_view">View</link>
+<anchor xml:id="__view_register_8php_source_1l00006"/>00006 {
+<anchor xml:id="__view_register_8php_source_1l00007"/><link linkend="_classgui_1_1_view_register_1a835a54c2fea3dfc7047ed37ba07b9444">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classgui_1_1_view_register_1a835a54c2fea3dfc7047ed37ba07b9444">__construct</link>($layout,&#32;$page,&#32;$error&#32;=&#32;<emphasis role="stringliteral">&apos;&apos;</emphasis>)
+<anchor xml:id="__view_register_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__view_register_8php_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::__construct($layout);
+<anchor xml:id="__view_register_8php_source_1l00010"/>00010 
+<anchor xml:id="__view_register_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;title&#32;=&#32;<emphasis role="stringliteral">&apos;Enregistrement&apos;</emphasis>;
+<anchor xml:id="__view_register_8php_source_1l00012"/>00012 
+<anchor xml:id="__view_register_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$page&#32;?&#32;$action&#32;=&#32;<emphasis role="charliteral">&apos;/&apos;</emphasis>&#32;.&#32;$_GET[<emphasis role="stringliteral">&apos;url&apos;</emphasis>]&#32;.&#32;<emphasis role="stringliteral">&apos;?action=registerAction&amp;id=&apos;</emphasis>&#32;.&#32;$page&#32;:&#32;$action&#32;=&#32;<emphasis role="charliteral">&apos;/&apos;</emphasis>&#32;.&#32;$_GET[<emphasis role="stringliteral">&apos;url&apos;</emphasis>]&#32;.&#32;<emphasis role="stringliteral">&apos;?action=registerAction&apos;</emphasis>;
+<anchor xml:id="__view_register_8php_source_1l00014"/>00014 
+<anchor xml:id="__view_register_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;content&#32;=&#32;<emphasis role="stringliteral">&quot;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00016"/>00016 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;link&#32;href=&apos;gui/css/forms.css&apos;&#32;rel=&apos;stylesheet&apos;&#32;type=&apos;text/css&apos;&#32;/&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00017"/>00017 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;div&#32;id=&apos;container&apos;&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00018"/>00018 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;form&#32;action=$action&#32;method=&apos;POST&apos;&#32;onsubmit=\&quot;return&#32;validateForm()\&quot;&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00019"/>00019 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;h1&gt;Register&lt;/h1&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00020"/>00020 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00021"/>00021 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Nom&#32;d&apos;utilisateur&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00022"/>00022 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;text&apos;&#32;placeholder=\&quot;Entrer&#32;le&#32;nom&#32;d&apos;utilisateur\&quot;&#32;name=&apos;username&apos;&#32;id=&apos;username&apos;&#32;required&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00023"/>00023 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00024"/>00024 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Mot&#32;de&#32;passe&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00025"/>00025 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;password&apos;&#32;id=&apos;password&apos;&#32;placeholder=&apos;Entrer&#32;le&#32;mot&#32;de&#32;passe&apos;&#32;name=&apos;password&apos;&#32;required&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00026"/>00026 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00027"/>00027 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Confirmer&#32;mot&#32;de&#32;passe&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00028"/>00028 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;password&apos;&#32;id=&apos;password_confirmation&apos;&#32;placeholder=&apos;Entrer&#32;le&#32;mot&#32;de&#32;passe&apos;&#32;name=&apos;password_confirmation&apos;&#32;required&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00029"/>00029 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&#32;id=&apos;password_confirmation_error&apos;&gt;$error&lt;/p&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00030"/>00030 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00031"/>00031 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;submit&apos;&#32;id=&apos;submit&apos;&#32;value=&apos;REGISTER&apos;&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00032"/>00032 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00033"/>00033 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&gt;Vous&#32;avez&#32;déjà&#32;un&#32;compte&#32;?&#32;&lt;a&#32;href=&apos;/login&apos;&gt;Connectez-vous&lt;/a&gt;&lt;/p&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00034"/>00034 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/form&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00035"/>00035 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/div&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00036"/>00036 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;script&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00037"/>00037 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;function&#32;validateForm()&#32;{</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00038"/>00038 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;username&#32;=&#32;document.getElementById(&apos;username&apos;).value;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00039"/>00039 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;password&#32;=&#32;document.getElementById(&apos;password&apos;).value;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00040"/>00040 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;passwordConfirmation&#32;=&#32;document.getElementById(&apos;password_confirmation&apos;).value;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00041"/>00041 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;var&#32;passwordConfirmationError&#32;=&#32;document.getElementById(&apos;password_confirmation_error&apos;);</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00042"/>00042 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00043"/>00043 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(username&#32;===&#32;&apos;&apos;&#32;||&#32;password&#32;===&#32;&apos;&apos;&#32;||&#32;passwordConfirmation&#32;===&#32;&apos;&apos;)&#32;{</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00044"/>00044 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;passwordConfirmationError.innerHTML&#32;=&#32;&apos;il&#32;faut&#32;remplir&#32;tous&#32;les&#32;champs&apos;;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00045"/>00045 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;false;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00046"/>00046 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00047"/>00047 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(password&#32;!==&#32;passwordConfirmation)&#32;{</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00048"/>00048 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;passwordConfirmationError.innerHTML&#32;=&#32;&apos;Les&#32;mots&#32;de&#32;passe&#32;ne&#32;correspondent&#32;pas&apos;;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00049"/>00049 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;false;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00050"/>00050 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00051"/>00051 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00052"/>00052 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;true;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00053"/>00053 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00054"/>00054 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/script&gt;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00055"/>00055 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__view_register_8php_source_1l00056"/>00056 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;</emphasis>;
+<anchor xml:id="__view_register_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__view_register_8php_source_1l00058"/>00058 }
+</programlisting></section>

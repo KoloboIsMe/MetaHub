@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__view_homepage_8php_source" xml:lang="en-US">
+<title>ViewHomepage.php</title>
+<indexterm><primary>gui/ViewHomepage.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__view_homepage_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__view_homepage_8php_source_1l00002"/>00002 
+<anchor xml:id="__view_homepage_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacegui">gui</link>;
+<anchor xml:id="__view_homepage_8php_source_1l00004"/>00004 
+<anchor xml:id="__view_homepage_8php_source_1l00005"/><link linkend="_classgui_1_1_view_homepage">00005</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classgui_1_1_view_homepage">ViewHomepage</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_classgui_1_1_view">View</link>
+<anchor xml:id="__view_homepage_8php_source_1l00006"/>00006 {
+<anchor xml:id="__view_homepage_8php_source_1l00007"/><link linkend="_classgui_1_1_view_homepage_1aa5152a78c188bb446546f2ebeebabf1c">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classgui_1_1_view_homepage_1aa5152a78c188bb446546f2ebeebabf1c">__construct</link>($layout,&#32;<link linkend="_index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d">$presenter</link>)
+<anchor xml:id="__view_homepage_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__view_homepage_8php_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;parent::__construct($layout);
+<anchor xml:id="__view_homepage_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;title&#32;=&#32;<emphasis role="stringliteral">&apos;Accueil&apos;</emphasis>;
+<anchor xml:id="__view_homepage_8php_source_1l00011"/>00011 
+<anchor xml:id="__view_homepage_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset($_SESSION[<emphasis role="stringliteral">&apos;username&apos;</emphasis>]))
+<anchor xml:id="__view_homepage_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;username&#32;=&#32;$_SESSION[<emphasis role="stringliteral">&apos;username&apos;</emphasis>];
+<anchor xml:id="__view_homepage_8php_source_1l00014"/>00014 
+<anchor xml:id="__view_homepage_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;searchBar&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__view_homepage_8php_source_1l00016"/>00016 
+<anchor xml:id="__view_homepage_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;content&#32;=&#32;<link linkend="_index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d">$presenter</link>-&gt;show(<emphasis role="stringliteral">&apos;homepage&apos;</emphasis>);
+<anchor xml:id="__view_homepage_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__view_homepage_8php_source_1l00019"/>00019 }
+<anchor xml:id="__view_homepage_8php_source_1l00020"/>00020 
+<anchor xml:id="__view_homepage_8php_source_1l00021"/>00021 
+<anchor xml:id="__view_homepage_8php_source_1l00022"/>00022 
+<anchor xml:id="__view_homepage_8php_source_1l00023"/>00023 
+<anchor xml:id="__view_homepage_8php_source_1l00024"/>00024 
+</programlisting></section>

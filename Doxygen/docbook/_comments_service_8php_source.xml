@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__comments_service_8php_source" xml:lang="en-US">
+<title>CommentsService.php</title>
+<indexterm><primary>services/CommentsService.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__comments_service_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__comments_service_8php_source_1l00002"/>00002 
+<anchor xml:id="__comments_service_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceservices">services</link>;
+<anchor xml:id="__comments_service_8php_source_1l00004"/>00004 
+<anchor xml:id="__comments_service_8php_source_1l00005"/><link linkend="_classservices_1_1_comments_service">00005</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classservices_1_1_comments_service">CommentsService</link>
+<anchor xml:id="__comments_service_8php_source_1l00006"/>00006 {
+<anchor xml:id="__comments_service_8php_source_1l00007"/>00007 
+<anchor xml:id="__comments_service_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2">$outputData</link>;
+<anchor xml:id="__comments_service_8php_source_1l00009"/>00009 
+<anchor xml:id="__comments_service_8php_source_1l00010"/><link linkend="_classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75">00010</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75">__construct</link>(<link linkend="_index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2">$outputData</link>)
+<anchor xml:id="__comments_service_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comments_service_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;outputData&#32;=&#32;<link linkend="_index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2">$outputData</link>;
+<anchor xml:id="__comments_service_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comments_service_8php_source_1l00014"/>00014 
+<anchor xml:id="__comments_service_8php_source_1l00015"/><link linkend="_classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c">createComment</link>(<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>,&#32;$text,&#32;$ticketID)
+<anchor xml:id="__comments_service_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comments_service_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>-&gt;createComment($text,&#32;date(<emphasis role="stringliteral">&quot;Y-m-d&#32;H:i&quot;</emphasis>),&#32;$_SESSION[<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>],&#32;$ticketID);
+<anchor xml:id="__comments_service_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comments_service_8php_source_1l00019"/>00019 
+<anchor xml:id="__comments_service_8php_source_1l00020"/><link linkend="_classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6">isCommentOwner</link>(<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>,&#32;$commentID,&#32;$user_ID)
+<anchor xml:id="__comments_service_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comments_service_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>-&gt;isCommentOwner($commentID,&#32;$user_ID);
+<anchor xml:id="__comments_service_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comments_service_8php_source_1l00024"/>00024 
+<anchor xml:id="__comments_service_8php_source_1l00025"/><link linkend="_classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e">deleteComment</link>(<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>,&#32;$commentID)
+<anchor xml:id="__comments_service_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__comments_service_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link>-&gt;deleteComment($commentID);
+<anchor xml:id="__comments_service_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__comments_service_8php_source_1l00029"/>00029 
+<anchor xml:id="__comments_service_8php_source_1l00030"/>00030 }
+</programlisting></section>

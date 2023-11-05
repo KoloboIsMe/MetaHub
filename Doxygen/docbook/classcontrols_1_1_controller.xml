@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrols_1_1_controller" xml:lang="en-US">
+<title>Controller Class Reference</title>
+<indexterm><primary>Controller</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a21db5a882ba43a48b03c976aefa69c75">__construct</link> ($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a9d6b79aab4c9047a2eaf4c4c22f4d5c2">authenticateAction</link> ($usersService, $userAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a1b41886b22d4040d3be02c21a3df5aad">createTicketAction</link> ($ticketsService, $ticketAccess, $categoryService, $categoriesAccess, $generalAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1ac3c7bcfacc0cb257666225e55268e202">registerAction</link> ($usersService, $userAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1ab6f6a0b0d21279db7bdc321302b64167">updateUserAction</link> ($usersService, $userAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1ae9374d8aba7101f4309c10b06ba9b37f">deleteUser</link> ($usersService, $userAccess, $generalAccess, $userid)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a9ac7d3f9fb8bf2396aa7d90d2a216c5d">deleteTicket</link> ($ticketsService, $ticketAccess, $generalAccess, $ticketid)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a7d89801573ffc7d2189976c4b0c7408c">deleteComment</link> ($commentsService, $commentAccess, $commentid)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a6ce9813a28f273c4f1dc25a068f49ec4">deleteCategory</link> ($generalAccess, $categoryid)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a20bcb95ff3e4faf5a5cd49c6d9a1ef6f">editTicket</link> ($ticketsService, $ticketAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_controller_1a3b3d42665005347476bd82dd3f075e0c">getPostById</link> ($id, $generalAccessLector)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00007">7</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcontrols_1_1_controller_1a21db5a882ba43a48b03c976aefa69c75"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $outputData)</computeroutput></para><para>
+Definition at line <link linkend="__controller_8php_source_1l00011">11</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrols_1_1_controller_1a9d6b79aab4c9047a2eaf4c4c22f4d5c2"/><section>
+    <title>authenticateAction()</title>
+<indexterm><primary>authenticateAction</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>authenticateAction</secondary></indexterm>
+<para><computeroutput>authenticateAction ( $usersService,  $userAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$usersService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$userAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00021">21</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a1b41886b22d4040d3be02c21a3df5aad"/><section>
+    <title>createTicketAction()</title>
+<indexterm><primary>createTicketAction</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>createTicketAction</secondary></indexterm>
+<para><computeroutput>createTicketAction ( $ticketsService,  $ticketAccess,  $categoryService,  $categoriesAccess,  $generalAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketsService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticketAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$categoryService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$categoriesAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$generalAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00045">45</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a6ce9813a28f273c4f1dc25a068f49ec4"/><section>
+    <title>deleteCategory()</title>
+<indexterm><primary>deleteCategory</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>deleteCategory</secondary></indexterm>
+<para><computeroutput>deleteCategory ( $generalAccess,  $categoryid)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$generalAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$categoryid</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00142">142</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a7d89801573ffc7d2189976c4b0c7408c"/><section>
+    <title>deleteComment()</title>
+<indexterm><primary>deleteComment</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>deleteComment</secondary></indexterm>
+<para><computeroutput>deleteComment ( $commentsService,  $commentAccess,  $commentid)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$commentsService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$commentAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$commentid</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00128">128</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a9ac7d3f9fb8bf2396aa7d90d2a216c5d"/><section>
+    <title>deleteTicket()</title>
+<indexterm><primary>deleteTicket</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>deleteTicket</secondary></indexterm>
+<para><computeroutput>deleteTicket ( $ticketsService,  $ticketAccess,  $generalAccess,  $ticketid)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketsService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticketAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$generalAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticketid</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00113">113</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1ae9374d8aba7101f4309c10b06ba9b37f"/><section>
+    <title>deleteUser()</title>
+<indexterm><primary>deleteUser</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>deleteUser</secondary></indexterm>
+<para><computeroutput>deleteUser ( $usersService,  $userAccess,  $generalAccess,  $userid)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$usersService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$userAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$generalAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$userid</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00091">91</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a20bcb95ff3e4faf5a5cd49c6d9a1ef6f"/><section>
+    <title>editTicket()</title>
+<indexterm><primary>editTicket</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>editTicket</secondary></indexterm>
+<para><computeroutput>editTicket ( $ticketsService,  $ticketAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketsService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticketAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00156">156</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1a3b3d42665005347476bd82dd3f075e0c"/><section>
+    <title>getPostById()</title>
+<indexterm><primary>getPostById</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>getPostById</secondary></indexterm>
+<para><computeroutput>getPostById ( $id,  $generalAccessLector)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$id</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$generalAccessLector</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00170">170</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1ac3c7bcfacc0cb257666225e55268e202"/><section>
+    <title>registerAction()</title>
+<indexterm><primary>registerAction</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>registerAction</secondary></indexterm>
+<para><computeroutput>registerAction ( $usersService,  $userAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$usersService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$userAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>mixed|string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00060">60</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_controller_1ab6f6a0b0d21279db7bdc321302b64167"/><section>
+    <title>updateUserAction()</title>
+<indexterm><primary>updateUserAction</primary><secondary>Controller</secondary></indexterm>
+<indexterm><primary>Controller</primary><secondary>updateUserAction</secondary></indexterm>
+<para><computeroutput>updateUserAction ( $usersService,  $userAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$usersService</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$userAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>mixed|string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__controller_8php_source_1l00073">73</link> of file <link linkend="__controller_8php_source">Controller.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+controls/<link linkend="__controller_8php">Controller.php</link></section>
+</section>

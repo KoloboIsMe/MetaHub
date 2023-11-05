@@ -1,0 +1,657 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="index_8php" kind="file" language="PHP">
+    <compoundname>index.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="index_8php_1ae89b553ac3d911ecce81da9747041908" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$dbAdmin</definition>
+        <argsstring></argsstring>
+        <name>$dbAdmin</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="39" column="1" bodyfile="index.php" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$dbLector</definition>
+        <argsstring></argsstring>
+        <name>$dbLector</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="40" column="1" bodyfile="index.php" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1abe4cc9788f52e49485473dc699537388" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>try</definition>
+        <argsstring></argsstring>
+        <name>try</name>
+        <initializer>{
+
+    
+    $dbAdmin = <ref refid="classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537" kindref="member">database\SPDO::getInstance</ref>(&quot;ADMIN&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="41" column="1" bodyfile="index.php" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" prot="public" static="no" mutable="no">
+        <type>catch(PDOException $e)</type>
+        <definition>catch (PDOException $e) $categoryAccessLector</definition>
+        <argsstring></argsstring>
+        <name>$categoryAccessLector</name>
+        <initializer>= new <ref refid="classdatabase_1_1_category_access" kindref="compound">database\CategoryAccess</ref>($dbLector)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="52" column="1" bodyfile="index.php" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a89d3445ad41f70c219793449020d3528" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$commentAccessLector</definition>
+        <argsstring></argsstring>
+        <name>$commentAccessLector</name>
+        <initializer>= new <ref refid="classdatabase_1_1_comment_access" kindref="compound">database\CommentAccess</ref>($dbLector)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="53" column="1" bodyfile="index.php" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a508377953039f7856fd76824e260afba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$ticketAccessLector</definition>
+        <argsstring></argsstring>
+        <name>$ticketAccessLector</name>
+        <initializer>= new <ref refid="classdatabase_1_1_ticket_access" kindref="compound">database\TicketAccess</ref>($dbLector)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="54" column="1" bodyfile="index.php" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a9340012d6fce07833a6fa708779dfb16" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$userAccessLector</definition>
+        <argsstring></argsstring>
+        <name>$userAccessLector</name>
+        <initializer>= new <ref refid="classdatabase_1_1_user_access" kindref="compound">database\UserAccess</ref>($dbLector)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="55" column="1" bodyfile="index.php" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a941e0f644134fed3621753aa7e4ac183" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$generalAccessLector</definition>
+        <argsstring></argsstring>
+        <name>$generalAccessLector</name>
+        <initializer>= new <ref refid="classdatabase_1_1_general_access" kindref="compound">database\GeneralAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="56" column="1" bodyfile="index.php" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$ticketAccess</definition>
+        <argsstring></argsstring>
+        <name>$ticketAccess</name>
+        <initializer>= new <ref refid="classdatabase_1_1_ticket_access" kindref="compound">database\TicketAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="58" column="1" bodyfile="index.php" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$userAccess</definition>
+        <argsstring></argsstring>
+        <name>$userAccess</name>
+        <initializer>= new <ref refid="classdatabase_1_1_user_access" kindref="compound">database\UserAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="59" column="1" bodyfile="index.php" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$commentAccess</definition>
+        <argsstring></argsstring>
+        <name>$commentAccess</name>
+        <initializer>= new <ref refid="classdatabase_1_1_comment_access" kindref="compound">database\CommentAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="60" column="1" bodyfile="index.php" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$categoryAccess</definition>
+        <argsstring></argsstring>
+        <name>$categoryAccess</name>
+        <initializer>= new <ref refid="classdatabase_1_1_category_access" kindref="compound">database\CategoryAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="61" column="1" bodyfile="index.php" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a9a046cb32f699738d388b443e80758f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$generalAccess</definition>
+        <argsstring></argsstring>
+        <name>$generalAccess</name>
+        <initializer>= new <ref refid="classdatabase_1_1_general_access" kindref="compound">database\GeneralAccess</ref>($dbAdmin)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="62" column="1" bodyfile="index.php" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <initializer>= new <ref refid="classservices_1_1_output_data" kindref="compound">services\OutputData</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="65" column="1" bodyfile="index.php" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$controller</definition>
+        <argsstring></argsstring>
+        <name>$controller</name>
+        <initializer>= new <ref refid="classcontrols_1_1_controller" kindref="compound">controls\Controller</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="68" column="1" bodyfile="index.php" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$presenter</definition>
+        <argsstring></argsstring>
+        <name>$presenter</name>
+        <initializer>= new <ref refid="classcontrols_1_1_presenter" kindref="compound">controls\Presenter</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="71" column="1" bodyfile="index.php" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1aaa6c921e73418e6b3aeef431100171ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$categoriesService</definition>
+        <argsstring></argsstring>
+        <name>$categoriesService</name>
+        <initializer>= new <ref refid="classservices_1_1_categories_service" kindref="compound">services\CategoriesService</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="74" column="1" bodyfile="index.php" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a810230690da10168aaae0d2a5349c124" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$ticketsService</definition>
+        <argsstring></argsstring>
+        <name>$ticketsService</name>
+        <initializer>= new <ref refid="classservices_1_1_tickets_service" kindref="compound">services\TicketsService</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="75" column="1" bodyfile="index.php" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$commentsService</definition>
+        <argsstring></argsstring>
+        <name>$commentsService</name>
+        <initializer>= new <ref refid="classservices_1_1_comments_service" kindref="compound">services\CommentsService</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="76" column="1" bodyfile="index.php" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$usersService</definition>
+        <argsstring></argsstring>
+        <name>$usersService</name>
+        <initializer>= new <ref refid="classservices_1_1_users_service" kindref="compound">services\UsersService</ref>($outputData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="77" column="1" bodyfile="index.php" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1acf215f34a917d014776ce684a9ee8909" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$url</definition>
+        <argsstring></argsstring>
+        <name>$url</name>
+        <initializer>= $_GET[&apos;url&apos;] ?? &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="80" column="1" bodyfile="index.php" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="index_8php_1a06dc4a8eef6f21bee6ea9a1f7a778241" prot="public" static="no" mutable="no">
+        <type>if(isset($_SESSION[&apos;isLogged&apos;]) &amp;&amp; $_SESSION[&apos;isLogged&apos;])</type>
+        <definition>if(isset( $_GET[ &apos;action&apos;])) if(&apos;&apos;==$url||&apos;/&apos;==$url) elseif( &apos;login&apos;==$url) elseif(&apos;register&apos;==$url) elseif( &apos;logout&apos;==$url &amp;&amp;isset( $_SESSION[ &apos;isLogged&apos;])) elseif(&apos;posts&apos;==$url) elseif( &apos;createPosts&apos;==$url) elseif(&apos;categories&apos;==$url) elseif( &apos;editTicket&apos;==$url &amp;&amp;isset( $_GET[ &apos;id&apos;]) &amp;&amp;$ticketsService-&gt;existsTicket( $ticketAccessLector, $_GET[ &apos;id&apos;])) elseif(&apos;users&apos;==$url) elseif( &apos;userEdit&apos;==$url &amp;&amp;isset( $_SESSION[ &apos;user_ID&apos;])) elseif(&apos;createCategory&apos;==$url &amp;&amp;isset($_SESSION[&apos;level&apos;]) &amp;&amp; $_SESSION[&apos;level&apos;] &gt; 0) elseif ( &apos;error&apos;==$url) else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+    $layoutTemplate = &apos;gui/layout.html&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="index.php" line="91" column="2" bodyfile="index.php" bodystart="91" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;controls/Controller.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;controls/Presenter.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/CategoryAccess.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/CommentAccess.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/GeneralAccess.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/SPDO.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/TicketAccess.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/database/UserAccess.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/entities/Category.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/entities/Comment.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/entities/Post.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/entities/Ticket.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;Framework/entities/User.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/Layout.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/View.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewCategories.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewCreateCategory.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewCreatePosts.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewEditTicket.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewError.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewHomepage.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewLogin.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewRegister.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewPosts.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewUserEdit.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;gui/ViewUsers.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&apos;services/CategoriesService.php&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;services/CommentsService.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;services/OutputData.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;services/TicketsService.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">include_once<sp/></highlight><highlight class="stringliteral">&quot;services/UsersService.php&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="index_8php_1ae89b553ac3d911ecce81da9747041908" refkind="member"><highlight class="normal"><ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref><sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40" refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" refkind="member"><highlight class="normal"><ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref><sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41" refid="index_8php_1abe4cc9788f52e49485473dc699537388" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>construction<sp/>du<sp/>modèle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref><sp/>=<sp/>database\SPDO::getInstance(</highlight><highlight class="stringliteral">&quot;ADMIN&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref><sp/>=<sp/>database\SPDO::getInstance(</highlight><highlight class="stringliteral">&quot;LECTOR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(PDOException<sp/>$e)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>print<sp/></highlight><highlight class="stringliteral">&quot;Erreur<sp/>de<sp/>connexion<sp/>!:<sp/>&quot;</highlight><highlight class="normal"><sp/>.<sp/>$e-&gt;getMessage()<sp/>.<sp/></highlight><highlight class="stringliteral">&quot;&lt;br/&gt;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>die();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" refkind="member"><highlight class="normal"><ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_category_access" kindref="compound">database\CategoryAccess</ref>(<ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref>);</highlight></codeline>
+<codeline lineno="53" refid="index_8php_1a89d3445ad41f70c219793449020d3528" refkind="member"><highlight class="normal"><ref refid="index_8php_1a89d3445ad41f70c219793449020d3528" kindref="member">$commentAccessLector</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_comment_access" kindref="compound">database\CommentAccess</ref>(<ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref>);</highlight></codeline>
+<codeline lineno="54" refid="index_8php_1a508377953039f7856fd76824e260afba" refkind="member"><highlight class="normal"><ref refid="index_8php_1a508377953039f7856fd76824e260afba" kindref="member">$ticketAccessLector</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_ticket_access" kindref="compound">database\TicketAccess</ref>(<ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref>);</highlight></codeline>
+<codeline lineno="55" refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" refkind="member"><highlight class="normal"><ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_user_access" kindref="compound">database\UserAccess</ref>(<ref refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kindref="member">$dbLector</ref>);</highlight></codeline>
+<codeline lineno="56" refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" refkind="member"><highlight class="normal"><ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_general_access" kindref="compound">database\GeneralAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" refkind="member"><highlight class="normal"><ref refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" kindref="member">$ticketAccess</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_ticket_access" kindref="compound">database\TicketAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="59" refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" refkind="member"><highlight class="normal"><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_user_access" kindref="compound">database\UserAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="60" refid="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" refkind="member"><highlight class="normal"><ref refid="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" kindref="member">$commentAccess</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_comment_access" kindref="compound">database\CommentAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="61" refid="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" refkind="member"><highlight class="normal"><ref refid="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" kindref="member">$categoryAccess</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_category_access" kindref="compound">database\CategoryAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="62" refid="index_8php_1a9a046cb32f699738d388b443e80758f5" refkind="member"><highlight class="normal"><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classdatabase_1_1_general_access" kindref="compound">database\GeneralAccess</ref>(<ref refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kindref="member">$dbAdmin</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>initialisation<sp/>de<sp/>l&apos;output<sp/>dans<sp/>une<sp/>structure<sp/>pour<sp/>le<sp/>transfert<sp/>des<sp/>données</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" refkind="member"><highlight class="normal"><ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classservices_1_1_output_data" kindref="compound">services\OutputData</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>initialisation<sp/>du<sp/>controller<sp/>avec<sp/>accès<sp/>a<sp/>la<sp/>structure<sp/>pour<sp/>le<sp/>transfert<sp/>des<sp/>données</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" refkind="member"><highlight class="normal"><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcontrols_1_1_controller" kindref="compound">controls\Controller</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>initialisation<sp/>du<sp/>presenter<sp/>avec<sp/>accès<sp/>a<sp/>la<sp/>structure<sp/>pour<sp/>le<sp/>transfert<sp/>des<sp/>données</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" refkind="member"><highlight class="normal"><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcontrols_1_1_presenter" kindref="compound">controls\Presenter</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//initialisation<sp/>des<sp/>services<sp/>avec<sp/>la<sp/>structure<sp/>pour<sp/>le<sp/>transfert<sp/>des<sp/>données</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" refkind="member"><highlight class="normal"><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classservices_1_1_categories_service" kindref="compound">services\CategoriesService</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="75" refid="index_8php_1a810230690da10168aaae0d2a5349c124" refkind="member"><highlight class="normal"><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classservices_1_1_tickets_service" kindref="compound">services\TicketsService</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="76" refid="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" refkind="member"><highlight class="normal"><ref refid="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" kindref="member">$commentsService</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classservices_1_1_comments_service" kindref="compound">services\CommentsService</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="77" refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" refkind="member"><highlight class="normal"><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classservices_1_1_users_service" kindref="compound">services\UsersService</ref>(<ref refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kindref="member">$outputData</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>chemin<sp/>de<sp/>l&apos;URL<sp/>demandée<sp/>au<sp/>navigateur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="index_8php_1acf215f34a917d014776ce684a9ee8909" refkind="member"><highlight class="normal"><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;url&apos;</highlight><highlight class="normal">]<sp/>??<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>définition<sp/>d&apos;une<sp/>session<sp/>d&apos;une<sp/>heure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">ini_set(</highlight><highlight class="stringliteral">&apos;session.gc_maxlifetime&apos;</highlight><highlight class="normal">,<sp/>1800);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">session_start();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_SESSION[</highlight><highlight class="stringliteral">&apos;level&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;level&apos;</highlight><highlight class="normal">]<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$layoutTemplate<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gui/layoutLoggedAdmin.html&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$layoutTemplate<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gui/layoutLogged.html&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91" refid="index_8php_1a06dc4a8eef6f21bee6ea9a1f7a778241" refkind="member"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>$layoutTemplate<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;gui/layout.html&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&apos;registerAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;password&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;password_confirmation&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>??<sp/>$page<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;registerAction(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>,<sp/><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;register&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;login_verification&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&apos;login_verification&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;password&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>??<sp/>$page<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;authenticateAction(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>,<sp/><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>?<sp/>$redirect<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;login&amp;id=&apos;</highlight><highlight class="normal"><sp/>.<sp/>$page<sp/>:<sp/>$redirect<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;login&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$page<sp/>?<sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/$page&quot;</highlight><highlight class="normal">)<sp/>:<sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&apos;createPostsAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;createTicketAction(<ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>,<sp/><ref refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" kindref="member">$ticketAccess</ref>,<sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref><sp/>,<ref refid="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" kindref="member">$categoryAccess</ref>,<sp/><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&apos;deleteTicketAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;deleteTicket(<ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>,<sp/><ref refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" kindref="member">$ticketAccess</ref>,<sp/><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;deleteUserAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;deleteUser(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>,<sp/><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>,<sp/><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>==<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;user_ID&apos;</highlight><highlight class="normal">])<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>session_unset();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;deleteCommentAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;deleteComment(<ref refid="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" kindref="member">$commentsService</ref>,<sp/><ref refid="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" kindref="member">$commentAccess</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;deleteCategoryAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;deleteCategory(<ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;editTicketAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;editTicket(<ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>,<sp/><ref refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" kindref="member">$ticketAccess</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;editUserInfoAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;username&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;old_password&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;updateUserAction(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>,<sp/><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;userEdit&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>session_unset();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;authenticateAction(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>,<sp/><ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;createComment&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" kindref="member">$commentsService</ref>-&gt;createComment(<ref refid="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" kindref="member">$commentAccess</ref>,<sp/>$_POST[</highlight><highlight class="stringliteral">&quot;text&quot;</highlight><highlight class="normal">],<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/posts&amp;id=&quot;</highlight><highlight class="normal"><sp/>.<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;createCategoryAction&apos;</highlight><highlight class="normal"><sp/>==<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;action&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&quot;label&quot;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>isset($_POST[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;createCategory(<ref refid="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" kindref="member">$categoryAccess</ref>,<sp/>$_POST[</highlight><highlight class="stringliteral">&quot;label&quot;</highlight><highlight class="normal">],<sp/>$_POST[</highlight><highlight class="stringliteral">&apos;description&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($error)<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$redirect<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;createCategory&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;refresh:0;url=/categories&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>||<sp/></highlight><highlight class="charliteral">&apos;/&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;get5LastPosts(<ref refid="index_8php_1a508377953039f7856fd76824e260afba" kindref="member">$ticketAccessLector</ref>,<sp/><ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;add5LastCategories(<ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;add10LastConnectedUsers(<ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref>);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_homepage" kindref="compound">gui\ViewHomepage</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;login&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$page<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>:<sp/>$page<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_login" kindref="compound">gui\ViewLogin</ref>($layout,<sp/>$page))-&gt;display();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;register&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>?<sp/>$page<sp/>=<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]<sp/>:<sp/>$page<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($error))</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$error<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_register" kindref="compound">gui\ViewRegister</ref>($layout,<sp/>$page,<sp/>$error))-&gt;display();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;logout&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>&amp;&amp;<sp/>isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;setOnline(<ref refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kindref="member">$userAccess</ref>,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;user_ID&apos;</highlight><highlight class="normal">],<sp/>0);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>session_unset();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>session_destroy();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&quot;Location:<sp/>/&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;posts&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/login&amp;id=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;existsTicket(<ref refid="index_8php_1a508377953039f7856fd76824e260afba" kindref="member">$ticketAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;getPostById($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">],<sp/><ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;getPosts(<ref refid="index_8php_1a508377953039f7856fd76824e260afba" kindref="member">$ticketAccessLector</ref>,<sp/><ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_posts" kindref="compound">gui\ViewPosts</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;createPosts&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/login&amp;id=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;getCategories(<ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref>);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_create_posts" kindref="compound">gui\ViewCreatePosts</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;categories&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/login&amp;id=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>$category<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;existsCategory(<ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$category<sp/>=<sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;getCategoryById(<ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$postsID<sp/>=<sp/><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>-&gt;getPostsIdByCategoryId($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;getCategoryPosts(<ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>,<sp/>$postsID);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kindref="member">$categoriesService</ref>-&gt;getCategories(<ref refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kindref="member">$categoryAccessLector</ref>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_categories" kindref="compound">gui\ViewCategories</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>,<sp/>$category))-&gt;display();</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;editTicket&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>&amp;&amp;<sp/>isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;existsTicket(<ref refid="index_8php_1a508377953039f7856fd76824e260afba" kindref="member">$ticketAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/login&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kindref="member">$controller</ref>-&gt;getPostById($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">],<sp/><ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_edit_ticket" kindref="compound">gui\ViewEditTicket</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;users&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!isset($_SESSION[</highlight><highlight class="stringliteral">&apos;isLogged&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/login&amp;id=&apos;</highlight><highlight class="normal"><sp/>.<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kindref="member">$user</ref><sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isset($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;existsUser(<ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kindref="member">$user</ref><sp/>=<sp/><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;getUserById(<ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref>,<sp/>$_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//liste<sp/>des<sp/>id<sp/>tes<sp/>tickets<sp/>de<sp/>l&apos;user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>$postsID<sp/>=<sp/><ref refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kindref="member">$generalAccess</ref>-&gt;getTicketsIdByUserId($_GET[</highlight><highlight class="stringliteral">&apos;id&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a810230690da10168aaae0d2a5349c124" kindref="member">$ticketsService</ref>-&gt;getUserPosts(<ref refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kindref="member">$generalAccessLector</ref>,<sp/>$postsID);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>header(</highlight><highlight class="stringliteral">&apos;Location:<sp/>/&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//si<sp/>l&apos;id<sp/>nest<sp/>pas<sp/>set,<sp/>afficher<sp/>tout<sp/>les<sp/>user</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;getUsers(<ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref>);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_users" kindref="compound">gui\ViewUsers</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>,<sp/><ref refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kindref="member">$user</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;userEdit&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>&amp;&amp;<sp/>isset($_SESSION[</highlight><highlight class="stringliteral">&apos;user_ID&apos;</highlight><highlight class="normal">]))<sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kindref="member">$usersService</ref>-&gt;setUserById(<ref refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kindref="member">$userAccessLector</ref>,<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;user_ID&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_user_edit" kindref="compound">gui\ViewUserEdit</ref>($layout,<sp/><ref refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kindref="member">$presenter</ref>))-&gt;display();</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;createCategory&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref><sp/>&amp;&amp;<sp/>isset($_SESSION[</highlight><highlight class="stringliteral">&apos;level&apos;</highlight><highlight class="normal">])<sp/>&amp;&amp;<sp/>$_SESSION[</highlight><highlight class="stringliteral">&apos;level&apos;</highlight><highlight class="normal">]<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_create_category" kindref="compound">gui\ViewCreateCategory</ref>($layout))-&gt;display();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}<sp/>elseif<sp/>(</highlight><highlight class="stringliteral">&apos;error&apos;</highlight><highlight class="normal"><sp/>==<sp/><ref refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kindref="member">$url</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>$error<sp/>??<sp/>$error<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>$redirect<sp/>??<sp/>$redirect<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_error" kindref="compound">gui\ViewError</ref>($layout,<sp/>$error,<sp/>$redirect))-&gt;display();</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>$layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_layout" kindref="compound">gui\Layout</ref>($layoutTemplate);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classgui_1_1_view_error" kindref="compound">gui\ViewError</ref>($layout,<sp/></highlight><highlight class="stringliteral">&apos;Page<sp/>introuvable&apos;</highlight><highlight class="normal">))-&gt;display();</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="index.php"/>
+  </compounddef>
+</doxygen>

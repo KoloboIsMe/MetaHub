@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interfaceservices_1_1_category_interface" xml:lang="en-US">
+<title>CategoryInterface Interface Reference</title>
+<indexterm><primary>CategoryInterface</primary></indexterm>
+<para>Inheritance diagram for CategoryInterface:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interfaceservices_1_1_category_interface.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b">existsCategory</link> ($CategoryID)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392">getCategoriesID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323">getCategoryById</link> ($id)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af">getCategoryIdByLabel</link> ($label)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7">get5LastCategories</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05">createCategory</link> ($label, $description)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__category_interface_8php_source_1l00005">5</link> of file <link linkend="__category_interface_8php_source">CategoryInterface.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05"/><section>
+    <title>createCategory()</title>
+<indexterm><primary>createCategory</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>createCategory</secondary></indexterm>
+<para><computeroutput>createCategory ( $label,  $description)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05">CategoryAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b"/><section>
+    <title>existsCategory()</title>
+<indexterm><primary>existsCategory</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>existsCategory</secondary></indexterm>
+<para><computeroutput>existsCategory ( $CategoryID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b">CategoryAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7"/><section>
+    <title>get5LastCategories()</title>
+<indexterm><primary>get5LastCategories</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>get5LastCategories</secondary></indexterm>
+<para><computeroutput>get5LastCategories ( )</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7">CategoryAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392"/><section>
+    <title>getCategoriesID()</title>
+<indexterm><primary>getCategoriesID</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>getCategoriesID</secondary></indexterm>
+<para><computeroutput>getCategoriesID ( )</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392">CategoryAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323"/><section>
+    <title>getCategoryById()</title>
+<indexterm><primary>getCategoryById</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>getCategoryById</secondary></indexterm>
+<para><computeroutput>getCategoryById ( $id)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5">CategoryAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af"/><section>
+    <title>getCategoryIdByLabel()</title>
+<indexterm><primary>getCategoryIdByLabel</primary><secondary>CategoryInterface</secondary></indexterm>
+<indexterm><primary>CategoryInterface</primary><secondary>getCategoryIdByLabel</secondary></indexterm>
+<para><computeroutput>getCategoryIdByLabel ( $label)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af">CategoryAccess</link>.</para>
+</section>
+<para>
+The documentation for this interface was generated from the following file:</para>
+services/<link linkend="__category_interface_8php">CategoryInterface.php</link></section>
+</section>

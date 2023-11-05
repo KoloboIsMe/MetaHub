@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_054245cdb03fb725488dd4f11b99c73e" xml:lang="en-US">
+<title>Framework/database Directory Reference</title>
+<indexterm><primary>Framework/database Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__category_access_8php">CategoryAccess.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__comment_access_8php">CommentAccess.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__general_access_8php">GeneralAccess.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__s_p_d_o_8php">SPDO.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ticket_access_8php">TicketAccess.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__user_access_8php">UserAccess.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

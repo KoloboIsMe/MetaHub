@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_controls_2page_presenters_2post_8php" xml:lang="en-US">
+<title>controls/pagePresenters/post.php File Reference</title>
+<indexterm><primary>controls/pagePresenters/post.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_controls_2page_presenters_2post_8php_1a53d6c7669d97392c407c4f959a5263db">$post</link> = $data</para>
+</listitem>
+            <listitem><para><link linkend="_controls_2page_presenters_2post_8php_1ae97941710d863131c700f069b109991e">$id</link> = $post-&gt;getTicket()-&gt;getTicket_ID()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_controls_2page_presenters_2post_8php_1ae97941710d863131c700f069b109991e"/><section>
+    <title>$id</title>
+<indexterm><primary>$id</primary><secondary>post.php</secondary></indexterm>
+<indexterm><primary>post.php</primary><secondary>$id</secondary></indexterm>
+<para><computeroutput>$id = $post-&gt;getTicket()-&gt;getTicket_ID()</computeroutput></para><para>
+Definition at line <link linkend="_controls_2page_presenters_2post_8php_source_1l00004">4</link> of file <link linkend="_controls_2page_presenters_2post_8php_source">post.php</link>.</para>
+</section>
+<anchor xml:id="_controls_2page_presenters_2post_8php_1a53d6c7669d97392c407c4f959a5263db"/><section>
+    <title>$post</title>
+<indexterm><primary>$post</primary><secondary>post.php</secondary></indexterm>
+<indexterm><primary>post.php</primary><secondary>$post</secondary></indexterm>
+<para><computeroutput>$post = $data</computeroutput></para><para>
+Definition at line <link linkend="_controls_2page_presenters_2post_8php_source_1l00003">3</link> of file <link linkend="_controls_2page_presenters_2post_8php_source">post.php</link>.</para>
+</section>
+</section>
+</section>

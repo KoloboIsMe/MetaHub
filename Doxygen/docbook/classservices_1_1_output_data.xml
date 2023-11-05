@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classservices_1_1_output_data" xml:lang="en-US">
+<title>OutputData Class Reference</title>
+<indexterm><primary>OutputData</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classservices_1_1_output_data_1a421831a265621325e1fdd19aace0c758">__destruct</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_output_data_1a6079f9b139fe5a9af0f7ea4c6013f0ad">getOutputData</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_output_data_1ab9632546d24947ae2c380c5599759e0a">setOutputData</link> ($data)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_output_data_1a33b2cb2abfc7a0c94d55a9f3f9b74e05">addOutputData</link> ($data)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classservices_1_1_output_data_1ae9edebdcd1b91b38dfd10a39e51073c2">$outputData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__output_data_8php_source_1l00005">5</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classservices_1_1_output_data_1a421831a265621325e1fdd19aace0c758"/><section>
+    <title>__destruct()</title>
+<indexterm><primary>__destruct</primary><secondary>OutputData</secondary></indexterm>
+<indexterm><primary>OutputData</primary><secondary>__destruct</secondary></indexterm>
+<para><computeroutput>__destruct ( )</computeroutput></para><para>
+Definition at line <link linkend="__output_data_8php_source_1l00009">9</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classservices_1_1_output_data_1a33b2cb2abfc7a0c94d55a9f3f9b74e05"/><section>
+    <title>addOutputData()</title>
+<indexterm><primary>addOutputData</primary><secondary>OutputData</secondary></indexterm>
+<indexterm><primary>OutputData</primary><secondary>addOutputData</secondary></indexterm>
+<para><computeroutput>addOutputData ( $data)</computeroutput></para><para>
+Definition at line <link linkend="__output_data_8php_source_1l00024">24</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_output_data_1a6079f9b139fe5a9af0f7ea4c6013f0ad"/><section>
+    <title>getOutputData()</title>
+<indexterm><primary>getOutputData</primary><secondary>OutputData</secondary></indexterm>
+<indexterm><primary>OutputData</primary><secondary>getOutputData</secondary></indexterm>
+<para><computeroutput>getOutputData ( )</computeroutput></para><para>
+Definition at line <link linkend="__output_data_8php_source_1l00014">14</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_output_data_1ab9632546d24947ae2c380c5599759e0a"/><section>
+    <title>setOutputData()</title>
+<indexterm><primary>setOutputData</primary><secondary>OutputData</secondary></indexterm>
+<indexterm><primary>OutputData</primary><secondary>setOutputData</secondary></indexterm>
+<para><computeroutput>setOutputData ( $data)</computeroutput></para><para>
+Definition at line <link linkend="__output_data_8php_source_1l00019">19</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classservices_1_1_output_data_1ae9edebdcd1b91b38dfd10a39e51073c2"/><section>
+    <title>$outputData</title>
+<indexterm><primary>$outputData</primary><secondary>OutputData</secondary></indexterm>
+<indexterm><primary>OutputData</primary><secondary>$outputData</secondary></indexterm>
+<para><computeroutput>$outputData<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__output_data_8php_source_1l00007">7</link> of file <link linkend="__output_data_8php_source">OutputData.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+services/<link linkend="__output_data_8php">OutputData.php</link></section>
+</section>

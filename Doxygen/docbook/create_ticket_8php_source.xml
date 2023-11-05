@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_create_ticket_8php_source" xml:lang="en-US">
+<title>createTicket.php</title>
+<indexterm><primary>controls/pagePresenters/createTicket.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_create_ticket_8php_source_1l00001"/>00001 &lt;script&#32;src=<emphasis role="stringliteral">&apos;https://unpkg.com/slim-select@latest/dist/slimselect.min.js&apos;</emphasis>&gt;&lt;/script&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00002"/>00002 &lt;link&#32;href=<emphasis role="stringliteral">&apos;gui/css/CategorySelectionBar.css&apos;</emphasis>&#32;rel=<emphasis role="stringliteral">&apos;stylesheet&apos;</emphasis>&gt;&lt;/link&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00003"/>00003 &lt;link&#32;href=<emphasis role="stringliteral">&apos;gui/css/forms.css&apos;</emphasis>&#32;rel=<emphasis role="stringliteral">&apos;stylesheet&apos;</emphasis>&#32;type=<emphasis role="stringliteral">&apos;text/css&apos;</emphasis>/&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00004"/>00004 &lt;div&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;container&apos;</emphasis>&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00005"/>00005 &#32;&#32;&#32;&#32;&lt;form&#32;action=<emphasis role="stringliteral">&apos;/createPosts?action=createPostsAction&apos;</emphasis>&#32;method=<emphasis role="stringliteral">&apos;POST&apos;</emphasis>&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00006"/>00006 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;h1&gt;Nouveau&#32;Post&lt;/h1&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Titre&lt;/b&gt;&lt;/label&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&apos;text&apos;</emphasis>&#32;placeholder=<emphasis role="stringliteral">&quot;&#32;Entrer&#32;le&#32;titre&#32;du&#32;post&#32;&quot;</emphasis>&#32;name=<emphasis role="stringliteral">&apos;title&apos;</emphasis>&#32;required&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Contenu&#32;du&#32;post&lt;/b&gt;&lt;/label&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;textarea&#32;placeholder=<emphasis role="stringliteral">&apos;Entrer&#32;le&#32;contenu&#32;du&#32;post&apos;</emphasis>&#32;name=<emphasis role="stringliteral">&apos;message&apos;</emphasis>&#32;required&gt;&lt;/textarea&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;select&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;category&apos;</emphasis>&#32;multiple&#32;name=<emphasis role="stringliteral">&apos;categories[]&apos;</emphasis>&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;?php&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;($this-&gt;outputData-&gt;getOutputData()&#32;as&#32;$category)&#32;{&#32;?&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;option&gt;&lt;?=&#32;$category-&gt;getLabel()&#32;?&gt;&lt;/option&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;?php&#32;}&#32;?&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/select&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&apos;submit&apos;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;submit&apos;</emphasis>&#32;value=<emphasis role="stringliteral">&apos;Publier&apos;</emphasis>&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&lt;/form&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00018"/>00018 &lt;/div&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00019"/>00019 
+<anchor xml:id="_create_ticket_8php_source_1l00020"/>00020 &lt;script&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keyword">new</emphasis>&#32;SlimSelect({
+<anchor xml:id="_create_ticket_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;select:&#32;<emphasis role="stringliteral">&apos;#category&apos;</emphasis>,
+<anchor xml:id="_create_ticket_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;settings:&#32;{
+<anchor xml:id="_create_ticket_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;placeholderText:&#32;<emphasis role="stringliteral">&apos;Choisir&#32;une&#32;catégorie&apos;</emphasis>,
+<anchor xml:id="_create_ticket_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;searchPlaceholder:&#32;<emphasis role="stringliteral">&apos;Rechercher&apos;</emphasis>,
+<anchor xml:id="_create_ticket_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_create_ticket_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;})
+<anchor xml:id="_create_ticket_8php_source_1l00028"/>00028 &lt;/script&gt;
+<anchor xml:id="_create_ticket_8php_source_1l00029"/>00029 
+</programlisting></section>

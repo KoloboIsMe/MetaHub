@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['createcategory_0',['createcategory',['../classdatabase_1_1_category_access.html#a1bb8598d8a3012942717956f06a2cb05',1,'database\CategoryAccess\createCategory()'],['../classservices_1_1_categories_service.html#ac25c1b89fbfe361441dd0f99f5cb1efc',1,'services\CategoriesService\createCategory()'],['../interfaceservices_1_1_category_interface.html#a1bb8598d8a3012942717956f06a2cb05',1,'services\CategoryInterface\createCategory()']]],
+  ['createcomment_1',['createcomment',['../classdatabase_1_1_comment_access.html#aa4f3a67631b77070bc5c65d583f34538',1,'database\CommentAccess\createComment()'],['../interfaceservices_1_1_comment_interface.html#aa4f3a67631b77070bc5c65d583f34538',1,'services\CommentInterface\createComment()'],['../classservices_1_1_comments_service.html#a156088c4cc0ebd0284eb9a7e16c9f73c',1,'services\CommentsService\createComment()']]],
+  ['createticket_2',['createticket',['../classdatabase_1_1_ticket_access.html#afa6e5469befba46eb1dfaf007b8713c6',1,'database\TicketAccess\createTicket()'],['../interfaceservices_1_1_ticket_interface.html#afa6e5469befba46eb1dfaf007b8713c6',1,'services\TicketInterface\createTicket()'],['../classservices_1_1_tickets_service.html#abdad754661c93e50303a189f73e87556',1,'services\TicketsService\createTicket()']]],
+  ['createticketaction_3',['createTicketAction',['../classcontrols_1_1_controller.html#a1b41886b22d4040d3be02c21a3df5aad',1,'controls::Controller']]]
+];

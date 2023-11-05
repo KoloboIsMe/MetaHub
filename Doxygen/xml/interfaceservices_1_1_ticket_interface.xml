@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interfaceservices_1_1_ticket_interface" kind="interface" language="PHP" prot="public">
+    <compoundname>services::TicketInterface</compoundname>
+    <derivedcompoundref refid="classdatabase_1_1_ticket_access" prot="public" virt="non-virtual">TicketAccess</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsTicket</definition>
+        <argsstring>($ticketID)</argsstring>
+        <name>existsTicket</name>
+        <qualifiedname>services\TicketInterface\existsTicket</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1a6cd98da4d72e5877202bedac9f7f7708">existsTicket</reimplementedby>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="7" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTicketsID</definition>
+        <argsstring>()</argsstring>
+        <name>getTicketsID</name>
+        <qualifiedname>services\TicketInterface\getTicketsID</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1add5e7fd54d1f1308db1e8a3e873b785b">getTicketsID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="9" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get5LastTicketsID</definition>
+        <argsstring>()</argsstring>
+        <name>get5LastTicketsID</name>
+        <qualifiedname>services\TicketInterface\get5LastTicketsID</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1acc435610e7829e4a55eef8e0d7a06cb3">get5LastTicketsID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="11" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createTicket</definition>
+        <argsstring>($title, $message, $date, $author)</argsstring>
+        <name>createTicket</name>
+        <qualifiedname>services\TicketInterface\createTicket</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1afa6e5469befba46eb1dfaf007b8713c6">createTicket</reimplementedby>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <param>
+          <declname>$author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="13" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editTicket</definition>
+        <argsstring>($id, $title, $message)</argsstring>
+        <name>editTicket</name>
+        <qualifiedname>services\TicketInterface\editTicket</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1a15b7252a597d9b252639064378bafa5a">editTicket</reimplementedby>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="15" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isTicketOwner</definition>
+        <argsstring>($ticketID, $userID)</argsstring>
+        <name>isTicketOwner</name>
+        <qualifiedname>services\TicketInterface\isTicketOwner</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_ticket_access_1afb3753ff19a1ec4d934cc30508bd562c">isTicketOwner</reimplementedby>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <param>
+          <declname>$userID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketInterface.php" line="17" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TicketInterface</label>
+        <link refid="interfaceservices_1_1_ticket_interface"/>
+      </node>
+      <node id="2">
+        <label>TicketAccess</label>
+        <link refid="classdatabase_1_1_ticket_access"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="services/TicketInterface.php" line="5" column="11" bodyfile="services/TicketInterface.php" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>createTicket</name></member>
+      <member refid="interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>editTicket</name></member>
+      <member refid="interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>existsTicket</name></member>
+      <member refid="interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>get5LastTicketsID</name></member>
+      <member refid="interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>getTicketsID</name></member>
+      <member refid="interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c" prot="public" virt="non-virtual"><scope>services::TicketInterface</scope><name>isTicketOwner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

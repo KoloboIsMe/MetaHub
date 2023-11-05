@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_bcbb2cf9a3d3d83e5515c82071a07177" xml:lang="en-US">
+<title>Framework Directory Reference</title>
+<indexterm><primary>Framework Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_054245cdb03fb725488dd4f11b99c73e">database</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b11b9a48dd2a17694fe5d9bcb5448cd8">entities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

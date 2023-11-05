@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_controls_2page_presenters_2user_8php" xml:lang="en-US">
+<title>controls/pagePresenters/user.php File Reference</title>
+<indexterm><primary>controls/pagePresenters/user.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_controls_2page_presenters_2user_8php_1ae97941710d863131c700f069b109991e">$id</link> = $user-&gt;getUser_ID()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_controls_2page_presenters_2user_8php_1ae97941710d863131c700f069b109991e"/><section>
+    <title>$id</title>
+<indexterm><primary>$id</primary><secondary>user.php</secondary></indexterm>
+<indexterm><primary>user.php</primary><secondary>$id</secondary></indexterm>
+<para><computeroutput>$id = $user-&gt;getUser_ID()</computeroutput></para><para>
+Definition at line <link linkend="_controls_2page_presenters_2user_8php_source_1l00002">2</link> of file <link linkend="_controls_2page_presenters_2user_8php_source">user.php</link>.</para>
+</section>
+</section>
+</section>

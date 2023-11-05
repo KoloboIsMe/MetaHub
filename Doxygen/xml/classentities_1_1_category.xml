@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classentities_1_1_category" kind="class" language="PHP" prot="public">
+    <compoundname>entities::Category</compoundname>
+    <basecompoundref refid="classentities_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classentities_1_1_category_1a1d33810224b2068ad812035da02c886a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$category_ID</definition>
+        <argsstring></argsstring>
+        <name>$category_ID</name>
+        <qualifiedname>entities\Category\$category_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="12" column="13" bodyfile="Framework/entities/Category.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_category_1a177af2bf70bede02de3d05a425fb8e43" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$label</definition>
+        <argsstring></argsstring>
+        <name>$label</name>
+        <qualifiedname>entities\Category\$label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="16" column="13" bodyfile="Framework/entities/Category.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_category_1a87b032cba06009e3467abf1c8018d960" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$description</definition>
+        <argsstring></argsstring>
+        <name>$description</name>
+        <qualifiedname>entities\Category\$description</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="20" column="13" bodyfile="Framework/entities/Category.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classentities_1_1_category_1a0644020fa300a8da0761599388367209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategory_ID</definition>
+        <argsstring>()</argsstring>
+        <name>getCategory_ID</name>
+        <qualifiedname>entities\Category\getCategory_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="25" column="21" bodyfile="Framework/entities/Category.php" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_category_1a61fc4887a2a3ef147760942b78bad4cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setCategory_ID</definition>
+        <argsstring>($category_ID)</argsstring>
+        <name>setCategory_ID</name>
+        <qualifiedname>entities\Category\setCategory_ID</qualifiedname>
+        <param>
+          <declname>$category_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$category_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="34" column="21" bodyfile="Framework/entities/Category.php" bodystart="34" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_category_1a14c4e7420d903d3e40342266333d2ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getLabel</definition>
+        <argsstring>()</argsstring>
+        <name>getLabel</name>
+        <qualifiedname>entities\Category\getLabel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="45" column="21" bodyfile="Framework/entities/Category.php" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_category_1aff9dc1c7a22e2b4168647651480e586a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setLabel</definition>
+        <argsstring>($label)</argsstring>
+        <name>setLabel</name>
+        <qualifiedname>entities\Category\setLabel</qualifiedname>
+        <param>
+          <declname>$label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="54" column="21" bodyfile="Framework/entities/Category.php" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_category_1a2e7bb35c71bf1824456ceb944cb7a845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <qualifiedname>entities\Category\getDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="64" column="21" bodyfile="Framework/entities/Category.php" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_category_1a31fad3e39336ea079ea758e051866627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDescription</definition>
+        <argsstring>($description)</argsstring>
+        <name>setDescription</name>
+        <qualifiedname>entities\Category\setDescription</qualifiedname>
+        <param>
+          <declname>$description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Category.php" line="73" column="21" bodyfile="Framework/entities/Category.php" bodystart="73" bodyend="78"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Category</label>
+        <link refid="classentities_1_1_category"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Category</label>
+        <link refid="classentities_1_1_category"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/entities/Category.php" line="7" column="1" bodyfile="Framework/entities/Category.php" bodystart="8" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classentities_1_1_category_1a1d33810224b2068ad812035da02c886a" prot="private" virt="non-virtual"><scope>entities::Category</scope><name>$category_ID</name></member>
+      <member refid="classentities_1_1_category_1a87b032cba06009e3467abf1c8018d960" prot="private" virt="non-virtual"><scope>entities::Category</scope><name>$description</name></member>
+      <member refid="classentities_1_1_category_1a177af2bf70bede02de3d05a425fb8e43" prot="private" virt="non-virtual"><scope>entities::Category</scope><name>$label</name></member>
+      <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>__construct</name></member>
+      <member refid="classentities_1_1_category_1a0644020fa300a8da0761599388367209" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>getCategory_ID</name></member>
+      <member refid="classentities_1_1_category_1a2e7bb35c71bf1824456ceb944cb7a845" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>getDescription</name></member>
+      <member refid="classentities_1_1_category_1a14c4e7420d903d3e40342266333d2ecf" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>getLabel</name></member>
+      <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>hydrate</name></member>
+      <member refid="classentities_1_1_category_1a61fc4887a2a3ef147760942b78bad4cd" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>setCategory_ID</name></member>
+      <member refid="classentities_1_1_category_1a31fad3e39336ea079ea758e051866627" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>setDescription</name></member>
+      <member refid="classentities_1_1_category_1aff9dc1c7a22e2b4168647651480e586a" prot="public" virt="non-virtual"><scope>entities::Category</scope><name>setLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

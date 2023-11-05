@@ -1,0 +1,261 @@
+.TH "GeneralAccess" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GeneralAccess
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($dataAccess)"
+.br
+.ti -1c
+.RI "\fBdeleteTicket\fP ($ticketID)"
+.br
+.ti -1c
+.RI "\fBdeleteTicketComments\fP ($ticketID)"
+.br
+.ti -1c
+.RI "\fBdeleteTicketCategorized\fP ($ticketID)"
+.br
+.ti -1c
+.RI "\fBdeleteUser\fP ($id)"
+.br
+.ti -1c
+.RI "\fBdeleteCategory\fP ($id)"
+.br
+.ti -1c
+.RI "\fBdeleteCategoryCategorized\fP ($category_ID)"
+.br
+.ti -1c
+.RI "\fBgetTicketsIdByUserId\fP ($userId)"
+.br
+.ti -1c
+.RI "\fBgetCommentsIdByUserId\fP ($userId)"
+.br
+.ti -1c
+.RI "\fBgetPostsIdByCategoryId\fP ($id)"
+.br
+.ti -1c
+.RI "\fBaddCategoryToTicket\fP ($category, $ticketID)"
+.br
+.ti -1c
+.RI "\fBgetPostById\fP ($ticketId)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$dataAccess\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB13\fP of file \fBGeneralAccess\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $dataAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$dataAccess\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBGeneralAccess\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "addCategoryToTicket ( $category,  $ticketID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$category\fP 
+.br
+\fI$ticketID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB178\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteCategory ( $id)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB91\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteCategoryCategorized ( $category_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$category_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB106\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteTicket ( $ticketID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB33\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteTicketCategorized ( $ticketID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB63\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteTicketComments ( $ticketID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB49\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "deleteUser ( $id)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB77\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "getCommentsIdByUserId ( $userId)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$userId\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Definition at line \fB139\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "getPostById ( $ticketId)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketId\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Post 
+.RE
+.PP
+
+.PP
+Definition at line \fB195\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "getPostsIdByCategoryId ( $id)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Definition at line \fB158\fP of file \fBGeneralAccess\&.php\fP\&.
+.SS "getTicketsIdByUserId ( $userId)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$userId\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Definition at line \fB120\fP of file \fBGeneralAccess\&.php\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "$dataAccess = null\fC [protected]\fP"
+
+.PP
+Definition at line \fB18\fP of file \fBGeneralAccess\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

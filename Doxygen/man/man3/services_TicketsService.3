@@ -1,0 +1,100 @@
+.TH "TicketsService" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TicketsService
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($outputData)"
+.br
+.ti -1c
+.RI "\fBgetPosts\fP ($userAccess, $generalAccess)"
+.br
+.ti -1c
+.RI "\fBget5LastPosts\fP ($userAccess, $generalAccess)"
+.br
+.ti -1c
+.RI "\fBgetCategoryPosts\fP ($generalAccess, $postsId)"
+.br
+.ti -1c
+.RI "\fBcreateTicket\fP ($userAccess, $title, $message)"
+.br
+.ti -1c
+.RI "\fBdeleteTicket\fP ($userAccess)"
+.br
+.ti -1c
+.RI "\fBeditTicket\fP ($userAccess, $id, $title, $message)"
+.br
+.ti -1c
+.RI "\fBgetPostsIdByUserId\fP ($userAccess, $id)"
+.br
+.ti -1c
+.RI "\fBgetUserPosts\fP ($generalAccess, $postsId)"
+.br
+.ti -1c
+.RI "\fBisTicketOwner\fP ($userAccess, $ticketID, $user_ID)"
+.br
+.ti -1c
+.RI "\fBexistsTicket\fP ($userAccess, $ticketID)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB5\fP of file \fBTicketsService\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $outputData)"
+
+.PP
+Definition at line \fB10\fP of file \fBTicketsService\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "createTicket ( $userAccess,  $title,  $message)"
+
+.PP
+Definition at line \fB43\fP of file \fBTicketsService\&.php\fP\&.
+.SS "deleteTicket ( $userAccess)"
+
+.PP
+Definition at line \fB48\fP of file \fBTicketsService\&.php\fP\&.
+.SS "editTicket ( $userAccess,  $id,  $title,  $message)"
+
+.PP
+Definition at line \fB53\fP of file \fBTicketsService\&.php\fP\&.
+.SS "existsTicket ( $userAccess,  $ticketID)"
+
+.PP
+Definition at line \fB79\fP of file \fBTicketsService\&.php\fP\&.
+.SS "get5LastPosts ( $userAccess,  $generalAccess)"
+
+.PP
+Definition at line \fB25\fP of file \fBTicketsService\&.php\fP\&.
+.SS "getCategoryPosts ( $generalAccess,  $postsId)"
+
+.PP
+Definition at line \fB34\fP of file \fBTicketsService\&.php\fP\&.
+.SS "getPosts ( $userAccess,  $generalAccess)"
+
+.PP
+Definition at line \fB15\fP of file \fBTicketsService\&.php\fP\&.
+.SS "getPostsIdByUserId ( $userAccess,  $id)"
+
+.PP
+Definition at line \fB58\fP of file \fBTicketsService\&.php\fP\&.
+.SS "getUserPosts ( $generalAccess,  $postsId)"
+
+.PP
+Definition at line \fB63\fP of file \fBTicketsService\&.php\fP\&.
+.SS "isTicketOwner ( $userAccess,  $ticketID,  $user_ID)"
+
+.PP
+Definition at line \fB72\fP of file \fBTicketsService\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

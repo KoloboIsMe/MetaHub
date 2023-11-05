@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index_8php" xml:lang="en-US">
+<title>index.php File Reference</title>
+<indexterm><primary>index.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_index_8php_1ae89b553ac3d911ecce81da9747041908">$dbAdmin</link> = null</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a16060ba0bdb764c062eeddb5d0659ea1">$dbLector</link> = null</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1abe4cc9788f52e49485473dc699537388">try</link></para>
+</listitem>
+            <listitem><para>catch(PDOException $e) <link linkend="_index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8">$categoryAccessLector</link> = new <link linkend="_classdatabase_1_1_category_access">database\CategoryAccess</link>($dbLector)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a89d3445ad41f70c219793449020d3528">$commentAccessLector</link> = new <link linkend="_classdatabase_1_1_comment_access">database\CommentAccess</link>($dbLector)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a508377953039f7856fd76824e260afba">$ticketAccessLector</link> = new <link linkend="_classdatabase_1_1_ticket_access">database\TicketAccess</link>($dbLector)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a9340012d6fce07833a6fa708779dfb16">$userAccessLector</link> = new <link linkend="_classdatabase_1_1_user_access">database\UserAccess</link>($dbLector)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a941e0f644134fed3621753aa7e4ac183">$generalAccessLector</link> = new <link linkend="_classdatabase_1_1_general_access">database\GeneralAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1af842fa94d65f3b425d48c6e75b16fc38">$ticketAccess</link> = new <link linkend="_classdatabase_1_1_ticket_access">database\TicketAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1af285d590bb1af4a67a90b92eb2f99c34">$userAccess</link> = new <link linkend="_classdatabase_1_1_user_access">database\UserAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2">$commentAccess</link> = new <link linkend="_classdatabase_1_1_comment_access">database\CommentAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a06af02ba84341ec1e24e2863d4ed0749">$categoryAccess</link> = new <link linkend="_classdatabase_1_1_category_access">database\CategoryAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a9a046cb32f699738d388b443e80758f5">$generalAccess</link> = new <link linkend="_classdatabase_1_1_general_access">database\GeneralAccess</link>($dbAdmin)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2">$outputData</link> = new <link linkend="_classservices_1_1_output_data">services\OutputData</link>()</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a388ef7b1db5e6f728e63cee704ce6e23">$controller</link> = new <link linkend="_classcontrols_1_1_controller">controls\Controller</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d">$presenter</link> = new <link linkend="_classcontrols_1_1_presenter">controls\Presenter</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1aaa6c921e73418e6b3aeef431100171ea">$categoriesService</link> = new <link linkend="_classservices_1_1_categories_service">services\CategoriesService</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a810230690da10168aaae0d2a5349c124">$ticketsService</link> = new <link linkend="_classservices_1_1_tickets_service">services\TicketsService</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3">$commentsService</link> = new <link linkend="_classservices_1_1_comments_service">services\CommentsService</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1a34e2b7d736d0937b68d80caf80b271c1">$usersService</link> = new <link linkend="_classservices_1_1_users_service">services\UsersService</link>($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_index_8php_1acf215f34a917d014776ce684a9ee8909">$url</link> = $_GET[&apos;url&apos;] ?? &apos;&apos;</para>
+</listitem>
+            <listitem><para>if(isset($_SESSION[&apos;isLogged&apos;]) &amp;&amp; $_SESSION[&apos;isLogged&apos;]) <link linkend="_index_8php_1a06dc4a8eef6f21bee6ea9a1f7a778241">else</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_index_8php_1aaa6c921e73418e6b3aeef431100171ea"/><section>
+    <title>$categoriesService</title>
+<indexterm><primary>$categoriesService</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$categoriesService</secondary></indexterm>
+<para><computeroutput>$categoriesService = new <link linkend="_classservices_1_1_categories_service">services\CategoriesService</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00074">74</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a06af02ba84341ec1e24e2863d4ed0749"/><section>
+    <title>$categoryAccess</title>
+<indexterm><primary>$categoryAccess</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$categoryAccess</secondary></indexterm>
+<para><computeroutput>$categoryAccess = new <link linkend="_classdatabase_1_1_category_access">database\CategoryAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00061">61</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8"/><section>
+    <title>$categoryAccessLector</title>
+<indexterm><primary>$categoryAccessLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$categoryAccessLector</secondary></indexterm>
+<para><computeroutput>catch (PDOException $e) $categoryAccessLector = new <link linkend="_classdatabase_1_1_category_access">database\CategoryAccess</link>($dbLector)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00052">52</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a681149110179ebaba9c2e54cdd2b83a2"/><section>
+    <title>$commentAccess</title>
+<indexterm><primary>$commentAccess</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$commentAccess</secondary></indexterm>
+<para><computeroutput>$commentAccess = new <link linkend="_classdatabase_1_1_comment_access">database\CommentAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00060">60</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a89d3445ad41f70c219793449020d3528"/><section>
+    <title>$commentAccessLector</title>
+<indexterm><primary>$commentAccessLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$commentAccessLector</secondary></indexterm>
+<para><computeroutput>$commentAccessLector = new <link linkend="_classdatabase_1_1_comment_access">database\CommentAccess</link>($dbLector)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00053">53</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3"/><section>
+    <title>$commentsService</title>
+<indexterm><primary>$commentsService</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$commentsService</secondary></indexterm>
+<para><computeroutput>$commentsService = new <link linkend="_classservices_1_1_comments_service">services\CommentsService</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00076">76</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a388ef7b1db5e6f728e63cee704ce6e23"/><section>
+    <title>$controller</title>
+<indexterm><primary>$controller</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$controller</secondary></indexterm>
+<para><computeroutput>$controller = new <link linkend="_classcontrols_1_1_controller">controls\Controller</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00068">68</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1ae89b553ac3d911ecce81da9747041908"/><section>
+    <title>$dbAdmin</title>
+<indexterm><primary>$dbAdmin</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$dbAdmin</secondary></indexterm>
+<para><computeroutput>$dbAdmin = null</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00039">39</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a16060ba0bdb764c062eeddb5d0659ea1"/><section>
+    <title>$dbLector</title>
+<indexterm><primary>$dbLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$dbLector</secondary></indexterm>
+<para><computeroutput>$dbLector = null</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00040">40</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a9a046cb32f699738d388b443e80758f5"/><section>
+    <title>$generalAccess</title>
+<indexterm><primary>$generalAccess</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$generalAccess</secondary></indexterm>
+<para><computeroutput>$generalAccess = new <link linkend="_classdatabase_1_1_general_access">database\GeneralAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00062">62</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a941e0f644134fed3621753aa7e4ac183"/><section>
+    <title>$generalAccessLector</title>
+<indexterm><primary>$generalAccessLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$generalAccessLector</secondary></indexterm>
+<para><computeroutput>$generalAccessLector = new <link linkend="_classdatabase_1_1_general_access">database\GeneralAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00056">56</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2"/><section>
+    <title>$outputData</title>
+<indexterm><primary>$outputData</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$outputData</secondary></indexterm>
+<para><computeroutput>$outputData = new <link linkend="_classservices_1_1_output_data">services\OutputData</link>()</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00065">65</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d"/><section>
+    <title>$presenter</title>
+<indexterm><primary>$presenter</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$presenter</secondary></indexterm>
+<para><computeroutput>$presenter = new <link linkend="_classcontrols_1_1_presenter">controls\Presenter</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00071">71</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1af842fa94d65f3b425d48c6e75b16fc38"/><section>
+    <title>$ticketAccess</title>
+<indexterm><primary>$ticketAccess</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$ticketAccess</secondary></indexterm>
+<para><computeroutput>$ticketAccess = new <link linkend="_classdatabase_1_1_ticket_access">database\TicketAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00058">58</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a508377953039f7856fd76824e260afba"/><section>
+    <title>$ticketAccessLector</title>
+<indexterm><primary>$ticketAccessLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$ticketAccessLector</secondary></indexterm>
+<para><computeroutput>$ticketAccessLector = new <link linkend="_classdatabase_1_1_ticket_access">database\TicketAccess</link>($dbLector)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00054">54</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a810230690da10168aaae0d2a5349c124"/><section>
+    <title>$ticketsService</title>
+<indexterm><primary>$ticketsService</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$ticketsService</secondary></indexterm>
+<para><computeroutput>$ticketsService = new <link linkend="_classservices_1_1_tickets_service">services\TicketsService</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00075">75</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1acf215f34a917d014776ce684a9ee8909"/><section>
+    <title>$url</title>
+<indexterm><primary>$url</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$url</secondary></indexterm>
+<para><computeroutput>$url = $_GET[&apos;url&apos;] ?? &apos;&apos;</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00080">80</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1af285d590bb1af4a67a90b92eb2f99c34"/><section>
+    <title>$userAccess</title>
+<indexterm><primary>$userAccess</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$userAccess</secondary></indexterm>
+<para><computeroutput>$userAccess = new <link linkend="_classdatabase_1_1_user_access">database\UserAccess</link>($dbAdmin)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00059">59</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a9340012d6fce07833a6fa708779dfb16"/><section>
+    <title>$userAccessLector</title>
+<indexterm><primary>$userAccessLector</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$userAccessLector</secondary></indexterm>
+<para><computeroutput>$userAccessLector = new <link linkend="_classdatabase_1_1_user_access">database\UserAccess</link>($dbLector)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00055">55</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a34e2b7d736d0937b68d80caf80b271c1"/><section>
+    <title>$usersService</title>
+<indexterm><primary>$usersService</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$usersService</secondary></indexterm>
+<para><computeroutput>$usersService = new <link linkend="_classservices_1_1_users_service">services\UsersService</link>($outputData)</computeroutput></para><para>
+Definition at line <link linkend="_index_8php_source_1l00077">77</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1a06dc4a8eef6f21bee6ea9a1f7a778241"/><section>
+    <title>else</title>
+<indexterm><primary>else</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>else</secondary></indexterm>
+<para><computeroutput>if(isset( $_GET[ &apos;action&apos;])) if(&apos;&apos;==$url||&apos;/&apos;==$url) elseif( &apos;login&apos;==$url) elseif(&apos;register&apos;==$url) elseif( &apos;logout&apos;==$url &amp;&amp;isset( $_SESSION[ &apos;isLogged&apos;])) elseif(&apos;posts&apos;==$url) elseif( &apos;createPosts&apos;==$url) elseif(&apos;categories&apos;==$url) elseif( &apos;editTicket&apos;==$url &amp;&amp;isset( $_GET[ &apos;id&apos;]) &amp;&amp;$ticketsService-&gt;existsTicket( $ticketAccessLector, $_GET[ &apos;id&apos;])) elseif(&apos;users&apos;==$url) elseif( &apos;userEdit&apos;==$url &amp;&amp;isset( $_SESSION[ &apos;user_ID&apos;])) elseif(&apos;createCategory&apos;==$url &amp;&amp;isset($_SESSION[&apos;level&apos;]) &amp;&amp; $_SESSION[&apos;level&apos;] &gt; 0) elseif ( &apos;error&apos;==$url) else</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;$layoutTemplate&#32;=&#32;<emphasis role="stringliteral">&apos;gui/layout.html&apos;</emphasis>
+</programlisting><para>
+Definition at line <link linkend="_index_8php_source_1l00091">91</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+<anchor xml:id="_index_8php_1abe4cc9788f52e49485473dc699537388"/><section>
+    <title>try</title>
+<indexterm><primary>try</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>try</secondary></indexterm>
+<para><computeroutput>try</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">{
+
+&#32;&#32;&#32;&#32;
+&#32;&#32;&#32;&#32;<link linkend="_index_8php_1ae89b553ac3d911ecce81da9747041908">$dbAdmin</link>&#32;=&#32;database\SPDO::getInstance(<emphasis role="stringliteral">&quot;ADMIN&quot;</emphasis>)
+</programlisting><para>
+Definition at line <link linkend="_index_8php_source_1l00041">41</link> of file <link linkend="_index_8php_source">index.php</link>.</para>
+</section>
+</section>
+</section>

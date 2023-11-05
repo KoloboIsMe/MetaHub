@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ticket_interface_8php_source" xml:lang="en-US">
+<title>TicketInterface.php</title>
+<indexterm><primary>services/TicketInterface.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__ticket_interface_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__ticket_interface_8php_source_1l00002"/>00002 
+<anchor xml:id="__ticket_interface_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceservices">services</link>;
+<anchor xml:id="__ticket_interface_8php_source_1l00004"/>00004 
+<anchor xml:id="__ticket_interface_8php_source_1l00005"/><link linkend="_interfaceservices_1_1_ticket_interface">00005</link> <emphasis role="keyword">interface&#32;</emphasis><link linkend="_interfaceservices_1_1_ticket_interface">TicketInterface</link>
+<anchor xml:id="__ticket_interface_8php_source_1l00006"/>00006 {
+<anchor xml:id="__ticket_interface_8php_source_1l00007"/><link linkend="_interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708">existsTicket</link>($ticketID);
+<anchor xml:id="__ticket_interface_8php_source_1l00008"/>00008 
+<anchor xml:id="__ticket_interface_8php_source_1l00009"/><link linkend="_interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b">getTicketsID</link>();
+<anchor xml:id="__ticket_interface_8php_source_1l00010"/>00010 
+<anchor xml:id="__ticket_interface_8php_source_1l00011"/><link linkend="_interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3">get5LastTicketsID</link>();
+<anchor xml:id="__ticket_interface_8php_source_1l00012"/>00012 
+<anchor xml:id="__ticket_interface_8php_source_1l00013"/><link linkend="_interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6">createTicket</link>(<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>,&#32;$message,&#32;$date,&#32;$author);
+<anchor xml:id="__ticket_interface_8php_source_1l00014"/>00014 
+<anchor xml:id="__ticket_interface_8php_source_1l00015"/><link linkend="_interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a">editTicket</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>,&#32;<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>,&#32;$message);
+<anchor xml:id="__ticket_interface_8php_source_1l00016"/>00016 
+<anchor xml:id="__ticket_interface_8php_source_1l00017"/><link linkend="_interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c">isTicketOwner</link>($ticketID,&#32;$userID);
+<anchor xml:id="__ticket_interface_8php_source_1l00018"/>00018 }
+</programlisting></section>

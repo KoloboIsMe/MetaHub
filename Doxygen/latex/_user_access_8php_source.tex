@@ -1,0 +1,182 @@
+\doxysection{User\+Access.\+php}
+\hypertarget{_user_access_8php_source}{}\label{_user_access_8php_source}\index{Framework/database/UserAccess.php@{Framework/database/UserAccess.php}}
+\mbox{\hyperlink{_user_access_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedatabase}{database}};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00005}00005\ use\ \mbox{\hyperlink{classentities_1_1_user}{entities\(\backslash\)User}};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00006}00006\ use\ PDO;}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00007}00007\ use\ PDOException;}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00008}00008\ use\ \mbox{\hyperlink{interfaceservices_1_1_user_interface}{services\(\backslash\)UserInterface}};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00010}00010\ include\_once\ \textcolor{stringliteral}{"{}services/UserInterface.php"{}};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00012}\mbox{\hyperlink{classdatabase_1_1_user_access}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_1_1_user_access}{UserAccess}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceservices_1_1_user_interface}{UserInterface}}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00017}\mbox{\hyperlink{classdatabase_1_1_user_access_a7a827f5c09357312fde0811812bbbc35}{00017}}\ \ \ \ \ \textcolor{keyword}{protected}\ \$dataAccess\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00022}\mbox{\hyperlink{classdatabase_1_1_user_access_a9d903d171ff2319096ef345b4092535b}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a9d903d171ff2319096ef345b4092535b}{\_\_construct}}(\$dataAccess)}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \$this-\/>dataAccess\ =\ \$dataAccess;}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00031}\mbox{\hyperlink{classdatabase_1_1_user_access_a6c5cea1f559db58a20b28b661dd55e59}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a6c5cea1f559db58a20b28b661dd55e59}{existsUsername}}(\$username):\ bool}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ username\ FROM\ user\ where\ username\ =\ :username'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'username'}\ =>\ \$username]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isset(\$data[\textcolor{stringliteral}{'username'}]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00047}\mbox{\hyperlink{classdatabase_1_1_user_access_a672565dd28b98d1b945773eaa6a3220d}{00047}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a672565dd28b98d1b945773eaa6a3220d}{existsUser}}(\$user\_ID):\ bool}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00048}00048\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ user\ where\ user\_ID\ =\ :user\_ID'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'user\_ID'}\ =>\ \$user\_ID]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isset(\$data[\textcolor{stringliteral}{'user\_ID'}]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00064}\mbox{\hyperlink{classdatabase_1_1_user_access_ae04dcae58353aae72ac5321d23e0caef}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_ae04dcae58353aae72ac5321d23e0caef}{isUser}}(\$username,\ \$password):\ bool}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ password\ FROM\ user\ where\ username\ =\ :username\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}[\textcolor{stringliteral}{'password'}])\ \&\&\ password\_verify(\$password,\ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}[\textcolor{stringliteral}{'password'}]))}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00074}00074\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00083}\mbox{\hyperlink{classdatabase_1_1_user_access_a96e7ce264e97f88d979f129112585e88}{00083}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a96e7ce264e97f88d979f129112585e88}{getUserByUsername}}(\$username):\ \mbox{\hyperlink{classentities_1_1_user}{User}}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00084}00084\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ user\ where\ username\ =\ :username'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_user}{User}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00090}00090\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00099}\mbox{\hyperlink{classdatabase_1_1_user_access_a5e7d616b80a7b0fb4b8d2736800e29cc}{00099}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a5e7d616b80a7b0fb4b8d2736800e29cc}{getUserById}}(\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}):\ \mbox{\hyperlink{classentities_1_1_user}{User}}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00100}00100\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ user\ where\ user\_ID\ =\ :id'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':id'}\ =>\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_user}{User}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00106}00106\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00114}\mbox{\hyperlink{classdatabase_1_1_user_access_ae5b3902b6ff7fd4a25b93defe7b429de}{00114}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_ae5b3902b6ff7fd4a25b93defe7b429de}{getUsersID}}():\ array}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00115}00115\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \$ID\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ user\_ID\ FROM\ user\ ORDER\ BY\ user\_ID\ DESC\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ID[]\ =\ \$data[\textcolor{stringliteral}{'user\_ID'}];}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ID;}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00135}\mbox{\hyperlink{classdatabase_1_1_user_access_aa5ec7e39c68415aa45573679550fe6db}{00135}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \textcolor{keyword}{register}(\$username,\ \$password,\ \$date)}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00136}00136\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ username\ FROM\ user\ where\ username\ =\ :username\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':username'}\ =>\ \$username]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isset(\mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}[\textcolor{stringliteral}{'username'}]))}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{'nom\ d\(\backslash\)'utilisateur\ déjà\ utilisé'};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'INSERT\ INTO\ user\ (username,\ password,\ first\_connexion)\ VALUES\ (:username,\ :password,\ :date)'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':username'}\ =>\ \$username,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':password'}\ =>\ password\_hash(\$password,\ PASSWORD\_DEFAULT),}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':date'}\ =>\ \$date,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00153}00153\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00155}00155\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00156}00156\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00164}\mbox{\hyperlink{classdatabase_1_1_user_access_a26a6e29a53a16de24624ff7bfd6dfcf5}{00164}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a26a6e29a53a16de24624ff7bfd6dfcf5}{updateUser}}(\$username,\ \$password,\ \$user\_ID):\ void}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00165}00165\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'UPDATE\ user\ SET\ username\ =\ :username,\ password\ =\ :password\ WHERE\ user\_ID\ =\ :user\_ID'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':username'}\ =>\ \$username,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':password'}\ =>\ password\_hash(\$password,\ PASSWORD\_DEFAULT),}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':user\_ID'}\ =>\ \$user\_ID,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00173}00173\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00182}\mbox{\hyperlink{classdatabase_1_1_user_access_aee0d9d2973be34791162b25cd31a3353}{00182}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_aee0d9d2973be34791162b25cd31a3353}{updateLastConnexion}}(\$user\_ID):\ void}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00183}00183\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'UPDATE\ user\ SET\ last\_connexion\ =\ :date\ WHERE\ user\_ID\ =\ :user\_ID'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':date'}\ =>\ date(\textcolor{stringliteral}{"{}Y-\/m-\/d\ H:i"{}}),}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':user\_ID'}\ =>\ \$user\_ID,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00190}00190\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00198}\mbox{\hyperlink{classdatabase_1_1_user_access_a5fadbe8f1573fb5a1b4ca86f2d274725}{00198}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_a5fadbe8f1573fb5a1b4ca86f2d274725}{get10LastConnectedUsersID}}():\ array}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00199}00199\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00200}00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \$ID\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ user\_ID\ FROM\ user\ WHERE\ online\ =\ 1\ ORDER\ BY\ last\_connexion\ DESC\ LIMIT\ 8'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute();}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ID[]\ =\ \$data[\textcolor{stringliteral}{'user\_ID'}];}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ID;}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00208}00208\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00210}00210\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00211}00211\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00218}\mbox{\hyperlink{classdatabase_1_1_user_access_af4ce5960cbdf7a3917711dc31745d08b}{00218}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_user_access_af4ce5960cbdf7a3917711dc31745d08b}{setOnline}}(\$user\_ID,\ \$online):\ void}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00219}00219\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'UPDATE\ user\ SET\ online\ =\ :online\ WHERE\ user\_ID\ =\ :user\_ID'});}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':online'}\ =>\ \$online,}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':user\_ID'}\ =>\ \$user\_ID}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00229}00229\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_user_access_8php_source_l00230}00230\ \}}
+
+\end{DoxyCode}

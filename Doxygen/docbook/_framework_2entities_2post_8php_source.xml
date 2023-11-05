@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__framework_2entities_2post_8php_source" xml:lang="en-US">
+<title>Post.php</title>
+<indexterm><primary>Framework/entities/Post.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__framework_2entities_2post_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00002"/>00002 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceentities">entities</link>;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00004"/>00004 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00005"/><link linkend="_classentities_1_1_post">00005</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classentities_1_1_post">Post</link>
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00006"/>00006 {
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$ticket;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$categories;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$comments;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00023"/>00023 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00030"/><link linkend="_classentities_1_1_post_1a788d23abf4d52e0c1819f5cd33a7e87a">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_post_1a788d23abf4d52e0c1819f5cd33a7e87a">__construct</link>($ticket,&#32;$categories,&#32;$comments,&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>)
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;ticket&#32;=&#32;$ticket;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;categories&#32;=&#32;$categories;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;comments&#32;=&#32;$comments;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;user&#32;=&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00037"/>00037 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00041"/><link linkend="_classentities_1_1_post_1a42ddf34a72af750b7013fa309b67e46c">00041</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_post_1a42ddf34a72af750b7013fa309b67e46c">getTicket</link>()
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;ticket;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00045"/>00045 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00049"/><link linkend="_classentities_1_1_post_1a8729ba486702e7e12a3fff08965e1e7f">00049</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_post_1a8729ba486702e7e12a3fff08965e1e7f">getCategories</link>()
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;categories;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00053"/>00053 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00057"/><link linkend="_classentities_1_1_post_1af3034ead082330d2c046a69814009808">00057</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_post_1af3034ead082330d2c046a69814009808">getComments</link>()
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;comments;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00060"/>00060 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00061"/>00061 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00065"/><link linkend="_classentities_1_1_post_1ae81b7186fb97a7c6457edcc68c9aa2ef">00065</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_post_1ae81b7186fb97a7c6457edcc68c9aa2ef">getUser</link>()
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$this-&gt;user</link>;
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00069"/>00069 
+<anchor xml:id="__framework_2entities_2post_8php_source_1l00070"/>00070 }
+</programlisting></section>

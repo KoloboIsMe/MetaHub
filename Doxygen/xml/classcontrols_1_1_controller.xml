@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcontrols_1_1_controller" kind="class" language="PHP" prot="public">
+    <compoundname>controls::Controller</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcontrols_1_1_controller_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>controls\Controller\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="9" column="13" bodyfile="controls/Controller.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>controls\Controller\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="11" column="21" bodyfile="controls/Controller.php" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a9d6b79aab4c9047a2eaf4c4c22f4d5c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>authenticateAction</definition>
+        <argsstring>($usersService, $userAccess)</argsstring>
+        <name>authenticateAction</name>
+        <qualifiedname>controls\Controller\authenticateAction</qualifiedname>
+        <param>
+          <declname>$usersService</declname>
+        </param>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$usersService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="21" column="21" bodyfile="controls/Controller.php" bodystart="21" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a1b41886b22d4040d3be02c21a3df5aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createTicketAction</definition>
+        <argsstring>($ticketsService, $ticketAccess, $categoryService, $categoriesAccess, $generalAccess)</argsstring>
+        <name>createTicketAction</name>
+        <qualifiedname>controls\Controller\createTicketAction</qualifiedname>
+        <param>
+          <declname>$ticketsService</declname>
+        </param>
+        <param>
+          <declname>$ticketAccess</declname>
+        </param>
+        <param>
+          <declname>$categoryService</declname>
+        </param>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticketsService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ticketAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$categoryService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$categoriesAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$generalAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="45" column="21" bodyfile="controls/Controller.php" bodystart="45" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1ac3c7bcfacc0cb257666225e55268e202" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>registerAction</definition>
+        <argsstring>($usersService, $userAccess)</argsstring>
+        <name>registerAction</name>
+        <qualifiedname>controls\Controller\registerAction</qualifiedname>
+        <param>
+          <declname>$usersService</declname>
+        </param>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$usersService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed|string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="60" column="21" bodyfile="controls/Controller.php" bodystart="60" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1ab6f6a0b0d21279db7bdc321302b64167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateUserAction</definition>
+        <argsstring>($usersService, $userAccess)</argsstring>
+        <name>updateUserAction</name>
+        <qualifiedname>controls\Controller\updateUserAction</qualifiedname>
+        <param>
+          <declname>$usersService</declname>
+        </param>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$usersService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>mixed|string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="73" column="21" bodyfile="controls/Controller.php" bodystart="73" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1ae9374d8aba7101f4309c10b06ba9b37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteUser</definition>
+        <argsstring>($usersService, $userAccess, $generalAccess, $userid)</argsstring>
+        <name>deleteUser</name>
+        <qualifiedname>controls\Controller\deleteUser</qualifiedname>
+        <param>
+          <declname>$usersService</declname>
+        </param>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <param>
+          <declname>$userid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$usersService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$generalAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$userid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="91" column="21" bodyfile="controls/Controller.php" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a9ac7d3f9fb8bf2396aa7d90d2a216c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteTicket</definition>
+        <argsstring>($ticketsService, $ticketAccess, $generalAccess, $ticketid)</argsstring>
+        <name>deleteTicket</name>
+        <qualifiedname>controls\Controller\deleteTicket</qualifiedname>
+        <param>
+          <declname>$ticketsService</declname>
+        </param>
+        <param>
+          <declname>$ticketAccess</declname>
+        </param>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <param>
+          <declname>$ticketid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticketsService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ticketAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$generalAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ticketid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="113" column="21" bodyfile="controls/Controller.php" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a7d89801573ffc7d2189976c4b0c7408c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteComment</definition>
+        <argsstring>($commentsService, $commentAccess, $commentid)</argsstring>
+        <name>deleteComment</name>
+        <qualifiedname>controls\Controller\deleteComment</qualifiedname>
+        <param>
+          <declname>$commentsService</declname>
+        </param>
+        <param>
+          <declname>$commentAccess</declname>
+        </param>
+        <param>
+          <declname>$commentid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$commentsService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$commentAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$commentid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="128" column="21" bodyfile="controls/Controller.php" bodystart="128" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a6ce9813a28f273c4f1dc25a068f49ec4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteCategory</definition>
+        <argsstring>($generalAccess, $categoryid)</argsstring>
+        <name>deleteCategory</name>
+        <qualifiedname>controls\Controller\deleteCategory</qualifiedname>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <param>
+          <declname>$categoryid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$generalAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$categoryid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="142" column="21" bodyfile="controls/Controller.php" bodystart="142" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a20bcb95ff3e4faf5a5cd49c6d9a1ef6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editTicket</definition>
+        <argsstring>($ticketsService, $ticketAccess)</argsstring>
+        <name>editTicket</name>
+        <qualifiedname>controls\Controller\editTicket</qualifiedname>
+        <param>
+          <declname>$ticketsService</declname>
+        </param>
+        <param>
+          <declname>$ticketAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticketsService</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$ticketAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="156" column="21" bodyfile="controls/Controller.php" bodystart="156" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_controller_1a3b3d42665005347476bd82dd3f075e0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPostById</definition>
+        <argsstring>($id, $generalAccessLector)</argsstring>
+        <name>getPostById</name>
+        <qualifiedname>controls\Controller\getPostById</qualifiedname>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$generalAccessLector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$generalAccessLector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Controller.php" line="170" column="21" bodyfile="controls/Controller.php" bodystart="170" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="controls/Controller.php" line="7" column="1" bodyfile="controls/Controller.php" bodystart="8" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classcontrols_1_1_controller_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>controls::Controller</scope><name>$outputData</name></member>
+      <member refid="classcontrols_1_1_controller_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>__construct</name></member>
+      <member refid="classcontrols_1_1_controller_1a9d6b79aab4c9047a2eaf4c4c22f4d5c2" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>authenticateAction</name></member>
+      <member refid="classcontrols_1_1_controller_1a1b41886b22d4040d3be02c21a3df5aad" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>createTicketAction</name></member>
+      <member refid="classcontrols_1_1_controller_1a6ce9813a28f273c4f1dc25a068f49ec4" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>deleteCategory</name></member>
+      <member refid="classcontrols_1_1_controller_1a7d89801573ffc7d2189976c4b0c7408c" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>deleteComment</name></member>
+      <member refid="classcontrols_1_1_controller_1a9ac7d3f9fb8bf2396aa7d90d2a216c5d" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>deleteTicket</name></member>
+      <member refid="classcontrols_1_1_controller_1ae9374d8aba7101f4309c10b06ba9b37f" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>deleteUser</name></member>
+      <member refid="classcontrols_1_1_controller_1a20bcb95ff3e4faf5a5cd49c6d9a1ef6f" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>editTicket</name></member>
+      <member refid="classcontrols_1_1_controller_1a3b3d42665005347476bd82dd3f075e0c" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>getPostById</name></member>
+      <member refid="classcontrols_1_1_controller_1ac3c7bcfacc0cb257666225e55268e202" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>registerAction</name></member>
+      <member refid="classcontrols_1_1_controller_1ab6f6a0b0d21279db7bdc321302b64167" prot="public" virt="non-virtual"><scope>controls::Controller</scope><name>updateUserAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

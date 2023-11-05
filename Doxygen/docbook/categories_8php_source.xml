@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_categories_8php_source" xml:lang="en-US">
+<title>categories.php</title>
+<indexterm><primary>controls/pagePresenters/categories.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_categories_8php_source_1l00001"/>00001 &lt;link&#32;href=<emphasis role="stringliteral">&quot;gui/css/categories.css&quot;</emphasis>&#32;rel=<emphasis role="stringliteral">&quot;stylesheet&quot;</emphasis>&#32;type=<emphasis role="stringliteral">&quot;text/css&quot;</emphasis>/&gt;
+<anchor xml:id="_categories_8php_source_1l00002"/>00002 &lt;h2&gt;Catégories&lt;/h2&gt;
+<anchor xml:id="_categories_8php_source_1l00003"/>00003 &lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset($_SESSION[<emphasis role="stringliteral">&apos;level&apos;</emphasis>])&#32;&amp;&amp;&#32;$_SESSION[<emphasis role="stringliteral">&apos;level&apos;</emphasis>]&#32;&gt;&#32;0)&#32;{?&gt;
+<anchor xml:id="_categories_8php_source_1l00004"/>00004 &#32;&#32;&#32;&#32;&lt;a&#32;href=<emphasis role="stringliteral">&apos;createCategory&apos;</emphasis>&gt;&lt;button&#32;&gt;&lt;img&#32;alt=<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;src=<emphasis role="stringliteral">&apos;gui/images/add.png&apos;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;add-button&apos;</emphasis>&gt;&lt;/button&gt;&lt;/a&gt;
+<anchor xml:id="_categories_8php_source_1l00005"/>00005 &lt;?php&#32;}?&gt;
+<anchor xml:id="_categories_8php_source_1l00006"/>00006 &lt;div&#32;<emphasis role="keyword">class</emphasis>=<emphasis role="stringliteral">&apos;card-container&apos;</emphasis>&gt;
+<anchor xml:id="_categories_8php_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&lt;?php&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;($data&#32;as&#32;$category)&#32;{
+<anchor xml:id="_categories_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>&#32;=&#32;$category-&gt;getCategory_ID();&#32;?&gt;
+<anchor xml:id="_categories_8php_source_1l00009"/>00009 &#32;&#32;&#32;&#32;&lt;div&#32;<emphasis role="keyword">class</emphasis>=<emphasis role="stringliteral">&apos;category-card&apos;</emphasis>&gt;
+<anchor xml:id="_categories_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;a&#32;href=<emphasis role="stringliteral">&apos;categories&amp;id=&lt;?=$id?&gt;&apos;</emphasis>&gt;
+<anchor xml:id="_categories_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;div&#32;<emphasis role="keyword">class</emphasis>=<emphasis role="stringliteral">&apos;card-content&apos;</emphasis>&gt;
+<anchor xml:id="_categories_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;h3&gt;&#32;#&lt;?=&#32;$category-&gt;getLabel()&#32;?&gt;&lt;/h3&gt;
+<anchor xml:id="_categories_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;p&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&quot;category-description&quot;</emphasis>&gt;&lt;?=&#32;$category-&gt;getDescription()&#32;?&gt;&lt;/p&gt;
+<anchor xml:id="_categories_8php_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;div&#32;<emphasis role="keyword">class</emphasis>=<emphasis role="stringliteral">&quot;edit-delete&quot;</emphasis>&gt;
+<anchor xml:id="_categories_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;?php&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset($_SESSION[<emphasis role="stringliteral">&apos;level&apos;</emphasis>])&#32;&amp;&amp;&#32;$_SESSION[<emphasis role="stringliteral">&apos;level&apos;</emphasis>]&#32;&gt;&#32;0)&#32;{?&gt;
+<anchor xml:id="_categories_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;a&#32;href=<emphasis role="stringliteral">&apos;?action=deleteCategoryAction&amp;id=&lt;?=$id?&gt;&apos;</emphasis>&gt;&lt;button&#32;&gt;&lt;img&#32;alt=<emphasis role="stringliteral">&quot;&quot;</emphasis>&#32;src=<emphasis role="stringliteral">&apos;gui/images/delete.png&apos;</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;deleteImg&apos;</emphasis>&gt;&lt;/button&gt;&lt;/a&gt;
+<anchor xml:id="_categories_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;?php&#32;}?&gt;
+<anchor xml:id="_categories_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/div&gt;
+<anchor xml:id="_categories_8php_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/div&gt;
+<anchor xml:id="_categories_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;/a&gt;
+<anchor xml:id="_categories_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&lt;/div&gt;
+<anchor xml:id="_categories_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&lt;?php&#32;}?&gt;
+<anchor xml:id="_categories_8php_source_1l00023"/>00023 &lt;/div&gt;
+</programlisting></section>

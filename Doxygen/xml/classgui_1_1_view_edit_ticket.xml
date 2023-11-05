@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgui_1_1_view_edit_ticket" kind="class" language="PHP" prot="public">
+    <compoundname>gui::ViewEditTicket</compoundname>
+    <basecompoundref refid="classgui_1_1_view" prot="public" virt="non-virtual">View</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgui_1_1_view_edit_ticket_1aa5152a78c188bb446546f2ebeebabf1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($layout, $presenter)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>gui\ViewEditTicket\__construct</qualifiedname>
+        <param>
+          <declname>$layout</declname>
+        </param>
+        <param>
+          <declname>$presenter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/ViewEditTicket.php" line="7" column="21" bodyfile="gui/ViewEditTicket.php" bodystart="7" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ViewEditTicket</label>
+        <link refid="classgui_1_1_view_edit_ticket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>View</label>
+        <link refid="classgui_1_1_view"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ViewEditTicket</label>
+        <link refid="classgui_1_1_view_edit_ticket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>View</label>
+        <link refid="classgui_1_1_view"/>
+      </node>
+    </collaborationgraph>
+    <location file="gui/ViewEditTicket.php" line="5" column="1" bodyfile="gui/ViewEditTicket.php" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classgui_1_1_view_1a57b284fe00866494b33afa80ba729bed" prot="protected" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>$content</name></member>
+      <member refid="classgui_1_1_view_1a2b0d08e73a90b9443ce37506b7c6a544" prot="protected" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>$layout</name></member>
+      <member refid="classgui_1_1_view_1ab3e5e5111363f7c803693d5bd75ad448" prot="protected" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>$searchBar</name></member>
+      <member refid="classgui_1_1_view_1ada57e7bb7c152edad18fe2f166188691" prot="protected" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>$title</name></member>
+      <member refid="classgui_1_1_view_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>$username</name></member>
+      <member refid="classgui_1_1_view_edit_ticket_1aa5152a78c188bb446546f2ebeebabf1c" prot="public" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>__construct</name></member>
+      <member refid="classgui_1_1_view_1a3867efed8f524d30034063f8c80c18fd" prot="public" virt="non-virtual" ambiguityscope="gui::View::"><scope>gui::ViewEditTicket</scope><name>__construct</name></member>
+      <member refid="classgui_1_1_view_1a0b9b6e6acd4a839fc7c2f26f96b5cfa8" prot="public" virt="non-virtual"><scope>gui::ViewEditTicket</scope><name>display</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

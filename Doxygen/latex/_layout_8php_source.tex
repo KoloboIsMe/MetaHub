@@ -1,0 +1,27 @@
+\doxysection{Layout.\+php}
+\hypertarget{_layout_8php_source}{}\label{_layout_8php_source}\index{gui/Layout.php@{gui/Layout.php}}
+\mbox{\hyperlink{_layout_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00003}\mbox{\hyperlink{namespacegui}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacegui}{gui}};}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00004}\mbox{\hyperlink{classgui_1_1_layout}{00004}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classgui_1_1_layout}{Layout}}}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00006}\mbox{\hyperlink{classgui_1_1_layout_a952fcaa4d048f47c91939d6d2cb9bff4}{00006}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{classgui_1_1_layout_a952fcaa4d048f47c91939d6d2cb9bff4}{\$templateFile}};}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00008}\mbox{\hyperlink{classgui_1_1_layout_adfdd8bfb11a1c06451d99ecc1446a9a8}{00008}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classgui_1_1_layout_adfdd8bfb11a1c06451d99ecc1446a9a8}{\_\_construct}}(\$templateFile)}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00009}00009\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \$this-\/>templateFile\ =\ \$templateFile;}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00011}00011\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00013}\mbox{\hyperlink{classgui_1_1_layout_a72c83e10eed9ac01f810b1d14483e9f6}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classgui_1_1_layout_a72c83e10eed9ac01f810b1d14483e9f6}{display}}(\mbox{\hyperlink{edit_ticket_8php_ada57e7bb7c152edad18fe2f166188691}{\$title}},\ \$content,\ \$username,\ \$searchBar\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \$searchBarContent\ =\ file\_get\_contents(\textcolor{stringliteral}{"{}gui/searchBar.html"{}});}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \$page\ =\ file\_get\_contents(\$this-\/>templateFile);}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \$page\ =\ \$searchBar\ ==\ \textcolor{keyword}{null}\ ?\ str\_replace(\textcolor{stringliteral}{'\%searchBar\%'},\ \textcolor{stringliteral}{''},\ \$page)\ :\ str\_replace(\textcolor{stringliteral}{'\%searchBar\%'},\ \$searchBarContent,\ \$page);}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \$page\ =\ str\_replace([\textcolor{stringliteral}{'\%title\%'},\ \textcolor{stringliteral}{'\%content\%'},\ \textcolor{stringliteral}{'\%username\%'}],\ [\mbox{\hyperlink{edit_ticket_8php_ada57e7bb7c152edad18fe2f166188691}{\$title}},\ \$content,\ \$username],\ \$page);}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ echo\ \$page;}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_layout_8php_source_l00021}00021\ \}}
+
+\end{DoxyCode}

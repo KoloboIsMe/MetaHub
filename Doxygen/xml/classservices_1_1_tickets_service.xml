@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classservices_1_1_tickets_service" kind="class" language="PHP" prot="public">
+    <compoundname>services::TicketsService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classservices_1_1_tickets_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>services\TicketsService\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="8" column="13" bodyfile="services/TicketsService.php" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>services\TicketsService\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="10" column="21" bodyfile="services/TicketsService.php" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1a637215646c5f02e149a146fbce958dca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPosts</definition>
+        <argsstring>($userAccess, $generalAccess)</argsstring>
+        <name>getPosts</name>
+        <qualifiedname>services\TicketsService\getPosts</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="15" column="21" bodyfile="services/TicketsService.php" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1a1aab7a11433415e9012b143f469c8c73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get5LastPosts</definition>
+        <argsstring>($userAccess, $generalAccess)</argsstring>
+        <name>get5LastPosts</name>
+        <qualifiedname>services\TicketsService\get5LastPosts</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="25" column="21" bodyfile="services/TicketsService.php" bodystart="25" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1aafda66ab0a7824c15e869c31f6d44d35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoryPosts</definition>
+        <argsstring>($generalAccess, $postsId)</argsstring>
+        <name>getCategoryPosts</name>
+        <qualifiedname>services\TicketsService\getCategoryPosts</qualifiedname>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <param>
+          <declname>$postsId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="34" column="21" bodyfile="services/TicketsService.php" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1abdad754661c93e50303a189f73e87556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createTicket</definition>
+        <argsstring>($userAccess, $title, $message)</argsstring>
+        <name>createTicket</name>
+        <qualifiedname>services\TicketsService\createTicket</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="43" column="21" bodyfile="services/TicketsService.php" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1aa2af9219e1acee7e16ec36bb989e4d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteTicket</definition>
+        <argsstring>($userAccess)</argsstring>
+        <name>deleteTicket</name>
+        <qualifiedname>services\TicketsService\deleteTicket</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="48" column="21" bodyfile="services/TicketsService.php" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1a9b4d5b6ae46dcad7c25c11261111f329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>editTicket</definition>
+        <argsstring>($userAccess, $id, $title, $message)</argsstring>
+        <name>editTicket</name>
+        <qualifiedname>services\TicketsService\editTicket</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="53" column="21" bodyfile="services/TicketsService.php" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1aa773f2e51294e090486a93ea1ae5d13d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPostsIdByUserId</definition>
+        <argsstring>($userAccess, $id)</argsstring>
+        <name>getPostsIdByUserId</name>
+        <qualifiedname>services\TicketsService\getPostsIdByUserId</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="58" column="21" bodyfile="services/TicketsService.php" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1af9fd30dafa8b70fb0f2199702c2898e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserPosts</definition>
+        <argsstring>($generalAccess, $postsId)</argsstring>
+        <name>getUserPosts</name>
+        <qualifiedname>services\TicketsService\getUserPosts</qualifiedname>
+        <param>
+          <declname>$generalAccess</declname>
+        </param>
+        <param>
+          <declname>$postsId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="63" column="21" bodyfile="services/TicketsService.php" bodystart="63" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1ae5e57326b72cd229977b05bbbcfd1b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isTicketOwner</definition>
+        <argsstring>($userAccess, $ticketID, $user_ID)</argsstring>
+        <name>isTicketOwner</name>
+        <qualifiedname>services\TicketsService\isTicketOwner</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="72" column="21" bodyfile="services/TicketsService.php" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_tickets_service_1a90f40acdad8058f6eb81279c9758e2d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsTicket</definition>
+        <argsstring>($userAccess, $ticketID)</argsstring>
+        <name>existsTicket</name>
+        <qualifiedname>services\TicketsService\existsTicket</qualifiedname>
+        <param>
+          <declname>$userAccess</declname>
+        </param>
+        <param>
+          <declname>$ticketID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/TicketsService.php" line="79" column="21" bodyfile="services/TicketsService.php" bodystart="79" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/TicketsService.php" line="5" column="1" bodyfile="services/TicketsService.php" bodystart="6" bodyend="84"/>
+    <listofallmembers>
+      <member refid="classservices_1_1_tickets_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>services::TicketsService</scope><name>$outputData</name></member>
+      <member refid="classservices_1_1_tickets_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>__construct</name></member>
+      <member refid="classservices_1_1_tickets_service_1abdad754661c93e50303a189f73e87556" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>createTicket</name></member>
+      <member refid="classservices_1_1_tickets_service_1aa2af9219e1acee7e16ec36bb989e4d3b" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>deleteTicket</name></member>
+      <member refid="classservices_1_1_tickets_service_1a9b4d5b6ae46dcad7c25c11261111f329" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>editTicket</name></member>
+      <member refid="classservices_1_1_tickets_service_1a90f40acdad8058f6eb81279c9758e2d0" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>existsTicket</name></member>
+      <member refid="classservices_1_1_tickets_service_1a1aab7a11433415e9012b143f469c8c73" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>get5LastPosts</name></member>
+      <member refid="classservices_1_1_tickets_service_1aafda66ab0a7824c15e869c31f6d44d35" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>getCategoryPosts</name></member>
+      <member refid="classservices_1_1_tickets_service_1a637215646c5f02e149a146fbce958dca" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>getPosts</name></member>
+      <member refid="classservices_1_1_tickets_service_1aa773f2e51294e090486a93ea1ae5d13d" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>getPostsIdByUserId</name></member>
+      <member refid="classservices_1_1_tickets_service_1af9fd30dafa8b70fb0f2199702c2898e4" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>getUserPosts</name></member>
+      <member refid="classservices_1_1_tickets_service_1ae5e57326b72cd229977b05bbbcfd1b72" prot="public" virt="non-virtual"><scope>services::TicketsService</scope><name>isTicketOwner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

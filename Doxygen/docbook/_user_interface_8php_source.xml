@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__user_interface_8php_source" xml:lang="en-US">
+<title>UserInterface.php</title>
+<indexterm><primary>services/UserInterface.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__user_interface_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__user_interface_8php_source_1l00002"/>00002 
+<anchor xml:id="__user_interface_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceservices">services</link>;
+<anchor xml:id="__user_interface_8php_source_1l00004"/>00004 
+<anchor xml:id="__user_interface_8php_source_1l00005"/><link linkend="_interfaceservices_1_1_user_interface">00005</link> <emphasis role="keyword">interface&#32;</emphasis><link linkend="_interfaceservices_1_1_user_interface">UserInterface</link>
+<anchor xml:id="__user_interface_8php_source_1l00006"/>00006 {
+<anchor xml:id="__user_interface_8php_source_1l00007"/><link linkend="_interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59">existsUsername</link>($username);
+<anchor xml:id="__user_interface_8php_source_1l00008"/>00008 
+<anchor xml:id="__user_interface_8php_source_1l00009"/><link linkend="_interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d">existsUser</link>($user_ID);
+<anchor xml:id="__user_interface_8php_source_1l00010"/>00010 
+<anchor xml:id="__user_interface_8php_source_1l00011"/><link linkend="_interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88">getUserByUsername</link>($username);
+<anchor xml:id="__user_interface_8php_source_1l00012"/>00012 
+<anchor xml:id="__user_interface_8php_source_1l00013"/><link linkend="_interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef">isUser</link>($username,&#32;$password);
+<anchor xml:id="__user_interface_8php_source_1l00014"/>00014 
+<anchor xml:id="__user_interface_8php_source_1l00015"/><link linkend="_interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db">00015</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<emphasis role="keyword">register</emphasis>($username,&#32;$password,&#32;$date);
+<anchor xml:id="__user_interface_8php_source_1l00016"/>00016 
+<anchor xml:id="__user_interface_8php_source_1l00017"/><link linkend="_interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5">updateUser</link>($username,&#32;$password,&#32;$user_ID);
+<anchor xml:id="__user_interface_8php_source_1l00018"/>00018 
+<anchor xml:id="__user_interface_8php_source_1l00019"/><link linkend="_interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353">00019</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353">updateLastConnexion</link>($user_ID);
+<anchor xml:id="__user_interface_8php_source_1l00020"/>00020 
+<anchor xml:id="__user_interface_8php_source_1l00021"/><link linkend="_interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc">00021</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc">getUserById</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>);
+<anchor xml:id="__user_interface_8php_source_1l00022"/>00022 
+<anchor xml:id="__user_interface_8php_source_1l00023"/><link linkend="_interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de">getUsersID</link>();
+<anchor xml:id="__user_interface_8php_source_1l00024"/>00024 
+<anchor xml:id="__user_interface_8php_source_1l00025"/><link linkend="_interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725">00025</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725">get10LastConnectedUsersID</link>();
+<anchor xml:id="__user_interface_8php_source_1l00026"/>00026 
+<anchor xml:id="__user_interface_8php_source_1l00027"/><link linkend="_interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b">00027</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b">setOnline</link>($user_ID,&#32;$online);
+<anchor xml:id="__user_interface_8php_source_1l00028"/>00028 }
+</programlisting></section>

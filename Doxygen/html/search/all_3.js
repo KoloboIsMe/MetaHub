@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['categories_2ephp_0',['categories.php',['../categories_8php.html',1,'']]],
+  ['categoriesservice_1',['CategoriesService',['../classservices_1_1_categories_service.html',1,'services']]],
+  ['categoriesservice_2ephp_2',['CategoriesService.php',['../_categories_service_8php.html',1,'']]],
+  ['category_3',['Category',['../classentities_1_1_category.html',1,'entities']]],
+  ['category_2ephp_4',['category.php',['../controls_2page_presenters_2category_8php.html',1,'(Global Namespace)'],['../_framework_2entities_2category_8php.html',1,'(Global Namespace)']]],
+  ['categoryaccess_5',['CategoryAccess',['../classdatabase_1_1_category_access.html',1,'database']]],
+  ['categoryaccess_2ephp_6',['CategoryAccess.php',['../_category_access_8php.html',1,'']]],
+  ['categoryinterface_7',['CategoryInterface',['../interfaceservices_1_1_category_interface.html',1,'services']]],
+  ['categoryinterface_2ephp_8',['CategoryInterface.php',['../_category_interface_8php.html',1,'']]],
+  ['comment_9',['Comment',['../classentities_1_1_comment.html',1,'entities']]],
+  ['comment_2ephp_10',['Comment.php',['../_comment_8php.html',1,'']]],
+  ['commentaccess_11',['CommentAccess',['../classdatabase_1_1_comment_access.html',1,'database']]],
+  ['commentaccess_2ephp_12',['CommentAccess.php',['../_comment_access_8php.html',1,'']]],
+  ['commentinterface_13',['CommentInterface',['../interfaceservices_1_1_comment_interface.html',1,'services']]],
+  ['commentinterface_2ephp_14',['CommentInterface.php',['../_comment_interface_8php.html',1,'']]],
+  ['commentsservice_15',['CommentsService',['../classservices_1_1_comments_service.html',1,'services']]],
+  ['commentsservice_2ephp_16',['CommentsService.php',['../_comments_service_8php.html',1,'']]],
+  ['controller_17',['Controller',['../classcontrols_1_1_controller.html',1,'controls']]],
+  ['controller_2ephp_18',['Controller.php',['../_controller_8php.html',1,'']]],
+  ['controls_19',['controls',['../namespacecontrols.html',1,'']]],
+  ['createcategory_20',['createcategory',['../classdatabase_1_1_category_access.html#a1bb8598d8a3012942717956f06a2cb05',1,'database\CategoryAccess\createCategory()'],['../classservices_1_1_categories_service.html#ac25c1b89fbfe361441dd0f99f5cb1efc',1,'services\CategoriesService\createCategory()'],['../interfaceservices_1_1_category_interface.html#a1bb8598d8a3012942717956f06a2cb05',1,'services\CategoryInterface\createCategory()']]],
+  ['createcomment_21',['createcomment',['../classdatabase_1_1_comment_access.html#aa4f3a67631b77070bc5c65d583f34538',1,'database\CommentAccess\createComment()'],['../interfaceservices_1_1_comment_interface.html#aa4f3a67631b77070bc5c65d583f34538',1,'services\CommentInterface\createComment()'],['../classservices_1_1_comments_service.html#a156088c4cc0ebd0284eb9a7e16c9f73c',1,'services\CommentsService\createComment()']]],
+  ['createticket_22',['createticket',['../classdatabase_1_1_ticket_access.html#afa6e5469befba46eb1dfaf007b8713c6',1,'database\TicketAccess\createTicket()'],['../interfaceservices_1_1_ticket_interface.html#afa6e5469befba46eb1dfaf007b8713c6',1,'services\TicketInterface\createTicket()'],['../classservices_1_1_tickets_service.html#abdad754661c93e50303a189f73e87556',1,'services\TicketsService\createTicket()']]],
+  ['createticket_2ephp_23',['createTicket.php',['../create_ticket_8php.html',1,'']]],
+  ['createticketaction_24',['createTicketAction',['../classcontrols_1_1_controller.html#a1b41886b22d4040d3be02c21a3df5aad',1,'controls::Controller']]]
+];

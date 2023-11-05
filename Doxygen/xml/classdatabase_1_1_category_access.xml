@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classdatabase_1_1_category_access" kind="class" language="PHP" prot="public">
+    <compoundname>database::CategoryAccess</compoundname>
+    <basecompoundref refid="interfaceservices_1_1_category_interface" prot="public" virt="non-virtual">CategoryInterface</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdatabase_1_1_category_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$dataAccess</definition>
+        <argsstring></argsstring>
+        <name>$dataAccess</name>
+        <qualifiedname>database\CategoryAccess\$dataAccess</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="20" column="15" bodyfile="Framework/database/CategoryAccess.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a9d903d171ff2319096ef345b4092535b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($dataAccess)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>database\CategoryAccess\__construct</qualifiedname>
+        <param>
+          <declname>$dataAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dataAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="25" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsCategory</definition>
+        <argsstring>($CategoryID)</argsstring>
+        <name>existsCategory</name>
+        <qualifiedname>database\CategoryAccess\existsCategory</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b">existsCategory</reimplements>
+        <param>
+          <declname>$CategoryID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$CategoryID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="34" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="34" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoryById</definition>
+        <argsstring>($ID)</argsstring>
+        <name>getCategoryById</name>
+        <qualifiedname>database\CategoryAccess\getCategoryById</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323">getCategoryById</reimplements>
+        <param>
+          <declname>$ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Category </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="50" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="50" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoriesID</definition>
+        <argsstring>()</argsstring>
+        <name>getCategoriesID</name>
+        <qualifiedname>database\CategoryAccess\getCategoriesID</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392">getCategoriesID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="65" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="65" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get5LastCategories</definition>
+        <argsstring>()</argsstring>
+        <name>get5LastCategories</name>
+        <qualifiedname>database\CategoryAccess\get5LastCategories</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7">get5LastCategories</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Category[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="83" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="83" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoryIdByLabel</definition>
+        <argsstring>($label)</argsstring>
+        <name>getCategoryIdByLabel</name>
+        <qualifiedname>database\CategoryAccess\getCategoryIdByLabel</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af">getCategoryIdByLabel</reimplements>
+        <param>
+          <declname>$label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="102" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="102" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createCategory</definition>
+        <argsstring>($label, $description)</argsstring>
+        <name>createCategory</name>
+        <qualifiedname>database\CategoryAccess\createCategory</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05">createCategory</reimplements>
+        <param>
+          <declname>$label</declname>
+        </param>
+        <param>
+          <declname>$description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$label</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/CategoryAccess.php" line="120" column="21" bodyfile="Framework/database/CategoryAccess.php" bodystart="120" bodyend="135"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CategoryAccess</label>
+        <link refid="classdatabase_1_1_category_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CategoryInterface</label>
+        <link refid="interfaceservices_1_1_category_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CategoryAccess</label>
+        <link refid="classdatabase_1_1_category_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CategoryInterface</label>
+        <link refid="interfaceservices_1_1_category_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/database/CategoryAccess.php" line="15" column="1" bodyfile="Framework/database/CategoryAccess.php" bodystart="16" bodyend="138"/>
+    <listofallmembers>
+      <member refid="classdatabase_1_1_category_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" virt="non-virtual"><scope>database::CategoryAccess</scope><name>$dataAccess</name></member>
+      <member refid="classdatabase_1_1_category_access_1a9d903d171ff2319096ef345b4092535b" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>__construct</name></member>
+      <member refid="classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>createCategory</name></member>
+      <member refid="classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>existsCategory</name></member>
+      <member refid="classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>get5LastCategories</name></member>
+      <member refid="classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>getCategoriesID</name></member>
+      <member refid="classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>getCategoryById</name></member>
+      <member refid="classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af" prot="public" virt="non-virtual"><scope>database::CategoryAccess</scope><name>getCategoryIdByLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

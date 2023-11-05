@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceservices" xml:lang="en-US">
+<title>services Namespace Reference</title>
+<indexterm><primary>services</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classservices_1_1_categories_service">CategoriesService</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interfaceservices_1_1_category_interface">CategoryInterface</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interfaceservices_1_1_comment_interface">CommentInterface</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classservices_1_1_comments_service">CommentsService</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classservices_1_1_output_data">OutputData</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interfaceservices_1_1_ticket_interface">TicketInterface</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classservices_1_1_tickets_service">TicketsService</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interfaceservices_1_1_user_interface">UserInterface</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classservices_1_1_users_service">UsersService</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

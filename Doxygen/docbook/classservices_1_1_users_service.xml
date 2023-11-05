@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classservices_1_1_users_service" xml:lang="en-US">
+<title>UsersService Class Reference</title>
+<indexterm><primary>UsersService</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a21db5a882ba43a48b03c976aefa69c75">__construct</link> ($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a52819191a05e176c4c096966ab1edd1d">existsUsername</link> ($dataccess, $username)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a38ec34f0d54535a7373747015b8caa64">existsUser</link> ($dataccess, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a6eaf4e071c958467d7b3315b5dd51e05">authenticate</link> ($username, $password, $dataccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a7bb0aa69b7cb6b42e1bb7a7c668ea730">register</link> ($username, $password, $dataccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a68e02a891d90270f154ab5c4bc59cae9">updateUser</link> ($username, $password, $dataccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1af9474977a289c4527898f47460172616">getUserByUsername</link> ($dataccess, $username)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a887a2f82c7277e66c3b2a740dfe1464b">updateLastConnexion</link> ($dataccess, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a6f7b0615bacb57c18b7a096dad7d2227">getUsers</link> ($dataccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a2f77bb31ab5082288481238f1b3abe80">getUserById</link> ($dataccess, $id)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1aeb90b6e09d4969eea24c7965fbed979d">setOnline</link> ($dataccess, $user_ID, $online)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1a358726d7a4e2db7cc089048acf1590a7">add10LastConnectedUsers</link> ($userAccessLector)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_users_service_1aa7af8ed60411b8e43cbafa5988136f89">setUserById</link> ($dataccess, $id)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__users_service_8php_source_1l00005">5</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classservices_1_1_users_service_1a21db5a882ba43a48b03c976aefa69c75"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $outputData)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00009">9</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classservices_1_1_users_service_1a358726d7a4e2db7cc089048acf1590a7"/><section>
+    <title>add10LastConnectedUsers()</title>
+<indexterm><primary>add10LastConnectedUsers</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>add10LastConnectedUsers</secondary></indexterm>
+<para><computeroutput>add10LastConnectedUsers ( $userAccessLector)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00068">68</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a6eaf4e071c958467d7b3315b5dd51e05"/><section>
+    <title>authenticate()</title>
+<indexterm><primary>authenticate</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>authenticate</secondary></indexterm>
+<para><computeroutput>authenticate ( $username,  $password,  $dataccess)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00024">24</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a38ec34f0d54535a7373747015b8caa64"/><section>
+    <title>existsUser()</title>
+<indexterm><primary>existsUser</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>existsUser</secondary></indexterm>
+<para><computeroutput>existsUser ( $dataccess,  $user_ID)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00019">19</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a52819191a05e176c4c096966ab1edd1d"/><section>
+    <title>existsUsername()</title>
+<indexterm><primary>existsUsername</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>existsUsername</secondary></indexterm>
+<para><computeroutput>existsUsername ( $dataccess,  $username)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00014">14</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a2f77bb31ab5082288481238f1b3abe80"/><section>
+    <title>getUserById()</title>
+<indexterm><primary>getUserById</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>getUserById</secondary></indexterm>
+<para><computeroutput>getUserById ( $dataccess,  $id)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00059">59</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1af9474977a289c4527898f47460172616"/><section>
+    <title>getUserByUsername()</title>
+<indexterm><primary>getUserByUsername</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>getUserByUsername</secondary></indexterm>
+<para><computeroutput>getUserByUsername ( $dataccess,  $username)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00040">40</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a6f7b0615bacb57c18b7a096dad7d2227"/><section>
+    <title>getUsers()</title>
+<indexterm><primary>getUsers</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>getUsers</secondary></indexterm>
+<para><computeroutput>getUsers ( $dataccess)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00050">50</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a7bb0aa69b7cb6b42e1bb7a7c668ea730"/><section>
+    <title>register()</title>
+<indexterm><primary>register</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>register</secondary></indexterm>
+<para><computeroutput>register ( $username,  $password,  $dataccess)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00030">30</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1aeb90b6e09d4969eea24c7965fbed979d"/><section>
+    <title>setOnline()</title>
+<indexterm><primary>setOnline</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>setOnline</secondary></indexterm>
+<para><computeroutput>setOnline ( $dataccess,  $user_ID,  $online)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00063">63</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1aa7af8ed60411b8e43cbafa5988136f89"/><section>
+    <title>setUserById()</title>
+<indexterm><primary>setUserById</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>setUserById</secondary></indexterm>
+<para><computeroutput>setUserById ( $dataccess,  $id)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00077">77</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a887a2f82c7277e66c3b2a740dfe1464b"/><section>
+    <title>updateLastConnexion()</title>
+<indexterm><primary>updateLastConnexion</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>updateLastConnexion</secondary></indexterm>
+<para><computeroutput>updateLastConnexion ( $dataccess,  $user_ID)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00045">45</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_users_service_1a68e02a891d90270f154ab5c4bc59cae9"/><section>
+    <title>updateUser()</title>
+<indexterm><primary>updateUser</primary><secondary>UsersService</secondary></indexterm>
+<indexterm><primary>UsersService</primary><secondary>updateUser</secondary></indexterm>
+<para><computeroutput>updateUser ( $username,  $password,  $dataccess)</computeroutput></para><para>
+Definition at line <link linkend="__users_service_8php_source_1l00035">35</link> of file <link linkend="__users_service_8php_source">UsersService.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+services/<link linkend="__users_service_8php">UsersService.php</link></section>
+</section>

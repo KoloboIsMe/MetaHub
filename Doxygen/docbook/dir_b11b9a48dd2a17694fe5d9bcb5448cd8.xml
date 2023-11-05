@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b11b9a48dd2a17694fe5d9bcb5448cd8" xml:lang="en-US">
+<title>Framework/entities Directory Reference</title>
+<indexterm><primary>Framework/entities Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__framework_2entities_2category_8php">Category.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__comment_8php">Comment.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__entity_8php">Entity.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__framework_2entities_2post_8php">Post.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ticket_8php">Ticket.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__framework_2entities_2user_8php">User.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

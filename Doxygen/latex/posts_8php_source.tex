@@ -1,0 +1,40 @@
+\doxysection{posts.\+php}
+\hypertarget{posts_8php_source}{}\label{posts_8php_source}\index{controls/pagePresenters/posts.php@{controls/pagePresenters/posts.php}}
+\mbox{\hyperlink{posts_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00001}00001\ <link\ href=\textcolor{stringliteral}{"{}gui/css/posts.css"{}}\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ type=\textcolor{stringliteral}{"{}text/css"{}}/>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00002}00002\ <h2>Posts</h2>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00003}00003\ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/container'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00004}00004\ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$data\ as\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}})\ \{}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00005}00005\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTicket\_ID();?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'post-\/card'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'posts\&id=<?=\$id?>'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/content'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'post-\/header'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/user.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'userImg'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'card-\/username'}>@<?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getUser()-\/>getUsername()?></p>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\ <?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTitle()\ ?></h3>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}categories"{}}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getCategories()\ as\ \$category)\ \{\ ?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'category'}>\#<?=\ \$category-\/>getLabel()\ ?></div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p>\ <?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getMessage()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <time\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'time'}>Publié\ le\ <?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getDate()\ ?></time>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'post-\/number'}>Post\ n°\ <?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTicket\_ID()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ ((isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)\ ||\ (isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'user\_ID'}]\ ==\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getUser()-\/>getUser\_ID()))\ \{\ ?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'edit-\/delete'}>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'editTicket\&id=<?=\ \$id\ ?>'}><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/edit.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'editImg'}></a>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'?action=deleteTicketAction\&id=<?=\ \$id\ ?>'}><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/delete.png'}}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'deleteImg'}></a>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ </a>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00033}00033\ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{posts_8php_source_l00034}00034\ </div>}
+
+\end{DoxyCode}

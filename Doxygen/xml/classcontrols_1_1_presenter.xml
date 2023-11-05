@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classcontrols_1_1_presenter" kind="class" language="PHP" prot="public">
+    <compoundname>controls::Presenter</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcontrols_1_1_presenter_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>controls\Presenter\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Presenter.php" line="10" column="13" bodyfile="controls/Presenter.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcontrols_1_1_presenter_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>controls\Presenter\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Presenter.php" line="12" column="21" bodyfile="controls/Presenter.php" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_presenter_1af26db0b597ad8772f7e0fa7ccc93b471" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>show</definition>
+        <argsstring>($presenterName)</argsstring>
+        <name>show</name>
+        <qualifiedname>controls\Presenter\show</qualifiedname>
+        <param>
+          <declname>$presenterName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$presenterName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false|string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Presenter.php" line="21" column="21" bodyfile="controls/Presenter.php" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_presenter_1a2af1d89b188cfc2c1e312f665859e9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>showCategory</definition>
+        <argsstring>($category)</argsstring>
+        <name>showCategory</name>
+        <qualifiedname>controls\Presenter\showCategory</qualifiedname>
+        <param>
+          <declname>$category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false|string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Presenter.php" line="34" column="21" bodyfile="controls/Presenter.php" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontrols_1_1_presenter_1ace8021ef4b46a93f6cca4a5bf557be69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>showUser</definition>
+        <argsstring>($user)</argsstring>
+        <name>showUser</name>
+        <qualifiedname>controls\Presenter\showUser</qualifiedname>
+        <param>
+          <declname>$user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false|string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/Presenter.php" line="47" column="21" bodyfile="controls/Presenter.php" bodystart="47" bodyend="54"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="controls/Presenter.php" line="8" column="1" bodyfile="controls/Presenter.php" bodystart="9" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classcontrols_1_1_presenter_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>controls::Presenter</scope><name>$outputData</name></member>
+      <member refid="classcontrols_1_1_presenter_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>controls::Presenter</scope><name>__construct</name></member>
+      <member refid="classcontrols_1_1_presenter_1af26db0b597ad8772f7e0fa7ccc93b471" prot="public" virt="non-virtual"><scope>controls::Presenter</scope><name>show</name></member>
+      <member refid="classcontrols_1_1_presenter_1a2af1d89b188cfc2c1e312f665859e9ee" prot="public" virt="non-virtual"><scope>controls::Presenter</scope><name>showCategory</name></member>
+      <member refid="classcontrols_1_1_presenter_1ace8021ef4b46a93f6cca4a5bf557be69" prot="public" virt="non-virtual"><scope>controls::Presenter</scope><name>showUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

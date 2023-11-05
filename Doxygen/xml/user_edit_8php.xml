@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="user_edit_8php" kind="file" language="PHP">
+    <compoundname>userEdit.php</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>$user</definition>
+        <argsstring></argsstring>
+        <name>$user</name>
+        <initializer>= $data</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="controls/pagePresenters/userEdit.php" line="1" column="2" bodyfile="controls/pagePresenters/userEdit.php" bodystart="1" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" refkind="member"><highlight class="normal">&lt;?php<sp/><ref refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kindref="member">$user</ref><sp/>=<sp/>$data;<sp/>?&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">&lt;link<sp/>href=</highlight><highlight class="stringliteral">&apos;gui/css/forms.css&apos;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&apos;stylesheet&apos;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&apos;text/css&apos;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;container&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;form<sp/>action=</highlight><highlight class="stringliteral">&apos;?action=editUserInfoAction&apos;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&apos;POST&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;h1&gt;Edition<sp/>de<sp/>profil&lt;/h1&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;Nom<sp/>d</highlight><highlight class="stringliteral">&apos;utilisateur&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=&apos;</highlight><highlight class="normal">text</highlight><highlight class="stringliteral">&apos;<sp/>placeholder=&quot;Entrer<sp/>le<sp/>nom<sp/>d&apos;</highlight><highlight class="normal">utilisateur</highlight><highlight class="stringliteral">&quot;<sp/>name=&apos;username&apos;</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;</highlight><highlight class="normal">&lt;?=<sp/>htmlspecialchars(<ref refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kindref="member">$user</ref>-&gt;getusername(),<sp/>ENT_QUOTES)<sp/>?&gt;</highlight><highlight class="stringliteral">&quot;<sp/>required&gt;&lt;/input&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;ancien<sp/>mot<sp/>de<sp/>passe&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=&quot;</highlight><highlight class="normal">password</highlight><highlight class="stringliteral">&quot;<sp/>placeholder=&quot;</highlight><highlight class="normal">Entrer<sp/>l</highlight><highlight class="stringliteral">&apos;ancien<sp/>mot<sp/>de<sp/>passe&quot;<sp/>name=&apos;</highlight><highlight class="normal">old_password</highlight><highlight class="stringliteral">&apos;<sp/>required/&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;nouveau<sp/>mot<sp/>de<sp/>passe<sp/>(optionnel)&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=&quot;password&quot;<sp/>placeholder=&apos;</highlight><highlight class="normal">Entrer<sp/>le<sp/>mot<sp/>de<sp/>passe</highlight><highlight class="stringliteral">&apos;<sp/>name=&apos;</highlight><highlight class="normal">password</highlight><highlight class="stringliteral">&apos;/&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=&apos;</highlight><highlight class="normal">submit</highlight><highlight class="stringliteral">&apos;<sp/>id=&apos;</highlight><highlight class="normal">submit</highlight><highlight class="stringliteral">&apos;<sp/>value=&apos;</highlight><highlight class="normal">Changer</highlight><highlight class="stringliteral">&apos;&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;?action=deleteUserAction&amp;id=&lt;?=<sp/>$user-&gt;getUser_id()<sp/>?&gt;&quot;&gt;&lt;label&gt;&lt;b&gt;supprimer<sp/>le<sp/>compte&lt;/b&gt;&lt;/label&gt;&lt;/a&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">&lt;/div&gt;</highlight></codeline>
+    </programlisting>
+    <location file="controls/pagePresenters/userEdit.php"/>
+  </compounddef>
+</doxygen>

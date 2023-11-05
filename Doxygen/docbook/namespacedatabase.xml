@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacedatabase" xml:lang="en-US">
+<title>database Namespace Reference</title>
+<indexterm><primary>database</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classdatabase_1_1_category_access">CategoryAccess</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classdatabase_1_1_comment_access">CommentAccess</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classdatabase_1_1_general_access">GeneralAccess</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classdatabase_1_1_s_p_d_o">SPDO</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classdatabase_1_1_ticket_access">TicketAccess</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classdatabase_1_1_user_access">UserAccess</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

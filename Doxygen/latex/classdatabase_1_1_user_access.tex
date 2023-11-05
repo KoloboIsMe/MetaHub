@@ -1,0 +1,330 @@
+\doxysection{User\+Access Class Reference}
+\hypertarget{classdatabase_1_1_user_access}{}\label{classdatabase_1_1_user_access}\index{UserAccess@{UserAccess}}
+Inheritance diagram for User\+Access\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classdatabase_1_1_user_access}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a9d903d171ff2319096ef345b4092535b}{\+\_\+\+\_\+construct}} (\$data\+Access)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a6c5cea1f559db58a20b28b661dd55e59}{exists\+Username}} (\$username)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a672565dd28b98d1b945773eaa6a3220d}{exists\+User}} (\$user\+\_\+\+ID)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_ae04dcae58353aae72ac5321d23e0caef}{is\+User}} (\$username, \$password)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a96e7ce264e97f88d979f129112585e88}{get\+User\+By\+Username}} (\$username)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a5e7d616b80a7b0fb4b8d2736800e29cc}{get\+User\+By\+Id}} (\$id)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_ae5b3902b6ff7fd4a25b93defe7b429de}{get\+Users\+ID}} ()
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_aa5ec7e39c68415aa45573679550fe6db}{register}} (\$username, \$password, \$date)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a26a6e29a53a16de24624ff7bfd6dfcf5}{update\+User}} (\$username, \$password, \$user\+\_\+\+ID)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_aee0d9d2973be34791162b25cd31a3353}{update\+Last\+Connexion}} (\$user\+\_\+\+ID)
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a5fadbe8f1573fb5a1b4ca86f2d274725}{get10\+Last\+Connected\+Users\+ID}} ()
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_af4ce5960cbdf7a3917711dc31745d08b}{set\+Online}} (\$user\+\_\+\+ID, \$online)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_1_1_user_access_a7a827f5c09357312fde0811812bbbc35}{\$data\+Access}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00012}{12}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classdatabase_1_1_user_access_a9d903d171ff2319096ef345b4092535b}\label{classdatabase_1_1_user_access_a9d903d171ff2319096ef345b4092535b} 
+\index{UserAccess@{UserAccess}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$data\+Access }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$data\+Access} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00022}{22}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classdatabase_1_1_user_access_a672565dd28b98d1b945773eaa6a3220d}\label{classdatabase_1_1_user_access_a672565dd28b98d1b945773eaa6a3220d} 
+\index{UserAccess@{UserAccess}!existsUser@{existsUser}}
+\index{existsUser@{existsUser}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{existsUser()}{existsUser()}}
+{\footnotesize\ttfamily exists\+User (\begin{DoxyParamCaption}\item[{}]{\$user\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$user\+\_\+\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a672565dd28b98d1b945773eaa6a3220d}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00047}{47}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_a6c5cea1f559db58a20b28b661dd55e59}\label{classdatabase_1_1_user_access_a6c5cea1f559db58a20b28b661dd55e59} 
+\index{UserAccess@{UserAccess}!existsUsername@{existsUsername}}
+\index{existsUsername@{existsUsername}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{existsUsername()}{existsUsername()}}
+{\footnotesize\ttfamily exists\+Username (\begin{DoxyParamCaption}\item[{}]{\$username }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a6c5cea1f559db58a20b28b661dd55e59}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00031}{31}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_a5fadbe8f1573fb5a1b4ca86f2d274725}\label{classdatabase_1_1_user_access_a5fadbe8f1573fb5a1b4ca86f2d274725} 
+\index{UserAccess@{UserAccess}!get10LastConnectedUsersID@{get10LastConnectedUsersID}}
+\index{get10LastConnectedUsersID@{get10LastConnectedUsersID}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{get10LastConnectedUsersID()}{get10LastConnectedUsersID()}}
+{\footnotesize\ttfamily get10\+Last\+Connected\+Users\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a5fadbe8f1573fb5a1b4ca86f2d274725}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00198}{198}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_a5e7d616b80a7b0fb4b8d2736800e29cc}\label{classdatabase_1_1_user_access_a5e7d616b80a7b0fb4b8d2736800e29cc} 
+\index{UserAccess@{UserAccess}!getUserById@{getUserById}}
+\index{getUserById@{getUserById}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{getUserById()}{getUserById()}}
+{\footnotesize\ttfamily get\+User\+By\+Id (\begin{DoxyParamCaption}\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a5e7d616b80a7b0fb4b8d2736800e29cc}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00099}{99}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_a96e7ce264e97f88d979f129112585e88}\label{classdatabase_1_1_user_access_a96e7ce264e97f88d979f129112585e88} 
+\index{UserAccess@{UserAccess}!getUserByUsername@{getUserByUsername}}
+\index{getUserByUsername@{getUserByUsername}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{getUserByUsername()}{getUserByUsername()}}
+{\footnotesize\ttfamily get\+User\+By\+Username (\begin{DoxyParamCaption}\item[{}]{\$username }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$username} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a96e7ce264e97f88d979f129112585e88}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00083}{83}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_ae5b3902b6ff7fd4a25b93defe7b429de}\label{classdatabase_1_1_user_access_ae5b3902b6ff7fd4a25b93defe7b429de} 
+\index{UserAccess@{UserAccess}!getUsersID@{getUsersID}}
+\index{getUsersID@{getUsersID}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{getUsersID()}{getUsersID()}}
+{\footnotesize\ttfamily get\+Users\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+int\mbox{[}\mbox{]} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_ae5b3902b6ff7fd4a25b93defe7b429de}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00114}{114}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_ae04dcae58353aae72ac5321d23e0caef}\label{classdatabase_1_1_user_access_ae04dcae58353aae72ac5321d23e0caef} 
+\index{UserAccess@{UserAccess}!isUser@{isUser}}
+\index{isUser@{isUser}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{isUser()}{isUser()}}
+{\footnotesize\ttfamily is\+User (\begin{DoxyParamCaption}\item[{}]{\$username,  }\item[{}]{\$password }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$username} & \\
+\hline
+{\em \$password} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_ae04dcae58353aae72ac5321d23e0caef}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00064}{64}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_aa5ec7e39c68415aa45573679550fe6db}\label{classdatabase_1_1_user_access_aa5ec7e39c68415aa45573679550fe6db} 
+\index{UserAccess@{UserAccess}!register@{register}}
+\index{register@{register}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily register (\begin{DoxyParamCaption}\item[{}]{\$username,  }\item[{}]{\$password,  }\item[{}]{\$date }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$username} & \\
+\hline
+{\em \$password} & \\
+\hline
+{\em \$date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\texorpdfstring{$\vert$}{|}null 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_aa5ec7e39c68415aa45573679550fe6db}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00135}{135}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_af4ce5960cbdf7a3917711dc31745d08b}\label{classdatabase_1_1_user_access_af4ce5960cbdf7a3917711dc31745d08b} 
+\index{UserAccess@{UserAccess}!setOnline@{setOnline}}
+\index{setOnline@{setOnline}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{setOnline()}{setOnline()}}
+{\footnotesize\ttfamily set\+Online (\begin{DoxyParamCaption}\item[{}]{\$user\+\_\+\+ID,  }\item[{}]{\$online }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$user\+\_\+\+ID} & \\
+\hline
+{\em \$online} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_af4ce5960cbdf7a3917711dc31745d08b}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00218}{218}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_aee0d9d2973be34791162b25cd31a3353}\label{classdatabase_1_1_user_access_aee0d9d2973be34791162b25cd31a3353} 
+\index{UserAccess@{UserAccess}!updateLastConnexion@{updateLastConnexion}}
+\index{updateLastConnexion@{updateLastConnexion}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{updateLastConnexion()}{updateLastConnexion()}}
+{\footnotesize\ttfamily update\+Last\+Connexion (\begin{DoxyParamCaption}\item[{}]{\$user\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$user\+\_\+\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_aee0d9d2973be34791162b25cd31a3353}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00182}{182}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+\Hypertarget{classdatabase_1_1_user_access_a26a6e29a53a16de24624ff7bfd6dfcf5}\label{classdatabase_1_1_user_access_a26a6e29a53a16de24624ff7bfd6dfcf5} 
+\index{UserAccess@{UserAccess}!updateUser@{updateUser}}
+\index{updateUser@{updateUser}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{updateUser()}{updateUser()}}
+{\footnotesize\ttfamily update\+User (\begin{DoxyParamCaption}\item[{}]{\$username,  }\item[{}]{\$password,  }\item[{}]{\$user\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \$username} & \\
+\hline
+{\em \$password} & \\
+\hline
+{\em \$user\+\_\+\+ID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interfaceservices_1_1_user_interface_a26a6e29a53a16de24624ff7bfd6dfcf5}{User\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00164}{164}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classdatabase_1_1_user_access_a7a827f5c09357312fde0811812bbbc35}\label{classdatabase_1_1_user_access_a7a827f5c09357312fde0811812bbbc35} 
+\index{UserAccess@{UserAccess}!\$dataAccess@{\$dataAccess}}
+\index{\$dataAccess@{\$dataAccess}!UserAccess@{UserAccess}}
+\doxysubsubsection{\texorpdfstring{\$dataAccess}{\$dataAccess}}
+{\footnotesize\ttfamily \$data\+Access = null\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_user_access_8php_source_l00017}{17}} of file \mbox{\hyperlink{_user_access_8php_source}{User\+Access.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Framework/database/\mbox{\hyperlink{_user_access_8php}{User\+Access.\+php}}\end{DoxyCompactItemize}

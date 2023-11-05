@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_056ec8f0377ddc4293192cbc6b19c99c" xml:lang="en-US">
+<title>services Directory Reference</title>
+<indexterm><primary>services Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__categories_service_8php">CategoriesService.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__category_interface_8php">CategoryInterface.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__comment_interface_8php">CommentInterface.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__comments_service_8php">CommentsService.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__output_data_8php">OutputData.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__ticket_interface_8php">TicketInterface.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__tickets_service_8php">TicketsService.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__user_interface_8php">UserInterface.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__users_service_8php">UsersService.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
