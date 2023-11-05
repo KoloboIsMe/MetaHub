@@ -9,7 +9,7 @@ if (!isset($cards))
     return;
 }
 ?>
-<body>
+
     <h1>Accueil</h1>
     <?php
     foreach ($cards as $card)
@@ -17,4 +17,4 @@ if (!isset($cards))
         echo $card;
     }
     ?>
-</body>
+

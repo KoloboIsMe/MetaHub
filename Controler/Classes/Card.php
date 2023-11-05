@@ -11,7 +11,7 @@ class Card
     private string $message;
     private string $date;
     private string $id;
-    public function __construct(Ticket $ticket, private array|null $categories = null, private array|null $comments = null)
+    public function __construct(Ticket $ticket, private ?array $categories = null, private ?array $comments = null)
     {
         $ticket->author();
         $this->author = $ticket->author();

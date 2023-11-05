@@ -30,7 +30,7 @@ class Record
         }
         return $this;
     }
-    public function addDatum(Entity $datum, int|null $index = null) : Record {
+    public function addDatum(Entity $datum, ?int $index = null) : Record {
         if (isset($index)) {
             $this->data[$index] = $datum;
         } else {

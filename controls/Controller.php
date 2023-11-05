@@ -5,12 +5,10 @@ namespace controls;
 class Controller
 {
     private $outputData;
-
     public function __construct($outputData)
     {
         $this->outputData = $outputData;
     }
-
     public function authenticateAction($usersGetting, $userAccess)
     {
         $usersGetting->authenticate($_POST['username'], $_POST['password'], $userAccess);

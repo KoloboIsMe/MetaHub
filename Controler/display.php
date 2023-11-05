@@ -16,7 +16,7 @@ if (!isset($page))
 
 $title = $page;
 require "$elementDirectory/head.php";
-echo '<body>';
+echo "<body> \n";
 require "$elementDirectory/header.php";
 
 switch ($page) {
@@ -59,8 +59,5 @@ switch ($page) {
         break;
 }
 require "$elementDirectory/footer.php";
-echo '</body>';
-echo '</html>';
-
-
+echo "</body> \n</html>";
 return;
