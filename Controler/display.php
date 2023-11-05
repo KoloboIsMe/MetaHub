@@ -17,7 +17,7 @@ if (!isset($page))
 $title = $page;
 $logged = TRUE;
 $admin = TRUE;
-$username = 'Gabriel test';
+$username = $_SESSION['username'];
 require "$elementDirectory/head.php";
 echo "<body> \n";
 require "$elementDirectory/header.php";
@@ -25,16 +25,6 @@ require "$elementDirectory/header.php";
 switch ($page) {
     case 'homepage' :
         require 'homepage.php';
-        break;
-    case 'login' :
-        // declare needed variables
-        $action = 'uneAction';
-        break;
-    case 'posts' :
-        // declare needed variables
-        break;
-    case 'categories' :
-        // declare needed variables
         break;
     case 'login' :
         $page = $_GET['id'] ?? $page = null;
