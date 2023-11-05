@@ -13,12 +13,18 @@ use PDO;
 
 trait IdentifiedTable
 {
-    public function select(int $ID = null) : Record|bool
+    public function select(int $ID = null, string $attribute = null) : Record|bool
     {
         $request = 'SELECT * FROM ' . self::TABLE;
+        // Cas : Recherche par identifiant
         if (isset($ID))
         {
-            $request .= "WHERE ID = $ID ";
+            $request .= " WHERE id = $ID";
+        }
+        // Cas : Recherche sur une colonne spécifique
+        elseif (isset($attribute))
+        {
+            $request .= " WHERE $attribute = $ID";
         }
         return $this->execute($request);
     }

@@ -29,6 +29,7 @@ trait BasicTable
     }
     public function execute(string $request) : Record|bool
     {
+        var_dump($request);
         $request .= " LIMIT $this->limit;";
         $query = $this->connexion->prepare($request);
         if(!$query->execute())

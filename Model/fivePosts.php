@@ -20,8 +20,8 @@ unset($limit);
 // Get categories and comment of the 5 tickets
 foreach ($tickets->getData() as $ticket)
 {
-    $categories[] = $categorizedTable->categoriesOf($ticket->getId());
-    $comments[] = $commentTable->commentsOf($ticket->getId());
+    $categories[] = $categorizedTable->categoriesOf($ticket);
+    $comments[] = $commentTable->commentsOn($ticket);
 }
 
 return;

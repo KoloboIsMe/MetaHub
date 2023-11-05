@@ -35,6 +35,17 @@ class Ticket extends Entity
 
         return $record->getData()[0];
     }
+    public function categories() : array
+    {
+        global $categorizedTable, $categoryTable;
+
+        if($categories = $categorizedTable->categoriesOf($this->getID()) === FALSE)
+        {
+            return FALSE;
+        }
+
+        return $categories;
+    }
     static function post(string $title, string $message, int $author)
     {
         return new Ticket(array(

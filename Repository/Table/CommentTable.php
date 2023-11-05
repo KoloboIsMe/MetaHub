@@ -22,4 +22,22 @@ class CommentTable
         $ticket = $data[4];
         return new Category($ID, $text, $date, $author, $ticket);
     }
+    public function commentsOn(Ticket|int $ticket) : array|bool
+    {
+        $ticketId = is_int($ticket) ? $ticket : $ticket->getId();
+        if(($record = $this->select($ticketId, 'ticket'))=== FALSE)
+        {
+            return FALSE;
+        }
+        return $record->getData();
+    }
+    public function commentsOf(User|int $author) : array|bool
+    {
+        $userId = is_int($author) ? $author : $author->getId();
+        if(($record = $this->select($author, 'author'))=== FALSE)
+        {
+            return FALSE;
+        }
+        return $record->getData();
+    }
 }

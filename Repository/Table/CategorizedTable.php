@@ -20,27 +20,18 @@ class CategorizedTable
         $category = $data[1];
         return new Categorized($ticket, $category);
     }
-    public function categoriesOf(int $ticket) : array|bool
+    public function categoriesOf(Ticket|int $ticket) : array|bool
     {
-        if(($record = $this->select($ticket)) === FALSE)
+        $ticketId = is_int($ticket) ? $ticket : $ticket->getId();
+        if(($record = $this->select($ticketId)) === FALSE)
         {
             return FALSE;
         }
+        $categories = array();
         foreach ($record->getData() as $ticket) {
             $categories[] = $ticket->category();
         }
         return $categories;
-    }
-    public function ticketsOf(int $category) : array|bool
-    {
-        if(($record = $this->select($category)) === FALSE)
-        {
-            return FALSE;
-        }
-        foreach ($record->getData() as $ticket) {
-            $tickets[] = $ticket->ticket();
-        }
-        return $tickets;
     }
     public function select(int $ticket = null, int $category = null) : Record|bool
     {
@@ -57,7 +48,6 @@ class CategorizedTable
         {
             $request .= " WHERE category = $category";
         }
-        echo $request;
         return $this->execute($request);
     }
     public function insert(Categorized ...$entities) : bool
