@@ -40,7 +40,7 @@ switch ($page) {
         require __DIR__ . '/../View/Body/login.php';
         break;
     case 'register' :
-        require 'Connector/register.php';
+        require __DIR__ . '/../View/Body/register.php';
         break;
     case 'categories' :
         break;

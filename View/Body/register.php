@@ -47,12 +47,6 @@
             url: '/index.php',
             type: 'POST',
             data: options,
-            success: function (response) {
-                $("#resultat").html("Réponse : " + response);
-            },
-            error: function (error) {
-                $("#resultat").html("Erreur : " + error);
-            }
         });
 
         return true;
