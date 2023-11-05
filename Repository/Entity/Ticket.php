@@ -24,16 +24,16 @@ class Ticket extends Entity
             'author' => $author
         ));
     }
-    public function author() : User
+    public function author() : User|bool
     {
         global $userTable;
 
-        if($record = $userTable->select($this->author) === FALSE)
+        if(($record = $userTable->select($this->author)) === FALSE)
         {
             return FALSE;
         }
 
-        return $record->getData()[0];
+        return empty($record->getData()) ? FALSE : $record->getData();
     }
     public function categories() : array
     {

@@ -15,7 +15,7 @@ trait BasicTable
     }
     public function exists(mixed $entry, string $column) : bool
     {
-        $request = "SELECT $column FROM" .  self::TABLE . "where $entry = :username ";
+        $request = "SELECT '$column' FROM" .  self::TABLE . "where '$entry' = :username ";
         if ($response = $this->execute($request) === FALSE)
         {
             return TRUE;
@@ -29,7 +29,6 @@ trait BasicTable
     }
     public function execute(string $request) : Record|bool
     {
-        var_dump($request);
         $request .= " LIMIT $this->limit;";
         $query = $this->connexion->prepare($request);
         if(!$query->execute())

@@ -11,14 +11,14 @@ class Card
     private string $message;
     private string $date;
     private string $id;
-    public function __construct(Ticket $ticket, private array $categories, private array $comments)
+    public function __construct(Ticket $ticket, private array|null $categories = null, private array|null $comments = null)
     {
         $ticket->author();
         $this->author = $ticket->author();
-        $this->title = $ticket['title'];
-        $this->message = $ticket['message'];
-        $this->date = $ticket['date'];
-        $this->id = $ticket['id'];
+        $this->title = $ticket->getTitle();
+        $this->message = $ticket->getMessage();
+        $this->date = $ticket->getDate();
+        $this->id = $ticket->getID();
     }
     private function showCategories()
     {
@@ -29,6 +29,10 @@ class Card
         $display = '';
         foreach ($this->categories as $category)
         {
+            if (empty($this->category))
+            {
+                continue;
+            }
             $display .= "<p> $category->getLabel() </p>";
         }
         return $display;
@@ -40,14 +44,20 @@ class Card
             return;
         }
         $display = '';
-        foreach ($this->categories as $category)
+        foreach ($this->comments as $comment)
         {
-            $display .= "<p> $category->getLabel() </p>";
+            if (empty($this->comment))
+            {
+                continue;
+            }
+            $display .= "<p> $comment->getText() </p>";
         }
         return $display;
     }
     public function __toString(): string
     {
+        $categories = $this->showCategories();
+        $comments = $this->showComments();
         return "
         <div class='card'>
             <a href='posts&id=<?php echo $this->id ?>'>
@@ -57,8 +67,8 @@ class Card
                 <p>$this->message </p>
                 <time>$this->date</time>
                 <p>$this->id</p>
-                $this->showCategories()
-                $this->showComments()
+                $categories;
+                $comments;
             </div>
             </a>
         </div>";

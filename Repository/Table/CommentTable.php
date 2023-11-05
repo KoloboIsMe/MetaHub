@@ -7,6 +7,8 @@
 namespace Framework\Database\Table;
 
 use Comment;
+use Framework\Database\Entity\Ticket;
+use Framework\Database\Entity\User;
 
 class CommentTable
 {

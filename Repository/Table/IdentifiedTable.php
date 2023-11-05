@@ -19,12 +19,12 @@ trait IdentifiedTable
         // Cas : Recherche par identifiant
         if (isset($ID))
         {
-            $request .= " WHERE id = $ID";
+            $request .= " WHERE 'id' = $ID";
         }
         // Cas : Recherche sur une colonne spécifique
         elseif (isset($attribute))
         {
-            $request .= " WHERE $attribute = $ID";
+            $request .= " WHERE '$attribute' = $ID";
         }
         return $this->execute($request);
     }

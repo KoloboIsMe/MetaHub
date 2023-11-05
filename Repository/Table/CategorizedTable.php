@@ -8,6 +8,7 @@
 namespace Framework\Database\Table;
 
 use Categorized;
+use Framework\Database\Entity\Ticket;
 use Framework\database\Record;
 
 class CategorizedTable
@@ -38,15 +39,15 @@ class CategorizedTable
         $request = 'SELECT * FROM ' . self::TABLE;
         if (isset($ticket) && isset($category))
         {
-            $request .= " WHERE ticket = $ticket AND category = $category";
+            $request .= " WHERE 'ticket' = $ticket AND category = $category";
         }
         elseif (isset($ticket))
         {
-            $request .= " WHERE ticket = $ticket";
+            $request .= " WHERE 'ticket' = $ticket";
         }
         elseif (isset($category))
         {
-            $request .= " WHERE category = $category";
+            $request .= " WHERE 'category' = $category";
         }
         return $this->execute($request);
     }
@@ -54,7 +55,7 @@ class CategorizedTable
     {
         foreach($entities as $entity)
         {
-            $request = 'INSERT INTO' . self::TABLE . 'VALUES (';
+            $request = 'INSERT INTO ' . self::TABLE . ' VALUES (';
             foreach ($entity->toArray() as $value)
             {
                 $request .= $value;
@@ -75,7 +76,7 @@ class CategorizedTable
         }
         foreach($IDs as $ID)
         {
-            $request = 'DELETE FROM' . self::TABLE . "WHERE ID = $ID";
+            $request = 'DELETE FROM ' . self::TABLE . " WHERE ID = $ID";
             if ($this->execute($request) === FALSE)
             {
                 return FALSE;
