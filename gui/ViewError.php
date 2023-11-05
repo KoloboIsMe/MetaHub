@@ -4,7 +4,7 @@ namespace gui;
 
 class ViewError extends View
 {
-    public function __construct($layout, $error, $redirect = null)
+    public function __construct($layout, $error = null, $redirect = null)
     {
         parent::__construct($layout);
 
@@ -13,7 +13,7 @@ class ViewError extends View
 
         $this->title = 'Erreur';
 
-        if(isset($_SESSION['username']))
+        if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
         $this->content = "

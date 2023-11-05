@@ -1,54 +1,59 @@
-#container{
-    width:400px;
-    margin:0 auto;
-    margin-top:2%;
+#container {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 2%;
 }
+
 /* Bordered form */
 form {
-    width:100%;
+    width: 80vw;
     padding: 30px;
     border: 1px solid #191919;
     background: #191919;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    margin-bottom: 7vh;
+    margin-bottom: 10vh;
     margin-top: 10vh;
-    padding-bottom: 15vh;
+    padding-bottom: 5vh;
 }
-#container h1{
+
+#container h1 {
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
     color: white;
     text-align: center;
+    font-size: 3vh;
 }
 
 #container p {
     color: white;
+    font-size: 2vh;
 }
 
-#container p a{
+#container p a {
     color: lightblue;
     text-decoration: underline;
 }
 
-#container label{
+#container label {
     color: white;
     font-size: 2.5vh;
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password],textarea {
+input[type=text], input[type=password], textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid transparent;
     background: #191919;
     color: white;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 3vh;
     margin-bottom: 3vh;
     font-size: 1.7vh;
+    box-shadow: inset 25px 25px 30px #111111, inset -25px -25px 30px #242424;
 }
 
 /* Set a style for all buttons */
@@ -57,14 +62,54 @@ input[type=submit] {
     color: #242424;
     padding: 14px 20px;
     margin: 8px 0;
-    border: 1px solid white;
+    border: 1px solid transparent;
     cursor: pointer;
     width: 100%;
     margin-bottom: 3vh;
-}
-input[type=submit]:hover {
-    background-color: #191919;
-    color: #42b34a;
-    border: 1px solid white;
+    margin-top: 4vh;
+    font-size: 2vh;
+    border-radius: 3vh;
+    box-shadow: inset 20px 20px 25px #27732e, inset 10px 10px 15px #42b34a;
 }
 
+#username {
+    margin-left: 0;
+    padding-left: 2vh;
+}
+
+input[type=submit]:hover {
+    background-color: #191919;
+    box-shadow: inset 25px 25px 30px #131313, inset -25px -25px 30px #242424;
+    color: #42b34a;
+    border: 1px solid transparent;
+}
+
+@media only screen and (min-device-width: 250px) and (max-device-width: 1050px) {
+    #container {
+        width: 90%;
+    }
+
+    form {
+        width: 90vw;
+    }
+}
+
+
+@media only screen and (min-device-width: 1050px) {
+    #container {
+        width: 50%;
+        padding-top: 2.5vh;
+        padding-bottom: 5vh;
+    }
+
+    form {
+        padding-bottom: 8vh;
+        width: 50vw;
+    }
+}
+
+
+/*
+    @media only screen and (min-width: 500px) and (max-width : 1050px) {
+    }
+*/

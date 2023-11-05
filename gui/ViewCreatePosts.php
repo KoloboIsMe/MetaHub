@@ -10,9 +10,9 @@ class ViewCreatePosts extends View
 
         $this->title = 'Création de post';
 
-        if(isset($_SESSION['username']))
+        if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showCreateTicket();
+        $this->content = $presenter->show('createTicket');
     }
 }

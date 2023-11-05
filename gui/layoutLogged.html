@@ -3,47 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>%title%</title>
-    <link href="gui/css/layout.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/png" href="gui/images/MetaHubLogo.png"/>
+    <link href="gui/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="favicon.ico" rel="shortcut icon" type="image/png"/>
 
 </head>
 <body>
 <header>
-    <input type="checkbox" id="nav_check" hidden>
-    <img src="gui/images/MetaHubLogo.png" id="headerLogo"/>
+    <input hidden id="nav_check" type="checkbox">
+    <img alt="" id="headerLogo" src="gui/images/MetaHubLogo.png"/>
     <nav>
         <ul>
-            <li><a href="/"><img src="gui/images/home.png" id="headerImg"/></a></li>
-            <li><a href="posts" id="headerLinks">Posts</a></li>
-            <li><a href="createPosts" id="headerLinks">Créer un Post</a></li>
-            <li><a href="categories" id="headerLinks">Catégories</a></li>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+            <li><a href="/"><img alt="" id="headerImg" src="gui/images/home.png"/></a></li>
+            <li><a href="posts" class="header-links">Posts</a></li>
+            <li><a href="createPosts" class="header-links">Créer un Post</a></li>
+            <li><a href="categories" class="header-links">Catégories</a></li>
+            <li><a href="users" class="header-links">Utilisateurs</a></li>
         </ul>
     </nav>
-    <a href='/logout'>%username%<img src="gui/images/login.png" id="headerImg"/></a>
-    <label for="nav_check" aria-label="toggle curtain navigation" class="hamburger">
-        <div class="line l1"></div>
-        <div class="line l2"></div>
-        <div class="line l3"></div>
-    </label>
+    <a href='userEdit' id="username">Bonjour @%username% !</a>
+    <a href='logout'><img alt="" src="gui/images/logout.png" id="logoutImg"/></a>
+    <div aria-label="toggle curtain navigation" class="hamburger">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+    </div>
 </header>
+%searchBar%
 <script src="gui/js/script.js"></script>
-<body>
 %content%
 </body>
-
-<!--<footer>-->
-<!--    <div class="footerImages">-->
-<!--        <img src="gui/images/instagram.png" id="footerImg">-->
-<!--        <img src="gui/images/snapchat.png" id="footerImg">-->
-<!--        <img src="gui/images/twitter.png" id="footerImg">-->
-<!--        <img src="gui/images/facebook.png" id="footerImg">-->
-<!--    </div>-->
-<!--    <div class="footerContact">-->
-<!--        <p>Contactez-nous :</p><br>-->
-<!--        <p>Email : contact@exemple.com</p><br>-->
-<!--        <p>Téléphone : +33 123 456 789</p><br>-->
-<!--    </div>-->
-<!--    <div class="footerCopyright">-->
-<!--        © 2023 MetaHub. Tous droits réservés.-->
-<!--    </div>-->
-<!--</footer>-->
+<footer>
+    <div class="footerImages">
+        <img alt="" src="gui/images/instagram.png" class="footer-img">
+        <img alt="" src="gui/images/snapchat.png" class="footer-img">
+        <img alt="" src="gui/images/twitter.png" class="footer-img">
+        <img alt="" src="gui/images/facebook.png" class="footer-img">
+    </div>
+    <div class="footerContact">
+        <p>Contactez-nous :</p><br>
+        <p>Email : metahub@alwaysdata.net</p><br>
+        <p>Téléphone : +33 123 456 789</p><br>
+    </div>
+    <div class="footerCopyright">
+        © 2023 MetaHub. Tous droits réservés.
+    </div>
+</footer>
+</html>
