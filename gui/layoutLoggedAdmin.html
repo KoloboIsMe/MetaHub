@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>%title%</title>
     <link href="gui/css/layout.css" rel="stylesheet" type="text/css"/>
-    <link href="gui/images/MetaHubLogo.png" rel="shortcut icon" type="image/png"/>
+    <link href="favicon.ico" rel="shortcut icon" type="image/png"/>
 
 </head>
 <body>
@@ -25,11 +25,11 @@
     </nav>
     <a href='userEdit' id="username">Bonjour @%username% !</a>
     <a href='logout'><img src="gui/images/logout.png" id="logoutImg"/></a>
-    <label aria-label="toggle curtain navigation" class="hamburger" for="nav_check">
-        <div class="line l1"></div>
-        <div class="line l2"></div>
-        <div class="line l3"></div>
-    </label>
+    <div aria-label="toggle curtain navigation" class="hamburger">
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+    </div>
 </header>
 %searchBar%
 <script src="gui/js/script.js"></script>
