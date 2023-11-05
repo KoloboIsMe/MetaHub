@@ -11,13 +11,23 @@ include_once "services/UserInterface.php";
 
 class UserAccess implements UserInterface
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
+    /**
+     * @param $username
+     * @return bool
+     */
     public function existsUsername($username): bool
     {
         try {
@@ -29,6 +39,11 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $user_ID
+     * @return bool
+     */
     public function existsUser($user_ID): bool
     {
         try {
@@ -40,6 +55,12 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $username
+     * @param $password
+     * @return bool
+     */
     public function isUser($username, $password): bool
     {
         try {
@@ -55,6 +76,10 @@ class UserAccess implements UserInterface
         }
     }
 
+    /**
+     * @param $username
+     * @return User
+     */
     public function getUserByUsername($username): User
     {
         try {
@@ -66,6 +91,11 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $id
+     * @return User
+     */
     public function getUserById($id): User
     {
         try {
@@ -77,21 +107,10 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-    public function getUsersUsername(): array
-    {
-        try {
-            $statement = $this->dataAccess->prepare('SELECT username FROM user ORDER BY username DESC LIMIT 100');
-            $statement->execute();
-            $data = $statement->fetch(PDO::FETCH_ASSOC);
-            $users = [];
-            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
-                $users[] = $data['username'];
-            }
-            return $users;
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
+
+    /**
+     * @return int[]
+     */
     public function getUsersID(): array
     {
         try {
@@ -107,6 +126,12 @@ class UserAccess implements UserInterface
         }
     }
 
+    /**
+     * @param $username
+     * @param $password
+     * @param $date
+     * @return string|null
+     */
     public function register($username, $password, $date)
     {
         try {
@@ -129,6 +154,13 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $username
+     * @param $password
+     * @param $user_ID
+     * @return void
+     */
     public function updateUser($username, $password, $user_ID): void
     {
         try {
@@ -142,6 +174,11 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $user_ID
+     * @return void
+     */
     public function updateLastConnexion($user_ID): void
     {
         try {

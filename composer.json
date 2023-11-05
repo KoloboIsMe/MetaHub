@@ -7,6 +7,11 @@
   ],
   "require": {
     "ext-pdo": "*",
-    "ext-json": "*"
+    "phpdocumentor/phpdocumentor": "^3.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "symfony/flex": true
+    }
   }
 }

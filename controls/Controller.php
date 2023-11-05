@@ -13,6 +13,11 @@ class Controller
         $this->outputData = $outputData;
     }
 
+    /**
+     * @param $usersService
+     * @param $userAccess
+     * @return string|null
+     */
     public function authenticateAction($usersService, $userAccess): ?string
     {
         $usersService->authenticate($_POST['username'], $_POST['password'], $userAccess);
@@ -27,7 +32,16 @@ class Controller
         $usersService->updateLastConnexion($userAccess, $_SESSION['user_ID']);
         return null;
     }
-    public function createTicketAction($ticketsService, $ticketAccess, $categoryService,$categoriesAccess, $generalAccess): void
+
+    /**
+     * @param $ticketsService
+     * @param $ticketAccess
+     * @param $categoryService
+     * @param $categoriesAccess
+     * @param $generalAccess
+     * @return void
+     */
+    public function createTicketAction($ticketsService, $ticketAccess, $categoryService, $categoriesAccess, $generalAccess): void
     {
         $ticketID = $ticketsService->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
         if (isset($_POST["categories"])) {
@@ -36,6 +50,12 @@ class Controller
             }
         }
     }
+
+    /**
+     * @param $usersService
+     * @param $userAccess
+     * @return mixed|string
+     */
     public function registerAction($usersService, $userAccess)
     {
         if ($_POST['password'] !== $_POST['password_confirmation']) {
@@ -43,6 +63,12 @@ class Controller
         }
         return $usersService->register($_POST['username'], $_POST['password'], $userAccess);
     }
+
+    /**
+     * @param $usersService
+     * @param $userAccess
+     * @return mixed|string
+     */
     public function updateUserAction($usersService, $userAccess)
     {
         if ($usersService->existsUsername($userAccess, $_POST['username']) && $_POST['username'] !== $_SESSION['username'])
@@ -54,6 +80,13 @@ class Controller
             return "mot de passe incorrect";
     }
 
+    /**
+     * @param $usersService
+     * @param $userAccess
+     * @param $generalAccess
+     * @param $userid
+     * @return string|null
+     */
     public function deleteUser($usersService, $userAccess, $generalAccess, $userid): ?string
     {
         if ($usersService->existsUser($userAccess, $userid) && ($_SESSION['level'] > 0 || $userid == $_SESSION['user_ID'])) {
@@ -68,6 +101,14 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer cet utilisateur !';
     }
+
+    /**
+     * @param $ticketsService
+     * @param $ticketAccess
+     * @param $generalAccess
+     * @param $ticketid
+     * @return string|null
+     */
     public function deleteTicket($ticketsService, $ticketAccess, $generalAccess, $ticketid): ?string
     {
         if ($ticketsService->isTicketOwner($ticketAccess, $ticketid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
@@ -77,6 +118,12 @@ class Controller
             return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
     }
 
+    /**
+     * @param $commentsService
+     * @param $commentAccess
+     * @param $commentid
+     * @return string|null
+     */
     public function deleteComment($commentsService, $commentAccess, $commentid): ?string
     {
         if ($commentsService->isCommentOwner($commentAccess, $commentid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
@@ -85,6 +132,12 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce commentaire !';
     }
+
+    /**
+     * @param $generalAccess
+     * @param $categoryid
+     * @return string|null
+     */
     public function deleteCategory($generalAccess, $categoryid): ?string
     {
         if ($_SESSION['level'] > 0) {
@@ -94,6 +147,11 @@ class Controller
             return 'Vous n\'avez pas les droits pour supprimer cette catégorie !';
     }
 
+    /**
+     * @param $ticketsService
+     * @param $ticketAccess
+     * @return string|null
+     */
     public function editTicket($ticketsService, $ticketAccess): ?string
     {
         if ($ticketsService->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
@@ -102,6 +160,12 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour modifier ce ticket !';
     }
+
+    /**
+     * @param $id
+     * @param $generalAccessLector
+     * @return void
+     */
     public function getPostById($id, $generalAccessLector): void
     {
         $posts = $generalAccessLector->getPostById($id);

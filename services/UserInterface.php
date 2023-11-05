@@ -10,8 +10,6 @@ interface UserInterface
 
     public function getUserByUsername($username);
 
-    public function getUsersUsername();
-
     public function isUser($username, $password);
 
     public function register($username, $password, $date);

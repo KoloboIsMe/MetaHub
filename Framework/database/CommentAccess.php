@@ -10,13 +10,24 @@ include_once "Framework/entities/Comment.php";
 
 class CommentAccess implements CommentInterface
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
+    /**
+     * @param $commentID
+     * @param $user_ID
+     * @return bool
+     */
     public function isCommentOwner($commentID, $user_ID): bool
     {
         try {
@@ -32,6 +43,13 @@ class CommentAccess implements CommentInterface
         }
     }
 
+    /**
+     * @param $text
+     * @param $date
+     * @param $user_ID
+     * @param $ticket_ID
+     * @return void
+     */
     public function createComment($text, $date, $user_ID, $ticket_ID): void
     {
 
@@ -48,6 +66,10 @@ class CommentAccess implements CommentInterface
         }
     }
 
+    /**
+     * @param $commentID
+     * @return void
+     */
     public function deleteComment($commentID): void
     {
         try {
@@ -57,7 +79,5 @@ class CommentAccess implements CommentInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-
 
 }

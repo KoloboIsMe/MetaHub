@@ -12,14 +12,24 @@ use PDOException;
 
 class GeneralAccess
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
 
+    /**
+     * @param $ticketID
+     * @return void
+     */
     public function deleteTicket($ticketID): void
     {
         try {
@@ -32,6 +42,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $ticketID
+     * @return void
+     */
     public function deleteTicketComments($ticketID): void
     {
         try {
@@ -42,6 +56,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $ticketID
+     * @return void
+     */
     public function deleteTicketCategorized($ticketID): void
     {
         try {
@@ -52,6 +70,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $id
+     * @return void
+     */
     public function deleteUser($id): void
     {
         try {
@@ -62,6 +84,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $id
+     * @return void
+     */
     public function deleteCategory($id): void
     {
         try {
@@ -73,6 +99,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $category_ID
+     * @return void
+     */
     public function deleteCategoryCategorized($category_ID): void
     {
         try {
@@ -83,6 +113,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $userId
+     * @return int[]
+     */
     public function getTicketsIdByUserId($userId): array
     {
         try {
@@ -98,6 +132,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $userId
+     * @return int[]
+     */
     public function getCommentsIdByUserId($userId): array
     {
         try {
@@ -113,6 +151,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $id
+     * @return int[]
+     */
     public function getPostsIdByCategoryId($id): array
     {
         try {
@@ -128,6 +170,11 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $category
+     * @param $ticketID
+     * @return void
+     */
     public function addCategoryToTicket($category, $ticketID): void
     {
         try {
@@ -141,6 +188,10 @@ class GeneralAccess
         }
     }
 
+    /**
+     * @param $ticketId
+     * @return Post
+     */
     public function getPostById($ticketId): Post
     {
         try {

@@ -11,13 +11,23 @@ include_once "services/TicketInterface.php";
 
 class TicketAccess implements TicketInterface
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
+    /**
+     * @param $ticketID
+     * @return bool
+     */
     public function existsTicket($ticketID): bool
     {
         try {
@@ -29,6 +39,12 @@ class TicketAccess implements TicketInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $ticketID
+     * @param $userID
+     * @return bool
+     */
     public function isTicketOwner($ticketID, $userID): bool
     {
         try {
@@ -43,6 +59,9 @@ class TicketAccess implements TicketInterface
         }
     }
 
+    /**
+     * @return int[]
+     */
     public function getTicketsID(): array
     {
         try {
@@ -57,6 +76,10 @@ class TicketAccess implements TicketInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @return int[]
+     */
     public function get5LastTicketsID(): array
     {
         try {
@@ -73,6 +96,13 @@ class TicketAccess implements TicketInterface
         }
     }
 
+    /**
+     * @param $title
+     * @param $message
+     * @param $date
+     * @param $author
+     * @return int
+     */
     public function createTicket($title, $message, $date, $author)
     {
         try {
@@ -96,6 +126,13 @@ class TicketAccess implements TicketInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $id
+     * @param $title
+     * @param $message
+     * @return void
+     */
     public function editTicket($id, $title, $message): void
     {
         try {

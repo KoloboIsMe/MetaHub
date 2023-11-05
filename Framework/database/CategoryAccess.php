@@ -14,13 +14,23 @@ include_once "Framework/entities/Category.php";
 
 class CategoryAccess implements CategoryInterface
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
+    /**
+     * @param $CategoryID
+     * @return bool
+     */
     public function existsCategory($CategoryID): bool
     {
         try {
@@ -33,6 +43,10 @@ class CategoryAccess implements CategoryInterface
         }
     }
 
+    /**
+     * @param $ID
+     * @return Category
+     */
     public function getCategoryById($ID): Category
     {
         try {
@@ -44,6 +58,10 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @return int[]
+     */
     public function getCategoriesID(): array
     {
         try {
@@ -58,6 +76,10 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @return Category[]
+     */
     public function get5LastCategories(): array
     {
         try {
@@ -72,6 +94,11 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @param $label
+     * @return int
+     */
     public function getCategoryIdByLabel($label)
     {
         try {
@@ -85,6 +112,11 @@ class CategoryAccess implements CategoryInterface
         }
     }
 
+    /**
+     * @param $label
+     * @param $description
+     * @return string|null
+     */
     public function createCategory($label, $description): ?string
     {
         try {

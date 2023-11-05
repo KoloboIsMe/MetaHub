@@ -14,6 +14,10 @@ class Presenter
         $this->outputData = $outputData;
     }
 
+    /**
+     * @param $presenterName
+     * @return false|string
+     */
     public function show($presenterName)
     {
         $data = $this->outputData->getOutputData();
@@ -23,6 +27,10 @@ class Presenter
         return ob_get_clean();
     }
 
+    /**
+     * @param $category
+     * @return false|string
+     */
     public function showCategory($category)
     {
         $data = $this->outputData->getOutputData();
@@ -32,6 +40,10 @@ class Presenter
         return ob_get_clean();
     }
 
+    /**
+     * @param $user
+     * @return false|string
+     */
     public function showUser($user)
     {
         $data = $this->outputData->getOutputData();
