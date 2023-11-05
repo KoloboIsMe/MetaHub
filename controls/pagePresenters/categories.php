@@ -10,9 +10,11 @@
         <div class='card-content'>
             <h3> #<?= $category->getLabel() ?></h3>
             <p><?= $category->getDescription() ?></p>
-            <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
-                <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
-            <?php }?>
+            <div class="edit-delete">
+                <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
+                    <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                <?php }?>
+            </div>
         </div>
         </a>
     </div>
