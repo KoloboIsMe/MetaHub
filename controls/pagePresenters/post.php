@@ -19,10 +19,12 @@ $id = $post->getTicket()->getTicket_ID(); ?>
                 <p><?= $post->getTicket()->getMessage() ?></p>
                 <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B></time>
                 <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
-                <div class="edit-delete">
-                    <a href='editTicket&id=<?= $id ?>'><button ><img alt="" src='gui/images/edit.png' id='editImg'></button></a>
-                    <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img alt="" src='gui/images/delete.png' id='deleteImg'></button></a>
-                </div>
+                <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
+                    <div class="edit-delete">
+                        <a href='editTicket&id=<?= $id ?>'><button ><img alt="" src='gui/images/edit.png' id='editImg'></button></a>
+                        <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img alt="" src='gui/images/delete.png' id='deleteImg'></button></a>
+                    </div>
+                <?php } ?>
             </div>
         </a>
     </div>

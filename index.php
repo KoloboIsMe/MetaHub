@@ -40,6 +40,13 @@ $dbAdmin = null;
 $dbLector = null;
 try {
 
+    putenv("IPADRESS=mysql-metahub.alwaysdata.net");
+    putenv("DBNAME=metahub_login");
+    putenv("ADMIN=metahub");
+    putenv("LECTOR=metahub_lector");
+    putenv("ADMINPASSWORD=MetaHubAdmin13.");
+    putenv("LECTORPASSWORD=MetaHubAdmin13.");
+
     // construction du modèle
     $dbAdmin = database\SPDO::getInstance("ADMIN");
     $dbLector = database\SPDO::getInstance("LECTOR");
