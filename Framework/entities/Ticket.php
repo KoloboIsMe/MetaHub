@@ -12,8 +12,6 @@ class Ticket extends Entity
     private $date;
     private $author;
 
-    //Setters
-
     public function getTicket_ID()
     {
         return $this->ticket_ID;
@@ -43,8 +41,6 @@ class Ticket extends Entity
     {
         return $this->message;
     }
-
-    //Getters
 
     public function setMessage($message)
     {

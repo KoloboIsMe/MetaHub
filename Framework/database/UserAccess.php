@@ -5,9 +5,9 @@ namespace database;
 use entities\User;
 use PDO;
 use PDOException;
-use service\UserInterface;
+use services\UserInterface;
 
-include_once "service/UserInterface.php";
+include_once "services/UserInterface.php";
 
 class UserAccess implements UserInterface
 {
@@ -17,7 +17,8 @@ class UserAccess implements UserInterface
     {
         $this->dataAccess = $dataAccess;
     }
-    public function existsUsername($username)
+
+    public function existsUsername($username): bool
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT username FROM user where username = :username');
@@ -28,8 +29,7 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function existsUser($user_ID)
+    public function existsUser($user_ID): bool
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :user_ID');
@@ -40,8 +40,22 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+    public function isUser($username, $password): bool
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT password FROM user where username = :username LIMIT 100');
+            $statement->execute([':username' => $username]);
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+            if (isset($user['password']) && password_verify($password, $user['password']))
+                return true;
+            else
+                return false;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
 
-    public function getUserByUsername($username)
+    public function getUserByUsername($username): User
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM user where username = :username');
@@ -52,8 +66,18 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function getUsersUsername()
+    public function getUserById($id): User
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :id');
+            $statement->execute([':id' => $id]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return new User($data);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+    public function getUsersUsername(): array
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT username FROM user ORDER BY username DESC LIMIT 100');
@@ -68,17 +92,16 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function isUser($username, $password)
+    public function getUsersID(): array
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT password FROM user where username = :username LIMIT 100');
-            $statement->execute([':username' => $username]);
-            $user = $statement->fetch(PDO::FETCH_ASSOC);
-            if (isset($user['password']) && password_verify($password, $user['password']))
-                return true;
-            else
-                return false;
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user ORDER BY user_ID DESC LIMIT 100');
+            $statement->execute();
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $ID[] = $data['user_ID'];
+            }
+            return $ID;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
@@ -106,8 +129,8 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function updateUser($username, $password, $user_ID){
+    public function updateUser($username, $password, $user_ID): void
+    {
         try {
             $statement = $this->dataAccess->prepare('UPDATE user SET username = :username, password = :password WHERE user_ID = :user_ID');
             $statement->execute([
@@ -119,8 +142,7 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-
-    public function updateLastConnexion($user_ID)
+    public function updateLastConnexion($user_ID): void
     {
         try {
             $statement = $this->dataAccess->prepare('UPDATE user SET last_connexion = :date WHERE user_ID = :user_ID');
@@ -128,33 +150,6 @@ class UserAccess implements UserInterface
                 ':date' => date("Y-m-d H:i"),
                 ':user_ID' => $user_ID,
             ]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function getUserById($id)
-    {
-        try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :id');
-            $statement->execute([':id' => $id]);
-            $data = $statement->fetch(PDO::FETCH_ASSOC);
-            return new User($data);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function getUsersID()
-    {
-        try {
-            $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user ORDER BY user_ID DESC LIMIT 100');
-            $statement->execute();
-            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
-                $ID[] = $data['user_ID'];
-            }
-            return $ID;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }

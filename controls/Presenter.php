@@ -19,14 +19,14 @@ class Presenter
         $data = $this->outputData->getOutputData();
         extract(array('data' => $data));
         ob_start();
-        require 'controls/pagePresenters/'.$presenterName.'.php';
+        require 'controls/pagePresenters/' . $presenterName . '.php';
         return ob_get_clean();
     }
 
     public function showCategory($category)
     {
         $data = $this->outputData->getOutputData();
-        extract(array('data' => $data , 'category' => $category));
+        extract(array('data' => $data, 'category' => $category));
         ob_start();
         require 'controls/pagePresenters/category.php';
         return ob_get_clean();
@@ -35,7 +35,7 @@ class Presenter
     public function showUser($user)
     {
         $data = $this->outputData->getOutputData();
-        extract(array('data' => $data , 'user' => $user));
+        extract(array('data' => $data, 'user' => $user));
         ob_start();
         require 'controls/pagePresenters/user.php';
         return ob_get_clean();

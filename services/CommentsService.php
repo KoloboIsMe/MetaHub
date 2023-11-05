@@ -1,8 +1,8 @@
 <?php
 
-namespace service;
+namespace services;
 
-class CommentsGetting
+class CommentsService
 {
 
     private $outputData;

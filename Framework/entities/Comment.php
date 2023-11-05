@@ -13,8 +13,6 @@ class Comment extends Entity
     private $author_username;
     private $ticket;
 
-    //Setters
-
     public function setUsername($author_username)
     {
         if (is_string($author_username)) {
@@ -60,8 +58,6 @@ class Comment extends Entity
     {
         return $this->date;
     }
-
-    //Getters
 
     public function setDate($date)
     {

@@ -2,9 +2,9 @@
 
 namespace database;
 
-use service\CommentInterface;
+use services\CommentInterface;
 
-include_once "service/CommentInterface.php";
+include_once "services/CommentInterface.php";
 include_once "Framework/entities/Comment.php";
 
 class CommentAccess implements CommentInterface
@@ -16,7 +16,23 @@ class CommentAccess implements CommentInterface
         $this->dataAccess = $dataAccess;
     }
 
-    public function createComment($text,$date, $user_ID, $ticket_ID){
+    public function isCommentOwner($commentID, $user_ID): bool
+    {
+        try {
+            $statement = $this->dataAccess->prepare("SELECT comment_ID FROM comment WHERE comment_ID = :commentID AND author = :user_ID");
+            $statement->execute(array(
+                ':commentID' => $commentID,
+                ':user_ID' => $user_ID
+            ));
+            $data = $statement->fetch(\PDO::FETCH_ASSOC);
+            return isset($data['comment_ID']);
+        } catch (\PDOException $e) {
+            throw new \PDOException("Error checking if comment owner");
+        }
+    }
+
+    public function createComment($text, $date, $user_ID, $ticket_ID): void
+    {
 
         try {
             $statement = $this->dataAccess->prepare("INSERT INTO comment (text, date, author, ticket) VALUES (:text, :date, :user_ID, :ticket_ID)");
@@ -31,18 +47,6 @@ class CommentAccess implements CommentInterface
         }
     }
 
-    public function isCommentOwner($commentID, $user_ID){
-        try {
-            $statement = $this->dataAccess->prepare("SELECT comment_ID FROM comment WHERE comment_ID = :commentID AND author = :user_ID");
-            $statement->execute(array(
-                ':commentID' => $commentID,
-                ':user_ID' => $user_ID
-            ));
-            $data = $statement->fetch(\PDO::FETCH_ASSOC);
-            return isset($data['comment_ID']);
-        } catch (\PDOException $e) {
-            throw new \PDOException("Error checking if comment owner");
-        }
-    }
+
 
 }

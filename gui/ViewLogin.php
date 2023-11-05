@@ -10,7 +10,7 @@ class ViewLogin extends View
 
         $this->title = 'Connexion';
 
-        $page ? $action = '/'.$_GET['url'].'?action=login_verification&id=' . $page : $action = '/'.$_GET['url'].'?action=login_verification';
+        $page ? $action = '/' . $_GET['url'] . '?action=login_verification&id=' . $page : $action = '/' . $_GET['url'] . '?action=login_verification';
 
         $this->content = "
         <link href='gui/css/forms.css' rel='stylesheet' type='text/css' />

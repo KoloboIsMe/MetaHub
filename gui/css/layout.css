@@ -13,7 +13,7 @@ body {
 
 header {
     width: 100%;
-    height : 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@ header {
     z-index: 100;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ header nav ul li {
     margin: 23px 5px;
 }
 
-header nav ul li a{
+header nav ul li a {
     color: #EEF1EF;
     display: inline;
     justify-content: space-between;
@@ -42,7 +42,7 @@ header nav ul li a{
     font-size: 1.5vh;
 }
 
-#username{
+#username {
     color: #EEF1EF;
     display: inline;
     padding: 10px 0;
@@ -52,23 +52,23 @@ header nav ul li a{
     font-family: 'Comfortaa', sans-serif;
 }
 
-header nav ul li #headerLinks:hover{
+header nav ul li #headerLinks:hover {
     border-bottom-color: white;
     transition: all 1s linear;
 }
 
-#headerLogo{
+#headerLogo {
     margin-top: 1vh;
     height: 7vh;
     width: 7vh;
 }
 
-#headerImg, #loginImg, #logoutImg{
+#headerImg, #loginImg, #logoutImg {
     height: 4vh;
     width: 4vh;
 }
 
-#loginImg, #logoutImg{
+#loginImg, #logoutImg {
     margin-top: 1.5vh;
 }
 
@@ -85,7 +85,7 @@ header nav ul li #headerLinks:hover{
     margin-top: 12px;
 }
 
-.line{
+.line {
     transition: transform 0.3s ease-out,
     opacity 0.1s ease-out;
 }
@@ -105,23 +105,23 @@ header nav ul li #headerLinks:hover{
     width: 35px;
 }
 
-@media only screen and (max-width : 500px){
-    header{
+@media only screen and (max-width: 500px) {
+    header {
         padding: 30px 30px;
     }
 
-    header nav{
+    header nav {
         z-index: 10000;
     }
 }
 
-@media only screen and (min-width: 500px) and (max-width : 1050px) {
+@media only screen and (min-width: 500px) and (max-width: 1050px) {
     .hamburger {
         display: block;
         top: 0.8vh;
     }
 
-    header nav{
+    header nav {
         position: absolute;
         width: 100%;
         right: 100%;
@@ -138,23 +138,26 @@ header nav ul li #headerLinks:hover{
         text-align: center;
         z-index: 1000;
     }
-    header #nav_check:checked ~ nav{
+
+    header #nav_check:checked ~ nav {
         right: 0;
     }
-    header nav ul{
+
+    header nav ul {
         display: block;
     }
-    header nav ul li a{
-        color:white;
-        margin: 5px 0 ;
+
+    header nav ul li a {
+        color: white;
+        margin: 5px 0;
     }
 
-    header nav ul li #headerLinks{
+    header nav ul li #headerLinks {
         display: flex;
         justify-content: center;
     }
 
-    #username{
+    #username {
         margin-top: 2vh;
     }
 
@@ -168,50 +171,50 @@ header nav ul li #headerLinks:hover{
         margin: 0 auto;
     }
 
-    .card-container1{
+    .card-container1 {
         width: 100%;
     }
 
-    .card-container2{
+    .card-container2 {
         width: 90%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
+    .card-container1 .card, .card-container2 .card2, .card-container2 .card3 {
         width: 90vw;
         margin: 20px auto;
     }
 
-    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card{
+    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card {
         width: 90vw;
     }
 
-    .card-container1 .comment-card{
+    .card-container1 .comment-card {
         margin-left: 0.5vh;
     }
 
-    .footerImages{
+    .footerImages {
         display: flex;
         justify-content: center;
-        align-items:center ;
+        align-items: center;
         margin-bottom: 3vh;
     }
 
-    h2{
+    h2 {
         font-size: 1.5vh;
     }
 
-    .comment-card .input{
+    .comment-card .input {
         border-radius: 3vh;
     }
 
-    .comment-card .btn{
+    .comment-card .btn {
         font-size: 2vh;
         border-radius: 3vh;
     }
 }
 
-@media only screen and (min-device-width : 250px) and (max-device-width : 500px) {
-    header{
+@media only screen and (min-device-width: 250px) and (max-device-width: 500px) {
+    header {
         margin-top: 2vh;
     }
 
@@ -219,7 +222,8 @@ header nav ul li #headerLinks:hover{
         display: block;
         top: 20px;
     }
-    header nav{
+
+    header nav {
         position: absolute;
         width: 100%;
         right: 100%;
@@ -236,36 +240,39 @@ header nav ul li #headerLinks:hover{
         text-align: center;
         z-index: 1000;
     }
-    header #nav_check:checked ~ nav{
+
+    header #nav_check:checked ~ nav {
         right: 0;
     }
-    header nav ul{
+
+    header nav ul {
         display: block;
     }
-    header nav ul li a{
-        color:white;
-        margin: 5px 0 ;
+
+    header nav ul li a {
+        color: white;
+        margin: 5px 0;
     }
 
-    header nav ul li #headerLinks{
+    header nav ul li #headerLinks {
         display: flex;
         justify-content: center;
     }
 
-    header nav{
+    header nav {
         padding-top: 5vh;
     }
 
-    #username{
+    #username {
         margin-top: 2vh;
         z-index: 10000;
     }
 
-    #headerImg{
+    #headerImg {
         margin-top: 3vh;
     }
 
-    #loginImg, #logoutImg{
+    #loginImg, #logoutImg {
         margin-top: 1.9vh;
         z-index: 1000;
     }
@@ -290,51 +297,51 @@ header nav ul li #headerLinks:hover{
         margin: 0 auto;
     }
 
-    .card-container1{
+    .card-container1 {
         width: 100%;
     }
 
-    .card-container2{
+    .card-container2 {
         width: 80%;
     }
 
-    .card-container2 .card2, .card-container2 .card3{
+    .card-container2 .card2, .card-container2 .card3 {
         width: 80vw;
         margin: 10px auto;
     }
 
-    .card-container1 .card{
+    .card-container1 .card {
         width: 90vw;
     }
 
-    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card{
+    .card-container .post-card, .card-container .category-card, .card-container1 .comment-card {
         width: 90vw;
         margin: 20px auto;
     }
 
-    .footerImages{
+    .footerImages {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         margin-bottom: 3vh;
     }
 
-    #time{
+    #time {
         font-size: 1vh;
     }
 
-    .comment-card .input{
+    .comment-card .input {
         border-radius: 3vh;
     }
 
-    .comment-card .btn{
+    .comment-card .btn {
         font-size: 1.5vh;
         border-radius: 3vh;
     }
 
 }
 
-#card-username{
+#card-username {
     margin-bottom: 2vh;
     margin-left: 2vw;
     margin-top: 2vh;
@@ -346,12 +353,12 @@ header nav ul li #headerLinks:hover{
 }
 
 
-#userImg{
+#userImg {
     width: 8vh;
     height: 8vh;
 }
 
-#username-list{
+#username-list {
     margin-bottom: 2vh;
     margin-left: 2vw;
     margin-top: 2vh;
@@ -362,29 +369,29 @@ header nav ul li #headerLinks:hover{
     box-shadow: 1px 5px 10px #090909;
 }
 
-#usersImg{
+#usersImg {
     width: 5vh;
     height: 5vh;
     margin-left: 4vh;
     margin-top: 3vh;
 }
 
-#user-comment-img{
+#user-comment-img {
     height: 5vh;
     width: 5vh;
 }
 
-#time{
+#time {
     margin-top: 2vh;
     color: #EEF1EF;
 }
 
-#post-number{
+#post-number {
     color: #3f3f3f;
     font-size: 1.5vh;
 }
 
-.post-header{
+.post-header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -392,7 +399,7 @@ header nav ul li #headerLinks:hover{
     margin-bottom: 3vh;
 }
 
-.comment{
+.comment {
     width: fit-content;
     font-size: 2vh;
     border-radius: 3vw;
@@ -406,12 +413,12 @@ header nav ul li #headerLinks:hover{
 }
 
 
-.comment-content{
+.comment-content {
     margin-top: 1.5vh;
     margin-left: 1.5vh;
 }
 
-.input{
+.input {
     width: 95%;
     height: 100%;
     background: transparent;
@@ -427,11 +434,11 @@ header nav ul li #headerLinks:hover{
 }
 
 
-#comment{
+#comment {
     margin-bottom: 3vh;
 }
 
-.btn{
+.btn {
     position: relative;
     top: 2vh;
     background: #42b34a;
@@ -448,7 +455,7 @@ header nav ul li #headerLinks:hover{
     text-align: center;
 }
 
-#category{
+#category {
     margin-top: 0.7vh;
 }
 
@@ -458,7 +465,7 @@ header nav ul li #headerLinks:hover{
     font-family: 'Comfortaa', sans-serif
 }
 
-p{
+p {
     color: white;
     font-family: 'Comfortaa', sans-serif;
     margin-bottom: 1.5vh;
@@ -469,14 +476,14 @@ p{
     */
 }
 
-#category-description{
+#category-description {
     font-family: 'Comfortaa', sans-serif;
     font-size: 2vh;
     margin-top: 3vh;
     margin-left: 5vh;
 }
 
-.comment-card{
+.comment-card {
     position: relative;
     height: auto;
     width: 50vw;
@@ -489,7 +496,7 @@ p{
     padding-bottom: 2vh;
 }
 
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -497,7 +504,7 @@ p{
     margin-top: 2vh;
 }
 
-.card-container1{
+.card-container1 {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
@@ -505,13 +512,13 @@ p{
     float: left;
 }
 
-.card-container2{
+.card-container2 {
     display: grid;
     justify-content: right;
     margin-top: 20px;
 }
 
-.users-card{
+.users-card {
     width: fit-content;
     margin-left: 3vh;
     margin-right: 3vh;
@@ -523,7 +530,7 @@ p{
     margin: 20px;
 }
 
-.card{
+.card {
     width: 50vw;
     height: auto;
     background-color: #242424;
@@ -533,7 +540,7 @@ p{
     margin: 20px;
 }
 
-.card2{
+.card2 {
     width: 40vw;
     height: 40vh;
     background-color: #242424;
@@ -543,7 +550,7 @@ p{
     margin: 20px;
 }
 
-.card3{
+.card3 {
     width: 40vw;
     height: 60vh;
     background-color: #242424;
@@ -553,7 +560,7 @@ p{
     margin: 20px;
 }
 
-.post-card{
+.post-card {
     width: 45vw;
     height: auto;
     background-color: #242424;
@@ -563,7 +570,7 @@ p{
     margin: 20px;
 }
 
-.category-card{
+.category-card {
     padding-bottom: 8vh;
     margin-bottom: 5vh;
     height: 17vh;
@@ -575,18 +582,18 @@ p{
     margin: 20px;
 }
 
-.card-content{
+.card-content {
     padding: 16px;
 }
 
-.card-content i{
+.card-content i {
     color: rgba(238, 241, 239, 0.68);
     border-bottom: #42B34A;
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
 
-.card-content h3{
+.card-content h3 {
     font-size: 3vh;
     color: white;
     margin-bottom: 1vh;
@@ -595,13 +602,13 @@ p{
     border-bottom-width: 1px;
 }
 
-.card-content p{
+.card-content p {
     font-size: 1.8vh;
     line-height: 1.5;
     padding-top: 2vh;
 }
 
-h2{
+h2 {
     font-size: 3.5vh;
     color: white;
     margin-top: 4vh;
@@ -611,7 +618,7 @@ h2{
     border-bottom-style: solid;
 }
 
-.card-content ul li{
+.card-content ul li {
     display: grid;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -621,43 +628,43 @@ h2{
     margin-bottom: 4vh;
 }
 
-button{
+button {
     background-color: transparent;
     border-style: none;
 }
 
-#add-button{
+#add-button {
     height: 3vh;
     width: 3vh;
     margin-top: 3vh;
     margin-left: 5vh;
 }
 
-.edit-delete{
+.edit-delete {
     display: flex;
     justify-content: right;
     flex-direction: row;
     border-spacing: 2vh;
 }
 
-#editImg, #deleteImg{
+#editImg, #deleteImg {
     height: 2.5vh;
     width: 2.5vh;
     margin-left: 1vh;
 }
 
-#editCommentImg, #deleteCommentImg{
+#editCommentImg, #deleteCommentImg {
     height: 2vh;
     width: 2vh;
     margin-left: 1vh;
     margin-top: 1.5vh;
 }
 
-#editCommentImg{
+#editCommentImg {
     margin-left: 4vh;
 }
 
-#deleteUser{
+#deleteUser {
     height: 2.5vh;
     width: 2.5vh;
     margin-left: 1vh;
@@ -665,7 +672,7 @@ button{
     margin-right: 3vh;
 }
 
-.delete-user{
+.delete-user {
     display: flex;
     flex-direction: row;
     margin-top: 2vh;
@@ -673,18 +680,18 @@ button{
     justify-content: center;
 }
 
-.category-list a li{
+.category-list a li {
     color: white;
     font-size: 3vh;
 }
 
-.dotImg{
+.dotImg {
     height: 3vh;
     width: 3vh;
     margin-top: 2.5vh;
 }
 
-footer{
+footer {
     height: 40vh;
     width: 100%;
     background: #242424;
@@ -697,15 +704,15 @@ footer{
 
 }
 
-.footerImages{
+.footerImages {
     display: flex;
     justify-content: center;
-    align-items:center ;
+    align-items: center;
     margin-bottom: 3vh;
 
 }
 
-#footerImg{
+#footerImg {
     margin-right: 10px;
     margin-top: 4vh;
     cursor: pointer;
@@ -713,7 +720,7 @@ footer{
     width: 3vh;
 }
 
-.footerContact{
+.footerContact {
     display: inline;
     justify-content: center;
     align-items: center;
@@ -722,7 +729,7 @@ footer{
     color: #EEF1EF;
 }
 
-.footerCopyright{
+.footerCopyright {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,4 +1,3 @@
-
 <h2>Fil d'actualité</h2>
 <div class='card-container1'>
     <?php
@@ -22,7 +21,8 @@
                         <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
                             <div class='edit-delete'>
                                 <a href='editTicket&id=<?= $id ?>'><img src='gui/images/edit.png' id='editImg'></a>
-                                <a href='?action=deleteTicketAction&id=<?= $id ?>'><img src='gui/images/delete.png' id='deleteImg'></a>
+                                <a href='?action=deleteTicketAction&id=<?= $id ?>'><img src='gui/images/delete.png'
+                                                                                        id='deleteImg'></a>
                             </div>
                         <?php } ?>
                     </div>

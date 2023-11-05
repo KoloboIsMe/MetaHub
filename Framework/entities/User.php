@@ -13,8 +13,6 @@ class User extends Entity
     private $last_connexion;
     private $level;
 
-    //Setters
-
     public function getUser_ID()
     {
         return $this->user_ID;
@@ -52,8 +50,6 @@ class User extends Entity
         }
     }
 
-    //Getters
-
     public function getFirst_connexion()
     {
         return $this->first_connexion;
@@ -82,7 +78,7 @@ class User extends Entity
     public function setLevel($level)
     {
         $level = (int)$level;
-        if ($level === 0 || $level === 1 || $level === 2 ) {
+        if ($level === 0 || $level === 1 || $level === 2) {
             $this->level = $level;
         }
     }

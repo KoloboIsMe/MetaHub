@@ -13,51 +13,53 @@ class Controller
         $this->outputData = $outputData;
     }
 
-    public function authenticateAction($usersGetting, $userAccess)
+    public function authenticateAction($usersService, $userAccess)
     {
-        $usersGetting->authenticate($_POST['username'], $_POST['password'], $userAccess);
+        $usersService->authenticate($_POST['username'], $_POST['password'], $userAccess);
         if (!$this->outputData->getOutputData()) {
             return 'Mauvais identifiant ou mot de passe !';
         }
-        $user = $usersGetting->getUserByUsername($userAccess, $_POST['username']);
+        $user = $usersService->getUserByUsername($userAccess, $_POST['username']);
         $_SESSION['isLogged'] = true;
         $_SESSION['username'] = $user->getUsername();
         $_SESSION['user_ID'] = $user->getUser_ID();
         $_SESSION['level'] = $user->getLevel();
-        $usersGetting->updateLastConnexion($userAccess, $_SESSION['user_ID']);
+        $usersService->updateLastConnexion($userAccess, $_SESSION['user_ID']);
         return null;
     }
 
-    public function registerAction($usersGetting, $userAccess)
+    public function registerAction($usersService, $userAccess)
     {
         if ($_POST['password'] !== $_POST['password_confirmation']) {
             return 'Les mots de passe ne correspondent pas !';
         }
-        return $usersGetting->register($_POST['username'], $_POST['password'], $userAccess);
+        return $usersService->register($_POST['username'], $_POST['password'], $userAccess);
     }
 
-    public function updateUserAction($usersGetting, $userAccess)
+    public function updateUserAction($usersService, $userAccess)
     {
-        if ($usersGetting->existsUsername($userAccess, $_POST['username']) && $_POST['username'] !== $_SESSION['username'])
+        if ($usersService->existsUsername($userAccess, $_POST['username']) && $_POST['username'] !== $_SESSION['username'])
             return "nom d'utilisateur déja pris";
-        if (password_verify($_POST['old_password'], $usersGetting->getUserById($userAccess, $_SESSION['user_ID'])->getPassword())) {
+        if (password_verify($_POST['old_password'], $usersService->getUserById($userAccess, $_SESSION['user_ID'])->getPassword())) {
             isset($_POST['password']) ? $newPassword = $_POST['password'] : $newPassword = $_POST['old_password'];
-            return $error = $usersGetting->updateUser($_POST['username'], $newPassword, $userAccess);
+            return $error = $usersService->updateUser($_POST['username'], $newPassword, $userAccess);
         } else
             return "mot de passe incorrect";
     }
 
-    public function createTicketAction($ticketsGetting, $ticketAccess)
+    public function createTicketAction($ticketsService, $ticketAccess, $categoryService,$categoriesAccess, $generalAccess)
     {
-        $ticketID = $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
+        $ticketID = $ticketsService->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
         if (isset($_POST["categories"])) {
-            $ticketsGetting->addCategoriesToTicket($ticketAccess, $_POST["categories"], $ticketID);
+            foreach ($_POST["categories"] as $category) {
+                $generalAccess->addCategoryToTicket($categoryService->getCategoryIdByLabel($categoriesAccess, $category), $ticketID);
+            }
         }
     }
 
-    public function deleteUser($usersGetting, $userAccess, $generalAccess, $userid)
+    public function deleteUser($usersService, $userAccess, $generalAccess, $userid)
     {
-        if ($usersGetting->existsUser($userAccess, $userid) && ($_SESSION['level'] > 0 || $userid == $_SESSION['user_ID'])) {
+        if ($usersService->existsUser($userAccess, $userid) && ($_SESSION['level'] > 0 || $userid == $_SESSION['user_ID'])) {
             foreach ($generalAccess->getTicketsIdByUserId($userid) as $ticketID) {
                 $generalAccess->deleteTicket($ticketID);
             }
@@ -70,18 +72,18 @@ class Controller
             return 'Vous n\'avez pas les droits pour supprimer cet utilisateur !';
     }
 
-    public function deleteTicket($ticketsGetting, $ticketAccess, $generalAccess, $ticketid)
+    public function deleteTicket($ticketsService, $ticketAccess, $generalAccess, $ticketid)
     {
-        if ($ticketsGetting->isTicketOwner($ticketAccess, $ticketid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
+        if ($ticketsService->isTicketOwner($ticketAccess, $ticketid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
             $generalAccess->deleteTicket($ticketid);
             return null;
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
     }
 
-    public function deleteComment($commentsGetting, $commentAccess, $generalAccess, $commentid)
+    public function deleteComment($commentsService, $commentAccess, $generalAccess, $commentid)
     {
-        if ($commentsGetting->isCommentOwner($commentAccess, $commentid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
+        if ($commentsService->isCommentOwner($commentAccess, $commentid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
             $generalAccess->deleteComment($commentid);
             return null;
         } else
@@ -97,10 +99,10 @@ class Controller
             return 'Vous n\'avez pas les droits pour supprimer cette catégorie !';
     }
 
-    public function editTicket($ticketsGetting, $ticketAccess)
+    public function editTicket($ticketsService, $ticketAccess)
     {
-        if ($ticketsGetting->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
-            $ticketsGetting->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
+        if ($ticketsService->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
+            $ticketsService->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
             return null;
         } else
             return 'Vous n\'avez pas les droits pour modifier ce ticket !';

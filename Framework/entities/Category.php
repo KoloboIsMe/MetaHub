@@ -10,8 +10,6 @@ class Category extends Entity
     private $label;
     private $description;
 
-    //Setters
-
     public function getCategory_ID()
     {
         return $this->category_ID;
@@ -29,8 +27,6 @@ class Category extends Entity
     {
         return $this->label;
     }
-
-    //Getters
 
     public function setLabel($label)
     {

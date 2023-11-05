@@ -1,6 +1,6 @@
 <?php
 
-namespace service;
+namespace services;
 
 class OutputData
 {
@@ -20,6 +20,7 @@ class OutputData
     {
         $this->outputData = $data;
     }
+
     public function addOutputData($data)
     {
         $this->outputData = array_merge($this->outputData, $data);
