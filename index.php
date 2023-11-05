@@ -40,7 +40,6 @@ $dbAdmin = null;
 $dbLector = null;
 try {
 
-    define("BASE_DE_DONNEES", 'metahub_login');
     // construction du modèle
     $dbAdmin = database\SPDO::getInstance("ADMIN");
     $dbLector = database\SPDO::getInstance("LECTOR");
