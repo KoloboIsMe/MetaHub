@@ -1,3 +1,4 @@
+
 <h2>Fil d'actualité</h2>
 <div class='card-container1'>
     <?php
@@ -11,7 +12,7 @@
                     <div class='card-content'>
                         <div class='post-header'>
                             <img src='gui/images/user.png' id='userImg'>
-                            <p id='card-username'>@ <?= $post->getUser()->getUsername(); ?></p>
+                            <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p>
                         </div>
                         <h3> <?= $post->getTicket()->getTitle() ?> </h3>
                         <p>  <?= $post->getTicket()->getMessage() ?></p>

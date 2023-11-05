@@ -10,6 +10,10 @@ class UsersGetting
     {
         $this->outputData = $outputData;
     }
+    public function existsUsername($dataccess, $username)
+    {
+        return $dataccess->existsUsername($username);
+    }
 
     public function existsUser($dataccess, $user_ID)
     {
@@ -24,6 +28,10 @@ class UsersGetting
     public function register($username, $password, $dataccess)
     {
         return $dataccess->register($username, $password, date("Y-m-d H:i"));
+    }
+    public function updateUser($username, $password, $dataccess)
+    {
+        return $dataccess->updateUser($username, $password, $_SESSION['user_ID']);
     }
 
     public function getUserByUsername($dataccess, $username)
@@ -48,5 +56,10 @@ class UsersGetting
     public function getUserById($dataccess, $id)
     {
         return $dataccess->getUserById($id);
+    }
+
+    public function setUserById($dataccess, $id)
+    {
+        $this->outputData->setOutputData($dataccess->getUserById($id));
     }
 }

@@ -34,6 +34,17 @@ class Controller
         return $usersGetting->register($_POST['username'], $_POST['password'], $userAccess);
     }
 
+    public function updateUserAction($usersGetting, $userAccess)
+    {
+        if ($usersGetting->existsUsername($userAccess, $_POST['username']) && $_POST['username']!==$_SESSION['username'])
+            return "nom d'utilisateur déja pris";
+        if(password_verify($_POST['old_password'], $usersGetting->getUserById($userAccess, $_SESSION['user_ID'])->getPassword())) {
+            isset($_POST['password']) ? $newPassword = $_POST['password'] : $newPassword = $_POST['old_password'];
+            return $error = $usersGetting->updateUser($_POST['username'], $newPassword, $userAccess);
+        }else
+            return "mot de passe incorrect";
+    }
+
     public function createTicketAction($ticketsGetting, $ticketAccess)
     {
         $ticketID = $ticketsGetting->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);

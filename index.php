@@ -25,6 +25,7 @@ include_once 'gui/ViewHomepage.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewRegister.php';
 include_once 'gui/ViewPosts.php';
+include_once 'gui/ViewUserEdit.php';
 include_once 'gui/ViewUsers.php';
 
 include_once 'service/CategoriesGetting.php';
@@ -98,7 +99,7 @@ if(isset($_GET['action'])){
         if ($error) {
             $url = 'register';
         } else
-            $url = 'login_verification';
+            $_GET['action'] = 'login_verification';
     }
     if ('login_verification' == $_GET['action'] && isset($_POST['username']) && isset($_POST['password'])) {
 
@@ -116,6 +117,7 @@ if(isset($_GET['action'])){
         $controller->createTicketAction($ticketsGetting, $ticketAccess);
         header("refresh:0;url=/");
     }
+
     if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
 
         if ('deleteTicketAction' == $_GET['action'] && isset($_GET['id'])) {
@@ -129,7 +131,6 @@ if(isset($_GET['action'])){
             }
         }
         if ('editTicketAction' == $_GET['action'] && isset($_GET['id']) && isset($_POST["title"]) && isset($_POST["message"])) {
-
             $error = $controller->editTicket($ticketsGetting, $ticketAccess);
             if ($error) {
                 $redirect = '/';
@@ -142,6 +143,19 @@ if(isset($_GET['action'])){
 
             $commentsGetting->createComment($commentAccess, $_POST["text"], $_GET['id']);
             header("refresh:0;url=/posts&id=" . $_GET['id']);
+        }
+        if ('editUserInfoAction' == $_GET['action'] && isset($_POST['username']) && isset($_POST['old_password'])) {
+
+            $error = $controller->updateUserAction($usersGetting, $userAccess);
+            if ($error) {
+                $redirect = 'userEdit';
+                $url = 'error';
+            } else {
+                session_unset();
+                $url='/';
+                $controller->authenticateAction($usersGetting, $userAccess);
+                header("refresh:0;url=/");
+            }
         }
     }
 }
@@ -250,17 +264,10 @@ if ('' == $url || '/' == $url) {
     (new gui\ViewUsers($layout, $presenter, $user))->display();
 }
 
-//elseif (preg_match("/^posts\/\d+$/",$url)===1) {      //cas avec url posts/:id
-//    $id = explode('/',$url)[1];
-//    $ticketsGetting->getTicketById($ticketAccessLector, $id);
-//    $layout = new gui\Layout($layoutTemplate);
-//    (new gui\ViewPosts($layout, $presenter))->display();
-//
-//}
-elseif ('lostmdp/' == $url) {
-
+elseif ('userEdit' == $url && isset($_SESSION['user_ID'])) {
+    $usersGetting->setUserById($userAccessLector, $_SESSION['user_ID']);
     $layout = new gui\Layout($layoutTemplate);
-    (new gui\ViewError($layout, $error, $redirect))->display();
+    (new gui\ViewUserEdit($layout, $presenter))->display();
 
 } elseif ('error' == $url) {
 

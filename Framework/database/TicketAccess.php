@@ -186,6 +186,7 @@ class TicketAccess implements TicketInterface
                 ':title' => $title,
                 ':message' => $message
             ]);
+            echo $id;
 
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());

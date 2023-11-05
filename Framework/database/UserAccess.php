@@ -17,6 +17,17 @@ class UserAccess implements UserInterface
     {
         $this->dataAccess = $dataAccess;
     }
+    public function existsUsername($username)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT username FROM user where username = :username');
+            $statement->execute(['username' => $username]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return isset($data['username']);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
 
     public function existsUser($user_ID)
     {
@@ -91,6 +102,19 @@ class UserAccess implements UserInterface
                 ]);
             }
             return null;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    public function updateUser($username, $password, $user_ID){
+        try {
+            $statement = $this->dataAccess->prepare('UPDATE user SET username = :username, password = :password WHERE user_ID = :user_ID');
+            $statement->execute([
+                ':username' => $username,
+                ':password' => password_hash($password, PASSWORD_DEFAULT),
+                ':user_ID' => $user_ID,
+            ]);
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }

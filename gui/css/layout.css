@@ -21,7 +21,6 @@ header {
     z-index: 100;
 }
 
-
 header nav ul{
     display: flex;
     justify-content: center;
