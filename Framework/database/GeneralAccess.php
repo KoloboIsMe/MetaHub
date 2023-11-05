@@ -19,15 +19,6 @@ class GeneralAccess
         $this->dataAccess = $dataAccess;
     }
 
-    public function deleteComment($commentID): void
-    {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM comment WHERE comment_ID = :commentID');
-            $statement->execute([':commentID' => $commentID]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
 
     public function deleteTicket($ticketID): void
     {

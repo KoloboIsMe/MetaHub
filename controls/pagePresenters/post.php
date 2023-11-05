@@ -19,8 +19,8 @@ $id = $post->getTicket()->getTicket_ID(); ?>
                 <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B></time>
                 <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
                 <div class="edit-delete">
-                    <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
-                    <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                    <a href='editTicket&id=<?= $id ?>'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                    <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
                 </div>
             </div>
         </a>
@@ -35,14 +35,12 @@ $id = $post->getTicket()->getTicket_ID(); ?>
             <input type='submit' class='btn' value='Ajouter'>
             </form>
         </div>
-
         <?php foreach ($post->getComments() as $comment) { ?>
         <div class='comment'>
             <img src='gui/images/user.png' id='user-comment-img'>
             <div class='comment-content'>  @<?= $comment->getAuthor_username() ?> : <?= $comment->getText() ?></div>
             <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $comment->getAuthor())) { ?>
-            <a href='ouais'><button ><img src='gui/images/edit.png' id='editCommentImg'></button></a>
-            <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteCommentImg'></button></a>
+                <a href='?action=deleteCommentAction&id=<?=$comment->getComment_ID()?>'><button ><img src='gui/images/delete.png' id='deleteCommentImg'></button></a>
             <?php }?>
         </div>
         <?php } ?>

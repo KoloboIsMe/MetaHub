@@ -76,10 +76,11 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
     }
-    public function deleteComment($commentsService, $commentAccess, $generalAccess, $commentid): ?string
+
+    public function deleteComment($commentsService, $commentAccess, $commentid): ?string
     {
         if ($commentsService->isCommentOwner($commentAccess, $commentid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
-            $generalAccess->deleteComment($commentid);
+            $commentsService->deleteComment($commentAccess, $commentid);
             return null;
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce commentaire !';

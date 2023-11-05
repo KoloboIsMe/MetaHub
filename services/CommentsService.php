@@ -22,4 +22,9 @@ class CommentsService
         return $commentAccess->isCommentOwner($commentID, $user_ID);
     }
 
+    public function deleteComment($commentAccess, $commentID)
+    {
+        $commentAccess->deleteComment($commentID);
+    }
+
 }

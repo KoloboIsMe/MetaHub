@@ -151,7 +151,7 @@ if (isset($_GET['action'])) {
 
         } elseif ('deleteCommentAction' == $_GET['action'] && isset($_GET['id'])) {
 
-            $error = $controller->deleteComment($commentsService, $commentAccess, $generalAccess, $_GET['id']);
+            $error = $controller->deleteComment($commentsService, $commentAccess, $_GET['id']);
             if ($error) {
                 $redirect = '/';
                 $url = 'error';

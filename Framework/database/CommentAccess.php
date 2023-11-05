@@ -2,6 +2,7 @@
 
 namespace database;
 
+use PDOException;
 use services\CommentInterface;
 
 include_once "services/CommentInterface.php";
@@ -44,6 +45,16 @@ class CommentAccess implements CommentInterface
             ));
         } catch (\PDOException $e) {
             throw new \PDOException("Error creating comment");
+        }
+    }
+
+    public function deleteComment($commentID): void
+    {
+        try {
+            $statement = $this->dataAccess->prepare('DELETE FROM comment WHERE comment_ID = :commentID');
+            $statement->execute([':commentID' => $commentID]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
 
