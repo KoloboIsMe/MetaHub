@@ -6,6 +6,9 @@
         <div class='post-header'>
             <img src='gui/images/user.png' id='usersImg'>
             <p id='username-list'>@<?= $user->getUsername()?></p>
+            <?php if (isset($_SESSION['level']) && $_SESSION['level'] > 0) {?>
+                <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
+            <?php }?>
         </div>
     </a>
     <?php } ?>

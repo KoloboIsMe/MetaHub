@@ -34,6 +34,10 @@ $id = $post->getTicket()->getTicket_ID(); ?>
         <div class='comment'>
             <img src='gui/images/user.png' id='user-comment-img'>
             <div class='comment-content'>  @<?= $comment->getAuthor_username() ?> : <?= $comment->getText() ?></div>
+            <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $comment->getAuthor())) { ?>
+                <a href='ouais'><button ><img src='gui/images/edit.png' id='add-button'></button></a>
+                <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
+            <?php }?>
         </div>";
         <?php } ?>
 </div>
