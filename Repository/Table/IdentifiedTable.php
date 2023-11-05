@@ -28,6 +28,21 @@ trait IdentifiedTable
         }
         return $this->execute($request);
     }
+    public function update(int|Entity $id, Entity $entity) : bool
+    {
+        $id = is_int($id) ? $id : $id->getID();
+        $request = 'UPDATE ' . self::TABLE;
+        foreach ($entity->toArray() as $key => $attribute)
+        {
+            $request .= "SET $key = $attribute";
+        }
+        $request .= " WHERE 'id' = '$id'";
+        if ($this->execute($request) === FALSE)
+        {
+            return FALSE;
+        }
+        return TRUE;
+    }
     public function delete(int ...$IDs) : bool
     {
         foreach($IDs as $ID)

@@ -49,7 +49,7 @@ trait BasicTable
     {
         foreach($entities as $entity)
         {
-            $part1 = 'INSERT INTO' . self::TABLE . '(';
+            $part1 = 'INSERT INTO ' . self::TABLE . '(';
             $part2 = ') VALUES (';
             foreach ($entity->toArray() as $attribute => $value)
             {

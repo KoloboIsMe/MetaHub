@@ -34,6 +34,31 @@ class CategorizedTable
         }
         return $categories;
     }
+    public function categorize(int|Ticket $ticket,Category|array ...$categories) : bool
+        // Categorize a given ticket. Can take a Ticket or a ticket ID in argument,
+        // and either an array or many categories / categories ID
+    {
+        if(is_array($categories[0]))
+        {
+            $tmp = $categories;
+            unset($categories);
+            foreach ($tmp[0] as $category)
+            {
+                $categories[] = $category;
+            }
+        }
+        $ticketID = is_int($ticket) ? $ticket : $ticket->getID();
+        foreach ($categories as $category)
+        {
+            $categoryID = is_int($category) ? $category : $category->getID();
+            $request[] = new \Framework\Database\Entity\Categorized($ticketID, $categoryID);
+        }
+        if (($this->insert($request)) === FALSE)
+        {
+            return FALSE;
+        }
+        return TRUE;
+    }
     public function select(int $ticket = null, int $category = null) : Record|bool
     {
         $request = 'SELECT * FROM ' . self::TABLE;
