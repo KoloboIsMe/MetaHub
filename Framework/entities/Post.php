@@ -26,10 +26,12 @@ class Post
     {
         return $this->categories;
     }
+
     public function getComments()
     {
         return $this->comments;
     }
+
     public function getUser()
     {
         return $this->user;

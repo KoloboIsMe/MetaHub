@@ -2,23 +2,17 @@
 
 namespace gui;
 
-class ViewHomepage extends View
+class ViewEditTicket extends View
 {
     public function __construct($layout, $presenter)
     {
         parent::__construct($layout);
-        $this->title = 'Accueil';
+
+        $this->title = 'modification';
 
         if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->searchBar = true;
-
-        $this->content = $presenter->show('homepage');
+        $this->content = $presenter->show('editTicket');
     }
 }
-
-
-
-
-

@@ -1,7 +1,8 @@
 <?php
 
 namespace entities;
-include_once 'entities/Entity.php';
+
+include_once 'Entity.php';
 
 class Comment extends Entity
 {
@@ -13,45 +14,28 @@ class Comment extends Entity
     private $ticket;
 
     //Setters
-    public function setComment_ID($comment_ID){
-        $comment_ID = (int) $comment_ID;
-        if($comment_ID > 0){
-            $this->comment_ID = $comment_ID;
-        }
-    }
-    public function setText($text){
-        if(is_string($text)){
-            $this->text = $text;
-        }
-    }
-    public function setDate($date){
-        $this->date = $date;
-    }
-    public function setAuthor($author){
-        $author = (int) $author;
-        if($author > 0){
-            $this->author = $author;
-        }
-    }
-    public function setUsername($author_username){
-        if(is_string($author_username)){
+
+    public function setUsername($author_username)
+    {
+        if (is_string($author_username)) {
             $this->author_username = $author_username;
         }
     }
-    public function setTicket($ticket){
-        $ticket = (int) $ticket;
-        if($ticket > 0){
-            $this->ticket = $ticket;
-        }
-    }
 
-    //Getters
     /**
      * @return mixed
      */
     public function getComment_ID()
     {
         return $this->comment_ID;
+    }
+
+    public function setComment_ID($comment_ID)
+    {
+        $comment_ID = (int)$comment_ID;
+        if ($comment_ID > 0) {
+            $this->comment_ID = $comment_ID;
+        }
     }
 
     /**
@@ -62,12 +46,26 @@ class Comment extends Entity
         return $this->text;
     }
 
+    public function setText($text)
+    {
+        if (is_string($text)) {
+            $this->text = $text;
+        }
+    }
+
     /**
      * @return mixed
      */
     public function getDate()
     {
         return $this->date;
+    }
+
+    //Getters
+
+    public function setDate($date)
+    {
+        $this->date = $date;
     }
 
     /**
@@ -77,6 +75,15 @@ class Comment extends Entity
     {
         return $this->author;
     }
+
+    public function setAuthor($author)
+    {
+        $author = (int)$author;
+        if ($author > 0) {
+            $this->author = $author;
+        }
+    }
+
     /**
      * @return mixed
      */
@@ -93,7 +100,13 @@ class Comment extends Entity
         return $this->ticket;
     }
 
-
+    public function setTicket($ticket)
+    {
+        $ticket = (int)$ticket;
+        if ($ticket > 0) {
+            $this->ticket = $ticket;
+        }
+    }
 
 
 }

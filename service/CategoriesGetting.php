@@ -10,6 +10,10 @@ class CategoriesGetting
     {
         $this->outputData = $outputData;
     }
+    public function existsCategory($dataccess, $CategoryID)
+    {
+        return $dataccess->existsCategory($CategoryID);
+    }
 
     public function getCategories($dataccess)
     {
@@ -28,5 +32,11 @@ class CategoriesGetting
     public function getPostsIdByCategoryId($dataccess, $id)
     {
         return $dataccess->getPostsIdByCategoryId($id);
+    }
+
+    public function add5LastCategories($dataccess)
+    {
+        $categories = $dataccess->get5LastCategories();
+        $this->outputData->addOutputData($categories);
     }
 }

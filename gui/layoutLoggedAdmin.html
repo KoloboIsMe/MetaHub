@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>%title%</title>
     <link href="gui/css/layout.css" rel="stylesheet" type="text/css"/>
@@ -16,14 +13,19 @@
     <img id="headerLogo" src="gui/images/MetaHubLogo.png"/>
     <nav>
         <ul>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
             <li><a href="/"><img id="headerImg" src="gui/images/home.png"/></a></li>
             <li><a href="posts" id="headerLinks">Posts</a></li>
             <li><a href="createPosts" id="headerLinks">Créer un Post</a></li>
             <li><a href="categories" id="headerLinks">Catégories</a></li>
             <li><a href="users" id="headerLinks">Utilisateurs</a></li>
+            <li><a href="admin" id="headerLinks">Administration</a></li>
         </ul>
     </nav>
-    <a href='/login'><img src="gui/images/login.png" id="loginImg"/></a>
+    <a href='userEdit' id="username">Bonjour @%username% !</a>
+    <a href='logout'><img src="gui/images/logout.png" id="logoutImg"/></a>
     <label aria-label="toggle curtain navigation" class="hamburger" for="nav_check">
         <div class="line l1"></div>
         <div class="line l2"></div>

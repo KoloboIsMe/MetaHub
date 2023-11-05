@@ -7,6 +7,7 @@ abstract class View
     protected $content = '';
 
     protected $username = '';
+    protected $searchBar = null;
     protected $layout;
 
     public function __construct($layout)
@@ -16,6 +17,6 @@ abstract class View
 
     public function display()
     {
-        $this->layout->display($this->title, $this->content, $this->username);
+        $this->layout->display($this->title, $this->content, $this->username, $this->searchBar);
     }
 }

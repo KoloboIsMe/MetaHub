@@ -13,7 +13,7 @@ class ViewError extends View
 
         $this->title = 'Erreur';
 
-        if(isset($_SESSION['username']))
+        if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
         $this->content = "

@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="gui/css/searchBar.css" rel="stylesheet" type="text/css"/>
+<div class="search">
+    <div class="search-box">
+        <input class="form-control" id="searchbar" placeholder="Rechercher un post" type="text">
+        <i class="fas fa-search"></i>
+    </div>
+</div>
+
+<script>
+    const searchBar = document.querySelector("#searchbar");
+
+    searchBar.addEventListener("keyup", (e) => {
+        const searchedLetters = e.target.value;
+        const cards = document.querySelectorAll(".post-card");
+        filterElements(searchedLetters, cards);
+    });
+
+    function filterElements(letters, elements) {
+        if (letters.length > 2) {
+            for (let i = 0; i < elements.length; i++) {
+                if (elements[i].textContent.toLowerCase().includes(letters)) {
+                    elements[i].style.display = "block";
+                } else {
+                    elements[i].style.display = "none";
+                }
+            }
+        } else if (letters.length === 0) {
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].style.display = "block";
+            }
+        }
+    }
+</script>

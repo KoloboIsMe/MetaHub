@@ -22,7 +22,7 @@ class CategoryAccess implements CategoryInterface
     public function getCategoriesID(){
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category ORDER BY category_ID DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories ORDER BY category_ID DESC LIMIT 100');
             $statement->execute();
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
             {
@@ -37,7 +37,7 @@ class CategoryAccess implements CategoryInterface
     public function getCategoryById($ID)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID = :ID');
+            $statement = $this->dataAccess->prepare('SELECT * FROM categories where category_ID = :ID');
             $statement->execute([':ID' => $ID ]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             return new Category($data);

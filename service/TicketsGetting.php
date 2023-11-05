@@ -11,7 +11,10 @@ class TicketsGetting
     {
         $this->outputData = $outputData;
     }
-
+    public function existsTicket($dataccess, $ticketID)
+    {
+        return $dataccess->existsTicket($ticketID);
+    }
     public function getPosts($dataccess)
     {
 
@@ -22,18 +25,18 @@ class TicketsGetting
         $this->outputData->setOutputData($posts);
     }
 
+    public function getPostById($dataccess, $id)
+    {
+        $posts = $dataccess->getPostById($id);
+        $this->outputData->setOutputData($posts);
+    }
+
     public function get5LastPosts($dataccess)
     {
         $posts = [];
         foreach ($dataccess->get5LastTicketsID() as $ticketId) {
             $posts[] = $dataccess->getPostById($ticketId);
         }
-        $this->outputData->setOutputData($posts);
-    }
-
-    public function getPostById($dataccess, $id)
-    {
-        $posts = $dataccess->getPostById($id);
         $this->outputData->setOutputData($posts);
     }
 
@@ -48,7 +51,7 @@ class TicketsGetting
 
     public function createTicket($dataccess, $title, $message)
     {
-        return $dataccess->createTicket($title, $message, date("Y-m-d"), $_SESSION['user_ID']);
+        return $dataccess->createTicket($title, $message, date("Y-m-d H:i"), $_SESSION['user_ID']);
     }
 
     public function addCategoriesToTicket($ticketAccess, $categories, $ticketID)
@@ -58,10 +61,33 @@ class TicketsGetting
         }
     }
 
-    public function deleteTicket($dataccess, $ticketID)
+    public function deleteTicket($dataccess)
     {
-        $dataccess->deleteTicket($ticketID);
+        $dataccess->deleteTicket($_GET['id']);
     }
 
+    public function editTicket($dataccess, $id, $title, $message)
+    {
+        $dataccess->editTicket($id, $title, $message);
+    }
+
+    public function getPostsIdByUserId($dataccess, $id)
+    {
+        return $dataccess->getPostsIdByUserId($id);
+    }
+
+    public function getUserPosts($dataccess, $postsId)
+    {
+        $posts = [];
+        foreach ($postsId as $postID) {
+            $posts[] = $dataccess->getPostById($postID);
+        }
+        $this->outputData->setOutputData($posts);
+    }
+    public function isTicketOwner($dataccess, $ticketID, $user_ID){
+        if($dataccess->existsTicket($ticketID) && $dataccess->isTicketOwner($ticketID, $user_ID))
+            return true;
+        return false;
+    }
 
 }
