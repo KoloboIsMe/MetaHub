@@ -24,7 +24,7 @@ class TicketAccess implements TicketInterface
     public function getPostById($ticketId)
     {
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM tickets where ticket_ID = :ticketId');
+            $statement = $this->dataAccess->prepare('SELECT * FROM ticket where ticket_ID = :ticketId');
             $statement->execute(['ticketId' => $ticketId ]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
             $ticket = new Ticket($data);
@@ -33,7 +33,7 @@ class TicketAccess implements TicketInterface
         }
         try {
             $categories = [];
-            $statement = $this->dataAccess->prepare('SELECT * FROM categories where category_ID in (SELECT category FROM categorized where ticket = :ticketID) ORDER BY category_ID DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID in (SELECT category FROM categorized where ticket = :ticketID) ORDER BY category_ID DESC LIMIT 100');
             $statement->execute(['ticketID' => $ticketId ]);
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
             {
@@ -44,8 +44,8 @@ class TicketAccess implements TicketInterface
         }
         try {
             $comments = [];
-            $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comments 
-                                                JOIN users ON comments.author = users.user_ID
+            $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comment 
+                                                JOIN user ON comment.author = user.user_ID
                                                    where ticket = :ticketID LIMIT 100');
             $statement->execute(['ticketID' => $ticketId ]);
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
@@ -56,7 +56,7 @@ class TicketAccess implements TicketInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
         try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM users where user_ID = :user_ID');
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :user_ID');
             $statement->execute(['user_ID' => $ticket->getAuthor()]);
             $data = $statement->fetch(PDO::FETCH_ASSOC);
 
@@ -70,7 +70,7 @@ class TicketAccess implements TicketInterface
     public function getTicketsID(){
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets ORDER BY ticket_ID DESC LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket ORDER BY ticket_ID DESC LIMIT 100');
             $statement->execute();
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
             {
@@ -85,7 +85,7 @@ class TicketAccess implements TicketInterface
     public function get5LastTicketsID(){
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets ORDER BY ticket_ID DESC LIMIT 5');
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket ORDER BY ticket_ID DESC LIMIT 5');
             $statement->execute();
             while($data = $statement->fetch(PDO::FETCH_ASSOC))
             {
@@ -100,14 +100,14 @@ class TicketAccess implements TicketInterface
     public function createTicket($title, $message, $date, $author)
     {
         try {
-            $statement = $this->dataAccess->prepare('INSERT INTO tickets (title, message, date, author) VALUES (:title, :message, :date, :author)');
+            $statement = $this->dataAccess->prepare('INSERT INTO ticket (title, message, date, author) VALUES (:title, :message, :date, :author)');
             $statement->execute([
                 ':title' => $title,
                 ':message' => $message,
                 ':date' => $date,
                 ':author' => $author,
             ]);
-            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM tickets Where title = :title and message = :message and date = :date and author = :author LIMIT 100');
+            $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket Where title = :title and message = :message and date = :date and author = :author LIMIT 100');
             $statement->execute([
                 ':title' => $title,
                 ':message' => $message,
@@ -136,7 +136,7 @@ class TicketAccess implements TicketInterface
 
     public function getCategoryIdByLabel($label){
         try {
-            $statement = $this->dataAccess->prepare('SELECT category_ID FROM categories where label = :label');
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
             $statement->execute([
                 ':label' => $label,
             ]);
@@ -148,7 +148,7 @@ class TicketAccess implements TicketInterface
     public function deleteTicket($ticketID)
     {
         try {
-            $statement = $this->dataAccess->prepare('DELETE FROM tickets WHERE ticket_ID = :ticketID');
+            $statement = $this->dataAccess->prepare('DELETE FROM ticket WHERE ticket_ID = :ticketID');
             $statement->execute([
                 ':ticketID' => $ticketID
             ]);
