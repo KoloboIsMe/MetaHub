@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classservices_1_1_categories_service" kind="class"><name>services::CategoriesService</name>
+    <member refid="classservices_1_1_categories_service_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classservices_1_1_categories_service_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classservices_1_1_categories_service_1a433a16a876e346d0d2ec44b724efd530" kind="function"><name>existsCategory</name></member>
+    <member refid="classservices_1_1_categories_service_1ac25c1b89fbfe361441dd0f99f5cb1efc" kind="function"><name>createCategory</name></member>
+    <member refid="classservices_1_1_categories_service_1ad22d538266e01ba701c1d8fd64d52dae" kind="function"><name>getCategories</name></member>
+    <member refid="classservices_1_1_categories_service_1aae95d5f5844e68703fb15bb95c58ee5e" kind="function"><name>getCategoryById</name></member>
+    <member refid="classservices_1_1_categories_service_1a168a488c791315f2ad366faa73d19e2b" kind="function"><name>getCategoryIdByLabel</name></member>
+    <member refid="classservices_1_1_categories_service_1a2ee029ba4cdce29bc9391d15dad1d1ea" kind="function"><name>add5LastCategories</name></member>
+  </compound>
+  <compound refid="classentities_1_1_category" kind="class"><name>entities::Category</name>
+    <member refid="classentities_1_1_category_1a1d33810224b2068ad812035da02c886a" kind="variable"><name>$category_ID</name></member>
+    <member refid="classentities_1_1_category_1a177af2bf70bede02de3d05a425fb8e43" kind="variable"><name>$label</name></member>
+    <member refid="classentities_1_1_category_1a87b032cba06009e3467abf1c8018d960" kind="variable"><name>$description</name></member>
+    <member refid="classentities_1_1_category_1a0644020fa300a8da0761599388367209" kind="function"><name>getCategory_ID</name></member>
+    <member refid="classentities_1_1_category_1a61fc4887a2a3ef147760942b78bad4cd" kind="function"><name>setCategory_ID</name></member>
+    <member refid="classentities_1_1_category_1a14c4e7420d903d3e40342266333d2ecf" kind="function"><name>getLabel</name></member>
+    <member refid="classentities_1_1_category_1aff9dc1c7a22e2b4168647651480e586a" kind="function"><name>setLabel</name></member>
+    <member refid="classentities_1_1_category_1a2e7bb35c71bf1824456ceb944cb7a845" kind="function"><name>getDescription</name></member>
+    <member refid="classentities_1_1_category_1a31fad3e39336ea079ea758e051866627" kind="function"><name>setDescription</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_category_access" kind="class"><name>database::CategoryAccess</name>
+    <member refid="classdatabase_1_1_category_access_1a7a827f5c09357312fde0811812bbbc35" kind="variable"><name>$dataAccess</name></member>
+    <member refid="classdatabase_1_1_category_access_1a9d903d171ff2319096ef345b4092535b" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_category_access_1a34e6b8e5ed64b1c2c77db1ad6128694b" kind="function"><name>existsCategory</name></member>
+    <member refid="classdatabase_1_1_category_access_1a7ba632438934b85286c4d59f0987fee5" kind="function"><name>getCategoryById</name></member>
+    <member refid="classdatabase_1_1_category_access_1a384003387c2ac0bd8601b44e47196392" kind="function"><name>getCategoriesID</name></member>
+    <member refid="classdatabase_1_1_category_access_1a4cc708825fd51c90e00df3f8dd772da7" kind="function"><name>get5LastCategories</name></member>
+    <member refid="classdatabase_1_1_category_access_1a11b4f9c5fb95e61eea47600afd3216af" kind="function"><name>getCategoryIdByLabel</name></member>
+    <member refid="classdatabase_1_1_category_access_1a1bb8598d8a3012942717956f06a2cb05" kind="function"><name>createCategory</name></member>
+  </compound>
+  <compound refid="interfaceservices_1_1_category_interface" kind="interface"><name>services::CategoryInterface</name>
+    <member refid="interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b" kind="function"><name>existsCategory</name></member>
+    <member refid="interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392" kind="function"><name>getCategoriesID</name></member>
+    <member refid="interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323" kind="function"><name>getCategoryById</name></member>
+    <member refid="interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af" kind="function"><name>getCategoryIdByLabel</name></member>
+    <member refid="interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7" kind="function"><name>get5LastCategories</name></member>
+    <member refid="interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05" kind="function"><name>createCategory</name></member>
+  </compound>
+  <compound refid="classentities_1_1_comment" kind="class"><name>entities::Comment</name>
+    <member refid="classentities_1_1_comment_1a9f9d0999619951c504cdb48a2ad1fb96" kind="variable"><name>$comment_ID</name></member>
+    <member refid="classentities_1_1_comment_1adf95f30eaafccead90ab5e2cdb55e9b9" kind="variable"><name>$text</name></member>
+    <member refid="classentities_1_1_comment_1a481c918f8d853749e00b5942cabf599a" kind="variable"><name>$date</name></member>
+    <member refid="classentities_1_1_comment_1ac35b828f7d4064a7c9f849c255468ee3" kind="variable"><name>$author</name></member>
+    <member refid="classentities_1_1_comment_1a14beb969b4551ebfd883470b831635c0" kind="variable"><name>$author_username</name></member>
+    <member refid="classentities_1_1_comment_1abf7832c7c53a3be2ca8a8fc305006bb0" kind="variable"><name>$ticket</name></member>
+    <member refid="classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4" kind="function"><name>setUsername</name></member>
+    <member refid="classentities_1_1_comment_1a955311333800961e63d1445168d03092" kind="function"><name>getComment_ID</name></member>
+    <member refid="classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2" kind="function"><name>setComment_ID</name></member>
+    <member refid="classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99" kind="function"><name>getText</name></member>
+    <member refid="classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a" kind="function"><name>setText</name></member>
+    <member refid="classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3" kind="function"><name>getDate</name></member>
+    <member refid="classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17" kind="function"><name>setDate</name></member>
+    <member refid="classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24" kind="function"><name>getAuthor</name></member>
+    <member refid="classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a" kind="function"><name>setAuthor</name></member>
+    <member refid="classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9" kind="function"><name>getAuthor_username</name></member>
+    <member refid="classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c" kind="function"><name>getTicket</name></member>
+    <member refid="classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7" kind="function"><name>setTicket</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_comment_access" kind="class"><name>database::CommentAccess</name>
+    <member refid="classdatabase_1_1_comment_access_1a7a827f5c09357312fde0811812bbbc35" kind="variable"><name>$dataAccess</name></member>
+    <member refid="classdatabase_1_1_comment_access_1a9d903d171ff2319096ef345b4092535b" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3" kind="function"><name>isCommentOwner</name></member>
+    <member refid="classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538" kind="function"><name>createComment</name></member>
+    <member refid="classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530" kind="function"><name>deleteComment</name></member>
+  </compound>
+  <compound refid="interfaceservices_1_1_comment_interface" kind="interface"><name>services::CommentInterface</name>
+    <member refid="interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538" kind="function"><name>createComment</name></member>
+    <member refid="interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3" kind="function"><name>isCommentOwner</name></member>
+    <member refid="interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530" kind="function"><name>deleteComment</name></member>
+  </compound>
+  <compound refid="classservices_1_1_comments_service" kind="class"><name>services::CommentsService</name>
+    <member refid="classservices_1_1_comments_service_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c" kind="function"><name>createComment</name></member>
+    <member refid="classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6" kind="function"><name>isCommentOwner</name></member>
+    <member refid="classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e" kind="function"><name>deleteComment</name></member>
+  </compound>
+  <compound refid="classcontrols_1_1_controller" kind="class"><name>controls::Controller</name>
+    <member refid="classcontrols_1_1_controller_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classcontrols_1_1_controller_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classcontrols_1_1_controller_1a9d6b79aab4c9047a2eaf4c4c22f4d5c2" kind="function"><name>authenticateAction</name></member>
+    <member refid="classcontrols_1_1_controller_1a1b41886b22d4040d3be02c21a3df5aad" kind="function"><name>createTicketAction</name></member>
+    <member refid="classcontrols_1_1_controller_1ac3c7bcfacc0cb257666225e55268e202" kind="function"><name>registerAction</name></member>
+    <member refid="classcontrols_1_1_controller_1ab6f6a0b0d21279db7bdc321302b64167" kind="function"><name>updateUserAction</name></member>
+    <member refid="classcontrols_1_1_controller_1ae9374d8aba7101f4309c10b06ba9b37f" kind="function"><name>deleteUser</name></member>
+    <member refid="classcontrols_1_1_controller_1a9ac7d3f9fb8bf2396aa7d90d2a216c5d" kind="function"><name>deleteTicket</name></member>
+    <member refid="classcontrols_1_1_controller_1a7d89801573ffc7d2189976c4b0c7408c" kind="function"><name>deleteComment</name></member>
+    <member refid="classcontrols_1_1_controller_1a6ce9813a28f273c4f1dc25a068f49ec4" kind="function"><name>deleteCategory</name></member>
+    <member refid="classcontrols_1_1_controller_1a20bcb95ff3e4faf5a5cd49c6d9a1ef6f" kind="function"><name>editTicket</name></member>
+    <member refid="classcontrols_1_1_controller_1a3b3d42665005347476bd82dd3f075e0c" kind="function"><name>getPostById</name></member>
+  </compound>
+  <compound refid="classentities_1_1_entity" kind="class"><name>entities::Entity</name>
+    <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" kind="function"><name>__construct</name></member>
+    <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" kind="function"><name>hydrate</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_general_access" kind="class"><name>database::GeneralAccess</name>
+    <member refid="classdatabase_1_1_general_access_1a7a827f5c09357312fde0811812bbbc35" kind="variable"><name>$dataAccess</name></member>
+    <member refid="classdatabase_1_1_general_access_1a9d903d171ff2319096ef345b4092535b" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_general_access_1a89819b1dc6a1b327e15c84407c5d1ab1" kind="function"><name>deleteTicket</name></member>
+    <member refid="classdatabase_1_1_general_access_1a463f3ac58e7695101ae31525367fa96f" kind="function"><name>deleteTicketComments</name></member>
+    <member refid="classdatabase_1_1_general_access_1a303a72eaa0f483c3be92bbc311f3e87c" kind="function"><name>deleteTicketCategorized</name></member>
+    <member refid="classdatabase_1_1_general_access_1ae364a95f2ffa5b2b50434fdd7da1d9f8" kind="function"><name>deleteUser</name></member>
+    <member refid="classdatabase_1_1_general_access_1af885c5a19da7b8e9b45ee8e064ffa279" kind="function"><name>deleteCategory</name></member>
+    <member refid="classdatabase_1_1_general_access_1a06348e11b28592792e2ea739c0add2d4" kind="function"><name>deleteCategoryCategorized</name></member>
+    <member refid="classdatabase_1_1_general_access_1a9c044c55a812bbe02de0c972cb6ce2f5" kind="function"><name>getTicketsIdByUserId</name></member>
+    <member refid="classdatabase_1_1_general_access_1a47c0939150e296243117108f22ea9dde" kind="function"><name>getCommentsIdByUserId</name></member>
+    <member refid="classdatabase_1_1_general_access_1a4b8046caf85b1e630a20a39d55aa2f59" kind="function"><name>getPostsIdByCategoryId</name></member>
+    <member refid="classdatabase_1_1_general_access_1aca5710b8bb9ec6cd1c48c7c976118baf" kind="function"><name>addCategoryToTicket</name></member>
+    <member refid="classdatabase_1_1_general_access_1a4426ec63c9fd1389eeb6fd0acb25adbd" kind="function"><name>getPostById</name></member>
+  </compound>
+  <compound refid="classgui_1_1_layout" kind="class"><name>gui::Layout</name>
+    <member refid="classgui_1_1_layout_1a952fcaa4d048f47c91939d6d2cb9bff4" kind="variable"><name>$templateFile</name></member>
+    <member refid="classgui_1_1_layout_1adfdd8bfb11a1c06451d99ecc1446a9a8" kind="function"><name>__construct</name></member>
+    <member refid="classgui_1_1_layout_1a72c83e10eed9ac01f810b1d14483e9f6" kind="function"><name>display</name></member>
+  </compound>
+  <compound refid="classservices_1_1_output_data" kind="class"><name>services::OutputData</name>
+    <member refid="classservices_1_1_output_data_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classservices_1_1_output_data_1a421831a265621325e1fdd19aace0c758" kind="function"><name>__destruct</name></member>
+    <member refid="classservices_1_1_output_data_1a6079f9b139fe5a9af0f7ea4c6013f0ad" kind="function"><name>getOutputData</name></member>
+    <member refid="classservices_1_1_output_data_1ab9632546d24947ae2c380c5599759e0a" kind="function"><name>setOutputData</name></member>
+    <member refid="classservices_1_1_output_data_1a33b2cb2abfc7a0c94d55a9f3f9b74e05" kind="function"><name>addOutputData</name></member>
+  </compound>
+  <compound refid="classentities_1_1_post" kind="class"><name>entities::Post</name>
+    <member refid="classentities_1_1_post_1abf7832c7c53a3be2ca8a8fc305006bb0" kind="variable"><name>$ticket</name></member>
+    <member refid="classentities_1_1_post_1afc71bc53d6775d8a344893d5ec10f187" kind="variable"><name>$categories</name></member>
+    <member refid="classentities_1_1_post_1a35e8cdeb473a5eb016fea893d14de951" kind="variable"><name>$comments</name></member>
+    <member refid="classentities_1_1_post_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+    <member refid="classentities_1_1_post_1a788d23abf4d52e0c1819f5cd33a7e87a" kind="function"><name>__construct</name></member>
+    <member refid="classentities_1_1_post_1a42ddf34a72af750b7013fa309b67e46c" kind="function"><name>getTicket</name></member>
+    <member refid="classentities_1_1_post_1a8729ba486702e7e12a3fff08965e1e7f" kind="function"><name>getCategories</name></member>
+    <member refid="classentities_1_1_post_1af3034ead082330d2c046a69814009808" kind="function"><name>getComments</name></member>
+    <member refid="classentities_1_1_post_1ae81b7186fb97a7c6457edcc68c9aa2ef" kind="function"><name>getUser</name></member>
+  </compound>
+  <compound refid="classcontrols_1_1_presenter" kind="class"><name>controls::Presenter</name>
+    <member refid="classcontrols_1_1_presenter_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classcontrols_1_1_presenter_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classcontrols_1_1_presenter_1af26db0b597ad8772f7e0fa7ccc93b471" kind="function"><name>show</name></member>
+    <member refid="classcontrols_1_1_presenter_1a2af1d89b188cfc2c1e312f665859e9ee" kind="function"><name>showCategory</name></member>
+    <member refid="classcontrols_1_1_presenter_1ace8021ef4b46a93f6cca4a5bf557be69" kind="function"><name>showUser</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_s_p_d_o" kind="class"><name>database::SPDO</name>
+    <member refid="classdatabase_1_1_s_p_d_o_1a796e73de49db6bdb893d5f1e8ecbbd6e" kind="variable"><name>$instance</name></member>
+    <member refid="classdatabase_1_1_s_p_d_o_1a84e06113458dc9ad645dd3f5188af1da" kind="variable"><name>$PDOInstance</name></member>
+    <member refid="classdatabase_1_1_s_p_d_o_1a5f88da85b51a954c650fcaf004c9517e" kind="variable"><name>$serverName</name></member>
+    <member refid="classdatabase_1_1_s_p_d_o_1ae7b634190b4229001319b42b2792506a" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537" kind="function"><name>getInstance</name></member>
+    <member refid="classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5" kind="function"><name>prepare</name></member>
+  </compound>
+  <compound refid="classentities_1_1_ticket" kind="class"><name>entities::Ticket</name>
+    <member refid="classentities_1_1_ticket_1a9ca0ce86ddc2dd2b18156756544c7316" kind="variable"><name>$ticket_ID</name></member>
+    <member refid="classentities_1_1_ticket_1ada57e7bb7c152edad18fe2f166188691" kind="variable"><name>$title</name></member>
+    <member refid="classentities_1_1_ticket_1abf17cb2dba2ed17cb28aa5f37deb5293" kind="variable"><name>$message</name></member>
+    <member refid="classentities_1_1_ticket_1a481c918f8d853749e00b5942cabf599a" kind="variable"><name>$date</name></member>
+    <member refid="classentities_1_1_ticket_1ac35b828f7d4064a7c9f849c255468ee3" kind="variable"><name>$author</name></member>
+    <member refid="classentities_1_1_ticket_1a190d956349ebda2717009c78419349c3" kind="function"><name>getTicket_ID</name></member>
+    <member refid="classentities_1_1_ticket_1a6dd97e03c08a08c05323c4e02e8b1037" kind="function"><name>setTicket_ID</name></member>
+    <member refid="classentities_1_1_ticket_1a95e859a4588a39a1824b717378a84c29" kind="function"><name>getTitle</name></member>
+    <member refid="classentities_1_1_ticket_1a884ba9bb0d54bde7839e798db7964476" kind="function"><name>setTitle</name></member>
+    <member refid="classentities_1_1_ticket_1a0b0e611236742aac18ba1936d03ba89a" kind="function"><name>getMessage</name></member>
+    <member refid="classentities_1_1_ticket_1a6991eb53548e7180a3a8e6f418fbb234" kind="function"><name>setMessage</name></member>
+    <member refid="classentities_1_1_ticket_1a24d89b0ad05ea2e33626b1fc8ed59bc3" kind="function"><name>getDate</name></member>
+    <member refid="classentities_1_1_ticket_1a2570e83b20f9be514f22e3fd0b7c0d17" kind="function"><name>setDate</name></member>
+    <member refid="classentities_1_1_ticket_1a5286e30390ae3e1b274940286493dd24" kind="function"><name>getAuthor</name></member>
+    <member refid="classentities_1_1_ticket_1afde85a369fc83b442db3cf5c6ac31d4a" kind="function"><name>setAuthor</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_ticket_access" kind="class"><name>database::TicketAccess</name>
+    <member refid="classdatabase_1_1_ticket_access_1a7a827f5c09357312fde0811812bbbc35" kind="variable"><name>$dataAccess</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1a9d903d171ff2319096ef345b4092535b" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1a6cd98da4d72e5877202bedac9f7f7708" kind="function"><name>existsTicket</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1afb3753ff19a1ec4d934cc30508bd562c" kind="function"><name>isTicketOwner</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1add5e7fd54d1f1308db1e8a3e873b785b" kind="function"><name>getTicketsID</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1acc435610e7829e4a55eef8e0d7a06cb3" kind="function"><name>get5LastTicketsID</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1afa6e5469befba46eb1dfaf007b8713c6" kind="function"><name>createTicket</name></member>
+    <member refid="classdatabase_1_1_ticket_access_1a15b7252a597d9b252639064378bafa5a" kind="function"><name>editTicket</name></member>
+  </compound>
+  <compound refid="interfaceservices_1_1_ticket_interface" kind="interface"><name>services::TicketInterface</name>
+    <member refid="interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708" kind="function"><name>existsTicket</name></member>
+    <member refid="interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b" kind="function"><name>getTicketsID</name></member>
+    <member refid="interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3" kind="function"><name>get5LastTicketsID</name></member>
+    <member refid="interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6" kind="function"><name>createTicket</name></member>
+    <member refid="interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a" kind="function"><name>editTicket</name></member>
+    <member refid="interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c" kind="function"><name>isTicketOwner</name></member>
+  </compound>
+  <compound refid="classservices_1_1_tickets_service" kind="class"><name>services::TicketsService</name>
+    <member refid="classservices_1_1_tickets_service_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classservices_1_1_tickets_service_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classservices_1_1_tickets_service_1a637215646c5f02e149a146fbce958dca" kind="function"><name>getPosts</name></member>
+    <member refid="classservices_1_1_tickets_service_1a1aab7a11433415e9012b143f469c8c73" kind="function"><name>get5LastPosts</name></member>
+    <member refid="classservices_1_1_tickets_service_1aafda66ab0a7824c15e869c31f6d44d35" kind="function"><name>getCategoryPosts</name></member>
+    <member refid="classservices_1_1_tickets_service_1abdad754661c93e50303a189f73e87556" kind="function"><name>createTicket</name></member>
+    <member refid="classservices_1_1_tickets_service_1aa2af9219e1acee7e16ec36bb989e4d3b" kind="function"><name>deleteTicket</name></member>
+    <member refid="classservices_1_1_tickets_service_1a9b4d5b6ae46dcad7c25c11261111f329" kind="function"><name>editTicket</name></member>
+    <member refid="classservices_1_1_tickets_service_1aa773f2e51294e090486a93ea1ae5d13d" kind="function"><name>getPostsIdByUserId</name></member>
+    <member refid="classservices_1_1_tickets_service_1af9fd30dafa8b70fb0f2199702c2898e4" kind="function"><name>getUserPosts</name></member>
+    <member refid="classservices_1_1_tickets_service_1ae5e57326b72cd229977b05bbbcfd1b72" kind="function"><name>isTicketOwner</name></member>
+    <member refid="classservices_1_1_tickets_service_1a90f40acdad8058f6eb81279c9758e2d0" kind="function"><name>existsTicket</name></member>
+  </compound>
+  <compound refid="classentities_1_1_user" kind="class"><name>entities::User</name>
+    <member refid="classentities_1_1_user_1af935895be7531a761425c2f71732cd96" kind="variable"><name>$user_ID</name></member>
+    <member refid="classentities_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" kind="variable"><name>$password</name></member>
+    <member refid="classentities_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="classentities_1_1_user_1a4c7074c68c02da6ceecc91fd85037ef7" kind="variable"><name>$first_connexion</name></member>
+    <member refid="classentities_1_1_user_1a2ac9fdfd1824e1be9a4c052d2d74863c" kind="variable"><name>$last_connexion</name></member>
+    <member refid="classentities_1_1_user_1abd32cc82c6a3f79491987de36ad580ca" kind="variable"><name>$level</name></member>
+    <member refid="classentities_1_1_user_1aceed569b975741ac6ce4f2f902bf3a06" kind="variable"><name>$online</name></member>
+    <member refid="classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7" kind="function"><name>getUser_ID</name></member>
+    <member refid="classentities_1_1_user_1a88aebf064698f5fa34a719655850e629" kind="function"><name>setUser_ID</name></member>
+    <member refid="classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" kind="function"><name>getPassword</name></member>
+    <member refid="classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" kind="function"><name>setPassword</name></member>
+    <member refid="classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" kind="function"><name>getUsername</name></member>
+    <member refid="classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244" kind="function"><name>setUsername</name></member>
+    <member refid="classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1" kind="function"><name>getFirst_connexion</name></member>
+    <member refid="classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d" kind="function"><name>setFirst_connexion</name></member>
+    <member refid="classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7" kind="function"><name>getLast_connexion</name></member>
+    <member refid="classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9" kind="function"><name>setLast_connexion</name></member>
+    <member refid="classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2" kind="function"><name>getLevel</name></member>
+    <member refid="classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c" kind="function"><name>setLevel</name></member>
+    <member refid="classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313" kind="function"><name>getOnline</name></member>
+    <member refid="classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8" kind="function"><name>setOnline</name></member>
+  </compound>
+  <compound refid="classdatabase_1_1_user_access" kind="class"><name>database::UserAccess</name>
+    <member refid="classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35" kind="variable"><name>$dataAccess</name></member>
+    <member refid="classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b" kind="function"><name>__construct</name></member>
+    <member refid="classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59" kind="function"><name>existsUsername</name></member>
+    <member refid="classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d" kind="function"><name>existsUser</name></member>
+    <member refid="classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef" kind="function"><name>isUser</name></member>
+    <member refid="classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88" kind="function"><name>getUserByUsername</name></member>
+    <member refid="classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc" kind="function"><name>getUserById</name></member>
+    <member refid="classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de" kind="function"><name>getUsersID</name></member>
+    <member refid="classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db" kind="function"><name>register</name></member>
+    <member refid="classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5" kind="function"><name>updateUser</name></member>
+    <member refid="classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353" kind="function"><name>updateLastConnexion</name></member>
+    <member refid="classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725" kind="function"><name>get10LastConnectedUsersID</name></member>
+    <member refid="classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b" kind="function"><name>setOnline</name></member>
+  </compound>
+  <compound refid="interfaceservices_1_1_user_interface" kind="interface"><name>services::UserInterface</name>
+    <member refid="interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59" kind="function"><name>existsUsername</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d" kind="function"><name>existsUser</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88" kind="function"><name>getUserByUsername</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef" kind="function"><name>isUser</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db" kind="function"><name>register</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5" kind="function"><name>updateUser</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353" kind="function"><name>updateLastConnexion</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc" kind="function"><name>getUserById</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de" kind="function"><name>getUsersID</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725" kind="function"><name>get10LastConnectedUsersID</name></member>
+    <member refid="interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b" kind="function"><name>setOnline</name></member>
+  </compound>
+  <compound refid="classservices_1_1_users_service" kind="class"><name>services::UsersService</name>
+    <member refid="classservices_1_1_users_service_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="classservices_1_1_users_service_1a21db5a882ba43a48b03c976aefa69c75" kind="function"><name>__construct</name></member>
+    <member refid="classservices_1_1_users_service_1a52819191a05e176c4c096966ab1edd1d" kind="function"><name>existsUsername</name></member>
+    <member refid="classservices_1_1_users_service_1a38ec34f0d54535a7373747015b8caa64" kind="function"><name>existsUser</name></member>
+    <member refid="classservices_1_1_users_service_1a6eaf4e071c958467d7b3315b5dd51e05" kind="function"><name>authenticate</name></member>
+    <member refid="classservices_1_1_users_service_1a7bb0aa69b7cb6b42e1bb7a7c668ea730" kind="function"><name>register</name></member>
+    <member refid="classservices_1_1_users_service_1a68e02a891d90270f154ab5c4bc59cae9" kind="function"><name>updateUser</name></member>
+    <member refid="classservices_1_1_users_service_1af9474977a289c4527898f47460172616" kind="function"><name>getUserByUsername</name></member>
+    <member refid="classservices_1_1_users_service_1a887a2f82c7277e66c3b2a740dfe1464b" kind="function"><name>updateLastConnexion</name></member>
+    <member refid="classservices_1_1_users_service_1a6f7b0615bacb57c18b7a096dad7d2227" kind="function"><name>getUsers</name></member>
+    <member refid="classservices_1_1_users_service_1a2f77bb31ab5082288481238f1b3abe80" kind="function"><name>getUserById</name></member>
+    <member refid="classservices_1_1_users_service_1aeb90b6e09d4969eea24c7965fbed979d" kind="function"><name>setOnline</name></member>
+    <member refid="classservices_1_1_users_service_1a358726d7a4e2db7cc089048acf1590a7" kind="function"><name>add10LastConnectedUsers</name></member>
+    <member refid="classservices_1_1_users_service_1aa7af8ed60411b8e43cbafa5988136f89" kind="function"><name>setUserById</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view" kind="class"><name>gui::View</name>
+    <member refid="classgui_1_1_view_1ada57e7bb7c152edad18fe2f166188691" kind="variable"><name>$title</name></member>
+    <member refid="classgui_1_1_view_1a57b284fe00866494b33afa80ba729bed" kind="variable"><name>$content</name></member>
+    <member refid="classgui_1_1_view_1a0eb82aa5f81cf845de4b36cd653c42cf" kind="variable"><name>$username</name></member>
+    <member refid="classgui_1_1_view_1ab3e5e5111363f7c803693d5bd75ad448" kind="variable"><name>$searchBar</name></member>
+    <member refid="classgui_1_1_view_1a2b0d08e73a90b9443ce37506b7c6a544" kind="variable"><name>$layout</name></member>
+    <member refid="classgui_1_1_view_1a3867efed8f524d30034063f8c80c18fd" kind="function"><name>__construct</name></member>
+    <member refid="classgui_1_1_view_1a0b9b6e6acd4a839fc7c2f26f96b5cfa8" kind="function"><name>display</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_categories" kind="class"><name>gui::ViewCategories</name>
+    <member refid="classgui_1_1_view_categories_1aa36e3f8c1b0ba4ec2c4769ec5d3b66f1" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_create_category" kind="class"><name>gui::ViewCreateCategory</name>
+    <member refid="classgui_1_1_view_create_category_1a3867efed8f524d30034063f8c80c18fd" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_create_posts" kind="class"><name>gui::ViewCreatePosts</name>
+    <member refid="classgui_1_1_view_create_posts_1aa5152a78c188bb446546f2ebeebabf1c" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_edit_ticket" kind="class"><name>gui::ViewEditTicket</name>
+    <member refid="classgui_1_1_view_edit_ticket_1aa5152a78c188bb446546f2ebeebabf1c" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_error" kind="class"><name>gui::ViewError</name>
+    <member refid="classgui_1_1_view_error_1a0ca79931c48b046eb37c831aa09b0751" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_homepage" kind="class"><name>gui::ViewHomepage</name>
+    <member refid="classgui_1_1_view_homepage_1aa5152a78c188bb446546f2ebeebabf1c" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_login" kind="class"><name>gui::ViewLogin</name>
+    <member refid="classgui_1_1_view_login_1a3ae5c9b4865c13ece4dfb1a276d7c5d6" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_posts" kind="class"><name>gui::ViewPosts</name>
+    <member refid="classgui_1_1_view_posts_1aa5152a78c188bb446546f2ebeebabf1c" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_register" kind="class"><name>gui::ViewRegister</name>
+    <member refid="classgui_1_1_view_register_1a835a54c2fea3dfc7047ed37ba07b9444" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_user_edit" kind="class"><name>gui::ViewUserEdit</name>
+    <member refid="classgui_1_1_view_user_edit_1aa5152a78c188bb446546f2ebeebabf1c" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="classgui_1_1_view_users" kind="class"><name>gui::ViewUsers</name>
+    <member refid="classgui_1_1_view_users_1a2a669bfdaa09da4b7edee8908b11dd24" kind="function"><name>__construct</name></member>
+  </compound>
+  <compound refid="namespacecontrols" kind="namespace"><name>controls</name>
+  </compound>
+  <compound refid="namespacedatabase" kind="namespace"><name>database</name>
+  </compound>
+  <compound refid="namespacedatabase_1_1_general_access" kind="namespace"><name>database::GeneralAccess</name>
+  </compound>
+  <compound refid="namespaceentities" kind="namespace"><name>entities</name>
+  </compound>
+  <compound refid="namespaceentities_1_1_category" kind="namespace"><name>entities::Category</name>
+  </compound>
+  <compound refid="namespaceentities_1_1_comment" kind="namespace"><name>entities::Comment</name>
+  </compound>
+  <compound refid="namespaceentities_1_1_post" kind="namespace"><name>entities::Post</name>
+  </compound>
+  <compound refid="namespaceentities_1_1_ticket" kind="namespace"><name>entities::Ticket</name>
+  </compound>
+  <compound refid="namespaceentities_1_1_user" kind="namespace"><name>entities::User</name>
+  </compound>
+  <compound refid="namespacegui" kind="namespace"><name>gui</name>
+  </compound>
+  <compound refid="namespace_p_d_o" kind="namespace"><name>PDO</name>
+  </compound>
+  <compound refid="namespace_p_d_o_exception" kind="namespace"><name>PDOException</name>
+  </compound>
+  <compound refid="namespaceservices" kind="namespace"><name>services</name>
+  </compound>
+  <compound refid="namespaceservices_1_1_category_interface" kind="namespace"><name>services::CategoryInterface</name>
+  </compound>
+  <compound refid="namespaceservices_1_1_comment_interface" kind="namespace"><name>services::CommentInterface</name>
+  </compound>
+  <compound refid="namespaceservices_1_1_ticket_interface" kind="namespace"><name>services::TicketInterface</name>
+  </compound>
+  <compound refid="namespaceservices_1_1_user_interface" kind="namespace"><name>services::UserInterface</name>
+  </compound>
+  <compound refid="_controller_8php" kind="file"><name>Controller.php</name>
+  </compound>
+  <compound refid="categories_8php" kind="file"><name>categories.php</name>
+  </compound>
+  <compound refid="controls_2page_presenters_2category_8php" kind="file"><name>category.php</name>
+  </compound>
+  <compound refid="_framework_2entities_2category_8php" kind="file"><name>Category.php</name>
+  </compound>
+  <compound refid="create_ticket_8php" kind="file"><name>createTicket.php</name>
+  </compound>
+  <compound refid="edit_ticket_8php" kind="file"><name>editTicket.php</name>
+    <member refid="edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db" kind="variable"><name>$post</name></member>
+    <member refid="edit_ticket_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+    <member refid="edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691" kind="variable"><name>$title</name></member>
+  </compound>
+  <compound refid="homepage_8php" kind="file"><name>homepage.php</name>
+  </compound>
+  <compound refid="controls_2page_presenters_2post_8php" kind="file"><name>post.php</name>
+    <member refid="controls_2page_presenters_2post_8php_1a53d6c7669d97392c407c4f959a5263db" kind="variable"><name>$post</name></member>
+    <member refid="controls_2page_presenters_2post_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+  </compound>
+  <compound refid="_framework_2entities_2post_8php" kind="file"><name>Post.php</name>
+  </compound>
+  <compound refid="posts_8php" kind="file"><name>posts.php</name>
+  </compound>
+  <compound refid="controls_2page_presenters_2user_8php" kind="file"><name>user.php</name>
+    <member refid="controls_2page_presenters_2user_8php_1ae97941710d863131c700f069b109991e" kind="variable"><name>$id</name></member>
+  </compound>
+  <compound refid="_framework_2entities_2user_8php" kind="file"><name>User.php</name>
+  </compound>
+  <compound refid="user_edit_8php" kind="file"><name>userEdit.php</name>
+    <member refid="user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5" kind="variable"><name>$user</name></member>
+  </compound>
+  <compound refid="users_8php" kind="file"><name>users.php</name>
+  </compound>
+  <compound refid="_presenter_8php" kind="file"><name>Presenter.php</name>
+  </compound>
+  <compound refid="_category_access_8php" kind="file"><name>CategoryAccess.php</name>
+  </compound>
+  <compound refid="_comment_access_8php" kind="file"><name>CommentAccess.php</name>
+  </compound>
+  <compound refid="_general_access_8php" kind="file"><name>GeneralAccess.php</name>
+  </compound>
+  <compound refid="_s_p_d_o_8php" kind="file"><name>SPDO.php</name>
+  </compound>
+  <compound refid="_ticket_access_8php" kind="file"><name>TicketAccess.php</name>
+  </compound>
+  <compound refid="_user_access_8php" kind="file"><name>UserAccess.php</name>
+  </compound>
+  <compound refid="_comment_8php" kind="file"><name>Comment.php</name>
+  </compound>
+  <compound refid="_entity_8php" kind="file"><name>Entity.php</name>
+  </compound>
+  <compound refid="_ticket_8php" kind="file"><name>Ticket.php</name>
+  </compound>
+  <compound refid="_layout_8php" kind="file"><name>Layout.php</name>
+  </compound>
+  <compound refid="_view_8php" kind="file"><name>View.php</name>
+  </compound>
+  <compound refid="_view_categories_8php" kind="file"><name>ViewCategories.php</name>
+  </compound>
+  <compound refid="_view_create_category_8php" kind="file"><name>ViewCreateCategory.php</name>
+  </compound>
+  <compound refid="_view_create_posts_8php" kind="file"><name>ViewCreatePosts.php</name>
+  </compound>
+  <compound refid="_view_edit_ticket_8php" kind="file"><name>ViewEditTicket.php</name>
+  </compound>
+  <compound refid="_view_error_8php" kind="file"><name>ViewError.php</name>
+  </compound>
+  <compound refid="_view_homepage_8php" kind="file"><name>ViewHomepage.php</name>
+  </compound>
+  <compound refid="_view_login_8php" kind="file"><name>ViewLogin.php</name>
+  </compound>
+  <compound refid="_view_posts_8php" kind="file"><name>ViewPosts.php</name>
+  </compound>
+  <compound refid="_view_register_8php" kind="file"><name>ViewRegister.php</name>
+  </compound>
+  <compound refid="_view_user_edit_8php" kind="file"><name>ViewUserEdit.php</name>
+  </compound>
+  <compound refid="_view_users_8php" kind="file"><name>ViewUsers.php</name>
+  </compound>
+  <compound refid="index_8php" kind="file"><name>index.php</name>
+    <member refid="index_8php_1ae89b553ac3d911ecce81da9747041908" kind="variable"><name>$dbAdmin</name></member>
+    <member refid="index_8php_1a16060ba0bdb764c062eeddb5d0659ea1" kind="variable"><name>$dbLector</name></member>
+    <member refid="index_8php_1abe4cc9788f52e49485473dc699537388" kind="variable"><name>try</name></member>
+    <member refid="index_8php_1a5c7fa24145d4e9cbfa6c639abe18d3e8" kind="variable"><name>$categoryAccessLector</name></member>
+    <member refid="index_8php_1a89d3445ad41f70c219793449020d3528" kind="variable"><name>$commentAccessLector</name></member>
+    <member refid="index_8php_1a508377953039f7856fd76824e260afba" kind="variable"><name>$ticketAccessLector</name></member>
+    <member refid="index_8php_1a9340012d6fce07833a6fa708779dfb16" kind="variable"><name>$userAccessLector</name></member>
+    <member refid="index_8php_1a941e0f644134fed3621753aa7e4ac183" kind="variable"><name>$generalAccessLector</name></member>
+    <member refid="index_8php_1af842fa94d65f3b425d48c6e75b16fc38" kind="variable"><name>$ticketAccess</name></member>
+    <member refid="index_8php_1af285d590bb1af4a67a90b92eb2f99c34" kind="variable"><name>$userAccess</name></member>
+    <member refid="index_8php_1a681149110179ebaba9c2e54cdd2b83a2" kind="variable"><name>$commentAccess</name></member>
+    <member refid="index_8php_1a06af02ba84341ec1e24e2863d4ed0749" kind="variable"><name>$categoryAccess</name></member>
+    <member refid="index_8php_1a9a046cb32f699738d388b443e80758f5" kind="variable"><name>$generalAccess</name></member>
+    <member refid="index_8php_1ae9edebdcd1b91b38dfd10a39e51073c2" kind="variable"><name>$outputData</name></member>
+    <member refid="index_8php_1a388ef7b1db5e6f728e63cee704ce6e23" kind="variable"><name>$controller</name></member>
+    <member refid="index_8php_1a1e2fb490a07b179ea7f89c5c6bb8c18d" kind="variable"><name>$presenter</name></member>
+    <member refid="index_8php_1aaa6c921e73418e6b3aeef431100171ea" kind="variable"><name>$categoriesService</name></member>
+    <member refid="index_8php_1a810230690da10168aaae0d2a5349c124" kind="variable"><name>$ticketsService</name></member>
+    <member refid="index_8php_1af5c8a2dadcb2eba2758a8f7958b3e1d3" kind="variable"><name>$commentsService</name></member>
+    <member refid="index_8php_1a34e2b7d736d0937b68d80caf80b271c1" kind="variable"><name>$usersService</name></member>
+    <member refid="index_8php_1acf215f34a917d014776ce684a9ee8909" kind="variable"><name>$url</name></member>
+    <member refid="index_8php_1a06dc4a8eef6f21bee6ea9a1f7a778241" kind="variable"><name>else</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_categories_service_8php" kind="file"><name>CategoriesService.php</name>
+  </compound>
+  <compound refid="_category_interface_8php" kind="file"><name>CategoryInterface.php</name>
+  </compound>
+  <compound refid="_comment_interface_8php" kind="file"><name>CommentInterface.php</name>
+  </compound>
+  <compound refid="_comments_service_8php" kind="file"><name>CommentsService.php</name>
+  </compound>
+  <compound refid="_output_data_8php" kind="file"><name>OutputData.php</name>
+  </compound>
+  <compound refid="_ticket_interface_8php" kind="file"><name>TicketInterface.php</name>
+  </compound>
+  <compound refid="_tickets_service_8php" kind="file"><name>TicketsService.php</name>
+  </compound>
+  <compound refid="_user_interface_8php" kind="file"><name>UserInterface.php</name>
+  </compound>
+  <compound refid="_users_service_8php" kind="file"><name>UsersService.php</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_3d370fd2770cf63261b7ee5a69ee79d2" kind="dir"><name>controls</name>
+  </compound>
+  <compound refid="dir_054245cdb03fb725488dd4f11b99c73e" kind="dir"><name>Framework/database</name>
+  </compound>
+  <compound refid="dir_b11b9a48dd2a17694fe5d9bcb5448cd8" kind="dir"><name>Framework/entities</name>
+  </compound>
+  <compound refid="dir_bcbb2cf9a3d3d83e5515c82071a07177" kind="dir"><name>Framework</name>
+  </compound>
+  <compound refid="dir_11bc0974ce736ce9a6fadebbeb7a8314" kind="dir"><name>gui</name>
+  </compound>
+  <compound refid="dir_77b770d67002e00751fe0adb5fb45a61" kind="dir"><name>controls/pagePresenters</name>
+  </compound>
+  <compound refid="dir_056ec8f0377ddc4293192cbc6b19c99c" kind="dir"><name>services</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacegui" xml:lang="en-US">
+<title>gui Namespace Reference</title>
+<indexterm><primary>gui</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classgui_1_1_layout">Layout</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view">View</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_categories">ViewCategories</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_create_category">ViewCreateCategory</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_create_posts">ViewCreatePosts</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_edit_ticket">ViewEditTicket</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_error">ViewError</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_homepage">ViewHomepage</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_login">ViewLogin</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_posts">ViewPosts</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_register">ViewRegister</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_user_edit">ViewUserEdit</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classgui_1_1_view_users">ViewUsers</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_054245cdb03fb725488dd4f11b99c73e" kind="dir">
+    <compoundname>Framework/database</compoundname>
+    <innerfile refid="_category_access_8php">CategoryAccess.php</innerfile>
+    <innerfile refid="_comment_access_8php">CommentAccess.php</innerfile>
+    <innerfile refid="_general_access_8php">GeneralAccess.php</innerfile>
+    <innerfile refid="_s_p_d_o_8php">SPDO.php</innerfile>
+    <innerfile refid="_ticket_access_8php">TicketAccess.php</innerfile>
+    <innerfile refid="_user_access_8php">UserAccess.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Framework/database/"/>
+  </compounddef>
+</doxygen>

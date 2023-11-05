@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceservices" kind="namespace" language="PHP">
+    <compoundname>services</compoundname>
+    <innerclass refid="classservices_1_1_categories_service" prot="public">services::CategoriesService</innerclass>
+    <innerclass refid="interfaceservices_1_1_category_interface" prot="public">services::CategoryInterface</innerclass>
+    <innerclass refid="interfaceservices_1_1_comment_interface" prot="public">services::CommentInterface</innerclass>
+    <innerclass refid="classservices_1_1_comments_service" prot="public">services::CommentsService</innerclass>
+    <innerclass refid="classservices_1_1_output_data" prot="public">services::OutputData</innerclass>
+    <innerclass refid="interfaceservices_1_1_ticket_interface" prot="public">services::TicketInterface</innerclass>
+    <innerclass refid="classservices_1_1_tickets_service" prot="public">services::TicketsService</innerclass>
+    <innerclass refid="interfaceservices_1_1_user_interface" prot="public">services::UserInterface</innerclass>
+    <innerclass refid="classservices_1_1_users_service" prot="public">services::UsersService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/CategoriesService.php" line="3" column="10"/>
+  </compounddef>
+</doxygen>

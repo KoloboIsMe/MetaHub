@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classentities_1_1_comment" kind="class" language="PHP" prot="public">
+    <compoundname>entities::Comment</compoundname>
+    <basecompoundref refid="classentities_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classentities_1_1_comment_1a9f9d0999619951c504cdb48a2ad1fb96" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$comment_ID</definition>
+        <argsstring></argsstring>
+        <name>$comment_ID</name>
+        <qualifiedname>entities\Comment\$comment_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="12" column="13" bodyfile="Framework/entities/Comment.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_comment_1adf95f30eaafccead90ab5e2cdb55e9b9" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$text</definition>
+        <argsstring></argsstring>
+        <name>$text</name>
+        <qualifiedname>entities\Comment\$text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="16" column="13" bodyfile="Framework/entities/Comment.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_comment_1a481c918f8d853749e00b5942cabf599a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$date</definition>
+        <argsstring></argsstring>
+        <name>$date</name>
+        <qualifiedname>entities\Comment\$date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="20" column="13" bodyfile="Framework/entities/Comment.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_comment_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$author</definition>
+        <argsstring></argsstring>
+        <name>$author</name>
+        <qualifiedname>entities\Comment\$author</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="24" column="13" bodyfile="Framework/entities/Comment.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_comment_1a14beb969b4551ebfd883470b831635c0" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$author_username</definition>
+        <argsstring></argsstring>
+        <name>$author_username</name>
+        <qualifiedname>entities\Comment\$author_username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="28" column="13" bodyfile="Framework/entities/Comment.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_comment_1abf7832c7c53a3be2ca8a8fc305006bb0" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$ticket</definition>
+        <argsstring></argsstring>
+        <name>$ticket</name>
+        <qualifiedname>entities\Comment\$ticket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="32" column="13" bodyfile="Framework/entities/Comment.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUsername</definition>
+        <argsstring>($author_username)</argsstring>
+        <name>setUsername</name>
+        <qualifiedname>entities\Comment\setUsername</qualifiedname>
+        <param>
+          <declname>$author_username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$author_username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="38" column="21" bodyfile="Framework/entities/Comment.php" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a955311333800961e63d1445168d03092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getComment_ID</definition>
+        <argsstring>()</argsstring>
+        <name>getComment_ID</name>
+        <qualifiedname>entities\Comment\getComment_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="48" column="21" bodyfile="Framework/entities/Comment.php" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setComment_ID</definition>
+        <argsstring>($comment_ID)</argsstring>
+        <name>setComment_ID</name>
+        <qualifiedname>entities\Comment\setComment_ID</qualifiedname>
+        <param>
+          <declname>$comment_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$comment_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="57" column="21" bodyfile="Framework/entities/Comment.php" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getText</definition>
+        <argsstring>()</argsstring>
+        <name>getText</name>
+        <qualifiedname>entities\Comment\getText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="68" column="21" bodyfile="Framework/entities/Comment.php" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setText</definition>
+        <argsstring>($text)</argsstring>
+        <name>setText</name>
+        <qualifiedname>entities\Comment\setText</qualifiedname>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="77" column="21" bodyfile="Framework/entities/Comment.php" bodystart="77" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getDate</definition>
+        <argsstring>()</argsstring>
+        <name>getDate</name>
+        <qualifiedname>entities\Comment\getDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="87" column="21" bodyfile="Framework/entities/Comment.php" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDate</definition>
+        <argsstring>($date)</argsstring>
+        <name>setDate</name>
+        <qualifiedname>entities\Comment\setDate</qualifiedname>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="96" column="21" bodyfile="Framework/entities/Comment.php" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getAuthor</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthor</name>
+        <qualifiedname>entities\Comment\getAuthor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="104" column="21" bodyfile="Framework/entities/Comment.php" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setAuthor</definition>
+        <argsstring>($author)</argsstring>
+        <name>setAuthor</name>
+        <qualifiedname>entities\Comment\setAuthor</qualifiedname>
+        <param>
+          <declname>$author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$author</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="113" column="21" bodyfile="Framework/entities/Comment.php" bodystart="113" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getAuthor_username</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthor_username</name>
+        <qualifiedname>entities\Comment\getAuthor_username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="124" column="21" bodyfile="Framework/entities/Comment.php" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTicket</definition>
+        <argsstring>()</argsstring>
+        <name>getTicket</name>
+        <qualifiedname>entities\Comment\getTicket</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="132" column="21" bodyfile="Framework/entities/Comment.php" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setTicket</definition>
+        <argsstring>($ticket)</argsstring>
+        <name>setTicket</name>
+        <qualifiedname>entities\Comment\setTicket</qualifiedname>
+        <param>
+          <declname>$ticket</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Comment.php" line="141" column="21" bodyfile="Framework/entities/Comment.php" bodystart="141" bodyend="147"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Comment</label>
+        <link refid="classentities_1_1_comment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Comment</label>
+        <link refid="classentities_1_1_comment"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/entities/Comment.php" line="7" column="1" bodyfile="Framework/entities/Comment.php" bodystart="8" bodyend="150"/>
+    <listofallmembers>
+      <member refid="classentities_1_1_comment_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$author</name></member>
+      <member refid="classentities_1_1_comment_1a14beb969b4551ebfd883470b831635c0" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$author_username</name></member>
+      <member refid="classentities_1_1_comment_1a9f9d0999619951c504cdb48a2ad1fb96" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$comment_ID</name></member>
+      <member refid="classentities_1_1_comment_1a481c918f8d853749e00b5942cabf599a" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$date</name></member>
+      <member refid="classentities_1_1_comment_1adf95f30eaafccead90ab5e2cdb55e9b9" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$text</name></member>
+      <member refid="classentities_1_1_comment_1abf7832c7c53a3be2ca8a8fc305006bb0" prot="private" virt="non-virtual"><scope>entities::Comment</scope><name>$ticket</name></member>
+      <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>__construct</name></member>
+      <member refid="classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getAuthor</name></member>
+      <member refid="classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getAuthor_username</name></member>
+      <member refid="classentities_1_1_comment_1a955311333800961e63d1445168d03092" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getComment_ID</name></member>
+      <member refid="classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getDate</name></member>
+      <member refid="classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getText</name></member>
+      <member refid="classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>getTicket</name></member>
+      <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>hydrate</name></member>
+      <member refid="classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setAuthor</name></member>
+      <member refid="classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setComment_ID</name></member>
+      <member refid="classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setDate</name></member>
+      <member refid="classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setText</name></member>
+      <member refid="classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setTicket</name></member>
+      <member refid="classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4" prot="public" virt="non-virtual"><scope>entities::Comment</scope><name>setUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

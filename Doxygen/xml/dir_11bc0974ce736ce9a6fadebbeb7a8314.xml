@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_11bc0974ce736ce9a6fadebbeb7a8314" kind="dir">
+    <compoundname>gui</compoundname>
+    <innerfile refid="_layout_8php">Layout.php</innerfile>
+    <innerfile refid="_view_8php">View.php</innerfile>
+    <innerfile refid="_view_categories_8php">ViewCategories.php</innerfile>
+    <innerfile refid="_view_create_category_8php">ViewCreateCategory.php</innerfile>
+    <innerfile refid="_view_create_posts_8php">ViewCreatePosts.php</innerfile>
+    <innerfile refid="_view_edit_ticket_8php">ViewEditTicket.php</innerfile>
+    <innerfile refid="_view_error_8php">ViewError.php</innerfile>
+    <innerfile refid="_view_homepage_8php">ViewHomepage.php</innerfile>
+    <innerfile refid="_view_login_8php">ViewLogin.php</innerfile>
+    <innerfile refid="_view_posts_8php">ViewPosts.php</innerfile>
+    <innerfile refid="_view_register_8php">ViewRegister.php</innerfile>
+    <innerfile refid="_view_user_edit_8php">ViewUserEdit.php</innerfile>
+    <innerfile refid="_view_users_8php">ViewUsers.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gui/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacegui" kind="namespace" language="PHP">
+    <compoundname>gui</compoundname>
+    <innerclass refid="classgui_1_1_layout" prot="public">gui::Layout</innerclass>
+    <innerclass refid="classgui_1_1_view" prot="public">gui::View</innerclass>
+    <innerclass refid="classgui_1_1_view_categories" prot="public">gui::ViewCategories</innerclass>
+    <innerclass refid="classgui_1_1_view_create_category" prot="public">gui::ViewCreateCategory</innerclass>
+    <innerclass refid="classgui_1_1_view_create_posts" prot="public">gui::ViewCreatePosts</innerclass>
+    <innerclass refid="classgui_1_1_view_edit_ticket" prot="public">gui::ViewEditTicket</innerclass>
+    <innerclass refid="classgui_1_1_view_error" prot="public">gui::ViewError</innerclass>
+    <innerclass refid="classgui_1_1_view_homepage" prot="public">gui::ViewHomepage</innerclass>
+    <innerclass refid="classgui_1_1_view_login" prot="public">gui::ViewLogin</innerclass>
+    <innerclass refid="classgui_1_1_view_posts" prot="public">gui::ViewPosts</innerclass>
+    <innerclass refid="classgui_1_1_view_register" prot="public">gui::ViewRegister</innerclass>
+    <innerclass refid="classgui_1_1_view_user_edit" prot="public">gui::ViewUserEdit</innerclass>
+    <innerclass refid="classgui_1_1_view_users" prot="public">gui::ViewUsers</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="gui/Layout.php" line="3" column="10"/>
+  </compounddef>
+</doxygen>

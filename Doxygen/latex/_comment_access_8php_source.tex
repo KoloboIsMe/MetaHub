@@ -1,0 +1,67 @@
+\doxysection{Comment\+Access.\+php}
+\hypertarget{_comment_access_8php_source}{}\label{_comment_access_8php_source}\index{Framework/database/CommentAccess.php@{Framework/database/CommentAccess.php}}
+\mbox{\hyperlink{_comment_access_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedatabase}{database}};}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00005}00005\ use\ PDOException;}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00006}00006\ use\ \mbox{\hyperlink{interfaceservices_1_1_comment_interface}{services\(\backslash\)CommentInterface}};}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00008}00008\ include\_once\ \textcolor{stringliteral}{"{}services/CommentInterface.php"{}};}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00009}00009\ include\_once\ \textcolor{stringliteral}{"{}Framework/entities/Comment.php"{}};}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00011}\mbox{\hyperlink{classdatabase_1_1_comment_access}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_1_1_comment_access}{CommentAccess}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceservices_1_1_comment_interface}{CommentInterface}}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00016}\mbox{\hyperlink{classdatabase_1_1_comment_access_a7a827f5c09357312fde0811812bbbc35}{00016}}\ \ \ \ \ \textcolor{keyword}{protected}\ \$dataAccess\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00021}\mbox{\hyperlink{classdatabase_1_1_comment_access_a9d903d171ff2319096ef345b4092535b}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_comment_access_a9d903d171ff2319096ef345b4092535b}{\_\_construct}}(\$dataAccess)}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00022}00022\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \$this-\/>dataAccess\ =\ \$dataAccess;}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00024}00024\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00031}\mbox{\hyperlink{classdatabase_1_1_comment_access_a67253b13dbdaf7a12369a3a11c2f01f3}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_comment_access_a67253b13dbdaf7a12369a3a11c2f01f3}{isCommentOwner}}(\$commentID,\ \$user\_ID):\ bool}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00032}00032\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{"{}SELECT\ comment\_ID\ FROM\ comment\ WHERE\ comment\_ID\ =\ :commentID\ AND\ author\ =\ :user\_ID"{}});}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute(array(}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':commentID'}\ =>\ \$commentID,}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':user\_ID'}\ =>\ \$user\_ID}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(\(\backslash\)PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ isset(\$data[\textcolor{stringliteral}{'comment\_ID'}]);}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\(\backslash\)PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ new\ \(\backslash\)PDOException(\textcolor{stringliteral}{"{}Error\ checking\ if\ comment\ owner"{}});}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00053}\mbox{\hyperlink{classdatabase_1_1_comment_access_aa4f3a67631b77070bc5c65d583f34538}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_comment_access_aa4f3a67631b77070bc5c65d583f34538}{createComment}}(\$text,\ \$date,\ \$user\_ID,\ \$ticket\_ID):\ void}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{"{}INSERT\ INTO\ comment\ (text,\ date,\ author,\ ticket)\ VALUES\ (:text,\ :date,\ :user\_ID,\ :ticket\_ID)"{}});}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute(array(}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':text'}\ =>\ \$text,}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':date'}\ =>\ \$date,}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':user\_ID'}\ =>\ \$user\_ID,}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket\_ID'}\ =>\ \$ticket\_ID}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ ));}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00064}00064\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\(\backslash\)PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ new\ \(\backslash\)PDOException(\textcolor{stringliteral}{"{}Error\ creating\ comment"{}});}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00073}\mbox{\hyperlink{classdatabase_1_1_comment_access_a21c3231c72a7cb7da979b016213b2530}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_comment_access_a21c3231c72a7cb7da979b016213b2530}{deleteComment}}(\$commentID):\ void}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'DELETE\ FROM\ comment\ WHERE\ comment\_ID\ =\ :commentID'});}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':commentID'}\ =>\ \$commentID]);}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00078}00078\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_comment_access_8php_source_l00083}00083\ \}}
+
+\end{DoxyCode}

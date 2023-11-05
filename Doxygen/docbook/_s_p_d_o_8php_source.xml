@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__s_p_d_o_8php_source" xml:lang="en-US">
+<title>SPDO.php</title>
+<indexterm><primary>Framework/database/SPDO.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__s_p_d_o_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__s_p_d_o_8php_source_1l00002"/>00002 
+<anchor xml:id="__s_p_d_o_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacedatabase">database</link>;
+<anchor xml:id="__s_p_d_o_8php_source_1l00004"/>00004 
+<anchor xml:id="__s_p_d_o_8php_source_1l00005"/>00005 use&#32;PDO;
+<anchor xml:id="__s_p_d_o_8php_source_1l00006"/>00006 
+<anchor xml:id="__s_p_d_o_8php_source_1l00007"/><link linkend="_classdatabase_1_1_s_p_d_o">00007</link> <emphasis role="keyword">final</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classdatabase_1_1_s_p_d_o">SPDO</link>
+<anchor xml:id="__s_p_d_o_8php_source_1l00008"/>00008 {
+<anchor xml:id="__s_p_d_o_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;?<link linkend="_classdatabase_1_1_s_p_d_o">SPDO</link>&#32;$instance&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__s_p_d_o_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;?PDO&#32;$PDOInstance&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__s_p_d_o_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;$serverName;
+<anchor xml:id="__s_p_d_o_8php_source_1l00021"/>00021 
+<anchor xml:id="__s_p_d_o_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;__construct(<emphasis role="keywordtype">string</emphasis>&#32;$serverName)
+<anchor xml:id="__s_p_d_o_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00028"/>00028 
+<anchor xml:id="__s_p_d_o_8php_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;PDOInstance&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;PDO(<emphasis role="stringliteral">&apos;mysql:host=&apos;</emphasis>&#32;.&#32;$_ENV[<emphasis role="stringliteral">&apos;IPADRESS&apos;</emphasis>]&#32;.&#32;<emphasis role="stringliteral">&apos;;dbname=&apos;</emphasis>&#32;.&#32;$_ENV[<emphasis role="stringliteral">&apos;DBNAME&apos;</emphasis>],&#32;$_ENV[$serverName],&#32;$_ENV[$serverName.<emphasis role="stringliteral">&apos;PASSWORD&apos;</emphasis>]);
+<anchor xml:id="__s_p_d_o_8php_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;PDOInstance-&gt;exec(<emphasis role="stringliteral">&apos;SET&#32;CHARACTER&#32;SET&#32;utf8&apos;</emphasis>);
+<anchor xml:id="__s_p_d_o_8php_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;PDOInstance-&gt;setAttribute(PDO::FETCH_ASSOC,&#32;PDO::FETCH_OBJ);
+<anchor xml:id="__s_p_d_o_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;PDOInstance-&gt;setAttribute(PDO::ATTR_ERRMODE,&#32;PDO::ERRMODE_WARNING);
+<anchor xml:id="__s_p_d_o_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;serverName&#32;=&#32;$serverName;
+<anchor xml:id="__s_p_d_o_8php_source_1l00034"/>00034 
+<anchor xml:id="__s_p_d_o_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(Exception&#32;$e)&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;die(<emphasis role="stringliteral">&apos;Erreur&#32;:&#32;&apos;</emphasis>&#32;.&#32;$e-&gt;getMessage());
+<anchor xml:id="__s_p_d_o_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__s_p_d_o_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__s_p_d_o_8php_source_1l00039"/>00039 
+<anchor xml:id="__s_p_d_o_8php_source_1l00044"/><link linkend="_classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537">00044</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537">getInstance</link>(<emphasis role="keywordtype">string</emphasis>&#32;$serverName):&#32;<link linkend="_classdatabase_1_1_s_p_d_o">SPDO</link>
+<anchor xml:id="__s_p_d_o_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_null(self::$instance)&#32;||&#32;self::$instance-&gt;serverName&#32;!==&#32;$serverName)&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;self::$instance&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classdatabase_1_1_s_p_d_o">SPDO</link>($serverName);
+<anchor xml:id="__s_p_d_o_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__s_p_d_o_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;self::$instance;
+<anchor xml:id="__s_p_d_o_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__s_p_d_o_8php_source_1l00051"/>00051 
+<anchor xml:id="__s_p_d_o_8php_source_1l00056"/><link linkend="_classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5">00056</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5">prepare</link>($query)
+<anchor xml:id="__s_p_d_o_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__s_p_d_o_8php_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;PDOInstance-&gt;prepare($query);
+<anchor xml:id="__s_p_d_o_8php_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__s_p_d_o_8php_source_1l00060"/>00060 }
+</programlisting></section>

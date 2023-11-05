@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classentities_1_1_post" xml:lang="en-US">
+<title>Post Class Reference</title>
+<indexterm><primary>Post</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_post_1a788d23abf4d52e0c1819f5cd33a7e87a">__construct</link> ($ticket, $categories, $comments, $user)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_post_1a42ddf34a72af750b7013fa309b67e46c">getTicket</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_post_1a8729ba486702e7e12a3fff08965e1e7f">getCategories</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_post_1af3034ead082330d2c046a69814009808">getComments</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_post_1ae81b7186fb97a7c6457edcc68c9aa2ef">getUser</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00005">5</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classentities_1_1_post_1a788d23abf4d52e0c1819f5cd33a7e87a"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Post</secondary></indexterm>
+<indexterm><primary>Post</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $ticket,  $categories,  $comments,  $user)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticket</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$categories</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$comments</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$user</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00030">30</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classentities_1_1_post_1a8729ba486702e7e12a3fff08965e1e7f"/><section>
+    <title>getCategories()</title>
+<indexterm><primary>getCategories</primary><secondary>Post</secondary></indexterm>
+<indexterm><primary>Post</primary><secondary>getCategories</secondary></indexterm>
+<para><computeroutput>getCategories ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Category[] </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00049">49</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_post_1af3034ead082330d2c046a69814009808"/><section>
+    <title>getComments()</title>
+<indexterm><primary>getComments</primary><secondary>Post</secondary></indexterm>
+<indexterm><primary>Post</primary><secondary>getComments</secondary></indexterm>
+<para><computeroutput>getComments ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Comment[] </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00057">57</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_post_1a42ddf34a72af750b7013fa309b67e46c"/><section>
+    <title>getTicket()</title>
+<indexterm><primary>getTicket</primary><secondary>Post</secondary></indexterm>
+<indexterm><primary>Post</primary><secondary>getTicket</secondary></indexterm>
+<para><computeroutput>getTicket ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>Ticket </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00041">41</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_post_1ae81b7186fb97a7c6457edcc68c9aa2ef"/><section>
+    <title>getUser()</title>
+<indexterm><primary>getUser</primary><secondary>Post</secondary></indexterm>
+<indexterm><primary>Post</primary><secondary>getUser</secondary></indexterm>
+<para><computeroutput>getUser ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>User </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2post_8php_source_1l00065">65</link> of file <link linkend="__framework_2entities_2post_8php_source">Post.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/entities/<link linkend="__framework_2entities_2post_8php">Post.php</link></section>
+</section>

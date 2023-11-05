@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_b11b9a48dd2a17694fe5d9bcb5448cd8" kind="dir">
+    <compoundname>Framework/entities</compoundname>
+    <innerfile refid="_framework_2entities_2category_8php">Category.php</innerfile>
+    <innerfile refid="_comment_8php">Comment.php</innerfile>
+    <innerfile refid="_entity_8php">Entity.php</innerfile>
+    <innerfile refid="_framework_2entities_2post_8php">Post.php</innerfile>
+    <innerfile refid="_ticket_8php">Ticket.php</innerfile>
+    <innerfile refid="_framework_2entities_2user_8php">User.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Framework/entities/"/>
+  </compounddef>
+</doxygen>

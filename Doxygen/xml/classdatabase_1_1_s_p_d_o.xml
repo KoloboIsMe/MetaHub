@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classdatabase_1_1_s_p_d_o" kind="class" language="PHP" prot="public">
+    <compoundname>database::SPDO</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classdatabase_1_1_s_p_d_o_1a796e73de49db6bdb893d5f1e8ecbbd6e" prot="private" static="yes" mutable="no">
+        <type><ref refid="classdatabase_1_1_s_p_d_o" kindref="compound">SPDO</ref></type>
+        <definition>SPDO $instance</definition>
+        <argsstring></argsstring>
+        <name>$instance</name>
+        <qualifiedname>database\SPDO\$instance</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="12" column="25" bodyfile="Framework/database/SPDO.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdatabase_1_1_s_p_d_o_1a84e06113458dc9ad645dd3f5188af1da" prot="private" static="no" mutable="no">
+        <type>PDO</type>
+        <definition>PDO $PDOInstance</definition>
+        <argsstring></argsstring>
+        <name>$PDOInstance</name>
+        <qualifiedname>database\SPDO\$PDOInstance</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="16" column="17" bodyfile="Framework/database/SPDO.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdatabase_1_1_s_p_d_o_1a5f88da85b51a954c650fcaf004c9517e" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string $serverName</definition>
+        <argsstring></argsstring>
+        <name>$serverName</name>
+        <qualifiedname>database\SPDO\$serverName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="20" column="20" bodyfile="Framework/database/SPDO.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdatabase_1_1_s_p_d_o_1ae7b634190b4229001319b42b2792506a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>(string $serverName)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>database\SPDO\__construct</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$serverName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$serverName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="25" column="22" bodyfile="Framework/database/SPDO.php" bodystart="25" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static getInstance</definition>
+        <argsstring>(string $serverName)</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>database\SPDO\getInstance</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$serverName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$serverName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>SPDO </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="44" column="28" bodyfile="Framework/database/SPDO.php" bodystart="44" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prepare</definition>
+        <argsstring>($query)</argsstring>
+        <name>prepare</name>
+        <qualifiedname>database\SPDO\prepare</qualifiedname>
+        <param>
+          <declname>$query</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$query</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>false|\PDOStatement </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/SPDO.php" line="56" column="21" bodyfile="Framework/database/SPDO.php" bodystart="56" bodyend="59"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Framework/database/SPDO.php" line="7" column="6" bodyfile="Framework/database/SPDO.php" bodystart="8" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classdatabase_1_1_s_p_d_o_1a796e73de49db6bdb893d5f1e8ecbbd6e" prot="private" virt="non-virtual"><scope>database::SPDO</scope><name>$instance</name></member>
+      <member refid="classdatabase_1_1_s_p_d_o_1a84e06113458dc9ad645dd3f5188af1da" prot="private" virt="non-virtual"><scope>database::SPDO</scope><name>$PDOInstance</name></member>
+      <member refid="classdatabase_1_1_s_p_d_o_1a5f88da85b51a954c650fcaf004c9517e" prot="private" virt="non-virtual"><scope>database::SPDO</scope><name>$serverName</name></member>
+      <member refid="classdatabase_1_1_s_p_d_o_1ae7b634190b4229001319b42b2792506a" prot="private" virt="non-virtual"><scope>database::SPDO</scope><name>__construct</name></member>
+      <member refid="classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537" prot="public" virt="non-virtual"><scope>database::SPDO</scope><name>getInstance</name></member>
+      <member refid="classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5" prot="public" virt="non-virtual"><scope>database::SPDO</scope><name>prepare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

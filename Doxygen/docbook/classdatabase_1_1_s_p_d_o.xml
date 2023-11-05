@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classdatabase_1_1_s_p_d_o" xml:lang="en-US">
+<title>SPDO Class Reference</title>
+<indexterm><primary>SPDO</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5">prepare</link> ($query)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537">getInstance</link> (string $serverName)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__s_p_d_o_8php_source_1l00007">7</link> of file <link linkend="__s_p_d_o_8php_source">SPDO.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classdatabase_1_1_s_p_d_o_1af34f0e432a140c7807e99df651e3b537"/><section>
+    <title>getInstance()</title>
+<indexterm><primary>getInstance</primary><secondary>SPDO</secondary></indexterm>
+<indexterm><primary>SPDO</primary><secondary>getInstance</secondary></indexterm>
+<para><computeroutput>static getInstance (string $serverName)<computeroutput>[static]</computeroutput></computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>string</entry><entry>$serverName</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>SPDO </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__s_p_d_o_8php_source_1l00044">44</link> of file <link linkend="__s_p_d_o_8php_source">SPDO.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_s_p_d_o_1a008a39a69d47048bd395c3c63c529ed5"/><section>
+    <title>prepare()</title>
+<indexterm><primary>prepare</primary><secondary>SPDO</secondary></indexterm>
+<indexterm><primary>SPDO</primary><secondary>prepare</secondary></indexterm>
+<para><computeroutput>prepare ( $query)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$query</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false|\PDOStatement </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__s_p_d_o_8php_source_1l00056">56</link> of file <link linkend="__s_p_d_o_8php_source">SPDO.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/database/<link linkend="__s_p_d_o_8php">SPDO.php</link></section>
+</section>

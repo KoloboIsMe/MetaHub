@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classservices_1_1_comments_service" xml:lang="en-US">
+<title>CommentsService Class Reference</title>
+<indexterm><primary>CommentsService</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75">__construct</link> ($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c">createComment</link> ($commentAccess, $text, $ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6">isCommentOwner</link> ($commentAccess, $commentID, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e">deleteComment</link> ($commentAccess, $commentID)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__comments_service_8php_source_1l00005">5</link> of file <link linkend="__comments_service_8php_source">CommentsService.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classservices_1_1_comments_service_1a21db5a882ba43a48b03c976aefa69c75"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>CommentsService</secondary></indexterm>
+<indexterm><primary>CommentsService</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $outputData)</computeroutput></para><para>
+Definition at line <link linkend="__comments_service_8php_source_1l00010">10</link> of file <link linkend="__comments_service_8php_source">CommentsService.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classservices_1_1_comments_service_1a156088c4cc0ebd0284eb9a7e16c9f73c"/><section>
+    <title>createComment()</title>
+<indexterm><primary>createComment</primary><secondary>CommentsService</secondary></indexterm>
+<indexterm><primary>CommentsService</primary><secondary>createComment</secondary></indexterm>
+<para><computeroutput>createComment ( $commentAccess,  $text,  $ticketID)</computeroutput></para><para>
+Definition at line <link linkend="__comments_service_8php_source_1l00015">15</link> of file <link linkend="__comments_service_8php_source">CommentsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_comments_service_1aedd8b7429f6971ec85ba178f9063738e"/><section>
+    <title>deleteComment()</title>
+<indexterm><primary>deleteComment</primary><secondary>CommentsService</secondary></indexterm>
+<indexterm><primary>CommentsService</primary><secondary>deleteComment</secondary></indexterm>
+<para><computeroutput>deleteComment ( $commentAccess,  $commentID)</computeroutput></para><para>
+Definition at line <link linkend="__comments_service_8php_source_1l00025">25</link> of file <link linkend="__comments_service_8php_source">CommentsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_comments_service_1a83a039a71fdc95953c842837805db3e6"/><section>
+    <title>isCommentOwner()</title>
+<indexterm><primary>isCommentOwner</primary><secondary>CommentsService</secondary></indexterm>
+<indexterm><primary>CommentsService</primary><secondary>isCommentOwner</secondary></indexterm>
+<para><computeroutput>isCommentOwner ( $commentAccess,  $commentID,  $user_ID)</computeroutput></para><para>
+Definition at line <link linkend="__comments_service_8php_source_1l00020">20</link> of file <link linkend="__comments_service_8php_source">CommentsService.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+services/<link linkend="__comments_service_8php">CommentsService.php</link></section>
+</section>

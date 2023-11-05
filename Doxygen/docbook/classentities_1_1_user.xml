@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classentities_1_1_user" xml:lang="en-US">
+<title>User Class Reference</title>
+<indexterm><primary>User</primary></indexterm>
+<para>Inheritance diagram for User:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classentities_1_1_user.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7">getUser_ID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a88aebf064698f5fa34a719655850e629">setUser_ID</link> ($user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f">getPassword</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926">setPassword</link> ($password)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e">getUsername</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244">setUsername</link> ($username)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1">getFirst_connexion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d">setFirst_connexion</link> ($first_connexion)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7">getLast_connexion</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9">setLast_connexion</link> ($last_connexion)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2">getLevel</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c">setLevel</link> ($level)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313">getOnline</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8">setOnline</link> ($online)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classentities_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">__construct</link> (array $data)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">hydrate</link> ($data)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00007">7</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1"/><section>
+    <title>getFirst_connexion()</title>
+<indexterm><primary>getFirst_connexion</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getFirst_connexion</secondary></indexterm>
+<para><computeroutput>getFirst_connexion ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00099">99</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7"/><section>
+    <title>getLast_connexion()</title>
+<indexterm><primary>getLast_connexion</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getLast_connexion</secondary></indexterm>
+<para><computeroutput>getLast_connexion ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00116">116</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2"/><section>
+    <title>getLevel()</title>
+<indexterm><primary>getLevel</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getLevel</secondary></indexterm>
+<para><computeroutput>getLevel ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00133">133</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313"/><section>
+    <title>getOnline()</title>
+<indexterm><primary>getOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getOnline</secondary></indexterm>
+<para><computeroutput>getOnline ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00152">152</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f"/><section>
+    <title>getPassword()</title>
+<indexterm><primary>getPassword</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getPassword</secondary></indexterm>
+<para><computeroutput>getPassword ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00061">61</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7"/><section>
+    <title>getUser_ID()</title>
+<indexterm><primary>getUser_ID</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUser_ID</secondary></indexterm>
+<para><computeroutput>getUser_ID ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00041">41</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e"/><section>
+    <title>getUsername()</title>
+<indexterm><primary>getUsername</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>getUsername</secondary></indexterm>
+<para><computeroutput>getUsername ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00080">80</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d"/><section>
+    <title>setFirst_connexion()</title>
+<indexterm><primary>setFirst_connexion</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setFirst_connexion</secondary></indexterm>
+<para><computeroutput>setFirst_connexion ( $first_connexion)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$first_connexion</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00108">108</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9"/><section>
+    <title>setLast_connexion()</title>
+<indexterm><primary>setLast_connexion</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setLast_connexion</secondary></indexterm>
+<para><computeroutput>setLast_connexion ( $last_connexion)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$last_connexion</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00125">125</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c"/><section>
+    <title>setLevel()</title>
+<indexterm><primary>setLevel</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setLevel</secondary></indexterm>
+<para><computeroutput>setLevel ( $level)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$level</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00142">142</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8"/><section>
+    <title>setOnline()</title>
+<indexterm><primary>setOnline</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setOnline</secondary></indexterm>
+<para><computeroutput>setOnline ( $online)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$online</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00160">160</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926"/><section>
+    <title>setPassword()</title>
+<indexterm><primary>setPassword</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setPassword</secondary></indexterm>
+<para><computeroutput>setPassword ( $password)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00070">70</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1a88aebf064698f5fa34a719655850e629"/><section>
+    <title>setUser_ID()</title>
+<indexterm><primary>setUser_ID</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUser_ID</secondary></indexterm>
+<para><computeroutput>setUser_ID ( $user_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00050">50</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244"/><section>
+    <title>setUsername()</title>
+<indexterm><primary>setUsername</primary><secondary>User</secondary></indexterm>
+<indexterm><primary>User</primary><secondary>setUsername</secondary></indexterm>
+<para><computeroutput>setUsername ( $username)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__framework_2entities_2user_8php_source_1l00089">89</link> of file <link linkend="__framework_2entities_2user_8php_source">User.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/entities/<link linkend="__framework_2entities_2user_8php">User.php</link></section>
+</section>

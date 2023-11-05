@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceentities" xml:lang="en-US">
+<title>entities Namespace Reference</title>
+<indexterm><primary>entities</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classentities_1_1_category">Category</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classentities_1_1_comment">Comment</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classentities_1_1_entity">Entity</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classentities_1_1_post">Post</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classentities_1_1_ticket">Ticket</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classentities_1_1_user">User</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_11bc0974ce736ce9a6fadebbeb7a8314" xml:lang="en-US">
+<title>gui Directory Reference</title>
+<indexterm><primary>gui Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__layout_8php">Layout.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_8php">View.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_categories_8php">ViewCategories.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_create_category_8php">ViewCreateCategory.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_create_posts_8php">ViewCreatePosts.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_edit_ticket_8php">ViewEditTicket.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_error_8php">ViewError.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_homepage_8php">ViewHomepage.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_login_8php">ViewLogin.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_posts_8php">ViewPosts.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_register_8php">ViewRegister.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_user_edit_8php">ViewUserEdit.php</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__view_users_8php">ViewUsers.php</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

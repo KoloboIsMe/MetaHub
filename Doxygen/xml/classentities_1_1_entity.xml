@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classentities_1_1_entity" kind="class" language="PHP" prot="public">
+    <compoundname>entities::Entity</compoundname>
+    <derivedcompoundref refid="classentities_1_1_category" prot="public" virt="non-virtual">Category</derivedcompoundref>
+    <derivedcompoundref refid="classentities_1_1_comment" prot="public" virt="non-virtual">Comment</derivedcompoundref>
+    <derivedcompoundref refid="classentities_1_1_ticket" prot="public" virt="non-virtual">Ticket</derivedcompoundref>
+    <derivedcompoundref refid="classentities_1_1_user" prot="public" virt="non-virtual">User</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>(array $data)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>entities\Entity\__construct</qualifiedname>
+        <param>
+          <type>array</type>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Entity.php" line="8" column="21" bodyfile="Framework/entities/Entity.php" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>hydrate</definition>
+        <argsstring>($data)</argsstring>
+        <name>hydrate</name>
+        <qualifiedname>entities\Entity\hydrate</qualifiedname>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Entity.php" line="14" column="21" bodyfile="Framework/entities/Entity.php" bodystart="14" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+      <node id="2">
+        <label>Category</label>
+        <link refid="classentities_1_1_category"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Comment</label>
+        <link refid="classentities_1_1_comment"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Ticket</label>
+        <link refid="classentities_1_1_ticket"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>User</label>
+        <link refid="classentities_1_1_user"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="Framework/entities/Entity.php" line="5" column="10" bodyfile="Framework/entities/Entity.php" bodystart="6" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" virt="non-virtual"><scope>entities::Entity</scope><name>__construct</name></member>
+      <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" virt="non-virtual"><scope>entities::Entity</scope><name>hydrate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

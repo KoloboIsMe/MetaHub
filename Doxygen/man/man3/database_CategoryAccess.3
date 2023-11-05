@@ -1,0 +1,170 @@
+.TH "CategoryAccess" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CategoryAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBCategoryInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($dataAccess)"
+.br
+.ti -1c
+.RI "\fBexistsCategory\fP ($CategoryID)"
+.br
+.ti -1c
+.RI "\fBgetCategoryById\fP ($ID)"
+.br
+.ti -1c
+.RI "\fBgetCategoriesID\fP ()"
+.br
+.ti -1c
+.RI "\fBget5LastCategories\fP ()"
+.br
+.ti -1c
+.RI "\fBgetCategoryIdByLabel\fP ($label)"
+.br
+.ti -1c
+.RI "\fBcreateCategory\fP ($label, $description)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$dataAccess\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB15\fP of file \fBCategoryAccess\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $dataAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$dataAccess\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBCategoryAccess\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "createCategory ( $label,  $description)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$label\fP 
+.br
+\fI$description\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB120\fP of file \fBCategoryAccess\&.php\fP\&.
+.SS "existsCategory ( $CategoryID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$CategoryID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB34\fP of file \fBCategoryAccess\&.php\fP\&.
+.SS "get5LastCategories ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+Category[] 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB83\fP of file \fBCategoryAccess\&.php\fP\&.
+.SS "getCategoriesID ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB65\fP of file \fBCategoryAccess\&.php\fP\&.
+.SS "getCategoryById ( $ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Category 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB50\fP of file \fBCategoryAccess\&.php\fP\&.
+.SS "getCategoryIdByLabel ( $label)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$label\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 
+.RE
+.PP
+
+.PP
+Implements \fBCategoryInterface\fP\&.
+.PP
+Definition at line \fB102\fP of file \fBCategoryAccess\&.php\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "$dataAccess = null\fC [protected]\fP"
+
+.PP
+Definition at line \fB20\fP of file \fBCategoryAccess\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

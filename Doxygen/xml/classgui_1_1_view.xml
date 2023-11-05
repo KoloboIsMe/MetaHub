@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classgui_1_1_view" kind="class" language="PHP" prot="public">
+    <compoundname>gui::View</compoundname>
+    <derivedcompoundref refid="classgui_1_1_view_categories" prot="public" virt="non-virtual">ViewCategories</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_create_category" prot="public" virt="non-virtual">ViewCreateCategory</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_create_posts" prot="public" virt="non-virtual">ViewCreatePosts</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_edit_ticket" prot="public" virt="non-virtual">ViewEditTicket</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_error" prot="public" virt="non-virtual">ViewError</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_homepage" prot="public" virt="non-virtual">ViewHomepage</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_login" prot="public" virt="non-virtual">ViewLogin</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_posts" prot="public" virt="non-virtual">ViewPosts</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_register" prot="public" virt="non-virtual">ViewRegister</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_user_edit" prot="public" virt="non-virtual">ViewUserEdit</derivedcompoundref>
+    <derivedcompoundref refid="classgui_1_1_view_users" prot="public" virt="non-virtual">ViewUsers</derivedcompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgui_1_1_view_1ada57e7bb7c152edad18fe2f166188691" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$title</definition>
+        <argsstring></argsstring>
+        <name>$title</name>
+        <qualifiedname>gui\View\$title</qualifiedname>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="6" column="15" bodyfile="gui/View.php" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgui_1_1_view_1a57b284fe00866494b33afa80ba729bed" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$content</definition>
+        <argsstring></argsstring>
+        <name>$content</name>
+        <qualifiedname>gui\View\$content</qualifiedname>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="7" column="15" bodyfile="gui/View.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgui_1_1_view_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <qualifiedname>gui\View\$username</qualifiedname>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="9" column="15" bodyfile="gui/View.php" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgui_1_1_view_1ab3e5e5111363f7c803693d5bd75ad448" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$searchBar</definition>
+        <argsstring></argsstring>
+        <name>$searchBar</name>
+        <qualifiedname>gui\View\$searchBar</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="10" column="15" bodyfile="gui/View.php" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgui_1_1_view_1a2b0d08e73a90b9443ce37506b7c6a544" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$layout</definition>
+        <argsstring></argsstring>
+        <name>$layout</name>
+        <qualifiedname>gui\View\$layout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="11" column="15" bodyfile="gui/View.php" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgui_1_1_view_1a3867efed8f524d30034063f8c80c18fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($layout)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>gui\View\__construct</qualifiedname>
+        <reimplementedby refid="classgui_1_1_view_create_category_1a3867efed8f524d30034063f8c80c18fd">__construct</reimplementedby>
+        <param>
+          <declname>$layout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="13" column="21" bodyfile="gui/View.php" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classgui_1_1_view_1a0b9b6e6acd4a839fc7c2f26f96b5cfa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>display</definition>
+        <argsstring>()</argsstring>
+        <name>display</name>
+        <qualifiedname>gui\View\display</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gui/View.php" line="18" column="21" bodyfile="gui/View.php" bodystart="18" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>View</label>
+        <link refid="classgui_1_1_view"/>
+      </node>
+      <node id="2">
+        <label>ViewCategories</label>
+        <link refid="classgui_1_1_view_categories"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ViewCreateCategory</label>
+        <link refid="classgui_1_1_view_create_category"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ViewCreatePosts</label>
+        <link refid="classgui_1_1_view_create_posts"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ViewEditTicket</label>
+        <link refid="classgui_1_1_view_edit_ticket"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ViewError</label>
+        <link refid="classgui_1_1_view_error"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ViewHomepage</label>
+        <link refid="classgui_1_1_view_homepage"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ViewLogin</label>
+        <link refid="classgui_1_1_view_login"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>ViewPosts</label>
+        <link refid="classgui_1_1_view_posts"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ViewRegister</label>
+        <link refid="classgui_1_1_view_register"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ViewUserEdit</label>
+        <link refid="classgui_1_1_view_user_edit"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ViewUsers</label>
+        <link refid="classgui_1_1_view_users"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="gui/View.php" line="4" column="10" bodyfile="gui/View.php" bodystart="5" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classgui_1_1_view_1a57b284fe00866494b33afa80ba729bed" prot="protected" virt="non-virtual"><scope>gui::View</scope><name>$content</name></member>
+      <member refid="classgui_1_1_view_1a2b0d08e73a90b9443ce37506b7c6a544" prot="protected" virt="non-virtual"><scope>gui::View</scope><name>$layout</name></member>
+      <member refid="classgui_1_1_view_1ab3e5e5111363f7c803693d5bd75ad448" prot="protected" virt="non-virtual"><scope>gui::View</scope><name>$searchBar</name></member>
+      <member refid="classgui_1_1_view_1ada57e7bb7c152edad18fe2f166188691" prot="protected" virt="non-virtual"><scope>gui::View</scope><name>$title</name></member>
+      <member refid="classgui_1_1_view_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="protected" virt="non-virtual"><scope>gui::View</scope><name>$username</name></member>
+      <member refid="classgui_1_1_view_1a3867efed8f524d30034063f8c80c18fd" prot="public" virt="non-virtual"><scope>gui::View</scope><name>__construct</name></member>
+      <member refid="classgui_1_1_view_1a0b9b6e6acd4a839fc7c2f26f96b5cfa8" prot="public" virt="non-virtual"><scope>gui::View</scope><name>display</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

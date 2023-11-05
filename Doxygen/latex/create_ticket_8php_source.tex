@@ -1,0 +1,35 @@
+\doxysection{create\+Ticket.\+php}
+\hypertarget{create_ticket_8php_source}{}\label{create_ticket_8php_source}\index{controls/pagePresenters/createTicket.php@{controls/pagePresenters/createTicket.php}}
+\mbox{\hyperlink{create_ticket_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00001}00001\ <script\ src=\textcolor{stringliteral}{'https://unpkg.com/slim-\/select@latest/dist/slimselect.min.js'}></script>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00002}00002\ <link\ href=\textcolor{stringliteral}{'gui/css/CategorySelectionBar.css'}\ rel=\textcolor{stringliteral}{'stylesheet'}></link>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00003}00003\ <link\ href=\textcolor{stringliteral}{'gui/css/forms.css'}\ rel=\textcolor{stringliteral}{'stylesheet'}\ type=\textcolor{stringliteral}{'text/css'}/>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00004}00004\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'container'}>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00005}00005\ \ \ \ \ <form\ action=\textcolor{stringliteral}{'/createPosts?action=createPostsAction'}\ method=\textcolor{stringliteral}{'POST'}>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00006}00006\ \ \ \ \ \ \ \ \ <h1>Nouveau\ Post</h1>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ <label><b>Titre</b></label>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{'text'}\ placeholder=\textcolor{stringliteral}{"{}\ Entrer\ le\ titre\ du\ post\ "{}}\ name=\textcolor{stringliteral}{'title'}\ required>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ <label><b>Contenu\ du\ post</b></label>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ <textarea\ placeholder=\textcolor{stringliteral}{'Entrer\ le\ contenu\ du\ post'}\ name=\textcolor{stringliteral}{'message'}\ required></textarea>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ <select\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'category'}\ multiple\ name=\textcolor{stringliteral}{'categories[]'}>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$this-\/>outputData-\/>getOutputData()\ as\ \$category)\ \{\ ?>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <option><?=\ \$category-\/>getLabel()\ ?></option>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ </select>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{'submit'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'submit'}\ value=\textcolor{stringliteral}{'Publier'}>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00017}00017\ \ \ \ \ </form>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00018}00018\ </div>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00020}00020\ <script>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{new}\ SlimSelect(\{}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ select:\ \textcolor{stringliteral}{'\#category'},}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ settings:\ \{}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ placeholderText:\ \textcolor{stringliteral}{'Choisir\ une\ catégorie'},}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ searchPlaceholder:\ \textcolor{stringliteral}{'Rechercher'},}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00027}00027\ \ \ \ \ \})}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00028}00028\ </script>}
+\DoxyCodeLine{\Hypertarget{create_ticket_8php_source_l00029}00029\ }
+
+\end{DoxyCode}

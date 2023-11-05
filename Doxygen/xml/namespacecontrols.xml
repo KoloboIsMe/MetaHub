@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacecontrols" kind="namespace" language="PHP">
+    <compoundname>controls</compoundname>
+    <innerclass refid="classcontrols_1_1_controller" prot="public">controls::Controller</innerclass>
+    <innerclass refid="classcontrols_1_1_presenter" prot="public">controls::Presenter</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="controls/Controller.php" line="3" column="10"/>
+  </compounddef>
+</doxygen>

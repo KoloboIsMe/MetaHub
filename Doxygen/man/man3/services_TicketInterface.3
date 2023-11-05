@@ -1,0 +1,65 @@
+.TH "TicketInterface" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TicketInterface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBTicketAccess\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBexistsTicket\fP ($ticketID)"
+.br
+.ti -1c
+.RI "\fBgetTicketsID\fP ()"
+.br
+.ti -1c
+.RI "\fBget5LastTicketsID\fP ()"
+.br
+.ti -1c
+.RI "\fBcreateTicket\fP ($title, $message, $date, $author)"
+.br
+.ti -1c
+.RI "\fBeditTicket\fP ($id, $title, $message)"
+.br
+.ti -1c
+.RI "\fBisTicketOwner\fP ($ticketID, $userID)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB5\fP of file \fBTicketInterface\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "createTicket ( $title,  $message,  $date,  $author)"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+.SS "editTicket ( $id,  $title,  $message)"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+.SS "existsTicket ( $ticketID)"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+.SS "get5LastTicketsID ()"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+.SS "getTicketsID ()"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+.SS "isTicketOwner ( $ticketID,  $userID)"
+
+.PP
+Implemented in \fBTicketAccess\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="interfaceservices_1_1_comment_interface" kind="interface" language="PHP" prot="public">
+    <compoundname>services::CommentInterface</compoundname>
+    <derivedcompoundref refid="classdatabase_1_1_comment_access" prot="public" virt="non-virtual">CommentAccess</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createComment</definition>
+        <argsstring>($text, $date, $user_ID, $ticket_ID)</argsstring>
+        <name>createComment</name>
+        <qualifiedname>services\CommentInterface\createComment</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538">createComment</reimplementedby>
+        <param>
+          <declname>$text</declname>
+        </param>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <param>
+          <declname>$ticket_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentInterface.php" line="7" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isCommentOwner</definition>
+        <argsstring>($commentID, $user_ID)</argsstring>
+        <name>isCommentOwner</name>
+        <qualifiedname>services\CommentInterface\isCommentOwner</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3">isCommentOwner</reimplementedby>
+        <param>
+          <declname>$commentID</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentInterface.php" line="8" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>deleteComment</definition>
+        <argsstring>($commentID)</argsstring>
+        <name>deleteComment</name>
+        <qualifiedname>services\CommentInterface\deleteComment</qualifiedname>
+        <reimplementedby refid="classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530">deleteComment</reimplementedby>
+        <param>
+          <declname>$commentID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CommentInterface.php" line="9" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CommentInterface</label>
+        <link refid="interfaceservices_1_1_comment_interface"/>
+      </node>
+      <node id="2">
+        <label>CommentAccess</label>
+        <link refid="classdatabase_1_1_comment_access"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="services/CommentInterface.php" line="5" column="11" bodyfile="services/CommentInterface.php" bodystart="6" bodyend="11"/>
+    <listofallmembers>
+      <member refid="interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538" prot="public" virt="non-virtual"><scope>services::CommentInterface</scope><name>createComment</name></member>
+      <member refid="interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530" prot="public" virt="non-virtual"><scope>services::CommentInterface</scope><name>deleteComment</name></member>
+      <member refid="interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3" prot="public" virt="non-virtual"><scope>services::CommentInterface</scope><name>isCommentOwner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

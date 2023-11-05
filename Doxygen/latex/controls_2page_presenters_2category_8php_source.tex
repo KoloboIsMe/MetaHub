@@ -1,0 +1,44 @@
+\doxysection{category.\+php}
+\hypertarget{controls_2page_presenters_2category_8php_source}{}\label{controls_2page_presenters_2category_8php_source}\index{controls/pagePresenters/category.php@{controls/pagePresenters/category.php}}
+\mbox{\hyperlink{controls_2page_presenters_2category_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00001}00001\ <link\ href=\textcolor{stringliteral}{"{}gui/css/category.css"{}}\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ type=\textcolor{stringliteral}{"{}text/css"{}}/>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00002}00002\ <h2>\#<?=\ \$category-\/>getLabel()\ ?></h2>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00003}00003\ <p\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'category-\/description'}><?=\ \$category-\/>getDescription()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00004}00004\ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/container'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00006}00006\ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$data\ as\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}})\ \{}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00007}00007\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTicket\_ID();\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'post-\/card'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00009}00009\ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'posts\&id=<?=\ \$id\ ?>'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/content'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'post-\/header'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/user.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'userImg'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'card-\/username'}>@<?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getUser()-\/>getUsername()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\ <?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTitle()\ ?></h3>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}categories"{}}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getCategories()\ as\ \$category)\ \{\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'category'}>\#<?=\ \$category-\/>getLabel()\ ?></div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p><?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getMessage()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <time\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'time'}><?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getDate()\ ?>\ </time>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p><?=\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTicket\_ID()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ ((isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)\ ||\ (isset(\$\_SESSION[\textcolor{stringliteral}{'user\_ID'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'user\_ID'}]\ ==\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getUser()-\/>getUser\_ID()))\ \{\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}edit-\/delete"{}}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'editTicket\&id=<?=\ \$id\ ?>'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <button><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/edit.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'editImg'}></button>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </a>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'?action=deleteTicketAction\&id=<?=\ \$id\ ?>'}>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <button><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/delete.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'deleteImg'}></button>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </a>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ </a>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00037}00037\ \ \ \ \ <?php\ \}\ ?>}
+\DoxyCodeLine{\Hypertarget{controls_2page_presenters_2category_8php_source_l00038}00038\ </div>}
+
+\end{DoxyCode}

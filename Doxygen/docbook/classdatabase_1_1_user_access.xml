@@ -1,0 +1,476 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classdatabase_1_1_user_access" xml:lang="en-US">
+<title>UserAccess Class Reference</title>
+<indexterm><primary>UserAccess</primary></indexterm>
+<para>Inheritance diagram for UserAccess:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classdatabase_1_1_user_access.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b">__construct</link> ($dataAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59">existsUsername</link> ($username)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d">existsUser</link> ($user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef">isUser</link> ($username, $password)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88">getUserByUsername</link> ($username)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc">getUserById</link> ($id)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de">getUsersID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db">register</link> ($username, $password, $date)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5">updateUser</link> ($username, $password, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353">updateLastConnexion</link> ($user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725">get10LastConnectedUsersID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b">setOnline</link> ($user_ID, $online)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35">$dataAccess</link> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00012">12</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $dataAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$dataAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00022">22</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d"/><section>
+    <title>existsUser()</title>
+<indexterm><primary>existsUser</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>existsUser</secondary></indexterm>
+<para><computeroutput>existsUser ( $user_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00047">47</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59"/><section>
+    <title>existsUsername()</title>
+<indexterm><primary>existsUsername</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>existsUsername</secondary></indexterm>
+<para><computeroutput>existsUsername ( $username)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00031">31</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725"/><section>
+    <title>get10LastConnectedUsersID()</title>
+<indexterm><primary>get10LastConnectedUsersID</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>get10LastConnectedUsersID</secondary></indexterm>
+<para><computeroutput>get10LastConnectedUsersID ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int[] </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00198">198</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc"/><section>
+    <title>getUserById()</title>
+<indexterm><primary>getUserById</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>getUserById</secondary></indexterm>
+<para><computeroutput>getUserById ( $id)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$id</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>User </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00099">99</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88"/><section>
+    <title>getUserByUsername()</title>
+<indexterm><primary>getUserByUsername</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>getUserByUsername</secondary></indexterm>
+<para><computeroutput>getUserByUsername ( $username)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>User </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00083">83</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de"/><section>
+    <title>getUsersID()</title>
+<indexterm><primary>getUsersID</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>getUsersID</secondary></indexterm>
+<para><computeroutput>getUsersID ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int[] </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00114">114</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef"/><section>
+    <title>isUser()</title>
+<indexterm><primary>isUser</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>isUser</secondary></indexterm>
+<para><computeroutput>isUser ( $username,  $password)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>bool </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00064">64</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db"/><section>
+    <title>register()</title>
+<indexterm><primary>register</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>register</secondary></indexterm>
+<para><computeroutput>register ( $username,  $password,  $date)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$date</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>string|null </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00135">135</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b"/><section>
+    <title>setOnline()</title>
+<indexterm><primary>setOnline</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>setOnline</secondary></indexterm>
+<para><computeroutput>setOnline ( $user_ID,  $online)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$online</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00218">218</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353"/><section>
+    <title>updateLastConnexion()</title>
+<indexterm><primary>updateLastConnexion</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>updateLastConnexion</secondary></indexterm>
+<para><computeroutput>updateLastConnexion ( $user_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00182">182</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5"/><section>
+    <title>updateUser()</title>
+<indexterm><primary>updateUser</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>updateUser</secondary></indexterm>
+<para><computeroutput>updateUser ( $username,  $password,  $user_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$password</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$user_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Implements <link linkend="_interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5">UserInterface</link>.</para>
+<para>
+Definition at line <link linkend="__user_access_8php_source_1l00164">164</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35"/><section>
+    <title>$dataAccess</title>
+<indexterm><primary>$dataAccess</primary><secondary>UserAccess</secondary></indexterm>
+<indexterm><primary>UserAccess</primary><secondary>$dataAccess</secondary></indexterm>
+<para><computeroutput>$dataAccess = null<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__user_access_8php_source_1l00017">17</link> of file <link linkend="__user_access_8php_source">UserAccess.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/database/<link linkend="__user_access_8php">UserAccess.php</link></section>
+</section>

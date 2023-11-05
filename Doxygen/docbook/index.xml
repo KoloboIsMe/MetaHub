@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>MetaHub</title>
+    </info>
+    <xi:include href="md__r_e_a_d_m_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespacecontrols.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacedatabase.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceentities.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacegui.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespaceservices.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="classservices_1_1_categories_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_category.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_category_access.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interfaceservices_1_1_category_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_comment.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_comment_access.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interfaceservices_1_1_comment_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classservices_1_1_comments_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrols_1_1_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_entity.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_general_access.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_layout.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classservices_1_1_output_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_post.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcontrols_1_1_presenter.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_s_p_d_o.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_ticket.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_ticket_access.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interfaceservices_1_1_ticket_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classservices_1_1_tickets_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classentities_1_1_user.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classdatabase_1_1_user_access.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="interfaceservices_1_1_user_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classservices_1_1_users_service.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_categories.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_create_category.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_create_posts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_edit_ticket.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_error.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_homepage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_login.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_posts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_register.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_user_edit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classgui_1_1_view_users.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_controller_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_controller_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="categories_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="categories_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2category_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2category_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2category_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2category_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="create_ticket_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="create_ticket_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="edit_ticket_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="edit_ticket_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="homepage_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="homepage_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2post_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2post_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2post_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2post_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="posts_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="posts_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2user_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="controls_2page_presenters_2user_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2user_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_framework_2entities_2user_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="user_edit_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="user_edit_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="users_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="users_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_presenter_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_presenter_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_category_access_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_category_access_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_access_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_access_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_general_access_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_general_access_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_s_p_d_o_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_s_p_d_o_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_access_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_access_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_user_access_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_user_access_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_entity_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_entity_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_layout_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_layout_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_categories_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_categories_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_create_category_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_create_category_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_create_posts_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_create_posts_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_edit_ticket_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_edit_ticket_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_error_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_error_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_homepage_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_homepage_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_login_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_login_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_posts_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_posts_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_register_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_register_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_user_edit_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_user_edit_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_users_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_view_users_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="index_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="index_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_categories_service_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_categories_service_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_category_interface_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_category_interface_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_interface_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comment_interface_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comments_service_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_comments_service_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_output_data_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_output_data_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_interface_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_ticket_interface_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_tickets_service_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_tickets_service_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_user_interface_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_user_interface_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_users_service_8php.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_users_service_8php_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

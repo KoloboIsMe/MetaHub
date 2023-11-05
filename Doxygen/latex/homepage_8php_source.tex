@@ -1,0 +1,82 @@
+\doxysection{homepage.\+php}
+\hypertarget{homepage_8php_source}{}\label{homepage_8php_source}\index{controls/pagePresenters/homepage.php@{controls/pagePresenters/homepage.php}}
+\mbox{\hyperlink{homepage_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00001}00001\ <meta\ name=\textcolor{stringliteral}{"{}description"{}}\ content=\textcolor{stringliteral}{"{}Découvrez\ MetaHub\ :\ le\ réseau\ social\ métaverse\ où\ vous\ pouvez\ librement\ créer,\ partager\ et\ explorer\ des\ posts\ passionnants.\ Connectez-\/vous,\ exprimez-\/vous\ et\ découvrez\ le\ monde\ à\ travers\ les\ publications."{}}>}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00002}00002\ <link\ href=\textcolor{stringliteral}{"{}gui/css/homepage.css"{}}\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ type=\textcolor{stringliteral}{"{}text/css"{}}/>}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00003}00003\ <h2>Fil\ d\textcolor{stringliteral}{'actualité</h2>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00004}00004\ \textcolor{stringliteral}{<div\ class='}card-\/container1\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00005}00005\ \textcolor{stringliteral}{\ \ \ \ <?php}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00006}00006\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00007}00007\ \textcolor{stringliteral}{\ \ \ \ for\ (\$i\ =\ 0;\ \$i\ <\ 5;\ \$i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00008}00008\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ if\ (\$data[\$i]\ instanceof\ entities\(\backslash\)Post)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00009}00009\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \$post\ =\ \$data[\$i];}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00010}00010\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \$id\ =\ \$post-\/>getTicket()-\/>getTicket\_ID();\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00011}00011\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}card\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00012}00012\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href='}posts\&\textcolor{keywordtype}{id}=<?=\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ?>\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00013}00013\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}card-\/content\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00014}00014\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}post-\/header\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00015}00015\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <img\ src='}\mbox{\hyperlink{namespacegui}{gui}}/images/user.png\textcolor{stringliteral}{'\ id='}userImg\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00016}00016\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ id='}card-\/username\textcolor{stringliteral}{'>@<?=\ \$post-\/>getUser()-\/>getUsername();\ ?></p>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00017}00017\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00018}00018\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\ <?=\ \$post-\/>getTicket()-\/>getTitle()\ ?>\ </h3>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00019}00019\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}categories"{}>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00020}00020\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ foreach\ (\$post-\/>getCategories()\ as\ \$category)\ \{\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00021}00021\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}category\textcolor{stringliteral}{'>\#<?=\ \$category-\/>getLabel()\ ?></div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00022}00022\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00023}00023\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00024}00024\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p>\ \ <?=\ \$post-\/>getTicket()-\/>getMessage()\ ?></p>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00025}00025\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <time\ id='}time\textcolor{stringliteral}{'>Publié\ le\ <?=\ \$post-\/>getTicket()-\/>getDate()\ ?></time>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00026}00026\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <p\ id='}post-\/number\textcolor{stringliteral}{'>Post\ n°\ <?=\ \$post-\/>getTicket()-\/>getTicket\_ID()\ ?></p>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00027}00027\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00028}00028\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ if\ ((isset(\$\_SESSION['}level\textcolor{stringliteral}{'])\ \&\&\ \$\_SESSION['}level\textcolor{stringliteral}{']\ >\ 0)\ ||\ (isset(\$\_SESSION['}level\textcolor{stringliteral}{'])\ \&\&\ \$\_SESSION['}user\_ID\textcolor{stringliteral}{']\ ==\ \$post-\/>getUser()-\/>getUser\_ID()))\ \{\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00029}00029\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}edit-\/\textcolor{keyword}{delete}\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00030}00030\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href='}editTicket\&\textcolor{keywordtype}{id}=<?=\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ?>\textcolor{stringliteral}{'><img\ src='}\mbox{\hyperlink{namespacegui}{gui}}/images/edit.png\textcolor{stringliteral}{'\ id='}editImg\textcolor{stringliteral}{'></a>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00031}00031\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href='}?action=deleteTicketAction\&\textcolor{keywordtype}{id}=<?=\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ?>\textcolor{stringliteral}{'><img\ src='}\mbox{\hyperlink{namespacegui}{gui}}/images/\textcolor{keyword}{delete}.png\textcolor{stringliteral}{'\ id='}deleteImg\textcolor{stringliteral}{'></a>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00032}00032\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00033}00033\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00034}00034\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00035}00035\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </a>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00036}00036\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00037}00037\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <?php\ \}}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00038}00038\ \textcolor{stringliteral}{\ \ \ \ \}\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00039}00039\ \textcolor{stringliteral}{</div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00040}00040\ \textcolor{stringliteral}{<div\ class='}card-\/container2\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00041}00041\ \textcolor{stringliteral}{\ \ \ \ <div\ class='}card2\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00042}00042\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <div\ class='}card-\/content\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00043}00043\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <h3>\ Catégories</h3>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00044}00044\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}category-\/list\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00045}00045\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ for\ (\$i\ =\ 0;\ \$i\ <\ count(\$data);\ \$i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00046}00046\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (\$data[\$i]\ instanceof\ entities\(\backslash\)Category)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00047}00047\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$category\ =\ \$data[\$i];}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00048}00048\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$id\ =\ \$category-\/>getCategory\_ID();\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00049}00049\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href='}categories\&\textcolor{keywordtype}{id}=<?=\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ?>\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00050}00050\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><img\ src='}\mbox{\hyperlink{namespacegui}{gui}}/images/dot.png\textcolor{stringliteral}{'\ class='}dotImg\textcolor{stringliteral}{'>\ \#<?=\ \$category-\/>getLabel()\ ?>\ </li>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00051}00051\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </a>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00052}00052\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00053}00053\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00054}00054\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00055}00055\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00056}00056\ \textcolor{stringliteral}{\ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00057}00057\ \textcolor{stringliteral}{</div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00058}00058\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00059}00059\ \textcolor{stringliteral}{<div\ class='}card-\/container2\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00060}00060\ \textcolor{stringliteral}{\ \ \ \ <div\ class='}card3\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00061}00061\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <div\ class='}card-\/content\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00062}00062\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <div\ class='}category-\/list\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00063}00063\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h3>Quelques\ Utilisateurs\ Connectés</h3>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00064}00064\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ for\ (\$i\ =\ 0;\ \$i\ <\ count(\$data);\ \$i++)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00065}00065\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (\$data[\$i]\ instanceof\ entities\(\backslash\)User)\ \{}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00066}00066\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$user\ =\ \$data[\$i];}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00067}00067\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$id\ =\ \$user-\/>getUser\_ID();\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00068}00068\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href='}users\&\textcolor{keywordtype}{id}=<?=\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ ?>\textcolor{stringliteral}{'>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00069}00069\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <li><img\ src='}\mbox{\hyperlink{namespacegui}{gui}}/images/dot.png\textcolor{stringliteral}{'\ class='}dotImg\textcolor{stringliteral}{'>\ @<?=\ \$user-\/>getUsername()\ ?>\ </li>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00070}00070\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </a>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00071}00071\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00072}00072\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ ?>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00073}00073\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00074}00074\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00075}00075\ \textcolor{stringliteral}{\ \ \ \ </div>}}
+\DoxyCodeLine{\Hypertarget{homepage_8php_source_l00076}00076\ \textcolor{stringliteral}{</div>}}
+
+\end{DoxyCode}

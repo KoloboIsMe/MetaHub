@@ -1,0 +1,183 @@
+.TH "index.php" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+index.php
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fB$dbAdmin\fP = null"
+.br
+.ti -1c
+.RI "\fB$dbLector\fP = null"
+.br
+.ti -1c
+.RI "\fBtry\fP"
+.br
+.ti -1c
+.RI "catch(PDOException $e) \fB$categoryAccessLector\fP = new \fBdatabase\\CategoryAccess\fP($dbLector)"
+.br
+.ti -1c
+.RI "\fB$commentAccessLector\fP = new \fBdatabase\\CommentAccess\fP($dbLector)"
+.br
+.ti -1c
+.RI "\fB$ticketAccessLector\fP = new \fBdatabase\\TicketAccess\fP($dbLector)"
+.br
+.ti -1c
+.RI "\fB$userAccessLector\fP = new \fBdatabase\\UserAccess\fP($dbLector)"
+.br
+.ti -1c
+.RI "\fB$generalAccessLector\fP = new \fBdatabase\\GeneralAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$ticketAccess\fP = new \fBdatabase\\TicketAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$userAccess\fP = new \fBdatabase\\UserAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$commentAccess\fP = new \fBdatabase\\CommentAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$categoryAccess\fP = new \fBdatabase\\CategoryAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$generalAccess\fP = new \fBdatabase\\GeneralAccess\fP($dbAdmin)"
+.br
+.ti -1c
+.RI "\fB$outputData\fP = new \fBservices\\OutputData\fP()"
+.br
+.ti -1c
+.RI "\fB$controller\fP = new \fBcontrols\\Controller\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$presenter\fP = new \fBcontrols\\Presenter\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$categoriesService\fP = new \fBservices\\CategoriesService\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$ticketsService\fP = new \fBservices\\TicketsService\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$commentsService\fP = new \fBservices\\CommentsService\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$usersService\fP = new \fBservices\\UsersService\fP($outputData)"
+.br
+.ti -1c
+.RI "\fB$url\fP = $_GET['url'] ?? ''"
+.br
+.ti -1c
+.RI "if(isset($_SESSION['isLogged']) && $_SESSION['isLogged']) \fBelse\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "$categoriesService = new \fBservices\\CategoriesService\fP($outputData)"
+
+.PP
+Definition at line \fB74\fP of file \fBindex\&.php\fP\&.
+.SS "$categoryAccess = new \fBdatabase\\CategoryAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB61\fP of file \fBindex\&.php\fP\&.
+.SS "catch (PDOException $e) $categoryAccessLector = new \fBdatabase\\CategoryAccess\fP($dbLector)"
+
+.PP
+Definition at line \fB52\fP of file \fBindex\&.php\fP\&.
+.SS "$commentAccess = new \fBdatabase\\CommentAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB60\fP of file \fBindex\&.php\fP\&.
+.SS "$commentAccessLector = new \fBdatabase\\CommentAccess\fP($dbLector)"
+
+.PP
+Definition at line \fB53\fP of file \fBindex\&.php\fP\&.
+.SS "$commentsService = new \fBservices\\CommentsService\fP($outputData)"
+
+.PP
+Definition at line \fB76\fP of file \fBindex\&.php\fP\&.
+.SS "$controller = new \fBcontrols\\Controller\fP($outputData)"
+
+.PP
+Definition at line \fB68\fP of file \fBindex\&.php\fP\&.
+.SS "$dbAdmin = null"
+
+.PP
+Definition at line \fB39\fP of file \fBindex\&.php\fP\&.
+.SS "$dbLector = null"
+
+.PP
+Definition at line \fB40\fP of file \fBindex\&.php\fP\&.
+.SS "$generalAccess = new \fBdatabase\\GeneralAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB62\fP of file \fBindex\&.php\fP\&.
+.SS "$generalAccessLector = new \fBdatabase\\GeneralAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB56\fP of file \fBindex\&.php\fP\&.
+.SS "$outputData = new \fBservices\\OutputData\fP()"
+
+.PP
+Definition at line \fB65\fP of file \fBindex\&.php\fP\&.
+.SS "$presenter = new \fBcontrols\\Presenter\fP($outputData)"
+
+.PP
+Definition at line \fB71\fP of file \fBindex\&.php\fP\&.
+.SS "$ticketAccess = new \fBdatabase\\TicketAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB58\fP of file \fBindex\&.php\fP\&.
+.SS "$ticketAccessLector = new \fBdatabase\\TicketAccess\fP($dbLector)"
+
+.PP
+Definition at line \fB54\fP of file \fBindex\&.php\fP\&.
+.SS "$ticketsService = new \fBservices\\TicketsService\fP($outputData)"
+
+.PP
+Definition at line \fB75\fP of file \fBindex\&.php\fP\&.
+.SS "$url = $_GET['url'] ?? ''"
+
+.PP
+Definition at line \fB80\fP of file \fBindex\&.php\fP\&.
+.SS "$userAccess = new \fBdatabase\\UserAccess\fP($dbAdmin)"
+
+.PP
+Definition at line \fB59\fP of file \fBindex\&.php\fP\&.
+.SS "$userAccessLector = new \fBdatabase\\UserAccess\fP($dbLector)"
+
+.PP
+Definition at line \fB55\fP of file \fBindex\&.php\fP\&.
+.SS "$usersService = new \fBservices\\UsersService\fP($outputData)"
+
+.PP
+Definition at line \fB77\fP of file \fBindex\&.php\fP\&.
+.SS "if(isset( $_GET[ 'action'])) if(''==$url||'/'==$url) elseif( 'login'==$url) elseif('register'==$url) elseif( 'logout'==$url &&isset( $_SESSION[ 'isLogged'])) elseif('posts'==$url) elseif( 'createPosts'==$url) elseif('categories'==$url) elseif( 'editTicket'==$url &&isset( $_GET[ 'id']) &&$ticketsService\->existsTicket( $ticketAccessLector, $_GET[ 'id'])) elseif('users'==$url) elseif( 'userEdit'==$url &&isset( $_SESSION[ 'user_ID'])) elseif('createCategory'==$url &&isset($_SESSION['level']) && $_SESSION['level'] > 0) elseif ( 'error'==$url) else"
+\fBInitial value:\fP.PP
+.nf
+{
+    $layoutTemplate = 'gui/layout\&.html'
+.fi
+
+.PP
+Definition at line \fB91\fP of file \fBindex\&.php\fP\&.
+.SS "try"
+\fBInitial value:\fP.PP
+.nf
+{
+
+    
+    $dbAdmin = database\\SPDO::getInstance("ADMIN")
+.fi
+
+.PP
+Definition at line \fB41\fP of file \fBindex\&.php\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

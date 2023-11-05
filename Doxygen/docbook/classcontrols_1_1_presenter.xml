@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcontrols_1_1_presenter" xml:lang="en-US">
+<title>Presenter Class Reference</title>
+<indexterm><primary>Presenter</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcontrols_1_1_presenter_1a21db5a882ba43a48b03c976aefa69c75">__construct</link> ($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_presenter_1af26db0b597ad8772f7e0fa7ccc93b471">show</link> ($presenterName)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_presenter_1a2af1d89b188cfc2c1e312f665859e9ee">showCategory</link> ($category)</para>
+</listitem>
+            <listitem><para><link linkend="_classcontrols_1_1_presenter_1ace8021ef4b46a93f6cca4a5bf557be69">showUser</link> ($user)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__presenter_8php_source_1l00008">8</link> of file <link linkend="__presenter_8php_source">Presenter.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcontrols_1_1_presenter_1a21db5a882ba43a48b03c976aefa69c75"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Presenter</secondary></indexterm>
+<indexterm><primary>Presenter</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $outputData)</computeroutput></para><para>
+Definition at line <link linkend="__presenter_8php_source_1l00012">12</link> of file <link linkend="__presenter_8php_source">Presenter.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcontrols_1_1_presenter_1af26db0b597ad8772f7e0fa7ccc93b471"/><section>
+    <title>show()</title>
+<indexterm><primary>show</primary><secondary>Presenter</secondary></indexterm>
+<indexterm><primary>Presenter</primary><secondary>show</secondary></indexterm>
+<para><computeroutput>show ( $presenterName)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$presenterName</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false|string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__presenter_8php_source_1l00021">21</link> of file <link linkend="__presenter_8php_source">Presenter.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_presenter_1a2af1d89b188cfc2c1e312f665859e9ee"/><section>
+    <title>showCategory()</title>
+<indexterm><primary>showCategory</primary><secondary>Presenter</secondary></indexterm>
+<indexterm><primary>Presenter</primary><secondary>showCategory</secondary></indexterm>
+<para><computeroutput>showCategory ( $category)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$category</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false|string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__presenter_8php_source_1l00034">34</link> of file <link linkend="__presenter_8php_source">Presenter.php</link>.</para>
+</section>
+<anchor xml:id="_classcontrols_1_1_presenter_1ace8021ef4b46a93f6cca4a5bf557be69"/><section>
+    <title>showUser()</title>
+<indexterm><primary>showUser</primary><secondary>Presenter</secondary></indexterm>
+<indexterm><primary>Presenter</primary><secondary>showUser</secondary></indexterm>
+<para><computeroutput>showUser ( $user)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$user</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>false|string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__presenter_8php_source_1l00047">47</link> of file <link linkend="__presenter_8php_source">Presenter.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+controls/<link linkend="__presenter_8php">Presenter.php</link></section>
+</section>

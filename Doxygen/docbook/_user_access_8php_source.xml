@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__user_access_8php_source" xml:lang="en-US">
+<title>UserAccess.php</title>
+<indexterm><primary>Framework/database/UserAccess.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__user_access_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__user_access_8php_source_1l00002"/>00002 
+<anchor xml:id="__user_access_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacedatabase">database</link>;
+<anchor xml:id="__user_access_8php_source_1l00004"/>00004 
+<anchor xml:id="__user_access_8php_source_1l00005"/>00005 use&#32;<link linkend="_classentities_1_1_user">entities\User</link>;
+<anchor xml:id="__user_access_8php_source_1l00006"/>00006 use&#32;PDO;
+<anchor xml:id="__user_access_8php_source_1l00007"/>00007 use&#32;PDOException;
+<anchor xml:id="__user_access_8php_source_1l00008"/>00008 use&#32;<link linkend="_interfaceservices_1_1_user_interface">services\UserInterface</link>;
+<anchor xml:id="__user_access_8php_source_1l00009"/>00009 
+<anchor xml:id="__user_access_8php_source_1l00010"/>00010 include_once&#32;<emphasis role="stringliteral">&quot;services/UserInterface.php&quot;</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00011"/>00011 
+<anchor xml:id="__user_access_8php_source_1l00012"/><link linkend="_classdatabase_1_1_user_access">00012</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classdatabase_1_1_user_access">UserAccess</link>&#32;<emphasis role="keyword">implements</emphasis>&#32;<link linkend="_interfaceservices_1_1_user_interface">UserInterface</link>
+<anchor xml:id="__user_access_8php_source_1l00013"/>00013 {
+<anchor xml:id="__user_access_8php_source_1l00017"/><link linkend="_classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35">00017</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;$dataAccess&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00018"/>00018 
+<anchor xml:id="__user_access_8php_source_1l00022"/><link linkend="_classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b">00022</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b">__construct</link>($dataAccess)
+<anchor xml:id="__user_access_8php_source_1l00023"/>00023 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dataAccess&#32;=&#32;$dataAccess;
+<anchor xml:id="__user_access_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00026"/>00026 
+<anchor xml:id="__user_access_8php_source_1l00031"/><link linkend="_classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59">00031</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59">existsUsername</link>($username):&#32;bool
+<anchor xml:id="__user_access_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;username&#32;FROM&#32;user&#32;where&#32;username&#32;=&#32;:username&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;username&apos;</emphasis>&#32;=&gt;&#32;$username]);
+<anchor xml:id="__user_access_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;isset($data[<emphasis role="stringliteral">&apos;username&apos;</emphasis>]);
+<anchor xml:id="__user_access_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00042"/>00042 
+<anchor xml:id="__user_access_8php_source_1l00047"/><link linkend="_classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d">existsUser</link>($user_ID):&#32;bool
+<anchor xml:id="__user_access_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;user&#32;where&#32;user_ID&#32;=&#32;:user_ID&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID]);
+<anchor xml:id="__user_access_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;isset($data[<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>]);
+<anchor xml:id="__user_access_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00058"/>00058 
+<anchor xml:id="__user_access_8php_source_1l00064"/><link linkend="_classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef">isUser</link>($username,&#32;$password):&#32;bool
+<anchor xml:id="__user_access_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;password&#32;FROM&#32;user&#32;where&#32;username&#32;=&#32;:username&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:username&apos;</emphasis>&#32;=&gt;&#32;$username]);
+<anchor xml:id="__user_access_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset(<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>[<emphasis role="stringliteral">&apos;password&apos;</emphasis>])&#32;&amp;&amp;&#32;password_verify($password,&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>[<emphasis role="stringliteral">&apos;password&apos;</emphasis>]))
+<anchor xml:id="__user_access_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="__user_access_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00077"/>00077 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00078"/>00078 
+<anchor xml:id="__user_access_8php_source_1l00083"/><link linkend="_classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88">00083</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88">getUserByUsername</link>($username):&#32;<link linkend="_classentities_1_1_user">User</link>
+<anchor xml:id="__user_access_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;user&#32;where&#32;username&#32;=&#32;:username&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:username&apos;</emphasis>&#32;=&gt;&#32;$username]);
+<anchor xml:id="__user_access_8php_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_user">User</link>($data);
+<anchor xml:id="__user_access_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00094"/>00094 
+<anchor xml:id="__user_access_8php_source_1l00099"/><link linkend="_classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc">00099</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc">getUserById</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>):&#32;<link linkend="_classentities_1_1_user">User</link>
+<anchor xml:id="__user_access_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;user&#32;where&#32;user_ID&#32;=&#32;:id&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:id&apos;</emphasis>&#32;=&gt;&#32;<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>]);
+<anchor xml:id="__user_access_8php_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_user">User</link>($data);
+<anchor xml:id="__user_access_8php_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00110"/>00110 
+<anchor xml:id="__user_access_8php_source_1l00114"/><link linkend="_classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de">00114</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de">getUsersID</link>():&#32;array
+<anchor xml:id="__user_access_8php_source_1l00115"/>00115 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__user_access_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;user_ID&#32;FROM&#32;user&#32;ORDER&#32;BY&#32;user_ID&#32;DESC&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute();
+<anchor xml:id="__user_access_8php_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__user_access_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>];
+<anchor xml:id="__user_access_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__user_access_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00128"/>00128 
+<anchor xml:id="__user_access_8php_source_1l00135"/><link linkend="_classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db">00135</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<emphasis role="keyword">register</emphasis>($username,&#32;$password,&#32;$date)
+<anchor xml:id="__user_access_8php_source_1l00136"/>00136 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;username&#32;FROM&#32;user&#32;where&#32;username&#32;=&#32;:username&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:username&apos;</emphasis>&#32;=&gt;&#32;$username]);
+<anchor xml:id="__user_access_8php_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__user_access_8php_source_1l00141"/>00141 
+<anchor xml:id="__user_access_8php_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(isset(<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>[<emphasis role="stringliteral">&apos;username&apos;</emphasis>]))
+<anchor xml:id="__user_access_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&apos;nom&#32;d\&apos;utilisateur&#32;déjà&#32;utilisé&apos;</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;INSERT&#32;INTO&#32;user&#32;(username,&#32;password,&#32;first_connexion)&#32;VALUES&#32;(:username,&#32;:password,&#32;:date)&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__user_access_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:username&apos;</emphasis>&#32;=&gt;&#32;$username,
+<anchor xml:id="__user_access_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:password&apos;</emphasis>&#32;=&gt;&#32;password_hash($password,&#32;PASSWORD_DEFAULT),
+<anchor xml:id="__user_access_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:date&apos;</emphasis>&#32;=&gt;&#32;$date,
+<anchor xml:id="__user_access_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__user_access_8php_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__user_access_8php_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00156"/>00156 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00157"/>00157 
+<anchor xml:id="__user_access_8php_source_1l00164"/><link linkend="_classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5">00164</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5">updateUser</link>($username,&#32;$password,&#32;$user_ID):&#32;void
+<anchor xml:id="__user_access_8php_source_1l00165"/>00165 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;UPDATE&#32;user&#32;SET&#32;username&#32;=&#32;:username,&#32;password&#32;=&#32;:password&#32;WHERE&#32;user_ID&#32;=&#32;:user_ID&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__user_access_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:username&apos;</emphasis>&#32;=&gt;&#32;$username,
+<anchor xml:id="__user_access_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:password&apos;</emphasis>&#32;=&gt;&#32;password_hash($password,&#32;PASSWORD_DEFAULT),
+<anchor xml:id="__user_access_8php_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID,
+<anchor xml:id="__user_access_8php_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__user_access_8php_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00176"/>00176 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00177"/>00177 
+<anchor xml:id="__user_access_8php_source_1l00182"/><link linkend="_classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353">00182</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353">updateLastConnexion</link>($user_ID):&#32;void
+<anchor xml:id="__user_access_8php_source_1l00183"/>00183 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;UPDATE&#32;user&#32;SET&#32;last_connexion&#32;=&#32;:date&#32;WHERE&#32;user_ID&#32;=&#32;:user_ID&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__user_access_8php_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:date&apos;</emphasis>&#32;=&gt;&#32;date(<emphasis role="stringliteral">&quot;Y-m-d&#32;H:i&quot;</emphasis>),
+<anchor xml:id="__user_access_8php_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID,
+<anchor xml:id="__user_access_8php_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__user_access_8php_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00193"/>00193 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00194"/>00194 
+<anchor xml:id="__user_access_8php_source_1l00198"/><link linkend="_classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725">00198</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725">get10LastConnectedUsersID</link>():&#32;array
+<anchor xml:id="__user_access_8php_source_1l00199"/>00199 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__user_access_8php_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;user_ID&#32;FROM&#32;user&#32;WHERE&#32;online&#32;=&#32;1&#32;ORDER&#32;BY&#32;last_connexion&#32;DESC&#32;LIMIT&#32;8&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute();
+<anchor xml:id="__user_access_8php_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__user_access_8php_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>];
+<anchor xml:id="__user_access_8php_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__user_access_8php_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00211"/>00211 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00212"/>00212 
+<anchor xml:id="__user_access_8php_source_1l00218"/><link linkend="_classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b">00218</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b">setOnline</link>($user_ID,&#32;$online):&#32;void
+<anchor xml:id="__user_access_8php_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__user_access_8php_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__user_access_8php_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;UPDATE&#32;user&#32;SET&#32;online&#32;=&#32;:online&#32;WHERE&#32;user_ID&#32;=&#32;:user_ID&apos;</emphasis>);
+<anchor xml:id="__user_access_8php_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__user_access_8php_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:online&apos;</emphasis>&#32;=&gt;&#32;$online,
+<anchor xml:id="__user_access_8php_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:user_ID&apos;</emphasis>&#32;=&gt;&#32;$user_ID
+<anchor xml:id="__user_access_8php_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__user_access_8php_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__user_access_8php_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__user_access_8php_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__user_access_8php_source_1l00230"/>00230 }
+</programlisting></section>

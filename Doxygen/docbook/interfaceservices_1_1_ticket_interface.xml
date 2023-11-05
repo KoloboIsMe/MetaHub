@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interfaceservices_1_1_ticket_interface" xml:lang="en-US">
+<title>TicketInterface Interface Reference</title>
+<indexterm><primary>TicketInterface</primary></indexterm>
+<para>Inheritance diagram for TicketInterface:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interfaceservices_1_1_ticket_interface.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708">existsTicket</link> ($ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b">getTicketsID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3">get5LastTicketsID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6">createTicket</link> ($title, $message, $date, $author)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a">editTicket</link> ($id, $title, $message)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c">isTicketOwner</link> ($ticketID, $userID)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__ticket_interface_8php_source_1l00005">5</link> of file <link linkend="__ticket_interface_8php_source">TicketInterface.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1afa6e5469befba46eb1dfaf007b8713c6"/><section>
+    <title>createTicket()</title>
+<indexterm><primary>createTicket</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>createTicket</secondary></indexterm>
+<para><computeroutput>createTicket ( $title,  $message,  $date,  $author)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1afa6e5469befba46eb1dfaf007b8713c6">TicketAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1a15b7252a597d9b252639064378bafa5a"/><section>
+    <title>editTicket()</title>
+<indexterm><primary>editTicket</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>editTicket</secondary></indexterm>
+<para><computeroutput>editTicket ( $id,  $title,  $message)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1a15b7252a597d9b252639064378bafa5a">TicketAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1a6cd98da4d72e5877202bedac9f7f7708"/><section>
+    <title>existsTicket()</title>
+<indexterm><primary>existsTicket</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>existsTicket</secondary></indexterm>
+<para><computeroutput>existsTicket ( $ticketID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1a6cd98da4d72e5877202bedac9f7f7708">TicketAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1acc435610e7829e4a55eef8e0d7a06cb3"/><section>
+    <title>get5LastTicketsID()</title>
+<indexterm><primary>get5LastTicketsID</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>get5LastTicketsID</secondary></indexterm>
+<para><computeroutput>get5LastTicketsID ( )</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1acc435610e7829e4a55eef8e0d7a06cb3">TicketAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1add5e7fd54d1f1308db1e8a3e873b785b"/><section>
+    <title>getTicketsID()</title>
+<indexterm><primary>getTicketsID</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>getTicketsID</secondary></indexterm>
+<para><computeroutput>getTicketsID ( )</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1add5e7fd54d1f1308db1e8a3e873b785b">TicketAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_ticket_interface_1afb3753ff19a1ec4d934cc30508bd562c"/><section>
+    <title>isTicketOwner()</title>
+<indexterm><primary>isTicketOwner</primary><secondary>TicketInterface</secondary></indexterm>
+<indexterm><primary>TicketInterface</primary><secondary>isTicketOwner</secondary></indexterm>
+<para><computeroutput>isTicketOwner ( $ticketID,  $userID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_ticket_access_1afb3753ff19a1ec4d934cc30508bd562c">TicketAccess</link>.</para>
+</section>
+<para>
+The documentation for this interface was generated from the following file:</para>
+services/<link linkend="__ticket_interface_8php">TicketInterface.php</link></section>
+</section>

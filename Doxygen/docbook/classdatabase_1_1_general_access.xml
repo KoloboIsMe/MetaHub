@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classdatabase_1_1_general_access" xml:lang="en-US">
+<title>GeneralAccess Class Reference</title>
+<indexterm><primary>GeneralAccess</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a9d903d171ff2319096ef345b4092535b">__construct</link> ($dataAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a89819b1dc6a1b327e15c84407c5d1ab1">deleteTicket</link> ($ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a463f3ac58e7695101ae31525367fa96f">deleteTicketComments</link> ($ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a303a72eaa0f483c3be92bbc311f3e87c">deleteTicketCategorized</link> ($ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1ae364a95f2ffa5b2b50434fdd7da1d9f8">deleteUser</link> ($id)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1af885c5a19da7b8e9b45ee8e064ffa279">deleteCategory</link> ($id)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a06348e11b28592792e2ea739c0add2d4">deleteCategoryCategorized</link> ($category_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a9c044c55a812bbe02de0c972cb6ce2f5">getTicketsIdByUserId</link> ($userId)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a47c0939150e296243117108f22ea9dde">getCommentsIdByUserId</link> ($userId)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a4b8046caf85b1e630a20a39d55aa2f59">getPostsIdByCategoryId</link> ($id)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1aca5710b8bb9ec6cd1c48c7c976118baf">addCategoryToTicket</link> ($category, $ticketID)</para>
+</listitem>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a4426ec63c9fd1389eeb6fd0acb25adbd">getPostById</link> ($ticketId)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classdatabase_1_1_general_access_1a7a827f5c09357312fde0811812bbbc35">$dataAccess</link> = null</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00013">13</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classdatabase_1_1_general_access_1a9d903d171ff2319096ef345b4092535b"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $dataAccess)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$dataAccess</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00023">23</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classdatabase_1_1_general_access_1aca5710b8bb9ec6cd1c48c7c976118baf"/><section>
+    <title>addCategoryToTicket()</title>
+<indexterm><primary>addCategoryToTicket</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>addCategoryToTicket</secondary></indexterm>
+<para><computeroutput>addCategoryToTicket ( $category,  $ticketID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$category</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>$ticketID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00178">178</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1af885c5a19da7b8e9b45ee8e064ffa279"/><section>
+    <title>deleteCategory()</title>
+<indexterm><primary>deleteCategory</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteCategory</secondary></indexterm>
+<para><computeroutput>deleteCategory ( $id)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$id</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00091">91</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a06348e11b28592792e2ea739c0add2d4"/><section>
+    <title>deleteCategoryCategorized()</title>
+<indexterm><primary>deleteCategoryCategorized</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteCategoryCategorized</secondary></indexterm>
+<para><computeroutput>deleteCategoryCategorized ( $category_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$category_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00106">106</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a89819b1dc6a1b327e15c84407c5d1ab1"/><section>
+    <title>deleteTicket()</title>
+<indexterm><primary>deleteTicket</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteTicket</secondary></indexterm>
+<para><computeroutput>deleteTicket ( $ticketID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00033">33</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a303a72eaa0f483c3be92bbc311f3e87c"/><section>
+    <title>deleteTicketCategorized()</title>
+<indexterm><primary>deleteTicketCategorized</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteTicketCategorized</secondary></indexterm>
+<para><computeroutput>deleteTicketCategorized ( $ticketID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00063">63</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a463f3ac58e7695101ae31525367fa96f"/><section>
+    <title>deleteTicketComments()</title>
+<indexterm><primary>deleteTicketComments</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteTicketComments</secondary></indexterm>
+<para><computeroutput>deleteTicketComments ( $ticketID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00049">49</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1ae364a95f2ffa5b2b50434fdd7da1d9f8"/><section>
+    <title>deleteUser()</title>
+<indexterm><primary>deleteUser</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>deleteUser</secondary></indexterm>
+<para><computeroutput>deleteUser ( $id)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$id</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00077">77</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a47c0939150e296243117108f22ea9dde"/><section>
+    <title>getCommentsIdByUserId()</title>
+<indexterm><primary>getCommentsIdByUserId</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>getCommentsIdByUserId</secondary></indexterm>
+<para><computeroutput>getCommentsIdByUserId ( $userId)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$userId</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int[] </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00139">139</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a4426ec63c9fd1389eeb6fd0acb25adbd"/><section>
+    <title>getPostById()</title>
+<indexterm><primary>getPostById</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>getPostById</secondary></indexterm>
+<para><computeroutput>getPostById ( $ticketId)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticketId</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Post </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00195">195</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a4b8046caf85b1e630a20a39d55aa2f59"/><section>
+    <title>getPostsIdByCategoryId()</title>
+<indexterm><primary>getPostsIdByCategoryId</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>getPostsIdByCategoryId</secondary></indexterm>
+<para><computeroutput>getPostsIdByCategoryId ( $id)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$id</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int[] </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00158">158</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<anchor xml:id="_classdatabase_1_1_general_access_1a9c044c55a812bbe02de0c972cb6ce2f5"/><section>
+    <title>getTicketsIdByUserId()</title>
+<indexterm><primary>getTicketsIdByUserId</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>getTicketsIdByUserId</secondary></indexterm>
+<para><computeroutput>getTicketsIdByUserId ( $userId)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$userId</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int[] </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__general_access_8php_source_1l00120">120</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classdatabase_1_1_general_access_1a7a827f5c09357312fde0811812bbbc35"/><section>
+    <title>$dataAccess</title>
+<indexterm><primary>$dataAccess</primary><secondary>GeneralAccess</secondary></indexterm>
+<indexterm><primary>GeneralAccess</primary><secondary>$dataAccess</secondary></indexterm>
+<para><computeroutput>$dataAccess = null<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="__general_access_8php_source_1l00018">18</link> of file <link linkend="__general_access_8php_source">GeneralAccess.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/database/<link linkend="__general_access_8php">GeneralAccess.php</link></section>
+</section>

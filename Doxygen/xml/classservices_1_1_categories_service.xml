@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classservices_1_1_categories_service" kind="class" language="PHP" prot="public">
+    <compoundname>services::CategoriesService</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classservices_1_1_categories_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>services\CategoriesService\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="7" column="13" bodyfile="services/CategoriesService.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classservices_1_1_categories_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($outputData)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>services\CategoriesService\__construct</qualifiedname>
+        <param>
+          <declname>$outputData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="9" column="21" bodyfile="services/CategoriesService.php" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1a433a16a876e346d0d2ec44b724efd530" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsCategory</definition>
+        <argsstring>($categoriesAccess, $CategoryID)</argsstring>
+        <name>existsCategory</name>
+        <qualifiedname>services\CategoriesService\existsCategory</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <param>
+          <declname>$CategoryID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="14" column="21" bodyfile="services/CategoriesService.php" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1ac25c1b89fbfe361441dd0f99f5cb1efc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>createCategory</definition>
+        <argsstring>($categoriesAccess, $label, $description)</argsstring>
+        <name>createCategory</name>
+        <qualifiedname>services\CategoriesService\createCategory</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <param>
+          <declname>$label</declname>
+        </param>
+        <param>
+          <declname>$description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="19" column="21" bodyfile="services/CategoriesService.php" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1ad22d538266e01ba701c1d8fd64d52dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategories</definition>
+        <argsstring>($categoriesAccess)</argsstring>
+        <name>getCategories</name>
+        <qualifiedname>services\CategoriesService\getCategories</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="24" column="21" bodyfile="services/CategoriesService.php" bodystart="24" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1aae95d5f5844e68703fb15bb95c58ee5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoryById</definition>
+        <argsstring>($categoriesAccess, $categoryId)</argsstring>
+        <name>getCategoryById</name>
+        <qualifiedname>services\CategoriesService\getCategoryById</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <param>
+          <declname>$categoryId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="33" column="21" bodyfile="services/CategoriesService.php" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1a168a488c791315f2ad366faa73d19e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getCategoryIdByLabel</definition>
+        <argsstring>($categoriesAccess, $category)</argsstring>
+        <name>getCategoryIdByLabel</name>
+        <qualifiedname>services\CategoriesService\getCategoryIdByLabel</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <param>
+          <declname>$category</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="38" column="21" bodyfile="services/CategoriesService.php" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_categories_service_1a2ee029ba4cdce29bc9391d15dad1d1ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>add5LastCategories</definition>
+        <argsstring>($categoriesAccess)</argsstring>
+        <name>add5LastCategories</name>
+        <qualifiedname>services\CategoriesService\add5LastCategories</qualifiedname>
+        <param>
+          <declname>$categoriesAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/CategoriesService.php" line="42" column="21" bodyfile="services/CategoriesService.php" bodystart="42" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/CategoriesService.php" line="5" column="1" bodyfile="services/CategoriesService.php" bodystart="6" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classservices_1_1_categories_service_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="private" virt="non-virtual"><scope>services::CategoriesService</scope><name>$outputData</name></member>
+      <member refid="classservices_1_1_categories_service_1a21db5a882ba43a48b03c976aefa69c75" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>__construct</name></member>
+      <member refid="classservices_1_1_categories_service_1a2ee029ba4cdce29bc9391d15dad1d1ea" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>add5LastCategories</name></member>
+      <member refid="classservices_1_1_categories_service_1ac25c1b89fbfe361441dd0f99f5cb1efc" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>createCategory</name></member>
+      <member refid="classservices_1_1_categories_service_1a433a16a876e346d0d2ec44b724efd530" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>existsCategory</name></member>
+      <member refid="classservices_1_1_categories_service_1ad22d538266e01ba701c1d8fd64d52dae" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>getCategories</name></member>
+      <member refid="classservices_1_1_categories_service_1aae95d5f5844e68703fb15bb95c58ee5e" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>getCategoryById</name></member>
+      <member refid="classservices_1_1_categories_service_1a168a488c791315f2ad366faa73d19e2b" prot="public" virt="non-virtual"><scope>services::CategoriesService</scope><name>getCategoryIdByLabel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

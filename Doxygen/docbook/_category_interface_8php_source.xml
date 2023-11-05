@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__category_interface_8php_source" xml:lang="en-US">
+<title>CategoryInterface.php</title>
+<indexterm><primary>services/CategoryInterface.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__category_interface_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__category_interface_8php_source_1l00002"/>00002 
+<anchor xml:id="__category_interface_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceservices">services</link>;
+<anchor xml:id="__category_interface_8php_source_1l00004"/>00004 
+<anchor xml:id="__category_interface_8php_source_1l00005"/><link linkend="_interfaceservices_1_1_category_interface">00005</link> <emphasis role="keyword">interface&#32;</emphasis><link linkend="_interfaceservices_1_1_category_interface">CategoryInterface</link>
+<anchor xml:id="__category_interface_8php_source_1l00006"/>00006 {
+<anchor xml:id="__category_interface_8php_source_1l00007"/><link linkend="_interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b">00007</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b">existsCategory</link>($CategoryID);
+<anchor xml:id="__category_interface_8php_source_1l00008"/>00008 
+<anchor xml:id="__category_interface_8php_source_1l00009"/><link linkend="_interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392">00009</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392">getCategoriesID</link>();
+<anchor xml:id="__category_interface_8php_source_1l00010"/>00010 
+<anchor xml:id="__category_interface_8php_source_1l00011"/><link linkend="_interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323">00011</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323">getCategoryById</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>);
+<anchor xml:id="__category_interface_8php_source_1l00012"/><link linkend="_interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af">00012</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af">getCategoryIdByLabel</link>($label);
+<anchor xml:id="__category_interface_8php_source_1l00013"/><link linkend="_interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7">get5LastCategories</link>();
+<anchor xml:id="__category_interface_8php_source_1l00014"/><link linkend="_interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05">createCategory</link>($label,&#32;$description);
+<anchor xml:id="__category_interface_8php_source_1l00015"/>00015 
+<anchor xml:id="__category_interface_8php_source_1l00016"/>00016 }
+</programlisting></section>

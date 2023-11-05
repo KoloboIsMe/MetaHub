@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_user_edit_8php" xml:lang="en-US">
+<title>controls/pagePresenters/userEdit.php File Reference</title>
+<indexterm><primary>controls/pagePresenters/userEdit.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link> = $data</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5"/><section>
+    <title>$user</title>
+<indexterm><primary>$user</primary><secondary>userEdit.php</secondary></indexterm>
+<indexterm><primary>userEdit.php</primary><secondary>$user</secondary></indexterm>
+<para><computeroutput>$user = $data</computeroutput></para><para>
+Definition at line <link linkend="_user_edit_8php_source_1l00001">1</link> of file <link linkend="_user_edit_8php_source">userEdit.php</link>.</para>
+</section>
+</section>
+</section>

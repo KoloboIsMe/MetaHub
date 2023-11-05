@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_user_edit_8php_source" xml:lang="en-US">
+<title>userEdit.php</title>
+<indexterm><primary>controls/pagePresenters/userEdit.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_user_edit_8php_source_1l00001"/><link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">00001</link> &lt;?php&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>&#32;=&#32;$data;&#32;?&gt;
+<anchor xml:id="_user_edit_8php_source_1l00002"/>00002 
+<anchor xml:id="_user_edit_8php_source_1l00003"/>00003 &lt;link&#32;href=<emphasis role="stringliteral">&apos;gui/css/forms.css&apos;</emphasis>&#32;rel=<emphasis role="stringliteral">&apos;stylesheet&apos;</emphasis>&#32;type=<emphasis role="stringliteral">&apos;text/css&apos;</emphasis>/&gt;
+<anchor xml:id="_user_edit_8php_source_1l00004"/>00004 &lt;div&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;container&apos;</emphasis>&gt;
+<anchor xml:id="_user_edit_8php_source_1l00005"/>00005 &#32;&#32;&#32;&#32;&lt;form&#32;action=<emphasis role="stringliteral">&apos;?action=editUserInfoAction&apos;</emphasis>&#32;method=<emphasis role="stringliteral">&apos;POST&apos;</emphasis>&gt;
+<anchor xml:id="_user_edit_8php_source_1l00006"/>00006 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;h1&gt;Edition&#32;de&#32;profil&lt;/h1&gt;
+<anchor xml:id="_user_edit_8php_source_1l00007"/>00007 
+<anchor xml:id="_user_edit_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Nom&#32;d<emphasis role="stringliteral">&apos;utilisateur&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00009"/>00009 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;</emphasis>text<emphasis role="stringliteral">&apos;&#32;placeholder=&quot;Entrer&#32;le&#32;nom&#32;d&apos;</emphasis>utilisateur<emphasis role="stringliteral">&quot;&#32;name=&apos;username&apos;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00010"/>00010 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value=&quot;</emphasis>&lt;?=&#32;htmlspecialchars(<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>-&gt;getusername(),&#32;ENT_QUOTES)&#32;?&gt;<emphasis role="stringliteral">&quot;&#32;required&gt;&lt;/input&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00011"/>00011 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00012"/>00012 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;ancien&#32;mot&#32;de&#32;passe&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00013"/>00013 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&quot;</emphasis>password<emphasis role="stringliteral">&quot;&#32;placeholder=&quot;</emphasis>Entrer&#32;l<emphasis role="stringliteral">&apos;ancien&#32;mot&#32;de&#32;passe&quot;&#32;name=&apos;</emphasis>old_password<emphasis role="stringliteral">&apos;&#32;required/&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00014"/>00014 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00015"/>00015 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;nouveau&#32;mot&#32;de&#32;passe&#32;(optionnel)&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00016"/>00016 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&quot;password&quot;&#32;placeholder=&apos;</emphasis>Entrer&#32;le&#32;mot&#32;de&#32;passe<emphasis role="stringliteral">&apos;&#32;name=&apos;</emphasis>password<emphasis role="stringliteral">&apos;/&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00017"/>00017 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00018"/>00018 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;</emphasis>submit<emphasis role="stringliteral">&apos;&#32;id=&apos;</emphasis>submit<emphasis role="stringliteral">&apos;&#32;value=&apos;</emphasis>Changer<emphasis role="stringliteral">&apos;&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00019"/>00019 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;a&#32;href=&quot;?action=deleteUserAction&amp;id=&lt;?=&#32;$user-&gt;getUser_id()&#32;?&gt;&quot;&gt;&lt;label&gt;&lt;b&gt;supprimer&#32;le&#32;compte&lt;/b&gt;&lt;/label&gt;&lt;/a&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00020"/>00020 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&lt;/form&gt;</emphasis>
+<anchor xml:id="_user_edit_8php_source_1l00021"/>00021 <emphasis role="stringliteral">&lt;/div&gt;</emphasis>
+</programlisting></section>

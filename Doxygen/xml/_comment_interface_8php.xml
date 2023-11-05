@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_comment_interface_8php" kind="file" language="PHP">
+    <compoundname>CommentInterface.php</compoundname>
+    <innerclass refid="interfaceservices_1_1_comment_interface" prot="public">services::CommentInterface</innerclass>
+    <innernamespace refid="namespaceservices">services</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceservices" kindref="compound">services</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="interfaceservices_1_1_comment_interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceservices_1_1_comment_interface" kindref="compound">CommentInterface</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538" kindref="member">createComment</ref>($text,<sp/>$date,<sp/>$user_ID,<sp/>$ticket_ID);</highlight></codeline>
+<codeline lineno="8" refid="interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3" kindref="member">isCommentOwner</ref>($commentID,<sp/>$user_ID);</highlight></codeline>
+<codeline lineno="9" refid="interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530" kindref="member">deleteComment</ref>($commentID);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="services/CommentInterface.php"/>
+  </compounddef>
+</doxygen>

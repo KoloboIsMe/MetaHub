@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__general_access_8php_source" xml:lang="en-US">
+<title>GeneralAccess.php</title>
+<indexterm><primary>Framework/database/GeneralAccess.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__general_access_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__general_access_8php_source_1l00002"/>00002 
+<anchor xml:id="__general_access_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacedatabase">database</link>;
+<anchor xml:id="__general_access_8php_source_1l00004"/>00004 
+<anchor xml:id="__general_access_8php_source_1l00005"/>00005 use&#32;<link linkend="_classentities_1_1_category">entities\Category</link>;
+<anchor xml:id="__general_access_8php_source_1l00006"/>00006 use&#32;<link linkend="_classentities_1_1_comment">entities\Comment</link>;
+<anchor xml:id="__general_access_8php_source_1l00007"/>00007 use&#32;<link linkend="_classentities_1_1_post">entities\Post</link>;
+<anchor xml:id="__general_access_8php_source_1l00008"/>00008 use&#32;<link linkend="_classentities_1_1_ticket">entities\Ticket</link>;
+<anchor xml:id="__general_access_8php_source_1l00009"/>00009 use&#32;<link linkend="_classentities_1_1_user">entities\User</link>;
+<anchor xml:id="__general_access_8php_source_1l00010"/>00010 use&#32;PDO;
+<anchor xml:id="__general_access_8php_source_1l00011"/>00011 use&#32;PDOException;
+<anchor xml:id="__general_access_8php_source_1l00012"/>00012 
+<anchor xml:id="__general_access_8php_source_1l00013"/><link linkend="_classdatabase_1_1_general_access">00013</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classdatabase_1_1_general_access">GeneralAccess</link>
+<anchor xml:id="__general_access_8php_source_1l00014"/>00014 {
+<anchor xml:id="__general_access_8php_source_1l00018"/><link linkend="_classdatabase_1_1_general_access_1a7a827f5c09357312fde0811812bbbc35">00018</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">protected</emphasis>&#32;$dataAccess&#32;=&#32;<emphasis role="keyword">null</emphasis>;
+<anchor xml:id="__general_access_8php_source_1l00019"/>00019 
+<anchor xml:id="__general_access_8php_source_1l00023"/><link linkend="_classdatabase_1_1_general_access_1a9d903d171ff2319096ef345b4092535b">00023</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a9d903d171ff2319096ef345b4092535b">__construct</link>($dataAccess)
+<anchor xml:id="__general_access_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;dataAccess&#32;=&#32;$dataAccess;
+<anchor xml:id="__general_access_8php_source_1l00026"/>00026 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00027"/>00027 
+<anchor xml:id="__general_access_8php_source_1l00028"/>00028 
+<anchor xml:id="__general_access_8php_source_1l00033"/><link linkend="_classdatabase_1_1_general_access_1a89819b1dc6a1b327e15c84407c5d1ab1">00033</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a89819b1dc6a1b327e15c84407c5d1ab1">deleteTicket</link>($ticketID):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;deleteTicketComments($ticketID);
+<anchor xml:id="__general_access_8php_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;deleteTicketCategorized($ticketID);
+<anchor xml:id="__general_access_8php_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;DELETE&#32;FROM&#32;ticket&#32;WHERE&#32;ticket_ID&#32;=&#32;:ticketID&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:ticketID&apos;</emphasis>&#32;=&gt;&#32;$ticketID]);
+<anchor xml:id="__general_access_8php_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00044"/>00044 
+<anchor xml:id="__general_access_8php_source_1l00049"/><link linkend="_classdatabase_1_1_general_access_1a463f3ac58e7695101ae31525367fa96f">00049</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a463f3ac58e7695101ae31525367fa96f">deleteTicketComments</link>($ticketID):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00050"/>00050 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;DELETE&#32;FROM&#32;comment&#32;WHERE&#32;ticket&#32;=&#32;:ticketID&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:ticketID&apos;</emphasis>&#32;=&gt;&#32;$ticketID]);
+<anchor xml:id="__general_access_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00058"/>00058 
+<anchor xml:id="__general_access_8php_source_1l00063"/><link linkend="_classdatabase_1_1_general_access_1a303a72eaa0f483c3be92bbc311f3e87c">00063</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a303a72eaa0f483c3be92bbc311f3e87c">deleteTicketCategorized</link>($ticketID):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;DELETE&#32;FROM&#32;categorized&#32;WHERE&#32;ticket&#32;=&#32;:ticketID&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:ticketID&apos;</emphasis>&#32;=&gt;&#32;$ticketID]);
+<anchor xml:id="__general_access_8php_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00072"/>00072 
+<anchor xml:id="__general_access_8php_source_1l00077"/><link linkend="_classdatabase_1_1_general_access_1ae364a95f2ffa5b2b50434fdd7da1d9f8">00077</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1ae364a95f2ffa5b2b50434fdd7da1d9f8">deleteUser</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&quot;DELETE&#32;FROM&#32;user&#32;WHERE&#32;user_ID&#32;=&#32;:id&quot;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute(array(<emphasis role="stringliteral">&apos;:id&apos;</emphasis>&#32;=&gt;&#32;<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>));
+<anchor xml:id="__general_access_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(\PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;new&#32;\PDOException(<emphasis role="stringliteral">&quot;Error&#32;deleting&#32;user&quot;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00086"/>00086 
+<anchor xml:id="__general_access_8php_source_1l00091"/><link linkend="_classdatabase_1_1_general_access_1af885c5a19da7b8e9b45ee8e064ffa279">00091</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1af885c5a19da7b8e9b45ee8e064ffa279">deleteCategory</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;deleteCategoryCategorized(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>);
+<anchor xml:id="__general_access_8php_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&quot;DELETE&#32;FROM&#32;category&#32;WHERE&#32;category_ID&#32;=&#32;:id&quot;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute(array(<emphasis role="stringliteral">&apos;:id&apos;</emphasis>&#32;=&gt;&#32;<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>));
+<anchor xml:id="__general_access_8php_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(\PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;new&#32;\PDOException(<emphasis role="stringliteral">&quot;Error&#32;deleting&#32;category&quot;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00101"/>00101 
+<anchor xml:id="__general_access_8php_source_1l00106"/><link linkend="_classdatabase_1_1_general_access_1a06348e11b28592792e2ea739c0add2d4">00106</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a06348e11b28592792e2ea739c0add2d4">deleteCategoryCategorized</link>($category_ID):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00107"/>00107 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;DELETE&#32;FROM&#32;categorized&#32;WHERE&#32;category&#32;=&#32;:category_ID&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:category_ID&apos;</emphasis>&#32;=&gt;&#32;$category_ID]);
+<anchor xml:id="__general_access_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00114"/>00114 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00115"/>00115 
+<anchor xml:id="__general_access_8php_source_1l00120"/><link linkend="_classdatabase_1_1_general_access_1a9c044c55a812bbe02de0c972cb6ce2f5">00120</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a9c044c55a812bbe02de0c972cb6ce2f5">getTicketsIdByUserId</link>($userId):&#32;array
+<anchor xml:id="__general_access_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__general_access_8php_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;ticket_ID&#32;FROM&#32;ticket&#32;where&#32;author&#32;=&#32;:userId&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:userId&apos;</emphasis>&#32;=&gt;&#32;$userId]);
+<anchor xml:id="__general_access_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__general_access_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;ticket_ID&apos;</emphasis>];
+<anchor xml:id="__general_access_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__general_access_8php_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00134"/>00134 
+<anchor xml:id="__general_access_8php_source_1l00139"/><link linkend="_classdatabase_1_1_general_access_1a47c0939150e296243117108f22ea9dde">00139</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a47c0939150e296243117108f22ea9dde">getCommentsIdByUserId</link>($userId):&#32;array
+<anchor xml:id="__general_access_8php_source_1l00140"/>00140 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__general_access_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;comment_ID&#32;FROM&#32;comment&#32;where&#32;author&#32;=&#32;:userId&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:userId&apos;</emphasis>&#32;=&gt;&#32;$userId]);
+<anchor xml:id="__general_access_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__general_access_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;comment_ID&apos;</emphasis>];
+<anchor xml:id="__general_access_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__general_access_8php_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00152"/>00152 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00153"/>00153 
+<anchor xml:id="__general_access_8php_source_1l00158"/><link linkend="_classdatabase_1_1_general_access_1a4b8046caf85b1e630a20a39d55aa2f59">00158</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a4b8046caf85b1e630a20a39d55aa2f59">getPostsIdByCategoryId</link>(<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>):&#32;array
+<anchor xml:id="__general_access_8php_source_1l00159"/>00159 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID&#32;=&#32;[];
+<anchor xml:id="__general_access_8php_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;ticket&#32;FROM&#32;categorized&#32;where&#32;category&#32;=&#32;:ID&#32;ORDER&#32;BY&#32;ticket&#32;DESC&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;:ID&apos;</emphasis>&#32;=&gt;&#32;<link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>]);
+<anchor xml:id="__general_access_8php_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__general_access_8php_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ID[]&#32;=&#32;$data[<emphasis role="stringliteral">&apos;ticket&apos;</emphasis>];
+<anchor xml:id="__general_access_8php_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$ID;
+<anchor xml:id="__general_access_8php_source_1l00168"/>00168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00171"/>00171 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00172"/>00172 
+<anchor xml:id="__general_access_8php_source_1l00178"/><link linkend="_classdatabase_1_1_general_access_1aca5710b8bb9ec6cd1c48c7c976118baf">00178</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1aca5710b8bb9ec6cd1c48c7c976118baf">addCategoryToTicket</link>($category,&#32;$ticketID):&#32;void
+<anchor xml:id="__general_access_8php_source_1l00179"/>00179 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;INSERT&#32;INTO&#32;categorized&#32;(category,&#32;ticket)&#32;VALUES&#32;(:category,&#32;:ticket)&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([
+<anchor xml:id="__general_access_8php_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:category&apos;</emphasis>&#32;=&gt;&#32;$category,
+<anchor xml:id="__general_access_8php_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;:ticket&apos;</emphasis>&#32;=&gt;&#32;$ticketID,
+<anchor xml:id="__general_access_8php_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;]);
+<anchor xml:id="__general_access_8php_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00189"/>00189 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00190"/>00190 
+<anchor xml:id="__general_access_8php_source_1l00195"/><link linkend="_classdatabase_1_1_general_access_1a4426ec63c9fd1389eeb6fd0acb25adbd">00195</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classdatabase_1_1_general_access_1a4426ec63c9fd1389eeb6fd0acb25adbd">getPostById</link>($ticketId):&#32;<link linkend="_classentities_1_1_post">Post</link>
+<anchor xml:id="__general_access_8php_source_1l00196"/>00196 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__general_access_8php_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+<anchor xml:id="__general_access_8php_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;ticket&#32;where&#32;ticket_ID&#32;=&#32;:ticketId&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;ticketId&apos;</emphasis>&#32;=&gt;&#32;$ticketId]);
+<anchor xml:id="__general_access_8php_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__general_access_8php_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ticket&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_ticket">Ticket</link>($data);
+<anchor xml:id="__general_access_8php_source_1l00202"/>00202 
+<anchor xml:id="__general_access_8php_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$categories&#32;=&#32;[];
+<anchor xml:id="__general_access_8php_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;category&#32;where&#32;category_ID&#32;in&#32;(SELECT&#32;category&#32;FROM&#32;categorized&#32;where&#32;ticket&#32;=&#32;:ticketID)&#32;ORDER&#32;BY&#32;category_ID&#32;DESC&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;ticketID&apos;</emphasis>&#32;=&gt;&#32;$ticketId]);
+<anchor xml:id="__general_access_8php_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__general_access_8php_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$categories[]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_category">Category</link>($data);
+<anchor xml:id="__general_access_8php_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00209"/>00209 
+<anchor xml:id="__general_access_8php_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$comments&#32;=&#32;[];
+<anchor xml:id="__general_access_8php_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;comment_ID,text,date,author,ticket,username&#32;FROM&#32;comment&#32;</emphasis>
+<anchor xml:id="__general_access_8php_source_1l00212"/>00212 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;JOIN&#32;user&#32;ON&#32;comment.author&#32;=&#32;user.user_ID</emphasis>
+<anchor xml:id="__general_access_8php_source_1l00213"/>00213 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;where&#32;ticket&#32;=&#32;:ticketID&#32;LIMIT&#32;100&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;ticketID&apos;</emphasis>&#32;=&gt;&#32;$ticketId]);
+<anchor xml:id="__general_access_8php_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;($data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC))&#32;{
+<anchor xml:id="__general_access_8php_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$comments[]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_comment">Comment</link>($data);
+<anchor xml:id="__general_access_8php_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00218"/>00218 
+<anchor xml:id="__general_access_8php_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement&#32;=&#32;$this-&gt;dataAccess-&gt;prepare(<emphasis role="stringliteral">&apos;SELECT&#32;*&#32;FROM&#32;user&#32;where&#32;user_ID&#32;=&#32;:user_ID&apos;</emphasis>);
+<anchor xml:id="__general_access_8php_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$statement-&gt;execute([<emphasis role="stringliteral">&apos;user_ID&apos;</emphasis>&#32;=&gt;&#32;$ticket-&gt;getAuthor()]);
+<anchor xml:id="__general_access_8php_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$data&#32;=&#32;$statement-&gt;fetch(PDO::FETCH_ASSOC);
+<anchor xml:id="__general_access_8php_source_1l00222"/>00222 
+<anchor xml:id="__general_access_8php_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_user">User</link>($data);
+<anchor xml:id="__general_access_8php_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classentities_1_1_post">Post</link>($ticket,&#32;$categories,&#32;$comments,&#32;<link linkend="_user_edit_8php_1a598ca4e71b15a1313ec95f0df1027ca5">$user</link>);
+<anchor xml:id="__general_access_8php_source_1l00225"/>00225 
+<anchor xml:id="__general_access_8php_source_1l00226"/>00226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(PDOException&#32;$e)&#32;{
+<anchor xml:id="__general_access_8php_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;<emphasis role="keyword">new</emphasis>&#32;PDOException($e-&gt;getMessage(),&#32;(<emphasis role="keywordtype">int</emphasis>)$e-&gt;getCode());
+<anchor xml:id="__general_access_8php_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00229"/>00229 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__general_access_8php_source_1l00230"/>00230 
+<anchor xml:id="__general_access_8php_source_1l00231"/>00231 
+<anchor xml:id="__general_access_8php_source_1l00232"/>00232 
+<anchor xml:id="__general_access_8php_source_1l00233"/>00233 }
+</programlisting></section>

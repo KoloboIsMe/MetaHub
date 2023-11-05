@@ -1,0 +1,155 @@
+\doxysection{Tickets\+Service Class Reference}
+\hypertarget{classservices_1_1_tickets_service}{}\label{classservices_1_1_tickets_service}\index{TicketsService@{TicketsService}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_a21db5a882ba43a48b03c976aefa69c75}{\+\_\+\+\_\+construct}} (\$output\+Data)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_a637215646c5f02e149a146fbce958dca}{get\+Posts}} (\$user\+Access, \$general\+Access)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_a1aab7a11433415e9012b143f469c8c73}{get5\+Last\+Posts}} (\$user\+Access, \$general\+Access)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_aafda66ab0a7824c15e869c31f6d44d35}{get\+Category\+Posts}} (\$general\+Access, \$posts\+Id)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_abdad754661c93e50303a189f73e87556}{create\+Ticket}} (\$user\+Access, \$title, \$message)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_aa2af9219e1acee7e16ec36bb989e4d3b}{delete\+Ticket}} (\$user\+Access)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_a9b4d5b6ae46dcad7c25c11261111f329}{edit\+Ticket}} (\$user\+Access, \$id, \$title, \$message)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_aa773f2e51294e090486a93ea1ae5d13d}{get\+Posts\+Id\+By\+User\+Id}} (\$user\+Access, \$id)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_af9fd30dafa8b70fb0f2199702c2898e4}{get\+User\+Posts}} (\$general\+Access, \$posts\+Id)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_ae5e57326b72cd229977b05bbbcfd1b72}{is\+Ticket\+Owner}} (\$user\+Access, \$ticket\+ID, \$user\+\_\+\+ID)
+\item 
+\mbox{\hyperlink{classservices_1_1_tickets_service_a90f40acdad8058f6eb81279c9758e2d0}{exists\+Ticket}} (\$user\+Access, \$ticket\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00005}{5}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classservices_1_1_tickets_service_a21db5a882ba43a48b03c976aefa69c75}\label{classservices_1_1_tickets_service_a21db5a882ba43a48b03c976aefa69c75} 
+\index{TicketsService@{TicketsService}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}\item[{}]{\$output\+Data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00010}{10}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classservices_1_1_tickets_service_abdad754661c93e50303a189f73e87556}\label{classservices_1_1_tickets_service_abdad754661c93e50303a189f73e87556} 
+\index{TicketsService@{TicketsService}!createTicket@{createTicket}}
+\index{createTicket@{createTicket}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{createTicket()}{createTicket()}}
+{\footnotesize\ttfamily create\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$title,  }\item[{}]{\$message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00043}{43}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_aa2af9219e1acee7e16ec36bb989e4d3b}\label{classservices_1_1_tickets_service_aa2af9219e1acee7e16ec36bb989e4d3b} 
+\index{TicketsService@{TicketsService}!deleteTicket@{deleteTicket}}
+\index{deleteTicket@{deleteTicket}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{deleteTicket()}{deleteTicket()}}
+{\footnotesize\ttfamily delete\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$user\+Access }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00048}{48}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_a9b4d5b6ae46dcad7c25c11261111f329}\label{classservices_1_1_tickets_service_a9b4d5b6ae46dcad7c25c11261111f329} 
+\index{TicketsService@{TicketsService}!editTicket@{editTicket}}
+\index{editTicket@{editTicket}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{editTicket()}{editTicket()}}
+{\footnotesize\ttfamily edit\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$id,  }\item[{}]{\$title,  }\item[{}]{\$message }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00053}{53}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_a90f40acdad8058f6eb81279c9758e2d0}\label{classservices_1_1_tickets_service_a90f40acdad8058f6eb81279c9758e2d0} 
+\index{TicketsService@{TicketsService}!existsTicket@{existsTicket}}
+\index{existsTicket@{existsTicket}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{existsTicket()}{existsTicket()}}
+{\footnotesize\ttfamily exists\+Ticket (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$ticket\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00079}{79}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_a1aab7a11433415e9012b143f469c8c73}\label{classservices_1_1_tickets_service_a1aab7a11433415e9012b143f469c8c73} 
+\index{TicketsService@{TicketsService}!get5LastPosts@{get5LastPosts}}
+\index{get5LastPosts@{get5LastPosts}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{get5LastPosts()}{get5LastPosts()}}
+{\footnotesize\ttfamily get5\+Last\+Posts (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$general\+Access }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00025}{25}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_aafda66ab0a7824c15e869c31f6d44d35}\label{classservices_1_1_tickets_service_aafda66ab0a7824c15e869c31f6d44d35} 
+\index{TicketsService@{TicketsService}!getCategoryPosts@{getCategoryPosts}}
+\index{getCategoryPosts@{getCategoryPosts}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{getCategoryPosts()}{getCategoryPosts()}}
+{\footnotesize\ttfamily get\+Category\+Posts (\begin{DoxyParamCaption}\item[{}]{\$general\+Access,  }\item[{}]{\$posts\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00034}{34}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_a637215646c5f02e149a146fbce958dca}\label{classservices_1_1_tickets_service_a637215646c5f02e149a146fbce958dca} 
+\index{TicketsService@{TicketsService}!getPosts@{getPosts}}
+\index{getPosts@{getPosts}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{getPosts()}{getPosts()}}
+{\footnotesize\ttfamily get\+Posts (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$general\+Access }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00015}{15}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_aa773f2e51294e090486a93ea1ae5d13d}\label{classservices_1_1_tickets_service_aa773f2e51294e090486a93ea1ae5d13d} 
+\index{TicketsService@{TicketsService}!getPostsIdByUserId@{getPostsIdByUserId}}
+\index{getPostsIdByUserId@{getPostsIdByUserId}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{getPostsIdByUserId()}{getPostsIdByUserId()}}
+{\footnotesize\ttfamily get\+Posts\+Id\+By\+User\+Id (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00058}{58}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_af9fd30dafa8b70fb0f2199702c2898e4}\label{classservices_1_1_tickets_service_af9fd30dafa8b70fb0f2199702c2898e4} 
+\index{TicketsService@{TicketsService}!getUserPosts@{getUserPosts}}
+\index{getUserPosts@{getUserPosts}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{getUserPosts()}{getUserPosts()}}
+{\footnotesize\ttfamily get\+User\+Posts (\begin{DoxyParamCaption}\item[{}]{\$general\+Access,  }\item[{}]{\$posts\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00063}{63}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+\Hypertarget{classservices_1_1_tickets_service_ae5e57326b72cd229977b05bbbcfd1b72}\label{classservices_1_1_tickets_service_ae5e57326b72cd229977b05bbbcfd1b72} 
+\index{TicketsService@{TicketsService}!isTicketOwner@{isTicketOwner}}
+\index{isTicketOwner@{isTicketOwner}!TicketsService@{TicketsService}}
+\doxysubsubsection{\texorpdfstring{isTicketOwner()}{isTicketOwner()}}
+{\footnotesize\ttfamily is\+Ticket\+Owner (\begin{DoxyParamCaption}\item[{}]{\$user\+Access,  }\item[{}]{\$ticket\+ID,  }\item[{}]{\$user\+\_\+\+ID }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_tickets_service_8php_source_l00072}{72}} of file \mbox{\hyperlink{_tickets_service_8php_source}{Tickets\+Service.\+php}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+services/\mbox{\hyperlink{_tickets_service_8php}{Tickets\+Service.\+php}}\end{DoxyCompactItemize}

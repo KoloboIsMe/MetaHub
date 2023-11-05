@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ticket_8php_source" xml:lang="en-US">
+<title>Ticket.php</title>
+<indexterm><primary>Framework/entities/Ticket.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__ticket_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__ticket_8php_source_1l00002"/>00002 
+<anchor xml:id="__ticket_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceentities">entities</link>;
+<anchor xml:id="__ticket_8php_source_1l00004"/>00004 
+<anchor xml:id="__ticket_8php_source_1l00005"/>00005 include_once&#32;<emphasis role="stringliteral">&apos;Entity.php&apos;</emphasis>;
+<anchor xml:id="__ticket_8php_source_1l00006"/>00006 
+<anchor xml:id="__ticket_8php_source_1l00007"/><link linkend="_classentities_1_1_ticket">00007</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classentities_1_1_ticket">Ticket</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_classentities_1_1_entity">Entity</link>
+<anchor xml:id="__ticket_8php_source_1l00008"/>00008 {
+<anchor xml:id="__ticket_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$ticket_ID;
+<anchor xml:id="__ticket_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>;
+<anchor xml:id="__ticket_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$message;
+<anchor xml:id="__ticket_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$date;
+<anchor xml:id="__ticket_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$author;
+<anchor xml:id="__ticket_8php_source_1l00029"/>00029 
+<anchor xml:id="__ticket_8php_source_1l00033"/><link linkend="_classentities_1_1_ticket_1a190d956349ebda2717009c78419349c3">00033</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a190d956349ebda2717009c78419349c3">getTicket_ID</link>()
+<anchor xml:id="__ticket_8php_source_1l00034"/>00034 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;ticket_ID;
+<anchor xml:id="__ticket_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00037"/>00037 
+<anchor xml:id="__ticket_8php_source_1l00042"/><link linkend="_classentities_1_1_ticket_1a6dd97e03c08a08c05323c4e02e8b1037">00042</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a6dd97e03c08a08c05323c4e02e8b1037">setTicket_ID</link>($ticket_ID)
+<anchor xml:id="__ticket_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$ticket_ID&#32;=&#32;(int)$ticket_ID;
+<anchor xml:id="__ticket_8php_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($ticket_ID&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__ticket_8php_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;ticket_ID&#32;=&#32;$ticket_ID;
+<anchor xml:id="__ticket_8php_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00048"/>00048 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00049"/>00049 
+<anchor xml:id="__ticket_8php_source_1l00053"/><link linkend="_classentities_1_1_ticket_1a95e859a4588a39a1824b717378a84c29">00053</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a95e859a4588a39a1824b717378a84c29">getTitle</link>()
+<anchor xml:id="__ticket_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$this-&gt;title</link>;
+<anchor xml:id="__ticket_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00057"/>00057 
+<anchor xml:id="__ticket_8php_source_1l00062"/><link linkend="_classentities_1_1_ticket_1a884ba9bb0d54bde7839e798db7964476">00062</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a884ba9bb0d54bde7839e798db7964476">setTitle</link>(<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>)
+<anchor xml:id="__ticket_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string(<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>))&#32;{
+<anchor xml:id="__ticket_8php_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;title&#32;=&#32;<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>;
+<anchor xml:id="__ticket_8php_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00068"/>00068 
+<anchor xml:id="__ticket_8php_source_1l00072"/><link linkend="_classentities_1_1_ticket_1a0b0e611236742aac18ba1936d03ba89a">00072</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a0b0e611236742aac18ba1936d03ba89a">getMessage</link>()
+<anchor xml:id="__ticket_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;message;
+<anchor xml:id="__ticket_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00076"/>00076 
+<anchor xml:id="__ticket_8php_source_1l00081"/><link linkend="_classentities_1_1_ticket_1a6991eb53548e7180a3a8e6f418fbb234">00081</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a6991eb53548e7180a3a8e6f418fbb234">setMessage</link>($message)
+<anchor xml:id="__ticket_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string($message))&#32;{
+<anchor xml:id="__ticket_8php_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;message&#32;=&#32;$message;
+<anchor xml:id="__ticket_8php_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00086"/>00086 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00087"/>00087 
+<anchor xml:id="__ticket_8php_source_1l00091"/><link linkend="_classentities_1_1_ticket_1a24d89b0ad05ea2e33626b1fc8ed59bc3">00091</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a24d89b0ad05ea2e33626b1fc8ed59bc3">getDate</link>()
+<anchor xml:id="__ticket_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;date;
+<anchor xml:id="__ticket_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00095"/>00095 
+<anchor xml:id="__ticket_8php_source_1l00100"/><link linkend="_classentities_1_1_ticket_1a2570e83b20f9be514f22e3fd0b7c0d17">00100</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a2570e83b20f9be514f22e3fd0b7c0d17">setDate</link>($date)
+<anchor xml:id="__ticket_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;date&#32;=&#32;$date;
+<anchor xml:id="__ticket_8php_source_1l00103"/>00103 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00104"/>00104 
+<anchor xml:id="__ticket_8php_source_1l00108"/><link linkend="_classentities_1_1_ticket_1a5286e30390ae3e1b274940286493dd24">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1a5286e30390ae3e1b274940286493dd24">getAuthor</link>()
+<anchor xml:id="__ticket_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;author;
+<anchor xml:id="__ticket_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00112"/>00112 
+<anchor xml:id="__ticket_8php_source_1l00117"/><link linkend="_classentities_1_1_ticket_1afde85a369fc83b442db3cf5c6ac31d4a">00117</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_ticket_1afde85a369fc83b442db3cf5c6ac31d4a">setAuthor</link>($author)
+<anchor xml:id="__ticket_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__ticket_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$author&#32;=&#32;(int)$author;
+<anchor xml:id="__ticket_8php_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($author&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__ticket_8php_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;author&#32;=&#32;$author;
+<anchor xml:id="__ticket_8php_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00123"/>00123 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__ticket_8php_source_1l00124"/>00124 
+<anchor xml:id="__ticket_8php_source_1l00125"/>00125 
+<anchor xml:id="__ticket_8php_source_1l00126"/>00126 }
+</programlisting></section>

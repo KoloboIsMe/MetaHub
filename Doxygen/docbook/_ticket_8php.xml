@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__ticket_8php" xml:lang="en-US">
+<title>Framework/entities/Ticket.php File Reference</title>
+<indexterm><primary>Framework/entities/Ticket.php</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classentities_1_1_ticket">Ticket</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceentities">entities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

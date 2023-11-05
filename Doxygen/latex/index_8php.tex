@@ -1,0 +1,286 @@
+\doxysection{index.\+php File Reference}
+\hypertarget{index_8php}{}\label{index_8php}\index{index.php@{index.php}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$db\+Admin}} = null
+\item 
+\mbox{\hyperlink{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}{\$db\+Lector}} = null
+\item 
+\mbox{\hyperlink{index_8php_abe4cc9788f52e49485473dc699537388}{try}}
+\item 
+catch(PDOException \$e) \mbox{\hyperlink{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}{\$category\+Access\+Lector}} = new \mbox{\hyperlink{classdatabase_1_1_category_access}{database\textbackslash{}\+Category\+Access}}(\$db\+Lector)
+\item 
+\mbox{\hyperlink{index_8php_a89d3445ad41f70c219793449020d3528}{\$comment\+Access\+Lector}} = new \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\textbackslash{}\+Comment\+Access}}(\$db\+Lector)
+\item 
+\mbox{\hyperlink{index_8php_a508377953039f7856fd76824e260afba}{\$ticket\+Access\+Lector}} = new \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\textbackslash{}\+Ticket\+Access}}(\$db\+Lector)
+\item 
+\mbox{\hyperlink{index_8php_a9340012d6fce07833a6fa708779dfb16}{\$user\+Access\+Lector}} = new \mbox{\hyperlink{classdatabase_1_1_user_access}{database\textbackslash{}\+User\+Access}}(\$db\+Lector)
+\item 
+\mbox{\hyperlink{index_8php_a941e0f644134fed3621753aa7e4ac183}{\$general\+Access\+Lector}} = new \mbox{\hyperlink{classdatabase_1_1_general_access}{database\textbackslash{}\+General\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_af842fa94d65f3b425d48c6e75b16fc38}{\$ticket\+Access}} = new \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\textbackslash{}\+Ticket\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_af285d590bb1af4a67a90b92eb2f99c34}{\$user\+Access}} = new \mbox{\hyperlink{classdatabase_1_1_user_access}{database\textbackslash{}\+User\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_a681149110179ebaba9c2e54cdd2b83a2}{\$comment\+Access}} = new \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\textbackslash{}\+Comment\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_a06af02ba84341ec1e24e2863d4ed0749}{\$category\+Access}} = new \mbox{\hyperlink{classdatabase_1_1_category_access}{database\textbackslash{}\+Category\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_a9a046cb32f699738d388b443e80758f5}{\$general\+Access}} = new \mbox{\hyperlink{classdatabase_1_1_general_access}{database\textbackslash{}\+General\+Access}}(\$db\+Admin)
+\item 
+\mbox{\hyperlink{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}{\$output\+Data}} = new \mbox{\hyperlink{classservices_1_1_output_data}{services\textbackslash{}\+Output\+Data}}()
+\item 
+\mbox{\hyperlink{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}{\$controller}} = new \mbox{\hyperlink{classcontrols_1_1_controller}{controls\textbackslash{}\+Controller}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}{\$presenter}} = new \mbox{\hyperlink{classcontrols_1_1_presenter}{controls\textbackslash{}\+Presenter}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_aaa6c921e73418e6b3aeef431100171ea}{\$categories\+Service}} = new \mbox{\hyperlink{classservices_1_1_categories_service}{services\textbackslash{}\+Categories\+Service}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_a810230690da10168aaae0d2a5349c124}{\$tickets\+Service}} = new \mbox{\hyperlink{classservices_1_1_tickets_service}{services\textbackslash{}\+Tickets\+Service}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}{\$comments\+Service}} = new \mbox{\hyperlink{classservices_1_1_comments_service}{services\textbackslash{}\+Comments\+Service}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_a34e2b7d736d0937b68d80caf80b271c1}{\$users\+Service}} = new \mbox{\hyperlink{classservices_1_1_users_service}{services\textbackslash{}\+Users\+Service}}(\$output\+Data)
+\item 
+\mbox{\hyperlink{index_8php_acf215f34a917d014776ce684a9ee8909}{\$url}} = \$\+\_\+\+GET\mbox{[}\textquotesingle{}url\textquotesingle{}\mbox{]} ?? \textquotesingle{}\textquotesingle{}
+\item 
+if(isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}is\+Logged\textquotesingle{}\mbox{]}) \&\& \$\+\_\+\+SESSION\mbox{[}\textquotesingle{}is\+Logged\textquotesingle{}\mbox{]}) \mbox{\hyperlink{index_8php_a06dc4a8eef6f21bee6ea9a1f7a778241}{else}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{index_8php_aaa6c921e73418e6b3aeef431100171ea}\label{index_8php_aaa6c921e73418e6b3aeef431100171ea} 
+\index{index.php@{index.php}!\$categoriesService@{\$categoriesService}}
+\index{\$categoriesService@{\$categoriesService}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$categoriesService}{\$categoriesService}}
+{\footnotesize\ttfamily \$categories\+Service = new \mbox{\hyperlink{classservices_1_1_categories_service}{services\textbackslash{}\+Categories\+Service}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00074}{74}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a06af02ba84341ec1e24e2863d4ed0749}\label{index_8php_a06af02ba84341ec1e24e2863d4ed0749} 
+\index{index.php@{index.php}!\$categoryAccess@{\$categoryAccess}}
+\index{\$categoryAccess@{\$categoryAccess}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$categoryAccess}{\$categoryAccess}}
+{\footnotesize\ttfamily \$category\+Access = new \mbox{\hyperlink{classdatabase_1_1_category_access}{database\textbackslash{}\+Category\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00061}{61}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8}\label{index_8php_a5c7fa24145d4e9cbfa6c639abe18d3e8} 
+\index{index.php@{index.php}!\$categoryAccessLector@{\$categoryAccessLector}}
+\index{\$categoryAccessLector@{\$categoryAccessLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$categoryAccessLector}{\$categoryAccessLector}}
+{\footnotesize\ttfamily catch (PDOException \$e) \$category\+Access\+Lector = new \mbox{\hyperlink{classdatabase_1_1_category_access}{database\textbackslash{}\+Category\+Access}}(\$db\+Lector)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00052}{52}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a681149110179ebaba9c2e54cdd2b83a2}\label{index_8php_a681149110179ebaba9c2e54cdd2b83a2} 
+\index{index.php@{index.php}!\$commentAccess@{\$commentAccess}}
+\index{\$commentAccess@{\$commentAccess}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$commentAccess}{\$commentAccess}}
+{\footnotesize\ttfamily \$comment\+Access = new \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\textbackslash{}\+Comment\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00060}{60}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a89d3445ad41f70c219793449020d3528}\label{index_8php_a89d3445ad41f70c219793449020d3528} 
+\index{index.php@{index.php}!\$commentAccessLector@{\$commentAccessLector}}
+\index{\$commentAccessLector@{\$commentAccessLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$commentAccessLector}{\$commentAccessLector}}
+{\footnotesize\ttfamily \$comment\+Access\+Lector = new \mbox{\hyperlink{classdatabase_1_1_comment_access}{database\textbackslash{}\+Comment\+Access}}(\$db\+Lector)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00053}{53}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3}\label{index_8php_af5c8a2dadcb2eba2758a8f7958b3e1d3} 
+\index{index.php@{index.php}!\$commentsService@{\$commentsService}}
+\index{\$commentsService@{\$commentsService}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$commentsService}{\$commentsService}}
+{\footnotesize\ttfamily \$comments\+Service = new \mbox{\hyperlink{classservices_1_1_comments_service}{services\textbackslash{}\+Comments\+Service}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00076}{76}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a388ef7b1db5e6f728e63cee704ce6e23}\label{index_8php_a388ef7b1db5e6f728e63cee704ce6e23} 
+\index{index.php@{index.php}!\$controller@{\$controller}}
+\index{\$controller@{\$controller}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$controller}{\$controller}}
+{\footnotesize\ttfamily \$controller = new \mbox{\hyperlink{classcontrols_1_1_controller}{controls\textbackslash{}\+Controller}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00068}{68}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_ae89b553ac3d911ecce81da9747041908}\label{index_8php_ae89b553ac3d911ecce81da9747041908} 
+\index{index.php@{index.php}!\$dbAdmin@{\$dbAdmin}}
+\index{\$dbAdmin@{\$dbAdmin}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$dbAdmin}{\$dbAdmin}}
+{\footnotesize\ttfamily \$db\+Admin = null}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00039}{39}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a16060ba0bdb764c062eeddb5d0659ea1}\label{index_8php_a16060ba0bdb764c062eeddb5d0659ea1} 
+\index{index.php@{index.php}!\$dbLector@{\$dbLector}}
+\index{\$dbLector@{\$dbLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$dbLector}{\$dbLector}}
+{\footnotesize\ttfamily \$db\+Lector = null}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00040}{40}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a9a046cb32f699738d388b443e80758f5}\label{index_8php_a9a046cb32f699738d388b443e80758f5} 
+\index{index.php@{index.php}!\$generalAccess@{\$generalAccess}}
+\index{\$generalAccess@{\$generalAccess}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$generalAccess}{\$generalAccess}}
+{\footnotesize\ttfamily \$general\+Access = new \mbox{\hyperlink{classdatabase_1_1_general_access}{database\textbackslash{}\+General\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00062}{62}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a941e0f644134fed3621753aa7e4ac183}\label{index_8php_a941e0f644134fed3621753aa7e4ac183} 
+\index{index.php@{index.php}!\$generalAccessLector@{\$generalAccessLector}}
+\index{\$generalAccessLector@{\$generalAccessLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$generalAccessLector}{\$generalAccessLector}}
+{\footnotesize\ttfamily \$general\+Access\+Lector = new \mbox{\hyperlink{classdatabase_1_1_general_access}{database\textbackslash{}\+General\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00056}{56}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2}\label{index_8php_ae9edebdcd1b91b38dfd10a39e51073c2} 
+\index{index.php@{index.php}!\$outputData@{\$outputData}}
+\index{\$outputData@{\$outputData}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$outputData}{\$outputData}}
+{\footnotesize\ttfamily \$output\+Data = new \mbox{\hyperlink{classservices_1_1_output_data}{services\textbackslash{}\+Output\+Data}}()}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00065}{65}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d}\label{index_8php_a1e2fb490a07b179ea7f89c5c6bb8c18d} 
+\index{index.php@{index.php}!\$presenter@{\$presenter}}
+\index{\$presenter@{\$presenter}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$presenter}{\$presenter}}
+{\footnotesize\ttfamily \$presenter = new \mbox{\hyperlink{classcontrols_1_1_presenter}{controls\textbackslash{}\+Presenter}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00071}{71}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_af842fa94d65f3b425d48c6e75b16fc38}\label{index_8php_af842fa94d65f3b425d48c6e75b16fc38} 
+\index{index.php@{index.php}!\$ticketAccess@{\$ticketAccess}}
+\index{\$ticketAccess@{\$ticketAccess}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$ticketAccess}{\$ticketAccess}}
+{\footnotesize\ttfamily \$ticket\+Access = new \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\textbackslash{}\+Ticket\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00058}{58}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a508377953039f7856fd76824e260afba}\label{index_8php_a508377953039f7856fd76824e260afba} 
+\index{index.php@{index.php}!\$ticketAccessLector@{\$ticketAccessLector}}
+\index{\$ticketAccessLector@{\$ticketAccessLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$ticketAccessLector}{\$ticketAccessLector}}
+{\footnotesize\ttfamily \$ticket\+Access\+Lector = new \mbox{\hyperlink{classdatabase_1_1_ticket_access}{database\textbackslash{}\+Ticket\+Access}}(\$db\+Lector)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00054}{54}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a810230690da10168aaae0d2a5349c124}\label{index_8php_a810230690da10168aaae0d2a5349c124} 
+\index{index.php@{index.php}!\$ticketsService@{\$ticketsService}}
+\index{\$ticketsService@{\$ticketsService}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$ticketsService}{\$ticketsService}}
+{\footnotesize\ttfamily \$tickets\+Service = new \mbox{\hyperlink{classservices_1_1_tickets_service}{services\textbackslash{}\+Tickets\+Service}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00075}{75}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_acf215f34a917d014776ce684a9ee8909}\label{index_8php_acf215f34a917d014776ce684a9ee8909} 
+\index{index.php@{index.php}!\$url@{\$url}}
+\index{\$url@{\$url}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$url}{\$url}}
+{\footnotesize\ttfamily \$url = \$\+\_\+\+GET\mbox{[}\textquotesingle{}url\textquotesingle{}\mbox{]} ?? \textquotesingle{}\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00080}{80}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_af285d590bb1af4a67a90b92eb2f99c34}\label{index_8php_af285d590bb1af4a67a90b92eb2f99c34} 
+\index{index.php@{index.php}!\$userAccess@{\$userAccess}}
+\index{\$userAccess@{\$userAccess}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$userAccess}{\$userAccess}}
+{\footnotesize\ttfamily \$user\+Access = new \mbox{\hyperlink{classdatabase_1_1_user_access}{database\textbackslash{}\+User\+Access}}(\$db\+Admin)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00059}{59}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a9340012d6fce07833a6fa708779dfb16}\label{index_8php_a9340012d6fce07833a6fa708779dfb16} 
+\index{index.php@{index.php}!\$userAccessLector@{\$userAccessLector}}
+\index{\$userAccessLector@{\$userAccessLector}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$userAccessLector}{\$userAccessLector}}
+{\footnotesize\ttfamily \$user\+Access\+Lector = new \mbox{\hyperlink{classdatabase_1_1_user_access}{database\textbackslash{}\+User\+Access}}(\$db\+Lector)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00055}{55}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a34e2b7d736d0937b68d80caf80b271c1}\label{index_8php_a34e2b7d736d0937b68d80caf80b271c1} 
+\index{index.php@{index.php}!\$usersService@{\$usersService}}
+\index{\$usersService@{\$usersService}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{\$usersService}{\$usersService}}
+{\footnotesize\ttfamily \$users\+Service = new \mbox{\hyperlink{classservices_1_1_users_service}{services\textbackslash{}\+Users\+Service}}(\$output\+Data)}
+
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00077}{77}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_a06dc4a8eef6f21bee6ea9a1f7a778241}\label{index_8php_a06dc4a8eef6f21bee6ea9a1f7a778241} 
+\index{index.php@{index.php}!else@{else}}
+\index{else@{else}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{else}{else}}
+{\footnotesize\ttfamily if(isset( \$\+\_\+\+GET\mbox{[} \textquotesingle{}action\textquotesingle{}\mbox{]})) if(\textquotesingle{}\textquotesingle{}==\$url\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}\textquotesingle{}/\textquotesingle{}==\$url) elseif( \textquotesingle{}login\textquotesingle{}==\$url) elseif(\textquotesingle{}register\textquotesingle{}==\$url) elseif( \textquotesingle{}logout\textquotesingle{}==\$url \&\&isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}is\+Logged\textquotesingle{}\mbox{]})) elseif(\textquotesingle{}posts\textquotesingle{}==\$url) elseif( \textquotesingle{}create\+Posts\textquotesingle{}==\$url) elseif(\textquotesingle{}categories\textquotesingle{}==\$url) elseif( \textquotesingle{}edit\+Ticket\textquotesingle{}==\$url \&\&isset( \$\+\_\+\+GET\mbox{[} \textquotesingle{}id\textquotesingle{}\mbox{]}) \&\&\$tickets\+Service-\/$>$exists\+Ticket( \$ticket\+Access\+Lector, \$\+\_\+\+GET\mbox{[} \textquotesingle{}id\textquotesingle{}\mbox{]})) elseif(\textquotesingle{}users\textquotesingle{}==\$url) elseif( \textquotesingle{}user\+Edit\textquotesingle{}==\$url \&\&isset( \$\+\_\+\+SESSION\mbox{[} \textquotesingle{}user\+\_\+\+ID\textquotesingle{}\mbox{]})) elseif(\textquotesingle{}create\+Category\textquotesingle{}==\$url \&\&isset(\$\+\_\+\+SESSION\mbox{[}\textquotesingle{}level\textquotesingle{}\mbox{]}) \&\& \$\+\_\+\+SESSION\mbox{[}\textquotesingle{}level\textquotesingle{}\mbox{]} $>$ 0) elseif ( \textquotesingle{}error\textquotesingle{}==\$url) else}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \$layoutTemplate\ =\ \textcolor{stringliteral}{'gui/layout.html'}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00091}{91}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+
+\Hypertarget{index_8php_abe4cc9788f52e49485473dc699537388}\label{index_8php_abe4cc9788f52e49485473dc699537388} 
+\index{index.php@{index.php}!try@{try}}
+\index{try@{try}!index.php@{index.php}}
+\doxysubsubsection{\texorpdfstring{try}{try}}
+{\footnotesize\ttfamily try}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{index_8php_ae89b553ac3d911ecce81da9747041908}{\$dbAdmin}}\ =\ database\(\backslash\)SPDO::getInstance(\textcolor{stringliteral}{"{}ADMIN"{}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{index_8php_source_l00041}{41}} of file \mbox{\hyperlink{index_8php_source}{index.\+php}}.
+

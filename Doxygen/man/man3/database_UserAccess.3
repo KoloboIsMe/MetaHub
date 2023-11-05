@@ -1,0 +1,285 @@
+.TH "UserAccess" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UserAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBUserInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($dataAccess)"
+.br
+.ti -1c
+.RI "\fBexistsUsername\fP ($username)"
+.br
+.ti -1c
+.RI "\fBexistsUser\fP ($user_ID)"
+.br
+.ti -1c
+.RI "\fBisUser\fP ($username, $password)"
+.br
+.ti -1c
+.RI "\fBgetUserByUsername\fP ($username)"
+.br
+.ti -1c
+.RI "\fBgetUserById\fP ($id)"
+.br
+.ti -1c
+.RI "\fBgetUsersID\fP ()"
+.br
+.ti -1c
+.RI "\fBregister\fP ($username, $password, $date)"
+.br
+.ti -1c
+.RI "\fBupdateUser\fP ($username, $password, $user_ID)"
+.br
+.ti -1c
+.RI "\fBupdateLastConnexion\fP ($user_ID)"
+.br
+.ti -1c
+.RI "\fBget10LastConnectedUsersID\fP ()"
+.br
+.ti -1c
+.RI "\fBsetOnline\fP ($user_ID, $online)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$dataAccess\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB12\fP of file \fBUserAccess\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $dataAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$dataAccess\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBUserAccess\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "existsUser ( $user_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$user_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB47\fP of file \fBUserAccess\&.php\fP\&.
+.SS "existsUsername ( $username)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$username\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB31\fP of file \fBUserAccess\&.php\fP\&.
+.SS "get10LastConnectedUsersID ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB198\fP of file \fBUserAccess\&.php\fP\&.
+.SS "getUserById ( $id)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+User 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB99\fP of file \fBUserAccess\&.php\fP\&.
+.SS "getUserByUsername ( $username)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$username\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+User 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB83\fP of file \fBUserAccess\&.php\fP\&.
+.SS "getUsersID ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB114\fP of file \fBUserAccess\&.php\fP\&.
+.SS "isUser ( $username,  $password)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$username\fP 
+.br
+\fI$password\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB64\fP of file \fBUserAccess\&.php\fP\&.
+.SS "register ( $username,  $password,  $date)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$username\fP 
+.br
+\fI$password\fP 
+.br
+\fI$date\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB135\fP of file \fBUserAccess\&.php\fP\&.
+.SS "setOnline ( $user_ID,  $online)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$user_ID\fP 
+.br
+\fI$online\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB218\fP of file \fBUserAccess\&.php\fP\&.
+.SS "updateLastConnexion ( $user_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$user_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB182\fP of file \fBUserAccess\&.php\fP\&.
+.SS "updateUser ( $username,  $password,  $user_ID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$username\fP 
+.br
+\fI$password\fP 
+.br
+\fI$user_ID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBUserInterface\fP\&.
+.PP
+Definition at line \fB164\fP of file \fBUserAccess\&.php\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "$dataAccess = null\fC [protected]\fP"
+
+.PP
+Definition at line \fB17\fP of file \fBUserAccess\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

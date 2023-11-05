@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_category_interface_8php" kind="file" language="PHP">
+    <compoundname>CategoryInterface.php</compoundname>
+    <innerclass refid="interfaceservices_1_1_category_interface" prot="public">services::CategoryInterface</innerclass>
+    <innernamespace refid="namespaceservices">services</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceservices" kindref="compound">services</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="interfaceservices_1_1_category_interface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceservices_1_1_category_interface" kindref="compound">CategoryInterface</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a34e6b8e5ed64b1c2c77db1ad6128694b" kindref="member">existsCategory</ref>($CategoryID);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a384003387c2ac0bd8601b44e47196392" kindref="member">getCategoriesID</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a2036ca261690e53de7f2aef9a0683323" kindref="member">getCategoryById</ref>(<ref refid="edit_ticket_8php_1ae97941710d863131c700f069b109991e" kindref="member">$id</ref>);</highlight></codeline>
+<codeline lineno="12" refid="interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a11b4f9c5fb95e61eea47600afd3216af" kindref="member">getCategoryIdByLabel</ref>($label);</highlight></codeline>
+<codeline lineno="13" refid="interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a4cc708825fd51c90e00df3f8dd772da7" kindref="member">get5LastCategories</ref>();</highlight></codeline>
+<codeline lineno="14" refid="interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceservices_1_1_category_interface_1a1bb8598d8a3012942717956f06a2cb05" kindref="member">createCategory</ref>($label,<sp/>$description);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="services/CategoryInterface.php"/>
+  </compounddef>
+</doxygen>

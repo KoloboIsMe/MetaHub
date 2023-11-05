@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classentities_1_1_user" kind="class" language="PHP" prot="public">
+    <compoundname>entities::User</compoundname>
+    <basecompoundref refid="classentities_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classentities_1_1_user_1af935895be7531a761425c2f71732cd96" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$user_ID</definition>
+        <argsstring></argsstring>
+        <name>$user_ID</name>
+        <qualifiedname>entities\User\$user_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="12" column="13" bodyfile="Framework/entities/User.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$password</definition>
+        <argsstring></argsstring>
+        <name>$password</name>
+        <qualifiedname>entities\User\$password</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="16" column="13" bodyfile="Framework/entities/User.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$username</definition>
+        <argsstring></argsstring>
+        <name>$username</name>
+        <qualifiedname>entities\User\$username</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="20" column="13" bodyfile="Framework/entities/User.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1a4c7074c68c02da6ceecc91fd85037ef7" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$first_connexion</definition>
+        <argsstring></argsstring>
+        <name>$first_connexion</name>
+        <qualifiedname>entities\User\$first_connexion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="24" column="13" bodyfile="Framework/entities/User.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1a2ac9fdfd1824e1be9a4c052d2d74863c" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$last_connexion</definition>
+        <argsstring></argsstring>
+        <name>$last_connexion</name>
+        <qualifiedname>entities\User\$last_connexion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="28" column="13" bodyfile="Framework/entities/User.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1abd32cc82c6a3f79491987de36ad580ca" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$level</definition>
+        <argsstring></argsstring>
+        <name>$level</name>
+        <qualifiedname>entities\User\$level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="32" column="13" bodyfile="Framework/entities/User.php" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_user_1aceed569b975741ac6ce4f2f902bf3a06" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$online</definition>
+        <argsstring></argsstring>
+        <name>$online</name>
+        <qualifiedname>entities\User\$online</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="36" column="13" bodyfile="Framework/entities/User.php" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUser_ID</definition>
+        <argsstring>()</argsstring>
+        <name>getUser_ID</name>
+        <qualifiedname>entities\User\getUser_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="41" column="21" bodyfile="Framework/entities/User.php" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a88aebf064698f5fa34a719655850e629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUser_ID</definition>
+        <argsstring>($user_ID)</argsstring>
+        <name>setUser_ID</name>
+        <qualifiedname>entities\User\setUser_ID</qualifiedname>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="50" column="21" bodyfile="Framework/entities/User.php" bodystart="50" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <qualifiedname>entities\User\getPassword</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="61" column="21" bodyfile="Framework/entities/User.php" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setPassword</definition>
+        <argsstring>($password)</argsstring>
+        <name>setPassword</name>
+        <qualifiedname>entities\User\setPassword</qualifiedname>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="70" column="21" bodyfile="Framework/entities/User.php" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUsername</definition>
+        <argsstring>()</argsstring>
+        <name>getUsername</name>
+        <qualifiedname>entities\User\getUsername</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="80" column="21" bodyfile="Framework/entities/User.php" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>setUsername</name>
+        <qualifiedname>entities\User\setUsername</qualifiedname>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="89" column="21" bodyfile="Framework/entities/User.php" bodystart="89" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getFirst_connexion</definition>
+        <argsstring>()</argsstring>
+        <name>getFirst_connexion</name>
+        <qualifiedname>entities\User\getFirst_connexion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="99" column="21" bodyfile="Framework/entities/User.php" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setFirst_connexion</definition>
+        <argsstring>($first_connexion)</argsstring>
+        <name>setFirst_connexion</name>
+        <qualifiedname>entities\User\setFirst_connexion</qualifiedname>
+        <param>
+          <declname>$first_connexion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$first_connexion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="108" column="21" bodyfile="Framework/entities/User.php" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getLast_connexion</definition>
+        <argsstring>()</argsstring>
+        <name>getLast_connexion</name>
+        <qualifiedname>entities\User\getLast_connexion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="116" column="21" bodyfile="Framework/entities/User.php" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setLast_connexion</definition>
+        <argsstring>($last_connexion)</argsstring>
+        <name>setLast_connexion</name>
+        <qualifiedname>entities\User\setLast_connexion</qualifiedname>
+        <param>
+          <declname>$last_connexion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$last_connexion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="125" column="21" bodyfile="Framework/entities/User.php" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getLevel</definition>
+        <argsstring>()</argsstring>
+        <name>getLevel</name>
+        <qualifiedname>entities\User\getLevel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="133" column="21" bodyfile="Framework/entities/User.php" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setLevel</definition>
+        <argsstring>($level)</argsstring>
+        <name>setLevel</name>
+        <qualifiedname>entities\User\setLevel</qualifiedname>
+        <param>
+          <declname>$level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$level</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="142" column="21" bodyfile="Framework/entities/User.php" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getOnline</definition>
+        <argsstring>()</argsstring>
+        <name>getOnline</name>
+        <qualifiedname>entities\User\getOnline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="152" column="21" bodyfile="Framework/entities/User.php" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setOnline</definition>
+        <argsstring>($online)</argsstring>
+        <name>setOnline</name>
+        <qualifiedname>entities\User\setOnline</qualifiedname>
+        <param>
+          <declname>$online</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$online</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/User.php" line="160" column="21" bodyfile="Framework/entities/User.php" bodystart="160" bodyend="166"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>User</label>
+        <link refid="classentities_1_1_user"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>User</label>
+        <link refid="classentities_1_1_user"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/entities/User.php" line="7" column="1" bodyfile="Framework/entities/User.php" bodystart="8" bodyend="167"/>
+    <listofallmembers>
+      <member refid="classentities_1_1_user_1a4c7074c68c02da6ceecc91fd85037ef7" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$first_connexion</name></member>
+      <member refid="classentities_1_1_user_1a2ac9fdfd1824e1be9a4c052d2d74863c" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$last_connexion</name></member>
+      <member refid="classentities_1_1_user_1abd32cc82c6a3f79491987de36ad580ca" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$level</name></member>
+      <member refid="classentities_1_1_user_1aceed569b975741ac6ce4f2f902bf3a06" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$online</name></member>
+      <member refid="classentities_1_1_user_1a607686ef9f99ea7c42f4f3dd3dbb2b0d" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$password</name></member>
+      <member refid="classentities_1_1_user_1af935895be7531a761425c2f71732cd96" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$user_ID</name></member>
+      <member refid="classentities_1_1_user_1a0eb82aa5f81cf845de4b36cd653c42cf" prot="private" virt="non-virtual"><scope>entities::User</scope><name>$username</name></member>
+      <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" virt="non-virtual"><scope>entities::User</scope><name>__construct</name></member>
+      <member refid="classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getFirst_connexion</name></member>
+      <member refid="classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getLast_connexion</name></member>
+      <member refid="classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getLevel</name></member>
+      <member refid="classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getOnline</name></member>
+      <member refid="classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getPassword</name></member>
+      <member refid="classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getUser_ID</name></member>
+      <member refid="classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e" prot="public" virt="non-virtual"><scope>entities::User</scope><name>getUsername</name></member>
+      <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" virt="non-virtual"><scope>entities::User</scope><name>hydrate</name></member>
+      <member refid="classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setFirst_connexion</name></member>
+      <member refid="classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setLast_connexion</name></member>
+      <member refid="classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setLevel</name></member>
+      <member refid="classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setOnline</name></member>
+      <member refid="classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setPassword</name></member>
+      <member refid="classentities_1_1_user_1a88aebf064698f5fa34a719655850e629" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setUser_ID</name></member>
+      <member refid="classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244" prot="public" virt="non-virtual"><scope>entities::User</scope><name>setUsername</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

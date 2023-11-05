@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interfaceservices_1_1_comment_interface" xml:lang="en-US">
+<title>CommentInterface Interface Reference</title>
+<indexterm><primary>CommentInterface</primary></indexterm>
+<para>Inheritance diagram for CommentInterface:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="interfaceservices_1_1_comment_interface.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538">createComment</link> ($text, $date, $user_ID, $ticket_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3">isCommentOwner</link> ($commentID, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530">deleteComment</link> ($commentID)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__comment_interface_8php_source_1l00005">5</link> of file <link linkend="__comment_interface_8php_source">CommentInterface.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_interfaceservices_1_1_comment_interface_1aa4f3a67631b77070bc5c65d583f34538"/><section>
+    <title>createComment()</title>
+<indexterm><primary>createComment</primary><secondary>CommentInterface</secondary></indexterm>
+<indexterm><primary>CommentInterface</primary><secondary>createComment</secondary></indexterm>
+<para><computeroutput>createComment ( $text,  $date,  $user_ID,  $ticket_ID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_comment_access_1aa4f3a67631b77070bc5c65d583f34538">CommentAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_comment_interface_1a21c3231c72a7cb7da979b016213b2530"/><section>
+    <title>deleteComment()</title>
+<indexterm><primary>deleteComment</primary><secondary>CommentInterface</secondary></indexterm>
+<indexterm><primary>CommentInterface</primary><secondary>deleteComment</secondary></indexterm>
+<para><computeroutput>deleteComment ( $commentID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_comment_access_1a21c3231c72a7cb7da979b016213b2530">CommentAccess</link>.</para>
+</section>
+<anchor xml:id="_interfaceservices_1_1_comment_interface_1a67253b13dbdaf7a12369a3a11c2f01f3"/><section>
+    <title>isCommentOwner()</title>
+<indexterm><primary>isCommentOwner</primary><secondary>CommentInterface</secondary></indexterm>
+<indexterm><primary>CommentInterface</primary><secondary>isCommentOwner</secondary></indexterm>
+<para><computeroutput>isCommentOwner ( $commentID,  $user_ID)</computeroutput></para><para>
+Implemented in <link linkend="_classdatabase_1_1_comment_access_1a67253b13dbdaf7a12369a3a11c2f01f3">CommentAccess</link>.</para>
+</section>
+<para>
+The documentation for this interface was generated from the following file:</para>
+services/<link linkend="__comment_interface_8php">CommentInterface.php</link></section>
+</section>

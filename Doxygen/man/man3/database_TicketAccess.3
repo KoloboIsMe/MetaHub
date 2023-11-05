@@ -1,0 +1,180 @@
+.TH "TicketAccess" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TicketAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBTicketInterface\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($dataAccess)"
+.br
+.ti -1c
+.RI "\fBexistsTicket\fP ($ticketID)"
+.br
+.ti -1c
+.RI "\fBisTicketOwner\fP ($ticketID, $userID)"
+.br
+.ti -1c
+.RI "\fBgetTicketsID\fP ()"
+.br
+.ti -1c
+.RI "\fBget5LastTicketsID\fP ()"
+.br
+.ti -1c
+.RI "\fBcreateTicket\fP ($title, $message, $date, $author)"
+.br
+.ti -1c
+.RI "\fBeditTicket\fP ($id, $title, $message)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB$dataAccess\fP = null"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB12\fP of file \fBTicketAccess\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $dataAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$dataAccess\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB22\fP of file \fBTicketAccess\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "createTicket ( $title,  $message,  $date,  $author)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$title\fP 
+.br
+\fI$message\fP 
+.br
+\fI$date\fP 
+.br
+\fI$author\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB106\fP of file \fBTicketAccess\&.php\fP\&.
+.SS "editTicket ( $id,  $title,  $message)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.br
+\fI$title\fP 
+.br
+\fI$message\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB136\fP of file \fBTicketAccess\&.php\fP\&.
+.SS "existsTicket ( $ticketID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB31\fP of file \fBTicketAccess\&.php\fP\&.
+.SS "get5LastTicketsID ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB83\fP of file \fBTicketAccess\&.php\fP\&.
+.SS "getTicketsID ()"
+
+.PP
+\fBReturns\fP
+.RS 4
+int[] 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB65\fP of file \fBTicketAccess\&.php\fP\&.
+.SS "isTicketOwner ( $ticketID,  $userID)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketID\fP 
+.br
+\fI$userID\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.PP
+Implements \fBTicketInterface\fP\&.
+.PP
+Definition at line \fB48\fP of file \fBTicketAccess\&.php\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "$dataAccess = null\fC [protected]\fP"
+
+.PP
+Definition at line \fB17\fP of file \fBTicketAccess\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

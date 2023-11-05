@@ -1,0 +1,188 @@
+\doxysection{General\+Access.\+php}
+\hypertarget{_general_access_8php_source}{}\label{_general_access_8php_source}\index{Framework/database/GeneralAccess.php@{Framework/database/GeneralAccess.php}}
+\mbox{\hyperlink{_general_access_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacedatabase}{database}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00005}00005\ use\ \mbox{\hyperlink{classentities_1_1_category}{entities\(\backslash\)Category}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00006}00006\ use\ \mbox{\hyperlink{classentities_1_1_comment}{entities\(\backslash\)Comment}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00007}00007\ use\ \mbox{\hyperlink{classentities_1_1_post}{entities\(\backslash\)Post}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00008}00008\ use\ \mbox{\hyperlink{classentities_1_1_ticket}{entities\(\backslash\)Ticket}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00009}00009\ use\ \mbox{\hyperlink{classentities_1_1_user}{entities\(\backslash\)User}};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00010}00010\ use\ PDO;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00011}00011\ use\ PDOException;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00013}\mbox{\hyperlink{classdatabase_1_1_general_access}{00013}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classdatabase_1_1_general_access}{GeneralAccess}}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00018}\mbox{\hyperlink{classdatabase_1_1_general_access_a7a827f5c09357312fde0811812bbbc35}{00018}}\ \ \ \ \ \textcolor{keyword}{protected}\ \$dataAccess\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00023}\mbox{\hyperlink{classdatabase_1_1_general_access_a9d903d171ff2319096ef345b4092535b}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a9d903d171ff2319096ef345b4092535b}{\_\_construct}}(\$dataAccess)}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00025}00025\ \ \ \ \ \ \ \ \ \$this-\/>dataAccess\ =\ \$dataAccess;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00033}\mbox{\hyperlink{classdatabase_1_1_general_access_a89819b1dc6a1b327e15c84407c5d1ab1}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a89819b1dc6a1b327e15c84407c5d1ab1}{deleteTicket}}(\$ticketID):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>deleteTicketComments(\$ticketID);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>deleteTicketCategorized(\$ticketID);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'DELETE\ FROM\ ticket\ WHERE\ ticket\_ID\ =\ :ticketID'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':ticketID'}\ =>\ \$ticketID]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00040}00040\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00049}\mbox{\hyperlink{classdatabase_1_1_general_access_a463f3ac58e7695101ae31525367fa96f}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a463f3ac58e7695101ae31525367fa96f}{deleteTicketComments}}(\$ticketID):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00050}00050\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'DELETE\ FROM\ comment\ WHERE\ ticket\ =\ :ticketID'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':ticketID'}\ =>\ \$ticketID]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00054}00054\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00063}\mbox{\hyperlink{classdatabase_1_1_general_access_a303a72eaa0f483c3be92bbc311f3e87c}{00063}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a303a72eaa0f483c3be92bbc311f3e87c}{deleteTicketCategorized}}(\$ticketID):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00064}00064\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'DELETE\ FROM\ categorized\ WHERE\ ticket\ =\ :ticketID'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':ticketID'}\ =>\ \$ticketID]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00068}00068\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00077}\mbox{\hyperlink{classdatabase_1_1_general_access_ae364a95f2ffa5b2b50434fdd7da1d9f8}{00077}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_ae364a95f2ffa5b2b50434fdd7da1d9f8}{deleteUser}}(\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00078}00078\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{"{}DELETE\ FROM\ user\ WHERE\ user\_ID\ =\ :id"{}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute(array(\textcolor{stringliteral}{':id'}\ =>\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}));}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00082}00082\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\(\backslash\)PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ new\ \(\backslash\)PDOException(\textcolor{stringliteral}{"{}Error\ deleting\ user"{}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00084}00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00091}\mbox{\hyperlink{classdatabase_1_1_general_access_af885c5a19da7b8e9b45ee8e064ffa279}{00091}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_af885c5a19da7b8e9b45ee8e064ffa279}{deleteCategory}}(\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00092}00092\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>deleteCategoryCategorized(\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{"{}DELETE\ FROM\ category\ WHERE\ category\_ID\ =\ :id"{}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute(array(\textcolor{stringliteral}{':id'}\ =>\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}));}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00097}00097\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\(\backslash\)PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ new\ \(\backslash\)PDOException(\textcolor{stringliteral}{"{}Error\ deleting\ category"{}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00100}00100\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00106}\mbox{\hyperlink{classdatabase_1_1_general_access_a06348e11b28592792e2ea739c0add2d4}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a06348e11b28592792e2ea739c0add2d4}{deleteCategoryCategorized}}(\$category\_ID):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00107}00107\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'DELETE\ FROM\ categorized\ WHERE\ category\ =\ :category\_ID'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':category\_ID'}\ =>\ \$category\_ID]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00111}00111\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00114}00114\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00120}\mbox{\hyperlink{classdatabase_1_1_general_access_a9c044c55a812bbe02de0c972cb6ce2f5}{00120}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a9c044c55a812bbe02de0c972cb6ce2f5}{getTicketsIdByUserId}}(\$userId):\ array}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00121}00121\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \$ID\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ ticket\_ID\ FROM\ ticket\ where\ author\ =\ :userId'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':userId'}\ =>\ \$userId]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ID[]\ =\ \$data[\textcolor{stringliteral}{'ticket\_ID'}];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ID;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00130}00130\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00132}00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00139}\mbox{\hyperlink{classdatabase_1_1_general_access_a47c0939150e296243117108f22ea9dde}{00139}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a47c0939150e296243117108f22ea9dde}{getCommentsIdByUserId}}(\$userId):\ array}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00140}00140\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \$ID\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ comment\_ID\ FROM\ comment\ where\ author\ =\ :userId'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':userId'}\ =>\ \$userId]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ID[]\ =\ \$data[\textcolor{stringliteral}{'comment\_ID'}];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ID;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00149}00149\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00152}00152\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00158}\mbox{\hyperlink{classdatabase_1_1_general_access_a4b8046caf85b1e630a20a39d55aa2f59}{00158}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a4b8046caf85b1e630a20a39d55aa2f59}{getPostsIdByCategoryId}}(\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}):\ array}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00159}00159\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \$ID\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ ticket\ FROM\ categorized\ where\ category\ =\ :ID\ ORDER\ BY\ ticket\ DESC\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{':ID'}\ =>\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$ID[]\ =\ \$data[\textcolor{stringliteral}{'ticket'}];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$ID;}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00168}00168\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00170}00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00171}00171\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00178}\mbox{\hyperlink{classdatabase_1_1_general_access_aca5710b8bb9ec6cd1c48c7c976118baf}{00178}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_aca5710b8bb9ec6cd1c48c7c976118baf}{addCategoryToTicket}}(\$category,\ \$ticketID):\ void}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00179}00179\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'INSERT\ INTO\ categorized\ (category,\ ticket)\ VALUES\ (:category,\ :ticket)'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':category'}\ =>\ \$category,}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{':ticket'}\ =>\ \$ticketID,}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ ]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00186}00186\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00188}00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00189}00189\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00195}\mbox{\hyperlink{classdatabase_1_1_general_access_a4426ec63c9fd1389eeb6fd0acb25adbd}{00195}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classdatabase_1_1_general_access_a4426ec63c9fd1389eeb6fd0acb25adbd}{getPostById}}(\$ticketId):\ \mbox{\hyperlink{classentities_1_1_post}{Post}}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00196}00196\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ ticket\ where\ ticket\_ID\ =\ :ticketId'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'ticketId'}\ =>\ \$ticketId]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \$ticket\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_ticket}{Ticket}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \$categories\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ category\ where\ category\_ID\ in\ (SELECT\ category\ FROM\ categorized\ where\ ticket\ =\ :ticketID)\ ORDER\ BY\ category\_ID\ DESC\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'ticketID'}\ =>\ \$ticketId]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$categories[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_category}{Category}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \$comments\ =\ [];}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ comment\_ID,text,date,author,ticket,username\ FROM\ comment\ }}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00212}00212\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ JOIN\ user\ ON\ comment.author\ =\ user.user\_ID}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00213}00213\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ where\ ticket\ =\ :ticketID\ LIMIT\ 100'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'ticketID'}\ =>\ \$ticketId]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC))\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$comments[]\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_comment}{Comment}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement\ =\ \$this-\/>dataAccess-\/>prepare(\textcolor{stringliteral}{'SELECT\ *\ FROM\ user\ where\ user\_ID\ =\ :user\_ID'});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \$statement-\/>execute([\textcolor{stringliteral}{'user\_ID'}\ =>\ \$ticket-\/>getAuthor()]);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \$data\ =\ \$statement-\/>fetch(PDO::FETCH\_ASSOC);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_user}{User}}(\$data);}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classentities_1_1_post}{Post}}(\$ticket,\ \$categories,\ \$comments,\ \mbox{\hyperlink{user_edit_8php_a598ca4e71b15a1313ec95f0df1027ca5}{\$user}});}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00226}00226\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (PDOException\ \$e)\ \{}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ PDOException(\$e-\/>getMessage(),\ (\textcolor{keywordtype}{int})\$e-\/>getCode());}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00228}00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00229}00229\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00232}00232\ }
+\DoxyCodeLine{\Hypertarget{_general_access_8php_source_l00233}00233\ \}}
+
+\end{DoxyCode}

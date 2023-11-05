@@ -1,0 +1,26 @@
+\doxysection{edit\+Ticket.\+php}
+\hypertarget{edit_ticket_8php_source}{}\label{edit_ticket_8php_source}\index{controls/pagePresenters/editTicket.php@{controls/pagePresenters/editTicket.php}}
+\mbox{\hyperlink{edit_ticket_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00001}\mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{00001}}\ <?php\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}\ =\ \$data;}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00002}\mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{00002}}\ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTicket\_ID();}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00003}\mbox{\hyperlink{edit_ticket_8php_ada57e7bb7c152edad18fe2f166188691}{00003}}\ \mbox{\hyperlink{edit_ticket_8php_ada57e7bb7c152edad18fe2f166188691}{\$title}}\ =\ \mbox{\hyperlink{edit_ticket_8php_a53d6c7669d97392c407c4f959a5263db}{\$post}}-\/>getTicket()-\/>getTitle();\ ?>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00005}00005\ <link\ href=\textcolor{stringliteral}{'gui/css/forms.css'}\ rel=\textcolor{stringliteral}{'stylesheet'}\ type=\textcolor{stringliteral}{'text/css'}/>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00006}00006\ <div\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'container'}>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00007}00007\ \ \ \ \ <form\ action=\textcolor{stringliteral}{'?action=editTicketAction\&id=<?=\ \$id\ ?>'}\ method=\textcolor{stringliteral}{'POST'}>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00008}00008\ \ \ \ \ \ \ \ \ <h1>Edition</h1>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ <label><b>Titre</b></label>}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ <input\ type=\textcolor{stringliteral}{'text'}\ placeholder=\(\backslash\)\textcolor{stringliteral}{"{}\ Entrer\ le\ titre\ du\ post\ \(\backslash\)"{}\ name='title'}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00012}00012\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ value="{}}\ <?=\ htmlspecialchars(\mbox{\hyperlink{edit_ticket_8php_ada57e7bb7c152edad18fe2f166188691}{\$title}},\ ENT\_QUOTES)\ ?>\textcolor{stringliteral}{"{}\ required></input>}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00013}00013\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00014}00014\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <label><b>Contenu\ du\ post</b></label>}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00015}00015\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <textarea\ placeholder='Entrer\ le\ contenu\ du\ post'\ name='message'}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00016}00016\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ required><?=\ \$post-\/>getTicket()-\/>getMessage()\ ?></textarea>}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00017}00017\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00018}00018\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ <input\ type='submit'\ id='submit'\ value='Enregistrer'>}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00019}00019\ \textcolor{stringliteral}{\ \ \ \ </form>}}
+\DoxyCodeLine{\Hypertarget{edit_ticket_8php_source_l00020}00020\ \textcolor{stringliteral}{</div>}}
+
+\end{DoxyCode}

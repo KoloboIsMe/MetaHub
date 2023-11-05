@@ -1,0 +1,29 @@
+\doxysection{categories.\+php}
+\hypertarget{categories_8php_source}{}\label{categories_8php_source}\index{controls/pagePresenters/categories.php@{controls/pagePresenters/categories.php}}
+\mbox{\hyperlink{categories_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00001}00001\ <link\ href=\textcolor{stringliteral}{"{}gui/css/categories.css"{}}\ rel=\textcolor{stringliteral}{"{}stylesheet"{}}\ type=\textcolor{stringliteral}{"{}text/css"{}}/>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00002}00002\ <h2>Catégories</h2>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00003}00003\ <?php\ \textcolor{keywordflow}{if}\ (isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)\ \{?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00004}00004\ \ \ \ \ <a\ href=\textcolor{stringliteral}{'createCategory'}><button\ ><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/add.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'add-\/button'}></button></a>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00005}00005\ <?php\ \}?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00006}00006\ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/container'}>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00007}00007\ \ \ \ \ <?php\ \textcolor{keywordflow}{foreach}\ (\$data\ as\ \$category)\ \{}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{edit_ticket_8php_ae97941710d863131c700f069b109991e}{\$id}}\ =\ \$category-\/>getCategory\_ID();\ ?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00009}00009\ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'category-\/card'}>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00010}00010\ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'categories\&id=<?=\$id?>'}>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00011}00011\ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{'card-\/content'}>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ <h3>\ \#<?=\ \$category-\/>getLabel()\ ?></h3>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ <p\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"{}category-\/description"{}}><?=\ \$category-\/>getDescription()\ ?></p>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ <div\ \textcolor{keyword}{class}=\textcolor{stringliteral}{"{}edit-\/delete"{}}>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \textcolor{keywordflow}{if}\ (isset(\$\_SESSION[\textcolor{stringliteral}{'level'}])\ \&\&\ \$\_SESSION[\textcolor{stringliteral}{'level'}]\ >\ 0)\ \{?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href=\textcolor{stringliteral}{'?action=deleteCategoryAction\&id=<?=\$id?>'}><button\ ><img\ alt=\textcolor{stringliteral}{"{}"{}}\ src=\textcolor{stringliteral}{'gui/images/delete.png'}\ \textcolor{keywordtype}{id}=\textcolor{stringliteral}{'deleteImg'}></button></a>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <?php\ \}?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00019}00019\ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00020}00020\ \ \ \ \ \ \ \ \ </a>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00021}00021\ \ \ \ \ </div>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00022}00022\ \ \ \ \ <?php\ \}?>}
+\DoxyCodeLine{\Hypertarget{categories_8php_source_l00023}00023\ </div>}
+
+\end{DoxyCode}

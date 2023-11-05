@@ -1,0 +1,256 @@
+.TH "Controller" 3 "MetaHub" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Controller
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__construct\fP ($outputData)"
+.br
+.ti -1c
+.RI "\fBauthenticateAction\fP ($usersService, $userAccess)"
+.br
+.ti -1c
+.RI "\fBcreateTicketAction\fP ($ticketsService, $ticketAccess, $categoryService, $categoriesAccess, $generalAccess)"
+.br
+.ti -1c
+.RI "\fBregisterAction\fP ($usersService, $userAccess)"
+.br
+.ti -1c
+.RI "\fBupdateUserAction\fP ($usersService, $userAccess)"
+.br
+.ti -1c
+.RI "\fBdeleteUser\fP ($usersService, $userAccess, $generalAccess, $userid)"
+.br
+.ti -1c
+.RI "\fBdeleteTicket\fP ($ticketsService, $ticketAccess, $generalAccess, $ticketid)"
+.br
+.ti -1c
+.RI "\fBdeleteComment\fP ($commentsService, $commentAccess, $commentid)"
+.br
+.ti -1c
+.RI "\fBdeleteCategory\fP ($generalAccess, $categoryid)"
+.br
+.ti -1c
+.RI "\fBeditTicket\fP ($ticketsService, $ticketAccess)"
+.br
+.ti -1c
+.RI "\fBgetPostById\fP ($id, $generalAccessLector)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB7\fP of file \fBController\&.php\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__construct ( $outputData)"
+
+.PP
+Definition at line \fB11\fP of file \fBController\&.php\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "authenticateAction ( $usersService,  $userAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$usersService\fP 
+.br
+\fI$userAccess\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB21\fP of file \fBController\&.php\fP\&.
+.SS "createTicketAction ( $ticketsService,  $ticketAccess,  $categoryService,  $categoriesAccess,  $generalAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketsService\fP 
+.br
+\fI$ticketAccess\fP 
+.br
+\fI$categoryService\fP 
+.br
+\fI$categoriesAccess\fP 
+.br
+\fI$generalAccess\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB45\fP of file \fBController\&.php\fP\&.
+.SS "deleteCategory ( $generalAccess,  $categoryid)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$generalAccess\fP 
+.br
+\fI$categoryid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB142\fP of file \fBController\&.php\fP\&.
+.SS "deleteComment ( $commentsService,  $commentAccess,  $commentid)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$commentsService\fP 
+.br
+\fI$commentAccess\fP 
+.br
+\fI$commentid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB128\fP of file \fBController\&.php\fP\&.
+.SS "deleteTicket ( $ticketsService,  $ticketAccess,  $generalAccess,  $ticketid)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketsService\fP 
+.br
+\fI$ticketAccess\fP 
+.br
+\fI$generalAccess\fP 
+.br
+\fI$ticketid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB113\fP of file \fBController\&.php\fP\&.
+.SS "deleteUser ( $usersService,  $userAccess,  $generalAccess,  $userid)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$usersService\fP 
+.br
+\fI$userAccess\fP 
+.br
+\fI$generalAccess\fP 
+.br
+\fI$userid\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB91\fP of file \fBController\&.php\fP\&.
+.SS "editTicket ( $ticketsService,  $ticketAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$ticketsService\fP 
+.br
+\fI$ticketAccess\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+string|null 
+.RE
+.PP
+
+.PP
+Definition at line \fB156\fP of file \fBController\&.php\fP\&.
+.SS "getPostById ( $id,  $generalAccessLector)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$id\fP 
+.br
+\fI$generalAccessLector\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+void 
+.RE
+.PP
+
+.PP
+Definition at line \fB170\fP of file \fBController\&.php\fP\&.
+.SS "registerAction ( $usersService,  $userAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$usersService\fP 
+.br
+\fI$userAccess\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+mixed|string 
+.RE
+.PP
+
+.PP
+Definition at line \fB60\fP of file \fBController\&.php\fP\&.
+.SS "updateUserAction ( $usersService,  $userAccess)"
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI$usersService\fP 
+.br
+\fI$userAccess\fP 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+mixed|string 
+.RE
+.PP
+
+.PP
+Definition at line \fB73\fP of file \fBController\&.php\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for MetaHub from the source code\&.

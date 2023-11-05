@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classentities_1_1_comment" xml:lang="en-US">
+<title>Comment Class Reference</title>
+<indexterm><primary>Comment</primary></indexterm>
+<para>Inheritance diagram for Comment:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classentities_1_1_comment.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4">setUsername</link> ($author_username)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a955311333800961e63d1445168d03092">getComment_ID</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2">setComment_ID</link> ($comment_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99">getText</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a">setText</link> ($text)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3">getDate</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17">setDate</link> ($date)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24">getAuthor</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a">setAuthor</link> ($author)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9">getAuthor_username</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c">getTicket</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7">setTicket</link> ($ticket)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classentities_1_1_entity">Entity</link>        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">__construct</link> (array $data)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">hydrate</link> ($data)</para>
+</listitem>
+        </itemizedlist>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00007">7</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classentities_1_1_comment_1a5286e30390ae3e1b274940286493dd24"/><section>
+    <title>getAuthor()</title>
+<indexterm><primary>getAuthor</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getAuthor</secondary></indexterm>
+<para><computeroutput>getAuthor ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00104">104</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1aad7fdf5f52b91a8ad717d99e511db9c9"/><section>
+    <title>getAuthor_username()</title>
+<indexterm><primary>getAuthor_username</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getAuthor_username</secondary></indexterm>
+<para><computeroutput>getAuthor_username ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00124">124</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a955311333800961e63d1445168d03092"/><section>
+    <title>getComment_ID()</title>
+<indexterm><primary>getComment_ID</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getComment_ID</secondary></indexterm>
+<para><computeroutput>getComment_ID ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00048">48</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a24d89b0ad05ea2e33626b1fc8ed59bc3"/><section>
+    <title>getDate()</title>
+<indexterm><primary>getDate</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getDate</secondary></indexterm>
+<para><computeroutput>getDate ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00087">87</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a8a2999b1d846c0a7bc77187e28facd99"/><section>
+    <title>getText()</title>
+<indexterm><primary>getText</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getText</secondary></indexterm>
+<para><computeroutput>getText ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>string </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00068">68</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a42ddf34a72af750b7013fa309b67e46c"/><section>
+    <title>getTicket()</title>
+<indexterm><primary>getTicket</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>getTicket</secondary></indexterm>
+<para><computeroutput>getTicket ( )</computeroutput></para>
+<para><formalpara><title>Returns</title>
+
+<para>int </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00132">132</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1afde85a369fc83b442db3cf5c6ac31d4a"/><section>
+    <title>setAuthor()</title>
+<indexterm><primary>setAuthor</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setAuthor</secondary></indexterm>
+<para><computeroutput>setAuthor ( $author)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$author</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00113">113</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a3d41e6980f21c7f2ab70acc69b1ec2d2"/><section>
+    <title>setComment_ID()</title>
+<indexterm><primary>setComment_ID</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setComment_ID</secondary></indexterm>
+<para><computeroutput>setComment_ID ( $comment_ID)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$comment_ID</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00057">57</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a2570e83b20f9be514f22e3fd0b7c0d17"/><section>
+    <title>setDate()</title>
+<indexterm><primary>setDate</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setDate</secondary></indexterm>
+<para><computeroutput>setDate ( $date)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$date</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00096">96</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1aed98453b92e9e7e961179dfff24c4a3a"/><section>
+    <title>setText()</title>
+<indexterm><primary>setText</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setText</secondary></indexterm>
+<para><computeroutput>setText ( $text)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$text</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00077">77</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a30dafc219b30351c7b0057eaf8a39df7"/><section>
+    <title>setTicket()</title>
+<indexterm><primary>setTicket</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setTicket</secondary></indexterm>
+<para><computeroutput>setTicket ( $ticket)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$ticket</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00141">141</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<anchor xml:id="_classentities_1_1_comment_1a63b53ca1dd9a2c7c76c25ef40693c6f4"/><section>
+    <title>setUsername()</title>
+<indexterm><primary>setUsername</primary><secondary>Comment</secondary></indexterm>
+<indexterm><primary>Comment</primary><secondary>setUsername</secondary></indexterm>
+<para><computeroutput>setUsername ( $author_username)</computeroutput></para>
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>$author_username</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>void </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__comment_8php_source_1l00038">38</link> of file <link linkend="__comment_8php_source">Comment.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/entities/<link linkend="__comment_8php">Comment.php</link></section>
+</section>

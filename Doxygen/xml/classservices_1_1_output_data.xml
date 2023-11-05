@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classservices_1_1_output_data" kind="class" language="PHP" prot="public">
+    <compoundname>services::OutputData</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classservices_1_1_output_data_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$outputData</definition>
+        <argsstring></argsstring>
+        <name>$outputData</name>
+        <qualifiedname>services\OutputData\$outputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/OutputData.php" line="7" column="15" bodyfile="services/OutputData.php" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classservices_1_1_output_data_1a421831a265621325e1fdd19aace0c758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__destruct</definition>
+        <argsstring>()</argsstring>
+        <name>__destruct</name>
+        <qualifiedname>services\OutputData\__destruct</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/OutputData.php" line="9" column="21" bodyfile="services/OutputData.php" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_output_data_1a6079f9b139fe5a9af0f7ea4c6013f0ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getOutputData</definition>
+        <argsstring>()</argsstring>
+        <name>getOutputData</name>
+        <qualifiedname>services\OutputData\getOutputData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/OutputData.php" line="14" column="21" bodyfile="services/OutputData.php" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_output_data_1ab9632546d24947ae2c380c5599759e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setOutputData</definition>
+        <argsstring>($data)</argsstring>
+        <name>setOutputData</name>
+        <qualifiedname>services\OutputData\setOutputData</qualifiedname>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/OutputData.php" line="19" column="21" bodyfile="services/OutputData.php" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classservices_1_1_output_data_1a33b2cb2abfc7a0c94d55a9f3f9b74e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>addOutputData</definition>
+        <argsstring>($data)</argsstring>
+        <name>addOutputData</name>
+        <qualifiedname>services\OutputData\addOutputData</qualifiedname>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="services/OutputData.php" line="24" column="21" bodyfile="services/OutputData.php" bodystart="24" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/OutputData.php" line="5" column="1" bodyfile="services/OutputData.php" bodystart="6" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classservices_1_1_output_data_1ae9edebdcd1b91b38dfd10a39e51073c2" prot="protected" virt="non-virtual"><scope>services::OutputData</scope><name>$outputData</name></member>
+      <member refid="classservices_1_1_output_data_1a421831a265621325e1fdd19aace0c758" prot="public" virt="non-virtual"><scope>services::OutputData</scope><name>__destruct</name></member>
+      <member refid="classservices_1_1_output_data_1a33b2cb2abfc7a0c94d55a9f3f9b74e05" prot="public" virt="non-virtual"><scope>services::OutputData</scope><name>addOutputData</name></member>
+      <member refid="classservices_1_1_output_data_1a6079f9b139fe5a9af0f7ea4c6013f0ad" prot="public" virt="non-virtual"><scope>services::OutputData</scope><name>getOutputData</name></member>
+      <member refid="classservices_1_1_output_data_1ab9632546d24947ae2c380c5599759e0a" prot="public" virt="non-virtual"><scope>services::OutputData</scope><name>setOutputData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classentities_1_1_entity" xml:lang="en-US">
+<title>Entity Class Reference</title>
+<indexterm><primary>Entity</primary></indexterm>
+<para>Inheritance diagram for Entity:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classentities_1_1_entity.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">__construct</link> (array $data)</para>
+</listitem>
+            <listitem><para><link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">hydrate</link> ($data)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__entity_8php_source_1l00005">5</link> of file <link linkend="__entity_8php_source">Entity.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>Entity</secondary></indexterm>
+<indexterm><primary>Entity</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct (array $data)</computeroutput></para><para>
+Definition at line <link linkend="__entity_8php_source_1l00008">8</link> of file <link linkend="__entity_8php_source">Entity.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b"/><section>
+    <title>hydrate()</title>
+<indexterm><primary>hydrate</primary><secondary>Entity</secondary></indexterm>
+<indexterm><primary>Entity</primary><secondary>hydrate</secondary></indexterm>
+<para><computeroutput>hydrate ( $data)</computeroutput></para><para>
+Definition at line <link linkend="__entity_8php_source_1l00014">14</link> of file <link linkend="__entity_8php_source">Entity.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+Framework/entities/<link linkend="__entity_8php">Entity.php</link></section>
+</section>

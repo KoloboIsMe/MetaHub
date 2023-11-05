@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classgui_1_1_view_users" xml:lang="en-US">
+<title>ViewUsers Class Reference</title>
+<indexterm><primary>ViewUsers</primary></indexterm>
+<para>Inheritance diagram for ViewUsers:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classgui_1_1_view_users.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classgui_1_1_view_users_1a2a669bfdaa09da4b7edee8908b11dd24">__construct</link> ($layout, $presenter, $user)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classgui_1_1_view">View</link>        <itemizedlist>
+            <listitem><para><link linkend="_classgui_1_1_view_1a3867efed8f524d30034063f8c80c18fd">__construct</link> ($layout)</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_view_1a0b9b6e6acd4a839fc7c2f26f96b5cfa8">display</link> ()</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classgui_1_1_view">View</link>        <itemizedlist>
+            <listitem><para><link linkend="_classgui_1_1_view_1ada57e7bb7c152edad18fe2f166188691">$title</link> = &apos;&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_view_1a57b284fe00866494b33afa80ba729bed">$content</link> = &apos;&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_view_1a0eb82aa5f81cf845de4b36cd653c42cf">$username</link> = &apos;&apos;</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_view_1ab3e5e5111363f7c803693d5bd75ad448">$searchBar</link> = null</para>
+</listitem>
+            <listitem><para><link linkend="_classgui_1_1_view_1a2b0d08e73a90b9443ce37506b7c6a544">$layout</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__view_users_8php_source_1l00005">5</link> of file <link linkend="__view_users_8php_source">ViewUsers.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classgui_1_1_view_users_1a2a669bfdaa09da4b7edee8908b11dd24"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>ViewUsers</secondary></indexterm>
+<indexterm><primary>ViewUsers</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $layout,  $presenter,  $user)</computeroutput></para><para>
+Definition at line <link linkend="__view_users_8php_source_1l00007">7</link> of file <link linkend="__view_users_8php_source">ViewUsers.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+gui/<link linkend="__view_users_8php">ViewUsers.php</link></section>
+</section>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="create_ticket_8php" kind="file" language="PHP">
+    <compoundname>createTicket.php</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;script<sp/>src=</highlight><highlight class="stringliteral">&apos;https://unpkg.com/slim-select@latest/dist/slimselect.min.js&apos;</highlight><highlight class="normal">&gt;&lt;/script&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">&lt;link<sp/>href=</highlight><highlight class="stringliteral">&apos;gui/css/CategorySelectionBar.css&apos;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&apos;stylesheet&apos;</highlight><highlight class="normal">&gt;&lt;/link&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">&lt;link<sp/>href=</highlight><highlight class="stringliteral">&apos;gui/css/forms.css&apos;</highlight><highlight class="normal"><sp/>rel=</highlight><highlight class="stringliteral">&apos;stylesheet&apos;</highlight><highlight class="normal"><sp/>type=</highlight><highlight class="stringliteral">&apos;text/css&apos;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">&lt;div<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;container&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;form<sp/>action=</highlight><highlight class="stringliteral">&apos;/createPosts?action=createPostsAction&apos;</highlight><highlight class="normal"><sp/>method=</highlight><highlight class="stringliteral">&apos;POST&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;h1&gt;Nouveau<sp/>Post&lt;/h1&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;Titre&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&apos;text&apos;</highlight><highlight class="normal"><sp/>placeholder=</highlight><highlight class="stringliteral">&quot;<sp/>Entrer<sp/>le<sp/>titre<sp/>du<sp/>post<sp/>&quot;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&apos;title&apos;</highlight><highlight class="normal"><sp/>required&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;label&gt;&lt;b&gt;Contenu<sp/>du<sp/>post&lt;/b&gt;&lt;/label&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;textarea<sp/>placeholder=</highlight><highlight class="stringliteral">&apos;Entrer<sp/>le<sp/>contenu<sp/>du<sp/>post&apos;</highlight><highlight class="normal"><sp/>name=</highlight><highlight class="stringliteral">&apos;message&apos;</highlight><highlight class="normal"><sp/>required&gt;&lt;/textarea&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;select<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;category&apos;</highlight><highlight class="normal"><sp/>multiple<sp/>name=</highlight><highlight class="stringliteral">&apos;categories[]&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>($this-&gt;outputData-&gt;getOutputData()<sp/>as<sp/>$category)<sp/>{<sp/>?&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;option&gt;&lt;?=<sp/>$category-&gt;getLabel()<sp/>?&gt;&lt;/option&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;?php<sp/>}<sp/>?&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/select&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;input<sp/>type=</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&apos;submit&apos;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&apos;Publier&apos;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/form&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">&lt;script&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SlimSelect({</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>select:<sp/></highlight><highlight class="stringliteral">&apos;#category&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>settings:<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>placeholderText:<sp/></highlight><highlight class="stringliteral">&apos;Choisir<sp/>une<sp/>catégorie&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>searchPlaceholder:<sp/></highlight><highlight class="stringliteral">&apos;Rechercher&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>})</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">&lt;/script&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="controls/pagePresenters/createTicket.php"/>
+  </compounddef>
+</doxygen>

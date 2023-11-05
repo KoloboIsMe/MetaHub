@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classdatabase_1_1_user_access" kind="class" language="PHP" prot="public">
+    <compoundname>database::UserAccess</compoundname>
+    <basecompoundref refid="interfaceservices_1_1_user_interface" prot="public" virt="non-virtual">UserInterface</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>$dataAccess</definition>
+        <argsstring></argsstring>
+        <name>$dataAccess</name>
+        <qualifiedname>database\UserAccess\$dataAccess</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="17" column="15" bodyfile="Framework/database/UserAccess.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>__construct</definition>
+        <argsstring>($dataAccess)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>database\UserAccess\__construct</qualifiedname>
+        <param>
+          <declname>$dataAccess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$dataAccess</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="22" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>existsUsername</name>
+        <qualifiedname>database\UserAccess\existsUsername</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a6c5cea1f559db58a20b28b661dd55e59">existsUsername</reimplements>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="31" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="31" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>existsUser</definition>
+        <argsstring>($user_ID)</argsstring>
+        <name>existsUser</name>
+        <qualifiedname>database\UserAccess\existsUser</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a672565dd28b98d1b945773eaa6a3220d">existsUser</reimplements>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="47" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="47" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>isUser</definition>
+        <argsstring>($username, $password)</argsstring>
+        <name>isUser</name>
+        <qualifiedname>database\UserAccess\isUser</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1ae04dcae58353aae72ac5321d23e0caef">isUser</reimplements>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="64" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="64" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserByUsername</definition>
+        <argsstring>($username)</argsstring>
+        <name>getUserByUsername</name>
+        <qualifiedname>database\UserAccess\getUserByUsername</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a96e7ce264e97f88d979f129112585e88">getUserByUsername</reimplements>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>User </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="83" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUserById</definition>
+        <argsstring>($id)</argsstring>
+        <name>getUserById</name>
+        <qualifiedname>database\UserAccess\getUserById</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a5e7d616b80a7b0fb4b8d2736800e29cc">getUserById</reimplements>
+        <param>
+          <declname>$id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>User </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="99" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getUsersID</definition>
+        <argsstring>()</argsstring>
+        <name>getUsersID</name>
+        <qualifiedname>database\UserAccess\getUsersID</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1ae5b3902b6ff7fd4a25b93defe7b429de">getUsersID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="114" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="114" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>register</definition>
+        <argsstring>($username, $password, $date)</argsstring>
+        <name>register</name>
+        <qualifiedname>database\UserAccess\register</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1aa5ec7e39c68415aa45573679550fe6db">register</reimplements>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string|null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="135" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="135" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateUser</definition>
+        <argsstring>($username, $password, $user_ID)</argsstring>
+        <name>updateUser</name>
+        <qualifiedname>database\UserAccess\updateUser</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a26a6e29a53a16de24624ff7bfd6dfcf5">updateUser</reimplements>
+        <param>
+          <declname>$username</declname>
+        </param>
+        <param>
+          <declname>$password</declname>
+        </param>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$user_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="164" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="164" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updateLastConnexion</definition>
+        <argsstring>($user_ID)</argsstring>
+        <name>updateLastConnexion</name>
+        <qualifiedname>database\UserAccess\updateLastConnexion</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1aee0d9d2973be34791162b25cd31a3353">updateLastConnexion</reimplements>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="182" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="182" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>get10LastConnectedUsersID</definition>
+        <argsstring>()</argsstring>
+        <name>get10LastConnectedUsersID</name>
+        <qualifiedname>database\UserAccess\get10LastConnectedUsersID</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1a5fadbe8f1573fb5a1b4ca86f2d274725">get10LastConnectedUsersID</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int[] </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="198" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="198" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setOnline</definition>
+        <argsstring>($user_ID, $online)</argsstring>
+        <name>setOnline</name>
+        <qualifiedname>database\UserAccess\setOnline</qualifiedname>
+        <reimplements refid="interfaceservices_1_1_user_interface_1af4ce5960cbdf7a3917711dc31745d08b">setOnline</reimplements>
+        <param>
+          <declname>$user_ID</declname>
+        </param>
+        <param>
+          <declname>$online</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$user_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>$online</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/database/UserAccess.php" line="218" column="21" bodyfile="Framework/database/UserAccess.php" bodystart="218" bodyend="229"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>UserAccess</label>
+        <link refid="classdatabase_1_1_user_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserInterface</label>
+        <link refid="interfaceservices_1_1_user_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>UserAccess</label>
+        <link refid="classdatabase_1_1_user_access"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>UserInterface</label>
+        <link refid="interfaceservices_1_1_user_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/database/UserAccess.php" line="12" column="1" bodyfile="Framework/database/UserAccess.php" bodystart="13" bodyend="230"/>
+    <listofallmembers>
+      <member refid="classdatabase_1_1_user_access_1a7a827f5c09357312fde0811812bbbc35" prot="protected" virt="non-virtual"><scope>database::UserAccess</scope><name>$dataAccess</name></member>
+      <member refid="classdatabase_1_1_user_access_1a9d903d171ff2319096ef345b4092535b" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>__construct</name></member>
+      <member refid="classdatabase_1_1_user_access_1a672565dd28b98d1b945773eaa6a3220d" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>existsUser</name></member>
+      <member refid="classdatabase_1_1_user_access_1a6c5cea1f559db58a20b28b661dd55e59" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>existsUsername</name></member>
+      <member refid="classdatabase_1_1_user_access_1a5fadbe8f1573fb5a1b4ca86f2d274725" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>get10LastConnectedUsersID</name></member>
+      <member refid="classdatabase_1_1_user_access_1a5e7d616b80a7b0fb4b8d2736800e29cc" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>getUserById</name></member>
+      <member refid="classdatabase_1_1_user_access_1a96e7ce264e97f88d979f129112585e88" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>getUserByUsername</name></member>
+      <member refid="classdatabase_1_1_user_access_1ae5b3902b6ff7fd4a25b93defe7b429de" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>getUsersID</name></member>
+      <member refid="classdatabase_1_1_user_access_1ae04dcae58353aae72ac5321d23e0caef" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>isUser</name></member>
+      <member refid="classdatabase_1_1_user_access_1aa5ec7e39c68415aa45573679550fe6db" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>register</name></member>
+      <member refid="classdatabase_1_1_user_access_1af4ce5960cbdf7a3917711dc31745d08b" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>setOnline</name></member>
+      <member refid="classdatabase_1_1_user_access_1aee0d9d2973be34791162b25cd31a3353" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>updateLastConnexion</name></member>
+      <member refid="classdatabase_1_1_user_access_1a26a6e29a53a16de24624ff7bfd6dfcf5" prot="public" virt="non-virtual"><scope>database::UserAccess</scope><name>updateUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

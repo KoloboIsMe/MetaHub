@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classentities_1_1_ticket" kind="class" language="PHP" prot="public">
+    <compoundname>entities::Ticket</compoundname>
+    <basecompoundref refid="classentities_1_1_entity" prot="public" virt="non-virtual">Entity</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classentities_1_1_ticket_1a9ca0ce86ddc2dd2b18156756544c7316" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$ticket_ID</definition>
+        <argsstring></argsstring>
+        <name>$ticket_ID</name>
+        <qualifiedname>entities\Ticket\$ticket_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="12" column="13" bodyfile="Framework/entities/Ticket.php" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_ticket_1ada57e7bb7c152edad18fe2f166188691" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$title</definition>
+        <argsstring></argsstring>
+        <name>$title</name>
+        <qualifiedname>entities\Ticket\$title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="16" column="13" bodyfile="Framework/entities/Ticket.php" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_ticket_1abf17cb2dba2ed17cb28aa5f37deb5293" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$message</definition>
+        <argsstring></argsstring>
+        <name>$message</name>
+        <qualifiedname>entities\Ticket\$message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="20" column="13" bodyfile="Framework/entities/Ticket.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_ticket_1a481c918f8d853749e00b5942cabf599a" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$date</definition>
+        <argsstring></argsstring>
+        <name>$date</name>
+        <qualifiedname>entities\Ticket\$date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="24" column="13" bodyfile="Framework/entities/Ticket.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classentities_1_1_ticket_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" static="no" mutable="no">
+        <type></type>
+        <definition>$author</definition>
+        <argsstring></argsstring>
+        <name>$author</name>
+        <qualifiedname>entities\Ticket\$author</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="28" column="13" bodyfile="Framework/entities/Ticket.php" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classentities_1_1_ticket_1a190d956349ebda2717009c78419349c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTicket_ID</definition>
+        <argsstring>()</argsstring>
+        <name>getTicket_ID</name>
+        <qualifiedname>entities\Ticket\getTicket_ID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="33" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a6dd97e03c08a08c05323c4e02e8b1037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setTicket_ID</definition>
+        <argsstring>($ticket_ID)</argsstring>
+        <name>setTicket_ID</name>
+        <qualifiedname>entities\Ticket\setTicket_ID</qualifiedname>
+        <param>
+          <declname>$ticket_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$ticket_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="42" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="42" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a95e859a4588a39a1824b717378a84c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getTitle</definition>
+        <argsstring>()</argsstring>
+        <name>getTitle</name>
+        <qualifiedname>entities\Ticket\getTitle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="53" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a884ba9bb0d54bde7839e798db7964476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setTitle</definition>
+        <argsstring>($title)</argsstring>
+        <name>setTitle</name>
+        <qualifiedname>entities\Ticket\setTitle</qualifiedname>
+        <param>
+          <declname>$title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="62" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a0b0e611236742aac18ba1936d03ba89a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getMessage</definition>
+        <argsstring>()</argsstring>
+        <name>getMessage</name>
+        <qualifiedname>entities\Ticket\getMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="72" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a6991eb53548e7180a3a8e6f418fbb234" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setMessage</definition>
+        <argsstring>($message)</argsstring>
+        <name>setMessage</name>
+        <qualifiedname>entities\Ticket\setMessage</qualifiedname>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="81" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="81" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a24d89b0ad05ea2e33626b1fc8ed59bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getDate</definition>
+        <argsstring>()</argsstring>
+        <name>getDate</name>
+        <qualifiedname>entities\Ticket\getDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="91" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a2570e83b20f9be514f22e3fd0b7c0d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setDate</definition>
+        <argsstring>($date)</argsstring>
+        <name>setDate</name>
+        <qualifiedname>entities\Ticket\setDate</qualifiedname>
+        <param>
+          <declname>$date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$date</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="100" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="100" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1a5286e30390ae3e1b274940286493dd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>getAuthor</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthor</name>
+        <qualifiedname>entities\Ticket\getAuthor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="108" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classentities_1_1_ticket_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setAuthor</definition>
+        <argsstring>($author)</argsstring>
+        <name>setAuthor</name>
+        <qualifiedname>entities\Ticket\setAuthor</qualifiedname>
+        <param>
+          <declname>$author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>$author</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Framework/entities/Ticket.php" line="117" column="21" bodyfile="Framework/entities/Ticket.php" bodystart="117" bodyend="123"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Ticket</label>
+        <link refid="classentities_1_1_ticket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Ticket</label>
+        <link refid="classentities_1_1_ticket"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Entity</label>
+        <link refid="classentities_1_1_entity"/>
+      </node>
+    </collaborationgraph>
+    <location file="Framework/entities/Ticket.php" line="7" column="1" bodyfile="Framework/entities/Ticket.php" bodystart="8" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classentities_1_1_ticket_1ac35b828f7d4064a7c9f849c255468ee3" prot="private" virt="non-virtual"><scope>entities::Ticket</scope><name>$author</name></member>
+      <member refid="classentities_1_1_ticket_1a481c918f8d853749e00b5942cabf599a" prot="private" virt="non-virtual"><scope>entities::Ticket</scope><name>$date</name></member>
+      <member refid="classentities_1_1_ticket_1abf17cb2dba2ed17cb28aa5f37deb5293" prot="private" virt="non-virtual"><scope>entities::Ticket</scope><name>$message</name></member>
+      <member refid="classentities_1_1_ticket_1a9ca0ce86ddc2dd2b18156756544c7316" prot="private" virt="non-virtual"><scope>entities::Ticket</scope><name>$ticket_ID</name></member>
+      <member refid="classentities_1_1_ticket_1ada57e7bb7c152edad18fe2f166188691" prot="private" virt="non-virtual"><scope>entities::Ticket</scope><name>$title</name></member>
+      <member refid="classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>__construct</name></member>
+      <member refid="classentities_1_1_ticket_1a5286e30390ae3e1b274940286493dd24" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>getAuthor</name></member>
+      <member refid="classentities_1_1_ticket_1a24d89b0ad05ea2e33626b1fc8ed59bc3" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>getDate</name></member>
+      <member refid="classentities_1_1_ticket_1a0b0e611236742aac18ba1936d03ba89a" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>getMessage</name></member>
+      <member refid="classentities_1_1_ticket_1a190d956349ebda2717009c78419349c3" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>getTicket_ID</name></member>
+      <member refid="classentities_1_1_ticket_1a95e859a4588a39a1824b717378a84c29" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>getTitle</name></member>
+      <member refid="classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>hydrate</name></member>
+      <member refid="classentities_1_1_ticket_1afde85a369fc83b442db3cf5c6ac31d4a" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>setAuthor</name></member>
+      <member refid="classentities_1_1_ticket_1a2570e83b20f9be514f22e3fd0b7c0d17" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>setDate</name></member>
+      <member refid="classentities_1_1_ticket_1a6991eb53548e7180a3a8e6f418fbb234" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>setMessage</name></member>
+      <member refid="classentities_1_1_ticket_1a6dd97e03c08a08c05323c4e02e8b1037" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>setTicket_ID</name></member>
+      <member refid="classentities_1_1_ticket_1a884ba9bb0d54bde7839e798db7964476" prot="public" virt="non-virtual"><scope>entities::Ticket</scope><name>setTitle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

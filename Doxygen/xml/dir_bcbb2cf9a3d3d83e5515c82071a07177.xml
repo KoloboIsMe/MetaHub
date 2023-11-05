@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_bcbb2cf9a3d3d83e5515c82071a07177" kind="dir">
+    <compoundname>Framework</compoundname>
+    <innerdir refid="dir_054245cdb03fb725488dd4f11b99c73e">Framework/database</innerdir>
+    <innerdir refid="dir_b11b9a48dd2a17694fe5d9bcb5448cd8">Framework/entities</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Framework/"/>
+  </compounddef>
+</doxygen>

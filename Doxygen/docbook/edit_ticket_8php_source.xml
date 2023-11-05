@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_edit_ticket_8php_source" xml:lang="en-US">
+<title>editTicket.php</title>
+<indexterm><primary>controls/pagePresenters/editTicket.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_edit_ticket_8php_source_1l00001"/><link linkend="_edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db">00001</link> &lt;?php&#32;<link linkend="_edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db">$post</link>&#32;=&#32;$data;
+<anchor xml:id="_edit_ticket_8php_source_1l00002"/><link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">00002</link> <link linkend="_edit_ticket_8php_1ae97941710d863131c700f069b109991e">$id</link>&#32;=&#32;<link linkend="_edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db">$post</link>-&gt;getTicket()-&gt;getTicket_ID();
+<anchor xml:id="_edit_ticket_8php_source_1l00003"/><link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">00003</link> <link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>&#32;=&#32;<link linkend="_edit_ticket_8php_1a53d6c7669d97392c407c4f959a5263db">$post</link>-&gt;getTicket()-&gt;getTitle();&#32;?&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00004"/>00004 
+<anchor xml:id="_edit_ticket_8php_source_1l00005"/>00005 &lt;link&#32;href=<emphasis role="stringliteral">&apos;gui/css/forms.css&apos;</emphasis>&#32;rel=<emphasis role="stringliteral">&apos;stylesheet&apos;</emphasis>&#32;type=<emphasis role="stringliteral">&apos;text/css&apos;</emphasis>/&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00006"/>00006 &lt;div&#32;<emphasis role="keywordtype">id</emphasis>=<emphasis role="stringliteral">&apos;container&apos;</emphasis>&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00007"/>00007 &#32;&#32;&#32;&#32;&lt;form&#32;action=<emphasis role="stringliteral">&apos;?action=editTicketAction&amp;id=&lt;?=&#32;$id&#32;?&gt;&apos;</emphasis>&#32;method=<emphasis role="stringliteral">&apos;POST&apos;</emphasis>&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00008"/>00008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;h1&gt;Edition&lt;/h1&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00009"/>00009 
+<anchor xml:id="_edit_ticket_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Titre&lt;/b&gt;&lt;/label&gt;
+<anchor xml:id="_edit_ticket_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=<emphasis role="stringliteral">&apos;text&apos;</emphasis>&#32;placeholder=\<emphasis role="stringliteral">&quot;&#32;Entrer&#32;le&#32;titre&#32;du&#32;post&#32;\&quot;&#32;name=&apos;title&apos;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00012"/>00012 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value=&quot;</emphasis>&#32;&lt;?=&#32;htmlspecialchars(<link linkend="_edit_ticket_8php_1ada57e7bb7c152edad18fe2f166188691">$title</link>,&#32;ENT_QUOTES)&#32;?&gt;<emphasis role="stringliteral">&quot;&#32;required&gt;&lt;/input&gt;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00013"/>00013 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00014"/>00014 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;label&gt;&lt;b&gt;Contenu&#32;du&#32;post&lt;/b&gt;&lt;/label&gt;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00015"/>00015 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;textarea&#32;placeholder=&apos;Entrer&#32;le&#32;contenu&#32;du&#32;post&apos;&#32;name=&apos;message&apos;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00016"/>00016 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;required&gt;&lt;?=&#32;$post-&gt;getTicket()-&gt;getMessage()&#32;?&gt;&lt;/textarea&gt;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00017"/>00017 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00018"/>00018 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;input&#32;type=&apos;submit&apos;&#32;id=&apos;submit&apos;&#32;value=&apos;Enregistrer&apos;&gt;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00019"/>00019 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&lt;/form&gt;</emphasis>
+<anchor xml:id="_edit_ticket_8php_source_1l00020"/>00020 <emphasis role="stringliteral">&lt;/div&gt;</emphasis>
+</programlisting></section>

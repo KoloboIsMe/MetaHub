@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__entity_8php_source" xml:lang="en-US">
+<title>Entity.php</title>
+<indexterm><primary>Framework/entities/Entity.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__entity_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__entity_8php_source_1l00002"/>00002 
+<anchor xml:id="__entity_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceentities">entities</link>;
+<anchor xml:id="__entity_8php_source_1l00004"/>00004 
+<anchor xml:id="__entity_8php_source_1l00005"/><link linkend="_classentities_1_1_entity">00005</link> <emphasis role="keyword">abstract</emphasis>&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_classentities_1_1_entity">Entity</link>
+<anchor xml:id="__entity_8php_source_1l00006"/>00006 {
+<anchor xml:id="__entity_8php_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="comment">//Constructeur</emphasis>
+<anchor xml:id="__entity_8php_source_1l00008"/><link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">00008</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_entity_1ae774ca9c47e24adfb104dabcb01156af">__construct</link>(array&#32;$data)
+<anchor xml:id="__entity_8php_source_1l00009"/>00009 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8php_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;hydrate($data);
+<anchor xml:id="__entity_8php_source_1l00011"/>00011 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8php_source_1l00012"/>00012 
+<anchor xml:id="__entity_8php_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="comment">//Hydratation</emphasis>
+<anchor xml:id="__entity_8php_source_1l00014"/><link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">00014</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_entity_1a2be44815edff85cab5e873ba4497c38b">hydrate</link>($data)
+<anchor xml:id="__entity_8php_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__entity_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">foreach</emphasis>&#32;($data&#32;as&#32;$key&#32;=&gt;&#32;$value)&#32;{
+<anchor xml:id="__entity_8php_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$method&#32;=&#32;<emphasis role="stringliteral">&apos;set&apos;</emphasis>&#32;.&#32;ucfirst($key);
+<anchor xml:id="__entity_8php_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(method_exists($this,&#32;$method))&#32;{
+<anchor xml:id="__entity_8php_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;$method($value);
+<anchor xml:id="__entity_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8php_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8php_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__entity_8php_source_1l00023"/>00023 }
+</programlisting></section>

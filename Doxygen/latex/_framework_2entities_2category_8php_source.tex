@@ -1,0 +1,55 @@
+\doxysection{Category.\+php}
+\hypertarget{_framework_2entities_2category_8php_source}{}\label{_framework_2entities_2category_8php_source}\index{Framework/entities/Category.php@{Framework/entities/Category.php}}
+\mbox{\hyperlink{_framework_2entities_2category_8php}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00001}00001\ <?php}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00003}\mbox{\hyperlink{namespaceentities}{00003}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceentities}{entities}};}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00005}00005\ include\_once\ \textcolor{stringliteral}{'Entity.php'};}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00007}\mbox{\hyperlink{classentities_1_1_category}{00007}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classentities_1_1_category}{Category}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classentities_1_1_entity}{Entity}}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{private}\ \$category\_ID;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{private}\ \$label;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{private}\ \$description;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00025}\mbox{\hyperlink{classentities_1_1_category_a0644020fa300a8da0761599388367209}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_a0644020fa300a8da0761599388367209}{getCategory\_ID}}()}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>category\_ID;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00034}\mbox{\hyperlink{classentities_1_1_category_a61fc4887a2a3ef147760942b78bad4cd}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_a61fc4887a2a3ef147760942b78bad4cd}{setCategory\_ID}}(\$category\_ID)}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00035}00035\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00036}00036\ \ \ \ \ \ \ \ \ \$category\_ID\ =\ (int)\$category\_ID;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\$category\_ID\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>category\_ID\ =\ \$category\_ID;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00045}\mbox{\hyperlink{classentities_1_1_category_a14c4e7420d903d3e40342266333d2ecf}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_a14c4e7420d903d3e40342266333d2ecf}{getLabel}}()}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00046}00046\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>label;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00054}\mbox{\hyperlink{classentities_1_1_category_aff9dc1c7a22e2b4168647651480e586a}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_aff9dc1c7a22e2b4168647651480e586a}{setLabel}}(\$label)}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00055}00055\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_string(\$label))\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>label\ =\ \$label;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00064}\mbox{\hyperlink{classentities_1_1_category_a2e7bb35c71bf1824456ceb944cb7a845}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_a2e7bb35c71bf1824456ceb944cb7a845}{getDescription}}()}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00065}00065\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \$this-\/>description;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00073}\mbox{\hyperlink{classentities_1_1_category_a31fad3e39336ea079ea758e051866627}{00073}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{function}\ \mbox{\hyperlink{classentities_1_1_category_a31fad3e39336ea079ea758e051866627}{setDescription}}(\$description)}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00074}00074\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (is\_string(\$description))\ \{}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \$this-\/>description\ =\ \$description;}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_framework_2entities_2category_8php_source_l00079}00079\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__framework_2entities_2user_8php_source" xml:lang="en-US">
+<title>User.php</title>
+<indexterm><primary>Framework/entities/User.php</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__framework_2entities_2user_8php_source_1l00001"/>00001 &lt;?php
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00002"/>00002 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00003"/>00003 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespaceentities">entities</link>;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00004"/>00004 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00005"/>00005 include_once&#32;<emphasis role="stringliteral">&apos;Entity.php&apos;</emphasis>;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00006"/>00006 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00007"/><link linkend="_classentities_1_1_user">00007</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classentities_1_1_user">User</link>&#32;<emphasis role="keyword">extends</emphasis>&#32;<link linkend="_classentities_1_1_entity">Entity</link>
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00008"/>00008 {
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$user_ID;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$password;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$username;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$first_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$last_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$level;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>&#32;$online;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00037"/>00037 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00041"/><link linkend="_classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7">00041</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1ae347c46c4bd23f28046b050a2e5175f7">getUser_ID</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00042"/>00042 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;user_ID;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00045"/>00045 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00050"/><link linkend="_classentities_1_1_user_1a88aebf064698f5fa34a719655850e629">00050</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a88aebf064698f5fa34a719655850e629">setUser_ID</link>($user_ID)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00051"/>00051 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$user_ID&#32;=&#32;(int)$user_ID;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($user_ID&#32;&gt;&#32;0)&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;user_ID&#32;=&#32;$user_ID;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00057"/>00057 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00061"/><link linkend="_classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f">00061</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a04e0957baeb7acde9c0c86556da2d43f">getPassword</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;password;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00064"/>00064 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00065"/>00065 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00070"/><link linkend="_classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926">00070</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a3e35c8d3dbb2c513c618a664389e0926">setPassword</link>($password)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string($password))&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;password&#32;=&#32;$password;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00076"/>00076 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00080"/><link linkend="_classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e">00080</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a81b37a3c9d639574e394f80c1138c75e">getUsername</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00081"/>00081 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;username;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00083"/>00083 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00084"/>00084 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00089"/><link linkend="_classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244">00089</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1ac359b701a2ccaff746dd480f03314244">setUsername</link>($username)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00090"/>00090 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(is_string($username))&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;username&#32;=&#32;$username;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00095"/>00095 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00099"/><link linkend="_classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1">00099</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1ae2efbcc3ce275f39a8398020f58f34c1">getFirst_connexion</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00100"/>00100 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;first_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00102"/>00102 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00103"/>00103 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00108"/><link linkend="_classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a94103781c6e4f7324296c9e8a820a26d">setFirst_connexion</link>($first_connexion)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;first_connexion&#32;=&#32;$first_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00112"/>00112 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00116"/><link linkend="_classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7">00116</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1abc73d5f855edc6cffdbd28a1a9b6abd7">getLast_connexion</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00117"/>00117 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;last_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00119"/>00119 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00120"/>00120 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00125"/><link linkend="_classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9">00125</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a872bf5ed53b1f4f4f67d0514cfa92ad9">setLast_connexion</link>($last_connexion)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00126"/>00126 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;last_connexion&#32;=&#32;$last_connexion;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00128"/>00128 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00129"/>00129 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00133"/><link linkend="_classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2">00133</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a23fac327059bf3fd0fe57555252d8cf2">getLevel</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00134"/>00134 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;level;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00136"/>00136 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00137"/>00137 
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00142"/><link linkend="_classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c">00142</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a0b759f4af85ea8fe8967823a30d54f0c">setLevel</link>($level)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00143"/>00143 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$level&#32;=&#32;(int)$level;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($level&#32;===&#32;0&#32;||&#32;$level&#32;===&#32;1&#32;||&#32;$level&#32;===&#32;2)&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;level&#32;=&#32;$level;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00148"/>00148 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00152"/><link linkend="_classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313">00152</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a5d161c4dd43be143624cf2aeeed5e313">getOnline</link>()
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00153"/>00153 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;$this-&gt;online;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00155"/>00155 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00160"/><link linkend="_classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8">00160</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>&#32;<emphasis role="keyword">function</emphasis>&#32;<link linkend="_classentities_1_1_user_1a3dfa09c7734da7233477153010cfa8d8">setOnline</link>($online)
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00161"/>00161 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$online&#32;=&#32;(int)$online;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;($online&#32;===&#32;0&#32;||&#32;$online&#32;===&#32;1)&#32;{
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;$this-&gt;online&#32;=&#32;$online;
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00166"/>00166 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__framework_2entities_2user_8php_source_1l00167"/>00167 }
+</programlisting></section>

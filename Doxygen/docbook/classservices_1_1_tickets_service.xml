@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classservices_1_1_tickets_service" xml:lang="en-US">
+<title>TicketsService Class Reference</title>
+<indexterm><primary>TicketsService</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1a21db5a882ba43a48b03c976aefa69c75">__construct</link> ($outputData)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1a637215646c5f02e149a146fbce958dca">getPosts</link> ($userAccess, $generalAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1a1aab7a11433415e9012b143f469c8c73">get5LastPosts</link> ($userAccess, $generalAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1aafda66ab0a7824c15e869c31f6d44d35">getCategoryPosts</link> ($generalAccess, $postsId)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1abdad754661c93e50303a189f73e87556">createTicket</link> ($userAccess, $title, $message)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1aa2af9219e1acee7e16ec36bb989e4d3b">deleteTicket</link> ($userAccess)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1a9b4d5b6ae46dcad7c25c11261111f329">editTicket</link> ($userAccess, $id, $title, $message)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1aa773f2e51294e090486a93ea1ae5d13d">getPostsIdByUserId</link> ($userAccess, $id)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1af9fd30dafa8b70fb0f2199702c2898e4">getUserPosts</link> ($generalAccess, $postsId)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1ae5e57326b72cd229977b05bbbcfd1b72">isTicketOwner</link> ($userAccess, $ticketID, $user_ID)</para>
+</listitem>
+            <listitem><para><link linkend="_classservices_1_1_tickets_service_1a90f40acdad8058f6eb81279c9758e2d0">existsTicket</link> ($userAccess, $ticketID)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00005">5</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classservices_1_1_tickets_service_1a21db5a882ba43a48b03c976aefa69c75"/><section>
+    <title>__construct()</title>
+<indexterm><primary>__construct</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>__construct</secondary></indexterm>
+<para><computeroutput>__construct ( $outputData)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00010">10</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classservices_1_1_tickets_service_1abdad754661c93e50303a189f73e87556"/><section>
+    <title>createTicket()</title>
+<indexterm><primary>createTicket</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>createTicket</secondary></indexterm>
+<para><computeroutput>createTicket ( $userAccess,  $title,  $message)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00043">43</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1aa2af9219e1acee7e16ec36bb989e4d3b"/><section>
+    <title>deleteTicket()</title>
+<indexterm><primary>deleteTicket</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>deleteTicket</secondary></indexterm>
+<para><computeroutput>deleteTicket ( $userAccess)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00048">48</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1a9b4d5b6ae46dcad7c25c11261111f329"/><section>
+    <title>editTicket()</title>
+<indexterm><primary>editTicket</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>editTicket</secondary></indexterm>
+<para><computeroutput>editTicket ( $userAccess,  $id,  $title,  $message)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00053">53</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1a90f40acdad8058f6eb81279c9758e2d0"/><section>
+    <title>existsTicket()</title>
+<indexterm><primary>existsTicket</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>existsTicket</secondary></indexterm>
+<para><computeroutput>existsTicket ( $userAccess,  $ticketID)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00079">79</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1a1aab7a11433415e9012b143f469c8c73"/><section>
+    <title>get5LastPosts()</title>
+<indexterm><primary>get5LastPosts</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>get5LastPosts</secondary></indexterm>
+<para><computeroutput>get5LastPosts ( $userAccess,  $generalAccess)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00025">25</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1aafda66ab0a7824c15e869c31f6d44d35"/><section>
+    <title>getCategoryPosts()</title>
+<indexterm><primary>getCategoryPosts</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>getCategoryPosts</secondary></indexterm>
+<para><computeroutput>getCategoryPosts ( $generalAccess,  $postsId)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00034">34</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1a637215646c5f02e149a146fbce958dca"/><section>
+    <title>getPosts()</title>
+<indexterm><primary>getPosts</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>getPosts</secondary></indexterm>
+<para><computeroutput>getPosts ( $userAccess,  $generalAccess)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00015">15</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1aa773f2e51294e090486a93ea1ae5d13d"/><section>
+    <title>getPostsIdByUserId()</title>
+<indexterm><primary>getPostsIdByUserId</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>getPostsIdByUserId</secondary></indexterm>
+<para><computeroutput>getPostsIdByUserId ( $userAccess,  $id)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00058">58</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1af9fd30dafa8b70fb0f2199702c2898e4"/><section>
+    <title>getUserPosts()</title>
+<indexterm><primary>getUserPosts</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>getUserPosts</secondary></indexterm>
+<para><computeroutput>getUserPosts ( $generalAccess,  $postsId)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00063">63</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<anchor xml:id="_classservices_1_1_tickets_service_1ae5e57326b72cd229977b05bbbcfd1b72"/><section>
+    <title>isTicketOwner()</title>
+<indexterm><primary>isTicketOwner</primary><secondary>TicketsService</secondary></indexterm>
+<indexterm><primary>TicketsService</primary><secondary>isTicketOwner</secondary></indexterm>
+<para><computeroutput>isTicketOwner ( $userAccess,  $ticketID,  $user_ID)</computeroutput></para><para>
+Definition at line <link linkend="__tickets_service_8php_source_1l00072">72</link> of file <link linkend="__tickets_service_8php_source">TicketsService.php</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+services/<link linkend="__tickets_service_8php">TicketsService.php</link></section>
+</section>

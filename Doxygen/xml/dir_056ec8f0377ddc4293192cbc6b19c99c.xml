@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_056ec8f0377ddc4293192cbc6b19c99c" kind="dir">
+    <compoundname>services</compoundname>
+    <innerfile refid="_categories_service_8php">CategoriesService.php</innerfile>
+    <innerfile refid="_category_interface_8php">CategoryInterface.php</innerfile>
+    <innerfile refid="_comment_interface_8php">CommentInterface.php</innerfile>
+    <innerfile refid="_comments_service_8php">CommentsService.php</innerfile>
+    <innerfile refid="_output_data_8php">OutputData.php</innerfile>
+    <innerfile refid="_ticket_interface_8php">TicketInterface.php</innerfile>
+    <innerfile refid="_tickets_service_8php">TicketsService.php</innerfile>
+    <innerfile refid="_user_interface_8php">UserInterface.php</innerfile>
+    <innerfile refid="_users_service_8php">UsersService.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="services/"/>
+  </compounddef>
+</doxygen>
