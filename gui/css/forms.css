@@ -27,6 +27,7 @@ form {
 
 #container p {
     color: white;
+    font-size: 2vh;
 }
 
 #container p a {
@@ -69,6 +70,11 @@ input[type=submit] {
     font-size: 2vh;
     border-radius: 3vh;
     box-shadow: inset 20px 20px 25px #27732e, inset 10px 10px 15px #42b34a;
+}
+
+#username{
+    margin-left: 0;
+    padding-left: 2vh;
 }
 
 input[type=submit]:hover {
