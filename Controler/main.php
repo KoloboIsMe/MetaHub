@@ -6,6 +6,10 @@
 /// It redirects to the correct controller.
 
 // If action is to log in, call login.php
+if(isset($_POST['action']) && $_POST['action'] === 'login')
+{
+    require 'login.php';
+}
 
 if (!empty($_GET['url']))
 {

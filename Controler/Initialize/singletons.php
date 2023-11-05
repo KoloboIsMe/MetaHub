@@ -4,8 +4,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Instantiates all Singletons.
 
+use Framework\database\Connexion as Connexion;
+
 try {
-    $connexion = \Framework\database\Connexion::getInstance("serveur_lecture");
+    $connexion = Connexion::getInstance("serveur_lecture");
 } catch (PDOException $e) {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
     die();

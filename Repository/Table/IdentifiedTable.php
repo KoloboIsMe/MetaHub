@@ -13,21 +13,6 @@ use PDO;
 
 trait IdentifiedTable
 {
-    public function select(int $ID = null, string $attribute = null) : Record|bool
-    {
-        $request = 'SELECT * FROM ' . self::TABLE;
-        // Cas : Recherche par identifiant
-        if (isset($ID))
-        {
-            $request .= " WHERE 'id' = $ID";
-        }
-        // Cas : Recherche sur une colonne spécifique
-        elseif (isset($attribute))
-        {
-            $request .= " WHERE '$attribute' = $ID";
-        }
-        return $this->execute($request);
-    }
     public function update(int|Entity $id, Entity $entity) : bool
     {
         $id = is_int($id) ? $id : $id->getID();

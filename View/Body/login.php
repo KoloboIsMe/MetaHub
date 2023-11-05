@@ -12,7 +12,7 @@ if (!isset($action))
 
 <link href='View/_assets/style/forms.css' rel='stylesheet' type='text/css' />
 <div id='container'>
-    <form action=$action method='POST'>
+    <form action=<?php echo $action ?> method='POST'>
         <h1>Login</h1>
 
         <label><b>Nom d'utilisateur</b></label>
@@ -22,6 +22,9 @@ if (!isset($action))
         <input type='password' placeholder='Entrer le mot de passe' name='password' required>
 
         <input type='submit' id='submit' value='LOGIN' >
+
+        <input name="action" type="hidden" value="login" />
+
 
         <p>vous n'avez pas de compte ? <a href='/register'>inscrivez-vous</a></p>
     </form>

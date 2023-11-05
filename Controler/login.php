@@ -1,15 +1,13 @@
 <?php
 
-if(!isset($user, $password))
-{
-    return;
-}
-
 $username = $_POST['username'];
 $password = $_POST['password'];
-require __DIR__ . '/../../Model/login.php';
+
+require __DIR__ . '/../Model/login.php';
 
 if (isset($error)){
+    $page = 'login';
+    require 'display.php';
     return;
 }
 

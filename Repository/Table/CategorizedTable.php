@@ -59,23 +59,6 @@ class CategorizedTable
         }
         return TRUE;
     }
-    public function select(int $ticket = null, int $category = null) : Record|bool
-    {
-        $request = 'SELECT * FROM ' . self::TABLE;
-        if (isset($ticket) && isset($category))
-        {
-            $request .= " WHERE 'ticket' = $ticket AND category = $category";
-        }
-        elseif (isset($ticket))
-        {
-            $request .= " WHERE 'ticket' = $ticket";
-        }
-        elseif (isset($category))
-        {
-            $request .= " WHERE 'category' = $category";
-        }
-        return $this->execute($request);
-    }
     public function delete(string $key, int ...$IDs) : bool
     {
         if ($key !== 'ticket' && $key !== 'category')

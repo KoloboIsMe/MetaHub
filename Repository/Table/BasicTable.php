@@ -13,15 +13,42 @@ trait BasicTable
     {
 
     }
+    public function find(mixed $entry, string $column) : bool
+    {
+        $request = "SELECT $column FROM " .  self::TABLE . " WHERE '$entry' = $column ";
+        if (($response = $this->execute($request)) === FALSE)
+        {
+            return FALSE;
+        }
+        if(empty($response->getData()[0]) === FALSE)
+        {
+            return $response->getData()[0];
+        }
+        return FALSE;
+    }
+    public function select(int $ID = null, string $attribute = null) : Record|bool
+    {
+        $request = 'SELECT * FROM' . ' ' . self::TABLE;
+        // Cas : Recherche par identifiant
+        if (isset($ID))
+        {
+            $request .= " WHERE 'id' = $ID";
+        }
+        // Cas : Recherche sur une colonne spécifique
+        elseif (isset($attribute))
+        {
+            $request .= " WHERE '$attribute' = $ID";
+        }
+        return $this->execute($request);
+    }
     public function exists(mixed $entry, string $column) : bool
     {
-        $request = "SELECT '$column' FROM" .  self::TABLE . "where '$entry' = :username ";
-        if ($response = $this->execute($request) === FALSE)
+        $request = "SELECT $column FROM " .  self::TABLE . " WHERE '$entry' = $column ";
+        if (($response = $this->execute($request)) === FALSE)
         {
-            return TRUE;
+            return FALSE;
         }
-        $response = $response->fetch(PDO::FETCH_ASSOC);
-        if(empty($response) === FALSE)
+        if(empty($response->getData()[0]) === FALSE)
         {
             return TRUE;
         }

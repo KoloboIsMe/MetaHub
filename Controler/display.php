@@ -29,11 +29,15 @@ else
 require "$elementDirectory/head.php";
 require "$elementDirectory/header.php";
 
+
+//TODO : If isset $error, show it
+
 switch ($page) {
     case 'homepage' :
         require 'Connector/homepage.php';
         break;
     case 'login' :
+        $action = '/index.php';
         require __DIR__ . '/../View/Body/login.php';
         break;
     case 'register' :
