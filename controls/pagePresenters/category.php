@@ -16,8 +16,10 @@
             <time id='time'><?= $post->getTicket()->getDate() ?> </time>
             <p><?= $post->getTicket()->getTicket_ID() ?></p>
             <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
-                <a href='ouais'><button ><img src='gui/images/edit.png' id='add-button'></button></a>
-                <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
+                <div class="edit-delete">
+                    <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                    <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                </div>
             <?php }?>
         </div>
         </a>
