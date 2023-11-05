@@ -646,6 +646,17 @@ button{
     margin-left: 1vh;
 }
 
+#editCommentImg, #deleteCommentImg{
+    height: 2vh;
+    width: 2vh;
+    margin-left: 1vh;
+    margin-top: 1.5vh;
+}
+
+#editCommentImg{
+    margin-left: 4vh;
+}
+
 #deleteUser{
     height: 2.5vh;
     width: 2.5vh;
