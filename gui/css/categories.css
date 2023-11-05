@@ -68,7 +68,7 @@ p{
     font-family: 'Comfortaa', sans-serif;
     font-size: 2vh;
     margin-top: 3vh;
-    margin-left: 5vh;
+    margin-left: 1vh;
 }
 
 .card-container{
@@ -141,6 +141,13 @@ h2{
 button{
     background-color: transparent;
     border-style: none;
+}
+
+#add-button{
+    height: 3vh;
+    width: 3vh;
+    margin-top: 3vh;
+    margin-left: 5vh;
 }
 
 .edit-delete{

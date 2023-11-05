@@ -90,7 +90,7 @@ p{
     align-items: center;
     width: fit-content;
     margin-left: 3vh;
-    margin-right: 3vh;
+    margin-right: 6vh;
     height: auto;
     background-color: #242424;
     border-radius: 8px;
@@ -123,4 +123,9 @@ h2{
     margin-left: 1vh;
     margin-top: 3vh;
     margin-right: 3vh;
+}
+
+button{
+    background-color: transparent;
+    border-style: none;
 }
