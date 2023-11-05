@@ -12,13 +12,13 @@
                 <a href='posts&id=<?= $id ?>'>
                     <div class='card-content'>
                         <div class='post-header'>
-                            <a href="/user&id=<?= $post->getUser()->getUser_ID(); ?>"><img src='gui/images/user.png' id='userImg'>
-                            <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p></a>
+                            <img src='gui/images/user.png' id='userImg'>
+                            <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p>
                         </div>
                         <h3> <?= $post->getTicket()->getTitle() ?> </h3>
                         <div class="categories">
                         <?php foreach ($post->getCategories() as $category) { ?>
-                            <a href="/category&id=<?= $category->getCategory_ID(); ?><div class='category'>#<?= $category->getLabel() ?></div></a>
+                            <div class='category'>#<?= $category->getLabel() ?></div>
                         <?php } ?>
                         </div>
                         <p>  <?= $post->getTicket()->getMessage() ?></p>
@@ -28,8 +28,7 @@
                         <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
                             <div class='edit-delete'>
                                 <a href='editTicket&id=<?= $id ?>'><img src='gui/images/edit.png' id='editImg'></a>
-                                <a href='?action=deleteTicketAction&id=<?= $id ?>'><img src='gui/images/delete.png'
-                                                                                        id='deleteImg'></a>
+                                <a href='?action=deleteTicketAction&id=<?= $id ?>'><img src='gui/images/delete.png' id='deleteImg'></a>
                             </div>
                         <?php } ?>
                     </div>
@@ -60,18 +59,11 @@
 <div class='card-container2'>
     <div class='card3'>
         <div class='card-content'>
-            <div class='category-list'>
-            <h3>Quelques Utilisateurs Connectés</h3>
-            <?php for ($i = 0; $i < count($data); $i++) {
-                if ($data[$i] instanceof entities\User) {
-                    $user = $data[$i];
-                    $id = $user->getUser_ID(); ?>
-                    <a href='users&id=<?= $id ?>'>
-                        <li><img src='gui/images/dot.png' class='dotImg'> @<?= $user->getUsername() ?> </li>
-                    </a>
-                <?php }
-            } ?>
-            </div>
+            <h3> Suggestions</h3>
+            <p>Lorem ipsum dolor sit amet. In perferendis voluptas id quam omnis id explicabo sequi.
+                Qui deserunt voluptatem ea fuga illum ut vero sunt et quis laudantium est temporibus enim.
+                33 ducimus commodi eum voluptatem dolores est saepe nobis ea voluptatem molestias est
+                natus eveniet non iste placeat qui commodi nobis.</p>
         </div>
     </div>
 </div>
