@@ -226,6 +226,8 @@ if ('' == $url || '/' == $url) {
 
 } elseif ('logout' == $url && isset($_SESSION['isLogged'])) {
 
+    $usersService->setOnline($userAccess, $_SESSION['user_ID'], 0);
+    session_unset();
     session_destroy();
     header("Location: /");
 
