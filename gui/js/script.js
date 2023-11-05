@@ -8,6 +8,7 @@ function toggleNav() {
     navigation.classList.toggle("active")
 }
 
+
 const searchBar = document.querySelector("#searchbar");
 const cards = document.querySelectorAll(".card");
 
@@ -26,7 +27,6 @@ function filterElements(letters, elements) {
             }
         }
     } else if (letters.length === 0) {
-        // Si la barre de recherche est vide, réaffiche tous les éléments
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = "block";
         }
