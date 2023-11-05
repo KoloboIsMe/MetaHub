@@ -299,9 +299,13 @@ header nav ul li #headerLinks:hover{
         width: 80%;
     }
 
-    .card-container1 .card, .card-container2 .card2, .card-container2 .card3{
+    .card-container2 .card2, .card-container2 .card3{
         width: 80vw;
         margin: 10px auto;
+    }
+
+    .card-container1 .card{
+        width: 90vw;
     }
 
     .card-container .post-card, .card-container .category-card, .card-container1 .comment-card{
@@ -476,7 +480,7 @@ p{
 .comment-card{
     position: relative;
     height: auto;
-    width: 70vw;
+    width: 50vw;
     background: #242424;
     margin-left: 2vh;
     margin-bottom: 10vh;
