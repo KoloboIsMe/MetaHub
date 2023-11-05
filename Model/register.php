@@ -8,4 +8,7 @@ if(!isset($user, $password))
 
 // TODO : ENCODE PASSWORD
 
-$userTable->register($user, $password);
+if (!$userTable->register($user, $password))
+{
+    $error = 'erreur';
+}

@@ -27,23 +27,10 @@ switch ($page) {
         require 'homepage.php';
         break;
     case 'login' :
-        $page = $_GET['id'] ?? $page = null;
-        require '../Model/login.php';
-        if (isset($error)){
-            $page ? $redirect = 'login&id='.$page : $redirect = 'login';
-            $url = 'error';
-        }else{
-            $url = '/';
-            $page ?  header("refresh:0;url=/$page") : header("refresh:0;url=/");
-        }
+        require 'login.php';
         break;
     case 'register' :
-        $page = $_GET['id'] ?? $page = null;
-        require '../Model/register.php';
-        if (isset($error)){
-            $url = 'register';
-        }else
-            $url = 'login_verification';
+        require 'register.php';
         break;
     default:
         // declare needed variables

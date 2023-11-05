@@ -8,4 +8,9 @@ if(!isset($user, $password))
 
 // TODO : ENCODE PASSWORD
 
-$userTable->login($user, $password);
+if (!$userTable->login($user, $password))
+{
+    $error = 'Mauvais identifiant ou mot de passe';
+}
+
+return;
