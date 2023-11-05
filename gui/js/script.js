@@ -1,7 +1,7 @@
 const hamburgerButton = document.querySelector(".hamburger")
 const navigation = document.querySelector("nav")
 
-hamburgerButton.addEventListener ("click", toggleNav)
+hamburgerButton.addEventListener("click", toggleNav)
 
 function toggleNav() {
     hamburgerButton.classList.toggle("active")

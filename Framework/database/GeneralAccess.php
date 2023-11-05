@@ -2,49 +2,35 @@
 
 namespace database;
 
+use entities\Category;
+use entities\Comment;
+use entities\Post;
+use entities\Ticket;
+use entities\User;
 use PDO;
 use PDOException;
 
 class GeneralAccess
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
-    public function deleteTicketComments($ticketID)
-    {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM comment WHERE ticket = :ticketID');
-            $statement->execute([':ticketID' => $ticketID]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
 
-    public function deleteComment($commentID)
-    {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM comment WHERE comment_ID = :commentID');
-            $statement->execute([':commentID' => $commentID]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function deleteTicketCategorized($ticketID)
-    {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE ticket = :ticketID');
-            $statement->execute([':ticketID' => $ticketID]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function deleteTicket($ticketID)
+    /**
+     * @param $ticketID
+     * @return void
+     */
+    public function deleteTicket($ticketID): void
     {
         try {
             $this->deleteTicketComments($ticketID);
@@ -56,7 +42,40 @@ class GeneralAccess
         }
     }
 
-    public function deleteUser($id){
+    /**
+     * @param $ticketID
+     * @return void
+     */
+    public function deleteTicketComments($ticketID): void
+    {
+        try {
+            $statement = $this->dataAccess->prepare('DELETE FROM comment WHERE ticket = :ticketID');
+            $statement->execute([':ticketID' => $ticketID]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $ticketID
+     * @return void
+     */
+    public function deleteTicketCategorized($ticketID): void
+    {
+        try {
+            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE ticket = :ticketID');
+            $statement->execute([':ticketID' => $ticketID]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $id
+     * @return void
+     */
+    public function deleteUser($id): void
+    {
         try {
             $statement = $this->dataAccess->prepare("DELETE FROM user WHERE user_ID = :id");
             $statement->execute(array(':id' => $id));
@@ -65,17 +84,12 @@ class GeneralAccess
         }
     }
 
-    public function deleteCategoryCategorized($category_ID)
+    /**
+     * @param $id
+     * @return void
+     */
+    public function deleteCategory($id): void
     {
-        try {
-            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE category = :category_ID');
-            $statement->execute([':category_ID' => $category_ID]);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function deleteCategory($id){
         try {
             $this->deleteCategoryCategorized($id);
             $statement = $this->dataAccess->prepare("DELETE FROM category WHERE category_ID = :id");
@@ -85,7 +99,25 @@ class GeneralAccess
         }
     }
 
-    public function getTicketsIdByUserId($userId)
+    /**
+     * @param $category_ID
+     * @return void
+     */
+    public function deleteCategoryCategorized($category_ID): void
+    {
+        try {
+            $statement = $this->dataAccess->prepare('DELETE FROM categorized WHERE category = :category_ID');
+            $statement->execute([':category_ID' => $category_ID]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $userId
+     * @return int[]
+     */
+    public function getTicketsIdByUserId($userId): array
     {
         try {
             $ID = [];
@@ -100,7 +132,11 @@ class GeneralAccess
         }
     }
 
-    public function getCommentsIdByUserId($userId)
+    /**
+     * @param $userId
+     * @return int[]
+     */
+    public function getCommentsIdByUserId($userId): array
     {
         try {
             $ID = [];
@@ -110,6 +146,83 @@ class GeneralAccess
                 $ID[] = $data['comment_ID'];
             }
             return $ID;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $id
+     * @return int[]
+     */
+    public function getPostsIdByCategoryId($id): array
+    {
+        try {
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT ticket FROM categorized where category = :ID ORDER BY ticket DESC LIMIT 100');
+            $statement->execute([':ID' => $id]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $ID[] = $data['ticket'];
+            }
+            return $ID;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $category
+     * @param $ticketID
+     * @return void
+     */
+    public function addCategoryToTicket($category, $ticketID): void
+    {
+        try {
+            $statement = $this->dataAccess->prepare('INSERT INTO categorized (category, ticket) VALUES (:category, :ticket)');
+            $statement->execute([
+                ':category' => $category,
+                ':ticket' => $ticketID,
+            ]);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $ticketId
+     * @return Post
+     */
+    public function getPostById($ticketId): Post
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM ticket where ticket_ID = :ticketId');
+            $statement->execute(['ticketId' => $ticketId]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            $ticket = new Ticket($data);
+
+            $categories = [];
+            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID in (SELECT category FROM categorized where ticket = :ticketID) ORDER BY category_ID DESC LIMIT 100');
+            $statement->execute(['ticketID' => $ticketId]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $categories[] = new Category($data);
+            }
+
+            $comments = [];
+            $statement = $this->dataAccess->prepare('SELECT comment_ID,text,date,author,ticket,username FROM comment 
+                                                JOIN user ON comment.author = user.user_ID
+                                                   where ticket = :ticketID LIMIT 100');
+            $statement->execute(['ticketID' => $ticketId]);
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $comments[] = new Comment($data);
+            }
+
+            $statement = $this->dataAccess->prepare('SELECT * FROM user where user_ID = :user_ID');
+            $statement->execute(['user_ID' => $ticket->getAuthor()]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+
+            $user = new User($data);
+            return new Post($ticket, $categories, $comments, $user);
+
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }

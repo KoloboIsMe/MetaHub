@@ -72,7 +72,7 @@ input[type=submit] {
     box-shadow: inset 20px 20px 25px #27732e, inset 10px 10px 15px #42b34a;
 }
 
-#username{
+#username {
     margin-left: 0;
     padding-left: 2vh;
 }
@@ -84,25 +84,25 @@ input[type=submit]:hover {
     border: 1px solid transparent;
 }
 
-@media only screen and (min-device-width : 250px) and (max-device-width : 1050px) {
+@media only screen and (min-device-width: 250px) and (max-device-width: 1050px) {
     #container {
         width: 90%;
     }
 
-    form{
+    form {
         width: 90vw;
     }
 }
 
 
-@media only screen and (min-device-width : 1050px){
-    #container{
+@media only screen and (min-device-width: 1050px) {
+    #container {
         width: 50%;
         padding-top: 2.5vh;
         padding-bottom: 5vh;
     }
 
-    form{
+    form {
         padding-bottom: 8vh;
         width: 50vw;
     }

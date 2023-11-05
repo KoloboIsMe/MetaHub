@@ -1,8 +1,8 @@
 <?php
 
-namespace service;
+namespace services;
 
-class CommentsGetting
+class CommentsService
 {
 
     private $outputData;
@@ -20,6 +20,11 @@ class CommentsGetting
     public function isCommentOwner($commentAccess, $commentID, $user_ID)
     {
         return $commentAccess->isCommentOwner($commentID, $user_ID);
+    }
+
+    public function deleteComment($commentAccess, $commentID)
+    {
+        $commentAccess->deleteComment($commentID);
     }
 
 }

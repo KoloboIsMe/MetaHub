@@ -6,15 +6,35 @@ include_once 'Entity.php';
 
 class Comment extends Entity
 {
+    /**
+     * @var
+     */
     private $comment_ID;
+    /**
+     * @var
+     */
     private $text;
+    /**
+     * @var
+     */
     private $date;
+    /**
+     * @var
+     */
     private $author;
+    /**
+     * @var
+     */
     private $author_username;
+    /**
+     * @var
+     */
     private $ticket;
 
-    //Setters
-
+    /**
+     * @param $author_username
+     * @return void
+     */
     public function setUsername($author_username)
     {
         if (is_string($author_username)) {
@@ -23,13 +43,17 @@ class Comment extends Entity
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getComment_ID()
     {
         return $this->comment_ID;
     }
 
+    /**
+     * @param $comment_ID
+     * @return void
+     */
     public function setComment_ID($comment_ID)
     {
         $comment_ID = (int)$comment_ID;
@@ -39,13 +63,17 @@ class Comment extends Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getText()
     {
         return $this->text;
     }
 
+    /**
+     * @param $text
+     * @return void
+     */
     public function setText($text)
     {
         if (is_string($text)) {
@@ -54,28 +82,34 @@ class Comment extends Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDate()
     {
         return $this->date;
     }
 
-    //Getters
-
+    /**
+     * @param $date
+     * @return void
+     */
     public function setDate($date)
     {
         $this->date = $date;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAuthor()
     {
         return $this->author;
     }
 
+    /**
+     * @param $author
+     * @return void
+     */
     public function setAuthor($author)
     {
         $author = (int)$author;
@@ -85,7 +119,7 @@ class Comment extends Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getAuthor_username()
     {
@@ -93,13 +127,17 @@ class Comment extends Entity
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getTicket()
     {
         return $this->ticket;
     }
 
+    /**
+     * @param $ticket
+     * @return void
+     */
     public function setTicket($ticket)
     {
         $ticket = (int)$ticket;

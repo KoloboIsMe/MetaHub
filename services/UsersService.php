@@ -1,8 +1,8 @@
 <?php
 
-namespace service;
+namespace services;
 
-class UsersGetting
+class UsersService
 {
     private $outputData;
 
@@ -10,6 +10,7 @@ class UsersGetting
     {
         $this->outputData = $outputData;
     }
+
     public function existsUsername($dataccess, $username)
     {
         return $dataccess->existsUsername($username);
@@ -19,6 +20,7 @@ class UsersGetting
     {
         return $dataccess->existsUser($user_ID);
     }
+
     public function authenticate($username, $password, $dataccess)
     {
         $isUser = $dataccess->isUser($username, $password);
@@ -29,6 +31,7 @@ class UsersGetting
     {
         return $dataccess->register($username, $password, date("Y-m-d H:i"));
     }
+
     public function updateUser($username, $password, $dataccess)
     {
         return $dataccess->updateUser($username, $password, $_SESSION['user_ID']);
@@ -57,9 +60,23 @@ class UsersGetting
     {
         return $dataccess->getUserById($id);
     }
+    public function setOnline($dataccess, $user_ID, $online)
+    {
+        $dataccess->setOnline($user_ID, $online);
+    }
+
+    public function add10LastConnectedUsers($userAccessLector)
+    {
+        $users = [];
+        foreach ($userAccessLector->get10LastConnectedUsersID() as $userId) {
+            $users[] = $userAccessLector->getUserById($userId);
+        }
+        $this->outputData->addOutputData($users);
+    }
 
     public function setUserById($dataccess, $id)
     {
         $this->outputData->setOutputData($dataccess->getUserById($id));
     }
+
 }

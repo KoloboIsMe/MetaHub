@@ -6,22 +6,33 @@ namespace database;
 use entities\Category;
 use PDO;
 use PDOException;
-use service\CategoryInterface;
+use services\CategoryInterface;
 
 
-include_once "service/CategoryInterface.php";
+include_once "services/CategoryInterface.php";
 include_once "Framework/entities/Category.php";
 
 class CategoryAccess implements CategoryInterface
 {
+    /**
+     * @var null
+     */
     protected $dataAccess = null;
 
+    /**
+     * @param $dataAccess
+     */
     public function __construct($dataAccess)
     {
         $this->dataAccess = $dataAccess;
     }
 
-    public function existsCategory($CategoryID){
+    /**
+     * @param $CategoryID
+     * @return bool
+     */
+    public function existsCategory($CategoryID): bool
+    {
         try {
             $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID = :CategoryID');
             $statement->execute(['CategoryID' => $CategoryID]);
@@ -32,7 +43,26 @@ class CategoryAccess implements CategoryInterface
         }
     }
 
-    public function getCategoriesID()
+    /**
+     * @param $ID
+     * @return Category
+     */
+    public function getCategoryById($ID): Category
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID = :ID');
+            $statement->execute([':ID' => $ID]);
+            $data = $statement->fetch(PDO::FETCH_ASSOC);
+            return new Category($data);
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @return int[]
+     */
+    public function getCategoriesID(): array
     {
         try {
             $ID = [];
@@ -47,33 +77,11 @@ class CategoryAccess implements CategoryInterface
         }
     }
 
-    public function getCategoryById($ID)
+    /**
+     * @return Category[]
+     */
+    public function get5LastCategories(): array
     {
-        try {
-            $statement = $this->dataAccess->prepare('SELECT * FROM category where category_ID = :ID');
-            $statement->execute([':ID' => $ID]);
-            $data = $statement->fetch(PDO::FETCH_ASSOC);
-            return new Category($data);
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-
-    public function getPostsIdByCategoryId($id)
-    {
-        try {
-            $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT ticket FROM categorized where category = :ID ORDER BY ticket DESC LIMIT 100');
-            $statement->execute([':ID' => $id]);
-            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
-                $ID[] = $data['ticket'];
-            }
-            return $ID;
-        } catch (PDOException $e) {
-            throw new PDOException($e->getMessage(), (int)$e->getCode());
-        }
-    }
-    public function get5LastCategories(){
         try {
             $categories = [];
             $statement = $this->dataAccess->prepare('SELECT * FROM category ORDER BY category_ID DESC LIMIT 5');
@@ -86,7 +94,30 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
-    public function createCategory($label, $description)
+
+    /**
+     * @param $label
+     * @return int
+     */
+    public function getCategoryIdByLabel($label)
+    {
+        try {
+            $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
+            $statement->execute([
+                ':label' => $label,
+            ]);
+            return $statement->fetch(PDO::FETCH_ASSOC)['category_ID'];
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $label
+     * @param $description
+     * @return string|null
+     */
+    public function createCategory($label, $description): ?string
     {
         try {
             $statement = $this->dataAccess->prepare('SELECT category_ID FROM category where label = :label');
@@ -102,4 +133,6 @@ class CategoryAccess implements CategoryInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+
 }

@@ -4,26 +4,26 @@
 $id = $post->getTicket()->getTicket_ID(); ?>
 <div class='card-container1'>
     <div class='card'>
-        <a href='posts&id=<?=$id?>'>
-        <div class='card-content'>
-            <div class='post-header'>
-                <img src='gui/images/user.png' id='userImg'>
-                <p id='card-username'>@<?= $post->getUser()->getUsername() ?></p>
+        <a href='posts&id=<?= $id ?>'>
+            <div class='card-content'>
+                <div class='post-header'>
+                    <img src='gui/images/user.png' id='userImg'>
+                    <p id='card-username'>@<?= $post->getUser()->getUsername() ?></p>
+                </div>
+                <h3> <?= $post->getTicket()->getTitle() ?></h3>
+                <div class="categories">
+                    <?php foreach ($post->getCategories() as $category) { ?>
+                        <div class='category'>#<?= $category->getLabel() ?></div>
+                    <?php } ?>
+                </div>
+                <p><?= $post->getTicket()->getMessage() ?></p>
+                <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B></time>
+                <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
+                <div class="edit-delete">
+                    <a href='editTicket&id=<?= $id ?>'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                    <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                </div>
             </div>
-            <h3> <?= $post->getTicket()->getTitle() ?></h3>
-            <div class="categories">
-                <?php foreach ($post->getCategories() as $category) { ?>
-                    <div class='category'>#<?= $category->getLabel() ?></div>
-                <?php } ?>
-            </div>
-            <p><?= $post->getTicket()->getMessage() ?></p>
-            <time id='time'>Publié le <?= $post->getTicket()->getDate() ?> </time>
-            <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
-            <div class="edit-delete">
-                <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
-                <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
-            </div>
-        </div>
         </a>
     </div>
     <div class='comment-card'>
@@ -36,7 +36,6 @@ $id = $post->getTicket()->getTicket_ID(); ?>
             <input type='submit' class='btn' value='Ajouter'>
             </form>
         </div>
-
         <?php foreach ($post->getComments() as $comment) { ?>
         <div class='comment'>
             <img src='gui/images/user.png' id='user-comment-img'>

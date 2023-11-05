@@ -4,7 +4,7 @@ namespace gui;
 
 class ViewError extends View
 {
-    public function __construct($layout, $error, $redirect = null)
+    public function __construct($layout, $error = null, $redirect = null)
     {
         parent::__construct($layout);
 

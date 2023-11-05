@@ -6,7 +6,6 @@
     }
   ],
   "require": {
-    "ext-pdo": "*",
-    "ext-json": "*"
+    "ext-pdo": "*"
   }
 }
