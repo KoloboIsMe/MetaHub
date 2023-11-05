@@ -5,7 +5,7 @@
     <title>%title%</title>
     <link href="gui/css/layout.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="gui/images/MetaHubLogo.png"/>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <header>
@@ -27,7 +27,14 @@
     </label>
 </header>
 <script src="gui/js/script.js"></script>
-
+<div class="search">
+    <div class="search-box">
+        <input type="text" id="searchbar" class="form-control" placeholder="Rechercher un post">
+        <label class="icon">
+            <i class="fas fa-search"></i>
+        </label>
+    </div>
+</div>
 <body>
 %content%
 </body>
