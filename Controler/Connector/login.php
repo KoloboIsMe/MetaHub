@@ -1,7 +1,7 @@
 <?php
 
 $page = $_GET['id'] ?? $page = null;
-require '../Model/login.php';
+require '../../Model/login.php';
 if (isset($error)){
     $page ? $redirect = 'login&id='.$page : $redirect = 'login';
     $url = 'error';

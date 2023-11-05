@@ -2,7 +2,7 @@
 
 use Controler\Element\Card;
 
-require __DIR__ . '/../Model/fivePosts.php';
+require __DIR__ . '/../../Model/fivePosts.php';
 
 if(!isset($tickets, $categories, $comments))
 {
@@ -16,6 +16,6 @@ foreach ($tickets->getData() as $ticket)
 
 
 
-require __DIR__ . '/../View/Body/homePage.php';
+require __DIR__ . '/../../View/Body/homePage.php';
 
 return;
