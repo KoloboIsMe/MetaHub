@@ -31,13 +31,13 @@ require "$elementDirectory/header.php";
 
 switch ($page) {
     case 'homepage' :
-        require 'homepage.php';
+        require 'Connector/homepage.php';
         break;
     case 'login' :
-        require 'login.php';
+        require 'Connector/login.php';
         break;
     case 'register' :
-        require 'register.php';
+        require 'Connector/register.php';
         break;
     default:
         // declare needed variables
