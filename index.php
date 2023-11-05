@@ -283,7 +283,7 @@ if ('' == $url || '/' == $url) {
     if (!isset($_SESSION['isLogged']))
         header('Location: /login');
 
-    $generalAccess->getPostById($_GET['id']);
+    $controller->getPostById($_GET['id'], $generalAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewEditTicket($layout, $presenter))->display();
 
