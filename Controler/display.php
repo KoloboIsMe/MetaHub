@@ -29,7 +29,6 @@ else
 require "$elementDirectory/head.php";
 require "$elementDirectory/header.php";
 
-
 //TODO : If isset $error, show it
 
 switch ($page) {

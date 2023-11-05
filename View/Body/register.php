@@ -6,7 +6,7 @@
 /// Called when a new user need to register.
 ?>
 <div id='container'>
-    <form action=../../index.php method='POST' onsubmit="return validateForm()">
+    <form action=../../index.php method='POST' onsubmit="validateForm()">
         <h1>Register</h1>
 
         <label><b>Nom d'utilisateur</b></label>
@@ -17,7 +17,7 @@
 
         <label><b>Confirmer mot de passe</b></label>
         <input type='password' id='password_confirmation' placeholder='Entrer le mot de passe' name='password_confirmation' required>
-        <p id='password_confirmation_error'>$error</p>
+        <p id='password_confirmation_error'><?php $error ?></p>
 
         <input type='submit' id='submit' value='REGISTER'>
 
@@ -39,6 +39,21 @@
             passwordConfirmationError.innerHTML = 'Les mots de passe ne correspondent pas';
             return false;
         }
+
+        var options = '&action=register';
+        options .= '&username='document.getElementById('username').value;
+        options .= '&password='document.getElementById('password').value;
+        $.ajax({
+            url: '/index.php',
+            type: 'POST',
+            data: options,
+            success: function (response) {
+                $("#resultat").html("Réponse : " + response);
+            },
+            error: function (error) {
+                $("#resultat").html("Erreur : " + error);
+            }
+        });
 
         return true;
     }

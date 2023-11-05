@@ -8,7 +8,17 @@
 // If action is to log in, call login.php
 if(isset($_POST['action']) && $_POST['action'] === 'login')
 {
-    require 'login.php';
+    switch ($_POST['action'])
+    {
+        case 'login' :
+            require 'login.php';
+            break;
+        case 'register' :
+            require 'register.php';
+            break;
+        default :
+            break;
+    }
 }
 
 if (!empty($_GET['url']))

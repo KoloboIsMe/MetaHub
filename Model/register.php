@@ -10,5 +10,7 @@ if(!isset($user, $password))
 
 if (!$userTable->register($user, $password))
 {
-    $error = 'Les mots de passe ne correspondent pas';
+    $error = 'Erreur lors de la création du compte';
 }
+
+return;
