@@ -9,13 +9,14 @@ $viewDirectory = __DIR__ . '/../View';
 $bodyDirectory = "$viewDirectory/Body";
 $elementDirectory = "$viewDirectory/Element";
 
+
 if (!isset($page))
 {
     return;
 }
 
 $title = $page;
-$admin = TRUE;
+$admin = FALSE;
 if (empty($_SESSION['username']))
 {
     $username = '';
@@ -26,7 +27,6 @@ else
 }
 
 require "$elementDirectory/head.php";
-echo "<body> \n";
 require "$elementDirectory/header.php";
 
 switch ($page) {
@@ -38,6 +38,18 @@ switch ($page) {
         break;
     case 'register' :
         require 'Connector/register.php';
+        break;
+    case 'categories' :
+        break;
+    case 'createTicket' :
+        break;
+    case 'editTicket' :
+        break;
+    case 'error' :
+        break;
+    case 'users' :
+        break;
+    case 'posts' :
         break;
     default:
         // declare needed variables

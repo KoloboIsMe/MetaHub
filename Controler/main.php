@@ -5,14 +5,15 @@
 /// The main controler of the app.
 /// It redirects to the correct controller.
 
-if (empty($_GET['url']))
+if (!empty($_GET['url']))
 {
-    $page = 'homepage';
+    $page = $_GET['url'];
 }
 else
 {
     // TODO : CHECK IF USER HAS A SESSION
-    $page = $_GET['page'];
+    $page = 'homepage';
+
 }
 
 require 'display.php';
