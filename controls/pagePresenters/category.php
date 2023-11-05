@@ -12,6 +12,11 @@
                         <p id='card-username'>@<?= $post->getUser()->getUsername() ?></p>
                     </div>
                     <h3> <?= $post->getTicket()->getTitle() ?></h3>
+                    <div class="categories">
+                        <?php foreach ($post->getCategories() as $category) { ?>
+                            <div class='category'>#<?= $category->getLabel() ?></div>
+                        <?php } ?>
+                    </div>
                     <p><?= $post->getTicket()->getMessage() ?></p>
                     <time id='time'><?= $post->getTicket()->getDate() ?> </time>
                     <p><?= $post->getTicket()->getTicket_ID() ?></p>
