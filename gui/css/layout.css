@@ -295,11 +295,11 @@ header nav ul li #headerLinks:hover{
     }
 
     .card-container2{
-        width: 80%;
+        width: 90%;
     }
 
     .card-container2 .card2, .card-container2 .card3{
-        width: 80vw;
+        width: 90vw;
         margin: 10px auto;
     }
 
@@ -596,7 +596,7 @@ p{
 }
 
 .card-content p{
-    font-size: 1.8vh;
+    font-size: 2vh;
     line-height: 1.5;
     padding-top: 2vh;
 }
@@ -665,6 +665,23 @@ button{
     margin-right: 3vh;
 }
 
+.category{
+    color: #090909;
+    background-color: #42b34a;
+    border-radius: 2.5vh;
+    margin-right: 2vh;
+    width: fit-content;
+    padding: 1vh;
+    font-size: 2vh;
+    box-shadow: inset 5px 10px 20px #26702d, inset -5px -10px 20px #42b34a;
+}
+
+.categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .delete-user{
     display: flex;
     flex-direction: row;
@@ -709,8 +726,8 @@ footer{
     margin-right: 10px;
     margin-top: 4vh;
     cursor: pointer;
-    height: 3vh;
-    width: 3vh;
+    height: 4vh;
+    width: 4vh;
 }
 
 .footerContact{
@@ -720,9 +737,11 @@ footer{
     text-align: center;
     margin-top: 3vh;
     color: #EEF1EF;
+    font-size: 2vh;
 }
 
 .footerCopyright{
+    font-size: 1.5vh;
     display: flex;
     justify-content: center;
     align-items: center;

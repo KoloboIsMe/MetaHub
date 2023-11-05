@@ -10,12 +10,18 @@ $id = $post->getTicket()->getTicket_ID(); ?>
                 <p id='card-username'>@<?= $post->getUser()->getUsername() ?></p>
             </div>
             <h3> <?= $post->getTicket()->getTitle() ?></h3>
+            <div class="categories">
+                <?php foreach ($post->getCategories() as $category) { ?>
+                    <div class='category'>#<?= $category->getLabel() ?></div>
+                <?php } ?>
+            </div>
             <p><?= $post->getTicket()->getMessage() ?></p>
-            <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B> </time>
+            <time id='time'>Publié le <?= $post->getTicket()->getDate() ?> </time>
             <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
-            <?php foreach ($post->getCategories() as $category) { ?>
-            <p id='category'>#<?= $category->getLabel() ?></p>
-            <?php } ?>
+            <div class="edit-delete">
+                <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+            </div>
         </div>
         </a>
     </div>

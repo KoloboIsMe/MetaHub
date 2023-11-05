@@ -15,8 +15,13 @@
                             <p id='card-username'>@<?= $post->getUser()->getUsername(); ?></p>
                         </div>
                         <h3> <?= $post->getTicket()->getTitle() ?> </h3>
+                        <div class="categories">
+                        <?php foreach ($post->getCategories() as $category) { ?>
+                            <div class='category'>#<?= $category->getLabel() ?></div>
+                        <?php } ?>
+                        </div>
                         <p>  <?= $post->getTicket()->getMessage() ?></p>
-                        <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B></time>
+                        <time id='time'>Publié le <?= $post->getTicket()->getDate() ?></time>
                         <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
 
                         <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>

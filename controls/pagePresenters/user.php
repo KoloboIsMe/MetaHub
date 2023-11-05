@@ -9,13 +9,24 @@
             <div class='post-card'>
                 <a href='posts&id=<?=$id?>'>
                     <div class='card-content'>
+                        <div class='post-header'>
+                            <img src='gui/images/user.png' id='userImg'>
+                            <p id='card-username'>@<?= $post->getUser()->getUsername()?></p>
+                        </div>
                         <h3> <?= $post->getTicket()->getTitle()?></h3>
+                        <div class="categories">
+                            <?php foreach ($post->getCategories() as $category) { ?>
+                                <div class='category'>#<?= $category->getLabel() ?></div>
+                            <?php } ?>
+                        </div>
                         <p><?= $post->getTicket()->getMessage()?></p>
                         <time id='time'><?= $post->getTicket()->getDate()?> </time>
                         <p><?= $post->getTicket()->getTicket_ID()?></p>
                         <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['level']) && $_SESSION['user_ID'] == $post->getUser()->getUser_ID())) { ?>
-                            <a href='ouais'><button ><img src='gui/images/edit.png' id='add-button'></button></a>
-                            <a href='ouais'><button ><img src='gui/images/delete.png' id='add-button'></button></a>
+                            <div class="edit-delete">
+                                <a href='ouais'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
+                                <a href='ouais'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                            </div>
                         <?php }?>
                     </div></a>
             </div>
