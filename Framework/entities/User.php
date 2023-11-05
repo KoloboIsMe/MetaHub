@@ -30,6 +30,10 @@ class User extends Entity
      * @var
      */
     private $level;
+    /**
+     * @var
+     */
+    private $online;
 
     /**
      * @return int
@@ -140,6 +144,24 @@ class User extends Entity
         $level = (int)$level;
         if ($level === 0 || $level === 1 || $level === 2) {
             $this->level = $level;
+        }
+    }
+    /**
+     * @return int
+     */
+    public function getOnline()
+    {
+        return $this->online;
+    }
+    /**
+     * @param $online
+     * @return void
+     */
+    public function setOnline($online)
+    {
+        $online = (int)$online;
+        if ($online === 0 || $online === 1) {
+            $this->online = $online;
         }
     }
 }

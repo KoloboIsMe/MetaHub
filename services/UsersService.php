@@ -60,9 +60,23 @@ class UsersService
     {
         return $dataccess->getUserById($id);
     }
+    public function setOnline($dataccess, $user_ID, $online)
+    {
+        $dataccess->setOnline($user_ID, $online);
+    }
+
+    public function add10LastConnectedUsers($userAccessLector)
+    {
+        $users = [];
+        foreach ($userAccessLector->get10LastConnectedUsersID() as $userId) {
+            $users[] = $userAccessLector->getUserById($userId);
+        }
+        $this->outputData->addOutputData($users);
+    }
 
     public function setUserById($dataccess, $id)
     {
         $this->outputData->setOutputData($dataccess->getUserById($id));
     }
+
 }

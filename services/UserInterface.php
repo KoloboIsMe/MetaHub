@@ -21,4 +21,8 @@ interface UserInterface
     public function getUserById($id);
 
     public function getUsersID();
+
+    public function get10LastConnectedUsersID();
+
+    public function setOnline($user_ID, $online);
 }

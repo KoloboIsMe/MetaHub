@@ -191,4 +191,40 @@ class UserAccess implements UserInterface
             throw new PDOException($e->getMessage(), (int)$e->getCode());
         }
     }
+
+    /**
+     * @return int[]
+     */
+    public function get10LastConnectedUsersID(): array
+    {
+        try {
+            $ID = [];
+            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user WHERE online = 1 ORDER BY last_connexion DESC LIMIT 5');
+            $statement->execute();
+            while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $ID[] = $data['user_ID'];
+            }
+            return $ID;
+        } catch (PDOException $e) {
+            throw new PDOException($e->getMessage(), (int)$e->getCode());
+        }
+    }
+
+    /**
+     * @param $user_ID
+     * @param $online
+     * @return void
+     */
+    public function setOnline($user_ID, $online): void
+        {
+            try {
+                $statement = $this->dataAccess->prepare('UPDATE user SET online = :online WHERE user_ID = :user_ID');
+                $statement->execute([
+                    ':online' => $online,
+                    ':user_ID' => $user_ID
+                ]);
+            } catch (PDOException $e) {
+                throw new PDOException($e->getMessage(), (int)$e->getCode());
+            }
+        }
 }

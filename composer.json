@@ -6,12 +6,6 @@
     }
   ],
   "require": {
-    "ext-pdo": "*",
-    "phpdocumentor/phpdocumentor": "^3.1"
-  },
-  "config": {
-    "allow-plugins": {
-      "symfony/flex": true
-    }
+    "ext-pdo": "*"
   }
 }

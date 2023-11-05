@@ -30,6 +30,7 @@ class Controller
         $_SESSION['user_ID'] = $user->getUser_ID();
         $_SESSION['level'] = $user->getLevel();
         $usersService->updateLastConnexion($userAccess, $_SESSION['user_ID']);
+        $usersService->setOnline($userAccess, $_SESSION['user_ID'], 1);
         return null;
     }
 

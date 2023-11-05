@@ -39,6 +39,13 @@ include_once "services/UsersService.php";
 $dbAdmin = null;
 $dbLector = null;
 try {
+    putenv("IPADRESS=mysql-metahub.alwaysdata.net");
+    putenv("DBNAME=metahub_login");
+    putenv("ADMIN=metahub");
+    putenv("LECTOR=metahub_lector");
+    putenv("ADMINPASSWORD=MetaHubAdmin13.");
+    putenv("LECTORPASSWORD=MetaHubAdmin13.");
+
     // construction du modèle
     $dbAdmin = database\SPDO::getInstance("ADMIN");
     $dbLector = database\SPDO::getInstance("LECTOR");
@@ -206,6 +213,7 @@ if ('' == $url || '/' == $url) {
 
     $ticketsService->get5LastPosts($ticketAccessLector, $generalAccessLector);
     $categoriesService->add5LastCategories($categoryAccessLector);
+    $usersService->add10LastConnectedUsers($userAccessLector);
     $layout = new gui\Layout($layoutTemplate);
     (new gui\ViewHomepage($layout, $presenter))->display();
 
@@ -223,8 +231,9 @@ if ('' == $url || '/' == $url) {
         $error = null;
     (new gui\ViewRegister($layout, $page, $error))->display();
 
-} elseif ('logout' == $url) {
+} elseif ('logout' == $url && isset($_SESSION['isLogged'])) {
 
+    $usersService->setOnline($userAccess, $_SESSION['user_ID'], 0);
     session_unset();
     session_destroy();
     header("Location: /");
