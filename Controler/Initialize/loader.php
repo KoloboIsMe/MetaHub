@@ -6,7 +6,6 @@
 /// TO DO : Create a recursive generic class loader
 
 require 'constants.php';
-require 'functions.php';
 
 $repositoryDirectory = __DIR__ . '/../../Repository';
 require "$repositoryDirectory/Connexion.php";
@@ -28,7 +27,7 @@ require "$repositoryDirectory/Table/CommentTable.php";
 require "$repositoryDirectory/Table/TicketTable.php";
 require "$repositoryDirectory/Table/UserTable.php";
 
-require __DIR__ . '/../Object/Card.php';
+require __DIR__ . '/../Classes/Card.php';
 
 require 'singletons.php';
 

@@ -4,6 +4,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// The login view.
 /// Called when the user tries to log in.
+if (!isset($action))
+{
+    return;
+}
 ?>
 
 <div id='container'>

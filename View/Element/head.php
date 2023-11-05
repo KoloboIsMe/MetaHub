@@ -1,4 +1,8 @@
 <?php
+if (!isset($title))
+{
+    return;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
