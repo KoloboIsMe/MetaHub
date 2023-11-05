@@ -64,7 +64,7 @@
                 if ($data[$i] instanceof entities\User) {
                     $user = $data[$i];
                     $id = $user->getUser_ID(); ?>
-                    <a href='user&id=<?= $id ?>'>
+                    <a href='users&id=<?= $id ?>'>
                         <li><img src='gui/images/dot.png' class='dotImg'> @<?= $user->getUsername() ?> </li>
                     </a>
                 <?php }
