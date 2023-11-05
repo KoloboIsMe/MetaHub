@@ -8,10 +8,9 @@ if (!isset($logged, $admin, $username))
     return;
 }
 ?>
-
 <header>
     <input hidden id="nav_check" type="checkbox">
-    <img id="headerLogo" src="View/_assets/images/MetaHubLogo.png"/>
+    <img id="headerLogo" src="View/_assets/image/MetaHubLogo.png"/>
     <nav>
         <ul>
             <?php if($logged || $admin) echo "
@@ -27,7 +26,6 @@ if (!isset($logged, $admin, $username))
             <?php if($admin) echo "
             <li><a href=\"admin\" id=\"headerLinks\">Administration</a></li>"
             ?>
-            FIN CAS
         </ul>
     </nav>
     <?php if($logged || $admin) { echo "

@@ -7,7 +7,7 @@ if (!isset($title, $logged))
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <?php if($logged === FALSE) echo '
+            <?php if(!$logged) echo '
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">';
