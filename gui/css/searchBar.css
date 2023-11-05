@@ -19,8 +19,6 @@
     border:none;
     outline: none;
     transition: width 0.4s ease;
-    background-color: #090909;
-    box-shadow: inset 25px 25px 30px #111111, inset -25px -25px 30px #242424;
 }
 
 .search-box input:focus {
@@ -30,6 +28,7 @@
 
 i{
     position: relative;
+    left: -40px;
     pointer-events:none;
     color: #42b34a;
 }
