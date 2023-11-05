@@ -59,11 +59,18 @@
 <div class='card-container2'>
     <div class='card3'>
         <div class='card-content'>
-            <h3> Suggestions</h3>
-            <p>Lorem ipsum dolor sit amet. In perferendis voluptas id quam omnis id explicabo sequi.
-                Qui deserunt voluptatem ea fuga illum ut vero sunt et quis laudantium est temporibus enim.
-                33 ducimus commodi eum voluptatem dolores est saepe nobis ea voluptatem molestias est
-                natus eveniet non iste placeat qui commodi nobis.</p>
+            <div class='category-list'>
+                <h3>Quelques Utilisateurs Connectés</h3>
+                <?php for ($i = 0; $i < count($data); $i++) {
+                    if ($data[$i] instanceof entities\User) {
+                        $user = $data[$i];
+                        $id = $user->getUser_ID(); ?>
+                        <a href='users&id=<?= $id ?>'>
+                            <li><img src='gui/images/dot.png' class='dotImg'> @<?= $user->getUsername() ?> </li>
+                        </a>
+                    <?php }
+                } ?>
+            </div>
         </div>
     </div>
 </div>
