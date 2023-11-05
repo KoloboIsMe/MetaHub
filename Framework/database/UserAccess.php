@@ -199,7 +199,7 @@ class UserAccess implements UserInterface
     {
         try {
             $ID = [];
-            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user WHERE online = 1 ORDER BY last_connexion DESC LIMIT 5');
+            $statement = $this->dataAccess->prepare('SELECT user_ID FROM user WHERE online = 1 ORDER BY last_connexion DESC LIMIT 8');
             $statement->execute();
             while ($data = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $ID[] = $data['user_ID'];

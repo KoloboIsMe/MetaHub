@@ -39,12 +39,6 @@ include_once "services/UsersService.php";
 $dbAdmin = null;
 $dbLector = null;
 try {
-    putenv("IPADRESS=mysql-metahub.alwaysdata.net");
-    putenv("DBNAME=metahub_login");
-    putenv("ADMIN=metahub");
-    putenv("LECTOR=metahub_lector");
-    putenv("ADMINPASSWORD=MetaHubAdmin13.");
-    putenv("LECTORPASSWORD=MetaHubAdmin13.");
 
     // construction du modèle
     $dbAdmin = database\SPDO::getInstance("ADMIN");
@@ -86,8 +80,7 @@ $usersService = new services\UsersService($outputData);
 $url = $_GET['url'] ?? '';
 
 // définition d'une session d'une heure
-ini_set('session.gc_maxlifetime', 3600);
-session_set_cookie_params(3600);
+ini_set('session.gc_maxlifetime', 1800);
 session_start();
 
 if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
