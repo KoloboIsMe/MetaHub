@@ -1,3 +1,5 @@
+<?php
+?>
 <link href="gui/css/searchBar.css" rel="stylesheet" type="text/css"/>
 <div class="search">
     <input type="checkbox" id="check">

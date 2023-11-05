@@ -7,20 +7,23 @@ function toggleNav() {
     hamburgerButton.classList.toggle("active")
     navigation.classList.toggle("active")
 }
-function validateForm() {
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    var passwordConfirmation = document.getElementById('password_confirmation').value;
-    var passwordConfirmationError = document.getElementById('password_confirmation_error');
 
-    if (username === '' || password === '' || passwordConfirmation === '') {
-        passwordConfirmationError.innerHTML = 'il faut remplir tous les champs';
-        return false;
-    }
-    if (password !== passwordConfirmation) {
-        passwordConfirmationError.innerHTML = 'Les mots de passe ne correspondent pas';
-        return false;
-    }
+const searchBar = document.querySelector("#searchbar");
 
-    return true;
+searchBar.addEventListener("keyup", (e) =>{
+    const searchedLetters = e.target.value;
+    const cards = document.querySelectorAll(".card");
+    filterElements(searchedLetters,cards);
+});
+
+function filterElements(letters, elements) {
+    if(letters.length > 2){
+        for(let i=0; i<elements.length; i++){
+            if(elements[i].textContent.toLowerCase().includes(letters)) {
+                elements[i].style.display = "block";
+            } else {
+                elements[i].style.display = "none"
+            }
+        }
+    }
 }

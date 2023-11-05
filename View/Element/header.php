@@ -3,22 +3,42 @@
 //////////////////////////////// HEADER ///////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 /// Header of the application. Included at the start of every View.
+if (!isset($logged, $admin, $username))
+{
+    return;
+}
 ?>
+
 <header>
-    <input type="checkbox" id="nav_check" hidden>
-    <img src="View/_assets/image/MetaHubLogo.png" id="headerLogo"/>
+    <input hidden id="nav_check" type="checkbox">
+    <img id="headerLogo" src="gui/images/MetaHubLogo.png"/>
     <nav>
         <ul>
-            <li><a href="/"><img src="View/_assets/image/home.png" id="headerImg"/></a></li>
-            <li><a href="../index.php" id="headerLinks">Posts</a></li>
-            <li><a href="" id="headerLinks">Créer un Post</a></li>
-            <li><a href="../index.php" id="headerLinks">Catégories</a></li>
+            <?php if($logged || $admin) echo "
+            <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+            <link href=\"https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap\" rel=\"stylesheet\">"
+            ?>
+            <li><a href="/"><img id="headerImg" src="gui/images/home.png"/></a></li>
+            <li><a href="posts" id="headerLinks">Posts</a></li>
+            <li><a href="createPosts" id="headerLinks">Créer un Post</a></li>
+            <li><a href="categories" id="headerLinks">Catégories</a></li>
+            <li><a href="users" id="headerLinks">Utilisateurs</a></li>
+            <?php if($admin) echo "
+            <li><a href=\"admin\" id=\"headerLinks\">Administration</a></li>"
+            ?>
+            FIN CAS
         </ul>
     </nav>
-    <a href='../index.php'>Se connecter</a>
-    <label for="nav_check" aria-label="toggle curtain navigation" class="hamburger">
+    <?php if($logged || $admin) { echo "
+    <a href='/logout' id=\"username\">Bonjour @$username !</a>
+    <a href='/logout'><img src=\"gui/images/logout.png\" id=\"logoutImg\"/></a>";}
+    else {echo "
+    <a href='/login'><img src=\"gui/images/login.png\" id=\"loginImg\"/></a>";}
+    ?>
+    <label aria-label="toggle curtain navigation" class="hamburger" for="nav_check">
         <div class="line l1"></div>
         <div class="line l2"></div>
         <div class="line l3"></div>
-    </label>
+     </label>
 </header>

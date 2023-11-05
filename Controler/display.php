@@ -15,6 +15,7 @@ if (!isset($page))
 }
 
 $title = $page;
+$loggedIn = TRUE;
 require "$elementDirectory/head.php";
 echo "<body> \n";
 require "$elementDirectory/header.php";
@@ -59,5 +60,4 @@ switch ($page) {
         break;
 }
 require "$elementDirectory/footer.php";
-echo "</body> \n</html>";
 return;
