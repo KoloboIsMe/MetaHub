@@ -1,3 +1,4 @@
+<link href="gui/css/category.css" rel="stylesheet" type="text/css"/>
 <h2>#<?= $category->getLabel() ?></h2>
 <p id='category-description'><?= $category->getDescription() ?></p>
 <div class='card-container'>

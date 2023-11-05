@@ -1,3 +1,4 @@
+<link href="gui/css/users.css" rel="stylesheet" type="text/css"/>
 <h2>Utilisateurs</h2>
 <div class='card-container'>
     <?php foreach ($this->outputData->getOutputData() as $user) {
