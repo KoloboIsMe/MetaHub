@@ -7,7 +7,7 @@ $id = $post->getTicket()->getTicket_ID(); ?>
         <a href='posts&id=<?= $id ?>'>
             <div class='card-content'>
                 <div class='post-header'>
-                    <img src='gui/images/user.png' id='userImg'>
+                    <img alt="" src='gui/images/user.png' id='userImg'>
                     <p id='card-username'>@<?= $post->getUser()->getUsername() ?></p>
                 </div>
                 <h3> <?= $post->getTicket()->getTitle() ?></h3>
@@ -20,8 +20,8 @@ $id = $post->getTicket()->getTicket_ID(); ?>
                 <time id='time'><B>Publié le <?= $post->getTicket()->getDate() ?></B></time>
                 <p id='post-number'>Post n° <?= $post->getTicket()->getTicket_ID() ?></p>
                 <div class="edit-delete">
-                    <a href='editTicket&id=<?= $id ?>'><button ><img src='gui/images/edit.png' id='editImg'></button></a>
-                    <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img src='gui/images/delete.png' id='deleteImg'></button></a>
+                    <a href='editTicket&id=<?= $id ?>'><button ><img alt="" src='gui/images/edit.png' id='editImg'></button></a>
+                    <a href='?action=deleteTicketAction&id=<?= $id ?>'><button ><img alt="" src='gui/images/delete.png' id='deleteImg'></button></a>
                 </div>
             </div>
         </a>
@@ -38,10 +38,10 @@ $id = $post->getTicket()->getTicket_ID(); ?>
         </div>
         <?php foreach ($post->getComments() as $comment) { ?>
         <div class='comment'>
-            <img src='gui/images/user.png' id='user-comment-img'>
+            <img alt="" src='gui/images/user.png' id='user-comment-img'>
             <div class='comment-content'>  @<?= $comment->getAuthor_username() ?> : <?= $comment->getText() ?></div>
             <?php if ((isset($_SESSION['level']) && $_SESSION['level'] > 0) || (isset($_SESSION['user_ID']) && $_SESSION['user_ID'] == $comment->getAuthor())) { ?>
-                <a href='?action=deleteCommentAction&id=<?=$comment->getComment_ID()?>'><button ><img src='gui/images/delete.png' id='deleteCommentImg'></button></a>
+                <a href='?action=deleteCommentAction&id=<?=$comment->getComment_ID()?>'><button ><img alt="" src='gui/images/delete.png' id='deleteCommentImg'></button></a>
             <?php }?>
         </div>
         <?php } ?>
