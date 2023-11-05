@@ -1,5 +1,5 @@
 <?php
-if (!isset($title, $loggedIn))
+if (!isset($title, $logged))
 {
     return;
 }
@@ -7,7 +7,7 @@ if (!isset($title, $loggedIn))
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <?php if($loggedIn === FALSE) echo '
+            <?php if($logged === FALSE) echo '
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">';

@@ -15,7 +15,9 @@ if (!isset($page))
 }
 
 $title = $page;
-$loggedIn = TRUE;
+$logged = TRUE;
+$admin = TRUE;
+$username = 'Gabriel test';
 require "$elementDirectory/head.php";
 echo "<body> \n";
 require "$elementDirectory/header.php";
