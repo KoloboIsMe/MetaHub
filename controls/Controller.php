@@ -13,7 +13,7 @@ class Controller
         $this->outputData = $outputData;
     }
 
-    public function authenticateAction($usersService, $userAccess)
+    public function authenticateAction($usersService, $userAccess): ?string
     {
         $usersService->authenticate($_POST['username'], $_POST['password'], $userAccess);
         if (!$this->outputData->getOutputData()) {
@@ -27,7 +27,15 @@ class Controller
         $usersService->updateLastConnexion($userAccess, $_SESSION['user_ID']);
         return null;
     }
-
+    public function createTicketAction($ticketsService, $ticketAccess, $categoryService,$categoriesAccess, $generalAccess): void
+    {
+        $ticketID = $ticketsService->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
+        if (isset($_POST["categories"])) {
+            foreach ($_POST["categories"] as $category) {
+                $generalAccess->addCategoryToTicket($categoryService->getCategoryIdByLabel($categoriesAccess, $category), $ticketID);
+            }
+        }
+    }
     public function registerAction($usersService, $userAccess)
     {
         if ($_POST['password'] !== $_POST['password_confirmation']) {
@@ -35,7 +43,6 @@ class Controller
         }
         return $usersService->register($_POST['username'], $_POST['password'], $userAccess);
     }
-
     public function updateUserAction($usersService, $userAccess)
     {
         if ($usersService->existsUsername($userAccess, $_POST['username']) && $_POST['username'] !== $_SESSION['username'])
@@ -47,17 +54,7 @@ class Controller
             return "mot de passe incorrect";
     }
 
-    public function createTicketAction($ticketsService, $ticketAccess, $categoryService,$categoriesAccess, $generalAccess)
-    {
-        $ticketID = $ticketsService->createTicket($ticketAccess, $_POST["title"], $_POST["message"]);
-        if (isset($_POST["categories"])) {
-            foreach ($_POST["categories"] as $category) {
-                $generalAccess->addCategoryToTicket($categoryService->getCategoryIdByLabel($categoriesAccess, $category), $ticketID);
-            }
-        }
-    }
-
-    public function deleteUser($usersService, $userAccess, $generalAccess, $userid)
+    public function deleteUser($usersService, $userAccess, $generalAccess, $userid): ?string
     {
         if ($usersService->existsUser($userAccess, $userid) && ($_SESSION['level'] > 0 || $userid == $_SESSION['user_ID'])) {
             foreach ($generalAccess->getTicketsIdByUserId($userid) as $ticketID) {
@@ -71,8 +68,7 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer cet utilisateur !';
     }
-
-    public function deleteTicket($ticketsService, $ticketAccess, $generalAccess, $ticketid)
+    public function deleteTicket($ticketsService, $ticketAccess, $generalAccess, $ticketid): ?string
     {
         if ($ticketsService->isTicketOwner($ticketAccess, $ticketid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
             $generalAccess->deleteTicket($ticketid);
@@ -80,8 +76,7 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce ticket !';
     }
-
-    public function deleteComment($commentsService, $commentAccess, $generalAccess, $commentid)
+    public function deleteComment($commentsService, $commentAccess, $generalAccess, $commentid): ?string
     {
         if ($commentsService->isCommentOwner($commentAccess, $commentid, $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
             $generalAccess->deleteComment($commentid);
@@ -89,8 +84,7 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour supprimer ce commentaire !';
     }
-
-    public function deleteCategory($generalAccess, $categoryid)
+    public function deleteCategory($generalAccess, $categoryid): ?string
     {
         if ($_SESSION['level'] > 0) {
             $generalAccess->deleteCategory($categoryid);
@@ -99,7 +93,7 @@ class Controller
             return 'Vous n\'avez pas les droits pour supprimer cette catégorie !';
     }
 
-    public function editTicket($ticketsService, $ticketAccess)
+    public function editTicket($ticketsService, $ticketAccess): ?string
     {
         if ($ticketsService->isTicketOwner($ticketAccess, $_GET['id'], $_SESSION['user_ID']) || $_SESSION['level'] > 0) {
             $ticketsService->editTicket($ticketAccess, $_GET['id'], $_POST["title"], $_POST["message"]);
@@ -107,10 +101,11 @@ class Controller
         } else
             return 'Vous n\'avez pas les droits pour modifier ce ticket !';
     }
-
-    public function getPostById($id, $generalAccessLector)
+    public function getPostById($id, $generalAccessLector): void
     {
         $posts = $generalAccessLector->getPostById($id);
         $this->outputData->setOutputData($posts);
     }
+
+
 }
