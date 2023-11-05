@@ -12,21 +12,20 @@ final class SPDO
 
     private function __construct(string $serverName)
     {
-        $config = parse_ini_file(CHEMIN_VERS_FICHIER_INI, true);
-        if (isset($config[$serverName])) {
-            $serverConfig = $config[$serverName];
-            $this->PDOInstance = new PDO($serverConfig['type'] . ':host=' . $serverConfig['IP_adress'] . ';dbname=' . BASE_DE_DONNEES, $serverConfig['user'], $serverConfig['password']);
+        try {
+
+            $this->PDOInstance = new PDO('mysql:host=' . $_ENV['IPADRESS'] . ';dbname=' . $_ENV['DBNAME'], $_ENV[$serverName], $_ENV[$serverName.'PASSWORD']);
             $this->PDOInstance->exec('SET CHARACTER SET utf8');
             $this->PDOInstance->setAttribute(PDO::FETCH_ASSOC, PDO::FETCH_OBJ);
             $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-
             $this->serverName = $serverName;
-        } else {
-            throw new Exception("Server '$serverName' not found in config file");
+
+        } catch (Exception $e) {
+            die('Erreur : ' . $e->getMessage());
         }
     }
 
-    public static function getInstance(string $serverName = 'serveur_admin'): SPDO
+    public static function getInstance(string $serverName): SPDO
     {
         if (is_null(self::$instance) || self::$instance->serverName !== $serverName) {
             self::$instance = new SPDO($serverName);

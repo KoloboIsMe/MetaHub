@@ -40,11 +40,10 @@ $dbAdmin = null;
 $dbLector = null;
 try {
 
-    define("CHEMIN_VERS_FICHIER_INI", 'config.ini');
     define("BASE_DE_DONNEES", 'metahub_login');
     // construction du modèle
-    $dbAdmin = database\SPDO::getInstance();
-    $dbLector = database\SPDO::getInstance("serveur_lecture");
+    $dbAdmin = database\SPDO::getInstance("ADMIN");
+    $dbLector = database\SPDO::getInstance("LECTOR");
 
 } catch (PDOException $e) {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
@@ -132,8 +131,6 @@ if (isset($_GET['action'])) {
             if ($error) {
                 $redirect = '/';
                 $url = 'error';
-            } else {
-                header("refresh:0;url=/posts");
             }
 
         } elseif ('deleteUserAction' == $_GET['action'] && isset($_GET['id'])) {
