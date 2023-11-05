@@ -80,8 +80,7 @@ $usersService = new services\UsersService($outputData);
 $url = $_GET['url'] ?? '';
 
 // définition d'une session d'une heure
-ini_set('session.gc_maxlifetime', 3600);
-session_set_cookie_params(3600);
+ini_set('session.gc_maxlifetime', 1800);
 session_start();
 
 if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
@@ -227,8 +226,6 @@ if ('' == $url || '/' == $url) {
 
 } elseif ('logout' == $url && isset($_SESSION['isLogged'])) {
 
-    $usersService->setOnline($userAccess, $_SESSION['user_ID'], 0);
-    session_unset();
     session_destroy();
     header("Location: /");
 
