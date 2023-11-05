@@ -13,6 +13,6 @@ class ViewEditTicket extends View
         if (isset($_SESSION['username']))
             $this->username = $_SESSION['username'];
 
-        $this->content = $presenter->showEditTicket();
+        $this->content = $presenter->show('editTicket');
     }
 }

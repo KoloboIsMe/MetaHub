@@ -15,6 +15,6 @@ class ViewPosts extends View
 
         $this->searchBar = true;
 
-        isset($_GET['id']) ? $this->content = $presenter->showPost() : $this->content = $presenter->showPosts();
+        isset($_GET['id']) ? $this->content = $presenter->show('post') : $this->content = $presenter->show('posts');
     }
 }

@@ -14,7 +14,7 @@ class ViewHomepage extends View
 
         $this->searchBar = true;
 
-        $this->content = $presenter->showHomepage();
+        $this->content = $presenter->show('homepage');
     }
 }
 
