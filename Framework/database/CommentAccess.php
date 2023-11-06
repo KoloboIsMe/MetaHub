@@ -56,8 +56,8 @@ class CommentAccess implements CommentInterface
         try {
             $statement = $this->dataAccess->prepare("INSERT INTO comment (text, date, author, ticket) VALUES (:text, :date, :user_ID, :ticket_ID)");
             $statement->execute(array(
-                ':text' => $text,
-                ':date' => $date,
+                ':text' => htmlspecialchars($text),
+                ':date' => htmlspecialchars($date),
                 ':user_ID' => $user_ID,
                 ':ticket_ID' => $ticket_ID
             ));

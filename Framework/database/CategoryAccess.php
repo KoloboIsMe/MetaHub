@@ -127,7 +127,7 @@ class CategoryAccess implements CategoryInterface
                 return "Cette catégorie existe déjà";
             }
             $statement = $this->dataAccess->prepare('INSERT INTO category (label, description) VALUES (:label, :description)');
-            $statement->execute([':label' => $label, ':description' => $description]);
+            $statement->execute([':label' => htmlspecialchars($label), ':description' => htmlspecialchars($description)]);
             return null;
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());

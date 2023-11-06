@@ -144,7 +144,7 @@ class UserAccess implements UserInterface
             else {
                 $statement = $this->dataAccess->prepare('INSERT INTO user (username, password, first_connexion) VALUES (:username, :password, :date)');
                 $statement->execute([
-                    ':username' => $username,
+                    ':username' => htmlspecialchars($username),
                     ':password' => password_hash($password, PASSWORD_DEFAULT),
                     ':date' => $date,
                 ]);
