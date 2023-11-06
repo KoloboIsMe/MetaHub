@@ -109,7 +109,7 @@ class TicketAccess implements TicketInterface
             $statement = $this->dataAccess->prepare('INSERT INTO ticket (title, message, date, author) VALUES (:title, :message, :date, :author)');
             $statement->execute([
                 ':title' => htmlspecialchars($title),
-                ':message' => htmlspecialchars($title),
+                ':message' => htmlspecialchars($message),
                 ':date' => $date,
                 ':author' => $author,
             ]);

@@ -180,8 +180,8 @@ class GeneralAccess
         try {
             $statement = $this->dataAccess->prepare('INSERT INTO categorized (category, ticket) VALUES (:category, :ticket)');
             $statement->execute([
-                ':category' => htmlspecialchars($category),
-                ':ticket' => htmlspecialchars($ticketID),
+                ':category' => $category,
+                ':ticket' => $ticketID
             ]);
         } catch (PDOException $e) {
             throw new PDOException($e->getMessage(), (int)$e->getCode());
