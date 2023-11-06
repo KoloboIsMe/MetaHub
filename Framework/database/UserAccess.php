@@ -166,7 +166,7 @@ class UserAccess implements UserInterface
         try {
             $statement = $this->dataAccess->prepare('UPDATE user SET username = :username, password = :password WHERE user_ID = :user_ID');
             $statement->execute([
-                ':username' => $username,
+                ':username' => htmlspecialchars($username),
                 ':password' => password_hash($password, PASSWORD_DEFAULT),
                 ':user_ID' => $user_ID,
             ]);

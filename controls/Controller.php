@@ -88,14 +88,14 @@ class Controller
      * @param $userid
      * @return string|null
      */
-    public function deleteUser($usersService, $userAccess, $generalAccess, $userid): ?string
+    public function deleteUser($usersService, $userAccess, $commentsService,$commentAccess, $generalAccess, $userid): ?string
     {
         if ($usersService->existsUser($userAccess, $userid) && ($_SESSION['level'] > 0 || $userid == $_SESSION['user_ID'])) {
             foreach ($generalAccess->getTicketsIdByUserId($userid) as $ticketID) {
                 $generalAccess->deleteTicket($ticketID);
             }
             foreach ($generalAccess->getCommentsIdByUserId($userid) as $commentID) {
-                $generalAccess->deleteComment($commentID);
+                $commentsService->deleteComment($commentAccess, $commentID);
             }
             $generalAccess->deleteUser($userid);
             return null;
