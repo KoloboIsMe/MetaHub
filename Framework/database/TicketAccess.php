@@ -115,8 +115,8 @@ class TicketAccess implements TicketInterface
             ]);
             $statement = $this->dataAccess->prepare('SELECT ticket_ID FROM ticket Where title = :title and message = :message and date = :date and author = :author LIMIT 1');
             $statement->execute([
-                ':title' => $title,
-                ':message' => $message,
+                ':title' => htmlspecialchars($title),
+                ':message' => htmlspecialchars($message),
                 ':date' => $date,
                 ':author' => $author,
             ]);
