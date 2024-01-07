@@ -90,6 +90,7 @@
         $_SESSION['last_activity'] = time();
     }
 
+
     if (isset($_SESSION['isLogged']) && $_SESSION['isLogged']) {
         if (isset($_SESSION['level']) && $_SESSION['level'] > 0)
             $layoutTemplate = 'gui/layoutLoggedAdmin.html';
