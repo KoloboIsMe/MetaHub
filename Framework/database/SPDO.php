@@ -6,28 +6,20 @@ use PDO;
 
 final class SPDO
 {
-    /**
-     * @var SPDO|null
-     */
+
     private static ?SPDO $instance = null;
-    /**
-     * @var PDO|null
-     */
+
     private ?PDO $PDOInstance = null;
-    /**
-     * @var string
-     */
+
     private string $serverName;
 
-    /**
-     * @param string $serverName
-     */
+
     private function __construct(string $serverName)
     {
         try {
 
             $this->PDOInstance = new PDO('mysql:host=' . $_ENV['IPADRESS'] . ';dbname=' . $_ENV['DBNAME'], $_ENV[$serverName], $_ENV[$serverName.'PASSWORD']);
-            $this->PDOInstance->exec('SET CHARACTER SET utf8');
+            $this->PDOInstance->exec('SET CHARACTER SET utf8');metahub_login
             $this->PDOInstance->setAttribute(PDO::FETCH_ASSOC, PDO::FETCH_OBJ);
             $this->PDOInstance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
             $this->serverName = $serverName;
